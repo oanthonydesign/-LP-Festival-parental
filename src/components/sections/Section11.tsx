@@ -6,10 +6,10 @@ import svgPaths from "@/components/svg/svg-igj2kqgoo8";
 function Frame1() {
   return (
     <div className="content-stretch flex flex-col font-sugar-peachy gap-[6px] items-center leading-[0] not-italic relative shrink-0 text-center w-full">
-      <div className="flex flex-col justify-center min-w-full relative shrink-0 text-[#ef7d25] text-[84px] w-[min-content]">
+      <div className="flex flex-col justify-center relative shrink-0 text-[#ef7d25] text-4xl md:text-[84px] w-full">
         <p className="leading-[0.8] whitespace-pre-wrap">Vai vir de outra cidade?</p>
       </div>
-      <div className="flex flex-col justify-center relative shrink-0 text-[#4c4d4f] text-[46px] w-[973px]">
+      <div className="flex flex-col justify-center relative shrink-0 text-[#4c4d4f] text-xl md:text-[46px] max-w-[973px] w-full mx-auto">
         <p className="leading-[0.9] whitespace-pre-wrap">Conte com a agência oficial do Festival Parental para organizar sua viagem com calma e segurança</p>
       </div>
     </div>
@@ -94,7 +94,7 @@ function Component2() {
 
 function Frame2() {
   return (
-    <div className="content-stretch flex flex-col gap-[8px] items-center relative shrink-0">
+    <div className="content-stretch flex flex-col gap-4 items-center relative shrink-0">
       <Component />
       <Component2 />
     </div>
@@ -164,7 +164,7 @@ function LinkVariant() {
 
 function Container() {
   return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-[332px]" data-name="Container">
+    <div className="content-stretch flex flex-col items-center relative shrink-0 w-full max-w-[332px]" data-name="Container">
       <LinkVariant />
     </div>
   );
@@ -174,8 +174,8 @@ function Content() {
   return (
     <div className="bg-[#fff6ef] relative rounded-[32px] shrink-0 w-full" data-name="Content">
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[32px] shadow-[7px_7px_0px_0px_#191919]" />
-      <div className="flex flex-col items-center size-full">
-        <div className="content-stretch flex flex-col gap-[64px] items-center p-[32px] relative w-full">
+      <div className="flex flex-col items-center w-full">
+        <div className="content-stretch flex flex-col gap-[48px] md:gap-[64px] items-center p-6 md:p-[64px] relative w-full">
           <Content1 />
           <Container />
         </div>
@@ -186,8 +186,10 @@ function Content() {
 
 export default function Section11() {
   return (
-    <div className="bg-[#fff6ef] content-stretch flex flex-col items-start pb-[86px] pt-[28px] px-[320px] relative size-full" data-name="Section - 11">
-      <Content />
-    </div>
+    <section className="bg-[#fff6ef] w-full flex flex-col items-center py-[80px] px-4 md:px-0" data-name="Section - 11">
+      <div className="w-full max-w-[1280px]">
+        <Content />
+      </div>
+    </section>
   );
 }

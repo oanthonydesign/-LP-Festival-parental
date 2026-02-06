@@ -21,7 +21,7 @@ function Desktop() {
 
 function ContentPadding() {
   return (
-    <div className="bg-[#fff6ef] content-stretch flex flex-col h-[577px] items-center min-w-[1920px] overflow-clip px-[30px] py-[80px] relative shrink-0 w-full" data-name="Content → Padding">
+    <div className="bg-[#fff6ef] content-stretch flex flex-col h-auto min-h-[577px] items-center overflow-clip px-[30px] py-[80px] relative shrink-0 w-full" data-name="Content → Padding">
       <Links />
       <div className="absolute inset-[44.71px_0_44.29px_0]" data-name="HorizontalBorder">
         <div aria-hidden="true" className="absolute border-[rgba(255,255,255,0.1)] border-solid border-t inset-0 pointer-events-none" />
@@ -33,9 +33,8 @@ function ContentPadding() {
 
 function Links() {
   return (
-    <div className="content-stretch flex flex-col gap-[64px] items-center justify-center relative shrink-0 w-[1280px]" data-name="Links">
+    <div className="content-stretch flex flex-col gap-[64px] items-center justify-center relative shrink-0 w-full max-w-[1280px]" data-name="Links">
       <Frame2 />
-      <Container28 />
     </div>
   );
 }
@@ -124,7 +123,7 @@ function Container() {
 // Menu de Navegação
 function Container1() {
   return (
-    <div className="content-stretch flex items-start justify-end relative shrink-0 w-[941px]" data-name="Container">
+    <div className="content-stretch flex flex-wrap items-start justify-end relative shrink-0 w-full max-w-[941px]" data-name="Container">
       <Links1 />
       <Frame />
       <Frame3 />
@@ -715,8 +714,8 @@ function Container29() {
 // Elementos decorativos no rodapé
 function Group1() {
   return (
-    <div className="absolute inset-[81.33%_16.67%_-3.26%_16.67%]">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1280 126.54">
+    <div className="absolute bottom-[-3.26%] left-1/2 -translate-x-1/2 w-[105%] h-auto">
+      <svg className="block w-full h-auto" fill="none" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1280 126.54">
         <g id="Group 14">
           <path d={svgPaths.p2bed4a80} fill="var(--fill-0, #0B6FB5)" id="Vector" />
           <path d={svgPaths.p26d08bf0} fill="var(--fill-0, #0B6FB5)" id="Vector_2" />

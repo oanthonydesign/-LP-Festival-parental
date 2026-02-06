@@ -50,7 +50,7 @@ function Heading3() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
             <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#191919] text-[24px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
-                <p className="leading-none whitespace-pre-wrap">+40 palestrantes convidados</p>
+                <p className="leading-none whitespace-pre-wrap">+50 palestrantes convidados</p>
             </div>
         </div>
     );
@@ -673,19 +673,25 @@ function Content() {
 
 function Grafismo() {
     return (
-        <div className="absolute h-[682.422px] left-[-1100px] top-[260px] w-[2662px] z-[1] pointer-events-none select-none" data-name="grafismo">
-            <div className="absolute inset-[-3.89%_-0.23%_-2.33%_-0.69%]">
-                <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2662.21 682.422">
-                    <g id="grafismo">
-                        <path d={svgPaths.p264f9600} id="Vector 4" stroke="var(--stroke-0, #EF7D25)" strokeWidth="50" />
-                        <path d={svgPaths.p3b487900} id="Vector 5" stroke="var(--stroke-0, #2260A1)" strokeWidth="50" />
-                        <path d={svgPaths.p2edb8900} id="Vector 6" stroke="var(--stroke-0, #79C3AB)" strokeWidth="30" />
-                        <g id="Group 19">
-                            <path d={svgPaths.p2b18dff0} fill="var(--fill-0, #74ACDE)" id="Vector" stroke="var(--stroke-0, #191919)" strokeWidth="6" />
-                        </g>
+        <div
+            className="absolute top-[200px] left-1/4 ml-[-1200px] w-[2662px] h-[682px] z-[1] pointer-events-none select-none overflow-visible"
+            data-name="grafismo_nuvem"
+        >
+            <svg
+                className="block w-full h-full"
+                fill="none"
+                viewBox="0 0 2662.21 682.422"
+                preserveAspectRatio="xMidYMid meet"
+            >
+                <g id="grafismo">
+                    <path d={svgPaths.p264f9600} id="Vector 4" stroke="#EF7D25" strokeWidth="50" />
+                    <path d={svgPaths.p3b487900} id="Vector 5" stroke="#2260A1" strokeWidth="50" />
+                    <path d={svgPaths.p2edb8900} id="Vector 6" stroke="#79C3AB" strokeWidth="30" />
+                    <g id="Group 19">
+                        <path d={svgPaths.p2b18dff0} fill="#74ACDE" id="Vector" stroke="#191919" strokeWidth="6" />
                     </g>
-                </svg>
-            </div>
+                </g>
+            </svg>
         </div>
     );
 }
@@ -695,8 +701,8 @@ export default function Section5() {
         <section className="bg-[#fff6ef] w-full overflow-hidden flex flex-col items-center pb-[120px] pt-[80px] relative isolate" data-name="Section - 5">
             <div className="layout-container relative flex flex-col items-center">
                 <Content />
-                <Grafismo />
             </div>
+            <Grafismo />
         </section>
     );
 }

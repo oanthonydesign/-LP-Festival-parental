@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 @theme {
     --font-dm-sans: 'DM Sans', sans-serif;
     --font-sugar-peachy: 'Sugar Peachy', sans-serif;

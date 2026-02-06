@@ -1,4 +1,5 @@
 import SpeakersSection from '@/components/sections/SpeakersSection';
+import Section2 from '@/components/sections/Section2';
 import Section5 from '@/components/sections/Section5';
 import Section7 from '@/components/sections/Section7';
 import Marquee01 from '@/components/sections/Marquee01';
@@ -12,11 +13,13 @@ import Section12 from '@/components/sections/Section12';
 import Section14 from '@/components/sections/Section14';
 import Section15 from '@/components/sections/Section15';
 import Rodape from '@/components/sections/Rodape';
+import Copyright from '@/components/sections/Copyright';
 
 export default function Home() {
     return (
-        <main className="min-h-screen">
+        <main className="min-h-screen overflow-x-hidden">
             <SpeakersSection />
+            <Section2 />
             <Section5 />
             <Marquee01 />
             <Marquee02 />
@@ -30,6 +33,7 @@ export default function Home() {
             <Section14 />
             <Section15 />
             <Rodape />
+            <Copyright />
         </main>
     )
 }

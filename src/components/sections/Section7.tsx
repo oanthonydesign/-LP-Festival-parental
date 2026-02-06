@@ -1,6 +1,12 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import svgPaths from "@/components/svg/svg-jj8ggrv19k";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const imgImg90811 = "https://placehold.co/600x400/png?text=Festival+1";
 const imgCep2921 = "https://placehold.co/600x400/png?text=Festival+2";
 const imgImg54721 = "https://placehold.co/600x400/png?text=Festival+3";
@@ -83,24 +89,24 @@ function StoryImage3() {
 
 function Banners() {
     return (
-        <div className="absolute contents left-[-490px] top-[277.8px]" data-name="Banners">
+        <div className="absolute contents" data-name="Banners">
             <Group />
-            <div className="absolute flex h-[338.424px] items-center justify-center left-[-29.89px] top-[594.95px] w-[498.496px]">
+            <div data-animate="section7-banner" className="absolute flex h-[338.424px] items-center justify-center left-[-29.89px] top-[594.95px] w-[498.496px]">
                 <div className="flex-none rotate-[-1.06deg]">
                     <StoryImage />
                 </div>
             </div>
-            <div className="absolute flex h-[389.794px] items-center justify-center left-[261.07px] top-[468.81px] w-[530.652px]">
+            <div data-animate="section7-banner" className="absolute flex h-[389.794px] items-center justify-center left-[261.07px] top-[468.81px] w-[530.652px]">
                 <div className="flex-none rotate-[7.37deg]">
                     <StoryImage1 />
                 </div>
             </div>
-            <div className="absolute flex h-[344.816px] items-center justify-center left-[499.63px] top-[667.99px] w-[502.681px]">
+            <div data-animate="section7-banner" className="absolute flex h-[344.816px] items-center justify-center left-[499.63px] top-[667.99px] w-[502.681px]">
                 <div className="flex-none rotate-[1.82deg]">
                     <StoryImage2 />
                 </div>
             </div>
-            <div className="absolute flex h-[369.722px] items-center justify-center left-[821.83px] top-[547.89px] w-[518.506px]">
+            <div data-animate="section7-banner" className="absolute flex h-[369.722px] items-center justify-center left-[821.83px] top-[547.89px] w-[518.506px]">
                 <div className="flex-none rotate-[-4.84deg]">
                     <StoryImage3 />
                 </div>
@@ -113,10 +119,10 @@ function Content() {
     return (
         <div className="content-stretch flex flex-col gap-[24px] items-center leading-[0] relative shrink-0 text-[#fff6ee] text-center w-full" data-name="Content">
             <div className="flex flex-col font-sugar-peachy justify-center not-italic relative shrink-0 text-[64px] max-w-[842px] w-full">
-                <p className="leading-[0.8] whitespace-pre-wrap">A 7 Edições, responsável por decidir e mudar o futuro da Educação Parental no Brasil.</p>
+                <p className="leading-[0.8] whitespace-pre-wrap">Hà 7 Edições, responsável por decidir e mudar o futuro da Educação Parental no Brasil.</p>
             </div>
             <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[18px] max-w-[842px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
-                <p className="leading-[1.1] whitespace-pre-wrap">O Festival Parental reúne profissionais da saúde, educação e comportamento, junto com pais, mães, cuidadores e famílias inteiras. São quatro dias de programação que misturam ciência, prática e experiências reais com o objetivo de transformar a forma como vivemos a parentalidade no Brasil.</p>
+                <p className="leading-[1.1] whitespace-pre-wrap">São quatro dias de programação que misturam ciência, prática e experiências reais com o objetivo de transformar a forma como vivemos a parentalidade no Brasil.</p>
             </div>
             <div className="flex flex-col font-sugar-peachy justify-center not-italic relative shrink-0 text-[28px] w-full max-w-[842px]">
                 <p className="leading-[0.9] whitespace-pre-wrap">Profissionais e famílias, lado a lado, com um objetivo em comum: transformar a educação de crianças e adolescentes no Brasil.</p>
@@ -163,8 +169,38 @@ function EventImage() {
 }
 
 export default function Section7() {
+    const sectionRef = useRef<HTMLElement>(null);
+
+    useEffect(() => {
+        const banners = sectionRef.current?.querySelectorAll('[data-animate="section7-banner"]');
+        if (!banners || banners.length === 0) return;
+
+        gsap.fromTo(banners,
+            {
+                y: 400,
+                opacity: 0
+            },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 1.2,
+                stagger: 0.2,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: "top 80%", // Começa quando o topo da seção chega a 80% da tela
+                    toggleActions: "play none none none"
+                }
+            }
+        );
+    }, []);
+
     return (
-        <section className="bg-[#fff6ee] w-full flex flex-col items-center py-[60px] relative isolate" data-name="Section - 7">
+        <section
+            ref={sectionRef}
+            className="bg-[#fff6ee] w-full flex flex-col items-center py-[60px] relative isolate"
+            data-name="Section - 7"
+        >
             <div className="layout-container relative flex flex-col items-center overflow-visible">
                 <EventImage />
             </div>

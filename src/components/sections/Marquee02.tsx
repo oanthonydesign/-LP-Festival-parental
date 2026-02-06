@@ -18,7 +18,7 @@ export default function Marquee02() {
         // Anima o marquee da esquerda para direita baseado no scroll
         // Começa deslocado para a esquerda e move para a direita
         const anim = gsap.fromTo(marqueeContent,
-            { x: () => -(marqueeContent.scrollWidth / 8) },
+            { x: () => -(marqueeContent.scrollWidth / 40) },
             {
                 x: 0,
                 ease: 'none',

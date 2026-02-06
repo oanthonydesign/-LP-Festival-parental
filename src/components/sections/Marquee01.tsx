@@ -7,23 +7,25 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Marquee01() {
+    const wrapperRef = useRef<HTMLElement>(null);
     const marqueeRef = useRef<HTMLDivElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        if (!marqueeRef.current || !contentRef.current) return;
+        if (!wrapperRef.current || !contentRef.current) return;
 
         const marqueeContent = contentRef.current;
 
         // Anima o marquee da direita para esquerda baseado no scroll
         const anim = gsap.to(marqueeContent, {
-            x: () => -(marqueeContent.scrollWidth / 4),
+            x: () => -(marqueeContent.scrollWidth / 40),
             ease: 'none',
             scrollTrigger: {
-                trigger: marqueeRef.current,
+                trigger: wrapperRef.current,
                 start: 'top bottom',
                 end: 'bottom top',
                 scrub: 1,
+                invalidateOnRefresh: true,
             }
         });
 
@@ -47,7 +49,7 @@ export default function Marquee01() {
 
     const items = [
         "4 DIAS",
-        "+40 PALESTRANTES",
+        "+50 PALESTRANTES",
         "4 PALCOS",
     ];
 
@@ -55,23 +57,30 @@ export default function Marquee01() {
     const combinedItems = [...items, ...items, ...items, ...items];
 
     return (
-        <div
-            ref={marqueeRef}
-            className="bg-[#f7a73c] relative w-full overflow-hidden border-y-[5px] border-[#191919]"
-            data-name="marquee_01"
+        <section
+            ref={wrapperRef}
+            className="w-full overflow-hidden py-12 -my-8 relative"
+            data-name="marquee_01_wrapper"
         >
             <div
-                ref={contentRef}
-                className="flex gap-[48px] items-center py-[10px] w-max whitespace-nowrap"
+                ref={marqueeRef}
+                className="bg-[#f7a73c] relative w-full overflow-hidden border-y-[5px] border-[#191919] z-10"
+                style={{ transform: 'rotate(-1deg) scale(1.2)' }}
+                data-name="marquee_01"
             >
-                {combinedItems.map((text, idx) => (
-                    <MarqueeItem key={idx} text={text} />
-                ))}
-                {/* Duplicata para o loop */}
-                {combinedItems.map((text, idx) => (
-                    <MarqueeItem key={`dup-${idx}`} text={text} />
-                ))}
+                <div
+                    ref={contentRef}
+                    className="flex gap-[48px] items-center py-[10px] w-max whitespace-nowrap"
+                >
+                    {combinedItems.map((text, idx) => (
+                        <MarqueeItem key={idx} text={text} />
+                    ))}
+                    {/* Duplicata para o loop */}
+                    {combinedItems.map((text, idx) => (
+                        <MarqueeItem key={`dup-${idx}`} text={text} />
+                    ))}
+                </div>
             </div>
-        </div>
+        </section>
     );
 }

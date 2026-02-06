@@ -251,16 +251,16 @@ export default function SpeakersSection() {
                         {/* Title */}
                         <div className="content-stretch flex flex-col font-sugar-peachy gap-[6px] items-center not-italic relative shrink-0 w-full">
                             <div className="flex flex-col justify-center relative shrink-0 text-[#ef7d25] text-8xl w-full">
-                                <p className="leading-[0.8] whitespace-pre-wrap">+40 Palestrantes convidados.</p>
+                                <p className="leading-[0.8] whitespace-pre-wrap">+50 Palestrantes convidados.</p>
                             </div>
                             <div className="flex flex-col justify-center relative shrink-0 text-[#4c4d4f] text-4xl w-full">
-                                <p className="leading-[0.9] whitespace-pre-wrap">Um só propósito: Educar com consciência e estratégia.</p>
+                                <p className="leading-[0.9] whitespace-pre-wrap">Reunimos profissionais que atuam diariamente com os desafios reais da parentalidade na clínica, na escola, na pesquisa e na escuta de famílias.</p>
                             </div>
                         </div>
 
                         {/* Description */}
-                        <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[24px] max-w-[1120px]" style={{ fontVariationSettings: "'opsz' 14" }}>
-                            <p className="leading-[1.1] whitespace-pre-wrap">Um evento como o Brasil nunca viu, para profissionais e famílias que estão transformando o jeito de educar. Experiências, feiras, shows e conversas reais sobre a forma como criamos nossos filhos hoje.</p>
+                        <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[24px] max-w-[1030px]" style={{ fontVariationSettings: "'opsz' 14" }}>
+                            <p className="leading-[1.1] whitespace-pre-wrap">O Festival Parental preserva o rigor construído ao longo de seis edições do Congresso Internacional de Educação Parental e amplia esse diálogo para além do campo profissional.</p>
                         </div>
                     </div>
                 </div>
