@@ -1,8 +1,8 @@
 "use client";
 
 import svgPaths from "@/components/svg/svg-j1aige7z56";
-import imgGreenCard from "../assets/images/green-card-image.png";
-import imgBlueCard from "../assets/images/blue-card-image.png";
+import imgGreenCard from "../../assets/images/green-card-image.png";
+import imgBlueCard from "../../assets/images/blue-card-image.png";
 import { imgChatGptImage26DeJanDe20261948541, imgChatGptImage26DeJanDe20262002121 } from "@/components/svg/svg-ph0rc";
 
 function Frame() {

@@ -1,8 +1,8 @@
 "use client";
 
 import svgPaths from "@/components/svg/svgPathsSection9";
-import imgStoryImage from "../assets/images/festival-bg-9.png";
-import imgCep1721 from "../assets/images/festival-audience-9.png";
+import imgStoryImage from "../../assets/images/festival-bg-9.png";
+import imgCep1721 from "../../assets/images/festival-audience-9.png";
 
 function Warning() {
     return (
