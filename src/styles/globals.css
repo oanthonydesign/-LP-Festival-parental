@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@theme {
+    --font-dm-sans: 'DM Sans', sans-serif;
+    --font-sugar-peachy: 'Sugar Peachy', 'Pacifico', cursive;
+    --font-archivo: 'Archivo', sans-serif;
+
+    --color-speaker-green: #79c3ab;
+    --color-speaker-blue: #74acde;
+    --color-speaker-orange: #f7a73c;
+    --color-green-dark: #2daa96;
+    --color-bg-cream: #fff6ef;
+    --color-text-primary: #191919;
+    --color-text-orange: #ef7d25;
+    --color-text-gray: #4c4d4f;
+    --color-text-dark-gray: #505050;
+
+    --color-border-dark: #191919;
+    --color-border-gray: #505050;
+
+    /* Section 7 colors */
+    --color-mac-red: #FC3F51;
+    --color-mac-orange: #ECA031;
+    --color-mac-green: #1CB638;
+    --color-curve-blue: #2260A1;
+    --color-curve-orange: #F7A73C;
+    --color-curve-green: #2DAA96;
+}
+
+/* Utilitários personalizados se necessário */
+@layer utilities {
+    .content-stretch {
+        align-content: stretch;
+    }
+
+    .layout-container {
+        width: 100%;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Opção 2 - Usar fonte customizada (se os arquivos existirem) */
+@font-face {
+    font-family: 'Sugar Peachy';
+    src: url('../assets/fonts/SugarPeachy-Regular.woff2') format('woff2'),
+        url('../assets/fonts/SugarPeachy-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sugar Peachy';
+    src: url('../assets/fonts/SugarPeachy-Bold.woff2') format('woff2'),
+        url('../assets/fonts/SugarPeachy-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sugar Peachy';
+    src: url('../assets/fonts/SugarPeachy-Bold.woff2') format('woff2'),
+        url('../assets/fonts/SugarPeachy-Bold.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
