@@ -29,7 +29,7 @@ export default function Section9() {
             data-name="Section - 9"
         >
             {/* Grafismo de Fundo (Arcos) */}
-            <div className="absolute right-[-150px] md:right-[-50px] top-[-150px] md:top-[-100px] w-[600px] md:w-[850px] h-[800px] md:h-[1100px] z-[1] pointer-events-none select-none">
+            <div className="absolute right-[-150px] md:right-[-80px] top-[-150px] md:top-[-250px] w-[500px] md:w-[670px] h-[800px] md:h-[1100px] z-[1] pointer-events-none select-none">
                 <svg
                     className="w-full h-full opacity-100"
                     viewBox="0 0 869 1085"
@@ -55,7 +55,7 @@ export default function Section9() {
 
                     {/* Títulos e Descrição */}
                     <div className="flex flex-col gap-6">
-                        <h2 className="font-sugar-peachy text-[48px] md:text-[64px] text-[#e12d3b] leading-[0.8]">
+                        <h2 className="font-sugar-peachy text-[48px] md:text-[58px] text-[#e12d3b] leading-[0.8]">
                             O Festival é feito para adultos.
                         </h2>
                         <p className="font-dm-sans text-[20px] md:text-[24px] text-[#fff6ef] leading-tight">
@@ -78,7 +78,7 @@ export default function Section9() {
                 </div>
 
                 {/* Coluna da Imagem */}
-                <div className="relative w-full max-w-[500px] shrink-0">
+                <div className="relative w-full max-w-[440px] shrink-0">
                     <div className="rotate-[-5deg]">
                         <div className="relative border-2 border-[#191919] border-solid rounded-[24px] shadow-[6px_6px_0px_0px_#191919] overflow-hidden aspect-[4/3]">
                             <img

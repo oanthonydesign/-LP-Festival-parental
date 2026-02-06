@@ -1,71 +1,23 @@
 "use client";
 
-import svgPaths from "@/components/svg/svg-j1aige7z56";
-import imgGreenCard from "../../assets/images/green-card-image.png";
-import imgBlueCard from "../../assets/images/blue-card-image.png";
+import React from 'react';
 import { imgChatGptImage26DeJanDe20261948541, imgChatGptImage26DeJanDe20262002121 } from "@/components/svg/svg-ph0rc";
 
-function Frame() {
-    return (
-        <div className="content-stretch flex flex-col gap-[24px] items-center leading-[0] relative shrink-0 text-center w-full">
-            <div className="flex flex-col font-sugar-peachy justify-center not-italic relative shrink-0 text-[#2260a1] text-[clamp(32px,6vw,68px)] w-full max-w-[1122px]">
-                <p className="leading-[0.8] whitespace-pre-wrap">Esse evento é pra você que já entendeu a importância da parentalidade.</p>
-            </div>
-            <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[clamp(18px,4vw,24px)] w-full max-w-[928px]" style={{ fontVariationSettings: "'opsz' 14" }}>
-                <p className="leading-[1.1] whitespace-pre-wrap">Agora é hora de se conectar com quem leva isso a sério.</p>
-            </div>
-        </div>
-    );
-}
+// Import real images if possible, otherwise use the same imports or placeholders
+const imgProfissionais = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800";
+const imgPais = "https://images.unsplash.com/photo-1536640712247-c397974fa212?auto=format&fit=crop&q=80&w=800";
 
 function CloseBarMac() {
     return (
-        <div className="bg-[#fff6ee] h-[56px] relative rounded-tl-[24px] rounded-tr-[24px] shrink-0 w-full" data-name="close bar_mac">
-            <div className="overflow-clip relative rounded-[inherit] size-full">
-                <div className="absolute left-[30px] size-[12px] top-[21.8px]">
-                    <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12 12">
-                        <circle cx="6" cy="6" fill="var(--fill-0, #FC3F51)" r="6" />
-                    </svg>
-                </div>
-                <div className="absolute left-[47px] size-[12px] top-[21.8px]">
-                    <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12 12">
-                        <circle cx="6" cy="6" fill="var(--fill-0, #ECA031)" r="6" />
-                    </svg>
-                </div>
-                <div className="absolute left-[64px] size-[12px] top-[21.8px]">
-                    <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12 12">
-                        <circle cx="6" cy="6" fill="var(--fill-0, #1CB638)" r="6" />
-                    </svg>
-                </div>
+        <div className="bg-[#fff6ee] border-2 border-[#191919] border-solid h-[56px] overflow-clip relative rounded-tl-[24px] rounded-tr-[24px] shadow-[7px_7px_0px_0px_#191919] shrink-0 w-full" data-name="close bar_mac">
+            <div className="absolute left-[28px] size-[12px] top-[19.8px]">
+                <div className="bg-[#FC3F51] rounded-full size-full" />
             </div>
-            <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-tl-[24px] rounded-tr-[24px] shadow-[7px_7px_0px_0px_#191919]" />
-        </div>
-    );
-}
-
-function Warning() {
-    return (
-        <div className="relative shrink-0 size-[18px]" data-name="Warning">
-            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 18 18">
-                <g id="Warning">
-                    <path clipRule="evenodd" d={svgPaths.p110c6e80} fill="var(--fill-0, #191919)" fillRule="evenodd" id="Shape" />
-                    <g id="Shape_2">
-                        <path d={svgPaths.p244df4f0} fill="var(--fill-0, #191919)" />
-                        <path d={svgPaths.p3d6ac800} fill="var(--fill-0, #191919)" />
-                    </g>
-                </g>
-            </svg>
-        </div>
-    );
-}
-
-function Hat({ color, text }: { color: string; text: string }) {
-    return (
-        <div className={`bg-[${color}] content-stretch flex gap-[6px] items-center justify-center px-[32px] py-[16px] relative rounded-[40px] shrink-0`} style={{ backgroundColor: color }} data-name="HAT">
-            <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[40px] shadow-[4px_4px_0px_0px_#191919]" />
-            <Warning />
-            <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#191919] text-[14px] uppercase whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
-                <p className="leading-[normal]">{text}</p>
+            <div className="absolute left-[45px] size-[12px] top-[19.8px]">
+                <div className="bg-[#ECA031] rounded-full size-full" />
+            </div>
+            <div className="absolute left-[62px] size-[12px] top-[19.8px]">
+                <div className="bg-[#1CB638] rounded-full size-full" />
             </div>
         </div>
     );
@@ -73,47 +25,53 @@ function Hat({ color, text }: { color: string; text: string }) {
 
 function Card({
     bgColor,
-    badgeColor,
-    badgeText,
-    headingText,
+    textColor,
+    heading,
+    subtext,
     image,
-    maskImage
+    maskImage,
+    maskSize = "537px 325px",
+    maskPos = "center"
 }: {
     bgColor: string;
-    badgeColor: string;
-    badgeText: string;
-    headingText: string;
+    textColor: string;
+    heading: string;
+    subtext: string;
     image: string;
     maskImage: string;
+    maskSize?: string;
+    maskPos?: string;
 }) {
     return (
-        <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative">
+        <div className="flex flex-col items-start w-full md:w-1/2">
             <CloseBarMac />
-            <div className={`relative h-[575px] rounded-bl-[16px] rounded-br-[16px] shrink-0 w-full`} style={{ backgroundColor: bgColor }} data-name="Container">
-                <div aria-hidden="true" className="absolute border-[#191919] border-b-2 border-l-2 border-r-2 border-solid inset-0 pointer-events-none rounded-bl-[16px] rounded-br-[16px] shadow-[7px_7px_0px_0px_#191919]" />
-                <div className="flex flex-col items-center size-full">
-                    <div className="content-stretch flex flex-col gap-[46px] items-center p-[32px] relative size-full">
-                        <div className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0">
-                            <Hat color={badgeColor} text={badgeText} />
-                            <div className="flex flex-col font-dm-sans font-semibold justify-center leading-tight relative shrink-0 text-[#191919] text-[clamp(24px,4vw,32px)] text-center w-full max-w-[458px]">
-                                <p className="whitespace-pre-wrap">{headingText}</p>
-                            </div>
-                        </div>
-                        <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid items-[start] justify-items-[start] leading-[0] relative shrink-0">
-                            <div
-                                className="col-1 h-[400px] mask-alpha mask-intersect mask-no-clip mask-no-repeat relative row-1 w-full max-w-[500px]"
-                                style={{
-                                    maskImage: `url('${maskImage}')`,
-                                    maskSize: 'contain',
-                                    maskPosition: 'center',
-                                    WebkitMaskImage: `url('${maskImage}')`,
-                                    WebkitMaskSize: 'contain',
-                                    WebkitMaskPosition: 'center'
-                                }}
-                            >
-                                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={typeof image === 'object' ? (image as any).src : image} />
-                            </div>
-                        </div>
+            <div className={`border-b-2 border-l-2 border-r-2 border-[#191919] border-solid flex flex-col items-center p-8 relative rounded-bl-[16px] rounded-br-[16px] shadow-[7px_7px_0px_0px_#191919] shrink-0 w-full min-h-[660px] md:min-h-[720px]`} style={{ backgroundColor: bgColor }}>
+                <div className={`flex flex-col gap-6 items-center text-center ${textColor} mb-12`}>
+                    <h3 className="font-dm-sans font-semibold text-[32px] md:text-[36px] leading-tight max-w-[458px]">
+                        {heading}
+                    </h3>
+                    <p className="font-dm-sans font-normal text-[18px] md:text-[22px] leading-[1.2] max-w-[544px]">
+                        {subtext}
+                    </p>
+                </div>
+
+                <div className="relative w-full aspect-[537/325] max-w-[537px] mt-auto">
+                    <div
+                        className="absolute inset-0 mask-alpha mask-no-repeat"
+                        style={{
+                            maskImage: `url('${maskImage}')`,
+                            maskSize: 'contain',
+                            maskPosition: 'center',
+                            WebkitMaskImage: `url('${maskImage}')`,
+                            WebkitMaskSize: 'contain',
+                            WebkitMaskPosition: 'center'
+                        }}
+                    >
+                        <img
+                            src={image}
+                            alt={heading}
+                            className="w-full h-full object-cover"
+                        />
                     </div>
                 </div>
             </div>
@@ -123,24 +81,34 @@ function Card({
 
 export default function Section8() {
     return (
-        <section className="bg-[#fff6ef] w-full overflow-hidden flex flex-col items-center pb-[76px] pt-[106px] relative isolate" data-name="Section - 8">
-            <div className="layout-container content-stretch flex flex-col gap-[64px] items-center justify-center relative w-full">
-                <Frame />
-                <div className="content-stretch flex flex-col md:flex-row gap-[32px] md:gap-[64px] items-start relative shrink-0 w-full max-w-[1280px]" data-name="para quem é">
+        <section className="bg-[#fff6ef] w-full flex flex-col items-center py-[80px] md:py-[86px] px-6" id="para-quem" data-name="Section - 8">
+            <div className="max-w-[1280px] w-full flex flex-col gap-[64px] items-center">
+                {/* Header Text */}
+                <div className="flex flex-col gap-6 items-center text-center max-w-[1180px]">
+                    <h2 className="font-sugar-peachy text-[#2260a1] text-[48px] md:text-[72px] leading-[0.8]">
+                        Esse evento é pra você que já entendeu a importância da parentalidade.
+                    </h2>
+                    <p className="font-dm-sans text-[#4c4d4f] text-[20px] md:text-[24px] max-w-[928px]">
+                        Agora é hora de se conectar com quem leva isso a sério.
+                    </p>
+                </div>
+
+                {/* Cards Container */}
+                <div className="flex flex-col md:flex-row gap-[40px] md:gap-[64px] w-full items-stretch">
                     <Card
-                        bgColor="#2daa96"
-                        badgeColor="#79c3ab"
-                        badgeText="Para PROFISSIONAIS"
-                        headingText="Que trabalham com famílias e lideram mudanças reais"
-                        image={imgGreenCard}
+                        bgColor="#2260a1"
+                        textColor="text-[#fff6ef]"
+                        heading="Para profissionais da Educação Parental e áreas afins"
+                        subtext="Dois dias de programação aprofundada, com debates baseados em evidência científica, diálogo interdisciplinar e continuidade direta das discussões do Congresso Internacional de Educação Parental."
+                        image={imgProfissionais}
                         maskImage={imgChatGptImage26DeJanDe20261948541}
                     />
                     <Card
-                        bgColor="#2260a1"
-                        badgeColor="#74acde"
-                        badgeText="Para famílias"
-                        headingText="Pais, mães, cuidadores conscientes e famílias que buscam repertório e apoio"
-                        image={imgBlueCard}
+                        bgColor="#2daa96"
+                        textColor="text-[#191919]"
+                        heading="Para pais, mães e cuidadores que vivem a parentalidade na prática"
+                        subtext="Dois dias de conversas acessíveis e profundas, pensadas para lidar com os desafios reais da criação de filhos hoje — sem julgamentos, manuais ou promessas fáceis."
+                        image={imgPais}
                         maskImage={imgChatGptImage26DeJanDe20262002121}
                     />
                 </div>
