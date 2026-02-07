@@ -75,16 +75,8 @@ function Variant() {
 
 function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng() {
   return (
-    <div className="absolute inset-[-0.2px_0_0.2px_0] overflow-clip" data-name="image 117 → BN7iqnVFCTfYln1HkE0Lm5k0wEQ.png">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <img alt="" className="absolute h-full left-[-34.11%] max-w-none top-0 w-[168.22%]" src="/images/festival/image-117.png" />
-      </div>
-      <div className="absolute h-[515px] left-px top-[-30.5px] w-[412px]" data-name="image 119">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/festival/image-119.png" />
-      </div>
-      <div className="absolute h-[484px] left-[-145px] top-[0.5px] w-[704px]" data-name="image 120">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/festival/image-120.png" />
-      </div>
+    <div className="absolute inset-0 overflow-clip" data-name="image 117">
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/loc_01.webp" />
     </div>
   );
 }
@@ -146,13 +138,8 @@ function Variant1() {
 
 function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng1() {
   return (
-    <div className="absolute inset-[-0.2px_0_0.2px_0] overflow-clip" data-name="image 117 → BN7iqnVFCTfYln1HkE0Lm5k0wEQ.png">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <img alt="" className="absolute h-full left-[-34.11%] max-w-none top-0 w-[168.22%]" src="/images/festival/image-117.png" />
-      </div>
-      <div className="absolute h-[519px] left-[-0.5px] top-[-33px] w-[415px]" data-name="💡 No mundo dos eventos, inovar é essencial. E no Transamerica Expo Center, isso é o que nos mov 1">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/festival/transamerica-expo.png" />
-      </div>
+    <div className="absolute inset-0 overflow-clip" data-name="image 117">
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/loc_02.webp" />
     </div>
   );
 }
@@ -214,13 +201,8 @@ function Variant2() {
 
 function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng2() {
   return (
-    <div className="absolute inset-[-0.2px_0_0.2px_0] overflow-clip" data-name="image 117 → BN7iqnVFCTfYln1HkE0Lm5k0wEQ.png">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <img alt="" className="absolute h-full left-[-34.11%] max-w-none top-0 w-[168.22%]" src="/images/festival/image-117.png" />
-      </div>
-      <div className="absolute h-[516px] left-0 top-[-31px] w-[413px]" data-name="image 119">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/festival/image-119.png" />
-      </div>
+    <div className="absolute inset-0 overflow-clip" data-name="image 117">
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/loc_03.webp" />
     </div>
   );
 }

@@ -3,9 +3,9 @@
 import React from 'react';
 import { imgChatGptImage26DeJanDe20261948541, imgChatGptImage26DeJanDe20262002121 } from "@/components/svg/svg-ph0rc";
 
-// Import real images if possible, otherwise use the same imports or placeholders
-const imgProfissionais = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800";
-const imgPais = "https://images.unsplash.com/photo-1536640712247-c397974fa212?auto=format&fit=crop&q=80&w=800";
+// Import real images
+const imgProfissionais = "/images/img_profissionais.webp";
+const imgPais = "/images/img_pais.webp";
 
 function CloseBarMac() {
     return (

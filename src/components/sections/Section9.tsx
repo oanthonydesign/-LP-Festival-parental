@@ -1,7 +1,7 @@
 "use client";
 
 import svgPaths from "@/components/svg/svgPathsSection9";
-import imgStoryImage from "../../assets/images/festival-audience-9.png"; // Usando a imagem correta do público
+const imgStoryImage = "/images/banner_adultos.webp";
 
 function WarningIcon() {
     return (
@@ -82,7 +82,7 @@ export default function Section9() {
                     <div className="rotate-[-5deg]">
                         <div className="relative border-2 border-[#191919] border-solid rounded-[24px] shadow-[6px_6px_0px_0px_#191919] overflow-hidden aspect-[4/3]">
                             <img
-                                src={imgStoryImage.src || imgStoryImage}
+                                src={imgStoryImage}
                                 alt="Público do Festival"
                                 className="w-full h-full object-cover scale-110"
                             />

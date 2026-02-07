@@ -167,7 +167,7 @@ function PassportCard({ data }: { data: PassportData }) {
         {/* Action Button */}
         <a
           href={data.href}
-          className="bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] px-[24px] py-[16px] flex items-center justify-center gap-2 hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all group active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919]"
+          className="bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] px-[24px] py-[16px] flex items-center justify-center gap-2 hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] group"
         >
           <div className="text-[#191919]">
             <TicketIcon />
@@ -192,7 +192,7 @@ export default function Section6() {
       <div className="max-w-[1280px] w-full flex flex-col items-center gap-[64px]">
         {/* Header */}
         <div className="flex flex-col items-center gap-7 text-center">
-          <div className="border-2 border-[#505050] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#505050] px-[32px] py-[16px] flex items-center gap-2 text-[#505050] bg-white">
+          <div className="border-2 border-[#505050] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#505050] px-[32px] py-[16px] flex items-center gap-2 text-[#505050] bg-transparent">
             <TicketIcon />
             <span className="font-dm-sans text-[14px] uppercase tracking-wider">escolha seu ingresso</span>
           </div>

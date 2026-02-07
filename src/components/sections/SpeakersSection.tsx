@@ -277,9 +277,8 @@ export default function SpeakersSection() {
                     <div className="content-stretch flex flex-col items-start relative shrink-0 w-[236px]">
                         <button
                             onClick={handleLoadMore}
-                            className="bg-[rgba(25,25,25,0.05)] relative rounded-[40px] shrink-0 w-full cursor-pointer hover:bg-[rgba(25,25,25,0.1)] transition-colors"
+                            className="bg-[rgba(25,25,25,0.05)] border-2 border-[#191919] relative rounded-[40px] shrink-0 w-full cursor-pointer hover:bg-[rgba(25,25,25,0.1)] transition-all hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] shadow-[4px_4px_0px_0px_#191919]"
                         >
-                            <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[40px] shadow-[4px_4px_0px_0px_#191919]" />
                             <div className="flex flex-row items-center justify-center size-full">
                                 <div className="content-stretch flex items-center justify-center px-[32px] py-[16px] relative w-full">
                                     <div className="flex flex-col font-dm-sans font-bold justify-center leading-[0] relative shrink-0 text-[#191919] text-[14.1px] uppercase whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>

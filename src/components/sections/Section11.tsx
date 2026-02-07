@@ -150,15 +150,18 @@ function ComprarIngresso() {
 
 function LinkVariant() {
   return (
-    <div className="bg-[#2daa96] relative rounded-[40px] shrink-0 w-full" data-name="Link - Variant 1">
-      <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[40px] shadow-[4px_4px_0px_0px_#191919]" />
-      <div className="flex flex-row items-center justify-center size-full">
-        <div className="content-stretch flex gap-[4px] items-center justify-center px-[40px] py-[16px] relative w-full">
-          <IcOutlineWhatsapp />
-          <ComprarIngresso />
-        </div>
+    <a
+      href="https://wa.me/5511999999999" // TODO: Confirmar número correto
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-[#2daa96] border-2 border-[#191919] relative rounded-[40px] shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all flex flex-row items-center justify-center size-full cursor-pointer decoration-transparent"
+      data-name="Link - Variant 1"
+    >
+      <div className="content-stretch flex gap-[8px] items-center justify-center px-[40px] py-[16px] relative w-full">
+        <IcOutlineWhatsapp />
+        <ComprarIngresso />
       </div>
-    </div>
+    </a>
   );
 }
 

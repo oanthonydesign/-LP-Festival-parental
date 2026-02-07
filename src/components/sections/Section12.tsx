@@ -153,9 +153,7 @@ function Component() {
   return (
     <div className="bg-[#fff6ef] h-[158px] relative rounded-[999px] shrink-0 w-[490px]" data-name="1">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[327px] left-1/2 top-[calc(50%+64.79px)] w-[490px]" data-name="IMG_7151 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/festival/gallery/img-7151.png" />
-        </div>
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/carrossel_03.webp" />
       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[999px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
@@ -166,9 +164,7 @@ function Component1() {
   return (
     <div className="bg-[#fff6ef] h-[158px] relative rounded-[999px] shrink-0 w-[490px]" data-name="2">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[327px] left-0 top-[-117.71px] w-[490px]" data-name="CEP-268 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/festival/gallery/cep-268.png" />
-        </div>
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/carrossel_07.webp" />
       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[999px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
@@ -179,9 +175,7 @@ function Component2() {
   return (
     <div className="bg-[#fff6ef] h-[158px] relative rounded-[999px] shrink-0 w-[490px]" data-name="3">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[327px] left-0 top-[-84.71px] w-[490px]" data-name="CEP-016 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/festival/gallery/cep-016.png" />
-        </div>
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/carrossel_01.webp" />
       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[999px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
@@ -192,9 +186,7 @@ function Component3() {
   return (
     <div className="bg-[#fff6ef] h-[158px] relative rounded-[999px] shrink-0 w-[490px]" data-name="4">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[342px] left-[-12px] top-[-91.71px] w-[514px]" data-name="CEP-338 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/festival/gallery/cep-338.png" />
-        </div>
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/carrossel_05.webp" />
       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[999px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
@@ -206,9 +198,7 @@ function Component4() {
   return (
     <div className="bg-[#fff6ef] h-[158px] relative rounded-[999px] shrink-0 w-[490px]" data-name="1">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[355px] left-[-21px] top-[-80.71px] w-[532px]" data-name="CEP-166 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/festival/gallery/cep-166.png" />
-        </div>
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/carrossel_08.webp" />
       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[999px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
@@ -219,9 +209,7 @@ function Component5() {
   return (
     <div className="bg-[#fff6ef] h-[158px] relative rounded-[999px] shrink-0 w-[490px]" data-name="2">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[366px] left-[-30px] top-[-120.71px] w-[550px]" data-name="CEP-294 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/festival/gallery/cep-294.png" />
-        </div>
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/carrossel_02.webp" />
       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[999px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
@@ -232,9 +220,7 @@ function Component6() {
   return (
     <div className="bg-[#fff6ef] h-[158px] relative rounded-[999px] shrink-0 w-[490px]" data-name="3">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[362px] left-[-27px] top-[-67.71px] w-[544px]" data-name="CEP-269 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/festival/gallery/cep-269.png" />
-        </div>
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/carrossel_04.webp" />
       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[999px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
@@ -245,9 +231,7 @@ function Component7() {
   return (
     <div className="bg-[#fff6ef] h-[158px] relative rounded-[999px] shrink-0 w-[490px]" data-name="4">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[335px] left-[-7px] top-[-31.71px] w-[504px]" data-name="CEP-183 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/festival/gallery/cep-183.png" />
-        </div>
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/carrossel_06.webp" />
       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[999px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
@@ -265,12 +249,11 @@ function Frame1() {
 
 function Component8() {
   return (
-    <div className="bg-[#fff6ef] h-[72px] relative rounded-[40px] shrink-0 w-[510px]" data-name="1">
+    <div className="bg-[#fff6ef] h-[72px] relative rounded-[40px] shrink-0 w-[510px] border-2 border-[#191919] shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all cursor-pointer" data-name="1">
       <div className="content-stretch flex items-center justify-between overflow-clip px-[32px] py-[16px] relative rounded-[inherit] size-full">
         <Container1 />
         <Container2 />
       </div>
-      <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[40px] shadow-[4px_4px_0px_0px_#191919]" />
     </div>
   );
 }

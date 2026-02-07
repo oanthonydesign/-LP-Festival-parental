@@ -39,9 +39,9 @@ function Group() {
 
 function Frame() {
     return (
-        <div className="bg-[#2daa96] relative rounded-[8px] shrink-0 size-[40px]" data-name="Frame">
+        <div className="bg-[#2daa96] relative rounded-[8px] shrink-0 size-[40px] flex items-center justify-center p-2" data-name="Frame">
             <div aria-hidden="true" className="absolute border border-[#191919] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[2px_2px_0px_0px_#191919]" />
-            <Group />
+            <img src="/images/icon_01.svg" alt="Icon" className="w-full h-full object-contain relative z-10" />
         </div>
     );
 }
@@ -117,9 +117,9 @@ function Group1() {
 
 function Frame1() {
     return (
-        <div className="bg-[#79c3ab] relative rounded-[8px] shrink-0 size-[40px]" data-name="Frame">
+        <div className="bg-[#79c3ab] relative rounded-[8px] shrink-0 size-[40px] flex items-center justify-center p-2" data-name="Frame">
             <div aria-hidden="true" className="absolute border border-[#191919] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[2px_2px_0px_0px_#191919]" />
-            <Group1 />
+            <img src="/images/icon_02.svg" alt="Icon" className="w-full h-full object-contain relative z-10" />
         </div>
     );
 }
@@ -195,9 +195,9 @@ function Group2() {
 
 function Frame2() {
     return (
-        <div className="bg-[#74acde] relative rounded-[8px] shrink-0 size-[40px]" data-name="Frame">
+        <div className="bg-[#74acde] relative rounded-[8px] shrink-0 size-[40px] flex items-center justify-center p-2" data-name="Frame">
             <div aria-hidden="true" className="absolute border border-[#191919] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[2px_2px_0px_0px_#191919]" />
-            <Group2 />
+            <img src="/images/icon_03.svg" alt="Icon" className="w-full h-full object-contain relative z-10" />
         </div>
     );
 }
@@ -273,9 +273,9 @@ function Group3() {
 
 function Frame3() {
     return (
-        <div className="bg-[#f7a73c] relative rounded-[8px] shrink-0 size-[40px]" data-name="Frame">
+        <div className="bg-[#f7a73c] relative rounded-[8px] shrink-0 size-[40px] flex items-center justify-center p-2" data-name="Frame">
             <div aria-hidden="true" className="absolute border border-[#191919] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[2px_2px_0px_0px_#191919]" />
-            <Group3 />
+            <img src="/images/icon_04.svg" alt="Icon" className="w-full h-full object-contain relative z-10" />
         </div>
     );
 }
@@ -351,9 +351,9 @@ function Group4() {
 
 function Frame4() {
     return (
-        <div className="bg-[#f7a73c] relative rounded-[8px] shrink-0 size-[40px]" data-name="Frame">
+        <div className="bg-[#f7a73c] relative rounded-[8px] shrink-0 size-[40px] flex items-center justify-center p-2" data-name="Frame">
             <div aria-hidden="true" className="absolute border border-[#191919] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[2px_2px_0px_0px_#191919]" />
-            <Group4 />
+            <img src="/images/icon_05.svg" alt="Icon" className="w-full h-full object-contain relative z-10" />
         </div>
     );
 }
@@ -429,9 +429,9 @@ function Group5() {
 
 function Frame5() {
     return (
-        <div className="bg-[#74acde] relative rounded-[8px] shrink-0 size-[40px]" data-name="Frame">
+        <div className="bg-[#74acde] relative rounded-[8px] shrink-0 size-[40px] flex items-center justify-center p-2" data-name="Frame">
             <div aria-hidden="true" className="absolute border border-[#191919] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[2px_2px_0px_0px_#191919]" />
-            <Group5 />
+            <img src="/images/icon_06.svg" alt="Icon" className="w-full h-full object-contain relative z-10" />
         </div>
     );
 }
@@ -507,9 +507,9 @@ function Group6() {
 
 function Frame6() {
     return (
-        <div className="bg-[#79c3ab] relative rounded-[8px] shrink-0 size-[40px]" data-name="Frame">
+        <div className="bg-[#79c3ab] relative rounded-[8px] shrink-0 size-[40px] flex items-center justify-center p-2" data-name="Frame">
             <div aria-hidden="true" className="absolute border border-[#191919] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[2px_2px_0px_0px_#191919]" />
-            <Group6 />
+            <img src="/images/icon_07.svg" alt="Icon" className="w-full h-full object-contain relative z-10" />
         </div>
     );
 }
@@ -585,9 +585,9 @@ function Group7() {
 
 function Frame7() {
     return (
-        <div className="bg-[#2daa96] relative rounded-[8px] shrink-0 size-[40px]" data-name="Frame">
+        <div className="bg-[#2daa96] relative rounded-[8px] shrink-0 size-[40px] flex items-center justify-center p-2" data-name="Frame">
             <div aria-hidden="true" className="absolute border border-[#191919] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[2px_2px_0px_0px_#191919]" />
-            <Group7 />
+            <img src="/images/icon_08.svg" alt="Icon" className="w-full h-full object-contain relative z-10" />
         </div>
     );
 }

@@ -7,11 +7,11 @@ import svgPaths from "@/components/svg/svg-jj8ggrv19k";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const imgImg90811 = "https://placehold.co/600x400/png?text=Festival+1";
-const imgCep2921 = "https://placehold.co/600x400/png?text=Festival+2";
-const imgImg54721 = "https://placehold.co/600x400/png?text=Festival+3";
-const imgStoryImage = "https://placehold.co/600x400/png?text=Festival+4";
-const imgImg91501 = "https://placehold.co/600x400/png?text=Festival+5";
+const imgImg90811 = "/images/banner 01.webp";
+const imgCep2921 = "/images/banner 02.webp";
+const imgImg54721 = "/images/banner 03.webp";
+const imgStoryImage = "/images/banner 04.webp";
+const imgImg91501 = "/images/banner 01.webp";
 
 function Group() {
     return (
