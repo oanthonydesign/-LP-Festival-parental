@@ -151,7 +151,7 @@ function ComprarIngresso() {
 function LinkVariant() {
   return (
     <a
-      href="https://wa.me/5511999999999" // TODO: Confirmar número correto
+      href="https://wa.me/5531984205695?text=Vou%20no%20Festival%20Parental%202026%20e%20gostaria%20de%20organizar%20minha%20viagem"
       target="_blank"
       rel="noopener noreferrer"
       className="bg-[#2daa96] border-2 border-[#191919] relative rounded-[40px] shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all flex flex-row items-center justify-center size-full cursor-pointer decoration-transparent"

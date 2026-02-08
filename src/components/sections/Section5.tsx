@@ -698,7 +698,7 @@ function Grafismo() {
 
 export default function Section5() {
     return (
-        <section className="bg-[#fff6ef] w-full overflow-hidden flex flex-col items-center pb-[120px] pt-[80px] relative isolate" data-name="Section - 5">
+        <section className="bg-[#fff6ef] w-full overflow-hidden flex flex-col items-center pb-[120px] pt-[80px] relative isolate" data-name="Section - 5" id="atracoes">
             <div className="layout-container relative flex flex-col items-center">
                 <Content />
             </div>

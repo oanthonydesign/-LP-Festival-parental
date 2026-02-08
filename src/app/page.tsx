@@ -1,3 +1,5 @@
+import Header from '@/components/sections/Header';
+import HeroSection from '@/components/sections/HeroSection';
 import Marquee01 from '@/components/sections/Marquee01';
 import Marquee02 from '@/components/sections/Marquee02';
 import Section2 from '@/components/sections/Section2';
@@ -18,9 +20,13 @@ import Copyright from '@/components/sections/Copyright';
 
 export default function Home() {
     return (
-        <main className="min-h-screen overflow-x-hidden">
-            <Marquee01 />
-            <Marquee02 />
+        <main className="min-h-screen overflow-x-hidden relative">
+            <Header />
+            <HeroSection />
+            <div className="-mt-24 relative z-30">
+                <Marquee01 />
+                <Marquee02 />
+            </div>
             <Section2 />
             <Section8 />
             <SpeakersSection />

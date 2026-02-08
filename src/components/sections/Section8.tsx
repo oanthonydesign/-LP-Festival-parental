@@ -31,7 +31,8 @@ function Card({
     image,
     maskImage,
     maskSize = "537px 325px",
-    maskPos = "center"
+    maskPos = "center",
+    id
 }: {
     bgColor: string;
     textColor: string;
@@ -41,9 +42,10 @@ function Card({
     maskImage: string;
     maskSize?: string;
     maskPos?: string;
+    id?: string;
 }) {
     return (
-        <div className="flex flex-col items-start w-full md:w-1/2">
+        <div className="flex flex-col items-start w-full md:w-1/2" id={id}>
             <CloseBarMac />
             <div className={`border-b-2 border-l-2 border-r-2 border-[#191919] border-solid flex flex-col items-center p-6 gap-6 relative rounded-bl-[16px] rounded-br-[16px] shadow-[7px_7px_0px_0px_#191919] shrink-0 w-full`} style={{ backgroundColor: bgColor }}>
                 <div className={`flex flex-col gap-6 items-center text-center ${textColor}`}>
@@ -96,6 +98,7 @@ export default function Section8() {
                 {/* Cards Container */}
                 <div className="flex flex-col md:flex-row gap-[40px] md:gap-[64px] w-full items-stretch">
                     <Card
+                        id="profissional"
                         bgColor="#2260a1"
                         textColor="text-[#fff6ef]"
                         heading="Para profissionais da Educação Parental e áreas afins"
@@ -104,6 +107,7 @@ export default function Section8() {
                         maskImage={imgChatGptImage26DeJanDe20261948541}
                     />
                     <Card
+                        id="pais"
                         bgColor="#2daa96"
                         textColor="text-[#191919]"
                         heading="Para pais, mães e cuidadores que vivem a parentalidade na prática"

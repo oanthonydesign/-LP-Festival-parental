@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function Section13() {
     return (
-        <section className="bg-[#2daa96] border-y-[5px] border-[#191919] py-[86px] relative overflow-hidden" data-name="Section - 13">
+        <section className="bg-[#2daa96] border-y-[5px] border-[#191919] py-[86px] relative overflow-hidden" data-name="Section - 13" id="patrocinador">
             {/* Background Graphic */}
             <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-[600px] md:w-[850px] h-auto z-[1] opacity-100 pointer-events-none">
                 <img
@@ -32,7 +32,7 @@ export default function Section13() {
                 </div>
 
                 {/* Button */}
-                <a href="#" className="bg-[#79c3ab] border-[2px] border-[#191919] rounded-[40px] px-[32px] py-[16px] shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] inline-flex items-center justify-center">
+                <a href="https://wa.me/5511915983957?text=Quero%20patrocinar%20o%20Festival%20Parental%202026" target="_blank" rel="noopener noreferrer" className="bg-[#79c3ab] border-[2px] border-[#191919] rounded-[40px] px-[32px] py-[16px] shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] inline-flex items-center justify-center">
                     <span className="font-dm-sans font-bold text-[#191919] text-[14px] uppercase tracking-wide">
                         quero ser patrocinador
                     </span>
