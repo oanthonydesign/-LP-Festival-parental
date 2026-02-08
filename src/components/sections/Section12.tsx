@@ -78,7 +78,7 @@ function Div1() {
           }
         }
         .carousel-rtl {
-          animation: scroll-right-to-left 30s linear infinite;
+          animation: scroll-right-to-left 80s linear infinite;
         }
         .carousel-rtl:hover {
           animation-play-state: paused;
@@ -120,7 +120,7 @@ function Div2() {
           }
         }
         .carousel-ltr {
-          animation: scroll-left-to-right 30s linear infinite;
+          animation: scroll-left-to-right 80s linear infinite;
         }
         .carousel-ltr:hover {
           animation-play-state: paused;
