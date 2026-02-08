@@ -49,7 +49,7 @@ export default function HeroSection() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="font-sugar-peachy text-[#ef7d25] text-[44px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.95] md:leading-[0.9] tracking-[-1.5px] md:tracking-[-3px] relative px-2 md:px-0 w-full [-webkit-text-stroke:8px_#fff] [paint-order:stroke_fill] [filter:drop-shadow(2px_2px_0_#191919)_drop-shadow(-2px_-2px_0_#191919)_drop-shadow(2px_-2px_0_#191919)_drop-shadow(-2px_2px_0_#191919)]">
+                    <h1 className="font-sugar-peachy text-[#ef7d25] text-[44px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.95] md:leading-[0.9] tracking-[-1.5px] md:tracking-[-3px] relative px-2 md:px-0 w-full [-webkit-text-stroke:12px_#FFF6EE] [paint-order:stroke_fill] [filter:drop-shadow(-1px_9px_0_#191919)]">
                         <span className="block">Criar filhos nunca foi simples.</span>
                         <span className="block mt-2">
                             Agora, é <span className="text-[#2260a1]">muito mais complexo</span>
