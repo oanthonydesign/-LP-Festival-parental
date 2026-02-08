@@ -73,6 +73,7 @@ function Card({
                             src={image}
                             alt={heading}
                             className="w-full h-full object-cover"
+                            loading="lazy"
                         />
                     </div>
                 </div>

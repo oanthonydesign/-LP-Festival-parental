@@ -35,7 +35,7 @@ function StoryImage() {
             <div className="absolute flex h-[454.775px] items-center justify-center left-[-96.92px] top-[-64.66px] w-[681.434px]">
                 <div className="flex-none rotate-[0.06deg]">
                     <div className="h-[454.064px] relative w-[680.96px]" data-name="IMG_9081 1">
-                        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImg90811} />
+                        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImg90811} loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@ function StoryImage1() {
     return (
         <div className="bg-white border-[#191919] border-[2.091px] border-solid h-[329.371px] overflow-clip relative rounded-[25.095px] shadow-[4.182px_4.182px_0px_0px_#191919] w-[492.489px]" data-name="Story Image">
             <div className="absolute h-[349.103px] left-[-18.07px] top-[-11.82px] w-[523.655px]" data-name="CEP-292 1">
-                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgCep2921} />
+                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgCep2921} loading="lazy" />
             </div>
         </div>
     );
@@ -59,7 +59,7 @@ function StoryImage2() {
             <div className="absolute flex h-[401.034px] items-center justify-center left-[-72.73px] top-[-37.27px] w-[586.851px]">
                 <div className="flex-none rotate-[-1.82deg]">
                     <div className="h-[383px] relative w-[575px]" data-name="IMG_5472 1">
-                        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImg54721} />
+                        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImg54721} loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -71,13 +71,13 @@ function StoryImage3() {
     return (
         <div className="h-[329.371px] relative rounded-[25.095px] w-[492.489px]" data-name="Story Image">
             <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[25.095px]">
-                <img alt="" className="absolute h-[144.37%] left-[-0.22%] max-w-none top-0 w-[100.44%]" src={imgStoryImage} />
+                <img alt="" className="absolute h-[144.37%] left-[-0.22%] max-w-none top-0 w-[100.44%]" src={imgStoryImage} loading="lazy" />
             </div>
             <div className="overflow-clip relative rounded-[inherit] size-full">
                 <div className="absolute flex h-[354.116px] items-center justify-center left-[-13.14px] top-[-12.82px] w-[518.675px]">
                     <div className="flex-none rotate-[1.49deg]">
                         <div className="h-[341px] relative w-[510px]" data-name="IMG_9150 1">
-                            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImg91501} />
+                            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImg91501} loading="lazy" />
                         </div>
                     </div>
                 </div>

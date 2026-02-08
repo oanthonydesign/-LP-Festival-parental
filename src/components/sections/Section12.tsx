@@ -153,7 +153,7 @@ function Component() {
   return (
     <div className="bg-[#fff6ef] h-[158px] relative rounded-[999px] shrink-0 w-[85vw] md:w-[490px]" data-name="1">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/carrossel_03.webp" />
+        <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/carrossel_03.webp" loading="lazy" />
       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[999px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
@@ -164,7 +164,7 @@ function Component1() {
   return (
     <div className="bg-[#fff6ef] h-[158px] relative rounded-[999px] shrink-0 w-[85vw] md:w-[490px]" data-name="2">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/carrossel_07.webp" />
+        <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/carrossel_07.webp" loading="lazy" />
       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[999px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
@@ -175,7 +175,7 @@ function Component2() {
   return (
     <div className="bg-[#fff6ef] h-[158px] relative rounded-[999px] shrink-0 w-[85vw] md:w-[490px]" data-name="3">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/carrossel_01.webp" />
+        <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/carrossel_01.webp" loading="lazy" />
       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[999px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
@@ -186,7 +186,7 @@ function Component3() {
   return (
     <div className="bg-[#fff6ef] h-[158px] relative rounded-[999px] shrink-0 w-[85vw] md:w-[490px]" data-name="4">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/carrossel_05.webp" />
+        <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/carrossel_05.webp" loading="lazy" />
       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[999px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
@@ -198,7 +198,7 @@ function Component4() {
   return (
     <div className="bg-[#fff6ef] h-[158px] relative rounded-[999px] shrink-0 w-[85vw] md:w-[490px]" data-name="1">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/carrossel_08.webp" />
+        <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/carrossel_08.webp" loading="lazy" />
       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[999px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
@@ -209,7 +209,7 @@ function Component5() {
   return (
     <div className="bg-[#fff6ef] h-[158px] relative rounded-[999px] shrink-0 w-[85vw] md:w-[490px]" data-name="2">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/carrossel_02.webp" />
+        <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/carrossel_02.webp" loading="lazy" />
       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[999px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
@@ -220,7 +220,7 @@ function Component6() {
   return (
     <div className="bg-[#fff6ef] h-[158px] relative rounded-[999px] shrink-0 w-[85vw] md:w-[490px]" data-name="3">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/carrossel_04.webp" />
+        <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/carrossel_04.webp" loading="lazy" />
       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[999px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
@@ -231,7 +231,7 @@ function Component7() {
   return (
     <div className="bg-[#fff6ef] h-[158px] relative rounded-[999px] shrink-0 w-[85vw] md:w-[490px]" data-name="4">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/carrossel_06.webp" />
+        <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/carrossel_06.webp" loading="lazy" />
       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[999px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>

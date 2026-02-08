@@ -39,7 +39,7 @@ function StoryImage() {
       <div className="overflow-clip relative rounded-[inherit] size-full">
         <div className="absolute h-[858px] left-[-14px] top-[-241.15px] w-[572px]" data-name="CEP-252 1">
           {/* IMPORTANTE: Substituir por imagem Next.js */}
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/festival/cep-252.png" />
+          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/festival/cep-252.png" loading="lazy" />
         </div>
       </div>
       <div aria-hidden="true" className="absolute border-3 border-[#191919] border-solid inset-0 pointer-events-none rounded-[24px]" />

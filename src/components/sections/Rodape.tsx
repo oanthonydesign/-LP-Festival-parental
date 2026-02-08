@@ -23,8 +23,8 @@ function ContentPadding() {
   return (
     <div className="bg-[#fff6ef] content-stretch flex flex-col h-auto min-h-[577px] items-center overflow-clip px-4 md:px-[30px] py-[80px] relative shrink-0 w-full" data-name="Content → Padding">
       <Links />
-      <div className="absolute inset-[44.71px_0_44.29px_0]" data-name="HorizontalBorder">
-        <div aria-hidden="true" className="absolute border-[rgba(255,255,255,0.1)] border-solid border-t inset-0 pointer-events-none" />
+      <div className="absolute inset-[44.71px_0_44.29px_0] pointer-events-none" data-name="HorizontalBorder">
+        <div aria-hidden="true" className="absolute border-[rgba(255,255,255,0.1)] border-solid border-t inset-0" />
       </div>
       <Group1 />
     </div>
@@ -137,7 +137,6 @@ function Links1() {
   return (
     <div className="content-stretch flex flex-col items-center md:items-start justify-center relative shrink-0 w-full sm:w-[48%] md:w-[250px]" data-name="Links">
       <Container2 />
-      <Container4 />
       <Container6 />
       <Container8 />
     </div>
@@ -154,13 +153,13 @@ function Container2() {
 
 function LinkVariant() {
   return (
-    <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
+    <a href="#palestrantes" className="relative shrink-0 w-full block group" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full group-hover:text-[#ef7d25] transition-colors">
           <Palestrantes />
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -230,13 +229,13 @@ function Container6() {
 
 function LinkVariant2() {
   return (
-    <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
+    <a href="#" className="relative shrink-0 w-full block group" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full group-hover:text-[#ef7d25] transition-colors">
           <Palestrantes2 />
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -268,13 +267,13 @@ function Container8() {
 
 function LinkVariant3() {
   return (
-    <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
+    <a href="https://wa.me/5511915983957" target="_blank" rel="noopener noreferrer" className="relative shrink-0 w-full block group" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full group-hover:text-[#ef7d25] transition-colors">
           <Palestrantes3 />
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -318,13 +317,13 @@ function Container10() {
 
 function LinkVariant4() {
   return (
-    <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
+    <a href="https://wa.me/5511915983957?text=Quero%20patrocinar%20o%20Festival%20Parental%202026" target="_blank" rel="noopener noreferrer" className="relative shrink-0 w-full block group" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full group-hover:text-[#ef7d25] transition-colors">
           <Palestrantes4 />
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -356,13 +355,13 @@ function Container12() {
 
 function LinkVariant5() {
   return (
-    <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
+    <a href="#ingressos" className="relative shrink-0 w-full block group" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full group-hover:text-[#ef7d25] transition-colors">
           <Palestrantes5 />
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -394,13 +393,13 @@ function Container14() {
 
 function LinkVariant6() {
   return (
-    <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
+    <a href="#localizacao" className="relative shrink-0 w-full block group" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full group-hover:text-[#ef7d25] transition-colors">
           <Palestrantes6 />
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -432,13 +431,13 @@ function Container16() {
 
 function LinkVariant7() {
   return (
-    <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
+    <a href="https://wa.me/5511915983957" target="_blank" rel="noopener noreferrer" className="relative shrink-0 w-full block group" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full group-hover:text-[#ef7d25] transition-colors">
           <Palestrantes7 />
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -466,7 +465,6 @@ function Frame3() {
     <div className="content-stretch flex flex-col items-center md:items-start justify-center relative shrink-0 w-full sm:w-[48%] md:w-[250px]">
       <Container18 />
       <Container20 />
-      <Container22 />
     </div>
   );
 }
@@ -481,13 +479,13 @@ function Container18() {
 
 function LinkVariant8() {
   return (
-    <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
+    <a href="#" className="relative shrink-0 w-full block group" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full group-hover:text-[#ef7d25] transition-colors">
           <Palestrantes8 />
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -519,13 +517,13 @@ function Container20() {
 
 function LinkVariant9() {
   return (
-    <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
+    <a href="#" className="relative shrink-0 w-full block group" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full group-hover:text-[#ef7d25] transition-colors">
           <Palestrantes9 />
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -590,7 +588,6 @@ function Frame1() {
   return (
     <div className="content-stretch flex flex-col items-center md:items-start justify-center relative shrink-0 w-full sm:w-[48%] md:w-[100px]">
       <Container24 />
-      <Container26 />
     </div>
   );
 }
@@ -605,13 +602,13 @@ function Container24() {
 
 function LinkVariant11() {
   return (
-    <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
+    <a href="https://www.instagram.com/festivalparental/" target="_blank" rel="noopener noreferrer" className="relative shrink-0 w-full block group" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full group-hover:text-[#ef7d25] transition-colors">
           <Palestrantes11 />
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -682,13 +679,13 @@ function Container28() {
 
 function LinkVariant13() {
   return (
-    <div className="bg-[#f7a73c] border-2 border-[#191919] relative rounded-[40px] shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all shrink-0 w-full cursor-pointer" data-name="Link - Variant 1">
+    <a href="#ingressos" className="bg-[#f7a73c] border-2 border-[#191919] relative rounded-[40px] shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all shrink-0 w-full cursor-pointer block" data-name="Link - Variant 1">
       <div className="flex flex-row items-center justify-center size-full">
         <div className="content-stretch flex items-center justify-center px-4 md:px-[40px] py-[20px] md:py-[44px] relative w-full">
           <ComprarIngresso />
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -713,7 +710,7 @@ function Container29() {
 // Elementos decorativos no rodapé
 function Group1() {
   return (
-    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[15%] w-full md:w-[105%] h-auto">
+    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[15%] w-full md:w-[105%] h-auto pointer-events-none">
       <svg className="block w-full h-auto" fill="none" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1280 126.54">
         <g id="Group 14">
           <path d={svgPaths.p2bed4a80} fill="var(--fill-0, #0B6FB5)" id="Vector" />

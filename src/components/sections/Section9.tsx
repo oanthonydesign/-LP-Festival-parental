@@ -85,6 +85,7 @@ export default function Section9() {
                                 src={imgStoryImage}
                                 alt="Público do Festival"
                                 className="w-full h-full object-cover scale-110"
+                                loading="lazy"
                             />
                         </div>
                     </div>

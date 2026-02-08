@@ -3,7 +3,7 @@
 
 export default function Section10() {
   return (
-    <div className="bg-[#fff6ef] content-stretch flex items-center justify-center pb-[56px] pt-[86px] px-4 md:px-0 relative size-full" data-name="Section - 10">
+    <div className="bg-[#fff6ef] content-stretch flex items-center justify-center pb-[56px] pt-[86px] px-4 md:px-0 relative size-full" data-name="Section - 10" id="localizacao">
       <Content />
     </div>
   );
@@ -76,7 +76,7 @@ function Variant() {
 function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng() {
   return (
     <div className="absolute inset-0 overflow-clip" data-name="image 117">
-      <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/loc_01.webp" />
+      <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/loc_01.webp" loading="lazy" />
     </div>
   );
 }
@@ -139,7 +139,7 @@ function Variant1() {
 function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng1() {
   return (
     <div className="absolute inset-0 overflow-clip" data-name="image 117">
-      <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/loc_02.webp" />
+      <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/loc_02.webp" loading="lazy" />
     </div>
   );
 }
@@ -202,7 +202,7 @@ function Variant2() {
 function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng2() {
   return (
     <div className="absolute inset-0 overflow-clip" data-name="image 117">
-      <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/loc_03.webp" />
+      <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/loc_03.webp" loading="lazy" />
     </div>
   );
 }

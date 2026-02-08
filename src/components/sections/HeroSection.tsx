@@ -111,42 +111,42 @@ export default function HeroSection() {
                 {/* Desktop Individual Speakers (Hidden on Mobile) */}
 
                 {/* Marcos Piangers (Front Center) */}
-                <div className="hidden lg:block absolute lg:top-0 lg:left-[652px] lg:w-[405px] lg:h-[487px] transition-all">
+                <div className="hidden lg:block absolute lg:top-0 lg:left-[652px] lg:w-[405px] lg:h-[487px] transition-all z-[60]">
                     <img src="/images/marcos piangers.webp" alt="Marcos Piangers" className="w-full h-full object-contain" />
                 </div>
 
                 {/* Nanda Perim (Front Left) */}
-                <div className="hidden lg:block absolute lg:top-[12px] lg:left-[433px] lg:w-[382px] lg:h-[475px] transition-all">
+                <div className="hidden lg:block absolute lg:top-[12px] lg:left-[433px] lg:w-[382px] lg:h-[475px] transition-all z-[50]">
                     <img src="/images/Nanda Perim.webp" alt="Nanda Perim" className="w-full h-full object-contain" />
                 </div>
 
                 {/* Telma Abrahão (Front Right) */}
-                <div className="hidden lg:block absolute lg:top-[56px] lg:left-[918px] lg:w-[308px] lg:h-[431px] transition-all">
+                <div className="hidden lg:block absolute lg:top-[56px] lg:left-[918px] lg:w-[308px] lg:h-[431px] transition-all z-[20]">
                     <img src="/images/Telma Abrahão.webp" alt="Telma Abrahão" className="w-full h-full object-contain" />
                 </div>
 
                 {/* Isa Minatel (Middle Left) */}
-                <div className="hidden lg:block absolute lg:top-[61px] lg:left-[256px] lg:w-[271px] lg:h-[425px] transition-all">
+                <div className="hidden lg:block absolute lg:top-[61px] lg:left-[256px] lg:w-[271px] lg:h-[425px] transition-all z-[40]">
                     <img src="/images/Isa Minatel.webp" alt="Isa Minatel" className="w-full h-full object-contain" />
                 </div>
 
                 {/* Murilo Gun (Top Right) */}
-                <div className="hidden lg:block absolute lg:top-[90px] lg:left-[1033px] lg:w-[431px] lg:h-[397px] transition-all">
+                <div className="hidden lg:block absolute lg:top-[90px] lg:left-[1033px] lg:w-[431px] lg:h-[397px] transition-all z-[10]">
                     <img src="/images/murilo gun.webp" alt="Murilo Gun" className="w-full h-full object-contain" />
                 </div>
 
                 {/* Daniel Becker (Top Left Center) */}
-                <div className="hidden lg:block absolute lg:top-[103px] lg:left-0 lg:w-[410px] lg:h-[385px] transition-all">
+                <div className="hidden lg:block absolute lg:top-[103px] lg:left-0 lg:w-[410px] lg:h-[385px] transition-all z-[30]">
                     <img src="/images/daniel becker.webp" alt="Daniel Becker" className="w-full h-full object-contain" />
                 </div>
 
                 {/* Grafismo 1 (Small Circle) */}
-                <div className="hidden lg:block absolute top-[144px] left-[915px] w-[105px] h-[105px] z-20">
+                <div className="hidden lg:block absolute top-[144px] left-[915px] w-[105px] h-[105px] z-[70]">
                     <img src="/images/grafismo_1.svg" alt="" className="w-full h-full" />
                 </div>
 
                 {/* Grafismo 2 (Shape) */}
-                <div className="hidden lg:block absolute top-[277px] left-[250px] w-[60px] h-[60px] z-20">
+                <div className="hidden lg:block absolute top-[277px] left-[250px] w-[60px] h-[60px] z-[70]">
                     <img src="/images/grafismo_2.svg" alt="" className="w-full h-full" />
                 </div>
             </div>

@@ -16,6 +16,9 @@ const archivo = Archivo({
 export const metadata: Metadata = {
     title: 'Festival Parental',
     description: 'Muito mais do que um Festival. É um movimento!',
+    icons: {
+        icon: '/favicon.svg',
+    },
 }
 
 export default function RootLayout({

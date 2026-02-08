@@ -9,6 +9,7 @@ function BackgroundCurves() {
                 src="/images/grafismo_wave.svg"
                 alt="Grafismo de ondas"
                 className="w-full h-auto min-w-0 max-w-none lg:min-w-[1440px]"
+                loading="lazy"
             />
         </div>
     );

@@ -11,6 +11,7 @@ export default function Section13() {
                     src="/images/grafismo_simbolo.svg"
                     alt=""
                     className="w-full h-auto"
+                    loading="lazy"
                 />
             </div>
 

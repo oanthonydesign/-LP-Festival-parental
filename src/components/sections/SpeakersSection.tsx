@@ -3,123 +3,142 @@
 import { useState } from "react";
 import svgPaths from "@/components/svg/svg-paths";
 
-// IMPORTANTE: Substitua estas importações pelas suas imagens reais
-// Placeholders para palestrantes
-const imgImage = "https://placehold.co/400x500/79c3ab/white?text=Ivana+Moreira";
-const imgMarcosPiangers1 = "https://placehold.co/400x500/74acde/white?text=Marcos+Piangers";
-const imgIsaMinatel2 = "https://placehold.co/400x500/f7a73c/white?text=Isa+Minatel";
-const imgDanielBecker1 = "https://placehold.co/400x500/79c3ab/white?text=Daniel+Becker";
-const imgNandaPerim2 = "https://placehold.co/400x500/74acde/white?text=Nanda+Perim";
-const imgMuriloGun1 = "https://placehold.co/400x500/f7a73c/white?text=Murilo+Gun";
-const imgTelmaAbrahao1 = "https://placehold.co/400x500/79c3ab/white?text=Telma+Abrahao";
-const imgCeciliaLauriano1 = "https://placehold.co/400x500/74acde/white?text=Cecilia+Lauriano";
-
 type Speaker = {
     id: number;
     name: string;
-    subtitle: string;
+    description: string;
     image: string;
-    imagePosition: { left?: string; top?: string; width: string; height: string };
+    instagram: string;
+    linkedin: string;
     bgColor: string;
 };
 
 const allSpeakers: Speaker[] = [
     {
         id: 1,
-        name: "Ivana Moreira",
-        subtitle: "Ivana Moreira",
-        image: imgImage,
-        imagePosition: { left: "calc(50% - 188.5px)", top: "-160px", width: "377px", height: "452px" },
+        name: "Nanda Perim",
+        description: "Psicóloga referência em desenvolvimento infantil",
+        image: "/images/nandap.webp",
+        instagram: "https://www.instagram.com/psimamaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/nanda-perim-b64692214/",
         bgColor: "#79c3ab",
     },
     {
         id: 2,
-        name: "Marcos Piangers",
-        subtitle: "Ivana Moreira",
-        image: imgMarcosPiangers1,
-        imagePosition: { left: "0", top: "-81px", width: "289px", height: "432px" },
+        name: "Isa Minatel",
+        description: "Psicopedagoga referência em desenvolvimento infantil",
+        image: "/images/isam.webp",
+        instagram: "https://www.instagram.com/isa.minatel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/isa-minatel-85852732/",
         bgColor: "#74acde",
     },
     {
         id: 3,
-        name: "Isa Minatel",
-        subtitle: "Ivana Moreira",
-        image: imgIsaMinatel2,
-        imagePosition: { left: "-84px", top: "-7px", width: "373px", height: "464px" },
+        name: "Telma Abrahão",
+        description: "Biomédica especialista em desenvolvimento humano",
+        image: "/images/telmaa.webp",
+        instagram: "https://www.instagram.com/telma.abrahao?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/telmaabrahao/",
         bgColor: "#f7a73c",
     },
     {
         id: 4,
-        name: "Daniel Becker",
-        subtitle: "Ivana Moreira",
-        image: imgDanielBecker1,
-        imagePosition: { left: "-242px", top: "-50px", width: "616px", height: "360px" },
+        name: "Marcos Piangers",
+        description: "Um dos palestrantes mais influentes do Brasil",
+        image: "/images/marcosp.webp",
+        instagram: "https://www.instagram.com/piangers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/piangers/",
         bgColor: "#79c3ab",
     },
     {
         id: 5,
-        name: "Nanda Perim",
-        subtitle: "Ivana Moreira",
-        image: imgNandaPerim2,
-        imagePosition: { left: "-1px", top: "0", width: "290px", height: "362px" },
+        name: "Daniel Becker",
+        description: "Um dos pediatras mais respeitados do país",
+        image: "/images/danielb.webp",
+        instagram: "https://www.instagram.com/pediatriaintegralbr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/daniel-becker-672590a/",
         bgColor: "#74acde",
     },
     {
         id: 6,
         name: "Murilo Gun",
-        subtitle: "Ivana Moreira",
-        image: imgMuriloGun1,
-        imagePosition: { left: "0", top: "-25px", width: "289px", height: "434px" },
+        description: "Referência em pensamento inovador e criatividade",
+        image: "/images/murilog.webp",
+        instagram: "https://www.instagram.com/murilogun/?hl=pt-br",
+        linkedin: "https://www.linkedin.com/in/murilogun/?originalSubdomain=br",
         bgColor: "#f7a73c",
     },
     {
         id: 7,
-        name: "Telma Abrahão",
-        subtitle: "Ivana Moreira",
-        image: imgTelmaAbrahao1,
-        imagePosition: { left: "-84px", top: "-7px", width: "373px", height: "464px" },
+        name: "Wimer Bottura Júnior",
+        description: "Psiquiatra especialista em relações familiares",
+        image: "/images/wimerb.webp",
+        instagram: "https://www.instagram.com/wimerbotturajuniorpsiquiatra/",
+        linkedin: "https://www.linkedin.com/in/wimer-bottura-junior-584831161/",
         bgColor: "#79c3ab",
     },
     {
         id: 8,
         name: "Cecília Lauriano",
-        subtitle: "Ivana Moreira",
-        image: imgCeciliaLauriano1,
-        imagePosition: { left: "0", top: "-81px", width: "289px", height: "432px" },
+        description: "Psicoterapeuta especialista em trauma",
+        image: "/images/cecilial.webp",
+        instagram: "https://www.instagram.com/cecilia.laurianooficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/cecilialauriano/",
         bgColor: "#74acde",
     },
-    // Palestrantes adicionais (usando imagens repetidas para demonstração)
     {
         id: 9,
-        name: "João Silva",
-        subtitle: "Ivana Moreira",
-        image: imgImage,
-        imagePosition: { left: "calc(50% - 188.5px)", top: "-160px", width: "377px", height: "452px" },
+        name: "Iara Mastine",
+        description: "Neuropsicóloga infantil, referência em livroterapia",
+        image: "/images/iaram.webp",
+        instagram: "https://www.instagram.com/iaramastine?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/iara-mastine-5aab5863/",
         bgColor: "#f7a73c",
     },
     {
         id: 10,
-        name: "Maria Santos",
-        subtitle: "Ivana Moreira",
-        image: imgMarcosPiangers1,
-        imagePosition: { left: "0", top: "-81px", width: "289px", height: "432px" },
+        name: "Jacqueline Vilela",
+        description: "Psicanalista e formadora em Educação Parental",
+        image: "/images/jacquelinev.webp",
+        instagram: "https://www.instagram.com/jacqvilela?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/jacquelinevilela/",
         bgColor: "#79c3ab",
     },
     {
         id: 11,
-        name: "Pedro Costa",
-        subtitle: "Ivana Moreira",
-        image: imgIsaMinatel2,
-        imagePosition: { left: "-84px", top: "-7px", width: "373px", height: "464px" },
+        name: "Aline Cestarolli",
+        description: "Psicóloga especialista em educação encorajadora",
+        image: "/images/alinec.webp",
+        instagram: "https://www.instagram.com/alinecestaroli?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "http://www.linkedin.com/in/alinecestaroli",
         bgColor: "#74acde",
     },
     {
         id: 12,
-        name: "Ana Lima",
-        subtitle: "Ivana Moreira",
-        image: imgDanielBecker1,
-        imagePosition: { left: "-242px", top: "-50px", width: "616px", height: "360px" },
+        name: "Cris Rayes",
+        description: "Psicóloga especialista em orientação familiar",
+        image: "/images/crisr.webp",
+        instagram: "https://www.instagram.com/crisrayes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/crisrayes/",
         bgColor: "#f7a73c",
+    },
+    {
+        id: 13,
+        name: "Bete P. Rodrigues",
+        description: "Educadora e trainer em Disciplina Positiva",
+        image: "/images/beter.webp",
+        instagram: "https://www.instagram.com/disciplinapositivabrasil?igsh=NTQ4c2RreTVyZTBz",
+        linkedin: "https://www.linkedin.com/in/beteprodrigues?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        bgColor: "#79c3ab",
+    },
+    {
+        id: 14,
+        name: "Ivana Moreira",
+        description: "Jornalista e idealizadora do Festival Parental",
+        image: "/images/ivanam.webp",
+        instagram: "https://www.instagram.com/euivanamoreira?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/ivana-moreira-679489ba/",
+        bgColor: "#74acde",
     },
 ];
 
@@ -135,29 +154,24 @@ function UilCalendar() {
     );
 }
 
-function SocialIcons({ type }: { type: "linkedin" | "instagram" | "twitter" }) {
+function SocialIcons({ type }: { type: "linkedin" | "instagram" }) {
     return (
         <div className="relative shrink-0 size-[8.842px]" data-name="Social Icons">
             <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 8.84211 8.84211">
                 {type === "linkedin" && (
                     <g clipPath="url(#clip0_1_487)" id="Social Icons">
-                        <path d={svgPaths.p26754780} fill="var(--fill-0, #191919)" id="Vector" />
+                        <path d={svgPaths.p26754780} fill="currentColor" id="Vector" />
                     </g>
                 )}
                 {type === "instagram" && (
                     <g clipPath="url(#clip0_1_482)" id="Social Icons">
-                        <path d={svgPaths.p31d46470} fill="var(--fill-0, #191919)" id="Vector" />
-                        <path d={svgPaths.p1f5a5880} fill="var(--fill-0, #191919)" id="Vector_2" />
-                        <path d={svgPaths.p363e11f0} fill="var(--fill-0, #191919)" id="Vector_3" />
-                    </g>
-                )}
-                {type === "twitter" && (
-                    <g clipPath="url(#clip0_1_479)" id="Social Icons">
-                        <path d={svgPaths.p2c1af780} fill="var(--fill-0, #191919)" id="Vector" />
+                        <path d={svgPaths.p31d46470} fill="currentColor" id="Vector" />
+                        <path d={svgPaths.p1f5a5880} fill="currentColor" id="Vector_2" />
+                        <path d={svgPaths.p363e11f0} fill="currentColor" id="Vector_3" />
                     </g>
                 )}
                 <defs>
-                    <clipPath id={`clip0_1_${type === "linkedin" ? "487" : type === "instagram" ? "482" : "479"}`}>
+                    <clipPath id={`clip0_1_${type === "linkedin" ? "487" : "482"}`}>
                         <rect fill="white" height="8.84211" width="8.84211" />
                     </clipPath>
                 </defs>
@@ -166,12 +180,18 @@ function SocialIcons({ type }: { type: "linkedin" | "instagram" | "twitter" }) {
     );
 }
 
-function SocialIconButton({ type }: { type: "linkedin" | "instagram" | "twitter" }) {
+function SocialIconButton({ type, href }: { type: "linkedin" | "instagram"; href: string }) {
+    if (!href) return null;
     return (
-        <div className="content-stretch flex items-center p-[7.579px] relative rounded-[630.947px] shrink-0 size-[24px]">
+        <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="content-stretch flex items-center p-[7.579px] relative rounded-[630.947px] shrink-0 size-[24px] hover:bg-[#191919] hover:text-white transition-all text-[#191919]"
+        >
             <div aria-hidden="true" className="absolute border-[#191919] border-[0.632px] border-solid inset-0 pointer-events-none rounded-[630.947px]" />
             <SocialIcons type={type} />
-        </div>
+        </a>
     );
 }
 
@@ -181,12 +201,13 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
             <div className="flex flex-col items-center overflow-clip rounded-[inherit] size-full">
                 <div className="content-stretch flex flex-col gap-[12px] items-center pb-[12px] pt-[8px] px-[8px] relative w-full">
                     {/* Image Container */}
-                    <div className="h-[261px] relative rounded-[24px] shrink-0 w-full">
-                        <div className="overflow-clip relative rounded-[inherit] size-full">
-                            <div className="absolute" style={{ ...speaker.imagePosition }}>
-                                <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none size-full" src={speaker.image} />
-                            </div>
-                        </div>
+                    <div className="h-[261px] relative rounded-[24px] shrink-0 w-full overflow-hidden">
+                        <img
+                            alt={speaker.name}
+                            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                            src={speaker.image}
+                            loading="lazy"
+                        />
                         <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[24px]" />
                     </div>
 
@@ -197,16 +218,15 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
                             <div className="flex flex-col font-sugar-peachy font-bold justify-center not-italic relative shrink-0 text-[32px]">
                                 <p className="leading-none">{speaker.name}</p>
                             </div>
-                            <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[22px]" style={{ fontVariationSettings: "'opsz' 14" }}>
-                                <p className="leading-[1.1]">{speaker.subtitle}</p>
+                            <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[18px]" style={{ fontVariationSettings: "'opsz' 14" }}>
+                                <p className="leading-[1.1]">{speaker.description}</p>
                             </div>
                         </div>
 
                         {/* Social Icons */}
                         <div className="content-stretch flex gap-[8px] items-start justify-center relative shrink-0">
-                            <SocialIconButton type="linkedin" />
-                            <SocialIconButton type="instagram" />
-                            <SocialIconButton type="twitter" />
+                            <SocialIconButton type="linkedin" href={speaker.linkedin} />
+                            <SocialIconButton type="instagram" href={speaker.instagram} />
                         </div>
                     </div>
                 </div>
@@ -225,12 +245,6 @@ export default function SpeakersSection() {
     const handleLoadMore = () => {
         setVisibleCount((prev) => Math.min(prev + 4, allSpeakers.length));
     };
-
-    // Organizar palestrantes em linhas de 4
-    const rows: Speaker[][] = [];
-    for (let i = 0; i < visibleSpeakers.length; i += 4) {
-        rows.push(visibleSpeakers.slice(i, i + 4));
-    }
 
     return (
         <section className="bg-[#fff6ef] w-full flex flex-col items-center pb-[72px] pt-[72px] relative isolate" id="palestrantes">
