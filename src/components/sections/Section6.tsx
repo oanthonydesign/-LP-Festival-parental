@@ -128,7 +128,7 @@ function TicketIcon() {
 
 function PassportCard({ data }: { data: PassportData }) {
   return (
-    <div className={`flex flex-col items-center w-full max-w-[420px] ${data.textColor}`}>
+    <div id={data.id} className={`flex flex-col items-center w-full max-w-[420px] ${data.textColor}`}>
       {/* Header with Title and Lote */}
       <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[16px] w-full z-10 relative`}>
         <div className={`border-2 ${data.borderColor} border-solid rounded-[16px] flex items-center justify-between px-[12px] py-[12px] gap-3`}>

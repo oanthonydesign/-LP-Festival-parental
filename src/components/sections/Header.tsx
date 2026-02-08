@@ -82,7 +82,7 @@ export default function Header() {
                         <div className="flex items-center gap-[8px] p-[10px]">
                             {[
                                 { name: "Palestrantes", href: "#palestrantes" },
-                                { name: "Programação do Festival", href: "#" },
+                                { name: "Programação do Festival", href: "#programacao" },
                                 { name: "Atrações", href: "#atracoes" },
                                 { name: "Galeria 2025", href: "#" }
                             ].map((item) => (
@@ -129,7 +129,7 @@ export default function Header() {
                     <div className="flex flex-col px-6 gap-6 items-center">
                         {[
                             { name: "Palestrantes", href: "#palestrantes" },
-                            { name: "Programação do Festival", href: "#" },
+                            { name: "Programação do Festival", href: "#programacao" },
                             { name: "Atrações", href: "#atracoes" },
                             { name: "Galeria 2025", href: "#" },
                             { name: "Seja patrocinador", href: "#patrocinador" }

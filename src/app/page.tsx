@@ -17,6 +17,7 @@ import Section14 from '@/components/sections/Section14';
 import Section15 from '@/components/sections/Section15';
 import Rodape from '@/components/sections/Rodape';
 import Copyright from '@/components/sections/Copyright';
+import SectionSchedule from '@/components/sections/SectionSchedule';
 
 export default function Home() {
     return (
@@ -29,6 +30,7 @@ export default function Home() {
             </div>
             <Section2 />
             <Section8 />
+            <SectionSchedule />
             <SpeakersSection />
             <Marquee01 />
             <Marquee02 />

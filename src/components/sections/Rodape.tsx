@@ -229,7 +229,7 @@ function Container6() {
 
 function LinkVariant2() {
   return (
-    <a href="#" className="relative shrink-0 w-full block group" data-name="Link - Variant 1">
+    <a href="#programacao" className="relative shrink-0 w-full block group" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full group-hover:text-[#ef7d25] transition-colors">
           <Palestrantes2 />
