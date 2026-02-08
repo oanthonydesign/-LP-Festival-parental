@@ -21,7 +21,7 @@ function Desktop() {
 
 function ContentPadding() {
   return (
-    <div className="bg-[#fff6ef] content-stretch flex flex-col h-auto min-h-[577px] items-center overflow-clip px-[30px] py-[80px] relative shrink-0 w-full" data-name="Content → Padding">
+    <div className="bg-[#fff6ef] content-stretch flex flex-col h-auto min-h-[577px] items-center overflow-clip px-4 md:px-[30px] py-[80px] relative shrink-0 w-full" data-name="Content → Padding">
       <Links />
       <div className="absolute inset-[44.71px_0_44.29px_0]" data-name="HorizontalBorder">
         <div aria-hidden="true" className="absolute border-[rgba(255,255,255,0.1)] border-solid border-t inset-0 pointer-events-none" />
@@ -41,7 +41,7 @@ function Links() {
 
 function Frame2() {
   return (
-    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col md:flex-row items-start md:items-start justify-between gap-10 md:gap-0 relative shrink-0 w-full">
       <Logo />
       <Container1 />
     </div>
@@ -51,7 +51,7 @@ function Frame2() {
 // Logo e Tagline
 function Logo() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-[287px]" data-name="Logo">
+    <div className="content-stretch flex flex-col gap-[24px] items-center md:items-start relative shrink-0 w-full md:w-[287px]" data-name="Logo">
       <Group />
       <div className="h-0 relative shrink-0 w-[202px]" data-name="Vector">
         <div className="absolute inset-[-0.5px_0]">
@@ -104,7 +104,7 @@ function Group() {
 
 function ConectandoCriadoresEMarcasProAgora() {
   return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-[202px]" data-name="Conectando criadores e marcas pro agora.">
+    <div className="content-stretch flex flex-col items-center md:items-start relative shrink-0 w-[202px]" data-name="Conectando criadores e marcas pro agora.">
       <Container />
     </div>
   );
@@ -112,8 +112,8 @@ function ConectandoCriadoresEMarcasProAgora() {
 
 function Container() {
   return (
-    <div className="content-stretch flex flex-col items-start pb-[0.61px] relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(76,77,79,0.9)] uppercase w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
+    <div className="content-stretch flex flex-col items-center md:items-start pb-[0.61px] relative shrink-0 w-full" data-name="Container">
+      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(76,77,79,0.9)] uppercase w-full text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[1.1] whitespace-pre-wrap">transformando o jeito de educar os filhos</p>
       </div>
     </div>
@@ -123,7 +123,7 @@ function Container() {
 // Menu de Navegação
 function Container1() {
   return (
-    <div className="content-stretch flex flex-wrap items-start justify-end relative shrink-0 w-full max-w-[941px]" data-name="Container">
+    <div className="content-stretch flex flex-col md:flex-row md:flex-wrap items-center md:items-start md:justify-end gap-10 md:gap-0 relative shrink-0 w-full md:max-w-[941px]" data-name="Container">
       <Links1 />
       <Frame />
       <Frame3 />
@@ -135,7 +135,7 @@ function Container1() {
 // Coluna 1: PALESTRANTES, TRILHAS, PROGRAMAÇÃO, DÚVIDAS
 function Links1() {
   return (
-    <div className="content-stretch flex flex-col items-start justify-center relative shrink-0 w-[250px]" data-name="Links">
+    <div className="content-stretch flex flex-col items-center md:items-start justify-center relative shrink-0 w-full sm:w-[48%] md:w-[250px]" data-name="Links">
       <Container2 />
       <Container4 />
       <Container6 />
@@ -156,7 +156,7 @@ function LinkVariant() {
   return (
     <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
           <Palestrantes />
         </div>
       </div>
@@ -175,7 +175,7 @@ function Palestrantes() {
 function Container3() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[13.3px] tracking-[0.14px] whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[13.3px] tracking-[0.14px] whitespace-normal md:whitespace-nowrap text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[21px]">PALESTRANTES</p>
       </div>
     </div>
@@ -194,7 +194,7 @@ function LinkVariant1() {
   return (
     <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
           <Palestrantes1 />
         </div>
       </div>
@@ -213,7 +213,7 @@ function Palestrantes1() {
 function Container5() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[12.9px] tracking-[0.14px] whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[12.9px] tracking-[0.14px] whitespace-normal md:whitespace-nowrap text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[21px]">TRILHAS DE CONTEÚDO</p>
       </div>
     </div>
@@ -232,7 +232,7 @@ function LinkVariant2() {
   return (
     <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
           <Palestrantes2 />
         </div>
       </div>
@@ -251,7 +251,7 @@ function Palestrantes2() {
 function Container7() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[13.3px] tracking-[0.14px] whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[13.3px] tracking-[0.14px] whitespace-normal md:whitespace-nowrap text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[21px]">PROGRAMAÇÃO</p>
       </div>
     </div>
@@ -270,7 +270,7 @@ function LinkVariant3() {
   return (
     <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
           <Palestrantes3 />
         </div>
       </div>
@@ -289,7 +289,7 @@ function Palestrantes3() {
 function Container9() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[12.8px] tracking-[0.14px] whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[12.8px] tracking-[0.14px] whitespace-normal md:whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[21px]">TIRE SUAS DÚVIDAS</p>
       </div>
     </div>
@@ -299,7 +299,7 @@ function Container9() {
 // Coluna 2: PATROCÍNIO, INGRESSOS, LOCALIZAÇÃO, CONTATO
 function Frame() {
   return (
-    <div className="content-stretch flex flex-col items-start justify-center relative shrink-0 w-[250px]">
+    <div className="content-stretch flex flex-col items-center md:items-start justify-center relative shrink-0 w-full sm:w-[48%] md:w-[250px]">
       <Container10 />
       <Container12 />
       <Container14 />
@@ -320,7 +320,7 @@ function LinkVariant4() {
   return (
     <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
           <Palestrantes4 />
         </div>
       </div>
@@ -339,7 +339,7 @@ function Palestrantes4() {
 function Container11() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[12.9px] tracking-[0.14px] whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[12.9px] tracking-[0.14px] whitespace-normal md:whitespace-nowrap text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[21px]">PATROCÍNIO</p>
       </div>
     </div>
@@ -358,7 +358,7 @@ function LinkVariant5() {
   return (
     <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
           <Palestrantes5 />
         </div>
       </div>
@@ -377,7 +377,7 @@ function Palestrantes5() {
 function Container13() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[13.1px] tracking-[0.14px] whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[13.1px] tracking-[0.14px] whitespace-normal md:whitespace-nowrap text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[21px]">INGRESSOS</p>
       </div>
     </div>
@@ -396,7 +396,7 @@ function LinkVariant6() {
   return (
     <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
           <Palestrantes6 />
         </div>
       </div>
@@ -415,7 +415,7 @@ function Palestrantes6() {
 function Container15() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[13.3px] tracking-[0.14px] whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[13.3px] tracking-[0.14px] whitespace-normal md:whitespace-nowrap text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[21px]">LOCALIZAÇÃO</p>
       </div>
     </div>
@@ -434,7 +434,7 @@ function LinkVariant7() {
   return (
     <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
           <Palestrantes7 />
         </div>
       </div>
@@ -453,7 +453,7 @@ function Palestrantes7() {
 function Container17() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[13.1px] tracking-[0.14px] whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[13.1px] tracking-[0.14px] whitespace-normal md:whitespace-nowrap text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[21px]">CONTATO</p>
       </div>
     </div>
@@ -463,7 +463,7 @@ function Container17() {
 // Coluna 3: TERMOS, PRIVACIDADE, IMPRENSA
 function Frame3() {
   return (
-    <div className="content-stretch flex flex-col items-start justify-center relative shrink-0 w-[250px]">
+    <div className="content-stretch flex flex-col items-center md:items-start justify-center relative shrink-0 w-full sm:w-[48%] md:w-[250px]">
       <Container18 />
       <Container20 />
       <Container22 />
@@ -483,7 +483,7 @@ function LinkVariant8() {
   return (
     <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
           <Palestrantes8 />
         </div>
       </div>
@@ -502,7 +502,7 @@ function Palestrantes8() {
 function Container19() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[12.8px] tracking-[0.14px] whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[12.8px] tracking-[0.14px] whitespace-normal md:whitespace-nowrap text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[21px]">TERMOS DE USO</p>
       </div>
     </div>
@@ -521,7 +521,7 @@ function LinkVariant9() {
   return (
     <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
           <Palestrantes9 />
         </div>
       </div>
@@ -540,7 +540,7 @@ function Palestrantes9() {
 function Container21() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[12.8px] tracking-[0.14px] whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[12.8px] tracking-[0.14px] whitespace-normal md:whitespace-nowrap text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[21px]">POLÍTICA DE PRIVACIDADE</p>
       </div>
     </div>
@@ -559,7 +559,7 @@ function LinkVariant10() {
   return (
     <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
           <Palestrantes10 />
         </div>
       </div>
@@ -578,7 +578,7 @@ function Palestrantes10() {
 function Container23() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[13px] tracking-[0.14px] whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[13px] tracking-[0.14px] whitespace-normal md:whitespace-nowrap text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[21px]">IMPRENSA</p>
       </div>
     </div>
@@ -588,7 +588,7 @@ function Container23() {
 // Coluna 4: INSTAGRAM, LINKEDIN
 function Frame1() {
   return (
-    <div className="content-stretch flex flex-col items-start justify-center relative shrink-0 w-[100px]">
+    <div className="content-stretch flex flex-col items-center md:items-start justify-center relative shrink-0 w-full sm:w-[48%] md:w-[100px]">
       <Container24 />
       <Container26 />
     </div>
@@ -607,7 +607,7 @@ function LinkVariant11() {
   return (
     <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
           <Palestrantes11 />
         </div>
       </div>
@@ -626,7 +626,7 @@ function Palestrantes11() {
 function Container25() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[12.9px] tracking-[0.14px] whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[12.9px] tracking-[0.14px] whitespace-normal md:whitespace-nowrap text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[21px]">INSTAGRAM</p>
       </div>
     </div>
@@ -645,7 +645,7 @@ function LinkVariant12() {
   return (
     <div className="relative shrink-0 w-full" data-name="Link - Variant 1">
       <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center pr-[8px] py-[8px] relative w-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full">
           <Palestrantes12 />
         </div>
       </div>
@@ -664,7 +664,7 @@ function Palestrantes12() {
 function Container27() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[12.6px] tracking-[0.14px] whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[12.6px] tracking-[0.14px] whitespace-normal md:whitespace-nowrap text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[21px]">LINKEDIN</p>
       </div>
     </div>
@@ -684,7 +684,7 @@ function LinkVariant13() {
   return (
     <div className="bg-[#f7a73c] border-2 border-[#191919] relative rounded-[40px] shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all shrink-0 w-full cursor-pointer" data-name="Link - Variant 1">
       <div className="flex flex-row items-center justify-center size-full">
-        <div className="content-stretch flex items-center justify-center px-[40px] py-[44px] relative w-full">
+        <div className="content-stretch flex items-center justify-center px-4 md:px-[40px] py-[20px] md:py-[44px] relative w-full">
           <ComprarIngresso />
         </div>
       </div>
@@ -702,9 +702,9 @@ function ComprarIngresso() {
 
 function Container29() {
   return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-bold justify-center leading-[0] relative shrink-0 text-[#191919] text-[32px] uppercase whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
-        <p className="leading-[24px]">Garanta seu INGRESSO agora</p>
+    <div className="content-stretch flex flex-col items-center md:items-start relative shrink-0 w-full" data-name="Container">
+      <div className="flex flex-col font-dm-sans font-bold justify-center leading-[0] relative shrink-0 text-[#191919] text-[24px] md:text-[32px] uppercase whitespace-normal md:whitespace-nowrap text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
+        <p className="leading-tight md:leading-[24px]">Garanta seu INGRESSO agora</p>
       </div>
     </div>
   );
@@ -713,7 +713,7 @@ function Container29() {
 // Elementos decorativos no rodapé
 function Group1() {
   return (
-    <div className="absolute bottom-[-3.26%] left-1/2 -translate-x-1/2 w-[105%] h-auto">
+    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[15%] w-full md:w-[105%] h-auto">
       <svg className="block w-full h-auto" fill="none" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1280 126.54">
         <g id="Group 14">
           <path d={svgPaths.p2bed4a80} fill="var(--fill-0, #0B6FB5)" id="Vector" />

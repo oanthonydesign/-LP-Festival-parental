@@ -184,7 +184,7 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
                     <div className="h-[261px] relative rounded-[24px] shrink-0 w-full">
                         <div className="overflow-clip relative rounded-[inherit] size-full">
                             <div className="absolute" style={{ ...speaker.imagePosition }}>
-                                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={speaker.image} />
+                                <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none size-full" src={speaker.image} />
                             </div>
                         </div>
                         <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[24px]" />
@@ -193,7 +193,7 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
                     {/* Text + Social */}
                     <div className="content-stretch flex flex-col gap-[12px] items-center relative shrink-0 w-full">
                         {/* Text */}
-                        <div className="content-stretch flex flex-col gap-[4px] items-center leading-[0] relative shrink-0 text-[#191919] text-center whitespace-nowrap">
+                        <div className="content-stretch flex flex-col gap-[4px] items-center leading-[0] relative shrink-0 text-[#191919] text-center whitespace-normal break-words px-2">
                             <div className="flex flex-col font-sugar-peachy font-bold justify-center not-italic relative shrink-0 text-[32px]">
                                 <p className="leading-none">{speaker.name}</p>
                             </div>
@@ -234,15 +234,17 @@ export default function SpeakersSection() {
 
     return (
         <section className="bg-[#fff6ef] w-full flex flex-col items-center pb-[72px] pt-[72px] relative isolate">
-            <div className="layout-container flex flex-col gap-[64px] items-center relative">
+            <div className="layout-container flex flex-col gap-[64px] items-center relative px-4 md:px-0">
                 {/* Header */}
                 <div className="content-stretch flex flex-col gap-[28px] items-center relative shrink-0 w-full">
                     {/* Event Badge */}
-                    <div className="content-stretch flex gap-[6px] items-center justify-center px-[32px] py-[16px] relative rounded-[40px] shrink-0 self-center">
+                    <div className="content-stretch flex gap-[6px] items-center justify-center px-4 sm:px-[32px] py-[16px] relative rounded-[40px] shrink-0 self-center w-full max-w-full lg:w-auto">
                         <div aria-hidden="true" className="absolute border-2 border-[#505050] border-solid inset-0 pointer-events-none rounded-[40px] shadow-[4px_4px_0px_0px_#505050]" />
-                        <UilCalendar />
-                        <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#505050] text-[14px] uppercase whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
-                            <p className="leading-[normal]">19 a 22 de novembro · Transamérica Expo, São Paulo/SP</p>
+                        <div className="hidden lg:block">
+                            <UilCalendar />
+                        </div>
+                        <div className="flex flex-col font-dm-sans font-normal justify-center leading-normal relative shrink-0 text-[#505050] text-[14px] uppercase whitespace-normal break-words text-center flex-1" style={{ fontVariationSettings: "'opsz' 14" }}>
+                            <p className="">19 a 22 de novembro · Transamérica Expo, São Paulo/SP</p>
                         </div>
                     </div>
 
@@ -250,16 +252,16 @@ export default function SpeakersSection() {
                     <div className="content-stretch flex flex-col gap-[24px] items-center leading-[0] relative shrink-0 text-center w-full">
                         {/* Title */}
                         <div className="content-stretch flex flex-col font-sugar-peachy gap-[6px] items-center not-italic relative shrink-0 w-full">
-                            <div className="flex flex-col justify-center relative shrink-0 text-[#ef7d25] text-8xl w-full">
+                            <div className="flex flex-col justify-center relative shrink-0 text-[#ef7d25] text-[46px] lg:text-8xl w-full">
                                 <p className="leading-[0.8] whitespace-pre-wrap">+50 Palestrantes convidados.</p>
                             </div>
-                            <div className="flex flex-col justify-center relative shrink-0 text-[#4c4d4f] text-4xl w-full">
+                            <div className="flex flex-col justify-center relative shrink-0 text-[#4c4d4f] text-[24px] lg:text-4xl w-full">
                                 <p className="leading-[0.9] whitespace-pre-wrap">Reunimos profissionais que atuam diariamente com os desafios reais da parentalidade na clínica, na escola, na pesquisa e na escuta de famílias.</p>
                             </div>
                         </div>
 
                         {/* Description */}
-                        <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[24px] max-w-[1030px]" style={{ fontVariationSettings: "'opsz' 14" }}>
+                        <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[18px] lg:text-[24px] max-w-[1030px]" style={{ fontVariationSettings: "'opsz' 14" }}>
                             <p className="leading-[1.1] whitespace-pre-wrap">O Festival Parental preserva o rigor construído ao longo de seis edições do Congresso Internacional de Educação Parental e amplia esse diálogo para além do campo profissional.</p>
                         </div>
                     </div>
@@ -274,7 +276,7 @@ export default function SpeakersSection() {
 
                 {/* Load More Button */}
                 {hasMore && (
-                    <div className="content-stretch flex flex-col items-start relative shrink-0 w-[236px]">
+                    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full max-w-[236px] mx-auto">
                         <button
                             onClick={handleLoadMore}
                             className="bg-[rgba(25,25,25,0.05)] border-2 border-[#191919] relative rounded-[40px] shrink-0 w-full cursor-pointer hover:bg-[rgba(25,25,25,0.1)] transition-all hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] shadow-[4px_4px_0px_0px_#191919]"

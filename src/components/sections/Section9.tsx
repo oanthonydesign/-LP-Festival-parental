@@ -29,7 +29,7 @@ export default function Section9() {
             data-name="Section - 9"
         >
             {/* Grafismo de Fundo (Arcos) */}
-            <div className="absolute right-[-150px] md:right-[-80px] top-[-150px] md:top-[-250px] w-[500px] md:w-[670px] h-[800px] md:h-[1100px] z-[1] pointer-events-none select-none">
+            <div className="absolute right-[-250px] md:right-[-80px] top-auto bottom-[-250px] md:top-[-250px] md:bottom-auto w-[750px] md:w-[670px] h-[800px] md:h-[1100px] z-[1] pointer-events-none select-none">
                 <svg
                     className="w-full h-full opacity-100"
                     viewBox="0 0 869 1085"
@@ -55,10 +55,10 @@ export default function Section9() {
 
                     {/* Títulos e Descrição */}
                     <div className="flex flex-col gap-6">
-                        <h2 className="font-sugar-peachy text-[48px] md:text-[58px] text-[#e12d3b] leading-[0.8]">
+                        <h2 className="font-sugar-peachy text-[46px] md:text-[58px] text-[#e12d3b] leading-[0.8]">
                             O Festival é feito para adultos.
                         </h2>
-                        <p className="font-dm-sans text-[20px] md:text-[24px] text-[#fff6ef] leading-tight">
+                        <p className="font-dm-sans text-[18px] md:text-[24px] text-[#fff6ef] leading-tight">
                             A programação tem como foco temas sensíveis e ambientes que não são adequados para crianças. Agora é sua vez de cuidar de você, para depois cuidar melhor de quem depende de você.
                         </p>
                     </div>
@@ -66,9 +66,9 @@ export default function Section9() {
                     {/* Botão CTA */}
                     <a
                         href="#ingressos"
-                        className="bg-[#2260a1] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] px-10 py-5 flex items-center justify-center gap-3 hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all group active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] w-full md:w-auto"
+                        className="bg-[#2260a1] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] p-3 md:px-10 md:py-5 flex items-center justify-center gap-3 hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all group active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] w-full md:w-auto"
                     >
-                        <div className="text-[#fff6ef]">
+                        <div className="text-[#fff6ef] hidden md:block">
                             <TicketIcon />
                         </div>
                         <span className="font-dm-sans font-bold text-[14px] uppercase text-[#fff6ef] tracking-widest">

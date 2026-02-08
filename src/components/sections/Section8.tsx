@@ -45,9 +45,9 @@ function Card({
     return (
         <div className="flex flex-col items-start w-full md:w-1/2">
             <CloseBarMac />
-            <div className={`border-b-2 border-l-2 border-r-2 border-[#191919] border-solid flex flex-col items-center p-8 relative rounded-bl-[16px] rounded-br-[16px] shadow-[7px_7px_0px_0px_#191919] shrink-0 w-full min-h-[660px] md:min-h-[720px]`} style={{ backgroundColor: bgColor }}>
-                <div className={`flex flex-col gap-6 items-center text-center ${textColor} mb-12`}>
-                    <h3 className="font-dm-sans font-semibold text-[32px] md:text-[36px] leading-tight max-w-[458px]">
+            <div className={`border-b-2 border-l-2 border-r-2 border-[#191919] border-solid flex flex-col items-center p-6 gap-6 relative rounded-bl-[16px] rounded-br-[16px] shadow-[7px_7px_0px_0px_#191919] shrink-0 w-full`} style={{ backgroundColor: bgColor }}>
+                <div className={`flex flex-col gap-6 items-center text-center ${textColor}`}>
+                    <h3 className="font-dm-sans font-semibold text-[26px] md:text-[36px] leading-tight max-w-[458px]">
                         {heading}
                     </h3>
                     <p className="font-dm-sans font-normal text-[18px] md:text-[22px] leading-[1.2] max-w-[544px]">
@@ -55,7 +55,7 @@ function Card({
                     </p>
                 </div>
 
-                <div className="relative w-full aspect-[537/325] max-w-[537px] mt-auto">
+                <div className="relative w-full aspect-[537/325] max-w-[537px]">
                     <div
                         className="absolute inset-0 mask-alpha mask-no-repeat"
                         style={{
@@ -81,14 +81,14 @@ function Card({
 
 export default function Section8() {
     return (
-        <section className="bg-[#fff6ef] w-full flex flex-col items-center py-[80px] md:py-[86px] px-6" id="para-quem" data-name="Section - 8">
+        <section className="bg-[#fff6ef] w-full flex flex-col items-center py-[42px] px-6" id="para-quem" data-name="Section - 8">
             <div className="max-w-[1280px] w-full flex flex-col gap-[64px] items-center">
                 {/* Header Text */}
                 <div className="flex flex-col gap-6 items-center text-center max-w-[1180px]">
-                    <h2 className="font-sugar-peachy text-[#2260a1] text-[48px] md:text-[72px] leading-[0.8]">
+                    <h2 className="font-sugar-peachy text-[#2260a1] text-[46px] md:text-[72px] leading-[0.8]">
                         Esse evento é pra você que já entendeu a importância da parentalidade.
                     </h2>
-                    <p className="font-dm-sans text-[#4c4d4f] text-[20px] md:text-[24px] max-w-[928px]">
+                    <p className="font-dm-sans text-[#4c4d4f] text-[18px] md:text-[24px] max-w-[928px] leading-tight">
                         Agora é hora de se conectar com quem leva isso a sério.
                     </p>
                 </div>

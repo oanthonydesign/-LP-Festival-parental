@@ -17,16 +17,16 @@ export default function Section13() {
             <div className="max-w-[1280px] mx-auto px-6 relative z-[2] flex flex-col items-center text-center gap-[64px]">
 
                 {/* Content */}
-                <div className="flex flex-col gap-[24px] max-w-[1020px] mx-auto">
-                    <h2 className="font-sugar-peachy text-[#191919] text-[48px] md:text-[84px] leading-[0.8]">
+                <div className="flex flex-col gap-[24px] max-w-[1020px] md:max-w-[1280px] mx-auto items-center">
+                    <h2 className="font-sugar-peachy text-[#191919] text-[48px] md:text-[84px] leading-[0.8] w-full">
                         Conecte sua marca ao maior festival de parentalidade da América Latina
                     </h2>
 
-                    <p className="font-dm-sans font-normal text-[#191919] text-[18px] md:text-[24px] leading-[1.2]">
+                    <p className="font-dm-sans font-normal text-[#191919] text-[18px] md:text-[24px] leading-[1.2] md:max-w-[1020px]">
                         Ao patrocinar o Festival Parental, sua marca se posiciona ao lado de quem está construindo o futuro da educação e do cuidado no Brasil. Mais do que visibilidade, é presença estratégica ao lado de milhares de profissionais, famílias, especialistas e marcas comprometidas com transformação social, bem-estar e impacto positivo.
                     </p>
 
-                    <h3 className="font-sugar-peachy text-[#191919] text-[32px] md:text-[46px] leading-[0.9] mt-2">
+                    <h3 className="font-sugar-peachy text-[#191919] text-[32px] md:text-[46px] leading-[0.9] mt-2 md:whitespace-nowrap">
                         Seja parte de um movimento que transforma gerações.
                     </h3>
                 </div>

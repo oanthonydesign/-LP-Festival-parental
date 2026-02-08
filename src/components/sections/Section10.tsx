@@ -3,7 +3,7 @@
 
 export default function Section10() {
   return (
-    <div className="bg-[#fff6ef] content-stretch flex items-center justify-center pb-[56px] pt-[86px] relative size-full" data-name="Section - 10">
+    <div className="bg-[#fff6ef] content-stretch flex items-center justify-center pb-[56px] pt-[86px] px-4 md:px-0 relative size-full" data-name="Section - 10">
       <Content />
     </div>
   );
@@ -11,7 +11,7 @@ export default function Section10() {
 
 function Content() {
   return (
-    <div className="content-stretch flex flex-col gap-[86px] items-center relative shrink-0 w-[1280px]" data-name="Content">
+    <div className="content-stretch flex flex-col gap-10 md:gap-[86px] items-center relative shrink-0 w-full max-w-[1280px]" data-name="Content">
       <TextsTrilhas />
       <Cards />
     </div>
@@ -29,10 +29,10 @@ function TextsTrilhas() {
 function Text() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-center leading-[0] relative shrink-0 text-center w-full" data-name="text">
-      <div className="flex flex-col font-sugar-peachy justify-center not-italic relative shrink-0 text-[#2260a1] text-[76px] w-full">
+      <div className="flex flex-col font-sugar-peachy justify-center not-italic relative shrink-0 text-[#2260a1] text-[46px] md:text-[76px] w-full break-words">
         <p className="leading-[0.8] whitespace-pre-wrap">Transamérica Expo, São Paulo/SP</p>
       </div>
-      <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[24px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[18px] md:text-[24px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[1.1] whitespace-pre-wrap">O Festival Parental 2026 acontece no Transamérica Expo, um dos espaços de eventos mais versáteis e renomados do país. Localizado na capital paulista, o centro oferece infraestrutura completa, acessibilidade e conforto para receber milhares de pessoas em uma experiência grandiosa.</p>
       </div>
     </div>
@@ -41,7 +41,7 @@ function Text() {
 
 function Cards() {
   return (
-    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Cards">
+    <div className="content-stretch flex flex-col md:flex-row items-stretch md:items-start gap-8 md:gap-0 md:justify-between relative shrink-0 w-full" data-name="Cards">
       <Container />
       <Container1 />
       <Container2 />
@@ -52,7 +52,7 @@ function Cards() {
 // Card 1: 4 dias de festival
 function Container() {
   return (
-    <div className="content-stretch flex flex-col h-[484px] items-start justify-center relative shrink-0 w-[413px]" data-name="Container">
+    <div className="content-stretch flex flex-col min-h-[420px] md:h-[484px] items-start justify-center relative shrink-0 w-full md:w-[413px]" data-name="Container">
       <Variant />
     </div>
   );
@@ -76,7 +76,7 @@ function Variant() {
 function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng() {
   return (
     <div className="absolute inset-0 overflow-clip" data-name="image 117">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/loc_01.webp" />
+      <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/loc_01.webp" />
     </div>
   );
 }
@@ -84,7 +84,7 @@ function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng() {
 function Texts() {
   return (
     <div className="backdrop-blur-[2.5px] bg-[rgba(0,0,0,0.56)] relative shrink-0 w-full" data-name="Texts">
-      <div className="content-stretch flex flex-col gap-[12px] items-start px-[24px] py-[40px] relative w-full">
+      <div className="content-stretch flex flex-col gap-[12px] items-start px-4 md:px-[24px] py-6 md:py-[40px] relative w-full">
         <CreatorTalks />
         <PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataformasTecnologia />
       </div>
@@ -115,7 +115,7 @@ function PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataforma
 // Card 2: Endereço
 function Container1() {
   return (
-    <div className="content-stretch flex flex-col h-[484px] items-start justify-center relative shrink-0 w-[413px]" data-name="Container">
+    <div className="content-stretch flex flex-col min-h-[420px] md:h-[484px] items-start justify-center relative shrink-0 w-full md:w-[413px]" data-name="Container">
       <Variant1 />
     </div>
   );
@@ -139,7 +139,7 @@ function Variant1() {
 function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng1() {
   return (
     <div className="absolute inset-0 overflow-clip" data-name="image 117">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/loc_02.webp" />
+      <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/loc_02.webp" />
     </div>
   );
 }
@@ -147,7 +147,7 @@ function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng1() {
 function Texts1() {
   return (
     <div className="backdrop-blur-[2.5px] bg-[rgba(0,0,0,0.56)] h-[176px] relative shrink-0 w-full" data-name="Texts">
-      <div className="content-stretch flex flex-col gap-[12px] items-start px-[24px] py-[40px] relative size-full">
+      <div className="content-stretch flex flex-col gap-[12px] items-start px-4 md:px-[24px] py-6 md:py-[40px] relative size-full">
         <CreatorTalks1 />
         <PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataformasTecnologia1 />
       </div>
@@ -178,7 +178,7 @@ function PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataforma
 // Card 3: Data
 function Container2() {
   return (
-    <div className="content-stretch flex flex-col h-[484px] items-start justify-center relative shrink-0 w-[413px]" data-name="Container">
+    <div className="content-stretch flex flex-col min-h-[420px] md:h-[484px] items-start justify-center relative shrink-0 w-full md:w-[413px]" data-name="Container">
       <Variant2 />
     </div>
   );
@@ -202,7 +202,7 @@ function Variant2() {
 function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng2() {
   return (
     <div className="absolute inset-0 overflow-clip" data-name="image 117">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/loc_03.webp" />
+      <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/loc_03.webp" />
     </div>
   );
 }
@@ -210,7 +210,7 @@ function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng2() {
 function Texts2() {
   return (
     <div className="backdrop-blur-[2.5px] bg-[rgba(0,0,0,0.56)] h-[176px] relative shrink-0 w-full" data-name="Texts">
-      <div className="content-stretch flex flex-col gap-[12px] items-start px-[24px] py-[40px] relative size-full">
+      <div className="content-stretch flex flex-col gap-[12px] items-start px-4 md:px-[24px] py-6 md:py-[40px] relative size-full">
         <CreatorTalks2 />
         <PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataformasTecnologia2 />
       </div>

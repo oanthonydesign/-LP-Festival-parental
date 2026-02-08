@@ -35,7 +35,7 @@ export default function Home() {
             <Section12 />
             <Section13 />
             {/* <Section14 /> */}
-            <Section15 />
+            {/* <Section15 /> */}
             <Rodape />
             <Copyright />
         </main>

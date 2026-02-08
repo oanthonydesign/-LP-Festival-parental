@@ -4,11 +4,11 @@ import { useState, useRef, useEffect } from "react";
 
 function BackgroundCurves() {
     return (
-        <div className="absolute top-[80px] left-0 w-full z-[1] pointer-events-none select-none opacity-100 overflow-visible">
+        <div className="absolute top-[650px] lg:top-[53px] left-0 w-full z-[1] pointer-events-none select-none opacity-100 overflow-hidden lg:overflow-visible">
             <img
                 src="/images/grafismo_wave.svg"
                 alt="Grafismo de ondas"
-                className="w-full h-auto min-w-[1440px]"
+                className="w-full h-auto min-w-0 max-w-none lg:min-w-[1440px]"
             />
         </div>
     );
@@ -30,15 +30,15 @@ export default function Section2() {
         <section className="bg-[#fff6ef] w-full flex flex-col items-center pb-[56px] pt-[120px] relative isolate overflow-hidden" id="festival" data-name="Section - 2">
             <BackgroundCurves />
 
-            <div className="layout-container flex flex-col gap-[48px] items-center relative z-10">
-                <div className="flex flex-col lg:flex-row items-start justify-between gap-12 w-full max-w-[1064px]">
+            <div className="layout-container flex flex-col gap-[48px] items-center relative z-10 px-4 md:px-0">
+                <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-12 w-full max-w-[1064px]">
                     {/* Left Column */}
                     <div className="flex flex-col gap-[16px] items-start w-full lg:w-[444px]">
                         <div className="flex flex-col font-sugar-peachy justify-center relative text-[#ef7d25] text-[46px] leading-[0.9]">
-                            <p className="whitespace-pre-wrap">Nunca se falou tanto sobre parentalidade</p>
+                            <p className="whitespace-pre-wrap break-words">Nunca se falou tanto sobre parentalidade</p>
                         </div>
                         <div className="flex flex-col font-dm-sans font-normal justify-center relative text-[#1a1a1a] text-[32px] leading-tight">
-                            <p className="whitespace-pre-wrap">Nunca foi tão fácil se sentir inseguro, culpado ou perdido.</p>
+                            <p className="whitespace-pre-wrap break-words">Nunca foi tão fácil se sentir inseguro, culpado ou perdido.</p>
                         </div>
                     </div>
 
@@ -57,12 +57,12 @@ export default function Section2() {
 
                 {/* Video Container */}
                 <div
-                    className="border-3 border-[#191919] border-solid h-[300px] md:h-[500px] lg:h-[598px] overflow-hidden relative rounded-[20px] shadow-[5px_6px_0px_0px_#191919] w-full max-w-[1064px] cursor-pointer group"
+                    className="border-3 border-[#191919] border-solid h-auto lg:h-[598px] overflow-hidden relative rounded-[20px] shadow-[5px_6px_0px_0px_#191919] w-full max-w-[1064px] cursor-pointer group"
                     onClick={!isStarted ? handlePlayVideo : undefined}
                 >
                     <video
                         ref={videoRef}
-                        className="w-full h-full object-cover"
+                        className="w-full h-auto lg:h-full object-cover"
                         src="https://vismo.com.br/wp-content/uploads/2026/02/after_movie.webm#t=10"
                         controls={isStarted}
                         preload="auto"

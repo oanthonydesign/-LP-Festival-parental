@@ -128,9 +128,9 @@ function TicketIcon() {
 
 function PassportCard({ data }: { data: PassportData }) {
   return (
-    <div className={`flex flex-col items-center w-[420px] ${data.textColor}`}>
+    <div className={`flex flex-col items-center w-full max-w-[420px] ${data.textColor}`}>
       {/* Header with Title and Lote */}
-      <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[16px] w-full z-20 relative`}>
+      <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[16px] w-full z-10 relative`}>
         <div className={`border-2 ${data.borderColor} border-solid rounded-[16px] flex items-center justify-between px-[12px] py-[12px] gap-3`}>
           <div className="bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[6px] shadow-[3px_3px_0px_0px_#191919] px-[12px] py-[4px] shrink-0">
             <span className="font-sugar-peachy text-[18px] text-black leading-none">{data.lote}</span>
@@ -142,12 +142,12 @@ function PassportCard({ data }: { data: PassportData }) {
       </div>
 
       {/* Main Content Area */}
-      <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[24px] w-full -mt-[2px] pt-8 flex flex-col gap-6 z-10 relative`}>
+      <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[24px] w-full -mt-[2px] pt-8 flex flex-col gap-6 z-20 relative`}>
         {/* Price Section */}
         <div className="text-center flex flex-col items-center">
-          <div className="font-sugar-peachy text-[56px] leading-[0.8] flex items-center gap-3">
-            <span className={`text-[40px] ${data.accentColor}`}>12x de</span>
-            <span className={`${data.priceColor} text-[64px]`}>{data.priceInstallment}</span>
+          <div className="font-sugar-peachy leading-[0.8] flex flex-col md:flex-row items-center gap-1 md:gap-3">
+            <span className={`text-[28px] md:text-[40px] ${data.accentColor}`}>12x de</span>
+            <span className={`${data.priceColor} text-[46px] md:text-[64px]`}>{data.priceInstallment}</span>
           </div>
           <p className="font-dm-sans text-[24px] mt-2 opacity-80">{data.priceFull}</p>
         </div>
@@ -167,12 +167,12 @@ function PassportCard({ data }: { data: PassportData }) {
         {/* Action Button */}
         <a
           href={data.href}
-          className="bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] px-[24px] py-[16px] flex items-center justify-center gap-2 hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] group"
+          className={`bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] ${data.id === 'educador' ? 'px-[6px] md:px-[24px]' : 'px-[24px]'} py-[16px] flex items-center justify-center gap-2 hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] group w-full md:w-auto`}
         >
-          <div className="text-[#191919]">
+          <div className="text-[#191919] hidden md:block">
             <TicketIcon />
           </div>
-          <span className="font-dm-sans font-bold text-[14px] uppercase text-[#191919] tracking-wider">
+          <span className="font-dm-sans font-bold text-[14px] uppercase text-[#191919] tracking-wider text-center">
             {data.buttonText}
           </span>
         </a>
@@ -188,27 +188,27 @@ function PassportCard({ data }: { data: PassportData }) {
 
 export default function Section6() {
   return (
-    <section className="bg-[#fff6ef] py-[80px] px-6 md:px-12 flex flex-col items-center relative overflow-hidden" id="ingressos">
+    <section className="bg-[#fff6ef] py-[80px] px-4 md:px-12 flex flex-col items-center relative overflow-hidden" id="ingressos">
       <div className="max-w-[1280px] w-full flex flex-col items-center gap-[64px]">
         {/* Header */}
         <div className="flex flex-col items-center gap-7 text-center">
-          <div className="border-2 border-[#505050] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#505050] px-[32px] py-[16px] flex items-center gap-2 text-[#505050] bg-transparent">
+          <div className="border-2 border-[#505050] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#505050] px-4 md:px-[32px] py-[16px] flex items-center gap-2 text-[#505050] bg-transparent">
             <TicketIcon />
             <span className="font-dm-sans text-[14px] uppercase tracking-wider">escolha seu ingresso</span>
           </div>
 
           <div className="flex flex-col gap-6 max-w-[1120px]">
-            <h2 className="font-sugar-peachy text-[48px] md:text-[72px] text-[#2260a1] leading-[0.8]">
+            <h2 className="font-sugar-peachy text-[46px] md:text-[72px] text-[#2260a1] leading-[0.8]">
               Um festival, duas jornadas intensas.
             </h2>
-            <p className="font-dm-sans text-[20px] md:text-[32px] text-[#4c4d4f] leading-tight">
+            <p className="font-dm-sans text-[18px] md:text-[32px] text-[#4c4d4f] leading-tight">
               Um encontro presencial para refletir sobre a parentalidade com profundidade, responsabilidade e troca real.
             </p>
           </div>
         </div>
 
         {/* Passport Grid */}
-        <div className="flex flex-wrap lg:flex-nowrap justify-center gap-[10px] w-full items-center">
+        <div className="flex flex-col lg:flex-row lg:flex-nowrap justify-center gap-6 lg:gap-[10px] w-full items-center">
           {PASSAPORTES.map((passport) => (
             <PassportCard key={passport.id} data={passport} />
           ))}

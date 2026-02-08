@@ -6,11 +6,11 @@ import svgPaths from "@/components/svg/svg-igj2kqgoo8";
 function Frame1() {
   return (
     <div className="content-stretch flex flex-col font-sugar-peachy gap-[6px] items-center leading-[0] not-italic relative shrink-0 text-center w-full">
-      <div className="flex flex-col justify-center relative shrink-0 text-[#ef7d25] text-4xl md:text-[84px] w-full">
-        <p className="leading-[0.8] whitespace-pre-wrap">Vai vir de outra cidade?</p>
+      <div className="flex flex-col justify-center relative shrink-0 text-[#ef7d25] text-[46px] md:text-[84px] w-full">
+        <p className="leading-[0.8] whitespace-pre-wrap break-words">Vai vir de outra cidade?</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0 text-[#4c4d4f] text-xl md:text-[46px] max-w-[973px] w-full mx-auto">
-        <p className="leading-[0.9] whitespace-pre-wrap">Conte com a agência oficial do Festival Parental para organizar sua viagem com calma e segurança</p>
+        <p className="leading-[0.9] whitespace-pre-wrap break-words">Conte com a agência oficial do Festival Parental para organizar sua viagem com calma e segurança</p>
       </div>
     </div>
   );
@@ -45,9 +45,9 @@ function Component1() {
 
 function Component() {
   return (
-    <div className="content-stretch flex gap-[12px] items-center justify-center relative shrink-0" data-name="1">
+    <div className="content-stretch flex flex-col md:flex-row gap-[12px] items-center justify-center relative shrink-0" data-name="1">
       <Component1 />
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[24px] text-center whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[24px] text-center whitespace-normal break-words" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[1.1]">Planeje sua viagem com apoio especializado</p>
       </div>
     </div>
@@ -83,9 +83,9 @@ function Component3() {
 
 function Component2() {
   return (
-    <div className="content-stretch flex gap-[12px] items-center justify-center relative shrink-0" data-name="2">
+    <div className="content-stretch flex flex-col md:flex-row gap-[12px] items-center justify-center relative shrink-0" data-name="2">
       <Component3 />
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[24px] text-center whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[24px] text-center whitespace-normal break-words" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[1.1]">Hospedagem e passagens com a agência parceira do evento.</p>
       </div>
     </div>
@@ -133,7 +133,7 @@ function IcOutlineWhatsapp() {
 function Container1() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-bold justify-center leading-[0] relative shrink-0 text-[#fff6ef] text-[14.1px] uppercase whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-bold justify-center leading-[0] relative shrink-0 text-[#fff6ef] text-[14.1px] uppercase whitespace-normal" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[24px]">WhatsApp GalaxTur</p>
       </div>
     </div>
@@ -157,7 +157,7 @@ function LinkVariant() {
       className="bg-[#2daa96] border-2 border-[#191919] relative rounded-[40px] shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all flex flex-row items-center justify-center size-full cursor-pointer decoration-transparent"
       data-name="Link - Variant 1"
     >
-      <div className="content-stretch flex gap-[8px] items-center justify-center px-[40px] py-[16px] relative w-full">
+      <div className="content-stretch flex gap-[8px] items-center justify-center px-4 md:px-[40px] py-[16px] relative w-full">
         <IcOutlineWhatsapp />
         <ComprarIngresso />
       </div>
