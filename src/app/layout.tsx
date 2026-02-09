@@ -30,26 +30,24 @@ export default function RootLayout({
     return (
         <html lang="pt-BR">
             <head>
-                <Script
-                    id="utmify-pixel"
-                    strategy="afterInteractive"
-                >
-                    {`
-                        window.pixelId = "698a1cc063e361a00f21dd5a";
-                        var a = document.createElement("script");
-                        a.setAttribute("async", "");
-                        a.setAttribute("defer", "");
-                        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-                        document.head.appendChild(a);
-                    `}
+                <Script id="utmify-config" strategy="beforeInteractive">
+                    {`window.pixelId = "698a1cc063e361a00f21dd5a";`}
                 </Script>
+                <Script
+                    id="utmify-pixel-script"
+                    src="https://cdn.utmify.com.br/scripts/pixel/pixel.js"
+                    strategy="afterInteractive"
+                    async
+                    defer
+                />
             </head>
             <body className={`${dmSans.variable} ${archivo.variable} antialiased bg-[#fff6ef] font-[family-name:var(--font-dm-sans)]`}>
                 {children}
                 <Script
+                    id="utmify-utms"
                     src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-                    data-utmify-prevent-xcod-sck=""
-                    data-utmify-prevent-subids=""
+                    data-utmify-prevent-xcod-sck
+                    data-utmify-prevent-subids
                     strategy="afterInteractive"
                 />
             </body>
