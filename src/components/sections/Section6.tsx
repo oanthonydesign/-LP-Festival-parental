@@ -83,7 +83,7 @@ const PASSAPORTES: PassportData[] = [
     priceInstallment: "R$ 74,70",
     priceFull: "ou R$ 747,00 à vista",
     benefits: [
-      "Acesso presencial individual aos 2 últimos dias do Festival Parental 2026 (dias 21 e 22.11), com trilhas de conteúdo abertas também para pais e cuidadores",
+      "Acesso presencial para duas pessoas aos 2 últimos dias do Festival Parental 2026 (dias 21 e 22.11), com trilhas de conteúdo abertas também para pais e cuidadores",
       "Sacola com brindes",
       "Acesso às sessões de autógrafos com palestrantes",
       "Acesso à feira de produtos e serviços para a parentalidade"
