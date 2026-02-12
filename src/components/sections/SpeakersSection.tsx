@@ -80,7 +80,7 @@ const allSpeakers: Speaker[] = [
     {
         id: 8,
         name: "Cecília Lauriano",
-        description: "Psicoterapeuta especialista em trauma",
+        description: "Mestre em Psicologia clínica especialista no trabalho com trauma",
         image: "/images/cecilial.webp",
         instagram: "https://www.instagram.com/cecilia.laurianooficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         linkedin: "https://www.linkedin.com/in/cecilialauriano/",

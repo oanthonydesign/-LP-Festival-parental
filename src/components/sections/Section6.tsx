@@ -30,9 +30,9 @@ const PASSAPORTES: PassportData[] = [
   {
     id: "educador",
     name: "Passaporte Educador",
-    lote: "Lote 0",
-    priceInstallment: "R$ 109,70",
-    priceFull: "ou R$ 1.097,00 à vista",
+    lote: "Lote 1",
+    priceInstallment: "R$ 129,70",
+    priceFull: "ou R$ 1.297,90 à vista",
     benefits: [
       "Acesso presencial aos 4 dias do Festival Parental 2026 (2 dias de trilha de conteúdo específico para profissionais da parentalidade + 2 dias de trilha de conteúdo aberto para pais e cuidadores)",
       "Sacola com brindes",
@@ -55,7 +55,7 @@ const PASSAPORTES: PassportData[] = [
   {
     id: "parental",
     name: "Passaporte Parental",
-    lote: "Lote 0",
+    lote: "Lote 1",
     priceInstallment: "R$ 49,70",
     priceFull: "ou R$ 497,00 à vista",
     benefits: [
@@ -79,7 +79,7 @@ const PASSAPORTES: PassportData[] = [
   {
     id: "duplo",
     name: "Passaporte Duplo",
-    lote: "Lote 0",
+    lote: "Lote 1",
     priceInstallment: "R$ 74,70",
     priceFull: "ou R$ 747,00 à vista",
     benefits: [

@@ -232,7 +232,7 @@ function PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataforma
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Painéis imersivos sobre Cultura Digital, Marcas do Amanhã e Inovações em Plataformas & Tecnologia.">
       <div className="flex flex-col font-sans font-normal justify-center leading-[0] not-italic relative shrink-0 text-[18px] text-[rgba(255,255,255,0.7)] w-full">
-        <p className="leading-[1.1] whitespace-pre-wrap">Do dia 19 a 22 de novembro de 2026, o festival iniciará às [HORÁRIO]</p>
+        <p className="leading-[1.1] whitespace-pre-wrap">Do dia 19 a 22 de novembro de 2026, o festival iniciará às 09:00</p>
       </div>
     </div>
   );
