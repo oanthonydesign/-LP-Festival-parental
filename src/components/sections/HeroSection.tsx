@@ -137,7 +137,7 @@ export default function HeroSection() {
 
                 {/* Telma Abrahão (Middle Right) */}
                 <div className="hidden lg:block absolute lg:top-[109px] lg:left-[841px] lg:w-[279px] lg:h-[391px] transition-all z-[35]">
-                    <img src="/images/Telma Abrahão.webp" alt="Telma Abrahão" className="w-full h-full object-contain" />
+                    <img src="/images/Telma Abrahao.webp" alt="Telma Abrahão" className="w-full h-full object-contain" />
                 </div>
 
                 {/* Elisama (Back Right - behind Murilo) */}
