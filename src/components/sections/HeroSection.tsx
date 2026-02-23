@@ -103,7 +103,7 @@ export default function HeroSection() {
 
                 {/* Mobile Single Image */}
                 <img
-                    src="/images/Palestrantes_mobile.webp"
+                    src="/images/palestrantes_mobile2.webp"
                     alt="Palestrantes Festival Parental"
                     className="block lg:hidden w-full h-auto object-contain"
                 />

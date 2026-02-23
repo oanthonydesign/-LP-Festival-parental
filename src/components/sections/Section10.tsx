@@ -52,7 +52,7 @@ function Cards() {
 // Card 1: 4 dias de festival
 function Container() {
   return (
-    <div className="content-stretch flex flex-col min-h-[420px] md:h-[484px] items-start justify-center relative shrink-0 w-full md:w-[413px]" data-name="Container">
+    <div className="flex flex-col min-h-[420px] md:h-[484px] items-stretch relative shrink-0 w-full md:w-[413px]" data-name="Container">
       <Variant />
     </div>
   );
@@ -60,10 +60,10 @@ function Container() {
 
 function Variant() {
   return (
-    <div className="bg-[rgba(255,255,255,0.1)] flex-[1_0_0] min-h-px min-w-px relative rounded-[16px] w-full" data-name="Variant 1">
-      <div className="content-stretch flex flex-col items-start justify-end overflow-clip relative rounded-[inherit] size-full">
+    <div className="bg-[rgba(255,255,255,0.1)] flex-1 relative rounded-[16px] w-full flex flex-col" data-name="Variant 1">
+      <div className="flex-1 flex flex-col items-start justify-end overflow-clip relative rounded-[inherit] w-full">
         <Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng />
-        <div className="absolute inset-[-0.2px_0_0.2px_0] rounded-[16px]" data-name="Border">
+        <div className="absolute inset-0 rounded-[16px]" data-name="Border">
           <div aria-hidden="true" className="absolute border border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none rounded-[16px]" />
         </div>
         <Texts />
@@ -83,7 +83,7 @@ function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng() {
 
 function Texts() {
   return (
-    <div className="backdrop-blur-[2.5px] bg-[rgba(0,0,0,0.56)] relative shrink-0 w-full" data-name="Texts">
+    <div className="backdrop-blur-[2.5px] bg-[rgba(0,0,0,0.56)] md:h-[176px] relative shrink-0 w-full" data-name="Texts">
       <div className="content-stretch flex flex-col gap-[12px] items-start px-4 md:px-[24px] py-6 md:py-[40px] relative w-full">
         <CreatorTalks />
         <PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataformasTecnologia />
@@ -115,7 +115,7 @@ function PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataforma
 // Card 2: Endereço
 function Container1() {
   return (
-    <div className="content-stretch flex flex-col min-h-[420px] md:h-[484px] items-start justify-center relative shrink-0 w-full md:w-[413px]" data-name="Container">
+    <div className="flex flex-col min-h-[420px] md:h-[484px] items-stretch relative shrink-0 w-full md:w-[413px]" data-name="Container">
       <Variant1 />
     </div>
   );
@@ -123,10 +123,10 @@ function Container1() {
 
 function Variant1() {
   return (
-    <div className="bg-[rgba(255,255,255,0.1)] flex-[1_0_0] min-h-px min-w-px relative rounded-[16px] w-full" data-name="Variant 1">
-      <div className="content-stretch flex flex-col items-start justify-end overflow-clip relative rounded-[inherit] size-full">
+    <div className="bg-[rgba(255,255,255,0.1)] flex-1 relative rounded-[16px] w-full flex flex-col" data-name="Variant 1">
+      <div className="flex-1 flex flex-col items-start justify-end overflow-clip relative rounded-[inherit] w-full">
         <Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng1 />
-        <div className="absolute inset-[-0.2px_0_0.2px_0] rounded-[16px]" data-name="Border">
+        <div className="absolute inset-0 rounded-[16px]" data-name="Border">
           <div aria-hidden="true" className="absolute border border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none rounded-[16px]" />
         </div>
         <Texts1 />
@@ -146,8 +146,8 @@ function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng1() {
 
 function Texts1() {
   return (
-    <div className="backdrop-blur-[2.5px] bg-[rgba(0,0,0,0.56)] h-[176px] relative shrink-0 w-full" data-name="Texts">
-      <div className="content-stretch flex flex-col gap-[12px] items-start px-4 md:px-[24px] py-6 md:py-[40px] relative size-full">
+    <div className="backdrop-blur-[2.5px] bg-[rgba(0,0,0,0.56)] md:h-[176px] relative shrink-0 w-full" data-name="Texts">
+      <div className="content-stretch flex flex-col gap-[12px] items-start px-4 md:px-[24px] py-6 md:py-[40px] relative w-full">
         <CreatorTalks1 />
         <PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataformasTecnologia1 />
       </div>
@@ -178,7 +178,7 @@ function PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataforma
 // Card 3: Data
 function Container2() {
   return (
-    <div className="content-stretch flex flex-col min-h-[420px] md:h-[484px] items-start justify-center relative shrink-0 w-full md:w-[413px]" data-name="Container">
+    <div className="flex flex-col min-h-[420px] md:h-[484px] items-stretch relative shrink-0 w-full md:w-[413px]" data-name="Container">
       <Variant2 />
     </div>
   );
@@ -186,10 +186,10 @@ function Container2() {
 
 function Variant2() {
   return (
-    <div className="bg-[rgba(255,255,255,0.1)] flex-[1_0_0] min-h-px min-w-px relative rounded-[16px] w-full" data-name="Variant 1">
-      <div className="content-stretch flex flex-col items-start justify-end overflow-clip relative rounded-[inherit] size-full">
+    <div className="bg-[rgba(255,255,255,0.1)] flex-1 relative rounded-[16px] w-full flex flex-col" data-name="Variant 1">
+      <div className="flex-1 flex flex-col items-start justify-end overflow-clip relative rounded-[inherit] w-full">
         <Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng2 />
-        <div className="absolute inset-[-0.2px_0_0.2px_0] rounded-[16px]" data-name="Border">
+        <div className="absolute inset-0 rounded-[16px]" data-name="Border">
           <div aria-hidden="true" className="absolute border border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none rounded-[16px]" />
         </div>
         <Texts2 />
@@ -209,8 +209,8 @@ function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng2() {
 
 function Texts2() {
   return (
-    <div className="backdrop-blur-[2.5px] bg-[rgba(0,0,0,0.56)] h-[176px] relative shrink-0 w-full" data-name="Texts">
-      <div className="content-stretch flex flex-col gap-[12px] items-start px-4 md:px-[24px] py-6 md:py-[40px] relative size-full">
+    <div className="backdrop-blur-[2.5px] bg-[rgba(0,0,0,0.56)] md:h-[176px] relative shrink-0 w-full" data-name="Texts">
+      <div className="content-stretch flex flex-col gap-[12px] items-start px-4 md:px-[24px] py-6 md:py-[40px] relative w-full">
         <CreatorTalks2 />
         <PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataformasTecnologia2 />
       </div>
