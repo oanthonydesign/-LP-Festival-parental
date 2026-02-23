@@ -4,7 +4,7 @@ import svgPaths from "@/components/svg/svgPaths";
 
 export default function HeroSection() {
     return (
-        <section className="bg-[#fff6ee] relative w-full h-auto lg:h-[1200px] overflow-hidden pb-0" id="hero" data-name="Section - 1">
+        <section className="bg-[#fff6ee] relative w-full h-auto lg:h-[1150px] overflow-hidden pb-0" id="hero" data-name="Section - 1">
             {/* --- Background Graphics --- */}
 
             {/* Grafismo Onda 2 (Rotated) - Mobile Bottom Right / Desktop Top Right */}
@@ -49,7 +49,7 @@ export default function HeroSection() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="font-sugar-peachy text-[#ef7d25] text-[44px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.95] md:leading-[0.9] tracking-[-1.5px] md:tracking-[-3px] relative px-2 md:px-0 w-full [-webkit-text-stroke:8px_#fff] [paint-order:stroke_fill] [filter:drop-shadow(2px_2px_0_#191919)_drop-shadow(-2px_-2px_0_#191919)_drop-shadow(2px_-2px_0_#191919)_drop-shadow(-2px_2px_0_#191919)]">
+                    <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[44px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.95] md:leading-[0.9] tracking-[-1.5px] md:tracking-[-3px] relative px-2 md:px-0 w-full [-webkit-text-stroke:8px_#fff] [paint-order:stroke_fill] [filter:drop-shadow(2px_2px_0_#191919)_drop-shadow(-2px_-2px_0_#191919)_drop-shadow(2px_-2px_0_#191919)_drop-shadow(-2px_2px_0_#191919)]">
                         <span className="block">Criar filhos nunca foi simples.</span>
                         <span className="block mt-2">
                             Agora, é <span className="text-[#2260a1]">muito mais complexo</span>
@@ -59,7 +59,7 @@ export default function HeroSection() {
                     {/* Subtext */}
                     <div className="font-dm-sans text-[#4c4d4f] text-[16px] sm:text-[18px] md:text-[24px] text-center leading-[1.2] md:leading-[1.1] flex flex-col gap-3 md:gap-4 max-w-full md:max-w-[1124px] px-2 md:px-0">
                         <p>
-                            O Festival Parental é a evolução do Congresso Internacional de Educação Parental, que há seis edições reúne profissionais para discutir ciência, prática e ética na parentalidade.
+                            O Festival Parental é a evolução do Congresso Internacional de Educação Parental, que há 7 edições, desde 2020 reúne profissionais para discutir ciência, prática e ética na parentalidade.
                         </p>
                         <p>
                             Agora, essa conversa se amplia e convida também pais e mães que querem refletir sobre a parentalidade com mais profundidade, menos culpa e mais consciência.
@@ -99,7 +99,7 @@ export default function HeroSection() {
             {/* --- Speakers & Graphics Container --- */}
             {/* Mobile: Relative Layout (Flow) */}
             {/* Desktop: Absolute Layout (Pixel Perfect from Figma) */}
-            <div className="relative mt-8 lg:mt-0 w-full max-w-[500px] mx-auto lg:mx-0 lg:max-w-none lg:w-[1466px] lg:h-[520px] lg:absolute lg:top-[679px] lg:left-1/2 lg:-translate-x-1/2 pointer-events-none z-10 px-4 lg:px-0">
+            <div className="relative mt-8 lg:mt-0 w-full max-w-[500px] mx-auto lg:mx-0 lg:max-w-none lg:w-[1336px] lg:h-[501px] lg:absolute lg:top-[629px] lg:left-1/2 lg:-translate-x-1/2 pointer-events-none z-10 px-4 lg:px-0">
 
                 {/* Mobile Single Image */}
                 <img
@@ -110,43 +110,53 @@ export default function HeroSection() {
 
                 {/* Desktop Individual Speakers (Hidden on Mobile) */}
 
-                {/* Marcos Piangers (Front Center) */}
-                <div className="hidden lg:block absolute lg:top-0 lg:left-[652px] lg:w-[405px] lg:h-[487px] transition-all z-[60]">
-                    <img src="/images/marcos piangers.webp" alt="Marcos Piangers" className="w-full h-full object-contain" />
+                {/* Maya (Back Left - behind Daniel & Isa) */}
+                <div className="hidden lg:block absolute lg:top-0 lg:left-[110px] lg:w-[297px] lg:h-[399px] transition-all z-[4]">
+                    <img src="/images/maya.webp" alt="Maya" className="w-full h-full object-contain" />
                 </div>
 
-                {/* Nanda Perim (Front Left) */}
-                <div className="hidden lg:block absolute lg:top-[12px] lg:left-[433px] lg:w-[382px] lg:h-[475px] transition-all z-[50]">
-                    <img src="/images/Nanda Perim.webp" alt="Nanda Perim" className="w-full h-full object-contain" />
-                </div>
-
-                {/* Telma Abrahão (Front Right) */}
-                <div className="hidden lg:block absolute lg:top-[56px] lg:left-[918px] lg:w-[308px] lg:h-[431px] transition-all z-[20]">
-                    <img src="/images/Telma Abrahão.webp" alt="Telma Abrahão" className="w-full h-full object-contain" />
-                </div>
-
-                {/* Isa Minatel (Middle Left) */}
-                <div className="hidden lg:block absolute lg:top-[61px] lg:left-[256px] lg:w-[271px] lg:h-[425px] transition-all z-[40]">
-                    <img src="/images/Isa Minatel.webp" alt="Isa Minatel" className="w-full h-full object-contain" />
-                </div>
-
-                {/* Murilo Gun (Top Right) */}
-                <div className="hidden lg:block absolute lg:top-[90px] lg:left-[1033px] lg:w-[431px] lg:h-[397px] transition-all z-[10]">
-                    <img src="/images/murilo gun.webp" alt="Murilo Gun" className="w-full h-full object-contain" />
-                </div>
-
-                {/* Daniel Becker (Top Left Center) */}
-                <div className="hidden lg:block absolute lg:top-[103px] lg:left-0 lg:w-[410px] lg:h-[385px] transition-all z-[30]">
+                {/* Daniel Becker (Front Left) */}
+                <div className="hidden lg:block absolute lg:top-[152px] lg:left-[9px] lg:w-[371px] lg:h-[349px] transition-all z-[30]">
                     <img src="/images/daniel becker.webp" alt="Daniel Becker" className="w-full h-full object-contain" />
                 </div>
 
+                {/* Isa Minatel (Middle Left) */}
+                <div className="hidden lg:block absolute lg:top-[114px] lg:left-[241px] lg:w-[246px] lg:h-[385px] transition-all z-[40]">
+                    <img src="/images/Isa Minatel.webp" alt="Isa Minatel" className="w-full h-full object-contain" />
+                </div>
+
+                {/* Nanda Perim (Center Left) */}
+                <div className="hidden lg:block absolute lg:top-[60px] lg:left-[402px] lg:w-[346px] lg:h-[441px] transition-all z-[50]">
+                    <img src="/images/Nanda Perim.webp" alt="Nanda Perim" className="w-full h-full object-contain" />
+                </div>
+
+                {/* Marcos Piangers (Center Right) */}
+                <div className="hidden lg:block absolute lg:top-[59px] lg:left-[597px] lg:w-[367px] lg:h-[442px] transition-all z-[60]">
+                    <img src="/images/marcos piangers.webp" alt="Marcos Piangers" className="w-full h-full object-contain" />
+                </div>
+
+                {/* Telma Abrahão (Middle Right) */}
+                <div className="hidden lg:block absolute lg:top-[109px] lg:left-[841px] lg:w-[279px] lg:h-[391px] transition-all z-[35]">
+                    <img src="/images/Telma Abrahão.webp" alt="Telma Abrahão" className="w-full h-full object-contain" />
+                </div>
+
+                {/* Elisama (Back Right - behind Murilo) */}
+                <div className="hidden lg:block absolute lg:top-[20px] lg:left-[970px] lg:w-[274px] lg:h-[349px] transition-all z-[5]">
+                    <img src="/images/elisama.webp" alt="Elisama" className="w-full h-full object-contain" />
+                </div>
+
+                {/* Murilo Gun (Far Right) */}
+                <div className="hidden lg:block absolute lg:top-[141px] lg:left-[933px] lg:w-[403px] lg:h-[360px] transition-all z-[10]">
+                    <img src="/images/murilo gun.webp" alt="Murilo Gun" className="w-full h-full object-contain" />
+                </div>
+
                 {/* Grafismo 1 (Small Circle) */}
-                <div className="hidden lg:block absolute top-[144px] left-[915px] w-[105px] h-[105px] z-[70]">
+                <div className="hidden lg:block absolute top-[170px] left-[830px] w-[105px] h-[105px] z-[70]">
                     <img src="/images/grafismo_1.svg" alt="" className="w-full h-full" />
                 </div>
 
                 {/* Grafismo 2 (Shape) */}
-                <div className="hidden lg:block absolute top-[277px] left-[250px] w-[60px] h-[60px] z-[70]">
+                <div className="hidden lg:block absolute top-[303px] left-[165px] w-[60px] h-[60px] z-[70]">
                     <img src="/images/grafismo_2.svg" alt="" className="w-full h-full" />
                 </div>
             </div>
