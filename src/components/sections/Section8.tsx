@@ -89,7 +89,7 @@ export default function Section8() {
                 {/* Header Text */}
                 <div className="flex flex-col gap-6 items-center text-center max-w-[1180px]">
                     <h2 className="font-sugar-peachy text-[#2260a1] text-[46px] md:text-[72px] leading-[0.8]">
-                        Esse evento é pra você que já entendeu a importância da parentalidade.
+                        Esse evento é pra você que já entendeu a importância da parentalidade
                     </h2>
                     <p className="font-dm-sans text-[#4c4d4f] text-[18px] md:text-[24px] max-w-[928px] leading-tight">
                         Agora é hora de se conectar com quem leva isso a sério.
@@ -103,7 +103,7 @@ export default function Section8() {
                         bgColor="#2260a1"
                         textColor="text-[#fff6ef]"
                         heading="Para profissionais da Educação Parental e áreas afins"
-                        subtext="Dois dias de programação aprofundada, com debates baseados em evidência científica, diálogo interdisciplinar e continuidade direta das discussões do Congresso Internacional de Educação Parental."
+                        subtext="Dois dias de programação técnica e aprofundada, continuidade direta do Congresso Internacional de Educação Parental, com debates baseados em evidência científica."
                         image={imgProfissionais}
                         maskImage={imgChatGptImage26DeJanDe20261948541}
                     />
@@ -112,7 +112,7 @@ export default function Section8() {
                         bgColor="#2daa96"
                         textColor="text-[#191919]"
                         heading="Para pais, mães e cuidadores que vivem a parentalidade na prática"
-                        subtext="Dois dias de conversas acessíveis e profundas, pensadas para lidar com os desafios reais da criação de filhos hoje — sem julgamentos, manuais ou promessas fáceis."
+                        subtext="Dois dias de conversas acessíveis e profundas para lidar com os desafios reais da criação de filhos hoje, sem julgamentos ou fórmulas prontas."
                         image={imgPais}
                         maskImage={imgChatGptImage26DeJanDe20262002121}
                     />

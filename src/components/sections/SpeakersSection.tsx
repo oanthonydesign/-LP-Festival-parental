@@ -267,9 +267,9 @@ export default function SpeakersSection() {
                         {/* Title */}
                         <div className="content-stretch flex flex-col font-sugar-peachy gap-[6px] items-center not-italic relative shrink-0 w-full">
                             <div className="flex flex-col justify-center relative shrink-0 text-[#ef7d25] text-[46px] lg:text-8xl w-full">
-                                <p className="leading-[0.8] whitespace-pre-wrap">+50 Palestrantes convidados.</p>
+                                <p className="leading-[0.8] whitespace-pre-wrap">+50 Palestrantes convidados</p>
                             </div>
-                            <div className="flex flex-col justify-center relative shrink-0 text-[#4c4d4f] text-[24px] lg:text-4xl w-full">
+                            <div className="flex flex-col font-dm-sans justify-center relative shrink-0 text-[#4c4d4f] text-[24px] lg:text-4xl w-full">
                                 <p className="leading-[0.9] whitespace-pre-wrap">Reunimos profissionais que atuam diariamente com os desafios reais da parentalidade na clínica, na escola, na pesquisa e na escuta de famílias.</p>
                             </div>
                         </div>

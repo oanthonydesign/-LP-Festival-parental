@@ -56,7 +56,7 @@ export default function Section9() {
                     {/* Títulos e Descrição */}
                     <div className="flex flex-col gap-6">
                         <h2 className="font-sugar-peachy text-[46px] md:text-[58px] text-[#e12d3b] leading-[0.8]">
-                            O Festival é feito para adultos.
+                            O Festival é feito para adultos
                         </h2>
                         <p className="font-dm-sans text-[18px] md:text-[24px] text-[#fff6ef] leading-tight">
                             A programação tem como foco temas sensíveis e ambientes que não são adequados para crianças. Agora é sua vez de cuidar de você, para depois cuidar melhor de quem depende de você.

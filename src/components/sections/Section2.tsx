@@ -28,29 +28,27 @@ export default function Section2() {
     };
 
     return (
-        <section className="bg-[#fff6ef] w-full flex flex-col items-center pb-[56px] pt-[120px] relative isolate overflow-hidden" id="festival" data-name="Section - 2">
+        <section className="bg-[#fff6ef] w-full flex flex-col items-center pb-[56px] pt-[80px] relative isolate overflow-hidden" id="festival" data-name="Section - 2">
             <BackgroundCurves />
 
             <div className="layout-container flex flex-col gap-[48px] items-center relative z-10 px-4 md:px-0">
-                <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-12 w-full max-w-[1064px]">
-                    {/* Left Column */}
-                    <div className="flex flex-col gap-[16px] items-start w-full lg:w-[444px]">
+                <div className="flex flex-col items-center gap-10 w-full max-w-[900px] text-center">
+                    {/* Header Group */}
+                    <div className="flex flex-col gap-6 items-center w-full max-w-[800px]">
                         <div className="flex flex-col font-sugar-peachy justify-center relative text-[#ef7d25] text-[46px] leading-[0.9]">
                             <p className="whitespace-pre-wrap break-words">Nunca se falou tanto sobre parentalidade</p>
-                        </div>
-                        <div className="flex flex-col font-dm-sans font-normal justify-center relative text-[#1a1a1a] text-[32px] leading-tight">
-                            <p className="whitespace-pre-wrap break-words">Nunca foi tão fácil se sentir inseguro, culpado ou perdido.</p>
+                            <p className="whitespace-pre-wrap break-words">Nunca foi tão fácil se sentir inseguro, culpado ou perdido</p>
                         </div>
                     </div>
 
-                    {/* Right Column */}
-                    <div className="flex flex-col items-start opacity-90 w-full lg:w-[522px]">
-                        <div className="flex flex-col font-dm-sans font-medium justify-center leading-[1.1] relative text-[#4c4d4f] text-[20px]">
+                    {/* Text Group */}
+                    <div className="flex flex-col items-center opacity-90 w-full max-w-[600px]">
+                        <div className="flex flex-col font-dm-sans font-medium justify-center leading-relaxed relative text-[#4c4d4f] text-[20px]">
                             <p className="mb-4">
-                                O Festival Parental nasce da experiência de quem estuda a parentalidade – e se expande para quem a vive todos os dias.
+                                O Festival Parental nasce da experiência de quem estuda a parentalidade e se expande para quem a vive todos os dias.
                             </p>
                             <p>
-                                Um espaço presencial de escuta, reflexão e troca, onde ciência, prática e experiência real se encontram sem fórmulas prontas ou respostas fáceis.
+                                Um espaço presencial onde ciência, prática e experiência real se encontram sem fórmulas prontas.
                             </p>
                         </div>
                     </div>

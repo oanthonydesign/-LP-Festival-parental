@@ -21,12 +21,12 @@ function Desktop() {
 
 function ContentPadding() {
   return (
-    <div className="bg-[#fff6ef] content-stretch flex flex-col h-auto min-h-[577px] items-center overflow-clip px-4 md:px-[30px] py-[80px] relative shrink-0 w-full" data-name="Content → Padding">
+    <div className="bg-[#fff6ef] content-stretch flex flex-col items-center overflow-clip px-4 md:px-[30px] py-[80px] relative shrink-0 w-full" data-name="Content → Padding">
+      <div className="absolute top-0 left-0 w-full h-[3px] bg-[#191919] z-20" />
       <Links />
       <div className="absolute inset-[44.71px_0_44.29px_0] pointer-events-none" data-name="HorizontalBorder">
         <div aria-hidden="true" className="absolute border-[rgba(255,255,255,0.1)] border-solid border-t inset-0" />
       </div>
-      <Group1 />
     </div>
   );
 }
@@ -53,14 +53,6 @@ function Logo() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-center md:items-start relative shrink-0 w-full md:w-[287px]" data-name="Logo">
       <Group />
-      <div className="h-0 relative shrink-0 w-[202px]" data-name="Vector">
-        <div className="absolute inset-[-0.5px_0]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 202 1">
-            <path d="M0 0.5H202" id="Vector" stroke="var(--stroke-0, #4C4D4F)" strokeOpacity="0.1" />
-          </svg>
-        </div>
-      </div>
-      <ConectandoCriadoresEMarcasProAgora />
     </div>
   );
 }
@@ -102,23 +94,7 @@ function Group() {
   );
 }
 
-function ConectandoCriadoresEMarcasProAgora() {
-  return (
-    <div className="content-stretch flex flex-col items-center md:items-start relative shrink-0 w-[202px]" data-name="Conectando criadores e marcas pro agora.">
-      <Container />
-    </div>
-  );
-}
 
-function Container() {
-  return (
-    <div className="content-stretch flex flex-col items-center md:items-start pb-[0.61px] relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(76,77,79,0.9)] uppercase w-full text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
-        <p className="leading-[1.1] whitespace-pre-wrap">transformando o jeito de educar os filhos</p>
-      </div>
-    </div>
-  );
-}
 
 // Menu de Navegação
 function Container1() {
@@ -707,30 +683,4 @@ function Container29() {
   );
 }
 
-// Elementos decorativos no rodapé
-function Group1() {
-  return (
-    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[15%] w-full md:w-[105%] h-auto pointer-events-none">
-      <svg className="block w-full h-auto" fill="none" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1280 126.54">
-        <g id="Group 14">
-          <path d={svgPaths.p2bed4a80} fill="var(--fill-0, #0B6FB5)" id="Vector" />
-          <path d={svgPaths.p26d08bf0} fill="var(--fill-0, #0B6FB5)" id="Vector_2" />
-          <path d={svgPaths.p22ef7200} fill="var(--fill-0, #0B6FB5)" id="Vector_3" />
-          <path d={svgPaths.p2901cb20} fill="var(--fill-0, #0B6FB5)" id="Vector_4" />
-          <path d={svgPaths.p3f31dd80} fill="var(--fill-0, #0B6FB5)" id="Vector_5" />
-          <path d={svgPaths.p1826b5c0} fill="var(--fill-0, #0B6FB5)" id="Vector_6" />
-          <path d={svgPaths.p30c54132} fill="var(--fill-0, #0B6FB5)" id="Vector_7" />
-          <path d={svgPaths.p34990c00} fill="var(--fill-0, #0B6FB5)" id="Vector_8" />
-          <path d={svgPaths.p27a2b400} fill="var(--fill-0, #EF7D25)" id="Vector_9" />
-          <path d={svgPaths.p3ca9c900} fill="var(--fill-0, #EF7D25)" id="Vector_10" />
-          <path d={svgPaths.p195ad880} fill="var(--fill-0, #EF7D25)" id="Vector_11" />
-          <path d={svgPaths.p270be972} fill="var(--fill-0, #EF7D25)" id="Vector_12" />
-          <path d={svgPaths.p185f3e00} fill="var(--fill-0, #EF7D25)" id="Vector_13" />
-          <path d={svgPaths.pc89b80} fill="var(--fill-0, #EF7D25)" id="Vector_14" />
-          <path d={svgPaths.p2b9e4300} fill="var(--fill-0, #EF7D25)" id="Vector_15" />
-          <path d={svgPaths.p2cb4b380} fill="var(--fill-0, #EF7D25)" id="Vector_16" />
-        </g>
-      </svg>
-    </div>
-  );
-}
+

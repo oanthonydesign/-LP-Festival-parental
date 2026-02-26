@@ -35,7 +35,7 @@ function Frame() {
       <div className="flex flex-col font-sugar-peachy justify-center not-italic relative shrink-0 text-[#2260a1] text-[46px] md:text-[72px] w-full max-w-[928px]">
         <p className="whitespace-pre-wrap break-words">
           <span className="leading-[0.8]">{`Tem coisa que não dá pra explicar... `}</span>
-          <span className="leading-[0.8] text-[#ef7d25]">só dá pra viver.</span>
+          <span className="leading-[0.8] text-[#ef7d25]">só dá pra viver</span>
         </p>
       </div>
       <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[18px] md:text-[24px] w-full max-w-[928px]" style={{ fontVariationSettings: "'opsz' 14" }}>

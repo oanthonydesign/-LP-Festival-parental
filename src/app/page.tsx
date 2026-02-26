@@ -32,11 +32,11 @@ export default function Home() {
             <SectionSpecialGuests />
             <Section2 />
             <Section8 />
+            <Section6 />
             <SectionScheduleSimple />
-            <SpeakersSection />
             <Marquee01 />
             <Marquee02 />
-            <Section6 />
+            <SpeakersSection />
             <Section7 />
             <Section5 />
             <Section9 />
