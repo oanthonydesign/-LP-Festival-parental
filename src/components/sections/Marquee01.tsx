@@ -16,9 +16,8 @@ export default function Marquee01() {
 
         const marqueeContent = contentRef.current;
 
-        // Anima o marquee da direita para esquerda baseado no scroll
         const anim = gsap.to(marqueeContent, {
-            x: () => -(marqueeContent.scrollWidth / 4),
+            x: () => -(marqueeContent.scrollWidth / 8),
             ease: 'none',
             scrollTrigger: {
                 trigger: wrapperRef.current,
@@ -36,7 +35,7 @@ export default function Marquee01() {
 
     const MarqueeItem = ({ text }: { text: string }) => (
         <div className="flex items-center gap-4 lg:gap-8 shrink-0">
-            <div className="flex flex-col font-sugar-peachy font-black justify-center leading-[0] not-italic relative shrink-0 text-[#1a1a1a] text-[36px] md:text-[80px] lg:text-[100px] whitespace-nowrap">
+            <div className="flex flex-col font-sugar-peachy font-black justify-center leading-[0] not-italic relative shrink-0 text-[#1a1a1a] text-[36px] md:text-[50px] lg:text-[60px] whitespace-nowrap">
                 <p className="leading-none uppercase">{text}</p>
             </div>
             <div className="relative shrink-0 size-[16px] md:size-[20px] lg:size-[24px]">

@@ -7,10 +7,10 @@ export default function HeroSection() {
         <section className="bg-[#fff6ee] relative w-full h-auto lg:h-[1150px] overflow-hidden pb-0" id="hero" data-name="Section - 1">
             {/* --- Background Graphics --- */}
 
-            {/* Grafismo Onda 2 (Rotated) - Mobile Bottom Right / Desktop Top Right */}
-            <div className="hidden lg:flex absolute lg:top-[-23px] lg:left-[1493px] lg:w-[1163px] lg:h-[1281px] items-center justify-center pointer-events-none z-0"
-                style={{ transform: "rotate(-8deg) scaleX(-1)" }}>
-                <div className="relative w-full h-full lg:w-[1001px] lg:h-[1142px]">
+            {/* Grafismo Onda 2 - Mobile Bottom Right / Desktop Top Right */}
+            <div className="hidden lg:flex absolute lg:top-[-150px] lg:w-[1800px] lg:h-[1800px] items-center justify-center pointer-events-none z-0"
+                style={{ left: '56vw' }}>
+                <div className="relative w-full h-full lg:w-[1600px] lg:h-[1600px]">
                     <img
                         src="/images/grafismo_onda2.svg"
                         alt=""
@@ -20,7 +20,8 @@ export default function HeroSection() {
             </div>
 
             {/* Grafismo Onda 1 - Mobile Bottom Left / Desktop Top Left */}
-            <div className="hidden lg:block absolute lg:top-[-58px] lg:left-[-634px] lg:w-[1105px] lg:h-[1133px] pointer-events-none z-0">
+            <div className="hidden lg:block absolute lg:top-[-108px] lg:w-[1105px] lg:h-[1133px] pointer-events-none z-0"
+                style={{ right: '75vw' }}>
                 <img
                     src="/images/grafismo_onda1.svg"
                     alt=""
@@ -151,12 +152,14 @@ export default function HeroSection() {
                 </div>
 
                 {/* Grafismo 1 (Small Circle) */}
-                <div className="hidden lg:block absolute top-[170px] left-[830px] w-[105px] h-[105px] z-[70]">
+                <div className="hidden lg:block absolute top-[170px] w-[105px] h-[105px] z-[70]"
+                    style={{ left: '58.5vw' }}>
                     <img src="/images/grafismo_1.svg" alt="" className="w-full h-full" />
                 </div>
 
                 {/* Grafismo 2 (Shape) */}
-                <div className="hidden lg:block absolute top-[330px] left-[230px] w-[60px] h-[60px] z-[70]">
+                <div className="hidden lg:block absolute top-[330px] w-[60px] h-[60px] z-[70]"
+                    style={{ right: '88vw' }}>
                     <img src="/images/grafismo_2.svg" alt="" className="w-full h-full" />
                 </div>
             </div>
