@@ -15,7 +15,7 @@ const imgImg91501 = "/images/banner 01.webp";
 
 function Group() {
     return (
-        <div className="absolute inset-[65%_-20%_-5%_-20%] lg:inset-[30.9%_-20.45%_-13.53%_-38.28%] pointer-events-none">
+        <div className="absolute inset-[55%_-20%_-5%_-20%] lg:inset-[30.9%_-20.45%_-13.53%_-38.28%] pointer-events-none">
             <div className="absolute inset-[-4.04%_-1.25%]">
                 <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2082.51 802.847">
                     <g id="Group 20">

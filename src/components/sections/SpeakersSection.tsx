@@ -269,12 +269,12 @@ export default function SpeakersSection() {
                             <div className="flex flex-col justify-center relative shrink-0 text-[#ef7d25] text-[46px] lg:text-[72px] w-full">
                                 <p className="leading-[0.8] whitespace-pre-wrap">+50 Palestrantes convidados</p>
                             </div>
-                            <div className="flex flex-col font-dm-sans justify-center relative shrink-0 text-[#4c4d4f] text-[24px] lg:text-4xl w-full">
-                                <p className="leading-[0.9] whitespace-pre-wrap">Reunimos profissionais que atuam diariamente com os desafios reais da parentalidade na clínica, na escola, na pesquisa e na escuta de famílias.</p>
-                            </div>
                         </div>
 
                         {/* Description */}
+                        <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[18px] lg:text-[24px] max-w-[1030px]" style={{ fontVariationSettings: "'opsz' 14" }}>
+                            <p className="leading-[1.1] whitespace-pre-wrap">Reunimos profissionais que atuam diariamente com os desafios reais da parentalidade na clínica, na escola, na pesquisa e na escuta de famílias.</p>
+                        </div>
                         <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[18px] lg:text-[24px] max-w-[1030px]" style={{ fontVariationSettings: "'opsz' 14" }}>
                             <p className="leading-[1.1] whitespace-pre-wrap">O Festival Parental preserva o rigor construído ao longo de seis edições do Congresso Internacional de Educação Parental e amplia esse diálogo para além do campo profissional.</p>
                         </div>
