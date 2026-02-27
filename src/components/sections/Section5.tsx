@@ -49,7 +49,7 @@ function Frame() {
 function Heading3() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
-            <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#191919] text-[24px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
+            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] w-full">
                 <p className="leading-none whitespace-pre-wrap">+50 palestrantes convidados</p>
             </div>
         </div>
@@ -127,7 +127,7 @@ function Frame1() {
 function Heading4() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
-            <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#191919] text-[24px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
+            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] w-full">
                 <p className="leading-none whitespace-pre-wrap">+ 4.000 participantes de todo o Brasil</p>
             </div>
         </div>
@@ -205,7 +205,7 @@ function Frame2() {
 function Heading5() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
-            <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#191919] text-[24px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
+            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] w-full">
                 <p className="leading-none whitespace-pre-wrap">Trilhas de conteúdo para públicos distintos</p>
             </div>
         </div>
@@ -283,7 +283,7 @@ function Frame3() {
 function Heading7() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
-            <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#191919] text-[24px] w-[210px]" style={{ fontVariationSettings: "'opsz' 14" }}>
+            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] w-full">
                 <p className="leading-none whitespace-pre-wrap">Vivências e oficinas práticas</p>
             </div>
         </div>
@@ -361,7 +361,7 @@ function Frame4() {
 function Heading9() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
-            <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#191919] text-[24px] w-[210px]" style={{ fontVariationSettings: "'opsz' 14" }}>
+            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] w-full">
                 <p className="leading-none whitespace-pre-wrap">Feira de produtos e serviços</p>
             </div>
         </div>
@@ -439,7 +439,7 @@ function Frame5() {
 function Heading11() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
-            <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#191919] text-[24px] w-[233px]" style={{ fontVariationSettings: "'opsz' 14" }}>
+            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] w-full">
                 <p className="leading-none whitespace-pre-wrap">Espaços de cuidado e autorregulação</p>
             </div>
         </div>
@@ -517,7 +517,7 @@ function Frame6() {
 function Heading13() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
-            <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#191919] text-[24px] w-[236px]" style={{ fontVariationSettings: "'opsz' 14" }}>
+            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] w-full">
                 <p className="leading-none whitespace-pre-wrap">Experiências culturais e artísticas</p>
             </div>
         </div>
@@ -595,7 +595,7 @@ function Frame7() {
 function Heading15() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
-            <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#191919] text-[24px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
+            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] w-full">
                 <p className="leading-none whitespace-pre-wrap">Conecte-se com quem vive a parentalidade</p>
             </div>
         </div>
@@ -698,7 +698,7 @@ function Grafismo() {
 
 export default function Section5() {
     return (
-        <section className="bg-[#fff6ef] w-full overflow-hidden flex flex-col items-center pb-[120px] pt-[80px] relative isolate" data-name="Section - 5" id="atracoes">
+        <section className="bg-[#fff6ef] w-full overflow-hidden flex flex-col items-center pb-[40px] pt-[80px] relative isolate" data-name="Section - 5" id="atracoes">
             <div className="layout-container relative flex flex-col items-center">
                 <Content />
             </div>

@@ -29,9 +29,6 @@ function Card({
     heading,
     subtext,
     image,
-    maskImage,
-    maskSize = "537px 325px",
-    maskPos = "center",
     id
 }: {
     bgColor: string;
@@ -39,9 +36,6 @@ function Card({
     heading: string;
     subtext: string;
     image: string;
-    maskImage: string;
-    maskSize?: string;
-    maskPos?: string;
     id?: string;
 }) {
     return (
@@ -57,25 +51,13 @@ function Card({
                     </p>
                 </div>
 
-                <div className="relative w-full aspect-[537/325] max-w-[537px]">
-                    <div
-                        className="absolute inset-0 mask-alpha mask-no-repeat"
-                        style={{
-                            maskImage: `url('${maskImage}')`,
-                            maskSize: 'contain',
-                            maskPosition: 'center',
-                            WebkitMaskImage: `url('${maskImage}')`,
-                            WebkitMaskSize: 'contain',
-                            WebkitMaskPosition: 'center'
-                        }}
-                    >
-                        <img
-                            src={image}
-                            alt={heading}
-                            className="w-full h-full object-cover"
-                            loading="lazy"
-                        />
-                    </div>
+                <div className="relative w-full aspect-[537/325] max-w-[537px] overflow-hidden">
+                    <img
+                        src={image}
+                        alt={heading}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                    />
                 </div>
             </div>
         </div>
@@ -100,21 +82,19 @@ export default function Section8() {
                 <div className="flex flex-col md:flex-row gap-[40px] md:gap-[64px] w-full items-stretch">
                     <Card
                         id="profissional"
-                        bgColor="#2260a1"
+                        bgColor="#3399CC"
                         textColor="text-[#fff6ef]"
                         heading="Para profissionais da Educação Parental e áreas afins"
                         subtext="Dois dias de programação técnica e aprofundada, continuidade direta do Congresso Internacional de Educação Parental, com debates baseados em evidência científica."
                         image={imgProfissionais}
-                        maskImage={imgChatGptImage26DeJanDe20261948541}
                     />
                     <Card
                         id="pais"
-                        bgColor="#2daa96"
+                        bgColor="#ED9F8C"
                         textColor="text-[#191919]"
                         heading="Para pais, mães e cuidadores que vivem a parentalidade na prática"
                         subtext="Dois dias de conversas acessíveis e profundas para lidar com os desafios reais da criação de filhos hoje, sem julgamentos ou fórmulas prontas."
                         image={imgPais}
-                        maskImage={imgChatGptImage26DeJanDe20262002121}
                     />
                 </div>
             </div>

@@ -83,7 +83,7 @@ export default function Header() {
                             {[
                                 { name: "Palestrantes", href: "#palestrantes" },
                                 { name: "Programação do Festival", href: "#programacao" },
-                                { name: "Atrações", href: "#atracoes" },
+                                { name: "Atrações", href: "#convidados-especiais" },
                                 { name: "Galeria 2025", href: "#" }
                             ].map((item) => (
                                 <a
@@ -130,7 +130,7 @@ export default function Header() {
                         {[
                             { name: "Palestrantes", href: "#palestrantes" },
                             { name: "Programação do Festival", href: "#programacao" },
-                            { name: "Atrações", href: "#atracoes" },
+                            { name: "Atrações", href: "#convidados-especiais" },
                             { name: "Galeria 2025", href: "#" },
                             { name: "Seja patrocinador", href: "#patrocinador" }
                         ].map((item) => (

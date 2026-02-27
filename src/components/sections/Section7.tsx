@@ -20,8 +20,8 @@ function Group() {
                 <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2082.51 802.847">
                     <g id="Group 20">
                         <path d={svgPaths.p11ca86c0} id="Vector" stroke="#2260A1" strokeMiterlimit="10" strokeWidth="60" />
-                        <path d={svgPaths.p3e263100} id="Vector_2" stroke="#F7A73C" strokeMiterlimit="10" strokeWidth="60" />
-                        <path d={svgPaths.p33700700} id="Vector_3" stroke="#2DAA96" strokeMiterlimit="10" strokeWidth="60" />
+                        <path d={svgPaths.p3e263100} id="Vector_2" stroke="#EF7D25" strokeMiterlimit="10" strokeWidth="60" />
+                        <path d={svgPaths.p33700700} id="Vector_3" stroke="#928FC8" strokeMiterlimit="10" strokeWidth="60" />
                     </g>
                 </svg>
             </div>
@@ -96,7 +96,7 @@ function Banners() {
                     <StoryImage />
                 </div>
             </div>
-            <div data-animate="section7-banner" className="absolute hidden lg:flex h-[389.794px] items-center justify-center left-[261.07px] top-[468.81px] w-[530.652px]">
+            <div data-animate="section7-banner" className="absolute hidden lg:flex h-[389.794px] items-center justify-center left-[261.07px] top-[468.81px] w-[530.652px] z-30">
                 <div className="flex-none rotate-[7.37deg]">
                     <StoryImage1 />
                 </div>
@@ -117,7 +117,7 @@ function Banners() {
 
 function Content() {
     return (
-        <div className="content-stretch flex flex-col gap-[24px] items-center leading-[0] relative shrink-0 text-[#fff6ee] text-center w-full" data-name="Content">
+        <div className="content-stretch flex flex-col gap-[24px] items-center leading-[0] relative shrink-0 text-[#191919] text-center w-full" data-name="Content">
             <div className="flex flex-col font-sugar-peachy justify-center not-italic relative shrink-0 text-[32px] lg:text-[64px] max-w-[842px] w-full">
                 <p className="leading-[0.8] whitespace-pre-wrap">Há 7 edições, responsável por decidir e mudar o futuro da Educação Parental no Brasil</p>
             </div>
@@ -157,7 +157,7 @@ function CloseBarMac() {
 
 function EventImage() {
     return (
-        <div className="bg-[#ef7d25] h-[780px] lg:h-[899px] relative rounded-[24px] shrink-0 w-full" data-name="Event Image">
+        <div className="bg-[#F4B63E] h-[780px] lg:h-[899px] relative rounded-[24px] shrink-0 w-full" data-name="Event Image">
             <div className="overflow-clip relative rounded-[inherit] size-full">
                 <Banners />
                 <Container />
@@ -198,7 +198,7 @@ export default function Section7() {
     return (
         <section
             ref={sectionRef}
-            className="bg-[#fff6ee] w-full flex flex-col items-center py-[60px] relative isolate"
+            className="bg-[#fff6ee] w-full flex flex-col items-center pt-[60px] pb-[120px] relative isolate"
             data-name="Section - 7"
         >
             <div className="layout-container relative flex flex-col items-center overflow-visible">

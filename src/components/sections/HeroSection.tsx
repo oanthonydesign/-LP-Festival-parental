@@ -45,12 +45,12 @@ export default function HeroSection() {
                             </svg>
                         </div>
                         <span className="font-dm-sans text-[#505050] text-[12px] md:text-[14px] uppercase tracking-[0.14px] whitespace-normal md:whitespace-nowrap leading-tight">
-                            19 a 22 de novembro · Transamérica Expo, São Paulo/SP
+                            19 a 22 de novembro · São Paulo/SP
                         </span>
                     </div>
 
                     {/* Headline */}
-                    <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[44px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.95] md:leading-[0.9] tracking-[-1.5px] md:tracking-[-3px] relative px-2 md:px-0 w-full [-webkit-text-stroke:8px_#fff] [paint-order:stroke_fill] [filter:drop-shadow(2px_2px_0_#191919)_drop-shadow(-2px_-2px_0_#191919)_drop-shadow(2px_-2px_0_#191919)_drop-shadow(-2px_2px_0_#191919)]">
+                    <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[40px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.95] md:leading-[0.9] tracking-[-1.5px] md:tracking-[-3px] relative px-2 md:px-0 w-full [-webkit-text-stroke:4px_#fff] md:[-webkit-text-stroke:8px_#fff] [paint-order:stroke_fill] [filter:drop-shadow(1px_1px_0_#191919)_drop-shadow(-1px_-1px_0_#191919)_drop-shadow(1px_-1px_0_#191919)_drop-shadow(-1px_1px_0_#191919)] md:[filter:drop-shadow(2px_2px_0_#191919)_drop-shadow(-2px_-2px_0_#191919)_drop-shadow(2px_-2px_0_#191919)_drop-shadow(-2px_2px_0_#191919)]">
                         <span className="block">Criar filhos nunca foi simples.</span>
                         <span className="block mt-2">
                             Agora, é <span className="text-[#2260a1]">oficialmente complexo</span>
@@ -152,14 +152,12 @@ export default function HeroSection() {
                 </div>
 
                 {/* Grafismo 1 (Small Circle) */}
-                <div className="hidden lg:block absolute top-[170px] w-[105px] h-[105px] z-[70]"
-                    style={{ left: '58.5vw' }}>
+                <div className="hidden lg:block absolute lg:top-[170px] lg:left-[840px] w-[105px] h-[105px] z-[70]">
                     <img src="/images/grafismo_1.svg" alt="" className="w-full h-full" />
                 </div>
 
                 {/* Grafismo 2 (Shape) */}
-                <div className="hidden lg:block absolute top-[330px] w-[60px] h-[60px] z-[70]"
-                    style={{ right: '88vw' }}>
+                <div className="hidden lg:block absolute lg:top-[330px] lg:left-[230px] w-[60px] h-[60px] z-[71]">
                     <img src="/images/grafismo_2.svg" alt="" className="w-full h-full" />
                 </div>
             </div>

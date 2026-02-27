@@ -9,8 +9,8 @@ function Frame1() {
       <div className="flex flex-col justify-center relative shrink-0 text-[#ef7d25] text-[46px] md:text-[84px] w-full">
         <p className="leading-[0.8] whitespace-pre-wrap break-words">Vai vir de outra cidade?</p>
       </div>
-      <div className="flex flex-col justify-center relative shrink-0 text-[#4c4d4f] text-xl md:text-[46px] max-w-[973px] w-full mx-auto">
-        <p className="leading-[0.9] whitespace-pre-wrap break-words">Conte com a agência oficial do Festival Parental para organizar sua viagem com calma e segurança</p>
+      <div className="flex flex-col font-dm-sans justify-center relative shrink-0 text-[#4c4d4f] text-[18px] md:text-[24px] max-w-[600px] w-full mx-auto">
+        <p className="leading-tight whitespace-pre-wrap break-words">Conte com a agência oficial do Festival Parental para organizar sua viagem com calma e segurança</p>
       </div>
     </div>
   );
@@ -45,9 +45,9 @@ function Component1() {
 
 function Component() {
   return (
-    <div className="content-stretch flex flex-col md:flex-row gap-[12px] items-center justify-center relative shrink-0" data-name="1">
+    <div className="content-stretch flex flex-col md:flex-row gap-[8px] items-center justify-center relative shrink-0" data-name="1">
       <Component1 />
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[24px] text-center whitespace-normal break-words" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[28px] text-center whitespace-normal break-words">
         <p className="leading-[1.1]">Planeje sua viagem com apoio especializado</p>
       </div>
     </div>
@@ -83,9 +83,9 @@ function Component3() {
 
 function Component2() {
   return (
-    <div className="content-stretch flex flex-col md:flex-row gap-[12px] items-center justify-center relative shrink-0" data-name="2">
+    <div className="content-stretch flex flex-col md:flex-row gap-[8px] items-center justify-center relative shrink-0" data-name="2">
       <Component3 />
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[24px] text-center whitespace-normal break-words" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[28px] text-center whitespace-normal break-words">
         <p className="leading-[1.1]">Hospedagem e passagens com a agência parceira do evento.</p>
       </div>
     </div>
@@ -103,7 +103,7 @@ function Frame2() {
 
 function Frame() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col gap-[36px] items-center relative shrink-0 w-full">
       <Frame1 />
       <Frame2 />
     </div>

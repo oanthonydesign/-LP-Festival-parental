@@ -18,7 +18,7 @@ export default function SectionSpecialGuests() {
                 <div className="flex flex-col lg:flex-row justify-between w-full relative z-10 gap-[40px] lg:gap-0">
 
                     {/* Card Gordon */}
-                    <div className="flex flex-col w-full lg:w-[62%] bg-[#79c3ab] border-[3px] border-[#191919] rounded-[40px] p-8 lg:p-12 shadow-[8px_12px_0px_0px_#191919] relative group">
+                    <div className="flex flex-col w-full lg:w-[62%] bg-[#3399CC] border-[3px] border-[#191919] rounded-[40px] p-8 lg:p-12 shadow-[8px_12px_0px_0px_#191919] relative group">
                         {/* Decorative background shape */}
                         <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/20 rounded-full blur-2xl pointer-events-none"></div>
 
@@ -37,16 +37,16 @@ export default function SectionSpecialGuests() {
                                 </div>
                             </div>
 
-                            <h3 className="font-sugar-peachy text-[48px] lg:text-[72px] leading-[0.85] text-[#191919] mt-4">
+                            <h3 className="font-sugar-peachy text-[48px] lg:text-[72px] leading-[0.85] text-[#fff6ef] mt-4">
                                 Gordon Neufeld
                             </h3>
 
-                            <p className="font-dm-sans font-bold text-[20px] text-[#191919] pt-2">
+                            <p className="font-dm-sans font-bold text-[24px] text-[#fff6ef] pt-2">
                                 Autor do livro "Pais Ocupados filhos distantes"
                             </p>
 
-                            <p className="font-dm-sans text-[20px] lg:text-[22px] text-[#191919] leading-[1.3] font-medium opacity-95">
-                                O autor que revolucionou a compreensão do apego e mostrou por que os pais precisam importar mais do que os colegas. Em um mundo que empurra nossas crianças para longe da família cada vez mais cedo, o psicólogo canadense nos lembra de algo simples — e poderoso: <span className="bg-[#191919] text-white px-2 py-0.5 leading-relaxed box-decoration-clone rounded-sm">a relação vem antes da educação.</span>
+                            <p className="font-dm-sans text-[20px] lg:text-[22px] text-[#fff6ef] leading-[1.3] font-medium opacity-95">
+                                O autor que revolucionou a compreensão do apego e mostrou por que os pais precisam importar mais do que os colegas. Em um mundo que empurra nossas crianças para longe da família cada vez mais cedo, o psicólogo canadense nos lembra de algo simples — e poderoso: <span className="bg-[#fff6ef] text-[#191919] px-2 py-0.5 leading-relaxed box-decoration-clone rounded-sm">a relação vem antes da educação.</span>
                             </p>
                         </div>
 
@@ -89,7 +89,7 @@ export default function SectionSpecialGuests() {
                     </div>
 
                     {/* Card Pato Fu */}
-                    <div className="flex flex-col w-full lg:w-[34%] bg-[#74acde] border-[3px] border-[#191919] rounded-[40px] p-8 lg:p-12 shadow-[8px_12px_0px_0px_#191919] relative group">
+                    <div className="flex flex-col w-full lg:w-[34%] bg-[#ED9F8C] border-[3px] border-[#191919] rounded-[40px] p-8 lg:p-12 shadow-[8px_12px_0px_0px_#191919] relative group">
                         {/* Decorative background shape */}
                         <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-white/20 rounded-full blur-2xl pointer-events-none"></div>
 
@@ -107,12 +107,12 @@ export default function SectionSpecialGuests() {
                                 Pato Fu e Giramundo
                             </h3>
 
-                            <p className="font-dm-sans font-bold text-[20px] text-[#191919] pt-2">
+                            <p className="font-dm-sans font-bold text-[24px] text-[#191919] pt-2">
                                 O show que faz adultos lembrarem quem já foram.
                             </p>
 
                             <p className="font-dm-sans text-[20px] lg:text-[22px] text-[#191919] leading-[1.3] font-medium opacity-95">
-                                Um espetáculo premiado que transforma brinquedos em instrumentos e devolve adultos à própria infância. No palco, Pato Fu se une ao Grupo Giramundo para encerrar com leveza nosso fim de semana de reflexões entre pais e filhos.
+                                Um espetáculo premiado que transforma brinquedos em instrumentos e devolve adultos à própria infância. No palco, Pato Fu se une ao Grupo Giramundo para encerrar com leveza nosso fim de semana de reflexões profundas.
                             </p>
                         </div>
 

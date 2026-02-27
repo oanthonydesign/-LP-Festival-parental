@@ -40,7 +40,12 @@ const scheduleData = [
 
 function StaticDayCard({ day }: { day: typeof scheduleData[0] }) {
     const isProfessional = day.type === 'professional';
-    const themeColor = isProfessional ? '#ef7d25' : '#2260a1';
+    const themeColor = isProfessional ? '#3399CC' : '#ED9F8C';
+    const textColor = isProfessional ? 'text-[#fff6ef]' : 'text-[#191919]';
+    const borderColor = isProfessional ? 'border-white/20' : 'border-[#191919]/20';
+    const subtextColor = isProfessional ? 'text-white/90' : 'text-[#191919]/90';
+    const badgeBg = isProfessional ? 'bg-white' : 'bg-[#191919]';
+    const badgeText = isProfessional ? 'text-[#191919]' : 'text-white';
 
     return (
         <div
@@ -53,16 +58,16 @@ function StaticDayCard({ day }: { day: typeof scheduleData[0] }) {
         >
             {/* Badge Superior */}
             <div className={`
-                absolute -top-4 right-4 px-3 py-1 md:px-4 md:py-2 text-[12px] md:text-[14px] font-dm-sans font-bold uppercase tracking-wider rounded-full border-2 border-[#191919] bg-white text-[#191919] shadow-[2px_2px_0px_0px_#191919]
+                absolute -top-4 right-4 px-3 py-1 md:px-4 md:py-2 text-[12px] md:text-[14px] font-dm-sans font-bold uppercase tracking-wider rounded-full border-2 border-[#191919] ${badgeBg} ${badgeText} shadow-[2px_2px_0px_0px_#191919]
             `}>
                 {isProfessional ? 'Profissionais' : 'Pais/Mães'}
             </div>
 
             <div className="flex flex-col h-full justify-start mt-2 md:mt-4 gap-2">
-                <span className="text-sm md:text-base font-dm-sans font-bold uppercase tracking-widest text-white/90">
+                <span className={`text-sm md:text-base font-dm-sans font-bold uppercase tracking-widest ${subtextColor}`}>
                     {day.dayLabel}
                 </span>
-                <div className="flex flex-col xl:flex-row xl:items-baseline gap-1 md:gap-3 font-sugar-peachy leading-none text-white">
+                <div className={`flex flex-col xl:flex-row xl:items-baseline gap-1 md:gap-3 font-sugar-peachy leading-none ${textColor}`}>
                     <span className="text-[42px] md:text-[52px]">
                         {day.date.split(' ')[0]}
                     </span>
@@ -71,13 +76,13 @@ function StaticDayCard({ day }: { day: typeof scheduleData[0] }) {
                     </span>
                 </div>
 
-                <div className="flex flex-col gap-3 mt-4 border-t-2 border-white/20 pt-4">
+                <div className={`flex flex-col gap-3 mt-4 border-t-2 ${borderColor} pt-4`}>
                     <div className="flex items-center gap-2">
-                        <span className="font-dm-sans font-bold text-white text-sm bg-white/20 px-3 py-1 rounded-full border border-white/30 truncate">
-                            ⏰ {day.time}
+                        <span className={`font-dm-sans font-bold ${textColor} text-sm ${isProfessional ? 'bg-white/20' : 'bg-[#191919]/10'} px-3 py-1 rounded-full border ${isProfessional ? 'border-white/30' : 'border-[#191919]/20'} truncate`}>
+                            {day.time}
                         </span>
                     </div>
-                    <p className="font-dm-sans text-white/95 text-sm md:text-base leading-snug">
+                    <p className={`font-dm-sans ${isProfessional ? 'text-white/95' : 'text-[#191919]/95'} text-sm md:text-base leading-snug`}>
                         {day.description}
                     </p>
                 </div>

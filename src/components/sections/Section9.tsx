@@ -36,8 +36,8 @@ export default function Section9() {
                     fill="none"
                     preserveAspectRatio="xMidYMid meet"
                 >
-                    <path d={svgPaths.p2b7f140} stroke="#EF7D25" strokeWidth="60" strokeLinecap="round" />
-                    <path d={svgPaths.p2dbf5ec8} stroke="#79C3AB" strokeWidth="60" strokeLinecap="round" />
+                    <path d={svgPaths.p2b7f140} stroke="#928FC8" strokeWidth="60" strokeLinecap="round" />
+                    <path d={svgPaths.p2dbf5ec8} stroke="#EF7D25" strokeWidth="60" strokeLinecap="round" />
                     <path d={svgPaths.p2c6e4880} stroke="#2260A1" strokeWidth="60" strokeLinecap="round" />
                 </svg>
             </div>

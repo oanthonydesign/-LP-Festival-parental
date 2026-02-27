@@ -258,7 +258,7 @@ export default function SpeakersSection() {
                             <UilCalendar />
                         </div>
                         <div className="flex flex-col font-dm-sans font-normal justify-center leading-normal relative shrink-0 text-[#505050] text-[14px] uppercase whitespace-normal break-words text-center flex-1" style={{ fontVariationSettings: "'opsz' 14" }}>
-                            <p className="">19 a 22 de novembro · Transamérica Expo, São Paulo/SP</p>
+                            <p className="">19 a 22 de novembro · São Paulo/SP</p>
                         </div>
                     </div>
 

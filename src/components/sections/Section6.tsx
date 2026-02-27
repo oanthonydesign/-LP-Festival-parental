@@ -57,14 +57,14 @@ const PASSAPORTES: PassportData[] = [
     target: "Para profissionais da parentalidade",
     buttonText: "Quero meu ingresso de educador",
     href: "https://sun.eduzz.com/39VEQVEDWR",
-    bgColor: "bg-[#fff6ef]",
+    bgColor: "bg-[#3399CC]",
     borderColor: "border-[#191919]",
-    textColor: "text-[#191919]",
-    priceColor: "text-[#ef7d25]",
-    accentColor: "text-[#191919]",
+    textColor: "text-[#fff6ef]",
+    priceColor: "text-[#fff6ef]",
+    accentColor: "text-[#fff6ef]",
     benefitBg: "bg-transparent",
-    benefitBorder: "border-[#191919]",
-    benefitTextColor: "text-[#191919]"
+    benefitBorder: "border-[#fff6ef]/40",
+    benefitTextColor: "text-[#fff6ef]"
   },
   {
     id: "parental",
@@ -80,7 +80,7 @@ const PASSAPORTES: PassportData[] = [
       "Acesso à feira de produtos e serviços para a parentalidade"
     ],
     target: "Para pais e cuidadores",
-    buttonText: "Quero meu ingresso agora",
+    buttonText: "Quero meu ingresso parental",
     href: "https://sun.eduzz.com/7WXQ74XY9A",
     doubleOptions: {
       priceInstallment: "R$ 74,70",
@@ -95,14 +95,14 @@ const PASSAPORTES: PassportData[] = [
       href: "https://sun.eduzz.com/801ER3JRW7",
       buttonText: "Quero meu ingresso duplo"
     },
-    bgColor: "bg-[#2260a1]",
+    bgColor: "bg-[#ED9F8C]",
     borderColor: "border-[#191919]",
-    textColor: "text-[#fff6ef]",
-    priceColor: "text-[#f7a73c]",
-    accentColor: "text-[#fff6ef]",
+    textColor: "text-[#191919]",
+    priceColor: "text-[#191919]",
+    accentColor: "text-[#191919]",
     benefitBg: "bg-transparent",
-    benefitBorder: "border-[#fff6ef]",
-    benefitTextColor: "text-[#fff6ef]"
+    benefitBorder: "border-[#191919]/20",
+    benefitTextColor: "text-[#191919]"
   }
 ];
 

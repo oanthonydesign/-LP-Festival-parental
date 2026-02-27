@@ -37,8 +37,8 @@ export default function Home() {
             <Marquee01 />
             <Marquee02 />
             <SpeakersSection />
-            <Section7 />
             <Section5 />
+            <Section7 />
             <Section9 />
             <Section10 />
             <Section11 />
