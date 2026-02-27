@@ -30,7 +30,7 @@ export default function HeroSection() {
             </div>
 
             {/* --- Main Content (Centered) --- */}
-            <div className="relative lg:absolute lg:top-[132px] pt-[120px] lg:pt-0 left-0 lg:left-1/2 -translate-x-0 lg:-translate-x-1/2 w-full max-w-[1280px] flex flex-col items-center gap-[28px] md:gap-[46px] z-20 px-4 md:px-6 lg:px-0">
+            <div className="relative lg:absolute lg:top-[132px] pt-[90px] lg:pt-0 left-0 lg:left-1/2 -translate-x-0 lg:-translate-x-1/2 w-full max-w-[1280px] flex flex-col items-center gap-[28px] md:gap-[46px] z-20 px-4 md:px-6 lg:px-0">
 
                 {/* Text Block */}
                 <div className="flex flex-col items-center gap-[28px] w-full">
@@ -102,11 +102,16 @@ export default function HeroSection() {
             {/* Desktop: Absolute Layout (Pixel Perfect from Figma) */}
             <div className="relative mt-8 lg:mt-0 w-full max-w-[500px] mx-auto lg:mx-0 lg:max-w-none lg:w-[1336px] lg:h-[501px] lg:absolute lg:top-[629px] lg:left-1/2 lg:-translate-x-1/2 pointer-events-none z-10 px-4 lg:px-0">
 
+                {/* Mobile wave graphic behind speakers */}
+                <div className="absolute bottom-[30px] left-1/2 -translate-x-1/2 w-[calc(100%+80px)] h-auto block lg:hidden z-0 opacity-100">
+                    <img src="/images/grafismo_wave_mb.svg" alt="" className="w-full h-auto" />
+                </div>
+
                 {/* Mobile Single Image */}
                 <img
                     src="/images/palestrantes_mobile2.webp"
                     alt="Palestrantes Festival Parental"
-                    className="block lg:hidden w-full h-auto object-contain"
+                    className="block lg:hidden w-full h-auto object-contain relative z-10"
                 />
 
                 {/* Desktop Individual Speakers (Hidden on Mobile) */}

@@ -664,7 +664,7 @@ function Cards() {
 
 function Content() {
     return (
-        <div className="flex flex-col gap-[86px] items-center relative shrink-0 w-full max-w-[1280px] z-[2]" data-name="Content">
+        <div className="flex flex-col gap-[46px] items-center relative shrink-0 w-full max-w-[1280px] z-[2]" data-name="Content">
             <TextsTrilhas />
             <Cards />
         </div>
@@ -698,7 +698,7 @@ function Grafismo() {
 
 export default function Section5() {
     return (
-        <section className="bg-[#fff6ef] w-full overflow-hidden flex flex-col items-center pb-[40px] pt-[80px] relative isolate" data-name="Section - 5" id="atracoes">
+        <section className="bg-[#fff6ef] w-full overflow-hidden flex flex-col items-center pb-[40px] pt-[32px] md:pt-[80px] relative isolate" data-name="Section - 5" id="atracoes">
             <div className="layout-container relative flex flex-col items-center">
                 <Content />
             </div>

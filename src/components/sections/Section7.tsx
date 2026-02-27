@@ -198,7 +198,7 @@ export default function Section7() {
     return (
         <section
             ref={sectionRef}
-            className="bg-[#fff6ee] w-full flex flex-col items-center pt-[60px] pb-[120px] relative isolate"
+            className="bg-[#fff6ee] w-full flex flex-col items-center pt-[32px] md:pt-[60px] pb-[120px] relative isolate"
             data-name="Section - 7"
         >
             <div className="layout-container relative flex flex-col items-center overflow-visible">

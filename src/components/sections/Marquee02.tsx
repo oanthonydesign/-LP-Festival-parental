@@ -36,7 +36,7 @@ export default function Marquee02() {
 
     const MarqueeItem = ({ text }: { text: string }) => (
         <div className="flex items-center gap-4 lg:gap-8 shrink-0">
-            <div className="flex flex-col font-sugar-peachy font-black justify-center leading-[0] not-italic relative shrink-0 text-[#fff6ef] text-[36px] md:text-[50px] lg:text-[60px] whitespace-nowrap">
+            <div className="flex flex-col font-sugar-peachy font-black justify-center leading-[0] not-italic relative shrink-0 text-[#fff6ef] text-[28px] md:text-[50px] lg:text-[60px] whitespace-nowrap">
                 <p className="leading-none uppercase">{text}</p>
             </div>
             <div className="relative shrink-0 size-[16px] md:size-[20px] lg:size-[24px]">

@@ -93,13 +93,13 @@ function StaticDayCard({ day }: { day: typeof scheduleData[0] }) {
 
 export default function SectionScheduleSimple() {
     return (
-        <section className="bg-[#fff6ef] w-full flex flex-col items-center py-[80px] px-4 md:px-0" id="programacao">
+        <section className="bg-[#fff6ef] w-full flex flex-col items-center pt-[56px] pb-[80px] md:py-[80px] px-4 md:px-0" id="programacao">
             <div className="w-full max-w-[1280px] flex flex-col gap-12">
 
                 {/* Header Section */}
                 <div className="text-center flex flex-col items-center gap-6">
                     <div className="flex flex-col items-center gap-2">
-                        <h2 className="font-sugar-peachy text-[#ef7d25] text-[46px] md:text-[64px] leading-none text-center">
+                        <h2 className="font-sugar-peachy text-[#ef7d25] text-[36px] md:text-[64px] leading-none text-center">
                             Programação Festival Parental 2026
                         </h2>
                         <p className="font-dm-sans text-[#4c4d4f] text-[18px] md:text-[24px] max-w-3xl text-center leading-tight">

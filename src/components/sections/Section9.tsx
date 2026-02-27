@@ -24,7 +24,7 @@ function TicketIcon() {
 export default function Section9() {
     return (
         <section
-            className="bg-[#f7a73c] relative w-full overflow-hidden border-t-4 border-b-4 border-[#191919] py-[80px] md:py-[100px]"
+            className="bg-[#f7a73c] relative w-full overflow-hidden border-t-4 border-b-4 border-[#191919] pt-[56px] pb-[80px] md:py-[100px]"
             id="importante"
             data-name="Section - 9"
         >
@@ -42,9 +42,9 @@ export default function Section9() {
                 </svg>
             </div>
 
-            <div className="layout-container relative z-[10] flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 px-6">
+            <div className="layout-container relative z-[10] flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 px-6 mx-auto">
                 {/* Coluna de Texto */}
-                <div className="flex flex-col items-start gap-8 max-w-[720px] w-full">
+                <div className="flex flex-col items-center md:items-start gap-8 max-w-[720px] w-full text-center md:text-left">
                     {/* Hat / Badge */}
                     <div className="bg-[#e12d3b] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] px-8 py-4 flex items-center gap-3">
                         <WarningIcon />

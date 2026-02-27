@@ -70,7 +70,7 @@ export default function Section8() {
             <div className="max-w-[1280px] w-full flex flex-col gap-[64px] items-center">
                 {/* Header Text */}
                 <div className="flex flex-col gap-6 items-center text-center max-w-[1180px]">
-                    <h2 className="font-sugar-peachy text-[#2260a1] text-[46px] md:text-[72px] leading-[0.8]">
+                    <h2 className="font-sugar-peachy text-[#2260a1] text-[36px] md:text-[72px] leading-[0.8]">
                         Esse evento é pra você que já entendeu a importância da parentalidade
                     </h2>
                     <p className="font-dm-sans text-[#4c4d4f] text-[18px] md:text-[24px] max-w-[928px] leading-tight">

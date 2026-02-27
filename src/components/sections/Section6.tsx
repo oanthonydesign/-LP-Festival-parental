@@ -223,7 +223,7 @@ function PassportCard({ data }: { data: PassportData }) {
 
 export default function Section6() {
   return (
-    <section className="bg-[#fff6ef] pt-[80px] pb-[80px] md:pb-[20px] px-4 md:px-12 flex flex-col items-center relative overflow-hidden" id="ingressos">
+    <section className="bg-[#fff6ef] pt-[56px] md:pt-[80px] pb-[32px] md:pb-[20px] px-4 md:px-12 flex flex-col items-center relative overflow-hidden" id="ingressos">
       <div className="max-w-[1280px] w-full flex flex-col items-center gap-[64px]">
         {/* Header */}
         <div className="flex flex-col items-center gap-7 text-center">

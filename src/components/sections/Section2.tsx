@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 
 function BackgroundCurves() {
     return (
-        <div className="absolute top-[650px] lg:top-[53px] left-0 w-full z-[1] pointer-events-none select-none opacity-100 overflow-hidden lg:overflow-visible">
+        <div className="absolute top-[600px] lg:top-[53px] left-0 w-full z-[1] pointer-events-none select-none opacity-100 overflow-hidden lg:overflow-visible">
             <img
                 src="/images/grafismo_wave.svg"
                 alt="Grafismo de ondas"
@@ -28,14 +28,14 @@ export default function Section2() {
     };
 
     return (
-        <section className="bg-[#fff6ef] w-full flex flex-col items-center p-[56px] relative isolate overflow-hidden" id="festival" data-name="Section - 2">
+        <section className="bg-[#fff6ef] w-full flex flex-col items-center px-4 md:px-0 pb-[56px] pt-[56px] relative isolate overflow-hidden" id="festival" data-name="Section - 2">
             <BackgroundCurves />
 
-            <div className="layout-container flex flex-col gap-[48px] items-center relative z-10 px-4 md:px-0">
+            <div className="layout-container flex flex-col gap-[48px] items-center relative z-10 w-full">
                 <div className="flex flex-col items-center gap-10 w-full max-w-[900px] text-center">
                     {/* Header Group */}
                     <div className="flex flex-col gap-6 items-center w-full max-w-[800px]">
-                        <div className="flex flex-col font-sugar-peachy justify-center relative text-[#ef7d25] text-[46px] leading-[0.9]">
+                        <div className="flex flex-col font-sugar-peachy justify-center relative text-[#ef7d25] text-[36px] md:text-[46px] leading-[0.9]">
                             <p className="whitespace-pre-wrap break-words">Nunca se falou tanto sobre parentalidade</p>
                             <p className="whitespace-pre-wrap break-words">Nunca foi tão fácil se sentir inseguro, culpado ou perdido</p>
                         </div>

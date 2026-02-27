@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function SectionSpecialGuests() {
     return (
-        <section className="bg-[#fff6ef] w-full flex flex-col items-center pb-[72px] pt-[72px] relative isolate z-20" id="convidados-especiais">
+        <section className="bg-[#fff6ef] w-full flex flex-col items-center pb-[32px] pt-[72px] relative isolate z-20" id="convidados-especiais">
             <div className="layout-container flex flex-col gap-[64px] items-center relative px-4 md:px-0 w-full max-w-[1240px]">
 
                 {/* Header Section */}
@@ -23,11 +23,11 @@ export default function SectionSpecialGuests() {
                         <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/20 rounded-full blur-2xl pointer-events-none"></div>
 
                         <div className="flex flex-col gap-6 mb-12 relative z-10">
-                            <div className="flex flex-col items-start gap-4">
+                            <div className="flex flex-col items-center lg:items-start gap-4">
                                 <span className="font-dm-sans font-bold text-[#191919] text-sm lg:text-base uppercase tracking-wider bg-white px-5 py-2.5 rounded-full border-2 border-[#191919] shadow-[2px_2px_0px_0px_#191919]">
                                     Palestrante Internacional
                                 </span>
-                                <div className="flex flex-wrap items-center gap-4">
+                                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
                                     <span className="font-dm-sans font-bold text-white bg-[#191919] px-4 py-2.5 rounded-full text-sm lg:text-base">
                                         Dia 19, às 14h30
                                     </span>
@@ -37,15 +37,15 @@ export default function SectionSpecialGuests() {
                                 </div>
                             </div>
 
-                            <h3 className="font-sugar-peachy text-[48px] lg:text-[72px] leading-[0.85] text-[#fff6ef] mt-4">
+                            <h3 className="font-sugar-peachy text-[42px] lg:text-[72px] leading-[0.85] text-[#fff6ef] mt-4 text-center lg:text-left">
                                 Gordon Neufeld
                             </h3>
 
-                            <p className="font-dm-sans font-bold text-[24px] text-[#fff6ef] pt-2">
+                            <p className="font-dm-sans font-bold text-[24px] text-[#fff6ef] pt-2 text-center lg:text-left">
                                 Autor do livro "Pais Ocupados filhos distantes"
                             </p>
 
-                            <p className="font-dm-sans text-[20px] lg:text-[22px] text-[#fff6ef] leading-[1.3] font-medium opacity-95">
+                            <p className="font-dm-sans text-[18px] lg:text-[22px] text-[#fff6ef] leading-[1.3] font-medium opacity-95 text-center lg:text-left">
                                 O autor que revolucionou a compreensão do apego e mostrou por que os pais precisam importar mais do que os colegas. Em um mundo que empurra nossas crianças para longe da família cada vez mais cedo, o psicólogo canadense nos lembra de algo simples — e poderoso: <span className="bg-[#fff6ef] text-[#191919] px-2 py-0.5 leading-relaxed box-decoration-clone rounded-sm">a relação vem antes da educação.</span>
                             </p>
                         </div>
@@ -94,7 +94,7 @@ export default function SectionSpecialGuests() {
                         <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-white/20 rounded-full blur-2xl pointer-events-none"></div>
 
                         <div className="flex flex-col gap-6 mb-12 relative z-10">
-                            <div className="flex flex-wrap items-center gap-4">
+                            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
                                 <span className="font-dm-sans font-bold text-[#191919] text-sm lg:text-base uppercase tracking-wider bg-white px-5 py-2.5 rounded-full border-2 border-[#191919] shadow-[2px_2px_0px_0px_#191919]">
                                     Show de encerramento
                                 </span>
@@ -103,15 +103,15 @@ export default function SectionSpecialGuests() {
                                 </span>
                             </div>
 
-                            <h3 className="font-sugar-peachy text-[48px] lg:text-[72px] leading-[0.85] text-[#191919] mt-4">
+                            <h3 className="font-sugar-peachy text-[42px] lg:text-[72px] leading-[0.85] text-[#191919] mt-4 text-center lg:text-left">
                                 Pato Fu e Giramundo
                             </h3>
 
-                            <p className="font-dm-sans font-bold text-[24px] text-[#191919] pt-2">
+                            <p className="font-dm-sans font-bold text-[24px] text-[#191919] pt-2 text-center lg:text-left">
                                 O show que faz adultos lembrarem quem já foram.
                             </p>
 
-                            <p className="font-dm-sans text-[20px] lg:text-[22px] text-[#191919] leading-[1.3] font-medium opacity-95">
+                            <p className="font-dm-sans text-[18px] lg:text-[22px] text-[#191919] leading-[1.3] font-medium opacity-95 text-center lg:text-left">
                                 Um espetáculo premiado que transforma brinquedos em instrumentos e devolve adultos à própria infância. No palco, Pato Fu se une ao Grupo Giramundo para encerrar com leveza nosso fim de semana de reflexões profundas.
                             </p>
                         </div>
@@ -131,7 +131,7 @@ export default function SectionSpecialGuests() {
                                     />
                                 </div>
                                 <div className="absolute bottom-3 left-0 w-full text-center font-sugar-peachy text-[24px] text-[#191919]">
-                                    Imperdível 🎶
+                                    Imperdível
                                 </div>
                                 {/* Pin visual element */}
                                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full border-2 border-[#191919] shadow-[2px_2px_0px_0px_#191919] z-30">
