@@ -41,7 +41,7 @@ function Card({
     return (
         <div className="flex flex-col items-start w-full md:w-1/2" id={id}>
             <CloseBarMac />
-            <div className={`border-b-2 border-l-2 border-r-2 border-[#191919] border-solid flex flex-col items-center p-6 gap-6 relative rounded-bl-[16px] rounded-br-[16px] shadow-[7px_7px_0px_0px_#191919] shrink-0 w-full`} style={{ backgroundColor: bgColor }}>
+            <div className={`flex-1 flex flex-col items-center p-6 gap-6 relative rounded-bl-[16px] rounded-br-[16px] shadow-[7px_7px_0px_0px_#191919] shrink-0 w-full border-b-2 border-l-2 border-r-2 border-[#191919] border-solid`} style={{ backgroundColor: bgColor }}>
                 <div className={`flex flex-col gap-6 items-center text-center ${textColor}`}>
                     <h3 className="font-dm-sans font-semibold text-[26px] md:text-[36px] leading-tight max-w-[458px]">
                         {heading}
@@ -51,7 +51,7 @@ function Card({
                     </p>
                 </div>
 
-                <div className="relative w-full aspect-[537/325] max-w-[537px] overflow-hidden">
+                <div className="relative w-full aspect-[537/325] max-w-[537px] overflow-hidden mt-auto">
                     <img
                         src={image}
                         alt={heading}
