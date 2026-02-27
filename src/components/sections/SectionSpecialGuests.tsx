@@ -9,7 +9,7 @@ export default function SectionSpecialGuests() {
 
                 {/* Header Section */}
                 <div className="flex flex-col gap-[24px] items-center text-center relative w-full">
-                    <h2 className="font-sugar-peachy text-[#ef7d25] text-[36px] lg:text-[72px] leading-[0.8] mb-4">
+                    <h2 className="font-sugar-peachy text-[#ef7d25] text-[56px] lg:text-[72px] leading-[0.8] mb-4">
                         Destaques da Programação
                     </h2>
                 </div>

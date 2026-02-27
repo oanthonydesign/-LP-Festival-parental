@@ -50,7 +50,7 @@ export default function HeroSection() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[40px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.95] md:leading-[0.9] tracking-[-1.5px] md:tracking-[-3px] relative px-2 md:px-0 w-full [-webkit-text-stroke:4px_#fff] md:[-webkit-text-stroke:8px_#fff] [paint-order:stroke_fill] [filter:drop-shadow(1px_1px_0_#191919)_drop-shadow(-1px_-1px_0_#191919)_drop-shadow(1px_-1px_0_#191919)_drop-shadow(-1px_1px_0_#191919)] md:[filter:drop-shadow(2px_2px_0_#191919)_drop-shadow(-2px_-2px_0_#191919)_drop-shadow(2px_-2px_0_#191919)_drop-shadow(-2px_2px_0_#191919)]">
+                    <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[40px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.95] md:leading-[0.9] tracking-[-1.5px] md:tracking-[-3px] relative px-2 md:px-0 w-full [-webkit-text-stroke:6px_#fff] md:[-webkit-text-stroke:8px_#fff] [paint-order:stroke_fill] [filter:drop-shadow(1px_1px_0_#191919)_drop-shadow(-1px_-1px_0_#191919)_drop-shadow(1px_-1px_0_#191919)_drop-shadow(-1px_1px_0_#191919)] md:[filter:drop-shadow(2px_2px_0_#191919)_drop-shadow(-2px_-2px_0_#191919)_drop-shadow(2px_-2px_0_#191919)_drop-shadow(-2px_2px_0_#191919)]">
                         <span className="block">Criar filhos nunca foi simples.</span>
                         <span className="block mt-2">
                             Agora, é <span className="text-[#2260a1]">oficialmente complexo</span>
