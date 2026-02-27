@@ -32,7 +32,7 @@ function Text() {
       <div className="flex flex-col font-sugar-peachy justify-center not-italic relative shrink-0 text-[#2260a1] text-[46px] md:text-[76px] w-full break-words">
         <p className="leading-[0.8] whitespace-pre-wrap">Transamérica Expo, São Paulo/SP</p>
       </div>
-      <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[18px] md:text-[24px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[18px] lg:text-[24px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[1.1] whitespace-pre-wrap">O Festival Parental 2026 acontece no Transamérica Expo, um dos espaços de eventos mais versáteis e renomados do país. Localizado na capital paulista, o centro oferece infraestrutura completa, acessibilidade e conforto para receber milhares de pessoas em uma experiência grandiosa.</p>
       </div>
     </div>
@@ -105,7 +105,7 @@ function CreatorTalks() {
 function PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataformasTecnologia() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Painéis imersivos sobre Cultura Digital, Marcas do Amanhã e Inovações em Plataformas & Tecnologia.">
-      <div className="flex flex-col font-sans font-normal justify-center leading-[0] not-italic relative shrink-0 text-[18px] text-[rgba(255,255,255,0.7)] w-full">
+      <div className="flex flex-col font-sans font-normal justify-center leading-[1.2] not-italic relative shrink-0 text-[18px] lg:text-[24px] text-[rgba(255,255,255,0.7)] w-full">
         <p className="leading-[1.1] whitespace-pre-wrap">Serão quatro dias de evento em um palco à altura da transformação que estamos construindo juntos.</p>
       </div>
     </div>
@@ -168,7 +168,7 @@ function CreatorTalks1() {
 function PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataformasTecnologia1() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Painéis imersivos sobre Cultura Digital, Marcas do Amanhã e Inovações em Plataformas & Tecnologia.">
-      <div className="flex flex-col font-sans font-normal justify-center leading-[0] not-italic relative shrink-0 text-[18px] text-[rgba(255,255,255,0.7)] w-full">
+      <div className="flex flex-col font-sans font-normal justify-center leading-[1.2] not-italic relative shrink-0 text-[18px] lg:text-[24px] text-[rgba(255,255,255,0.7)] w-full">
         <p className="leading-[1.1] whitespace-pre-wrap">Av. Dr. Mário Vilas Boas Rodrigues, 387 — Santo Amaro, São Paulo/SP</p>
       </div>
     </div>
@@ -231,7 +231,7 @@ function CreatorTalks2() {
 function PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataformasTecnologia2() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Painéis imersivos sobre Cultura Digital, Marcas do Amanhã e Inovações em Plataformas & Tecnologia.">
-      <div className="flex flex-col font-sans font-normal justify-center leading-[0] not-italic relative shrink-0 text-[18px] text-[rgba(255,255,255,0.7)] w-full">
+      <div className="flex flex-col font-sans font-normal justify-center leading-[1.2] not-italic relative shrink-0 text-[18px] lg:text-[24px] text-[rgba(255,255,255,0.7)] w-full">
         <p className="leading-[1.1] whitespace-pre-wrap">Do dia 19 a 22 de novembro de 2026, o festival iniciará às 09:00</p>
       </div>
     </div>

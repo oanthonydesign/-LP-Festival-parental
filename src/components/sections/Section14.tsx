@@ -59,7 +59,7 @@ function ThanksToStayWithUs() {
 function Heading() {
   return (
     <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 5">
-      <div className="flex flex-col font-sugar-peachy font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#191919] text-[46px] whitespace-nowrap">
+      <div className="flex flex-col font-sugar-peachy font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#191919] text-[46px] lg:text-[72px] whitespace-nowrap">
         <p className="leading-none">Patrocinadores</p>
       </div>
     </div>

@@ -19,11 +19,11 @@ export default function Section13() {
 
                 {/* Content */}
                 <div className="flex flex-col gap-[24px] max-w-[1020px] md:max-w-[1280px] mx-auto items-center">
-                    <h2 className="font-sugar-peachy text-[#191919] text-[48px] md:text-[84px] leading-[0.8] w-full">
+                    <h2 className="font-sugar-peachy text-[#191919] text-[48px] lg:text-[72px] leading-[0.8] w-full">
                         Conecte sua marca ao maior festival de parentalidade da América Latina
                     </h2>
 
-                    <p className="font-dm-sans font-normal text-[#191919] text-[18px] md:text-[24px] leading-[1.2] md:max-w-[1020px]">
+                    <p className="font-dm-sans font-normal text-[#191919] text-[18px] lg:text-[24px] leading-[1.2] md:max-w-[1020px]">
                         Ao patrocinar o Festival Parental, sua marca se posiciona ao lado de quem está construindo o futuro da educação e do cuidado no Brasil. Mais do que visibilidade, é presença estratégica ao lado de milhares de profissionais, famílias, especialistas e marcas comprometidas com transformação social, bem-estar e impacto positivo.
                     </p>
 

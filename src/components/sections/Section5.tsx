@@ -5,10 +5,10 @@ import svgPaths from "@/components/svg/svg-hwvyp88bcy";
 function Text() {
     return (
         <div className="content-stretch flex flex-col gap-[24px] items-center leading-[0] relative shrink-0 text-center w-full" data-name="text">
-            <div className="flex flex-col font-sugar-peachy justify-center not-italic relative shrink-0 text-[#2260a1] text-[clamp(40px,8vw,84px)] w-full max-w-[1102px]">
+            <div className="flex flex-col font-sugar-peachy justify-center not-italic relative shrink-0 text-[#2260a1] text-[40px] lg:text-[72px] w-full max-w-[1102px]">
                 <p className="leading-[0.8] whitespace-pre-wrap">Um evento sobre parentalidade como o Brasil nunca viu</p>
             </div>
-            <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[clamp(18px,4vw,24px)] w-full max-w-[1148px]" style={{ fontVariationSettings: "'opsz' 14" }}>
+            <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[18px] lg:text-[24px] w-full max-w-[1148px]" style={{ fontVariationSettings: "'opsz' 14" }}>
                 <p className="leading-[1.1] whitespace-pre-wrap">Prepare-se pra viver quatro dias intensos de conexões, conteúdos e experiências. Um ambiente pensado pra integrar conhecimento técnico, prática de vida e afeto.Tudo isso num só lugar.</p>
             </div>
         </div>

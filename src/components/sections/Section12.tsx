@@ -38,7 +38,7 @@ function Frame() {
           <span className="leading-[0.8] text-[#ef7d25]">só dá pra viver</span>
         </p>
       </div>
-      <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[18px] md:text-[24px] w-full max-w-[928px]" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[18px] lg:text-[24px] w-full max-w-[928px]" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[1.1] whitespace-pre-wrap break-words">Na edição 2025, durante três dias, quem acredita na Parentalidade como causa viveu o que nenhum outro evento no Brasil entrega: palcos lotados, feira rolando, encontros inesquecíveis e a certeza de que isso aqui é só o começo!</p>
       </div>
     </div>

@@ -9,8 +9,8 @@ export default function SectionSpecialGuests() {
 
                 {/* Header Section */}
                 <div className="flex flex-col gap-[24px] items-center text-center relative w-full">
-                    <h2 className="font-sugar-peachy text-[#ef7d25] text-[56px] lg:text-[100px] leading-[0.8] mb-4 drop-shadow-sm">
-                        Destaques de Programação
+                    <h2 className="font-sugar-peachy text-[#ef7d25] text-[56px] lg:text-[72px] leading-[0.8] mb-4">
+                        Destaques da Programação
                     </h2>
                 </div>
 
@@ -41,11 +41,11 @@ export default function SectionSpecialGuests() {
                                 Gordon Neufeld
                             </h3>
 
-                            <p className="font-dm-sans font-bold text-[24px] text-[#fff6ef] pt-2 text-center lg:text-left">
+                            <p className="font-dm-sans font-bold text-[18px] lg:text-[24px] text-[#fff6ef] pt-2 text-center lg:text-left">
                                 Autor do livro "Pais Ocupados filhos distantes"
                             </p>
 
-                            <p className="font-dm-sans text-[18px] lg:text-[22px] text-[#fff6ef] leading-[1.3] font-medium opacity-95 text-center lg:text-left">
+                            <p className="font-dm-sans text-[18px] lg:text-[24px] text-[#fff6ef] leading-[1.3] font-medium opacity-95 text-center lg:text-left">
                                 O autor que revolucionou a compreensão do apego e mostrou por que os pais precisam importar mais do que os colegas. Em um mundo que empurra nossas crianças para longe da família cada vez mais cedo, o psicólogo canadense nos lembra de algo simples — e poderoso: <span className="bg-[#fff6ef] text-[#191919] px-2 py-0.5 leading-relaxed box-decoration-clone rounded-sm">a relação vem antes da educação.</span>
                             </p>
                         </div>
@@ -107,12 +107,12 @@ export default function SectionSpecialGuests() {
                                 Pato Fu e Giramundo
                             </h3>
 
-                            <p className="font-dm-sans font-bold text-[24px] text-[#191919] pt-2 text-center lg:text-left">
-                                O show que faz adultos lembrarem quem já foram.
+                            <p className="font-dm-sans font-bold text-[18px] lg:text-[24px] text-[#191919] pt-2 text-center lg:text-left">
+                                O show que faz adultos lembrarem quem já foram
                             </p>
 
-                            <p className="font-dm-sans text-[18px] lg:text-[22px] text-[#191919] leading-[1.3] font-medium opacity-95 text-center lg:text-left">
-                                Um espetáculo premiado que transforma brinquedos em instrumentos e devolve adultos à própria infância. No palco, Pato Fu se une ao Grupo Giramundo para encerrar com leveza nosso fim de semana de reflexões profundas.
+                            <p className="font-dm-sans text-[18px] lg:text-[24px] text-[#191919] leading-[1.3] font-medium opacity-95 text-center lg:text-left">
+                                <span className="bg-[#191919] text-[#fff6ef] px-2 py-0.5 leading-relaxed box-decoration-clone rounded-sm">Um espetáculo premiado</span> que transforma brinquedos em instrumentos e devolve adultos à própria infância. No palco, Pato Fu se une ao Grupo Giramundo para encerrar com leveza nosso fim de semana de reflexões profundas.
                             </p>
                         </div>
 
@@ -131,7 +131,7 @@ export default function SectionSpecialGuests() {
                                     />
                                 </div>
                                 <div className="absolute bottom-3 left-0 w-full text-center font-sugar-peachy text-[24px] text-[#191919]">
-                                    Imperdível
+                                    Imperdível!
                                 </div>
                                 {/* Pin visual element */}
                                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full border-2 border-[#191919] shadow-[2px_2px_0px_0px_#191919] z-30">

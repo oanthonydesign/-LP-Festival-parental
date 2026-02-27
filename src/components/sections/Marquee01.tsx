@@ -64,7 +64,14 @@ export default function Marquee01() {
             <div
                 ref={marqueeRef}
                 className="bg-[#f7a73c] relative w-full overflow-hidden border-y-[5px] border-[#191919] z-10"
-                style={{ transform: 'rotate(-1deg) scale(1.2)' }}
+                style={{
+                    transform: 'rotate(-1deg) scale(1.2)',
+                    backgroundClip: 'padding-box',
+                    WebkitBackgroundClip: 'padding-box',
+                    backfaceVisibility: 'hidden',
+                    WebkitBackfaceVisibility: 'hidden',
+                    outline: '1px solid transparent'
+                }}
                 data-name="marquee_01"
             >
                 <div

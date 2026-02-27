@@ -218,7 +218,7 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
                             <div className="flex flex-col font-sugar-peachy font-bold justify-center not-italic relative shrink-0 text-[32px]">
                                 <p className="leading-none">{speaker.name}</p>
                             </div>
-                            <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[18px]" style={{ fontVariationSettings: "'opsz' 14" }}>
+                            <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[18px] lg:text-[24px]" style={{ fontVariationSettings: "'opsz' 14" }}>
                                 <p className="leading-[1.1]">{speaker.description}</p>
                             </div>
                         </div>
@@ -266,7 +266,7 @@ export default function SpeakersSection() {
                     <div className="content-stretch flex flex-col gap-[24px] items-center leading-[0] relative shrink-0 text-center w-full">
                         {/* Title */}
                         <div className="content-stretch flex flex-col font-sugar-peachy gap-[6px] items-center not-italic relative shrink-0 w-full">
-                            <div className="flex flex-col justify-center relative shrink-0 text-[#ef7d25] text-[46px] lg:text-8xl w-full">
+                            <div className="flex flex-col justify-center relative shrink-0 text-[#ef7d25] text-[46px] lg:text-[72px] w-full">
                                 <p className="leading-[0.8] whitespace-pre-wrap">+50 Palestrantes convidados</p>
                             </div>
                             <div className="flex flex-col font-dm-sans justify-center relative shrink-0 text-[#4c4d4f] text-[24px] lg:text-4xl w-full">

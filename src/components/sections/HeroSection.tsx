@@ -44,7 +44,7 @@ export default function HeroSection() {
                                 <path d="M3 10H21" stroke="#505050" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </div>
-                        <span className="font-dm-sans text-[#505050] text-[12px] md:text-[14px] uppercase tracking-[0.14px] whitespace-normal md:whitespace-nowrap leading-tight">
+                        <span className="font-dm-sans font-bold text-[#505050] text-[12px] md:text-[14px] uppercase tracking-[0.14px] whitespace-normal md:whitespace-nowrap leading-tight">
                             19 a 22 de novembro · São Paulo/SP
                         </span>
                     </div>

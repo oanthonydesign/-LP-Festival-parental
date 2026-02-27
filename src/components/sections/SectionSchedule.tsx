@@ -162,7 +162,7 @@ function ScheduleDayContent({ day, activeColor }: { day: typeof scheduleData[0],
 
             {/* Bottom CTA */}
             <div className="mt-12 pt-8 border-t-2 border-[#191919]/10 text-center flex flex-col items-center gap-6">
-                <p className="font-dm-sans text-[#4c4d4f] text-lg">Não perca! Garanta seu lugar.</p>
+                <p className="font-dm-sans text-[#4c4d4f] text-[18px] lg:text-[24px]">Não perca! Garanta seu lugar.</p>
 
                 <a href={day.type === 'professional' ? '#educador' : '#parental'} className="group relative w-full md:w-auto">
                     <div
@@ -242,10 +242,10 @@ export default function SectionSchedule() {
                 {/* Header Section */}
                 <div className="text-center flex flex-col items-center gap-6">
                     <div className="flex flex-col items-center gap-2">
-                        <h2 className="font-sugar-peachy text-[#ef7d25] text-[46px] md:text-[64px] leading-none text-center">
+                        <h2 className="font-sugar-peachy text-[#ef7d25] text-[46px] lg:text-[72px] leading-none text-center">
                             Programação Festival Parental 2026
                         </h2>
-                        <p className="font-dm-sans text-[#4c4d4f] text-[18px] md:text-[24px] max-w-3xl text-center leading-tight">
+                        <p className="font-dm-sans text-[#4c4d4f] text-[18px] lg:text-[24px] max-w-3xl text-center leading-tight">
                             Um encontro presencial para refletir sobre a parentalidade com profundidade.
                             Duas jornadas intensas divididas por público.
                         </p>

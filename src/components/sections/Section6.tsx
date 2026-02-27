@@ -143,7 +143,7 @@ function PassportCard({ data }: { data: PassportData }) {
   const currentButtonText = isDouble && hasDoubleOption ? data.doubleOptions!.buttonText : data.buttonText;
 
   return (
-    <div id={data.id} className={`flex flex-col items-center w-full max-w-[420px] ${data.textColor}`}>
+    <div id={data.id} className={`flex flex-col items-center w-full max-w-[420px] h-full ${data.textColor}`}>
       {/* Header with Title and Lote */}
       <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[16px] w-full z-10 relative`}>
         <div className={`border-2 ${data.borderColor} border-solid rounded-[16px] flex items-center justify-between px-[12px] py-[12px] gap-3`}>
@@ -157,7 +157,7 @@ function PassportCard({ data }: { data: PassportData }) {
       </div>
 
       {/* Main Content Area */}
-      <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[24px] w-full -mt-[2px] pt-8 flex flex-col gap-6 z-20 relative`}>
+      <div className={`flex-1 ${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[24px] w-full -mt-[2px] pt-8 flex flex-col gap-6 z-20 relative`}>
         {hasDoubleOption && (
           <div className="flex w-full mt-2 border-2 border-[#191919] rounded-[40px] overflow-hidden bg-white/10 p-1">
             <button
@@ -207,7 +207,7 @@ function PassportCard({ data }: { data: PassportData }) {
         {/* Action Button */}
         <a
           href={currentHref}
-          className={`bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] ${data.id === 'educador' ? 'px-[6px] md:px-[24px]' : 'px-[24px]'} py-[16px] flex items-center justify-center gap-2 hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] group w-full md:w-auto`}
+          className={`mt-auto bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] ${data.id === 'educador' ? 'px-[6px] md:px-[24px]' : 'px-[24px]'} py-[16px] flex items-center justify-center gap-2 hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] group w-full md:w-auto`}
         >
           <div className="text-[#191919] hidden md:block">
             <TicketIcon />
@@ -236,14 +236,14 @@ export default function Section6() {
             <h2 className="font-sugar-peachy text-[46px] md:text-[72px] text-[#2260a1] leading-[0.8]">
               Um festival, duas jornadas intensas
             </h2>
-            <p className="font-dm-sans text-[18px] md:text-[32px] text-[#4c4d4f] leading-tight">
+            <p className="font-dm-sans text-[18px] lg:text-[24px] text-[#4c4d4f] leading-tight">
               Um encontro presencial para refletir sobre a parentalidade com profundidade, responsabilidade e troca real.
             </p>
           </div>
         </div>
 
         {/* Passport Grid */}
-        <div className="flex flex-col lg:flex-row lg:flex-nowrap justify-center gap-6 lg:gap-[10px] w-full items-center">
+        <div className="flex flex-col lg:flex-row lg:flex-nowrap justify-center gap-6 lg:gap-[10px] w-full lg:items-stretch items-center">
           {PASSAPORTES.map((passport) => (
             <PassportCard key={passport.id} data={passport} />
           ))}

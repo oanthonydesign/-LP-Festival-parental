@@ -106,7 +106,7 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
             </div>
           </div>
           {isOpen && (
-            <div className="flex flex-col font-dm-sans font-medium justify-center leading-[0] relative shrink-0 text-[#191919] text-[16px] tracking-[-0.4px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
+            <div className="flex flex-col font-dm-sans font-medium justify-center leading-[1.2] relative shrink-0 text-[#191919] text-[18px] lg:text-[24px] tracking-[-0.4px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
               <p className="leading-[1.1] whitespace-pre-wrap">{answer}</p>
             </div>
           )}

@@ -45,7 +45,7 @@ export default function Header() {
 
                 <div className="layout-container flex items-center justify-between w-full max-w-[1280px] relative z-10 h-full px-4 md:px-0">
                     {/* Logo (Left) */}
-                    <div className="relative w-[120px] md:w-[158px] h-[32px] md:h-[41px] flex-shrink-0">
+                    <div className="relative w-[120px] md:w-[200px] h-[32px] md:h-[41px] flex-shrink-0">
                         <img
                             src="/images/logo_nav.svg"
                             alt="Festival Parental"

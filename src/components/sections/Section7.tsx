@@ -121,7 +121,7 @@ function Content() {
             <div className="flex flex-col font-sugar-peachy justify-center not-italic relative shrink-0 text-[32px] lg:text-[64px] max-w-[842px] w-full">
                 <p className="leading-[0.8] whitespace-pre-wrap">Há 7 edições, responsável por decidir e mudar o futuro da Educação Parental no Brasil</p>
             </div>
-            <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[18px] max-w-[842px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
+            <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[18px] lg:text-[24px] max-w-[842px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
                 <p className="leading-[1.1] whitespace-pre-wrap">São quatro dias de programação que misturam ciência, prática e experiências reais com o objetivo de transformar a forma como vivemos a parentalidade no Brasil.</p>
             </div>
             <div className="flex flex-col font-sugar-peachy justify-center not-italic relative shrink-0 text-[24px] lg:text-[28px] w-full max-w-[842px]">
