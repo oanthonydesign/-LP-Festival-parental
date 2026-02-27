@@ -80,7 +80,7 @@ const PASSAPORTES: PassportData[] = [
       "Acesso à feira de produtos e serviços para a parentalidade"
     ],
     target: "Para pais e cuidadores",
-    buttonText: "Quero meu ingresso parental",
+    buttonText: "Quero meu ingresso",
     href: "https://sun.eduzz.com/7WXQ74XY9A",
     doubleOptions: {
       priceInstallment: "R$ 74,70",
@@ -143,7 +143,7 @@ function PassportCard({ data }: { data: PassportData }) {
   const currentButtonText = isDouble && hasDoubleOption ? data.doubleOptions!.buttonText : data.buttonText;
 
   return (
-    <div id={data.id} className={`flex flex-col items-center w-full max-w-[420px] h-full ${data.textColor}`}>
+    <div id={data.id} className={`flex flex-col w-full max-w-[420px] ${data.textColor} h-full`}>
       {/* Header with Title and Lote */}
       <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[16px] w-full z-10 relative`}>
         <div className={`border-2 ${data.borderColor} border-solid rounded-[16px] flex items-center justify-between px-[12px] py-[12px] gap-3`}>
@@ -157,7 +157,7 @@ function PassportCard({ data }: { data: PassportData }) {
       </div>
 
       {/* Main Content Area */}
-      <div className={`flex-1 ${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[24px] w-full -mt-[2px] pt-8 flex flex-col gap-6 z-20 relative`}>
+      <div className={`flex-1 flex flex-col ${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[24px] md:rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[20px] md:p-[24px] w-full -mt-[2px] pt-8 md:pt-10 gap-6 z-20 relative`}>
         {hasDoubleOption && (
           <div className="flex w-full mt-2 border-2 border-[#191919] rounded-[40px] overflow-hidden bg-white/10 p-1">
             <button
@@ -229,7 +229,7 @@ export default function Section6() {
         <div className="flex flex-col items-center gap-7 text-center">
           <div className="border-2 border-[#505050] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#505050] px-4 md:px-[32px] py-[16px] flex items-center gap-2 text-[#505050] bg-transparent">
             <TicketIcon />
-            <span className="font-dm-sans text-[14px] uppercase tracking-wider">escolha seu ingresso</span>
+            <span className="font-dm-sans font-bold text-[14px] uppercase tracking-wider">escolha seu ingresso</span>
           </div>
 
           <div className="flex flex-col gap-6 max-w-[1120px]">
@@ -243,7 +243,7 @@ export default function Section6() {
         </div>
 
         {/* Passport Grid */}
-        <div className="flex flex-col lg:flex-row lg:flex-nowrap justify-center gap-6 lg:gap-[10px] w-full lg:items-stretch items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[20px] w-full max-w-[860px] items-stretch justify-center">
           {PASSAPORTES.map((passport) => (
             <PassportCard key={passport.id} data={passport} />
           ))}

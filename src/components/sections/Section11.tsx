@@ -9,8 +9,8 @@ function Frame1() {
       <div className="flex flex-col justify-center relative shrink-0 text-[#ef7d25] text-[46px] lg:text-[72px] w-full">
         <p className="leading-[0.8] whitespace-pre-wrap break-words">Vai vir de outra cidade?</p>
       </div>
-      <div className="flex flex-col font-dm-sans justify-center relative shrink-0 text-[#4c4d4f] text-[18px] lg:text-[24px] max-w-[600px] w-full mx-auto">
-        <p className="leading-tight whitespace-pre-wrap break-words">Conte com a agência oficial do Festival Parental para organizar sua viagem com calma e segurança</p>
+      <div className="flex flex-col font-dm-sans justify-center relative shrink-0 text-[#4c4d4f] text-[18px] lg:text-[24px] max-w-[700px] w-full mx-auto">
+        <p className="leading-tight whitespace-pre-wrap break-words">Conte com a GalaxTur, agência oficial do Festival Parental para organizar sua viagem com calma e segurança</p>
       </div>
     </div>
   );

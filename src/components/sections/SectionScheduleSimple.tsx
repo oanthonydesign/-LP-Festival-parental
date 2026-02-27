@@ -116,6 +116,12 @@ export default function SectionScheduleSimple() {
                     ))}
                 </div>
 
+                <div className="flex justify-center mt-4">
+                    <p className="font-dm-sans text-[#4c4d4f] text-[18px] md:text-[24px] opacity-70 italic">
+                        Programação completa em breve
+                    </p>
+                </div>
+
             </div>
         </section>
     );
