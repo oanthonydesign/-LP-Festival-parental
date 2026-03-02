@@ -81,7 +81,7 @@ const PASSAPORTES: PassportData[] = [
     ],
     target: "Para pais e cuidadores",
     buttonText: "Quero meu ingresso",
-    href: "https://sun.eduzz.com/7WXQ74XY9A",
+    href: "https://sun.eduzz.com/39VEAVA5WR",
     doubleOptions: {
       priceInstallment: "R$ 74,70",
       priceFull: "ou R$ 747,00 à vista",
@@ -92,7 +92,7 @@ const PASSAPORTES: PassportData[] = [
         "Acesso às sessões de autógrafos com palestrantes",
         "Acesso à feira de produtos e serviços para a parentalidade"
       ],
-      href: "https://sun.eduzz.com/801ER3JRW7",
+      href: "https://sun.eduzz.com/G92ERDR4WE",
       buttonText: "Quero meu ingresso duplo"
     },
     bgColor: "bg-[#ED9F8C]",
