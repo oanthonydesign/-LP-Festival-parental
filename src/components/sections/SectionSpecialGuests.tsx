@@ -46,7 +46,7 @@ export default function SectionSpecialGuests() {
                             </p>
 
                             <p className="font-dm-sans text-[18px] lg:text-[24px] text-[#fff6ef] leading-[1.3] font-medium opacity-95 text-center lg:text-left">
-                                O autor que revolucionou a compreensão do apego e mostrou por que os pais precisam importar mais do que os colegas. Em um mundo que empurra nossas crianças para longe da família cada vez mais cedo, o psicólogo canadense nos lembra de algo simples — e poderoso: <span className="bg-[#fff6ef] text-[#191919] px-2 py-0.5 leading-relaxed box-decoration-clone rounded-sm">a relação vem antes da educação.</span>
+                                O autor que revolucionou a compreensão do apego e mostrou por que os pais precisam importar mais do que os colegas. Em um mundo que empurra nossas crianças para longe da família cada vez mais cedo, o psicólogo canadense nos lembra de algo simples e poderoso: <span className="bg-[#fff6ef] text-[#191919] px-2 py-0.5 leading-relaxed box-decoration-clone rounded-sm">a relação vem antes da educação.</span>
                             </p>
                         </div>
 
