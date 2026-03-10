@@ -61,7 +61,7 @@ export default function HeroSection() {
                     {/* Subtext */}
                     <div className="font-dm-sans text-[#4c4d4f] text-[16px] sm:text-[18px] md:text-[24px] text-center leading-[1.2] md:leading-[1.1] flex flex-col gap-3 md:gap-4 max-w-full md:max-w-[1150px] px-2 md:px-0">
                         <p>
-                            O Festival Parental é a evolução do Congresso Internacional de Educação Parental, que há seis edições reúne profissionais para discutir ciência, prática e ética na criação de filhos. É o lugar onde a parentalidade é pensada com profundidade.
+                            O <b>Festival Parental</b> é a evolução do Congresso Internacional de Educação Parental, que há seis edições reúne profissionais para discutir ciência, prática e ética na criação de filhos. É o lugar onde a parentalidade é pensada com profundidade.
                         </p>
                         <p>
                             Agora, essa conversa se amplia e convida também pais, mães e cuidadores que querem compreender melhor os desafios de criar filhos hoje, com mais clareza, menos culpa e mais consciência.

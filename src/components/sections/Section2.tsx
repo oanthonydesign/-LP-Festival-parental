@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 
 function BackgroundCurves() {
     return (
-        <div className="absolute top-[500px] lg:top-[53px] left-0 w-full z-[1] pointer-events-none select-none opacity-100 overflow-hidden lg:overflow-visible">
+        <div className="absolute top-[700px] lg:top-[60px] left-0 w-full z-[1] pointer-events-none select-none opacity-100 overflow-hidden lg:overflow-visible">
             <img
                 src="/images/grafismo_wave.svg"
                 alt="Grafismo de ondas"
@@ -32,23 +32,23 @@ export default function Section2() {
             <BackgroundCurves />
 
             <div className="layout-container flex flex-col gap-[48px] items-center relative z-10 w-full">
-                <div className="flex flex-col items-center gap-10 w-full max-w-[900px] text-center">
+                <div className="flex flex-col items-center gap-10 w-full max-w-full text-center">
                     {/* Header Group */}
-                    <div className="flex flex-col gap-6 items-center w-full max-w-[800px]">
+                    <div className="flex flex-col gap-6 items-center w-full max-w-[1200px]">
                         <div className="flex flex-col font-sugar-peachy justify-center relative text-[#ef7d25] text-[36px] md:text-[46px] leading-[0.9]">
-                            <p className="whitespace-pre-wrap break-words">Nunca se falou tanto sobre parentalidade</p>
-                            <p className="whitespace-pre-wrap break-words">Nunca foi tão fácil se sentir inseguro, culpado ou perdido</p>
+                            <p className="whitespace-pre-wrap break-words">Nunca se falou tanto sobre parentalidade.</p>
+                            <p className="whitespace-pre-wrap break-words">E nunca foi tão fácil se sentir inseguro, culpado ou perdido.</p>
                         </div>
                     </div>
 
                     {/* Text Group */}
-                    <div className="flex flex-col items-center w-full max-w-[700px]">
+                    <div className="flex flex-col items-center w-full max-w-[1200px]">
                         <div className="flex flex-col font-dm-sans justify-center leading-tight relative text-[#4c4d4f] text-[18px] lg:text-[24px]">
                             <p className="mb-4">
-                                O Festival Parental nasce da experiência de quem estuda a parentalidade e se expande para quem a vive todos os dias.
+                                Pais e cuidadores convivem com excesso de informação e pressão para fazer tudo certo. Educadores parentais e profissionais da área atuam em um campo ainda em amadurecimento, buscando se conectar com famílias que precisam desse apoio, enquanto acompanham novas pesquisas e fortalecem o networking entre pares.
                             </p>
                             <p>
-                                Um espaço presencial onde ciência, prática e experiência real se encontram sem fórmulas prontas.
+                                O Festival Parental nasce para transformar essa complexidade em compreensão. Um encontro presencial que reúne ciência, prática e experiência real para pensar a parentalidade com mais profundidade e construir caminhos mais conscientes para quem vive e trabalha com famílias.
                             </p>
                         </div>
                     </div>

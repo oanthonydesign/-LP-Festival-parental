@@ -84,7 +84,7 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
       <div className="overflow-clip rounded-[inherit] size-full">
         <div className={`flex flex-col ${isOpen ? 'gap-[64px]' : ''} items-start p-[24px] relative w-full`}>
           <div className="flex items-start justify-between relative shrink-0 w-full gap-4" data-name="Question">
-            <div className="flex flex-col font-sugar-peachy justify-center leading-[1.1] not-italic relative self-stretch shrink-0 text-[#191919] text-[24px] md:text-[32px] flex-1">
+            <div className="flex flex-col font-sugar-peachy justify-center leading-[1.1] not-italic relative self-stretch shrink-0 text-[#191919] text-[24px] md:text-[24px] flex-1">
               <p className="whitespace-pre-wrap">{question}</p>
             </div>
             <div className="bg-[#fff6ef] relative rounded-[9999px] self-center shrink-0 w-[32px] h-[32px]" data-name="SVG">
@@ -115,6 +115,10 @@ function Container1() {
     {
       question: "O que é exatamente o Festival Parental?",
       answer: "O Festival Parental é um encontro presencial que reúne especialistas nacionais e internacionais para discutir o desenvolvimento emocional de crianças e adolescentes e os desafios das relações familiares no mundo contemporâneo.\n\nDurante quatro dias, o evento reúne palestras, reflexões e experiências sobre vínculos, educação e convivência familiar, além de uma feira com iniciativas e marcas dedicadas ao universo da infância."
+    },
+    {
+      question: "Qual passaporte dá acesso a cada dia do evento?",
+      answer: "O Passaporte Educador dá acesso aos quatro dias do Festival Parental.\n\nO Passaporte Parental dá acesso apenas aos dois últimos dias do evento."
     },
     {
       question: "Qual é a relação entre o Festival Parental e o Congresso Internacional de Educação Parental?",

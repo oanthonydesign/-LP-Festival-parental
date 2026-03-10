@@ -93,7 +93,7 @@ export default function Section8() {
                         bgColor="#ED9F8C"
                         textColor="text-[#191919]"
                         heading="Para pais, mães e cuidadores que vivem a parentalidade na prática"
-                        subtext="Dois dias de conversas acessíveis e profundas para lidar com os desafios reais da criação de filhos hoje, sem julgamentos ou fórmulas prontas."
+                        subtext="Dois dias de conversas acessíveis e profundas, com palestras, reflexões e experiências para lidar com os desafios reais da criação de filhos hoje, sem julgamentos ou fórmulas prontas, além de uma feira com iniciativas e marcas dedicadas ao universo da infância."
                         image={imgPais}
                     />
                 </div>
