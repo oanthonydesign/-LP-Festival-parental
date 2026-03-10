@@ -4,7 +4,7 @@ import svgPaths from "@/components/svg/svgPaths";
 
 export default function HeroSection() {
     return (
-        <section className="bg-[#fff6ee] relative w-full h-auto lg:h-[1150px] overflow-hidden pb-0" id="hero" data-name="Section - 1">
+        <section className="bg-[#fff6ee] relative w-full h-auto lg:h-[1230px] overflow-hidden pb-0" id="hero" data-name="Section - 1">
             {/* --- Background Graphics --- */}
 
             {/* Grafismo Onda 2 - Mobile Bottom Right / Desktop Top Right */}
@@ -101,7 +101,7 @@ export default function HeroSection() {
             {/* --- Speakers & Graphics Container --- */}
             {/* Mobile: Relative Layout (Flow) */}
             {/* Desktop: Absolute Layout (Pixel Perfect from Figma) */}
-            <div className="relative mt-8 lg:mt-0 w-full max-w-[500px] mx-auto lg:mx-0 lg:max-w-none lg:w-[1336px] lg:h-[501px] lg:absolute lg:top-[629px] lg:left-1/2 lg:-translate-x-1/2 pointer-events-none z-10 px-4 lg:px-0">
+            <div className="relative mt-8 lg:mt-0 w-full max-w-[500px] mx-auto lg:mx-0 lg:max-w-none lg:w-[1336px] lg:h-[501px] lg:absolute lg:top-[709px] lg:left-1/2 lg:-translate-x-1/2 pointer-events-none z-10 px-4 lg:px-0">
 
                 {/* Mobile wave graphic behind speakers */}
                 <div className="absolute bottom-[30px] left-1/2 -translate-x-1/2 w-[calc(100%+80px)] h-auto block lg:hidden z-0 opacity-100">
