@@ -20,6 +20,7 @@ import Copyright from '@/components/sections/Copyright';
 import SectionScheduleSimple from '@/components/sections/SectionScheduleSimple';
 import SectionSpecialGuests from '@/components/sections/SectionSpecialGuests';
 import StickyBottomBar from '@/components/sections/StickyBottomBar';
+import WhatsAppButton from '@/components/sections/WhatsAppButton';
 
 const SHOW_STICKY_BAR = true;
 
@@ -51,6 +52,7 @@ export default function Home() {
             {/* <Section14 /> */}
             <Rodape />
             <Copyright />
+            <WhatsAppButton />
             {SHOW_STICKY_BAR && <StickyBottomBar />}
         </main>
     )
