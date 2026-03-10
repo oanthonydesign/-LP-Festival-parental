@@ -42,8 +42,8 @@ export default function Section2() {
                     </div>
 
                     {/* Text Group */}
-                    <div className="flex flex-col items-center opacity-90 w-full max-w-[700px]">
-                        <div className="flex flex-col font-dm-sans justify-center leading-relaxed relative text-[#4c4d4f] text-[18px] lg:text-[24px]">
+                    <div className="flex flex-col items-center w-full max-w-[700px]">
+                        <div className="flex flex-col font-dm-sans justify-center leading-tight relative text-[#4c4d4f] text-[18px] lg:text-[24px]">
                             <p className="mb-4">
                                 O Festival Parental nasce da experiência de quem estuda a parentalidade e se expande para quem a vive todos os dias.
                             </p>

@@ -39,7 +39,6 @@ export default function Header() {
                     }`}
             >
                 <div className={`absolute inset-0 transition-opacity duration-300 pointer-events-none ${scrolled ? 'opacity-0' : 'opacity-100'}`}>
-                    <div className="absolute inset-0 bg-transparent backdrop-blur-[3.1px]"></div>
                     <div className="absolute inset-x-[320px] top-1/2 -translate-y-1/2 h-[72px] border border-[rgba(255,255,255,0.08)] hidden md:block pointer-events-none"></div>
                 </div>
 
@@ -83,8 +82,7 @@ export default function Header() {
                             {[
                                 { name: "Palestrantes", href: "#palestrantes" },
                                 { name: "Programação do Festival", href: "#programacao" },
-                                { name: "Atrações", href: "#convidados-especiais" },
-                                { name: "Galeria 2025", href: "#" }
+                                { name: "Atrações", href: "#convidados-especiais" }
                             ].map((item) => (
                                 <a
                                     key={item.name}
@@ -131,7 +129,6 @@ export default function Header() {
                             { name: "Palestrantes", href: "#palestrantes" },
                             { name: "Programação do Festival", href: "#programacao" },
                             { name: "Atrações", href: "#convidados-especiais" },
-                            { name: "Galeria 2025", href: "#" },
                             { name: "Seja patrocinador", href: "#patrocinador" }
                         ].map((item) => (
                             <a

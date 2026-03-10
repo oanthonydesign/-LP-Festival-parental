@@ -22,7 +22,7 @@ import SectionSpecialGuests from '@/components/sections/SectionSpecialGuests';
 
 export default function Home() {
     return (
-        <main className="min-h-screen overflow-x-hidden relative">
+        <main className="min-h-screen relative">
             <Header />
             <HeroSection />
             <div className="-mt-24 relative z-30">
@@ -33,6 +33,7 @@ export default function Home() {
             <Section2 />
             <Section8 />
             <Section6 />
+            <Section15 />
             <SectionScheduleSimple />
             <Marquee01 />
             <Marquee02 />
@@ -45,7 +46,6 @@ export default function Home() {
             <Section12 />
             <Section13 />
             {/* <Section14 /> */}
-            {/* <Section15 /> */}
             <Rodape />
             <Copyright />
         </main>

@@ -8,10 +8,10 @@ import svgPaths from "@/components/svg/svg-94ngdjnt4";
 
 function Heading() {
   return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Heading 2">
-      <div className="flex flex-col font-sugar-peachy justify-center leading-[0.8] not-italic relative shrink-0 text-[#f7a73c] text-[84px] w-full whitespace-pre-wrap">
-        <p className="mb-0">Perguntas</p>
-        <p>Frequentes</p>
+    <div className="flex flex-col items-start relative shrink-0 w-full" data-name="Heading 2">
+      <div className="flex flex-col font-sugar-peachy justify-center leading-[0.8] not-italic relative shrink-0 text-[#f7a73c] text-[72px] w-full whitespace-pre-wrap">
+        <p className="mb-0">Tudo o que você </p>
+        <p>precisa saber</p>
       </div>
     </div>
   );
@@ -19,7 +19,7 @@ function Heading() {
 
 function Frequent() {
   return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-[468.23px]" data-name="Frequent">
+    <div className="flex flex-col items-start relative shrink-0 w-[468.23px]" data-name="Frequent">
       <Heading />
     </div>
   );
@@ -27,7 +27,7 @@ function Frequent() {
 
 function TextAndLine() {
   return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Text and Line">
+    <div className="flex flex-col items-start relative shrink-0 w-full" data-name="Text and Line">
       <Frequent />
     </div>
   );
@@ -35,7 +35,7 @@ function TextAndLine() {
 
 function StoryImage() {
   return (
-    <div className="h-[286px] relative rounded-[24px] shrink-0 w-[544px]" data-name="Story Image">
+    <div className="h-[286px] relative rounded-[24px] shrink-0 w-full max-w-[544px]" data-name="Story Image">
       <div className="overflow-clip relative rounded-[inherit] size-full">
         <div className="absolute h-[858px] left-[-14px] top-[-241.15px] w-[572px]" data-name="CEP-252 1">
           {/* IMPORTANTE: Substituir por imagem Next.js */}
@@ -49,7 +49,7 @@ function StoryImage() {
 
 function SectionTitle() {
   return (
-    <div className="content-stretch flex flex-col gap-[72px] items-start relative shrink-0 w-[544.47px]" data-name="Section Title">
+    <div className="md:sticky md:top-32 self-start flex flex-col gap-10 md:gap-16 w-full md:w-[544px] z-10" data-name="Section Title">
       <TextAndLine />
       <StoryImage />
     </div>
@@ -95,8 +95,8 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
       data-name={isOpen ? "Desktop Open 1" : "Desktop Close 1"}
     >
       <div className="overflow-clip rounded-[inherit] size-full">
-        <div className={`content-stretch flex flex-col ${isOpen ? 'gap-[64px]' : ''} items-start p-[24px] relative w-full`}>
-          <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Question">
+        <div className={`flex flex-col ${isOpen ? 'gap-[64px]' : ''} items-start p-[24px] relative w-full`}>
+          <div className="flex items-start justify-between relative shrink-0 w-full" data-name="Question">
             <div className="flex flex-col font-sugar-peachy justify-center leading-[0] not-italic relative self-stretch shrink-0 text-[#191919] text-[32px] w-[632.72px]">
               <p className="leading-none whitespace-pre-wrap">{question}</p>
             </div>
@@ -122,29 +122,65 @@ function Container1() {
 
   const faqItems = [
     {
-      question: "What is Lorem Ipsum?",
-      answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
+      question: "Para quem é o Festival Parental?",
+      answer: "O Festival Parental foi pensado para dois públicos principais:\n\nProfissionais que trabalham com famílias, como psicólogos, educadores, terapeutas, pediatras e consultores parentais.\n\nPais, mães e cuidadores que desejam compreender melhor o desenvolvimento de crianças e adolescentes e fortalecer os vínculos familiares."
     },
     {
-      question: "What is Lorem Ipsum?",
-      answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
+      question: "Preciso ser profissional da área para participar?",
+      answer: "Não.\n\nO Festival reúne tanto profissionais quanto pais, mães e cuidadores interessados em compreender melhor as relações familiares e o desenvolvimento emocional das crianças."
     },
     {
-      question: "What is Lorem Ipsum?",
-      answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
+      question: "O que é exatamente o Festival Parental?",
+      answer: "O Festival Parental é um encontro presencial que reúne especialistas nacionais e internacionais para discutir o desenvolvimento emocional de crianças e adolescentes e os desafios das relações familiares no mundo contemporâneo.\n\nDurante quatro dias, o evento combina palestras, reflexões e experiências que aprofundam o entendimento sobre vínculos, educação e convivência familiar."
     },
     {
-      question: "What is Lorem Ipsum?",
-      answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
+      question: "Qual é a relação entre o Festival Parental e o Congresso Internacional de Educação Parental?",
+      answer: "Os dois primeiros dias do evento (19 e 20 de novembro) correspondem à 7ª edição do Congresso Internacional de Educação Parental, voltada principalmente para profissionais da área.\n\nA proposta do Festival amplia essa experiência, criando um ambiente mais imersivo e integrando diferentes formatos de aprendizado e reflexão ao longo dos quatro dias."
     },
     {
-      question: "What is Lorem Ipsum?",
-      answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
+      question: "Já acompanho alguns palestrantes nas redes sociais. O evento oferece algo diferente?",
+      answer: "Sim.\n\nRedes sociais e livros oferecem acesso à informação. O evento presencial permite algo diferente: tempo de imersão, aprofundamento das ideias e contato direto com especialistas e com outras pessoas que compartilham das mesmas inquietações.\n\nA experiência coletiva e o ambiente de reflexão costumam gerar insights que dificilmente acontecem no consumo rápido de conteúdo online."
+    },
+    {
+      question: "Vou conseguir aplicar o que aprender no meu trabalho com famílias?",
+      answer: "Sim.\n\nO conteúdo apresentado pelos especialistas foi pensado para ajudar profissionais a compreender melhor os processos emocionais que moldam o desenvolvimento de crianças e adolescentes.\n\nA proposta é oferecer fundamentos sólidos e reflexões que ampliem o olhar sobre as relações familiares e possam ser incorporadas à prática profissional."
+    },
+    {
+      question: "A programação do evento já está definida?",
+      answer: "A programação completa do Festival Parental ainda está em construção. Estamos a alguns meses do evento e novos convidados, palestras e painéis continuam sendo confirmados.\n\nEm breve divulgaremos a programação detalhada com os temas, palestrantes, painéis e horários de cada dia. Nosso objetivo é ampliar continuamente o evento com novos nomes e conteúdos que tornem a experiência ainda mais rica para todos os participantes."
+    },
+    {
+      question: "Posso levar meus filhos?",
+      answer: "O evento foi pensado para adultos.\n\nA proposta é de que os participantes possam aproveitar o encontro com atenção e tranquilidade, dedicando esse tempo à reflexão e ao aprendizado."
+    },
+    {
+      question: "Posso levar um acompanhante?",
+      answer: "Sim.\n\nCada participante precisa possuir seu próprio ingresso.\n\nPais, mães ou cuidadores que desejarem participar juntos podem adquirir o Passaporte Parental Duplo, que oferece condições especiais."
+    },
+    {
+      question: "O Festival será gravado?",
+      answer: "Profissionais que adquirirem o Passaporte Educador terão acesso às gravações dos dois primeiros dias do evento (19 e 20 de novembro), que correspondem ao conteúdo do Congresso Internacional de Educação Parental.\n\nO acesso ficará disponível por 90 dias."
+    },
+    {
+      question: "Haverá certificado de participação?",
+      answer: "Sim.\n\nO certificado de participação será concedido exclusivamente aos participantes que adquirirem o Passaporte Educador.\n\nA emissão será eletrônica e as orientações para gerar o certificado serão disponibilizadas na plataforma do evento."
+    },
+    {
+      question: "Há meia-entrada ou desconto para estudantes?",
+      answer: "Não há política de meia-entrada ou desconto para estudantes."
+    },
+    {
+      question: "Comprei meu passaporte e não poderei comparecer. O que devo fazer?",
+      answer: "As informações sobre prazos e condições de reembolso podem ser consultadas na política oficial disponível na página do evento."
+    },
+    {
+      question: "Onde acontece o Festival Parental?",
+      answer: "O evento será realizado no Transamérica Expo Center, em São Paulo.\n\nO local está a aproximadamente:\n12 km do Aeroporto de Congonhas\n42 km do Aeroporto Internacional de Guarulhos\n\nA estação de metrô mais próxima é Santo Amaro, que atende à Linha 5-Lilás do Metrô e à Linha 9-Esmeralda da CPTM, a cerca de 10 a 15 minutos de caminhada."
     }
   ];
 
   return (
-    <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-[650.72px]" data-name="Container">
+    <div className="flex flex-col gap-[24px] items-start relative shrink-0 w-full md:w-[650.72px]" data-name="Container">
       {faqItems.map((item, index) => (
         <AccordionItem
           key={index}
@@ -160,7 +196,7 @@ function Container1() {
 
 function Container() {
   return (
-    <div className="content-stretch flex items-start justify-between relative shrink-0 w-[1280px]" data-name="Container">
+    <div className="flex flex-col md:flex-row items-start justify-between w-full max-w-[1280px] gap-12" data-name="Container">
       <SectionTitle />
       <Container1 />
     </div>
@@ -169,8 +205,8 @@ function Container() {
 
 export default function Section15Interactive() {
   return (
-    <div className="bg-[#fff6ef] content-stretch flex flex-col items-center justify-center pb-[128px] pt-[86px] px-[30px] relative size-full" data-name="Section - 15">
+    <section className="bg-[#fff6ef] flex flex-col items-center py-[80px] md:py-[128px] px-6 md:px-[30px] relative w-full" data-name="Section - 15" id="faq">
       <Container />
-    </div>
+    </section>
   );
 }
