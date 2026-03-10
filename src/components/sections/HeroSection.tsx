@@ -50,20 +50,21 @@ export default function HeroSection() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[40px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.95] md:leading-[0.9] tracking-[-1.5px] md:tracking-[-3px] relative px-2 md:px-0 w-full [-webkit-text-stroke:6px_#fff] md:[-webkit-text-stroke:8px_#fff] [paint-order:stroke_fill] [filter:drop-shadow(1px_1px_0_#191919)_drop-shadow(-1px_-1px_0_#191919)_drop-shadow(1px_-1px_0_#191919)_drop-shadow(-1px_1px_0_#191919)] md:[filter:drop-shadow(2px_2px_0_#191919)_drop-shadow(-2px_-2px_0_#191919)_drop-shadow(2px_-2px_0_#191919)_drop-shadow(-2px_2px_0_#191919)]">
+                    <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[32px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.9] md:leading-[0.9] tracking-[-1px] md:tracking-[-3px] relative px-4 md:px-0 w-full [-webkit-text-stroke:4px_#fff] md:[-webkit-text-stroke:8px_#fff] [paint-order:stroke_fill] [filter:drop-shadow(1px_1px_0_#191919)_drop-shadow(-1px_-1px_0_#191919)_drop-shadow(1px_-1px_0_#191919)_drop-shadow(-1px_1px_0_#191919)] md:[filter:drop-shadow(2px_2px_0_#191919)_drop-shadow(-2px_-2px_0_#191919)_drop-shadow(2px_-2px_0_#191919)_drop-shadow(-2px_2px_0_#191919)]">
                         <span className="block">Criar filhos nunca foi simples.</span>
-                        <span className="block mt-2">
-                            Agora, é <span className="text-[#2260a1]">oficialmente complexo</span>
+                        <span className="block mt-1">
+                            <span className="text-[#2260a1]">Entender a parentalidade</span>
                         </span>
+                        <span className="block mt-1">nunca foi tão necessário</span>
                     </h1>
 
                     {/* Subtext */}
-                    <div className="font-dm-sans text-[#4c4d4f] text-[16px] sm:text-[18px] md:text-[24px] text-center leading-[1.2] md:leading-[1.1] flex flex-col gap-3 md:gap-4 max-w-full md:max-w-[1124px] px-2 md:px-0">
+                    <div className="font-dm-sans text-[#4c4d4f] text-[16px] sm:text-[18px] md:text-[24px] text-center leading-[1.2] md:leading-[1.1] flex flex-col gap-3 md:gap-4 max-w-full md:max-w-[1150px] px-2 md:px-0">
                         <p>
-                            O Festival Parental é a evolução do Congresso Internacional de Educação Parental, que há seis edições reúne profissionais para discutir ciência, prática e ética na parentalidade.
+                            O Festival Parental é a evolução do Congresso Internacional de Educação Parental, que há seis edições reúne profissionais para discutir ciência, prática e ética na criação de filhos. É o lugar onde a parentalidade é pensada com profundidade.
                         </p>
                         <p>
-                            Agora, essa conversa se amplia e convida também pais, mães e cuidadores que querem refletir sobre a parentalidade com mais profundidade, menos culpa e mais consciência.
+                            Agora, essa conversa se amplia e convida também pais, mães e cuidadores que querem compreender melhor os desafios de criar filhos hoje, com mais clareza, menos culpa e mais consciência.
                         </p>
                     </div>
                 </div>
