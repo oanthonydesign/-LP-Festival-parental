@@ -19,10 +19,13 @@ import Rodape from '@/components/sections/Rodape';
 import Copyright from '@/components/sections/Copyright';
 import SectionScheduleSimple from '@/components/sections/SectionScheduleSimple';
 import SectionSpecialGuests from '@/components/sections/SectionSpecialGuests';
+import StickyBottomBar from '@/components/sections/StickyBottomBar';
+
+const SHOW_STICKY_BAR = true;
 
 export default function Home() {
     return (
-        <main className="min-h-screen relative">
+        <main className="min-h-screen relative overflow-x-clip">
             <Header />
             <HeroSection />
             <div className="-mt-24 relative z-30">
@@ -48,6 +51,7 @@ export default function Home() {
             {/* <Section14 /> */}
             <Rodape />
             <Copyright />
+            {SHOW_STICKY_BAR && <StickyBottomBar />}
         </main>
     )
 }

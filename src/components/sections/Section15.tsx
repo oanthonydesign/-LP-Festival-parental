@@ -8,9 +8,9 @@ import svgPaths from "@/components/svg/svg-94ngdjnt4";
 
 function Heading() {
   return (
-    <div className="flex flex-col items-start relative shrink-0 w-full" data-name="Heading 2">
-      <div className="flex flex-col font-sugar-peachy justify-center leading-[0.8] not-italic relative shrink-0 text-[#f7a73c] text-[72px] w-full whitespace-pre-wrap">
-        <p className="mb-0">Tudo o que você </p>
+    <div className="flex flex-col items-center md:items-start relative shrink-0 w-full" data-name="Heading 2">
+      <div className="flex flex-col font-sugar-peachy justify-center leading-[1.1] md:leading-[1.1] not-italic relative shrink-0 text-[#f7a73c] text-[42px] md:text-[72px] w-full whitespace-pre-wrap text-center md:text-left">
+        <p className="mb-0">Tudo o que você</p>
         <p>precisa saber</p>
       </div>
     </div>
@@ -19,7 +19,7 @@ function Heading() {
 
 function Frequent() {
   return (
-    <div className="flex flex-col items-start relative shrink-0 w-[468.23px]" data-name="Frequent">
+    <div className="flex flex-col items-center md:items-start relative shrink-0 w-full md:w-[600px]" data-name="Frequent">
       <Heading />
     </div>
   );
@@ -33,25 +33,12 @@ function TextAndLine() {
   );
 }
 
-function StoryImage() {
-  return (
-    <div className="h-[286px] relative rounded-[24px] shrink-0 w-full max-w-[544px]" data-name="Story Image">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[858px] left-[-14px] top-[-241.15px] w-[572px]" data-name="CEP-252 1">
-          {/* IMPORTANTE: Substituir por imagem Next.js */}
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="/images/festival/cep-252.png" loading="lazy" />
-        </div>
-      </div>
-      <div aria-hidden="true" className="absolute border-3 border-[#191919] border-solid inset-0 pointer-events-none rounded-[24px]" />
-    </div>
-  );
-}
+
 
 function SectionTitle() {
   return (
-    <div className="md:sticky md:top-32 self-start flex flex-col gap-10 md:gap-16 w-full md:w-[544px] z-10" data-name="Section Title">
+    <div className="md:sticky md:top-32 self-center md:self-start flex flex-col gap-10 md:gap-16 w-full md:w-[600px] z-10" data-name="Section Title">
       <TextAndLine />
-      <StoryImage />
     </div>
   );
 }
@@ -96,9 +83,9 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
     >
       <div className="overflow-clip rounded-[inherit] size-full">
         <div className={`flex flex-col ${isOpen ? 'gap-[64px]' : ''} items-start p-[24px] relative w-full`}>
-          <div className="flex items-start justify-between relative shrink-0 w-full" data-name="Question">
-            <div className="flex flex-col font-sugar-peachy justify-center leading-[0] not-italic relative self-stretch shrink-0 text-[#191919] text-[32px] w-[632.72px]">
-              <p className="leading-none whitespace-pre-wrap">{question}</p>
+          <div className="flex items-start justify-between relative shrink-0 w-full gap-4" data-name="Question">
+            <div className="flex flex-col font-sugar-peachy justify-center leading-[1.1] not-italic relative self-stretch shrink-0 text-[#191919] text-[24px] md:text-[32px] flex-1">
+              <p className="whitespace-pre-wrap">{question}</p>
             </div>
             <div className="bg-[#fff6ef] relative rounded-[9999px] self-stretch shrink-0 w-[32px]" data-name="SVG">
               <div aria-hidden="true" className={`absolute ${isOpen ? 'border' : 'border-2'} border-[#191919] border-solid inset-0 pointer-events-none rounded-[9999px]`} />
@@ -205,7 +192,7 @@ function Container() {
 
 export default function Section15Interactive() {
   return (
-    <section className="bg-[#fff6ef] flex flex-col items-center py-[80px] md:py-[128px] px-6 md:px-[30px] relative w-full" data-name="Section - 15" id="faq">
+    <section className="bg-[#fff6ef] flex flex-col items-center pt-[32px] md:pt-[128px] pb-[80px] md:pb-[128px] px-6 md:px-[30px] relative w-full" data-name="Section - 15" id="faq">
       <Container />
     </section>
   );

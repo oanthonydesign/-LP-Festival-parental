@@ -3,6 +3,11 @@
 import { useState } from "react";
 import svgPaths from "@/components/svg/svgPaths";
 
+// Flags de controle para fácil ativação/desativação
+const SHOW_PROMO_RIBBON = true;
+const SHOW_PRICE_STATUS_BADGE = true;
+const SHOW_COUNTDOWN_BADGE = true;
+
 interface Benefit {
   text: string;
 }
@@ -130,6 +135,49 @@ function TicketIcon() {
   );
 }
 
+function Ribbon() {
+  return (
+    <div className="absolute inset-0 overflow-hidden rounded-[inherit] pointer-events-none z-[100]">
+      <div className="bg-[#f7a73c] border-y-2 border-[#191919] border-solid -rotate-[25deg] py-1 w-[250px] absolute top-[18px] left-[-55px] shadow-[0px_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center">
+        <span className="font-sugar-peachy text-[16 px] md:text-[16px] text-black uppercase tracking-tight block text-center">
+          ÚLTIMOS DIAS
+        </span>
+      </div>
+    </div>
+  );
+}
+
+function CountdownBadge() {
+  return (
+    <div className="bg-linear-to-b from-[#FFCF6B] to-[#F4B63E] border-2 border-[#191919] border-solid rounded-[16px] p-4 shadow-[3px_3px_0px_0px_#191919] flex items-center justify-center gap-4 mb-5 w-full max-w-[320px] self-center">
+      <div className="shrink-0 scale-125">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 2H19M5 22H19M5 2C5 2 5 9 12 12M19 2C19 2 19 9 12 12M5 22C5 22 5 15 12 12M19 22C19 22 19 15 12 12" stroke="#191919" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M12 12L8 17H16L12 12Z" fill="#191919" />
+        </svg>
+      </div>
+      <div className="flex flex-col items-start">
+        <p className="font-dm-sans text-[16px] md:text-[18px] leading-tight text-[#191919]">
+          <span className="font-bold text-[#2260a1]">Lote 1</span> termina em
+        </p>
+        <p className="font-sugar-peachy text-[28px] md:text-[34px] leading-[0.9] text-[#191919] mt-1">
+          07d 12h 43m
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function PriceStatusBadge({ price }: { price: string }) {
+  return (
+    <div className="bg-[#fbce32] border-2 border-[#191919] border-solid rounded-[40px] px-4 py-1.5 flex items-center justify-center shadow-[2px_2px_0px_0px_#191919]">
+      <span className="font-sugar-peachy text-[24px] text-[#191919]">
+        Após essa data: R$1.497
+      </span>
+    </div>
+  );
+}
+
 function PassportCard({ data }: { data: PassportData }) {
   const [isDouble, setIsDouble] = useState(false);
 
@@ -143,10 +191,11 @@ function PassportCard({ data }: { data: PassportData }) {
   const currentButtonText = isDouble && hasDoubleOption ? data.doubleOptions!.buttonText : data.buttonText;
 
   return (
-    <div id={data.id} className={`flex flex-col w-full max-w-[420px] ${data.textColor} h-full`}>
+    <div id={data.id} className={`flex flex-col w-full max-w-[420px] ${data.textColor} h-full relative group`}>
       {/* Header with Title and Lote */}
-      <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[16px] w-full z-10 relative`}>
-        <div className={`border-2 ${data.borderColor} border-solid rounded-[16px] flex items-center justify-between px-[12px] py-[12px] gap-3`}>
+      <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[16px] w-full z-10 relative overflow-hidden`}>
+        {SHOW_PROMO_RIBBON && data.id === 'educador' && <Ribbon />}
+        <div className={`border-2 ${data.borderColor} border-solid rounded-[16px] flex items-center justify-between px-[12px] py-[12px] gap-3 relative z-20`}>
           <div className="bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[6px] shadow-[3px_3px_0px_0px_#191919] px-[12px] py-[4px] shrink-0">
             <span className="font-sugar-peachy text-[18px] text-black leading-none">{data.lote}</span>
           </div>
@@ -177,6 +226,7 @@ function PassportCard({ data }: { data: PassportData }) {
 
         {/* Price Section */}
         <div className="text-center flex flex-col items-center">
+          {SHOW_COUNTDOWN_BADGE && data.id === 'educador' && <CountdownBadge />}
           <div className="font-sugar-peachy text-[20px] md:text-[24px] text-current opacity-70 mb-2">
             De <span className="line-through">{currentPriceOriginal}</span> por
           </div>
@@ -188,9 +238,15 @@ function PassportCard({ data }: { data: PassportData }) {
         </div>
 
         {/* Target Audience */}
-        <p className={`font-sugar-peachy text-[22px] md:text-[24px] text-center leading-[1.1] ${data.id === 'educador' ? 'w-full px-0' : 'px-4'}`}>
+        <p className={`font-sugar-peachy text-[22px] md:text-[24px] text-center leading-[1.1] ${data.id === 'educador' ? 'w-full px-0' : 'px-4'} mb-0`}>
           {data.target}
         </p>
+
+        {SHOW_PRICE_STATUS_BADGE && data.id === 'educador' && (
+          <div className="flex justify-center -mt-4 -mb-4">
+            <PriceStatusBadge price='2.197' />
+          </div>
+        )}
 
         {/* Benefits List */}
         <div className={`border-2 ${data.benefitBorder} border-solid rounded-[24px] p-[16px] flex flex-col gap-4 ${data.benefitBg}`}>

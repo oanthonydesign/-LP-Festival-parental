@@ -49,7 +49,7 @@ function Frame2() {
   return (
     <div className="content-stretch flex flex-col gap-[32px] items-center relative shrink-0">
       <Div />
-      <Frame1 />
+      {/* <Frame1 /> */}
     </div>
   );
 }
@@ -293,11 +293,12 @@ function LinkLightOnlyText() {
 function Label() {
   return (
     <div className="content-stretch flex flex-col items-start justify-center relative shrink-0" data-name="Label">
-      <Container3 />
+      {/* <Container3 /> */}
     </div>
   );
 }
 
+/* 
 function Container3() {
   return (
     <div className="content-stretch flex flex-col items-center md:items-start relative shrink-0 w-full" data-name="Container">
@@ -307,3 +308,4 @@ function Container3() {
     </div>
   );
 }
+*/
