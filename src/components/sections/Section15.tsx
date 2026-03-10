@@ -9,7 +9,7 @@ import svgPaths from "@/components/svg/svg-94ngdjnt4";
 function Heading() {
   return (
     <div className="flex flex-col items-center md:items-start relative shrink-0 w-full" data-name="Heading 2">
-      <div className="flex flex-col font-sugar-peachy justify-center leading-[1.1] md:leading-[1.1] not-italic relative shrink-0 text-[#f7a73c] text-[42px] md:text-[72px] w-full whitespace-pre-wrap text-center md:text-left">
+      <div className="flex flex-col font-sugar-peachy justify-center leading-[0.8] md:leading-[0.8] not-italic relative shrink-0 text-[#f7a73c] text-[42px] md:text-[72px] w-full whitespace-pre-wrap text-center md:text-left">
         <p className="mb-0">Tudo o que você</p>
         <p>precisa saber</p>
       </div>
@@ -87,7 +87,7 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
             <div className="flex flex-col font-sugar-peachy justify-center leading-[1.1] not-italic relative self-stretch shrink-0 text-[#191919] text-[24px] md:text-[32px] flex-1">
               <p className="whitespace-pre-wrap">{question}</p>
             </div>
-            <div className="bg-[#fff6ef] relative rounded-[9999px] self-stretch shrink-0 w-[32px]" data-name="SVG">
+            <div className="bg-[#fff6ef] relative rounded-[9999px] self-center shrink-0 w-[32px] h-[32px]" data-name="SVG">
               <div aria-hidden="true" className={`absolute ${isOpen ? 'border' : 'border-2'} border-[#191919] border-solid inset-0 pointer-events-none rounded-[9999px]`} />
               {isOpen ? <Minus /> : <Plus />}
             </div>
@@ -113,12 +113,8 @@ function Container1() {
       answer: "O Festival Parental foi pensado para dois públicos principais:\n\nProfissionais que trabalham com famílias, como psicólogos, educadores, terapeutas, pediatras e consultores parentais.\n\nPais, mães e cuidadores que desejam compreender melhor o desenvolvimento de crianças e adolescentes e fortalecer os vínculos familiares."
     },
     {
-      question: "Preciso ser profissional da área para participar?",
-      answer: "Não.\n\nO Festival reúne tanto profissionais quanto pais, mães e cuidadores interessados em compreender melhor as relações familiares e o desenvolvimento emocional das crianças."
-    },
-    {
       question: "O que é exatamente o Festival Parental?",
-      answer: "O Festival Parental é um encontro presencial que reúne especialistas nacionais e internacionais para discutir o desenvolvimento emocional de crianças e adolescentes e os desafios das relações familiares no mundo contemporâneo.\n\nDurante quatro dias, o evento combina palestras, reflexões e experiências que aprofundam o entendimento sobre vínculos, educação e convivência familiar."
+      answer: "O Festival Parental é um encontro presencial que reúne especialistas nacionais e internacionais para discutir o desenvolvimento emocional de crianças e adolescentes e os desafios das relações familiares no mundo contemporâneo.\n\nDurante quatro dias, o evento reúne palestras, reflexões e experiências sobre vínculos, educação e convivência familiar, além de uma feira com iniciativas e marcas dedicadas ao universo da infância."
     },
     {
       question: "Qual é a relação entre o Festival Parental e o Congresso Internacional de Educação Parental?",

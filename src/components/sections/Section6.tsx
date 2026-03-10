@@ -138,8 +138,8 @@ function TicketIcon() {
 function Ribbon() {
   return (
     <div className="absolute inset-0 overflow-hidden rounded-[inherit] pointer-events-none z-[100]">
-      <div className="bg-[#f7a73c] border-y-2 border-[#191919] border-solid -rotate-[25deg] py-1 w-[250px] absolute top-[18px] left-[-55px] shadow-[0px_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center">
-        <span className="font-sugar-peachy text-[16 px] md:text-[16px] text-black uppercase tracking-tight block text-center">
+      <div className="bg-[#f7a73c] border-y-2 border-[#191919] border-solid -rotate-[25deg] py-0.5 w-[180px] absolute top-[10px] left-[-45px] shadow-[0px_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center">
+        <span className="font-sugar-peachy text-[12px] md:text-[13px] text-black uppercase tracking-tight block text-center">
           ÚLTIMOS DIAS
         </span>
       </div>
@@ -168,15 +168,15 @@ function CountdownBadge() {
   );
 }
 
-function PriceStatusBadge({ price }: { price: string }) {
-  return (
-    <div className="bg-[#fbce32] border-2 border-[#191919] border-solid rounded-[40px] px-4 py-1.5 flex items-center justify-center shadow-[2px_2px_0px_0px_#191919]">
-      <span className="font-sugar-peachy text-[24px] text-[#191919]">
-        Após essa data: R$1.497
-      </span>
-    </div>
-  );
-}
+// function PriceStatusBadge({ price }: { price: string }) {
+//   return (
+//     <div className="bg-[#fbce32] border-2 border-[#191919] border-solid rounded-[40px] px-4 py-1.5 flex items-center justify-center shadow-[2px_2px_0px_0px_#191919]">
+//       <span className="font-sugar-peachy text-[24px] text-[#191919]">
+//         Após essa data: R$1.497
+//       </span>
+//     </div>
+//   );
+// }
 
 function PassportCard({ data }: { data: PassportData }) {
   const [isDouble, setIsDouble] = useState(false);
@@ -242,11 +242,11 @@ function PassportCard({ data }: { data: PassportData }) {
           {data.target}
         </p>
 
-        {SHOW_PRICE_STATUS_BADGE && data.id === 'educador' && (
+        {/* {SHOW_PRICE_STATUS_BADGE && data.id === 'educador' && (
           <div className="flex justify-center -mt-4 -mb-4">
             <PriceStatusBadge price='2.197' />
           </div>
-        )}
+        )} */}
 
         {/* Benefits List */}
         <div className={`border-2 ${data.benefitBorder} border-solid rounded-[24px] p-[16px] flex flex-col gap-4 ${data.benefitBg}`}>
