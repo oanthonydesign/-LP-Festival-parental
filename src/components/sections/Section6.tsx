@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import svgPaths from "@/components/svg/svgPaths";
+import { useCountdown } from "@/hooks/useCountdown";
 
 // Flags de controle para fácil ativação/desativação
 const SHOW_PROMO_RIBBON = true;
@@ -148,6 +149,13 @@ function Ribbon() {
 }
 
 function CountdownBadge() {
+  const countdown = useCountdown();
+  const pad = (n: number) => String(n).padStart(2, "0");
+
+  const countdownText = countdown.expired
+    ? "00d 00h 00m"
+    : `${pad(countdown.days)}d ${pad(countdown.hours)}h ${pad(countdown.minutes)}m`;
+
   return (
     <div className="bg-linear-to-b from-[#FFCF6B] to-[#F4B63E] border-2 border-[#191919] border-solid rounded-[16px] p-4 shadow-[3px_3px_0px_0px_#191919] flex items-center justify-center gap-4 mb-5 w-full max-w-[320px] self-center">
       <div className="shrink-0 scale-125">
@@ -160,8 +168,8 @@ function CountdownBadge() {
         <p className="font-dm-sans text-[16px] md:text-[18px] leading-tight text-[#191919]">
           <span className="font-bold text-[#2260a1]">Lote 1</span> termina em
         </p>
-        <p className="font-sugar-peachy text-[28px] md:text-[34px] leading-[0.9] text-[#191919] mt-1">
-          07d 12h 43m
+        <p className="font-sugar-peachy text-[28px] md:text-[34px] leading-[0.9] text-[#191919] mt-1 tabular-nums">
+          {countdownText}
         </p>
       </div>
     </div>
@@ -194,7 +202,7 @@ function PassportCard({ data }: { data: PassportData }) {
     <div id={data.id} className={`flex flex-col w-full max-w-[420px] ${data.textColor} h-full relative group`}>
       {/* Header with Title and Lote */}
       <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[16px] w-full z-10 relative overflow-hidden`}>
-        {SHOW_PROMO_RIBBON && data.id === 'educador' && <Ribbon />}
+        {SHOW_PROMO_RIBBON && <Ribbon />}
         <div className={`border-2 ${data.borderColor} border-solid rounded-[16px] flex items-center justify-between px-[12px] py-[12px] gap-3 relative z-20`}>
           <div className="bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[6px] shadow-[3px_3px_0px_0px_#191919] px-[12px] py-[4px] shrink-0">
             <span className="font-sugar-peachy text-[18px] text-black leading-none">{data.lote}</span>
@@ -207,6 +215,12 @@ function PassportCard({ data }: { data: PassportData }) {
 
       {/* Main Content Area */}
       <div className={`flex-1 flex flex-col ${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[24px] md:rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[20px] md:p-[24px] w-full -mt-[2px] pt-8 md:pt-10 gap-6 z-20 relative`}>
+        {SHOW_COUNTDOWN_BADGE && (
+          <div className="flex justify-center">
+            <CountdownBadge />
+          </div>
+        )}
+
         {hasDoubleOption && (
           <div className="flex w-full mt-2 border-2 border-[#191919] rounded-[40px] overflow-hidden bg-white/10 p-1">
             <button
@@ -226,7 +240,6 @@ function PassportCard({ data }: { data: PassportData }) {
 
         {/* Price Section */}
         <div className="text-center flex flex-col items-center">
-          {SHOW_COUNTDOWN_BADGE && data.id === 'educador' && <CountdownBadge />}
           <div className="font-sugar-peachy text-[20px] md:text-[24px] text-current opacity-70 mb-2">
             De <span className="line-through">{currentPriceOriginal}</span> por
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useCountdown, TARGET_DATE } from "@/hooks/useCountdown";
 
 function HourglassIcon() {
     return (
@@ -30,27 +31,6 @@ function HourglassIcon() {
             />
         </svg>
     );
-}
-
-// Data-alvo: 22/03/2026 às 23:59:00 horário de Brasília (UTC-3)
-const TARGET_DATE = new Date("2026-03-23T02:59:00Z"); // 22/03 23:59 BRT = 23/03 02:59 UTC
-
-function useCountdown(targetDate: Date) {
-    const calcRemaining = () => Math.max(0, targetDate.getTime() - Date.now());
-    const [remaining, setRemaining] = React.useState(calcRemaining);
-
-    React.useEffect(() => {
-        const id = setInterval(() => setRemaining(calcRemaining()), 1000);
-        return () => clearInterval(id);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
-    const seconds = Math.floor((remaining / 1000) % 60);
-    const minutes = Math.floor((remaining / 1000 / 60) % 60);
-    const hours = Math.floor((remaining / 1000 / 60 / 60) % 24);
-    const days = Math.floor(remaining / 1000 / 60 / 60 / 24);
-
-    return { days, hours, minutes, seconds, expired: remaining <= 0 };
 }
 
 export default function StickyBottomBar() {
@@ -105,7 +85,7 @@ export default function StickyBottomBar() {
                         <HourglassIcon />
                         <p className="font-dm-sans font-bold text-[14px] md:text-[18px] uppercase tracking-tight whitespace-nowrap">
                             LOTE 1 TERMINA EM{" "}
-                            <span className="font-black text-[18px] md:text-[22px]">{countdownText}</span>
+                            <span className="font-black text-[18px] md:text-[22px] tabular-nums">{countdownText}</span>
                         </p>
                     </div>
 
