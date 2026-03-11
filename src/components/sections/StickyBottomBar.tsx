@@ -34,6 +34,7 @@ function HourglassIcon() {
 
 export default function StickyBottomBar() {
     const [isVisible, setIsVisible] = React.useState(false);
+    const [isFooterVisible, setIsFooterVisible] = React.useState(false);
 
     React.useEffect(() => {
         const handleScroll = () => {
@@ -49,9 +50,25 @@ export default function StickyBottomBar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // Observa o Rodapé para esconder a barra quando chegar nele
+    React.useEffect(() => {
+        const footer = document.querySelector('[data-name="Rodape"]');
+        if (!footer) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsFooterVisible(entry.isIntersecting);
+            },
+            { threshold: 0.1 }
+        );
+
+        observer.observe(footer);
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <div
-            className={`fixed bottom-0 inset-x-0 z-[999] pointer-events-none transition-all duration-500 ease-in-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
+            className={`fixed bottom-0 inset-x-0 z-[999] pointer-events-none transition-all duration-500 ease-in-out ${isVisible && !isFooterVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
                 }`}
         >
             <div className="w-full bg-linear-to-b from-[#FFCF6B] to-[#F4B63E] border-t-2 border-b-[6px] border-[#191919] border-solid pointer-events-auto">
