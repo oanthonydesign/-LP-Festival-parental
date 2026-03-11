@@ -84,7 +84,7 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
       <div className="overflow-clip rounded-[inherit] size-full">
         <div className={`flex flex-col ${isOpen ? 'gap-[64px]' : ''} items-start p-[24px] relative w-full`}>
           <div className="flex items-start justify-between relative shrink-0 w-full gap-4" data-name="Question">
-            <div className="flex flex-col font-sugar-peachy justify-center leading-[1.1] not-italic relative self-stretch shrink-0 text-[#191919] text-[24px] md:text-[24px] flex-1">
+            <div className="flex flex-col font-sugar-peachy justify-center leading-[1.1] not-italic relative self-stretch shrink-0 text-[#191919] text-[24px] md:text-[26px] flex-1">
               <p className="whitespace-pre-wrap">{question}</p>
             </div>
             <div className="bg-[#fff6ef] relative rounded-[9999px] self-center shrink-0 w-[32px] h-[32px]" data-name="SVG">
@@ -93,7 +93,7 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
             </div>
           </div>
           {isOpen && (
-            <div className="flex flex-col font-dm-sans font-medium justify-center leading-[1.2] relative shrink-0 text-[#191919] text-[18px] lg:text-[24px] tracking-[-0.4px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
+            <div className="flex flex-col font-dm-sans font-medium justify-center leading-[1.2] relative shrink-0 text-[#191919] text-[18px] lg:text-[18px] tracking-[-0.4px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
               <p className="leading-[1.1] whitespace-pre-wrap">{answer}</p>
             </div>
           )}

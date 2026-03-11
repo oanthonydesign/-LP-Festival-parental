@@ -218,7 +218,7 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
                             <div className="flex flex-col font-sugar-peachy font-bold justify-center not-italic relative shrink-0 text-[32px]">
                                 <p className="leading-none">{speaker.name}</p>
                             </div>
-                            <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[18px] lg:text-[24px]" style={{ fontVariationSettings: "'opsz' 14" }}>
+                            <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[18px] lg:text-[20px]" style={{ fontVariationSettings: "'opsz' 14" }}>
                                 <p className="leading-[1.1]">{speaker.description}</p>
                             </div>
                         </div>

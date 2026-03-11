@@ -26,34 +26,36 @@ const SHOW_STICKY_BAR = true;
 
 export default function Home() {
     return (
-        <main className="min-h-screen relative overflow-x-clip">
-            <Header />
-            <HeroSection />
-            <div className="-mt-24 relative z-30">
+        <>
+            <main className="min-h-screen relative overflow-x-clip">
+                <Header />
+                <HeroSection />
+                <div className="-mt-24 relative z-30">
+                    <Marquee01 />
+                    <Marquee02 />
+                </div>
+                <SectionSpecialGuests />
+                <Section2 />
+                <Section8 />
+                <Section6 />
+                <Section15 />
+                <SectionScheduleSimple />
                 <Marquee01 />
                 <Marquee02 />
-            </div>
-            <SectionSpecialGuests />
-            <Section2 />
-            <Section8 />
-            <Section6 />
-            <Section15 />
-            <SectionScheduleSimple />
-            <Marquee01 />
-            <Marquee02 />
-            <SpeakersSection />
-            <Section5 />
-            <Section7 />
-            <Section9 />
-            <Section10 />
-            <Section11 />
-            <Section12 />
-            <Section13 />
-            {/* <Section14 /> */}
-            <Rodape />
-            <Copyright />
+                <SpeakersSection />
+                <Section5 />
+                <Section7 />
+                <Section9 />
+                <Section10 />
+                <Section11 />
+                <Section12 />
+                <Section13 />
+                {/* <Section14 /> */}
+                <Rodape />
+                <Copyright />
+            </main>
             <WhatsAppButton />
             {SHOW_STICKY_BAR && <StickyBottomBar />}
-        </main>
+        </>
     )
 }
