@@ -8,8 +8,6 @@ export default function Copyright() {
             <div className="max-w-[1280px] mx-auto py-[28px] px-6 flex flex-col md:flex-row items-center justify-between gap-4">
                 <div className="flex flex-wrap gap-[18px] items-center justify-center md:justify-start font-dm-sans text-[#fff6ef] text-[13px] font-normal">
                     <p>© 2026 Todos os direitos reservados</p>
-                    <a href="#" className="hover:underline">Política de privacidade</a>
-                    <a href="#" className="hover:underline">Termos de uso</a>
                 </div>
 
                 <a

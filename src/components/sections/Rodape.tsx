@@ -441,6 +441,7 @@ function Frame3() {
     <div className="content-stretch flex flex-col items-center md:items-start justify-center relative shrink-0 w-full sm:w-[48%] md:w-[250px]">
       <Container18 />
       <Container20 />
+      <ContainerRefund />
     </div>
   );
 }
@@ -516,6 +517,45 @@ function Container21() {
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[12.8px] tracking-[0.14px] whitespace-normal md:whitespace-nowrap text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[21px]">POLÍTICA DE PRIVACIDADE</p>
+      </div>
+    </div>
+  );
+}
+
+// Link Política de Reembolso
+function ContainerRefund() {
+  return (
+    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
+      <LinkRefund />
+    </div>
+  );
+}
+
+function LinkRefund() {
+  return (
+    <a href="/politica-de-reembolso" className="relative shrink-0 w-full block group" data-name="Link - Refund">
+      <div className="flex flex-row items-center size-full">
+        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full group-hover:text-[#ef7d25] transition-colors">
+          <PalestrantesRefund />
+        </div>
+      </div>
+    </a>
+  );
+}
+
+function PalestrantesRefund() {
+  return (
+    <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Palestrantes">
+      <ContainerRefundText />
+    </div>
+  );
+}
+
+function ContainerRefundText() {
+  return (
+    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
+      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[12.8px] tracking-[0.14px] whitespace-normal md:whitespace-nowrap text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
+        <p className="leading-[21px]">POLÍTICA DE REEMBOLSO</p>
       </div>
     </div>
   );
