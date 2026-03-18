@@ -15,6 +15,7 @@ import Section12 from '@/components/sections/Section12';
 import Section13 from '@/components/sections/Section13';
 import Section14 from '@/components/sections/Section14';
 import Section15 from '@/components/sections/Section15';
+import Section16 from '@/components/sections/Section16';
 import Rodape from '@/components/sections/Rodape';
 import Copyright from '@/components/sections/Copyright';
 import SectionScheduleSimple from '@/components/sections/SectionScheduleSimple';
@@ -39,6 +40,7 @@ export default function Home() {
                 <Section8 />
                 <Section6 />
                 <Section15 />
+                <Section16 />
                 <SectionScheduleSimple />
                 <Marquee01 />
                 <Marquee02 />

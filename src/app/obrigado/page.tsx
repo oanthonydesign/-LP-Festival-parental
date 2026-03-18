@@ -1,4 +1,3 @@
-import Header from '@/components/sections/Header';
 import WhatsAppButton from '@/components/sections/WhatsAppButton';
 import Rodape from '@/components/sections/Rodape';
 import Copyright from '@/components/sections/Copyright';
@@ -20,7 +19,17 @@ export default function ObrigadoPelaCompra() {
     return (
         <>
             <main className="min-h-screen relative overflow-x-clip bg-[#fff6ef] flex flex-col justify-between">
-                <Header />
+                {/* Topo Simplificado apenas com Logo */}
+                <div className="absolute top-0 left-0 right-0 h-[88px] flex items-center justify-center z-50">
+                    <div className="relative w-[160px] md:w-[220px] h-[40px] md:h-[48px]">
+                        <img
+                            src="/images/logo_nav.svg"
+                            alt="Festival Parental"
+                            className="w-full h-full object-contain object-center"
+                        />
+                    </div>
+                </div>
+
                 <BackgroundCurves />
 
                 <section className="flex-grow flex items-center justify-center pt-32 pb-20 px-4 md:px-6 relative z-10">

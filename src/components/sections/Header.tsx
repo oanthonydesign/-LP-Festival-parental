@@ -44,19 +44,19 @@ export default function Header() {
 
                 <div className="layout-container flex items-center justify-between w-full max-w-[1280px] relative z-10 h-full px-4 md:px-0">
                     {/* Logo (Left) */}
-                    <div className="relative w-[120px] md:w-[200px] h-[32px] md:h-[41px] flex-shrink-0">
+                    <Link href="/" className="relative w-[120px] md:w-[200px] h-[32px] md:h-[41px] flex-shrink-0">
                         <img
                             src="/images/logo_nav.svg"
                             alt="Festival Parental"
                             className="w-full h-full object-contain object-left"
                         />
-                    </div>
+                    </Link>
 
                     {/* Mobile Right Container: Button + Hamburger */}
                     <div className="flex md:hidden items-center gap-3">
                         {/* Ingresso Button - Orange with Icon */}
                         <a
-                            href="#ingressos"
+                            href="/#ingressos"
                             className="bg-[#f7a73c] text-[#191919] text-[12px] font-bold uppercase tracking-wider px-4 py-2.5 rounded-[40px] shadow-[2px_2px_0px_0px_#191919] active:translate-y-[1px] active:shadow-none transition-all border border-[#191919] flex items-center gap-2"
                         >
                             <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,9 +80,9 @@ export default function Header() {
                     <nav className="hidden md:flex items-center gap-[32px]">
                         <div className="flex items-center gap-[8px] p-[10px]">
                             {[
-                                { name: "Palestrantes", href: "#palestrantes" },
-                                { name: "Programação do Festival", href: "#programacao" },
-                                { name: "Atrações", href: "#convidados-especiais" }
+                                { name: "Palestrantes", href: "/#palestrantes" },
+                                { name: "Programação do Festival", href: "/#programacao" },
+                                { name: "Atrações", href: "/#convidados-especiais" }
                             ].map((item) => (
                                 <a
                                     key={item.name}
@@ -102,10 +102,10 @@ export default function Header() {
 
                     {/* CTA Button & Sponsor Link - Desktop */}
                     <div className="hidden md:flex items-center gap-[16px]">
-                        <a href="#patrocinador" className="font-dm-sans text-[#191919] text-[13px] font-bold uppercase tracking-[0.8px] hover:text-[#ef7d25] transition-colors whitespace-nowrap">
+                        <a href="/#patrocinador" className="font-dm-sans text-[#191919] text-[13px] font-bold uppercase tracking-[0.8px] hover:text-[#ef7d25] transition-colors whitespace-nowrap">
                             Seja patrocinador
                         </a>
-                        <a href="#ingressos" className="group relative">
+                        <a href="/#ingressos" className="group relative">
                             <div className="bg-[#f7a73c] border border-[#191919] flex items-center justify-center gap-[10px] px-[24px] py-[12px] rounded-[40px] shadow-[2px_2px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[1px_1px_0px_0px_#191919] transition-all">
                                 <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#191919]">
                                     <path d={svgPaths.p60d3f00} fill="currentColor" />
@@ -126,10 +126,10 @@ export default function Header() {
                 `}>
                     <div className="flex flex-col px-6 gap-6 items-center">
                         {[
-                            { name: "Palestrantes", href: "#palestrantes" },
-                            { name: "Programação do Festival", href: "#programacao" },
-                            { name: "Atrações", href: "#convidados-especiais" },
-                            { name: "Seja patrocinador", href: "#patrocinador" }
+                            { name: "Palestrantes", href: "/#palestrantes" },
+                            { name: "Programação do Festival", href: "/#programacao" },
+                            { name: "Atrações", href: "/#convidados-especiais" },
+                            { name: "Seja patrocinador", href: "/#patrocinador" }
                         ].map((item) => (
                             <a
                                 key={item.name}
