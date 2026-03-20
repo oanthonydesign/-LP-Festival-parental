@@ -262,8 +262,8 @@ export default function SpeakersSection() {
     };
 
     return (
-        <section className="bg-[#fff6ef] w-full flex flex-col items-center pb-[32px] md:pb-[72px] pt-[72px] relative isolate" id="palestrantes">
-            <div className="layout-container flex flex-col gap-[64px] items-center relative px-4 md:px-0">
+        <section className="bg-[#fff6ef] w-full flex flex-col items-center pb-[32px] md:pb-[72px] pt-[32px] md:pt-[48px] relative isolate" id="palestrantes">
+            <div className="layout-container flex flex-col gap-[64px] items-center relative px-16 md:px-0">
                 {/* Header */}
                 <div className="content-stretch flex flex-col gap-[28px] items-center relative shrink-0 w-full">
                     {/* Event Badge */}

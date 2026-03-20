@@ -41,10 +41,10 @@ export default function Home() {
                 <Section6 />
                 <Section15 />
                 <Section16 />
-                <SectionScheduleSimple />
+                <SpeakersSection />
                 <Marquee01 />
                 <Marquee02 />
-                <SpeakersSection />
+                <SectionScheduleSimple />
                 <Section5 />
                 <Section7 />
                 <Section9 />

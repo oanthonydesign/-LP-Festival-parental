@@ -64,7 +64,7 @@ export default function Section16() {
   ];
 
   return (
-    <section className="bg-[#fff6ee] flex flex-col items-center pt-[32px] pb-[32px] md:pb-[128px] px-4 md:px-[30px] relative w-full overflow-hidden" id="depoimentos">
+    <section className="bg-[#fff6ee] flex flex-col items-center pt-[32px] pb-[32px] md:pb-[64px] px-4 md:px-[30px] relative w-full overflow-hidden" id="depoimentos">
       <div className="w-full max-w-[1280px] flex flex-col gap-8 md:gap-12 relative">
 
         {/* Topo: Título + Botões de Navegação */}
