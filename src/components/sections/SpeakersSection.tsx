@@ -70,11 +70,11 @@ const allSpeakers: Speaker[] = [
     },
     {
         id: 7,
-        name: "Wimer Bottura Júnior",
+        name: "Dr. Wimer Bottura",
         description: "Psiquiatra especialista em relações familiares",
         image: "/images/wimerb.webp",
         instagram: "https://www.instagram.com/wimerbotturajuniorpsiquiatra/",
-        linkedin: "https://www.linkedin.com/in/wimer-bottura-junior-584831161/",
+        linkedin: "https://www.linkedin.com/in/dr-wimer-bottura-junior/",
         bgColor: "#79c3ab",
     },
     {
@@ -139,6 +139,15 @@ const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/euivanamoreira?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         linkedin: "https://www.linkedin.com/in/ivana-moreira-679489ba/",
         bgColor: "#74acde",
+    },
+    {
+        id: 15,
+        name: "Dra. Elaine Pádua",
+        description: "Nutricionista mestre em Ciências e especialista em saúde materno-infantil",
+        image: "/images/elainep.webp",
+        instagram: "https://www.instagram.com/euivanamoreira?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/ivana-moreira-679489ba/",
+        bgColor: "#f7a73c",
     },
 ];
 
