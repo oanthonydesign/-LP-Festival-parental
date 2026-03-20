@@ -192,7 +192,7 @@ function Container() {
 
 export default function Section15Interactive() {
   return (
-    <section className="bg-[#fff6ef] flex flex-col items-center pt-[32px] md:pt-[128px] pb-[80px] md:pb-[128px] px-6 md:px-[30px] relative w-full" data-name="Section - 15" id="faq">
+    <section className="bg-[#fff6ef] flex flex-col items-center pt-[32px] md:pt-[128px] pb-[42px] md:pb-[128px] px-6 md:px-[30px] relative w-full" data-name="Section - 15" id="faq">
       <Container />
     </section>
   );

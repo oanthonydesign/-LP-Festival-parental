@@ -1,26 +1,42 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import andreImage from '@/assets/images/testimonial/andré.webp';
+import susanaImage from '@/assets/images/testimonial/susana.webp';
+import rosanaImage from '@/assets/images/testimonial/rosana.webp';
 
 interface Testimonial {
-  type: 'image' | 'video';
-  src: string;
-  poster?: string; // Para vídeos
+  image: string;
+  name: string;
+  role?: string;
+  text: string;
 }
 
-// Dados de exemplo (Mock). O usuário pode trocar as URLs pelos caminhos reais dos prints/vídeos.
 const testimonials: Testimonial[] = [
-  { type: 'image', src: 'https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=687&auto=format&fit=crop' },
-  { type: 'image', src: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=687&auto=format&fit=crop' },
-  { type: 'image', src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=687&auto=format&fit=crop' },
-  { type: 'image', src: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=764&auto=format&fit=crop' },
-  { type: 'image', src: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=687&auto=format&fit=crop' },
+  {
+    image: andreImage.src,
+    name: 'Andre Henrique Lott',
+    role: 'Pai e Médico Pediatra',
+    text: 'Sou pediatra há 20 anos. A educação parental apareceu na minha vida quando minha filha tinha 3 anos e percebi a necessidade de estudar para quebrar padrões e evitar a perpetuação de traumas geracionais.\n\nA minha prática clínica mudou após eu embarcar no mundo da parentalidade. Utilizo este conhecimento em todas as minhas consultas e acredito que não tem mais como desvencilhar a pediatria da educação parental. É preciso deixar a maternidade mais leve.\n\nO festival de educação parental é o meu evento mais aguardado do ano pela quantidade de conhecimento e trocas que ali ocorrem. Ser embaixador pelo 3º ano me enche de orgulho por saber que faço parte de um movimento que pode mudar o futuro das nossas crianças.'
+  },
+  {
+    image: susanaImage.src,
+    name: 'Susana Martins',
+    role: 'Educadora Parental e Embaixadora',
+    text: '2025 foi o ano em que cumpri o sonho de estar presente no 6º Congresso Internacional de Educação Parental e foi uma experiência simplesmente maravilhosa.\n\nEm 2024 assisti ao congresso online e fui vibrando com tudo o que acontecia no presencial. Tinha amigas lá, partilhando comigo a energia e a alegria, e senti um enorme desejo de estar presente no ano seguinte. Comecei a criar condições para que isso acontecesse e, quando percebi, já estava vivendo essa experiência.\n\nEstar no meio de educadoras parentais é mergulhar numa bolha de amor. Foram dias de troca, conexão e presença. Chorei ao me despedir, mas já tenho meu bilhete de embaixadora. Deixo o convite para que se juntem a nós e sintam essa energia.'
+  },
+  {
+    image: rosanaImage.src,
+    name: 'Rosana Poiani',
+    role: 'Psicóloga, Educadora e Embaixadora',
+    text: 'Ao longo desses anos, estudar educação parental ampliou meu olhar como psicóloga e educadora, mas, principalmente, me transformou como pessoa. Foi um processo profundo de autoconhecimento que me ensinou que educar não é sobre controle, e sim sobre consciência, vínculo e responsabilidade emocional.\n\nVivemos em uma sociedade cada vez mais reativa e distante do diálogo. A educação parental surge como um caminho possível para resgatar o respeito, a empatia e a humanidade dentro das famílias.\n\nSer embaixadora deste congresso é motivo de imenso orgulho. Representar um movimento que convida adultos a olharem primeiro para si é reafirmar meu compromisso com relações mais saudáveis. A educação parental muda pessoas – e pessoas transformadas mudam o mundo.'
+  }
 ];
 
 function Heading() {
   return (
-    <div className="flex flex-col items-center md:items-start relative shrink-0 w-full md:w-auto mb-8 md:mb-12" data-name="Heading">
+    <div className="flex flex-col items-center md:items-start relative shrink-0 w-full md:w-auto" data-name="Heading">
       <div className="flex flex-col font-sugar-peachy justify-center leading-[0.9] md:leading-[0.8] not-italic relative shrink-0 text-[#ef7d25] text-[42px] md:text-[72px] w-full whitespace-pre-wrap text-center md:text-left">
         <p className="mb-0">Quem já viveu</p>
         <p>essa experiência</p>
@@ -33,42 +49,43 @@ function Heading() {
 }
 
 export default function Section16() {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const [startIndex, setStartIndex] = useState(0);
 
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      const cardWidth = scrollRef.current.children[0]?.getBoundingClientRect().width || 0;
-      const gap = 24; // Espaçamento
-      scrollRef.current.scrollBy({ left: -(cardWidth + gap), behavior: 'smooth' });
-    }
+  const handleNext = () => {
+    setStartIndex((prev) => (prev + 1) % testimonials.length);
   };
 
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      const cardWidth = scrollRef.current.children[0]?.getBoundingClientRect().width || 0;
-      const gap = 24; // Espaçamento
-      scrollRef.current.scrollBy({ left: cardWidth + gap, behavior: 'smooth' });
-    }
+  const handlePrev = () => {
+    setStartIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
+
+  // Rotaciona o array de depoimentos com base no startIndex
+  const visibleTestimonials = [
+    testimonials[startIndex % testimonials.length],
+    testimonials[(startIndex + 1) % testimonials.length],
+    testimonials[(startIndex + 2) % testimonials.length],
+  ];
 
   return (
-    <section className="bg-[#fff6ee] flex flex-col items-center pt-[32px] md:pt-[32px] pb-[80px] md:pb-[32px] px-4 md:px-[30px] relative w-full overflow-hidden" id="depoimentos">
-      <div className="w-full max-w-[1280px] flex flex-col gap-6 relative">
-        <div className="flex flex-col md:flex-row items-center md:items-end justify-between w-full">
+    <section className="bg-[#fff6ee] flex flex-col items-center pt-[32px] pb-[32px] md:pb-[128px] px-4 md:px-[30px] relative w-full overflow-hidden" id="depoimentos">
+      <div className="w-full max-w-[1280px] flex flex-col gap-8 md:gap-12 relative">
+
+        {/* Topo: Título + Botões de Navegação */}
+        <div className="flex flex-col md:flex-row items-center md:items-end justify-between w-full gap-6">
           <Heading />
 
-          {/* Botões de Navegação (Desktop) */}
-          <div className="hidden md:flex gap-4 mb-12">
+          {/* Botões de Navegação */}
+          <div className="flex gap-4">
             <button
-              onClick={scrollLeft}
-              className="bg-[#fff6ef] border-2 border-[#191919] p-3 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#191919] transition-all cursor-pointer"
+              onClick={handlePrev}
+              className="bg-[#fff6ef] border-2 border-[#191919] p-3 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1.5px] hover:shadow-[1.5px_1.5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_#191919] transition-all cursor-pointer"
               aria-label="Depoimento anterior"
             >
               <ChevronLeft size={24} className="text-[#191919]" />
             </button>
             <button
-              onClick={scrollRight}
-              className="bg-[#f7a73c] border-2 border-[#191919] p-3 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#191919] transition-all cursor-pointer"
+              onClick={handleNext}
+              className="bg-[#f7a73c] border-2 border-[#191919] p-3 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1.5px] hover:shadow-[1.5px_1.5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_#191919] transition-all cursor-pointer"
               aria-label="Próximo depoimento"
             >
               <ChevronRight size={24} className="text-[#191919]" />
@@ -76,55 +93,41 @@ export default function Section16() {
           </div>
         </div>
 
-        {/* Carrossel */}
-        <div
-          ref={scrollRef}
-          className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory w-full pb-6 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
-        >
-          {testimonials.map((testimonial, index) => (
+        {/* Grid de Depoimentos (Carrossel Circular) */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 w-full relative">
+          {visibleTestimonials.map((testimonial, index) => (
             <div
-              key={index}
-              className="flex-none snap-start 
-                         w-[calc((100%-16px)/1.2)] 
-                         md:w-[calc((100%-96px)/4.333)] 
-                         aspect-[9/16] bg-white border-2 border-[#191919] rounded-[24px] shadow-[6px_6px_0px_0px_#191919] overflow-hidden group mb-2"
+              key={testimonial.name}
+              className={`bg-white border-2 border-[#191919] rounded-[24px] shadow-[6px_6px_0px_0px_#191919] p-6 flex flex-col items-start text-left gap-4 hover:translate-y-[-4px] transition-all duration-300 h-full
+                ${index > 0 ? 'hidden lg:flex' : 'flex'} 
+              `}
             >
-              {testimonial.type === 'image' ? (
-                <div className="relative w-full h-full bg-[#f1f1f1]">
+              <p className="font-dm-sans text-[#191919] text-sm md:text-base leading-relaxed whitespace-pre-line flex-grow">
+                {testimonial.text}
+              </p>
+
+              <div className="flex items-center gap-4 mt-auto pt-2">
+                <div className="w-16 h-16 rounded-full border-2 border-[#191919] overflow-hidden shadow-[4px_4px_0px_0px_#191919] bg-[#f1f1f1] shrink-0">
                   <img
-                    src={testimonial.src}
-                    alt={`Depoimento ${index + 1}`}
+                    src={testimonial.image}
+                    alt={testimonial.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
-              ) : (
-                <div className="relative w-full h-full bg-black">
-                  <video
-                    src={testimonial.src}
-                    poster={testimonial.poster}
-                    controls
-                    className="w-full h-full object-cover"
-                  />
+                <div className="flex flex-col">
+                  <h3 className="font-sugar-peachy text-[#ef7d25] text-2xl md:text-2xl leading-none">
+                    {testimonial.name}
+                  </h3>
+                  {testimonial.role && (
+                    <span className="font-dm-sans font-medium text-[#4c4d4f] text-sm mt-1">
+                      {testimonial.role}
+                    </span>
+                  )}
                 </div>
-              )}
+              </div>
             </div>
           ))}
-        </div>
 
-        {/* Botões de Navegação (Mobile) */}
-        <div className="flex md:hidden justify-center gap-6 mt-2">
-          <button
-            onClick={scrollLeft}
-            className="bg-[#fff6ef] border-2 border-[#191919] p-3 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#191919] transition-all"
-          >
-            <ChevronLeft size={24} className="text-[#191919]" />
-          </button>
-          <button
-            onClick={scrollRight}
-            className="bg-[#f7a73c] border-2 border-[#191919] p-3 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#191919] transition-all"
-          >
-            <ChevronRight size={24} className="text-[#191919]" />
-          </button>
         </div>
       </div>
     </section>
