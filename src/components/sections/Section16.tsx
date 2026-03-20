@@ -29,6 +29,24 @@ const testimonials: Testimonial[] = [
     role: 'Psicóloga, Educadora e Embaixadora',
     text: 'Ao longo desses anos, estudar educação parental ampliou meu olhar como psicóloga e educadora, mas, principalmente, me transformou como pessoa. Foi um processo profundo de autoconhecimento que me ensinou que educar não é sobre controle, e sim sobre consciência, vínculo e responsabilidade emocional.\n\nVivemos em uma sociedade cada vez mais reativa e distante do diálogo. A educação parental surge como um caminho possível para resgatar o respeito, a empatia e a humanidade dentro das famílias.\n\nSer embaixadora deste congresso é motivo de imenso orgulho. Representar um movimento que convida adultos a olharem primeiro para si é reafirmar meu compromisso com relações mais saudáveis. A educação parental muda pessoas – e pessoas transformadas mudam o mundo.'
   }
+  {
+    image: '/images/testimonial/andré.webp',
+    name: 'Andre Henrique Lott',
+    role: 'Pai e Médico Pediatra',
+    text: 'Sou pediatra há 20 anos. A educação parental apareceu na minha vida quando minha filha tinha 3 anos e percebi a necessidade de estudar para quebrar padrões e evitar a perpetuação de traumas geracionais.\n\nA minha prática clínica mudou após eu embarcar no mundo da parentalidade. Utilizo este conhecimento em todas as minhas consultas e acredito que não tem mais como desvencilhar a pediatria da educação parental. É preciso deixar a maternidade mais leve.\n\nO festival de educação parental é o meu evento mais aguardado do ano pela quantidade de conhecimento e trocas que ali ocorrem. Ser embaixador pelo 3º ano me enche de orgulho por saber que faço parte de um movimento que pode mudar o futuro das nossas crianças.'
+  },
+  {
+    image: '/images/testimonial/susana.webp',
+    name: 'Susana Martins',
+    role: 'Educadora Parental e Embaixadora',
+    text: '2025 foi o ano em que cumpri o sonho de estar presente no 6º Congresso Internacional de Educação Parental e foi uma experiência simplesmente maravilhosa.\n\nEm 2024 assisti ao congresso online e fui vibrando com tudo o que acontecia no presencial. Tinha amigas lá, partilhando comigo a energia e a alegria, e senti um enorme desejo de estar presente no ano seguinte. Comecei a criar condições para que isso acontecesse e, quando percebi, já estava vivendo essa experiência.\n\nEstar no meio de educadoras parentais é mergulhar numa bolha de amor. Foram dias de troca, conexão e presença. Chorei ao me despedir, mas já tenho meu bilhete de embaixadora. Deixo o convite para que se juntem a nós e sintam essa energia.'
+  },
+  {
+    image: '/images/testimonial/rosana.webp',
+    name: 'Rosana Poiani',
+    role: 'Psicóloga, Educadora e Embaixadora',
+    text: 'Ao longo desses anos, estudar educação parental ampliou meu olhar como psicóloga e educadora, mas, principalmente, me transformou como pessoa. Foi um processo profundo de autoconhecimento que me ensinou que educar não é sobre controle, e sim sobre consciência, vínculo e responsabilidade emocional.\n\nVivemos em uma sociedade cada vez mais reativa e distante do diálogo. A educação parental surge como um caminho possível para resgatar o respeito, a empatia e a humanidade dentro das famílias.\n\nSer embaixadora deste congresso é motivo de imenso orgulho. Representar um movimento que convida adultos a olharem primeiro para si é reafirmar meu compromisso com relações mais saudáveis. A educação parental muda pessoas – e pessoas transformadas mudam o mundo.'
+  }
 ];
 
 function Heading() {
@@ -66,7 +84,8 @@ export default function Section16() {
 
   return (
     <section className="bg-[#fff6ee] flex flex-col items-center pt-[32px] pb-[32px] md:pb-[64px] px-4 md:px-[30px] relative w-full" id="depoimentos">
-      <style dangerouslySetInnerHTML={{__html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         .hide-scrollbar::-webkit-scrollbar {
           display: none;
         }
@@ -99,9 +118,9 @@ export default function Section16() {
         {/* ============================== */}
         {/* CARROSSEL NATIVO UNIFICADO */}
         {/* ============================== */}
-        <div 
+        <div
           ref={scrollRef}
-          className="flex overflow-x-auto snap-x snap-mandatory gap-6 lg:gap-8 w-[calc(100%+32px)] lg:w-full -mx-4 lg:mx-0 px-4 lg:px-0 relative pb-4 lg:pb-2 hide-scrollbar items-stretch"
+          className="flex overflow-x-auto snap-x snap-mandatory gap-6 lg:gap-8 w-[calc(100%+32px)] -mx-4 px-4 relative py-4 -my-4 hide-scrollbar items-stretch"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {testimonials.map((testimonial) => (
