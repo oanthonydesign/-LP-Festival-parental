@@ -74,7 +74,7 @@ const allSpeakers: Speaker[] = [
         id: 7,
         name: "Dr. Wimer Bottura",
         description: "Psiquiatra especialista em relações familiares",
-        image: "/images/wimerb.webp",
+        image: "/images/drwimerb.webp",
         instagram: "https://www.instagram.com/wimerbotturajuniorpsiquiatra/",
         linkedin: "https://www.linkedin.com/in/dr-wimer-bottura-junior/",
         bgColor: "#79c3ab",

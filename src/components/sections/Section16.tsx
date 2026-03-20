@@ -28,7 +28,7 @@ const testimonials: Testimonial[] = [
     name: 'Rosana Poiani',
     role: 'Psicóloga, Educadora e Embaixadora',
     text: 'Ao longo desses anos, estudar educação parental ampliou meu olhar como psicóloga e educadora, mas, principalmente, me transformou como pessoa. Foi um processo profundo de autoconhecimento que me ensinou que educar não é sobre controle, e sim sobre consciência, vínculo e responsabilidade emocional.\n\nVivemos em uma sociedade cada vez mais reativa e distante do diálogo. A educação parental surge como um caminho possível para resgatar o respeito, a empatia e a humanidade dentro das famílias.\n\nSer embaixadora deste congresso é motivo de imenso orgulho. Representar um movimento que convida adultos a olharem primeiro para si é reafirmar meu compromisso com relações mais saudáveis. A educação parental muda pessoas – e pessoas transformadas mudam o mundo.'
-  }
+  },
   {
     image: '/images/testimonial/andré.webp',
     name: 'Andre Henrique Lott',
@@ -123,9 +123,9 @@ export default function Section16() {
           className="flex overflow-x-auto snap-x snap-mandatory gap-6 lg:gap-8 w-[calc(100%+32px)] -mx-4 px-4 relative py-4 -my-4 hide-scrollbar items-stretch"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          {testimonials.map((testimonial) => (
+          {testimonials.map((testimonial, index) => (
             <div
-              key={testimonial.name}
+              key={`${testimonial.name}-${index}`}
               className="bg-white border-2 border-[#191919] rounded-[24px] shadow-[6px_6px_0px_0px_#191919] p-6 flex flex-col items-start text-left gap-4 hover:-translate-y-[4px] transition-all duration-300 h-auto shrink-0 snap-center lg:snap-start
                 w-[85vw] sm:w-[400px] lg:w-[calc(33.333%-21.33px)]"
             >

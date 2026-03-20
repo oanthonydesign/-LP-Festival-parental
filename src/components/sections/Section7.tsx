@@ -8,8 +8,8 @@ import svgPaths from "@/components/svg/svg-jj8ggrv19k";
 gsap.registerPlugin(ScrollTrigger);
 
 const imgImg90811 = "/images/banner 01.webp";
-const imgCep2921 = "/images/banner 02.webp";
-const imgImg54721 = "/images/banner 03.webp";
+const imgCep2921 = "/images/banner02.webp";
+const imgImg54721 = "/images/banner03.webp";
 const imgStoryImage = "/images/banner 04.webp";
 const imgImg91501 = "/images/banner 01.webp";
 
