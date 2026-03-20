@@ -48,6 +48,7 @@ function Heading() {
 export default function Section16() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [startIndex, setStartIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   // Navegação Mobile (Scroll Nativo)
   const handleMobileNext = () => {
@@ -62,13 +63,22 @@ export default function Section16() {
     }
   };
 
-  // Navegação Desktop (State)
+  // Navegação Desktop (State + Animação)
+  const changeDesktopPage = (newIndexUpdater: (prev: number) => number) => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setTimeout(() => {
+      setStartIndex(newIndexUpdater);
+      setIsAnimating(false);
+    }, 250); // Tempo do fade-out antes de trocar os dados
+  };
+
   const handleDesktopNext = () => {
-    setStartIndex((prev) => (prev + 1) % testimonials.length);
+    changeDesktopPage((prev) => (prev + 1) % testimonials.length);
   };
 
   const handleDesktopPrev = () => {
-    setStartIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    changeDesktopPage((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
   // Rotaciona o array de depoimentos com base no startIndex para Desktop
@@ -113,7 +123,7 @@ export default function Section16() {
         {/* ======================= */}
         {/* LAYOUT DESKTOP ORIGINAL */}
         {/* ======================= */}
-        <div className="hidden lg:grid grid-cols-3 gap-8 w-full relative">
+        <div className={`hidden lg:grid grid-cols-3 gap-8 w-full relative transition-opacity duration-300 ease-in-out ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
           {visibleTestimonials.map((testimonial) => (
             <div
               key={testimonial.name}
