@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Testimonial {
@@ -46,58 +46,46 @@ function Heading() {
 }
 
 export default function Section16() {
-  const [startIndex, setStartIndex] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const handleNext = () => {
-    setStartIndex((prev) => (prev + 1) % testimonials.length);
+    if (scrollRef.current) {
+      // Avança a largura aproximada de um card no mobile/tablet
+      scrollRef.current.scrollBy({ left: 320, behavior: 'smooth' });
+    }
   };
 
   const handlePrev = () => {
-    setStartIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -320, behavior: 'smooth' });
+    }
   };
-
-  // Rotaciona o array de depoimentos com base no startIndex
-  const visibleTestimonials = [
-    testimonials[startIndex % testimonials.length],
-    testimonials[(startIndex + 1) % testimonials.length],
-    testimonials[(startIndex + 2) % testimonials.length],
-  ];
 
   return (
     <section className="bg-[#fff6ee] flex flex-col items-center pt-[32px] pb-[32px] md:pb-[64px] px-4 md:px-[30px] relative w-full overflow-hidden" id="depoimentos">
+      <style dangerouslySetInnerHTML={{__html: `
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      `}} />
       <div className="w-full max-w-[1280px] flex flex-col gap-8 md:gap-12 relative">
 
-        {/* Topo: Título + Botões de Navegação */}
+        {/* Topo: Título */}
         <div className="flex flex-col md:flex-row items-center md:items-end justify-between w-full gap-6">
           <Heading />
-
-          {/* Botões de Navegação */}
-          <div className="flex gap-4">
-            <button
-              onClick={handlePrev}
-              className="bg-[#fff6ef] border-2 border-[#191919] p-3 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1.5px] hover:shadow-[1.5px_1.5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_#191919] transition-all cursor-pointer"
-              aria-label="Depoimento anterior"
-            >
-              <ChevronLeft size={24} className="text-[#191919]" />
-            </button>
-            <button
-              onClick={handleNext}
-              className="bg-[#f7a73c] border-2 border-[#191919] p-3 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1.5px] hover:shadow-[1.5px_1.5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_#191919] transition-all cursor-pointer"
-              aria-label="Próximo depoimento"
-            >
-              <ChevronRight size={24} className="text-[#191919]" />
-            </button>
-          </div>
         </div>
 
-        {/* Grid de Depoimentos (Carrossel Circular) */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 w-full relative">
-          {visibleTestimonials.map((testimonial, index) => (
+        {/* Grid de Depoimentos (Carrossel Nativo) */}
+        <div 
+          ref={scrollRef}
+          className="flex overflow-x-auto snap-x snap-mandatory gap-6 md:gap-8 w-[calc(100%+32px)] md:w-full -mx-4 md:mx-0 px-4 md:px-0 relative pb-4 hide-scrollbar items-stretch"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {testimonials.map((testimonial) => (
             <div
               key={testimonial.name}
-              className={`bg-white border-2 border-[#191919] rounded-[24px] shadow-[6px_6px_0px_0px_#191919] p-6 flex flex-col items-start text-left gap-4 hover:translate-y-[-4px] transition-all duration-300 h-full
-                ${index > 0 ? 'hidden lg:flex' : 'flex'} 
-              `}
+              className="bg-white border-2 border-[#191919] rounded-[24px] shadow-[6px_6px_0px_0px_#191919] p-6 flex flex-col items-start text-left gap-4 hover:translate-y-[-4px] transition-all duration-300 h-auto shrink-0 snap-center lg:snap-start
+                w-[85vw] sm:w-[400px] lg:w-[calc(33.333%-22px)]"
             >
               <p className="font-dm-sans text-[#191919] text-sm md:text-base leading-relaxed whitespace-pre-line flex-grow">
                 {testimonial.text}
@@ -124,8 +112,26 @@ export default function Section16() {
               </div>
             </div>
           ))}
-
         </div>
+
+        {/* Botões de Navegação (Abaixo no mobile e desktop) */}
+        <div className="flex justify-center md:justify-end gap-4 w-full mt-2 lg:-mt-4 relative z-10 px-2">
+          <button
+            onClick={handlePrev}
+            className="bg-[#fff6ef] border-2 border-[#191919] p-3 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1.5px] hover:shadow-[1.5px_1.5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_#191919] transition-all cursor-pointer"
+            aria-label="Depoimento anterior"
+          >
+            <ChevronLeft size={24} className="text-[#191919]" />
+          </button>
+          <button
+            onClick={handleNext}
+            className="bg-[#f7a73c] border-2 border-[#191919] p-3 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1.5px] hover:shadow-[1.5px_1.5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_#191919] transition-all cursor-pointer"
+            aria-label="Próximo depoimento"
+          >
+            <ChevronRight size={24} className="text-[#191919]" />
+          </button>
+        </div>
+
       </div>
     </section>
   );
