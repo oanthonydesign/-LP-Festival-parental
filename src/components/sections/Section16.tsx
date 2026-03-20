@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useState, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Testimonial {
@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [
 
 function Heading() {
   return (
-    <div className="flex flex-col items-center md:items-start relative shrink-0 w-full md:w-auto" data-name="Heading">
+    <div className="flex flex-col items-center md:items-start relative shrink-0 w-full lg:w-auto" data-name="Heading">
       <div className="flex flex-col font-sugar-peachy justify-center leading-[0.9] md:leading-[0.8] not-italic relative shrink-0 text-[#ef7d25] text-[42px] md:text-[72px] w-full whitespace-pre-wrap text-center md:text-left">
         <p className="mb-0">Quem já viveu</p>
         <p>essa experiência</p>
@@ -47,19 +47,36 @@ function Heading() {
 
 export default function Section16() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [startIndex, setStartIndex] = useState(0);
 
-  const handleNext = () => {
+  // Navegação Mobile (Scroll Nativo)
+  const handleMobileNext = () => {
     if (scrollRef.current) {
-      // Avança a largura aproximada de um card no mobile/tablet
       scrollRef.current.scrollBy({ left: 320, behavior: 'smooth' });
     }
   };
 
-  const handlePrev = () => {
+  const handleMobilePrev = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({ left: -320, behavior: 'smooth' });
     }
   };
+
+  // Navegação Desktop (State)
+  const handleDesktopNext = () => {
+    setStartIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const handleDesktopPrev = () => {
+    setStartIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  // Rotaciona o array de depoimentos com base no startIndex para Desktop
+  const visibleTestimonials = [
+    testimonials[startIndex % testimonials.length],
+    testimonials[(startIndex + 1) % testimonials.length],
+    testimonials[(startIndex + 2) % testimonials.length],
+  ];
 
   return (
     <section className="bg-[#fff6ee] flex flex-col items-center pt-[32px] pb-[32px] md:pb-[64px] px-4 md:px-[30px] relative w-full overflow-hidden" id="depoimentos">
@@ -70,24 +87,39 @@ export default function Section16() {
       `}} />
       <div className="w-full max-w-[1280px] flex flex-col gap-8 md:gap-12 relative">
 
-        {/* Topo: Título */}
-        <div className="flex flex-col md:flex-row items-center md:items-end justify-between w-full gap-6">
+        {/* Topo: Título + Botões de Navegação (Desktop apenas) */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between w-full gap-6">
           <Heading />
+
+          {/* Botões de Navegação - Desktop */}
+          <div className="hidden lg:flex gap-4">
+            <button
+              onClick={handleDesktopPrev}
+              className="bg-[#fff6ef] border-2 border-[#191919] p-3 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1.5px] hover:shadow-[1.5px_1.5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_#191919] transition-all cursor-pointer"
+              aria-label="Depoimento anterior"
+            >
+              <ChevronLeft size={24} className="text-[#191919]" />
+            </button>
+            <button
+              onClick={handleDesktopNext}
+              className="bg-[#f7a73c] border-2 border-[#191919] p-3 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1.5px] hover:shadow-[1.5px_1.5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_#191919] transition-all cursor-pointer"
+              aria-label="Próximo depoimento"
+            >
+              <ChevronRight size={24} className="text-[#191919]" />
+            </button>
+          </div>
         </div>
 
-        {/* Grid de Depoimentos (Carrossel Nativo) */}
-        <div 
-          ref={scrollRef}
-          className="flex overflow-x-auto snap-x snap-mandatory gap-6 md:gap-8 w-[calc(100%+32px)] md:w-full -mx-4 md:mx-0 px-4 md:px-0 relative pb-4 hide-scrollbar items-stretch"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        >
-          {testimonials.map((testimonial) => (
+        {/* ======================= */}
+        {/* LAYOUT DESKTOP ORIGINAL */}
+        {/* ======================= */}
+        <div className="hidden lg:grid grid-cols-3 gap-8 w-full relative">
+          {visibleTestimonials.map((testimonial) => (
             <div
               key={testimonial.name}
-              className="bg-white border-2 border-[#191919] rounded-[24px] shadow-[6px_6px_0px_0px_#191919] p-6 flex flex-col items-start text-left gap-4 hover:translate-y-[-4px] transition-all duration-300 h-auto shrink-0 snap-center lg:snap-start
-                w-[85vw] sm:w-[400px] lg:w-[calc(33.333%-22px)]"
+              className="bg-white border-2 border-[#191919] rounded-[24px] shadow-[6px_6px_0px_0px_#191919] p-6 flex flex-col items-start text-left gap-4 hover:translate-y-[-4px] transition-all duration-300 h-full"
             >
-              <p className="font-dm-sans text-[#191919] text-sm md:text-base leading-relaxed whitespace-pre-line flex-grow">
+              <p className="font-dm-sans text-[#191919] text-base leading-relaxed whitespace-pre-line flex-grow">
                 {testimonial.text}
               </p>
 
@@ -100,7 +132,7 @@ export default function Section16() {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <h3 className="font-sugar-peachy text-[#ef7d25] text-2xl md:text-2xl leading-none">
+                  <h3 className="font-sugar-peachy text-[#ef7d25] text-2xl leading-none">
                     {testimonial.name}
                   </h3>
                   {testimonial.role && (
@@ -114,17 +146,57 @@ export default function Section16() {
           ))}
         </div>
 
-        {/* Botões de Navegação (Abaixo no mobile e desktop) */}
-        <div className="flex justify-center md:justify-end gap-4 w-full mt-2 lg:-mt-4 relative z-10 px-2">
+        {/* ======================= */}
+        {/* LAYOUT MOBILE CARROSSEL */}
+        {/* ======================= */}
+        <div 
+          ref={scrollRef}
+          className="flex lg:hidden overflow-x-auto snap-x snap-mandatory gap-6 w-[calc(100%+32px)] -mx-4 px-4 relative pb-4 hide-scrollbar items-stretch"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {testimonials.map((testimonial) => (
+            <div
+              key={testimonial.name}
+              className="bg-white border-2 border-[#191919] rounded-[24px] shadow-[6px_6px_0px_0px_#191919] p-6 flex flex-col items-start text-left gap-4 transition-all duration-300 h-auto shrink-0 snap-center w-[85vw] sm:w-[400px]"
+            >
+              <p className="font-dm-sans text-[#191919] text-sm sm:text-base leading-relaxed whitespace-pre-line flex-grow">
+                {testimonial.text}
+              </p>
+
+              <div className="flex items-center gap-4 mt-auto pt-2">
+                <div className="w-16 h-16 rounded-full border-2 border-[#191919] overflow-hidden shadow-[4px_4px_0px_0px_#191919] bg-[#f1f1f1] shrink-0">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <h3 className="font-sugar-peachy text-[#ef7d25] text-2xl leading-none">
+                    {testimonial.name}
+                  </h3>
+                  {testimonial.role && (
+                    <span className="font-dm-sans font-medium text-[#4c4d4f] text-sm mt-1">
+                      {testimonial.role}
+                    </span>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Botões de Navegação - Mobile (Abaixo do carrossel) */}
+        <div className="flex lg:hidden justify-center gap-4 w-full mt-2 relative z-10 px-2">
           <button
-            onClick={handlePrev}
+            onClick={handleMobilePrev}
             className="bg-[#fff6ef] border-2 border-[#191919] p-3 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1.5px] hover:shadow-[1.5px_1.5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_#191919] transition-all cursor-pointer"
             aria-label="Depoimento anterior"
           >
             <ChevronLeft size={24} className="text-[#191919]" />
           </button>
           <button
-            onClick={handleNext}
+            onClick={handleMobileNext}
             className="bg-[#f7a73c] border-2 border-[#191919] p-3 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1.5px] hover:shadow-[1.5px_1.5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_#191919] transition-all cursor-pointer"
             aria-label="Próximo depoimento"
           >
