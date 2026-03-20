@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import svgPaths from "@/components/svg/svg-paths";
+import { Globe } from "lucide-react";
 
 type Speaker = {
     id: number;
@@ -9,7 +10,8 @@ type Speaker = {
     description: string;
     image: string;
     instagram: string;
-    linkedin: string;
+    linkedin?: string;
+    website?: string;
     bgColor: string;
 };
 
@@ -145,8 +147,8 @@ const allSpeakers: Speaker[] = [
         name: "Dra. Elaine Pádua",
         description: "Nutricionista mestre em Ciências e especialista em saúde materno-infantil",
         image: "/images/elainep.webp",
-        instagram: "https://www.instagram.com/euivanamoreira?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-        linkedin: "https://www.linkedin.com/in/ivana-moreira-679489ba/",
+        instagram: "https://www.instagram.com/draelainepadua/",
+        website: "https://linktr.ee/draelainepadua_",
         bgColor: "#f7a73c",
     },
 ];
@@ -163,7 +165,10 @@ function UilCalendar() {
     );
 }
 
-function SocialIcons({ type }: { type: "linkedin" | "instagram" }) {
+function SocialIcons({ type }: { type: "linkedin" | "instagram" | "website" }) {
+    if (type === "website") {
+        return <Globe className="w-full h-full text-current" strokeWidth={2} />
+    }
     return (
         <div className="relative shrink-0 size-[8.842px]" data-name="Social Icons">
             <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 8.84211 8.84211">
@@ -189,7 +194,7 @@ function SocialIcons({ type }: { type: "linkedin" | "instagram" }) {
     );
 }
 
-function SocialIconButton({ type, href }: { type: "linkedin" | "instagram"; href: string }) {
+function SocialIconButton({ type, href }: { type: "linkedin" | "instagram" | "website"; href?: string }) {
     if (!href) return null;
     return (
         <a
@@ -234,7 +239,8 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
 
                         {/* Social Icons */}
                         <div className="content-stretch flex gap-[8px] items-start justify-center relative shrink-0">
-                            <SocialIconButton type="linkedin" href={speaker.linkedin} />
+                            {speaker.linkedin && <SocialIconButton type="linkedin" href={speaker.linkedin} />}
+                            {speaker.website && <SocialIconButton type="website" href={speaker.website} />}
                             <SocialIconButton type="instagram" href={speaker.instagram} />
                         </div>
                     </div>
