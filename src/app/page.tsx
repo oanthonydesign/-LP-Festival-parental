@@ -23,7 +23,7 @@ import SectionSpecialGuests from '@/components/sections/SectionSpecialGuests';
 import StickyBottomBar from '@/components/sections/StickyBottomBar';
 import WhatsAppButton from '@/components/sections/WhatsAppButton';
 
-const SHOW_STICKY_BAR = true;
+const SHOW_STICKY_BAR = false;
 
 export default function Home() {
     return (
