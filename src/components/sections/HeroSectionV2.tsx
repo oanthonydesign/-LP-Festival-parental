@@ -231,7 +231,7 @@ function HeroSpeakerCard({ speaker }: { speaker: Speaker }) {
 
 export default function HeroSectionV2() {
     return (
-        <section className="bg-[#fff6ee] relative w-full h-auto lg:h-[1050px] overflow-hidden pb-0 lg:pb-0" id="hero" data-name="Section - 1 V2">
+        <section className="bg-[#fff6ee] relative w-full h-auto lg:h-[1120px] overflow-hidden pb-32 lg:pb-0" id="hero" data-name="Section - 1 V2">
             {/* --- Background Graphics --- */}
 
             <div className="hidden lg:flex absolute lg:top-[-150px] lg:w-[1800px] lg:h-[1800px] items-center justify-center pointer-events-none z-0"

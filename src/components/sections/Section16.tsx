@@ -12,7 +12,7 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    image: '/images/testimonial/andré.webp',
+    image: '/images/testimonial/andre.webp',
     name: 'Andre Henrique Lott',
     role: 'Pai e Médico Pediatra',
     text: 'Sou pediatra há 20 anos e a educação parental entrou na minha vida quando percebi a importância de quebrar padrões e evitar a perpetuação de traumas. Desde então, minha prática clínica mudou completamente e hoje não consigo mais desvincular a pediatria desse olhar.\n\nO festival é o evento que mais aguardo no ano pela qualidade do conhecimento e das trocas. Ser embaixador pelo terceiro ano reforça meu orgulho em fazer parte de um movimento que pode transformar o futuro das nossas crianças.'
@@ -30,7 +30,7 @@ const testimonials: Testimonial[] = [
     text: 'Estudar educação parental transformou não só minha atuação como psicóloga e educadora, mas também quem eu sou. Foi um processo profundo que me mostrou que educar não é sobre controle, e sim sobre consciência, vínculo e responsabilidade emocional.\n\nSer embaixadora é representar um movimento que convida adultos a olharem para si e construírem relações mais saudáveis. A educação parental transforma pessoas, e pessoas transformadas mudam o mundo.'
   },
   {
-    image: '/images/testimonial/andré.webp',
+    image: '/images/testimonial/andre.webp',
     name: 'Andre Henrique Lott',
     role: 'Pai e Médico Pediatra',
     text: 'Sou pediatra há 20 anos e a educação parental entrou na minha vida quando percebi a importância de quebrar padrões e evitar a perpetuação de traumas. Desde então, minha prática clínica mudou completamente e hoje não consigo mais desvincular a pediatria desse olhar.\n\nO festival é o evento que mais aguardo no ano pela qualidade do conhecimento e das trocas. Ser embaixador pelo terceiro ano reforça meu orgulho em fazer parte de um movimento que pode transformar o futuro das nossas crianças.'

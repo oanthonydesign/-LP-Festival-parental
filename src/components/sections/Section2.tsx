@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 
 function BackgroundCurves() {
     return (
-        <div className="absolute top-[700px] lg:top-[60px] left-0 w-full z-[1] pointer-events-none select-none opacity-100 overflow-hidden lg:overflow-visible">
+        <div className="absolute top-[520px] lg:top-[60px] left-0 w-full z-[1] pointer-events-none select-none opacity-100 overflow-hidden lg:overflow-visible">
             <img
                 src="/images/grafismo_wave.svg"
                 alt="Grafismo de ondas"
