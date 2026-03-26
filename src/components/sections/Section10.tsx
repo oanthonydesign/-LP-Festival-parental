@@ -83,7 +83,7 @@ function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng() {
 
 function Texts() {
   return (
-    <div className="backdrop-blur-[2.5px] bg-[rgba(0,0,0,0.56)] md:h-[176px] relative shrink-0 w-full" data-name="Texts">
+    <div className="backdrop-blur-[2.5px] bg-[rgba(0,0,0,0.56)] md:h-[220px] relative shrink-0 w-full" data-name="Texts">
       <div className="content-stretch flex flex-col gap-[12px] items-start px-4 md:px-[24px] py-6 md:py-[40px] relative w-full">
         <CreatorTalks />
         <PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataformasTecnologia />
@@ -146,7 +146,7 @@ function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng1() {
 
 function Texts1() {
   return (
-    <div className="backdrop-blur-[2.5px] bg-[rgba(0,0,0,0.56)] md:h-[176px] relative shrink-0 w-full" data-name="Texts">
+    <div className="backdrop-blur-[2.5px] bg-[rgba(0,0,0,0.56)] md:h-[220px] relative shrink-0 w-full" data-name="Texts">
       <div className="content-stretch flex flex-col gap-[12px] items-start px-4 md:px-[24px] py-6 md:py-[40px] relative w-full">
         <CreatorTalks1 />
         <PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataformasTecnologia1 />
@@ -209,7 +209,7 @@ function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng2() {
 
 function Texts2() {
   return (
-    <div className="backdrop-blur-[2.5px] bg-[rgba(0,0,0,0.56)] md:h-[176px] relative shrink-0 w-full" data-name="Texts">
+    <div className="backdrop-blur-[2.5px] bg-[rgba(0,0,0,0.56)] md:h-[220px] relative shrink-0 w-full" data-name="Texts">
       <div className="content-stretch flex flex-col gap-[12px] items-start px-4 md:px-[24px] py-6 md:py-[40px] relative w-full">
         <CreatorTalks2 />
         <PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataformasTecnologia2 />

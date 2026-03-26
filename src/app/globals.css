@@ -34,6 +34,17 @@ body {
     --color-curve-blue: #2260A1;
     --color-curve-orange: #F7A73C;
     --color-curve-green: #2DAA96;
+
+    --animate-bounce-slow: bounce-slow 4s ease-in-out infinite;
+
+    @keyframes bounce-slow {
+        0%, 100% {
+            transform: translateY(0) rotate(12deg);
+        }
+        50% {
+            transform: translateY(-10px) rotate(12deg);
+        }
+    }
 }
 
 /* Utilitários personalizados se necessário */

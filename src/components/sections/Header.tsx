@@ -80,9 +80,10 @@ export default function Header() {
                     <nav className="hidden md:flex items-center gap-[32px]">
                         <div className="flex items-center gap-[8px] p-[10px]">
                             {[
+                                { name: "Atrações", href: "/#convidados-especiais" },
                                 { name: "Palestrantes", href: "/#palestrantes" },
-                                { name: "Programação do Festival", href: "/#programacao" },
-                                { name: "Atrações", href: "/#convidados-especiais" }
+                                { name: "Programação", href: "/#programacao" },
+                                { name: "O Festival", href: "/#festival" }
                             ].map((item) => (
                                 <a
                                     key={item.name}
@@ -126,9 +127,10 @@ export default function Header() {
                 `}>
                     <div className="flex flex-col px-6 gap-6 items-center">
                         {[
-                            { name: "Palestrantes", href: "/#palestrantes" },
-                            { name: "Programação do Festival", href: "/#programacao" },
                             { name: "Atrações", href: "/#convidados-especiais" },
+                            { name: "Palestrantes", href: "/#palestrantes" },
+                            { name: "Programação", href: "/#programacao" },
+                            { name: "O Festival", href: "/#festival" },
                             { name: "Seja patrocinador", href: "/#patrocinador" }
                         ].map((item) => (
                             <a

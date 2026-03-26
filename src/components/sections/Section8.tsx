@@ -29,7 +29,8 @@ function Card({
     heading,
     subtext,
     image,
-    id
+    id,
+    badgeText
 }: {
     bgColor: string;
     textColor: string;
@@ -37,9 +38,21 @@ function Card({
     subtext: string;
     image: string;
     id?: string;
+    badgeText?: string;
 }) {
     return (
-        <div className="flex flex-col items-start w-full md:w-1/2" id={id}>
+        <div className="flex flex-col items-start w-full md:w-1/2 relative group" id={id}>
+            {badgeText && (
+                <div className="absolute -top-6 -right-4 md:-right-8 bg-[#f7a73c] border-2 border-[#191919] rounded-full w-[100px] h-[100px] md:w-[120px] md:h-[120px] flex items-center justify-center rotate-12 shadow-[4px_4px_0px_0px_#191919] z-30 animate-bounce-slow">
+                    <span className="font-sugar-peachy text-[#191919] text-[16px] md:text-[20px] text-center leading-[0.9]">
+                        {badgeText.split(' ').map((word, i) => (
+                            <React.Fragment key={i}>
+                                {word}<br />
+                            </React.Fragment>
+                        ))}
+                    </span>
+                </div>
+            )}
             <CloseBarMac />
             <div className={`flex-1 flex flex-col items-center p-6 gap-6 relative rounded-bl-[16px] rounded-br-[16px] shadow-[7px_7px_0px_0px_#191919] shrink-0 w-full border-b-2 border-l-2 border-r-2 border-[#191919] border-solid`} style={{ backgroundColor: bgColor }}>
                 <div className={`flex flex-col gap-6 items-center text-center ${textColor}`}>
@@ -85,8 +98,9 @@ export default function Section8() {
                         bgColor="#3399CC"
                         textColor="text-[#fff6ef]"
                         heading="Para profissionais que trabalham com famílias"
-                        subtext="Dois dias de aprofundamento técnico para quem enfrenta a complexidade das relações familiares na prática, com base científica, troca qualificada e caminhos para transformar teoria em intervenção real."
+                        subtext="Dois dias de aprofundamento técnico para quem enfrenta a complexidade das relações familiares na prática, com base científica, troca qualificada e caminhos para transformar teoria em intervenção real com famílias."
                         image={imgProfissionais}
+                        badgeText="+1500 profissionais"
                     />
                     <Card
                         id="pais"

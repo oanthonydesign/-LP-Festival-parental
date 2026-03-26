@@ -28,7 +28,7 @@ export default function Section2() {
     };
 
     return (
-        <section className="bg-[#fff6ef] w-full flex flex-col items-center px-4 md:px-0 pb-[56px] pt-[56px] relative isolate overflow-hidden" id="festival" data-name="Section - 2">
+        <section className="bg-[#fff6ef] w-full flex flex-col items-center px-4 md:px-0 pb-[56px] pt-[56px] relative isolate overflow-hidden" id="contexto" data-name="Section - 2">
             <BackgroundCurves />
 
             <div className="layout-container flex flex-col gap-[48px] items-center relative z-10 w-full">

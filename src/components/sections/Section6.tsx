@@ -258,7 +258,7 @@ function PassportCard({ data }: { data: PassportData }) {
           {currentBenefits.map((benefit, idx) => (
             <div key={idx} className="flex gap-3 items-center">
               <StarIcon />
-              <p className={`font-dm-sans text-[14px] leading-tight ${data.benefitTextColor}`}>
+              <p className={`font-dm-sans text-[16px] leading-tight ${data.benefitTextColor}`}>
                 {benefit}
               </p>
             </div>

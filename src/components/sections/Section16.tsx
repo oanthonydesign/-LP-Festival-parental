@@ -15,37 +15,37 @@ const testimonials: Testimonial[] = [
     image: '/images/testimonial/andré.webp',
     name: 'Andre Henrique Lott',
     role: 'Pai e Médico Pediatra',
-    text: 'Sou pediatra há 20 anos. A educação parental apareceu na minha vida quando minha filha tinha 3 anos e percebi a necessidade de estudar para quebrar padrões e evitar a perpetuação de traumas geracionais.\n\nA minha prática clínica mudou após eu embarcar no mundo da parentalidade. Utilizo este conhecimento em todas as minhas consultas e acredito que não tem mais como desvencilhar a pediatria da educação parental. É preciso deixar a maternidade mais leve.\n\nO festival de educação parental é o meu evento mais aguardado do ano pela quantidade de conhecimento e trocas que ali ocorrem. Ser embaixador pelo 3º ano me enche de orgulho por saber que faço parte de um movimento que pode mudar o futuro das nossas crianças.'
+    text: 'Sou pediatra há 20 anos e a educação parental entrou na minha vida quando percebi a importância de quebrar padrões e evitar a perpetuação de traumas. Desde então, minha prática clínica mudou completamente e hoje não consigo mais desvincular a pediatria desse olhar.\n\nO festival é o evento que mais aguardo no ano pela qualidade do conhecimento e das trocas. Ser embaixador pelo terceiro ano reforça meu orgulho em fazer parte de um movimento que pode transformar o futuro das nossas crianças.'
   },
   {
     image: '/images/testimonial/susana.webp',
     name: 'Susana Martins',
     role: 'Educadora Parental e Embaixadora',
-    text: '2025 foi o ano em que cumpri o sonho de estar presente no 6º Congresso Internacional de Educação Parental e foi uma experiência simplesmente maravilhosa.\n\nEm 2024 assisti ao congresso online e fui vibrando com tudo o que acontecia no presencial. Tinha amigas lá, partilhando comigo a energia e a alegria, e senti um enorme desejo de estar presente no ano seguinte. Comecei a criar condições para que isso acontecesse e, quando percebi, já estava vivendo essa experiência.\n\nEstar no meio de educadoras parentais é mergulhar numa bolha de amor. Foram dias de troca, conexão e presença. Chorei ao me despedir, mas já tenho meu bilhete de embaixadora. Deixo o convite para que se juntem a nós e sintam essa energia.'
+    text: '2025 foi o ano em que realizei o sonho de estar presente no Congresso Internacional de Educação Parental, depois de acompanhar tudo à distância e desejar viver essa experiência de perto.\n\nEstar entre educadoras parentais é mergulhar numa atmosfera de troca, conexão e afeto. Foram dias intensos e emocionantes, que deixaram saudade e a certeza de que quero voltar e reviver tudo novamente.'
   },
   {
     image: '/images/testimonial/rosana.webp',
     name: 'Rosana Poiani',
     role: 'Psicóloga, Educadora e Embaixadora',
-    text: 'Ao longo desses anos, estudar educação parental ampliou meu olhar como psicóloga e educadora, mas, principalmente, me transformou como pessoa. Foi um processo profundo de autoconhecimento que me ensinou que educar não é sobre controle, e sim sobre consciência, vínculo e responsabilidade emocional.\n\nVivemos em uma sociedade cada vez mais reativa e distante do diálogo. A educação parental surge como um caminho possível para resgatar o respeito, a empatia e a humanidade dentro das famílias.\n\nSer embaixadora deste congresso é motivo de imenso orgulho. Representar um movimento que convida adultos a olharem primeiro para si é reafirmar meu compromisso com relações mais saudáveis. A educação parental muda pessoas – e pessoas transformadas mudam o mundo.'
+    text: 'Estudar educação parental transformou não só minha atuação como psicóloga e educadora, mas também quem eu sou. Foi um processo profundo que me mostrou que educar não é sobre controle, e sim sobre consciência, vínculo e responsabilidade emocional.\n\nSer embaixadora é representar um movimento que convida adultos a olharem para si e construírem relações mais saudáveis. A educação parental transforma pessoas, e pessoas transformadas mudam o mundo.'
   },
   {
     image: '/images/testimonial/andré.webp',
     name: 'Andre Henrique Lott',
     role: 'Pai e Médico Pediatra',
-    text: 'Sou pediatra há 20 anos. A educação parental apareceu na minha vida quando minha filha tinha 3 anos e percebi a necessidade de estudar para quebrar padrões e evitar a perpetuação de traumas geracionais.\n\nA minha prática clínica mudou após eu embarcar no mundo da parentalidade. Utilizo este conhecimento em todas as minhas consultas e acredito que não tem mais como desvencilhar a pediatria da educação parental. É preciso deixar a maternidade mais leve.\n\nO festival de educação parental é o meu evento mais aguardado do ano pela quantidade de conhecimento e trocas que ali ocorrem. Ser embaixador pelo 3º ano me enche de orgulho por saber que faço parte de um movimento que pode mudar o futuro das nossas crianças.'
+    text: 'Sou pediatra há 20 anos e a educação parental entrou na minha vida quando percebi a importância de quebrar padrões e evitar a perpetuação de traumas. Desde então, minha prática clínica mudou completamente e hoje não consigo mais desvincular a pediatria desse olhar.\n\nO festival é o evento que mais aguardo no ano pela qualidade do conhecimento e das trocas. Ser embaixador pelo terceiro ano reforça meu orgulho em fazer parte de um movimento que pode transformar o futuro das nossas crianças.'
   },
   {
     image: '/images/testimonial/susana.webp',
     name: 'Susana Martins',
     role: 'Educadora Parental e Embaixadora',
-    text: '2025 foi o ano em que cumpri o sonho de estar presente no 6º Congresso Internacional de Educação Parental e foi uma experiência simplesmente maravilhosa.\n\nEm 2024 assisti ao congresso online e fui vibrando com tudo o que acontecia no presencial. Tinha amigas lá, partilhando comigo a energia e a alegria, e senti um enorme desejo de estar presente no ano seguinte. Comecei a criar condições para que isso acontecesse e, quando percebi, já estava vivendo essa experiência.\n\nEstar no meio de educadoras parentais é mergulhar numa bolha de amor. Foram dias de troca, conexão e presença. Chorei ao me despedir, mas já tenho meu bilhete de embaixadora. Deixo o convite para que se juntem a nós e sintam essa energia.'
+    text: '2025 foi o ano em que realizei o sonho de estar presente no Congresso Internacional de Educação Parental, depois de acompanhar tudo à distância e desejar viver essa experiência de perto.\n\nEstar entre educadoras parentais é mergulhar numa atmosfera de troca, conexão e afeto. Foram dias intensos e emocionantes, que deixaram saudade e a certeza de que quero voltar e reviver tudo novamente.'
   },
   {
     image: '/images/testimonial/rosana.webp',
     name: 'Rosana Poiani',
     role: 'Psicóloga, Educadora e Embaixadora',
-    text: 'Ao longo desses anos, estudar educação parental ampliou meu olhar como psicóloga e educadora, mas, principalmente, me transformou como pessoa. Foi um processo profundo de autoconhecimento que me ensinou que educar não é sobre controle, e sim sobre consciência, vínculo e responsabilidade emocional.\n\nVivemos em uma sociedade cada vez mais reativa e distante do diálogo. A educação parental surge como um caminho possível para resgatar o respeito, a empatia e a humanidade dentro das famílias.\n\nSer embaixadora deste congresso é motivo de imenso orgulho. Representar um movimento que convida adultos a olharem primeiro para si é reafirmar meu compromisso com relações mais saudáveis. A educação parental muda pessoas – e pessoas transformadas mudam o mundo.'
+    text: 'Estudar educação parental transformou não só minha atuação como psicóloga e educadora, mas também quem eu sou. Foi um processo profundo que me mostrou que educar não é sobre controle, e sim sobre consciência, vínculo e responsabilidade emocional.\n\nSer embaixadora é representar um movimento que convida adultos a olharem para si e construírem relações mais saudáveis. A educação parental transforma pessoas, e pessoas transformadas mudam o mundo.'
   }
 ];
 
