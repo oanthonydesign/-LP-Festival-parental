@@ -201,8 +201,8 @@ function HeroSpeakerCard({ speaker }: { speaker: Speaker }) {
     return (
         <div className="flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[24px]" style={{ backgroundColor: speaker.bgColor }}>
             <div className="flex flex-col items-center overflow-clip rounded-[inherit] size-full">
-                <div className="content-stretch flex flex-col gap-[12px] items-center pb-[12px] pt-[8px] px-[8px] relative w-full h-full">
-                    <div className="h-[261px] sm:h-[280px] lg:h-[300px] relative rounded-[24px] shrink-0 w-full overflow-hidden">
+                <div className="content-stretch flex flex-col gap-[8px] items-center pb-[12px] pt-[8px] px-[8px] relative w-full h-full">
+                    <div className="h-[180px] sm:h-[160px] lg:h-[200px] relative rounded-[24px] shrink-0 w-full overflow-hidden">
                         <img
                             alt={speaker.name}
                             className="absolute inset-0 w-full h-full object-cover pointer-events-none"
@@ -214,18 +214,12 @@ function HeroSpeakerCard({ speaker }: { speaker: Speaker }) {
 
                     <div className="content-stretch flex flex-col gap-[12px] items-center justify-between relative w-full h-full grow pb-2">
                         <div className="content-stretch flex flex-col gap-[4px] items-center leading-[0] relative shrink-0 text-[#191919] text-center whitespace-normal break-words px-2">
-                            <div className="flex flex-col font-sugar-peachy font-bold justify-center not-italic relative shrink-0 text-[28px] lg:text-[32px]">
+                            <div className="flex flex-col font-sugar-peachy font-bold justify-center not-italic relative shrink-0 text-[20px] lg:text-[24px]">
                                 <p className="leading-none">{speaker.name}</p>
                             </div>
-                            <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[16px] lg:text-[18px]" style={{ fontVariationSettings: "'opsz' 14" }}>
+                            <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[14px] lg:text-[16px]" style={{ fontVariationSettings: "'opsz' 14" }}>
                                 <p className="leading-[1.1] text-center">{speaker.description}</p>
                             </div>
-                        </div>
-
-                        <div className="content-stretch flex gap-[8px] items-center justify-center relative shrink-0 mt-auto">
-                            {speaker.linkedin && <SocialIconButton type="linkedin" href={speaker.linkedin} />}
-                            {speaker.website && <SocialIconButton type="website" href={speaker.website} />}
-                            <SocialIconButton type="instagram" href={speaker.instagram} />
                         </div>
                     </div>
                 </div>
@@ -237,7 +231,7 @@ function HeroSpeakerCard({ speaker }: { speaker: Speaker }) {
 
 export default function HeroSectionV2() {
     return (
-        <section className="bg-[#fff6ee] relative w-full h-auto lg:h-[1150px] overflow-hidden pb-12 lg:pb-0" id="hero" data-name="Section - 1 V2">
+        <section className="bg-[#fff6ee] relative w-full h-auto lg:h-[1050px] overflow-hidden pb-0 lg:pb-0" id="hero" data-name="Section - 1 V2">
             {/* --- Background Graphics --- */}
 
             <div className="hidden lg:flex absolute lg:top-[-150px] lg:w-[1800px] lg:h-[1800px] items-center justify-center pointer-events-none z-0"
@@ -323,7 +317,7 @@ export default function HeroSectionV2() {
             </div>
 
             {/* --- Lateral Carousel Container --- */}
-            <div className="relative mt-12 lg:mt-0 w-full lg:absolute lg:top-[680px] z-30 overflow-hidden flex flex-col pt-8 pb-12 lg:py-4">
+            <div className="relative mt-12 lg:mt-0 w-full lg:absolute lg:top-[680px] z-30 overflow-hidden flex flex-col pt-0 pb-0 lg:py-4">
                 <style dangerouslySetInnerHTML={{
                     __html: `
                     @keyframes scroll {
@@ -333,19 +327,14 @@ export default function HeroSectionV2() {
                     .animate-scroll {
                         animation: scroll 40s linear infinite;
                     }
-                    .animate-scroll:hover {
-                        animation-play-state: paused;
-                    }
                     `
                 }} />
-                
-                <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[calc(100%+80px)] h-auto block lg:hidden z-0 opacity-40 pointer-events-none">
-                    <img src="/images/grafismo_wave_mb.svg" alt="" className="w-full h-auto" />
-                </div>
 
-                <div className="flex w-max animate-scroll gap-[20px] px-2 relative z-10 items-stretch h-full min-h-[460px] md:min-h-[480px]">
+
+
+                <div className="flex w-max animate-scroll gap-[16px] px-2 relative z-10 items-stretch h-full min-h-[300px] md:min-h-[320px]">
                     {[...allSpeakers, ...allSpeakers].map((speaker, index) => (
-                        <div key={`${speaker.id}-${index}`} className="w-[80vw] sm:w-[350px] lg:w-[350px] shrink-0 self-stretch flex items-stretch py-2">
+                        <div key={`${speaker.id}-${index}`} className="w-[60vw] sm:w-[280px] lg:w-[280px] shrink-0 self-stretch flex items-stretch py-2">
                             <HeroSpeakerCard speaker={speaker} />
                         </div>
                     ))}

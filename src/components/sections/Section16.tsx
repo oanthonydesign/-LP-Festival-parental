@@ -52,11 +52,11 @@ const testimonials: Testimonial[] = [
 function Heading() {
   return (
     <div className="flex flex-col items-center md:items-start relative shrink-0 w-full lg:w-auto" data-name="Heading">
-      <div className="flex flex-col font-sugar-peachy justify-center leading-[0.9] md:leading-[0.8] not-italic relative shrink-0 text-[#ef7d25] text-[42px] md:text-[72px] w-full whitespace-pre-wrap text-center md:text-left">
+      <div className="flex flex-col font-sugar-peachy justify-center leading-[0.9] md:leading-[0.8] not-italic relative shrink-0 text-white text-[42px] md:text-[72px] w-full whitespace-pre-wrap text-center md:text-left">
         <p className="mb-0">Quem já viveu</p>
-        <p>essa experiência</p>
+        <p className="text-[#f7a73c]">essa experiência</p>
       </div>
-      <p className="font-dm-sans font-medium text-[#4c4d4f] text-[16px] md:text-[20px] text-center md:text-left leading-snug mt-4 max-w-[600px]">
+      <p className="font-dm-sans font-medium text-white/90 text-[16px] md:text-[20px] text-center md:text-left leading-snug mt-4 max-w-[600px]">
         O que pais, mães e profissionais dizem sobre o impacto do Festival Parental no dia a dia com os filhos.
       </p>
     </div>
@@ -83,7 +83,7 @@ export default function Section16() {
   };
 
   return (
-    <section className="bg-[#fff6ee] flex flex-col items-center pt-[32px] pb-[32px] md:pb-[64px] px-4 md:px-[30px] relative w-full" id="depoimentos">
+    <section className="bg-[#2260a1] flex flex-col items-center pt-[64px] pb-[64px] md:pb-[96px] px-4 md:px-[30px] relative w-full overflow-hidden" id="depoimentos">
       <style dangerouslySetInnerHTML={{
         __html: `
         .hide-scrollbar::-webkit-scrollbar {
@@ -100,14 +100,14 @@ export default function Section16() {
           <div className="hidden lg:flex gap-4">
             <button
               onClick={handlePrev}
-              className="bg-[#fff6ef] border-2 border-[#191919] p-3 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:-translate-y-[1px] hover:shadow-[5px_5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all cursor-pointer"
+              className="bg-white border-2 border-[#191919] p-4 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:-translate-y-[1px] hover:shadow-[5px_5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all cursor-pointer"
               aria-label="Depoimento anterior"
             >
-              <ChevronLeft size={24} className="text-[#191919]" />
+              <ChevronLeft size={24} className="text-[#2260a1]" />
             </button>
             <button
               onClick={handleNext}
-              className="bg-[#f7a73c] border-2 border-[#191919] p-3 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:-translate-y-[1px] hover:shadow-[5px_5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all cursor-pointer"
+              className="bg-[#f7a73c] border-2 border-[#191919] p-4 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:-translate-y-[1px] hover:shadow-[5px_5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all cursor-pointer"
               aria-label="Próximo depoimento"
             >
               <ChevronRight size={24} className="text-[#191919]" />
@@ -157,17 +157,17 @@ export default function Section16() {
         </div>
 
         {/* Botões de Navegação - Mobile (Abaixo do carrossel) */}
-        <div className="flex lg:hidden justify-center gap-4 w-full mt-2 relative z-10 px-2">
+        <div className="flex lg:hidden justify-center gap-4 w-full mt-6 relative z-10 px-2">
           <button
             onClick={handlePrev}
-            className="bg-[#fff6ef] border-2 border-[#191919] p-3 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:-translate-y-[1px] hover:shadow-[5px_5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all cursor-pointer"
+            className="bg-white border-2 border-[#191919] p-4 rounded-full shadow-[4px_4px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all cursor-pointer"
             aria-label="Depoimento anterior"
           >
-            <ChevronLeft size={24} className="text-[#191919]" />
+            <ChevronLeft size={24} className="text-[#2260a1]" />
           </button>
           <button
             onClick={handleNext}
-            className="bg-[#f7a73c] border-2 border-[#191919] p-3 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:-translate-y-[1px] hover:shadow-[5px_5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all cursor-pointer"
+            className="bg-[#f7a73c] border-2 border-[#191919] p-4 rounded-full shadow-[4px_4px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all cursor-pointer"
             aria-label="Próximo depoimento"
           >
             <ChevronRight size={24} className="text-[#191919]" />
