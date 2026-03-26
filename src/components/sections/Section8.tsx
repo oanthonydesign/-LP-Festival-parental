@@ -71,10 +71,10 @@ export default function Section8() {
                 {/* Header Text */}
                 <div className="flex flex-col gap-6 items-center text-center max-w-[1180px]">
                     <h2 className="font-sugar-peachy text-[#2260a1] text-[36px] lg:text-[72px] leading-[0.8]">
-                        Esse evento é pra você que já entendeu a importância da parentalidade
+                        Para quem é o Festival Parental
                     </h2>
                     <p className="font-dm-sans text-[#4c4d4f] text-[18px] md:text-[24px] max-w-[928px] leading-tight">
-                        Agora é hora de se conectar com quem leva isso a sério.
+                        Dois caminhos diferentes, um mesmo ponto de encontro
                     </p>
                 </div>
 
@@ -84,16 +84,16 @@ export default function Section8() {
                         id="profissional"
                         bgColor="#3399CC"
                         textColor="text-[#fff6ef]"
-                        heading="Para profissionais da Educação Parental e áreas afins"
-                        subtext="Dois dias de programação técnica e aprofundada, continuidade direta do Congresso Internacional de Educação Parental, com debates baseados em evidência científica."
+                        heading="Para profissionais que trabalham com famílias"
+                        subtext="Dois dias de aprofundamento técnico para quem enfrenta a complexidade das relações familiares na prática, com base científica, troca qualificada e caminhos para transformar teoria em intervenção real."
                         image={imgProfissionais}
                     />
                     <Card
                         id="pais"
                         bgColor="#ED9F8C"
                         textColor="text-[#191919]"
-                        heading="Para pais, mães e cuidadores que vivem a parentalidade na prática"
-                        subtext="Dois dias de conversas acessíveis e profundas, com palestras, reflexões e experiências para lidar com os desafios reais da criação de filhos hoje, sem julgamentos ou fórmulas prontas, além de uma feira com iniciativas e marcas dedicadas ao universo da infância."
+                        heading="Para pais, mães e cuidadores"
+                        subtext="Dois dias de conversas acessíveis e profundas, com palestras, reflexões e experiências para lidar com os desafios reais da criação de filhos hoje, sem julgamentos ou fórmulas prontas."
                         image={imgPais}
                     />
                 </div>

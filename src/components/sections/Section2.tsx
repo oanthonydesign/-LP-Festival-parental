@@ -42,9 +42,9 @@ export default function Section2() {
                     </div>
 
                     {/* Text Group */}
-                    <div className="flex flex-col items-center w-full max-w-[1200px]">
-                        <div className="flex flex-col font-dm-sans justify-center leading-tight relative text-[#4c4d4f] text-[18px] lg:text-[24px]">
-                            <p className="mb-4">
+                    <div className="flex flex-col items-center w-full max-w-[900px]">
+                        <div className="flex flex-col gap-6 font-dm-sans justify-center leading-tight relative text-[#4c4d4f] text-[18px] lg:text-[24px]">
+                            <p>
                                 Pais e cuidadores convivem com excesso de informação, pressão e dúvida.
                             </p>
                             <p>

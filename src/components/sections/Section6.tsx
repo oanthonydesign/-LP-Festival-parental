@@ -54,14 +54,14 @@ const PASSAPORTES: PassportData[] = [
     priceFull: "ou R$ 1.397,90 à vista",
     priceOriginal: "R$ 2.197,00",
     benefits: [
-      "Acesso presencial aos 4 dias do Festival Parental 2026 (2 dias de trilha de conteúdo específico para profissionais da parentalidade + 2 dias de trilha de conteúdo aberto para pais e cuidadores)",
+      "Acesso presencial aos 4 dias do Festival Parental 2026 (2 dias de conteúdo para profissionais + 2 dias de conteúdo para pais e cuidadores)",
       "Sacola com brindes",
       "Acesso às sessões de autógrafos com palestrantes",
       "Acesso à feira de produtos e serviços para a parentalidade",
-      "Acesso ao conteúdo gravado dos dois primeiros dias do Festival (trilhas de conteúdo exclusivas para profissionais, nos dias 19 e 20.11) por 90 dias após o evento"
+      "Acesso ao conteúdo gravado dos dois primeiros dias do Festival"
     ],
     target: "Para profissionais da parentalidade",
-    buttonText: "Quero meu ingresso de educador",
+    buttonText: "Quero participar como profissional",
     href: "https://sun.eduzz.com/39VEQVEDWR",
     bgColor: "bg-[#3399CC]",
     borderColor: "border-[#191919]",
@@ -80,26 +80,26 @@ const PASSAPORTES: PassportData[] = [
     priceFull: "ou R$ 497,00 à vista",
     priceOriginal: "R$ 1.497,00",
     benefits: [
-      "Acesso presencial individual aos 2 últimos dias do Festival Parental 2026 (dias 21 e 22.11), com trilhas de conteúdo abertas também para pais e cuidadores",
+      "Acesso presencial individual aos 2 últimos dias do Festival Parental 2026 (dias 21 e 22.11), com conteúdo para pais e cuidadores",
       "Sacola com brindes",
       "Acesso às sessões de autógrafos com palestrantes",
       "Acesso à feira de produtos e serviços para a parentalidade"
     ],
     target: "Para pais e cuidadores",
-    buttonText: "Quero meu ingresso",
+    buttonText: "Quero participar do Festival",
     href: "https://sun.eduzz.com/39VEAVA5WR",
     doubleOptions: {
       priceInstallment: "R$ 74,70",
       priceFull: "ou R$ 747,00 à vista",
       priceOriginal: "R$ 1.947,00",
       benefits: [
-        "Acesso presencial para duas pessoas aos 2 últimos dias do Festival Parental 2026 (dias 21 e 22.11), com trilhas de conteúdo abertas também para pais e cuidadores",
+        "Acesso presencial para duas pessoas aos 2 últimos dias do Festival Parental 2026 (dias 21 e 22.11), com conteúdo para pais e cuidadores",
         "Sacola com brindes",
         "Acesso às sessões de autógrafos com palestrantes",
         "Acesso à feira de produtos e serviços para a parentalidade"
       ],
       href: "https://sun.eduzz.com/G92ERDR4WE",
-      buttonText: "Quero meu ingresso duplo"
+      buttonText: "Quero 2 passaportes com desconto"
     },
     bgColor: "bg-[#ED9F8C]",
     borderColor: "border-[#191919]",
@@ -215,14 +215,29 @@ function PassportCard({ data }: { data: PassportData }) {
 
       {/* Main Content Area */}
       <div className={`flex-1 flex flex-col ${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[24px] md:rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[20px] md:p-[24px] w-full -mt-[2px] pt-8 md:pt-10 gap-6 z-20 relative`}>
-        {SHOW_COUNTDOWN_BADGE && (
-          <div className="flex justify-center">
-            <CountdownBadge />
+
+        {/* Passaporte Tags */}
+        {data.id === 'educador' && (
+          <div className="bg-[#fff6ef] rounded-[40px] px-2 sm:px-4 py-2.5 md:py-3 flex items-center justify-center gap-1.5 sm:gap-2 w-full -mt-1 md:-mt-2 overflow-hidden">
+            <svg className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f7a73c" />
+            </svg>
+            <span className="font-dm-sans font-bold text-[9px] sm:text-[10px] md:text-[11px] lg:text-[12px] uppercase text-[#191919] tracking-wider text-left whitespace-nowrap">
+              EXPERIÊNCIA COMPLETA PARA PROFISSIONAIS
+            </span>
+          </div>
+        )}
+
+        {data.id === 'parental' && (
+          <div className="bg-transparent border-[1px] border-[#fff6ef] rounded-[40px] px-2 sm:px-4 py-2.5 md:py-3 flex items-center justify-center gap-1.5 sm:gap-2 w-full -mt-1 md:-mt-2 overflow-hidden">
+            <span className="font-dm-sans font-bold text-[9.5px] sm:text-[11px] md:text-[12px] lg:text-[13px] uppercase text-[#191919] tracking-wider text-center whitespace-nowrap">
+              PARA PAIS, MÃES E CUIDADORES
+            </span>
           </div>
         )}
 
         {hasDoubleOption && (
-          <div className="flex w-full mt-2 border-2 border-[#191919] rounded-[40px] overflow-hidden bg-white/10 p-1">
+          <div className="flex w-full border-2 border-[#191919] rounded-[40px] overflow-hidden bg-white/10 p-1">
             <button
               onClick={() => setIsDouble(false)}
               className={`flex-1 py-3 text-center font-dm-sans font-bold text-[14px] uppercase tracking-wider rounded-[32px] transition-all duration-300 ${!isDouble ? 'bg-[#f7a73c] text-[#191919] shadow-[2px_2px_0px_0px_#191919] border-2 border-[#191919]' : 'text-current opacity-70 border-2 border-transparent hover:opacity-100'}`}
@@ -238,6 +253,23 @@ function PassportCard({ data }: { data: PassportData }) {
           </div>
         )}
 
+        {/* Benefits List */}
+        <div className={`border-2 ${data.benefitBorder} border-solid rounded-[24px] p-[16px] flex flex-col gap-4 ${data.benefitBg}`}>
+          {currentBenefits.map((benefit, idx) => (
+            <div key={idx} className="flex gap-3 items-center">
+              <StarIcon />
+              <p className={`font-dm-sans text-[14px] leading-tight ${data.benefitTextColor}`}>
+                {benefit}
+              </p>
+            </div>
+          ))}
+        </div>
+        {SHOW_COUNTDOWN_BADGE && (
+          <div className="flex justify-center">
+            <CountdownBadge />
+          </div>
+        )}
+
         {/* Price Section */}
         <div className="text-center flex flex-col items-center">
           <div className="font-sugar-peachy text-[20px] md:text-[24px] text-current opacity-70 mb-2">
@@ -250,10 +282,7 @@ function PassportCard({ data }: { data: PassportData }) {
           <p className="font-dm-sans text-[24px] mt-2 opacity-80">{currentPriceFull}</p>
         </div>
 
-        {/* Target Audience */}
-        <p className={`font-sugar-peachy text-[22px] md:text-[24px] text-center leading-[1.1] ${data.id === 'educador' ? 'w-full px-0' : 'px-4'} mb-0`}>
-          {data.target}
-        </p>
+
 
         {/* {SHOW_PRICE_STATUS_BADGE && data.id === 'educador' && (
           <div className="flex justify-center -mt-4 -mb-4">
@@ -261,30 +290,28 @@ function PassportCard({ data }: { data: PassportData }) {
           </div>
         )} */}
 
-        {/* Benefits List */}
-        <div className={`border-2 ${data.benefitBorder} border-solid rounded-[24px] p-[16px] flex flex-col gap-4 ${data.benefitBg}`}>
-          {currentBenefits.map((benefit, idx) => (
-            <div key={idx} className="flex gap-3 items-center">
-              <StarIcon />
-              <p className={`font-dm-sans text-[14px] leading-tight ${data.benefitTextColor}`}>
-                {benefit}
-              </p>
-            </div>
-          ))}
-        </div>
 
-        {/* Action Button */}
-        <a
-          href={currentHref}
-          className={`mt-auto bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] ${data.id === 'educador' ? 'px-[6px] md:px-[24px]' : 'px-[24px]'} py-[16px] flex items-center justify-center gap-2 hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] group w-full md:w-auto`}
-        >
-          <div className="text-[#191919] hidden md:block">
-            <TicketIcon />
-          </div>
-          <span className="font-dm-sans font-bold text-[14px] uppercase text-[#191919] tracking-wider text-center">
-            {currentButtonText}
-          </span>
-        </a>
+        {/* Action Area */}
+        <div className="mt-auto flex flex-col items-center gap-3 w-full">
+          {data.id === 'parental' && isDouble && (
+            <p className="font-dm-sans font-medium text-[13px] md:text-[14px] text-center text-current opacity-80">
+              Melhor custo por participante
+            </p>
+          )}
+
+          {/* Action Button */}
+          <a
+            href={currentHref}
+            className={`bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] ${data.id === 'educador' ? 'px-[6px] md:px-[24px]' : 'px-[24px]'} py-[16px] flex items-center justify-center gap-2 hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] group w-full md:w-auto`}
+          >
+            <div className="text-[#191919] hidden md:block">
+              <TicketIcon />
+            </div>
+            <span className="font-dm-sans font-bold text-[14px] uppercase text-[#191919] tracking-wider text-center">
+              {currentButtonText}
+            </span>
+          </a>
+        </div>
       </div>
     </div>
   );
@@ -301,12 +328,12 @@ export default function Section6() {
             <span className="font-dm-sans font-bold text-[14px] uppercase tracking-wider">escolha seu ingresso</span>
           </div>
 
-          <div className="flex flex-col gap-6 max-w-[1120px]">
+          <div className="flex flex-col gap-6 max-w-[1000px]">
             <h2 className="font-sugar-peachy text-[46px] md:text-[72px] text-[#2260a1] leading-[0.8]">
-              Um festival, duas jornadas intensas
+              Agora é escolher como você quer participar do Festival Parental
             </h2>
             <p className="font-dm-sans text-[18px] lg:text-[24px] text-[#4c4d4f] leading-tight">
-              Um encontro presencial para refletir sobre a parentalidade com profundidade, responsabilidade e troca real.
+              Dois caminhos diferentes, pensados para públicos distintos. Escolha o passaporte que melhor se conecta com o seu momento.
             </p>
           </div>
         </div>
