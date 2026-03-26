@@ -231,7 +231,7 @@ function HeroSpeakerCard({ speaker }: { speaker: Speaker }) {
 
 export default function HeroSectionV2() {
     return (
-        <section className="bg-[#fff6ee] relative w-full h-auto lg:h-[1120px] overflow-hidden pb-32 lg:pb-0" id="hero" data-name="Section - 1 V2">
+        <section className="bg-[#fff6ee] relative w-full h-auto lg:h-[1085px] overflow-hidden pb-32 lg:pb-0" id="hero" data-name="Section - 1 V2">
             {/* --- Background Graphics --- */}
 
             <div className="hidden lg:flex absolute lg:top-[-150px] lg:w-[1800px] lg:h-[1800px] items-center justify-center pointer-events-none z-0"
@@ -317,7 +317,7 @@ export default function HeroSectionV2() {
             </div>
 
             {/* --- Lateral Carousel Container --- */}
-            <div className="relative mt-12 lg:mt-0 w-full lg:absolute lg:top-[680px] z-30 overflow-hidden flex flex-col pt-0 pb-0 lg:py-4">
+            <div className="relative mt-12 lg:mt-0 w-full lg:absolute lg:top-[700px] z-30 overflow-hidden flex flex-col pt-0 pb-0 lg:py-4">
                 <style dangerouslySetInnerHTML={{
                     __html: `
                     @keyframes scroll {
