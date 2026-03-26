@@ -7,11 +7,11 @@ import svgPaths from "@/components/svg/svg-jj8ggrv19k";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const imgImg90811 = "/images/banner 01.webp";
-const imgCep2921 = "/images/banner02.webp";
-const imgImg54721 = "/images/banner03.webp";
-const imgStoryImage = "/images/banner 04.webp";
-const imgImg91501 = "/images/banner 01.webp";
+const imgBanner01 = "/images/img_banner01.webp";
+const imgBanner02 = "/images/img_banner02.webp";
+const imgBanner03 = "/images/img_banner03.webp";
+const imgBanner04 = "/images/img_banner04.webp";
+const imgBanner05 = "/images/img_banner05.webp";
 
 function Group() {
     return (
@@ -34,8 +34,8 @@ function StoryImage() {
         <div className="bg-white border-[#191919] border-[2.091px] border-solid h-[329.371px] overflow-clip relative rounded-[25.095px] shadow-[4.182px_4.182px_0px_0px_#191919] w-[492.489px]" data-name="Story Image">
             <div className="absolute flex h-[454.775px] items-center justify-center left-[-96.92px] top-[-64.66px] w-[681.434px]">
                 <div className="flex-none rotate-[0.06deg]">
-                    <div className="h-[454.064px] relative w-[680.96px]" data-name="IMG_9081 1">
-                        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImg90811} loading="lazy" />
+                    <div className="h-[454.064px] relative w-[680.96px]" data-name="Banner 1">
+                        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBanner01} loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -46,8 +46,8 @@ function StoryImage() {
 function StoryImage1() {
     return (
         <div className="bg-white border-[#191919] border-[2.091px] border-solid h-[329.371px] overflow-clip relative rounded-[25.095px] shadow-[4.182px_4.182px_0px_0px_#191919] w-[492.489px]" data-name="Story Image">
-            <div className="absolute h-[349.103px] left-[-18.07px] top-[-11.82px] w-[523.655px]" data-name="CEP-292 1">
-                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgCep2921} loading="lazy" />
+            <div className="absolute h-[349.103px] left-[-18.07px] top-[-11.82px] w-[523.655px]" data-name="Banner 2">
+                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBanner02} loading="lazy" />
             </div>
         </div>
     );
@@ -56,12 +56,17 @@ function StoryImage1() {
 function StoryImage2() {
     return (
         <div className="bg-white border-[#191919] border-[2.091px] border-solid h-auto aspect-[492/329] lg:h-[329.371px] overflow-clip relative rounded-[25.095px] shadow-[4.182px_4.182px_0px_0px_#191919] w-full lg:w-[492.489px]" data-name="Story Image">
-            <div className="absolute flex h-[401.034px] items-center justify-center left-[-72.73px] top-[-37.27px] w-[586.851px]">
-                <div className="flex-none rotate-[-1.82deg]">
-                    <div className="h-[383px] relative w-[575px]" data-name="IMG_5472 1">
-                        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImg54721} loading="lazy" />
+            {/* Desktop Version with Offsets */}
+            <div className="hidden lg:flex absolute h-[401.034px] items-center justify-center left-[-72.73px] top-[-37.27px] w-[586.851px]">
+                <div className="flex-none rotate-[-1.82deg] w-full h-full">
+                    <div className="h-full relative w-full" data-name="Banner 3 (Desktop)">
+                        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBanner03} loading="lazy" />
                     </div>
                 </div>
+            </div>
+            {/* Mobile Version Centralized */}
+            <div className="flex lg:hidden absolute inset-0 items-center justify-center">
+                <img alt="" className="w-full h-full object-cover pointer-events-none" src={imgBanner05} loading="lazy" />
             </div>
         </div>
     );
@@ -71,13 +76,13 @@ function StoryImage3() {
     return (
         <div className="h-[329.371px] relative rounded-[25.095px] w-[492.489px]" data-name="Story Image">
             <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[25.095px]">
-                <img alt="" className="absolute h-[144.37%] left-[-0.22%] max-w-none top-0 w-[100.44%]" src={imgStoryImage} loading="lazy" />
+                <img alt="" className="absolute h-[144.37%] left-[-0.22%] max-w-none top-0 w-[100.44%]" src={imgBanner04} loading="lazy" />
             </div>
             <div className="overflow-clip relative rounded-[inherit] size-full">
                 <div className="absolute flex h-[354.116px] items-center justify-center left-[-13.14px] top-[-12.82px] w-[518.675px]">
                     <div className="flex-none rotate-[1.49deg]">
-                        <div className="h-[341px] relative w-[510px]" data-name="IMG_9150 1">
-                            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImg91501} loading="lazy" />
+                        <div className="h-[341px] relative w-[510px]" data-name="Banner 4 Sub">
+                            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBanner04} loading="lazy" />
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,7 @@ import { useState } from "react";
 import svgPaths from "@/components/svg/svg-paths";
 import { Globe } from "lucide-react";
 
-type Speaker = {
+export type Speaker = {
     id: number;
     name: string;
     description: string;
@@ -15,7 +15,7 @@ type Speaker = {
     bgColor: string;
 };
 
-const allSpeakers: Speaker[] = [
+export const allSpeakers: Speaker[] = [
     {
         id: 1,
         name: "Nanda Perim",
@@ -209,7 +209,7 @@ function SocialIconButton({ type, href }: { type: "linkedin" | "instagram" | "we
     );
 }
 
-function SpeakerCard({ speaker }: { speaker: Speaker }) {
+export function SpeakerCard({ speaker }: { speaker: Speaker }) {
     return (
         <div className="flex-[1_0_0] min-h-px min-w-px relative rounded-[24px]" style={{ backgroundColor: speaker.bgColor }}>
             <div className="flex flex-col items-center overflow-clip rounded-[inherit] size-full">
