@@ -37,7 +37,7 @@ export default function Section2() {
                     <div className="flex flex-col gap-6 items-center w-full max-w-[1200px]">
                         <div className="flex flex-col font-sugar-peachy justify-center relative text-[#ef7d25] text-[36px] md:text-[46px] leading-[0.9]">
                             <p className="whitespace-pre-wrap break-words">Nunca se falou tanto sobre parentalidade.</p>
-                            <p className="whitespace-pre-wrap break-words">E nunca foi tão fácil se sentir inseguro, culpado ou perdido.</p>
+                            <p className="whitespace-pre-wrap break-words">E nunca foi tão difícil se sentir seguro nela.</p>
                         </div>
                     </div>
 
@@ -45,10 +45,13 @@ export default function Section2() {
                     <div className="flex flex-col items-center w-full max-w-[1200px]">
                         <div className="flex flex-col font-dm-sans justify-center leading-tight relative text-[#4c4d4f] text-[18px] lg:text-[24px]">
                             <p className="mb-4">
-                                Pais e cuidadores convivem com excesso de informação e pressão para fazer tudo certo. Educadores parentais e profissionais da área atuam em um campo ainda em amadurecimento, buscando se conectar com famílias que precisam desse apoio, enquanto acompanham novas pesquisas e fortalecem o networking entre pares.
+                                Pais e cuidadores convivem com excesso de informação, pressão e dúvida.
                             </p>
                             <p>
-                                O Festival Parental nasce para transformar essa complexidade em compreensão. Um encontro presencial que reúne ciência, prática e experiência real para pensar a parentalidade com mais profundidade e construir caminhos mais conscientes para quem vive e trabalha com famílias.
+                                Profissionais atuam em um campo em constante transformação, buscando traduzir teoria em prática no trabalho com famílias.
+                            </p>
+                            <p>
+                                O Festival Parental nasce desse cenário: um encontro presencial que reúne ciência, prática e experiência real para aprofundar a parentalidade com mais clareza, menos ruído e mais conexão.
                             </p>
                         </div>
                     </div>

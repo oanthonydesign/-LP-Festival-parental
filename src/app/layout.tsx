@@ -49,6 +49,8 @@ export default function RootLayout({
                     data-utmify-prevent-xcod-sck
                     data-utmify-prevent-subids
                     strategy="afterInteractive"
+                    async
+                    defer
                 />
             </body>
         </html>

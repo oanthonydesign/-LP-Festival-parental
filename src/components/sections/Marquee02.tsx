@@ -47,9 +47,13 @@ export default function Marquee02() {
         </div>
     );
 
-    const text = "FESTIVAL PARENTAL 2026";
-    const repetition = 10; // Repetir o texto para garantir cobertura
-    const items = Array(repetition).fill(text);
+    const rawItems = [
+        "+50 especialistas",
+        "+1500 profissionais",
+        "+2500 Pais e mães"
+    ];
+    const repetition = 10; 
+    const items = Array(repetition).fill(rawItems).flat();
 
     return (
         <div
