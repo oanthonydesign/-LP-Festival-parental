@@ -62,12 +62,11 @@ function Variant() {
   return (
     <div className="bg-[rgba(255,255,255,0.1)] flex-1 relative rounded-[16px] w-full flex flex-col" data-name="Variant 1">
       <div className="flex-1 flex flex-col items-start justify-end overflow-clip relative rounded-[inherit] w-full">
-        <Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng />
-        <div className="absolute inset-0 rounded-[16px]" data-name="Border">
-          <div aria-hidden="true" className="absolute border border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none rounded-[16px]" />
-        </div>
-        <Texts />
-      </div>
+         <Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng />
+         <div className="absolute inset-0 rounded-[16px]" data-name="Border">
+           <div aria-hidden="true" className="absolute border border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none rounded-[16px]" />
+         </div>
+       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
   );
@@ -76,7 +75,7 @@ function Variant() {
 function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng() {
   return (
     <div className="absolute inset-0 overflow-clip" data-name="image 117">
-      <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/loc_01.webp" loading="lazy" />
+      <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/transamerica_01.webp" loading="lazy" />
     </div>
   );
 }
@@ -125,12 +124,11 @@ function Variant1() {
   return (
     <div className="bg-[rgba(255,255,255,0.1)] flex-1 relative rounded-[16px] w-full flex flex-col" data-name="Variant 1">
       <div className="flex-1 flex flex-col items-start justify-end overflow-clip relative rounded-[inherit] w-full">
-        <Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng1 />
-        <div className="absolute inset-0 rounded-[16px]" data-name="Border">
-          <div aria-hidden="true" className="absolute border border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none rounded-[16px]" />
-        </div>
-        <Texts1 />
-      </div>
+         <Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng1 />
+         <div className="absolute inset-0 rounded-[16px]" data-name="Border">
+           <div aria-hidden="true" className="absolute border border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none rounded-[16px]" />
+         </div>
+       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
   );
@@ -139,7 +137,7 @@ function Variant1() {
 function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng1() {
   return (
     <div className="absolute inset-0 overflow-clip" data-name="image 117">
-      <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/loc_02.webp" loading="lazy" />
+      <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/transamerica_02.webp" loading="lazy" />
     </div>
   );
 }
@@ -188,12 +186,11 @@ function Variant2() {
   return (
     <div className="bg-[rgba(255,255,255,0.1)] flex-1 relative rounded-[16px] w-full flex flex-col" data-name="Variant 1">
       <div className="flex-1 flex flex-col items-start justify-end overflow-clip relative rounded-[inherit] w-full">
-        <Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng2 />
-        <div className="absolute inset-0 rounded-[16px]" data-name="Border">
-          <div aria-hidden="true" className="absolute border border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none rounded-[16px]" />
-        </div>
-        <Texts2 />
-      </div>
+         <Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng2 />
+         <div className="absolute inset-0 rounded-[16px]" data-name="Border">
+           <div aria-hidden="true" className="absolute border border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none rounded-[16px]" />
+         </div>
+       </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
   );
@@ -202,7 +199,7 @@ function Variant2() {
 function Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng2() {
   return (
     <div className="absolute inset-0 overflow-clip" data-name="image 117">
-      <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/loc_03.webp" loading="lazy" />
+      <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/transamerica_03.webp" loading="lazy" />
     </div>
   );
 }

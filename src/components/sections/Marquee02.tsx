@@ -49,10 +49,10 @@ export default function Marquee02() {
 
     const rawItems = [
         "+50 especialistas",
-        "+1500 profissionais",
-        "+2500 Pais e mães"
+        "+1.500 profissionais",
+        "+2.500 Pais e mães"
     ];
-    const repetition = 10; 
+    const repetition = 10;
     const items = Array(repetition).fill(rawItems).flat();
 
     return (

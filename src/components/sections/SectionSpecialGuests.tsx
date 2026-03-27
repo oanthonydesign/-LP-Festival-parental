@@ -73,7 +73,7 @@ export default function SectionSpecialGuests() {
                             <div className="relative hidden sm:block w-full sm:w-1/2 max-w-[280px] aspect-[3/4] bg-white p-3 pb-12 border-2 border-[#191919] rounded-xl shadow-[6px_6px_0px_0px_#191919] rotate-[6deg] transition-all duration-300 hover:rotate-[2deg] hover:scale-105 hover:z-20 sm:-ml-12 mt-8 sm:mt-0">
                                 <div className="w-full h-full border-2 border-[#191919] rounded-lg overflow-hidden bg-[#fff6ef] relative">
                                     <img
-                                        src="/images/livro-gordon.webp"
+                                        src="/images/livrogordonn.webp"
                                         alt="Livro Pais Ocupados Filhos Distantes"
                                         className="w-full h-full object-cover"
                                         onError={(e) => {

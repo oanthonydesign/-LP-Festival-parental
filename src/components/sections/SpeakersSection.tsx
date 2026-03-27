@@ -151,6 +151,15 @@ export const allSpeakers: Speaker[] = [
         website: "https://linktr.ee/draelainepadua_",
         bgColor: "#f7a73c",
     },
+    {
+        id: 16,
+        name: "Dr. Gordon Neufeld",
+        description: "Psicólogo canadense, autor do best-seller 'Hold On to Your Kids' e fundador do Neufeld Institute",
+        image: "/images/gordonn.webp",
+        instagram: "https://www.instagram.com/neufeldinstitute/",
+        website: "https://www.neufeldinstitute.org/link",
+        bgColor: "#79c3ab",
+    },
 ];
 
 function UilCalendar() {
