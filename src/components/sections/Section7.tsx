@@ -122,7 +122,7 @@ function Banners() {
 
 function Content() {
     return (
-        <div className="content-stretch flex flex-col gap-[24px] items-center leading-[0] relative shrink-0 text-[#191919] text-center w-full" data-name="Content">
+        <div className="content-stretch flex flex-col gap-[32px] md:gap-[48px] items-center leading-[0] relative shrink-0 text-[#191919] text-center w-full" data-name="Content">
             <div className="flex flex-col font-sugar-peachy justify-center not-italic relative shrink-0 text-[32px] lg:text-[64px] max-w-[842px] w-full">
                 <p className="leading-[0.8] whitespace-pre-wrap">Há 7 edições, responsável por decidir e mudar o futuro da Educação Parental no Brasil</p>
             </div>
@@ -138,7 +138,7 @@ function Content() {
 
 function Container() {
     return (
-        <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[88px] lg:top-[101.8px] w-full px-4" data-name="Container">
+        <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[88px] lg:top-[80.8px] w-full px-4" data-name="Container">
             <Content />
         </div>
     );
@@ -162,7 +162,7 @@ function CloseBarMac() {
 
 function EventImage() {
     return (
-        <div className="bg-[#F4B63E] h-[780px] lg:h-[899px] relative rounded-[24px] shrink-0 w-full" data-name="Event Image">
+        <div className="bg-[#F4B63E] h-[860px] md:h-[920px] lg:h-[899px] relative rounded-[24px] shrink-0 w-full" data-name="Event Image">
             <div className="overflow-clip relative rounded-[inherit] size-full">
                 <Banners />
                 <Container />

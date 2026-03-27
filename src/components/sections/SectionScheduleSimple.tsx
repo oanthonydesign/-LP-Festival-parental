@@ -93,7 +93,7 @@ function StaticDayCard({ day }: { day: typeof scheduleData[0] }) {
 
 export default function SectionScheduleSimple() {
     return (
-        <section className="bg-[#fff6ef] w-full flex flex-col items-center pt-[56px] pb-[80px] md:py-[80px] px-4 md:px-0" id="programacao">
+        <section className="bg-[#fff6ef] w-full flex flex-col items-center pt-[56px] pb-[80px] md:py-[80px] px-4 lg:px-0" id="programacao">
             <div className="w-full max-w-[1280px] flex flex-col gap-12">
 
                 {/* Header Section */}

@@ -41,7 +41,7 @@ function Links() {
 
 function Frame2() {
   return (
-    <div className="content-stretch flex flex-col md:flex-row items-start md:items-start justify-between gap-10 md:gap-0 relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-0 relative shrink-0 w-full">
       <Logo />
       <Container1 />
     </div>
@@ -51,7 +51,7 @@ function Frame2() {
 // Logo e Tagline
 function Logo() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] items-center md:items-start relative shrink-0 w-full md:w-[287px]" data-name="Logo">
+    <div className="content-stretch flex flex-col gap-[24px] items-center lg:items-start relative shrink-0 w-full lg:w-[287px]" data-name="Logo">
       <Group />
     </div>
   );
@@ -99,7 +99,7 @@ function Group() {
 // Menu de Navegação
 function Container1() {
   return (
-    <div className="content-stretch flex flex-col md:flex-row md:flex-wrap items-center md:items-start md:justify-end gap-10 md:gap-0 relative shrink-0 w-full md:max-w-[941px]" data-name="Container">
+    <div className="content-stretch flex flex-col lg:flex-row items-center lg:items-start lg:justify-end gap-10 lg:gap-0 relative shrink-0 w-full lg:max-w-[941px]" data-name="Container">
       <Links1 />
       <Frame />
       <Frame3 />
@@ -111,7 +111,7 @@ function Container1() {
 // Coluna 1: PALESTRANTES, TRILHAS, PROGRAMAÇÃO, DÚVIDAS
 function Links1() {
   return (
-    <div className="content-stretch flex flex-col items-center md:items-start justify-center relative shrink-0 w-full sm:w-[48%] md:w-[250px]" data-name="Links">
+    <div className="content-stretch flex flex-col items-center lg:items-start justify-center relative shrink-0 w-full sm:w-[48%] lg:w-[250px]" data-name="Links">
       <Container2 />
       <Container6 />
       <Container8 />
@@ -149,8 +149,8 @@ function Palestrantes() {
 
 function Container3() {
   return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[13.3px] tracking-[0.14px] whitespace-normal md:whitespace-nowrap text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
+    <div className="content-stretch flex flex-col items-center lg:items-start relative shrink-0 w-full" data-name="Container">
+      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[13.3px] tracking-[0.14px] whitespace-normal md:whitespace-nowrap text-center lg:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
         <p className="leading-[21px]">PALESTRANTES</p>
       </div>
     </div>
@@ -274,7 +274,7 @@ function Container9() {
 // Coluna 2: PATROCÍNIO, INGRESSOS, LOCALIZAÇÃO, CONTATO
 function Frame() {
   return (
-    <div className="content-stretch flex flex-col items-center md:items-start justify-center relative shrink-0 w-full sm:w-[48%] md:w-[250px]">
+    <div className="content-stretch flex flex-col items-center lg:items-start justify-center relative shrink-0 w-full sm:w-[48%] lg:w-[250px]">
       <Container10 />
       <Container12 />
       <Container14 />
@@ -438,7 +438,7 @@ function Container17() {
 // Coluna 3: TERMOS, PRIVACIDADE, IMPRENSA
 function Frame3() {
   return (
-    <div className="content-stretch flex flex-col items-center md:items-start justify-center relative shrink-0 w-full sm:w-[48%] md:w-[250px]">
+    <div className="content-stretch flex flex-col items-center lg:items-start justify-center relative shrink-0 w-full sm:w-[48%] lg:w-[250px]">
       <Container18 />
       <Container20 />
       <ContainerRefund />
@@ -602,7 +602,7 @@ function Container23() {
 // Coluna 4: INSTAGRAM, LINKEDIN
 function Frame1() {
   return (
-    <div className="content-stretch flex flex-col items-center md:items-start justify-center relative shrink-0 w-full sm:w-[48%] md:w-[100px]">
+    <div className="content-stretch flex flex-col items-center lg:items-start justify-center relative shrink-0 w-full sm:w-[48%] lg:w-[100px]">
       <Container24 />
     </div>
   );

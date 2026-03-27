@@ -3,7 +3,7 @@
 
 export default function Section10() {
   return (
-    <div className="bg-[#fff6ef] content-stretch flex items-center justify-center pb-[56px] pt-[86px] px-4 md:px-0 relative size-full" data-name="Section - 10" id="localizacao">
+    <div className="bg-[#fff6ef] content-stretch flex items-center justify-center pb-[56px] pt-[86px] px-4 lg:px-0 relative size-full" data-name="Section - 10" id="localizacao">
       <Content />
     </div>
   );
@@ -41,7 +41,7 @@ function Text() {
 
 function Cards() {
   return (
-    <div className="content-stretch flex flex-col md:flex-row items-stretch md:items-start gap-8 md:gap-0 md:justify-between relative shrink-0 w-full" data-name="Cards">
+    <div className="content-stretch flex flex-col lg:flex-row items-stretch lg:items-start gap-8 lg:gap-0 lg:justify-between relative shrink-0 w-full" data-name="Cards">
       <Container />
       <Container1 />
       <Container2 />
@@ -52,7 +52,7 @@ function Cards() {
 // Card 1: 4 dias de festival
 function Container() {
   return (
-    <div className="flex flex-col min-h-[420px] md:h-[484px] items-stretch relative shrink-0 w-full md:w-[413px]" data-name="Container">
+    <div className="flex flex-col min-h-[420px] md:h-[484px] items-stretch relative shrink-0 w-full lg:w-[413px]" data-name="Container">
       <Variant />
     </div>
   );
@@ -115,7 +115,7 @@ function PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataforma
 // Card 2: Endereço
 function Container1() {
   return (
-    <div className="flex flex-col min-h-[420px] md:h-[484px] items-stretch relative shrink-0 w-full md:w-[413px]" data-name="Container">
+    <div className="flex flex-col min-h-[420px] md:h-[484px] items-stretch relative shrink-0 w-full lg:w-[413px]" data-name="Container">
       <Variant1 />
     </div>
   );
@@ -178,7 +178,7 @@ function PaineisImersivosSobreCulturaDigitalMarcasDoAmanhaEInovacoesEmPlataforma
 // Card 3: Data
 function Container2() {
   return (
-    <div className="flex flex-col min-h-[420px] md:h-[484px] items-stretch relative shrink-0 w-full md:w-[413px]" data-name="Container">
+    <div className="flex flex-col min-h-[420px] md:h-[484px] items-stretch relative shrink-0 w-full lg:w-[413px]" data-name="Container">
       <Variant2 />
     </div>
   );

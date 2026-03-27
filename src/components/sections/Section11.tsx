@@ -45,10 +45,10 @@ function Component1() {
 
 function Component() {
   return (
-    <div className="content-stretch flex flex-col md:flex-row gap-[8px] items-center justify-center relative shrink-0" data-name="1">
+    <div className="content-stretch flex flex-col lg:flex-row gap-[12px] lg:gap-[16px] items-center lg:items-center relative shrink-0 w-full px-4 lg:px-0 lg:justify-center" data-name="1">
       <Component1 />
-      <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[28px] text-center whitespace-normal break-words">
-        <p className="leading-[1.1]">Planeje sua viagem com apoio especializado</p>
+      <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-none relative shrink-0 text-[#4c4d4f] text-[20px] lg:text-[28px] text-center w-full lg:w-auto">
+        <p className="leading-[1.1] break-words">Planeje sua viagem com apoio especializado</p>
       </div>
     </div>
   );
@@ -83,10 +83,10 @@ function Component3() {
 
 function Component2() {
   return (
-    <div className="content-stretch flex flex-col md:flex-row gap-[8px] items-center justify-center relative shrink-0" data-name="2">
+    <div className="content-stretch flex flex-col lg:flex-row gap-[12px] lg:gap-[16px] items-center lg:items-center relative shrink-0 w-full px-4 lg:px-0 lg:justify-center" data-name="2">
       <Component3 />
-      <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[28px] text-center whitespace-normal break-words">
-        <p className="leading-[1.1]">Hospedagem e passagens com a agência parceira do evento.</p>
+      <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-none relative shrink-0 text-[#4c4d4f] text-[20px] lg:text-[28px] text-center w-full lg:w-auto">
+        <p className="leading-[1.1] break-words">Hospedagem e passagens com a agência parceira do evento.</p>
       </div>
     </div>
   );
@@ -94,7 +94,7 @@ function Component2() {
 
 function Frame2() {
   return (
-    <div className="content-stretch flex flex-col gap-4 items-center relative shrink-0">
+    <div className="content-stretch flex flex-col gap-8 lg:gap-4 items-center lg:items-center relative shrink-0 w-full">
       <Component />
       <Component2 />
     </div>
@@ -178,7 +178,7 @@ function Content() {
     <div className="bg-[#fff6ef] relative rounded-[32px] shrink-0 w-full" data-name="Content">
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[32px] shadow-[7px_7px_0px_0px_#191919]" />
       <div className="flex flex-col items-center w-full">
-        <div className="content-stretch flex flex-col gap-[48px] md:gap-[64px] items-center p-6 md:p-[64px] relative w-full">
+        <div className="content-stretch flex flex-col gap-[48px] md:gap-[64px] items-center p-4 md:p-[64px] relative w-full">
           <Content1 />
           <Container />
         </div>
@@ -189,7 +189,7 @@ function Content() {
 
 export default function Section11() {
   return (
-    <section className="bg-[#fff6ef] w-full flex flex-col items-center py-[32px] md:py-[80px] px-4 md:px-0" data-name="Section - 11">
+    <section className="bg-[#fff6ef] w-full flex flex-col items-center py-[32px] md:py-[80px] px-4 lg:px-0" data-name="Section - 11">
       <div className="w-full max-w-[1280px]">
         <Content />
       </div>

@@ -8,8 +8,8 @@ import svgPaths from "@/components/svg/svg-94ngdjnt4";
 
 function Heading() {
   return (
-    <div className="flex flex-col items-center md:items-start relative shrink-0 w-full" data-name="Heading 2">
-      <div className="flex flex-col font-sugar-peachy justify-center leading-[0.8] md:leading-[0.8] not-italic relative shrink-0 text-[#f7a73c] text-[42px] md:text-[72px] w-full whitespace-pre-wrap text-center md:text-left">
+    <div className="flex flex-col items-center lg:items-start relative shrink-0 w-full" data-name="Heading 2">
+      <div className="flex flex-col font-sugar-peachy justify-center leading-[0.8] lg:leading-[0.8] not-italic relative shrink-0 text-[#f7a73c] text-[46px] lg:text-[72px] w-full whitespace-pre-wrap text-center lg:text-left">
         <p className="mb-0">Tudo o que você</p>
         <p>precisa saber</p>
       </div>
@@ -19,7 +19,7 @@ function Heading() {
 
 function Frequent() {
   return (
-    <div className="flex flex-col items-center md:items-start relative shrink-0 w-full md:w-[600px]" data-name="Frequent">
+    <div className="flex flex-col items-center lg:items-start relative shrink-0 w-full lg:w-[600px]" data-name="Frequent">
       <Heading />
     </div>
   );
@@ -27,7 +27,7 @@ function Frequent() {
 
 function TextAndLine() {
   return (
-    <div className="flex flex-col items-start relative shrink-0 w-full" data-name="Text and Line">
+    <div className="flex flex-col items-center lg:items-start relative shrink-0 w-full" data-name="Text and Line">
       <Frequent />
     </div>
   );
@@ -37,7 +37,7 @@ function TextAndLine() {
 
 function SectionTitle() {
   return (
-    <div className="md:sticky md:top-32 self-center md:self-start flex flex-col gap-10 md:gap-16 w-full md:w-[600px] z-10" data-name="Section Title">
+    <div className="lg:sticky lg:top-32 self-center lg:self-start flex flex-col gap-10 lg:gap-16 w-full lg:w-[600px] z-10" data-name="Section Title">
       <TextAndLine />
     </div>
   );
@@ -82,9 +82,9 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
       data-name={isOpen ? "Desktop Open 1" : "Desktop Close 1"}
     >
       <div className="overflow-clip rounded-[inherit] size-full">
-        <div className={`flex flex-col ${isOpen ? 'gap-[64px]' : ''} items-start p-[24px] relative w-full`}>
+        <div className={`flex flex-col ${isOpen ? 'gap-[64px]' : ''} items-center lg:items-start p-[24px] relative w-full`}>
           <div className="flex items-start justify-between relative shrink-0 w-full gap-4" data-name="Question">
-            <div className="flex flex-col font-sugar-peachy justify-center leading-[1.1] not-italic relative self-stretch shrink-0 text-[#191919] text-[24px] md:text-[26px] flex-1">
+            <div className="flex flex-col font-sugar-peachy justify-center leading-[1.1] not-italic relative self-stretch shrink-0 text-[#191919] text-[24px] md:text-[26px] flex-1 text-center lg:text-left">
               <p className="whitespace-pre-wrap">{question}</p>
             </div>
             <div className="bg-[#fff6ef] relative rounded-[9999px] self-center shrink-0 w-[32px] h-[32px]" data-name="SVG">
@@ -93,7 +93,7 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
             </div>
           </div>
           {isOpen && (
-            <div className="flex flex-col font-dm-sans font-medium justify-center leading-[1.2] relative shrink-0 text-[#191919] text-[18px] lg:text-[18px] tracking-[-0.4px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
+            <div className="flex flex-col font-dm-sans font-medium justify-center leading-[1.2] relative shrink-0 text-[#191919] text-[18px] lg:text-[18px] tracking-[-0.4px] w-full text-center lg:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
               <p className="leading-[1.1] whitespace-pre-wrap">{answer}</p>
             </div>
           )}
@@ -167,7 +167,7 @@ function Container1() {
   ];
 
   return (
-    <div className="flex flex-col gap-[24px] items-start relative shrink-0 w-full md:w-[650.72px]" data-name="Container">
+    <div className="flex flex-col gap-[24px] items-start relative shrink-0 w-full lg:w-[650.72px]" data-name="Container">
       {faqItems.map((item, index) => (
         <AccordionItem
           key={index}
@@ -183,7 +183,7 @@ function Container1() {
 
 function Container() {
   return (
-    <div className="flex flex-col md:flex-row items-start justify-between w-full max-w-[1280px] gap-12" data-name="Container">
+    <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between w-full max-w-[1280px] gap-12" data-name="Container">
       <SectionTitle />
       <Container1 />
     </div>
@@ -192,7 +192,7 @@ function Container() {
 
 export default function Section15Interactive() {
   return (
-    <section className="bg-[#fff6ef] flex flex-col items-center pt-[32px] md:pt-[128px] pb-[42px] md:pb-[128px] px-6 md:px-[30px] relative w-full" data-name="Section - 15" id="faq">
+    <section className="bg-[#fff6ef] flex flex-col items-center pt-[64px] lg:pt-[128px] pb-[42px] lg:pb-[128px] px-6 lg:px-[30px] relative w-full" data-name="Section - 15" id="faq">
       <Container />
     </section>
   );

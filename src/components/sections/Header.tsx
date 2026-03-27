@@ -29,7 +29,7 @@ export default function Header() {
         <>
             {/* Backdrop Overlay for Mobile Menu (Click outside to close) */}
             <div
-                className={`fixed inset-0 z-[90] bg-black/40 backdrop-blur-[2px] md:hidden transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+                className={`fixed inset-0 z-[90] bg-black/40 backdrop-blur-[2px] lg:hidden transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
                 onClick={() => setIsOpen(false)}
                 style={{ top: '72px' }} // Starts below the header
             />
@@ -39,12 +39,12 @@ export default function Header() {
                     }`}
             >
                 <div className={`absolute inset-0 transition-opacity duration-300 pointer-events-none ${scrolled ? 'opacity-0' : 'opacity-100'}`}>
-                    <div className="absolute inset-x-[320px] top-1/2 -translate-y-1/2 h-[72px] border border-[rgba(255,255,255,0.08)] hidden md:block pointer-events-none"></div>
+                    <div className="absolute inset-x-[320px] top-1/2 -translate-y-1/2 h-[72px] border border-[rgba(255,255,255,0.08)] hidden lg:block pointer-events-none"></div>
                 </div>
 
-                <div className="layout-container flex items-center justify-between w-full max-w-[1280px] relative z-10 h-full px-4 md:px-0">
+                <div className="layout-container flex items-center justify-between w-full max-w-[1280px] relative z-10 h-full px-4 lg:px-0">
                     {/* Logo (Left) */}
-                    <Link href="/" className="relative w-[120px] md:w-[200px] h-[32px] md:h-[41px] flex-shrink-0">
+                    <Link href="/" className="relative w-[120px] lg:w-[200px] h-[32px] lg:h-[41px] flex-shrink-0">
                         <img
                             src="/images/logo_nav.svg"
                             alt="Festival Parental"
@@ -53,7 +53,7 @@ export default function Header() {
                     </Link>
 
                     {/* Mobile Right Container: Button + Hamburger */}
-                    <div className="flex md:hidden items-center gap-3">
+                    <div className="flex lg:hidden items-center gap-3">
                         {/* Ingresso Button - Orange with Icon */}
                         <a
                             href="/#ingressos"
@@ -77,7 +77,7 @@ export default function Header() {
                     </div>
 
                     {/* Navigation Links - Desktop */}
-                    <nav className="hidden md:flex items-center gap-[32px]">
+                    <nav className="hidden lg:flex items-center gap-[32px]">
                         <div className="flex items-center gap-[8px] p-[10px]">
                             {[
                                 { name: "Atrações", href: "/#convidados-especiais" },
@@ -102,7 +102,7 @@ export default function Header() {
                     </nav>
 
                     {/* CTA Button & Sponsor Link - Desktop */}
-                    <div className="hidden md:flex items-center gap-[16px]">
+                    <div className="hidden lg:flex items-center gap-[16px]">
                         <a href="/#patrocinador" className="font-dm-sans text-[#191919] text-[13px] font-bold uppercase tracking-[0.8px] hover:text-[#ef7d25] transition-colors whitespace-nowrap">
                             Seja patrocinador
                         </a>
@@ -121,7 +121,7 @@ export default function Header() {
 
                 {/* Mobile Menu Dropdown (100% Width, Auto Height) */}
                 <div className={`
-                    md:hidden absolute top-[72px] left-0 w-full bg-[#fff6ee] border-b border-[#191919]/10 shadow-xl 
+                    lg:hidden absolute top-[72px] left-0 w-full bg-[#fff6ee] border-b border-[#191919]/10 shadow-xl 
                     transition-all duration-300 ease-in-out overflow-hidden
                     ${isOpen ? 'max-h-[500px] opacity-100 py-8' : 'max-h-0 opacity-0 py-0'}
                 `}>

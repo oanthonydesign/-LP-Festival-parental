@@ -199,7 +199,7 @@ function PassportCard({ data }: { data: PassportData }) {
   const currentButtonText = isDouble && hasDoubleOption ? data.doubleOptions!.buttonText : data.buttonText;
 
   return (
-    <div id={data.id} className={`flex flex-col w-full max-w-[420px] ${data.textColor} h-full relative group`}>
+    <div id={data.id} className={`flex flex-col w-full lg:max-w-[420px] ${data.textColor} h-full relative group`}>
       {/* Header with Title and Lote */}
       <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[16px] w-full z-10 relative overflow-hidden`}>
         {SHOW_PROMO_RIBBON && <Ribbon />}
@@ -302,7 +302,7 @@ function PassportCard({ data }: { data: PassportData }) {
           {/* Action Button */}
           <a
             href={currentHref}
-            className={`bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] ${data.id === 'educador' ? 'px-[6px] md:px-[24px]' : 'px-[24px]'} py-[16px] flex items-center justify-center gap-2 hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] group w-full md:w-auto`}
+            className={`bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] ${data.id === 'educador' ? 'px-[6px] lg:px-[24px]' : 'px-[24px]'} py-[16px] flex items-center justify-center gap-2 hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] group w-full lg:w-auto`}
           >
             <div className="text-[#191919] hidden md:block">
               <TicketIcon />
@@ -319,17 +319,17 @@ function PassportCard({ data }: { data: PassportData }) {
 
 export default function Section6() {
   return (
-    <section className="bg-[#fff6ef] pt-[56px] md:pt-[80px] pb-[32px] md:pb-[20px] px-4 md:px-12 flex flex-col items-center relative overflow-hidden" id="ingressos">
+    <section className="bg-[#fff6ef] pt-[56px] lg:pt-[80px] pb-[32px] lg:pb-[20px] px-4 lg:px-12 flex flex-col items-center relative overflow-hidden" id="ingressos">
       <div className="max-w-[1280px] w-full flex flex-col items-center gap-[64px]">
         {/* Header */}
         <div className="flex flex-col items-center gap-7 text-center">
-          <div className="border-2 border-[#505050] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#505050] px-4 md:px-[32px] py-[16px] flex items-center gap-2 text-[#505050] bg-transparent">
+          <div className="border-2 border-[#505050] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#505050] px-4 lg:px-[32px] py-[16px] flex items-center gap-2 text-[#505050] bg-transparent">
             <TicketIcon />
             <span className="font-dm-sans font-bold text-[14px] uppercase tracking-wider">escolha seu ingresso</span>
           </div>
 
           <div className="flex flex-col gap-6 max-w-[1000px]">
-            <h2 className="font-sugar-peachy text-[46px] md:text-[72px] text-[#2260a1] leading-[0.8]">
+            <h2 className="font-sugar-peachy text-[46px] lg:text-[72px] text-[#2260a1] leading-[0.8]">
               Agora é escolher como você quer participar do Festival Parental
             </h2>
             <p className="font-dm-sans text-[18px] lg:text-[24px] text-[#4c4d4f] leading-tight">
@@ -339,7 +339,7 @@ export default function Section6() {
         </div>
 
         {/* Passport Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[20px] w-full max-w-[860px] items-stretch justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[20px] w-full lg:max-w-[860px] items-stretch justify-center">
           {PASSAPORTES.map((passport) => (
             <PassportCard key={passport.id} data={passport} />
           ))}

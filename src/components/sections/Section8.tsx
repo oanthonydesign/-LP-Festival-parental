@@ -41,7 +41,7 @@ function Card({
     badgeText?: string;
 }) {
     return (
-        <div className="flex flex-col items-start w-full md:w-1/2 relative group" id={id}>
+        <div className="flex flex-col items-start w-full lg:w-1/2 relative group" id={id}>
             {badgeText && (
                 <div className="absolute -top-6 -right-4 md:-right-8 bg-[#f7a73c] border-2 border-[#191919] rounded-full w-[100px] h-[100px] md:w-[120px] md:h-[120px] flex items-center justify-center rotate-12 shadow-[4px_4px_0px_0px_#191919] z-30 animate-bounce-slow">
                     <span className="font-sugar-peachy text-[#191919] text-[16px] md:text-[20px] text-center leading-[0.9]">
@@ -83,7 +83,7 @@ export default function Section8() {
             <div className="max-w-[1280px] w-full flex flex-col gap-[64px] items-center">
                 {/* Header Text */}
                 <div className="flex flex-col gap-6 items-center text-center max-w-[1180px]">
-                    <h2 className="font-sugar-peachy text-[#2260a1] text-[36px] lg:text-[72px] leading-[0.8]">
+                    <h2 className="font-sugar-peachy text-[#2260a1] text-[46px] lg:text-[72px] leading-[0.8]">
                         Para quem é o Festival Parental
                     </h2>
                     <p className="font-dm-sans text-[#4c4d4f] text-[18px] md:text-[24px] max-w-[928px] leading-tight">
@@ -92,7 +92,7 @@ export default function Section8() {
                 </div>
 
                 {/* Cards Container */}
-                <div className="flex flex-col md:flex-row gap-[40px] md:gap-[64px] w-full items-stretch">
+                <div className="flex flex-col lg:flex-row gap-[40px] lg:gap-[64px] w-full items-stretch">
                     <Card
                         id="profissional"
                         bgColor="#3399CC"

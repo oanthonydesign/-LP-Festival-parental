@@ -27,7 +27,7 @@ export default function Section13() {
                         Ao patrocinar o Festival Parental, sua marca se posiciona ao lado de quem está construindo o futuro da educação e do cuidado no Brasil. Mais do que visibilidade, é presença estratégica ao lado de milhares de profissionais, famílias, especialistas e marcas comprometidas com transformação social, bem-estar e impacto positivo.
                     </p>
 
-                    <h3 className="font-sugar-peachy text-[#191919] text-[32px] md:text-[46px] leading-[0.9] mt-2 md:whitespace-nowrap">
+                    <h3 className="font-sugar-peachy text-[#191919] text-[32px] md:text-[46px] leading-[0.9] mt-2 text-center">
                         Seja parte de um movimento que transforma gerações.
                     </h3>
                 </div>

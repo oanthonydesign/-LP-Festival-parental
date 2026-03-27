@@ -83,7 +83,7 @@ export default function Section16() {
   };
 
   return (
-    <section className="bg-[#2260a1] flex flex-col items-center pt-[64px] pb-[64px] md:pb-[96px] px-4 md:px-[30px] relative w-full overflow-hidden" id="depoimentos">
+    <section className="bg-[#2260a1] flex flex-col items-center pt-[64px] pb-[64px] md:pb-[64px] px-4 md:px-[30px] relative w-full overflow-hidden" id="depoimentos">
       <style dangerouslySetInnerHTML={{
         __html: `
         .hide-scrollbar::-webkit-scrollbar {

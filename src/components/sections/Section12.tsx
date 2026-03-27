@@ -6,7 +6,7 @@
 
 export default function Section12() {
   return (
-    <div className="bg-[#fff6ef] content-stretch flex items-center justify-center pb-[72px] pt-[56px] px-4 md:px-0 relative size-full" data-name="Section - 12">
+    <div className="bg-[#fff6ef] content-stretch flex items-center justify-center pb-[72px] pt-[56px] px-4 lg:px-0 relative size-full" data-name="Section - 12">
       <Container />
     </div>
   );

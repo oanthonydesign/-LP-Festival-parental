@@ -29,7 +29,7 @@ export default function Section9() {
             data-name="Section - 9"
         >
             {/* Grafismo de Fundo (Arcos) */}
-            <div className="absolute right-[-250px] md:right-[-80px] top-auto bottom-[-250px] md:top-[-250px] md:bottom-auto w-[750px] md:w-[670px] h-[800px] md:h-[1100px] z-[1] pointer-events-none select-none">
+            <div className="absolute hidden lg:block right-[-250px] md:right-[-80px] top-auto bottom-[-250px] md:top-[-250px] md:bottom-auto w-[750px] md:w-[670px] h-[800px] md:h-[1100px] z-[1] pointer-events-none select-none">
                 <svg
                     className="w-full h-full opacity-100"
                     viewBox="0 0 869 1085"
@@ -44,7 +44,7 @@ export default function Section9() {
 
             <div className="layout-container relative z-[10] flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 px-6 mx-auto">
                 {/* Coluna de Texto */}
-                <div className="flex flex-col items-center md:items-start gap-8 max-w-[720px] w-full text-center md:text-left">
+                <div className="flex flex-col items-center lg:items-start gap-8 max-w-[720px] w-full text-center lg:text-left">
                     {/* Hat / Badge */}
                     <div className="bg-[#e12d3b] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] px-8 py-4 flex items-center gap-3">
                         <WarningIcon />
@@ -66,12 +66,12 @@ export default function Section9() {
                     {/* Botão CTA */}
                     <a
                         href="#ingressos"
-                        className="bg-[#2260a1] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] p-3 md:px-10 md:py-5 flex items-center justify-center gap-3 hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all group active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] w-full md:w-auto"
+                        className="bg-[#2260a1] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] p-4 md:px-10 md:py-5 flex items-center justify-center gap-3 hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all group active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] w-auto"
                     >
                         <div className="text-[#fff6ef] hidden md:block">
                             <TicketIcon />
                         </div>
-                        <span className="font-dm-sans font-bold text-[14px] uppercase text-[#fff6ef] tracking-widest">
+                        <span className="font-dm-sans font-bold text-[14px] uppercase text-[#fff6ef] tracking-widest text-center">
                             Garanta seu INGRESSO agora
                         </span>
                     </a>
