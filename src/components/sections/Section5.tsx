@@ -9,7 +9,7 @@ function Text() {
                 <p className="leading-[0.8] whitespace-pre-wrap">Um evento sobre parentalidade como o Brasil nunca viu</p>
             </div>
             <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[18px] lg:text-[24px] w-full max-w-[1148px]" style={{ fontVariationSettings: "'opsz' 14" }}>
-                <p className="leading-[1.1] whitespace-pre-wrap">Prepare-se pra viver quatro dias intensos de conexões, conteúdos e experiências. Um ambiente pensado pra integrar conhecimento técnico, prática de vida e afeto.Tudo isso num só lugar.</p>
+                <p className="leading-[1.1] whitespace-pre-wrap">Prepare-se pra viver quatro dias intensos de conexões, conteúdos e experiências. Um ambiente pensado pra integrar conhecimento técnico, prática de vida e afeto. Tudo isso num só lugar.</p>
             </div>
         </div>
     );
@@ -128,7 +128,7 @@ function Heading4() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
             <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] w-full">
-                <p className="leading-none whitespace-pre-wrap">+ 4.000 participantes de todo o Brasil</p>
+                <p className="leading-none whitespace-pre-wrap">+4.000 participantes de todo o Brasil</p>
             </div>
         </div>
     );
@@ -146,7 +146,7 @@ function Container1() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.605px] relative shrink-0 w-full" data-name="Container">
             <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#191919] text-[16px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
-                <p className="leading-[1.1] whitespace-pre-wrap">Profissionais que são referência em saúde, educação e comportamento</p>
+                <p className="leading-[1.1] whitespace-pre-wrap">Um encontro entre quem vive e quem estuda a parentalidade, no mesmo espaço de troca e aprendizado.</p>
             </div>
         </div>
     );
