@@ -331,7 +331,7 @@ export default function HeroSectionV2() {
                         100% { transform: translateX(calc(-50% - 10px)); }
                     }
                     .animate-scroll {
-                        animation: scroll 40s linear infinite;
+                        animation: scroll 52s linear infinite;
                     }
                     `
                 }} />
