@@ -320,7 +320,6 @@ export default function HeroSectionV2() {
                         </div>
                     </a>
                 </div>
-
             </div>
 
             {/* --- Lateral Carousel Container --- */}
