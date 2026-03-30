@@ -12,11 +12,11 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const images = [
-    "/images/img_banner01.webp",
-    "/images/img_banner02.webp",
-    "/images/img_banner03.webp",
-    "/images/img_banner04.webp",
-    "/images/img_banner05.webp",
+    "/images/car_01.webp",
+    "/images/car_02.webp",
+    "/images/car_03.webp",
+    "/images/car_04.webp",
+    "/images/car_05.webp",
 ];
 
 function Group() {
