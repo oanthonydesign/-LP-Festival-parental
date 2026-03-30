@@ -291,21 +291,9 @@ export default function HeroSectionV2() {
 
                     <div className="font-dm-sans text-[#4c4d4f] text-[16px] sm:text-[18px] md:text-[24px] text-center leading-[1.2] md:leading-[1.1] flex flex-col gap-3 md:gap-4 max-w-full md:max-w-[1150px] px-2 md:px-0">
                         <p>
-                            Um encontro presencial de quatro dias que reúne profissionais, especialistas e famílias para aprofundar o desenvolvimento emocional de crianças e as relações que moldam quem elas se tornam.
+                            Um encontro que reúne profissionais, especialistas e famílias para aprofundar o desenvolvimento emocional de crianças e as relações que moldam quem elas se tornam.
                         </p>
-                        <div className="bg-white border-2 border-[#191919] rounded-[16px] shadow-[4px_4px_0px_0px_#191919] px-6 py-4 md:px-8 md:py-5 inline-flex flex-col items-center justify-center mt-4 mb-2 mx-auto rotate-[-1.5deg] hover:rotate-[0.5deg] transition-transform duration-300">
-                            <div className="font-dm-sans text-[#191919] text-[16px] md:text-[20px] leading-[1.3] text-center uppercase flex flex-wrap justify-center items-center gap-x-[10px] gap-y-2 max-w-[550px]">
-                                <span className="font-black text-[24px] md:text-[32px] tracking-tighter">EVOLUÇÃO</span>
-                                <span className="font-medium tracking-tight mt-1 md:mt-0">DO CONGRESSO INTERNACIONAL DE</span>
-                                <div className="relative inline-flex items-center justify-center px-4 py-1 mt-1 md:mt-0">
-                                    <span className="relative z-10 font-bold tracking-tight">EDUCAÇÃO PARENTAL</span>
-                                    {/* Hand-drawn SVG circle effect */}
-                                    <svg className="absolute inset-0 w-full h-full text-[#191919] pointer-events-none scale-[1.1] md:scale-[1.15]" viewBox="0 0 200 60" preserveAspectRatio="none">
-                                        <path d="M75 10 C20 12, 5 25, 10 38 C15 52, 60 56, 110 55 C160 54, 195 42, 190 25 C185 8, 130 5, 60 15" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
 

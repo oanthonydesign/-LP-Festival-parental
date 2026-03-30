@@ -44,11 +44,14 @@ function Card({
         <div className="flex flex-col items-start w-full lg:w-1/2 relative group" id={id}>
             {badgeText && (
                 <div className="absolute -top-6 -right-4 md:-right-8 bg-[#f7a73c] border-2 border-[#191919] rounded-full w-[100px] h-[100px] md:w-[120px] md:h-[120px] flex items-center justify-center rotate-12 shadow-[4px_4px_0px_0px_#191919] z-30 animate-bounce-slow">
-                    <span className="font-sugar-peachy text-[#191919] text-[16px] md:text-[20px] text-center leading-[0.9]">
+                    <span className="font-sugar-peachy text-[#191919] text-center leading-[0.8]">
                         {badgeText.split(' ').map((word, i) => (
-                            <React.Fragment key={i}>
-                                {word}<br />
-                            </React.Fragment>
+                            <span 
+                                key={i} 
+                                className={`block ${i === 0 ? "text-[28px] md:text-[40px] tracking-tight" : "text-[14px] md:text-[16px] uppercase tracking-wider"}`}
+                            >
+                                {word}
+                            </span>
                         ))}
                     </span>
                 </div>
