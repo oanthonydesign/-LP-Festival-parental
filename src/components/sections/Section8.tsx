@@ -82,7 +82,7 @@ function Card({
 
 export default function Section8() {
     return (
-        <section className="bg-[#fff6ef] w-full flex flex-col items-center py-[42px] px-6" id="para-quem" data-name="Section - 8">
+        <section className="bg-[#fff6ef] w-full flex flex-col items-center py-[42px] px-6 scroll-mt-24" id="para-quem" data-name="Section - 8">
             <div className="max-w-[1280px] w-full flex flex-col gap-[64px] items-center">
                 {/* Header Text */}
                 <div className="flex flex-col gap-6 items-center text-center max-w-[1180px]">

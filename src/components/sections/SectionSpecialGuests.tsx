@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function SectionSpecialGuests() {
     return (
-        <section className="bg-[#fff6ef] w-full flex flex-col items-center pb-[32px] pt-[72px] relative isolate z-20" id="convidados-especiais">
+        <section className="bg-[#fff6ef] w-full flex flex-col items-center pb-[32px] pt-[72px] relative isolate z-20 scroll-mt-24" id="convidados-especiais">
             <div className="layout-container flex flex-col gap-[64px] items-center relative px-4 md:px-0 w-full max-w-[1240px]">
 
                 {/* Header Section */}
@@ -28,8 +28,8 @@ export default function SectionSpecialGuests() {
                                     Palestrante Internacional
                                 </span>
                                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                                    <span className="font-dm-sans font-bold text-white bg-[#191919] px-4 py-2.5 rounded-full text-sm lg:text-base">
-                                        Dia 19, às 14h30
+                                    <span className="font-dm-sans font-bold text-white bg-[#191919] px-4 py-2.5 rounded-full text-sm lg:text-base uppercase tracking-wider">
+                                        PASSAPORTE EDUCADOR
                                     </span>
                                     <span className="font-dm-sans font-bold text-white bg-[#ef7d25] px-4 py-2.5 rounded-full text-sm lg:text-base border-2 border-[#191919]">
                                         Online

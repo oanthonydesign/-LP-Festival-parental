@@ -298,7 +298,7 @@ export default function HeroSectionV2() {
                 </div>
 
                 <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-[16px] w-full max-w-[400px] md:max-w-none">
-                    <a href="#profissional" className="group relative w-full md:w-[332px]">
+                    <a href="#para-quem" className="group relative w-full md:w-[332px]">
                         <div className="bg-[#f7a73c] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
                             <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0 text-[#191919]">
                                 <path d={svgPaths.p60d3f00} fill="currentColor" />
@@ -309,7 +309,7 @@ export default function HeroSectionV2() {
                         </div>
                     </a>
 
-                    <a href="#pais" className="group relative w-full md:w-[332px]">
+                    <a href="#para-quem" className="group relative w-full md:w-[332px]">
                         <div className="bg-[#2260a1] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
                             <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0 text-[#fff6ee]">
                                 <path d={svgPaths.p60d3f00} fill="currentColor" />

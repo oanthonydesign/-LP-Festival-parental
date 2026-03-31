@@ -146,7 +146,7 @@ function Container1() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.605px] relative shrink-0 w-full" data-name="Container">
             <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#191919] text-[16px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
-                <p className="leading-[1.1] whitespace-pre-wrap">Um encontro entre quem vive e quem estuda a parentalidade, no mesmo espaço de troca e aprendizado.</p>
+                <p className="leading-[1.1] whitespace-pre-wrap">Um encontro entre quem vive e quem estuda a parentalidade, no mesmo espaço de troca e aprendizado</p>
             </div>
         </div>
     );
@@ -698,7 +698,7 @@ function Grafismo() {
 
 export default function Section5() {
     return (
-        <section className="bg-[#fff6ef] w-full overflow-hidden flex flex-col items-center pb-[40px] pt-[32px] md:pt-[40px] relative isolate" data-name="Section - 5" id="festival">
+        <section className="bg-[#fff6ef] w-full overflow-hidden flex flex-col items-center pb-[40px] pt-[32px] md:pt-[40px] relative isolate scroll-mt-24" data-name="Section - 5" id="festival">
             <div className="layout-container relative flex flex-col items-center">
                 <Content />
             </div>

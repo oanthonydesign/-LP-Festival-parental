@@ -236,7 +236,7 @@ export default function SectionSchedule() {
     const activeColor = currentDay.type === 'professional' ? '#ef7d25' : '#2260a1';
 
     return (
-        <section className="bg-[#fff6ef] w-full flex flex-col items-center py-[80px] px-4 md:px-0" id="programacao">
+        <section className="bg-[#fff6ef] w-full flex flex-col items-center py-[80px] px-4 md:px-0 scroll-mt-24" id="programacao">
             <div className="w-full max-w-[1280px] flex flex-col gap-12">
 
                 {/* Header Section */}

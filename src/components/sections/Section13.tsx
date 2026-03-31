@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function Section13() {
     return (
-        <section className="bg-[#2daa96] border-y-[5px] border-[#191919] py-[86px] relative overflow-hidden" data-name="Section - 13" id="patrocinador">
+        <section className="bg-[#2daa96] border-y-[5px] border-[#191919] py-[86px] relative overflow-hidden scroll-mt-24" data-name="Section - 13" id="patrocinador">
             {/* Background Graphic */}
             <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-[600px] md:w-[850px] h-auto z-[1] opacity-100 pointer-events-none">
                 <img

@@ -39,6 +39,7 @@ export default function Home() {
                 <SectionSpecialGuests />
                 <Section2 />
                 <Section8 />
+                <Section5 />
                 <Section6 />
                 <Section15 />
                 <Section16 />
@@ -46,7 +47,6 @@ export default function Home() {
                 <Marquee01 />
                 <Marquee02 />
                 <SectionScheduleSimple />
-                <Section5 />
                 <Section7 />
                 <Section9 />
                 <Section10 />

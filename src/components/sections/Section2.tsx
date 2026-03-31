@@ -51,7 +51,7 @@ export default function Section2() {
                                 Profissionais atuam em um campo em constante transformação, buscando traduzir teoria em prática no trabalho com famílias.
                             </p>
                             <p>
-                                O Festival Parental nasce desse cenário: um encontro presencial que reúne ciência, prática e experiência real para aprofundar a parentalidade com mais clareza, menos ruído e mais conexão.
+                                O  Festival Parental nasce desse cenário: um encontro presencial – a evolução do Congresso Internacional de Educação Parental – que reúne ciência, prática e experiência real para aprofundar a parentalidade com mais clareza, menos ruído e mais conexão.
                             </p>
                         </div>
                     </div>
