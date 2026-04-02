@@ -168,7 +168,7 @@ function CountdownBadge() {
         <p className="font-dm-sans text-[16px] md:text-[18px] leading-tight text-[#191919]">
           <span className="font-bold text-[#2260a1]">Lote 1</span> termina em
         </p>
-        <p className="font-sugar-peachy text-[28px] md:text-[34px] leading-[0.9] text-[#191919] mt-1 tabular-nums">
+        <p className="font-sugar-peachy text-[28px] md:text-[34px] tracking-[-1px] md:tracking-[-1.25px] leading-[0.9] text-[#191919] mt-1 tabular-nums">
           {countdownText}
         </p>
       </div>
@@ -205,9 +205,9 @@ function PassportCard({ data }: { data: PassportData }) {
         {SHOW_PROMO_RIBBON && <Ribbon />}
         <div className={`border-2 ${data.borderColor} border-solid rounded-[16px] flex items-center justify-between px-[12px] py-[12px] gap-3 relative z-20`}>
           <div className="bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[6px] shadow-[3px_3px_0px_0px_#191919] px-[12px] py-[4px] shrink-0">
-            <span className="font-sugar-peachy text-[18px] text-black leading-none">{data.lote}</span>
+            <span className="font-sugar-peachy text-[18px] tracking-[-0.5px] text-black leading-none">{data.lote}</span>
           </div>
-          <h3 className="font-sugar-peachy text-[28px] leading-[0.8] text-center flex-1">
+          <h3 className="font-sugar-peachy text-[28px] tracking-[-1px] leading-[0.8] text-center flex-1">
             {data.name}
           </h3>
         </div>
@@ -272,12 +272,12 @@ function PassportCard({ data }: { data: PassportData }) {
 
         {/* Price Section */}
         <div className="text-center flex flex-col items-center">
-          <div className="font-sugar-peachy text-[20px] md:text-[24px] text-current opacity-70 mb-2">
+          <div className="font-sugar-peachy text-[20px] md:text-[24px] tracking-[-0.6px] md:tracking-[-0.9px] text-current opacity-70 mb-2">
             De <span className="line-through">{currentPriceOriginal}</span> por
           </div>
           <div className="font-sugar-peachy leading-[0.8] flex flex-col md:flex-row items-center gap-1 md:gap-3">
-            <span className={`text-[28px] md:text-[40px] ${data.accentColor}`}>12x de</span>
-            <span className={`${data.priceColor} text-[46px] md:text-[64px]`}>{currentPriceInstallment}</span>
+            <span className={`text-[28px] md:text-[40px] tracking-[-1px] md:tracking-[-1.3px] ${data.accentColor}`}>12x de</span>
+            <span className={`${data.priceColor} text-[46px] md:text-[64px] tracking-[-1.4px] md:tracking-[-1.7px]`}>{currentPriceInstallment}</span>
           </div>
           <p className="font-dm-sans text-[24px] mt-2 opacity-80">{currentPriceFull}</p>
         </div>
@@ -329,7 +329,7 @@ export default function Section6() {
           </div>
 
           <div className="flex flex-col gap-6 max-w-[1000px]">
-            <h2 className="font-sugar-peachy text-[46px] lg:text-[72px] text-[#2260a1] leading-[0.8]">
+            <h2 className="font-sugar-peachy text-[46px] lg:text-[72px] tracking-[-1.4px] lg:tracking-[-2px] text-[#2260a1] leading-[0.8]">
               Agora é escolher como você quer participar do Festival Parental
             </h2>
             <p className="font-dm-sans text-[18px] lg:text-[24px] text-[#4c4d4f] leading-tight">

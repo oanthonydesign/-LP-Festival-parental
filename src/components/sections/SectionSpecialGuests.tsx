@@ -9,7 +9,7 @@ export default function SectionSpecialGuests() {
 
                 {/* Header Section */}
                 <div className="flex flex-col gap-[24px] items-center text-center relative w-full">
-                    <h2 className="font-sugar-peachy text-[#ef7d25] text-[56px] lg:text-[72px] leading-[0.8] mb-4">
+                    <h2 className="font-sugar-peachy text-[#ef7d25] text-[56px] lg:text-[72px] tracking-[-1.55px] lg:tracking-[-2px] leading-[0.8] mb-4">
                         Destaques da Programação
                     </h2>
                 </div>
@@ -37,7 +37,7 @@ export default function SectionSpecialGuests() {
                                 </div>
                             </div>
 
-                            <h3 className="font-sugar-peachy text-[42px] lg:text-[72px] leading-[0.85] text-[#fff6ef] mt-4 text-center lg:text-left">
+                            <h3 className="font-sugar-peachy text-[42px] lg:text-[72px] tracking-[-1.35px] lg:tracking-[-2px] leading-[0.85] text-[#fff6ef] mt-4 text-center lg:text-left">
                                 Gordon Neufeld
                             </h3>
 
@@ -64,7 +64,7 @@ export default function SectionSpecialGuests() {
                                         }}
                                     />
                                 </div>
-                                <div className="absolute bottom-3 left-0 w-full text-center font-sugar-peachy text-[22px] text-[#191919]">
+                                <div className="absolute bottom-3 left-0 w-full text-center font-sugar-peachy text-[22px] tracking-[-0.8px] text-[#191919]">
                                     Dr. Gordon
                                 </div>
                             </div>
@@ -130,7 +130,7 @@ export default function SectionSpecialGuests() {
                                         }}
                                     />
                                 </div>
-                                <div className="absolute bottom-3 left-0 w-full text-center font-sugar-peachy text-[24px] text-[#191919]">
+                                <div className="absolute bottom-3 left-0 w-full text-center font-sugar-peachy text-[24px] tracking-[-0.9px] text-[#191919]">
                                     Imperdível!
                                 </div>
                                 {/* Pin visual element */}

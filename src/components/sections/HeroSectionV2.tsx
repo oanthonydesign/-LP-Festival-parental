@@ -281,7 +281,7 @@ export default function HeroSectionV2() {
                         </span>
                     </div>
 
-                    <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[48px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.9] md:leading-[0.9] tracking-[-1px] md:tracking-[-3px] relative px-4 md:px-0 w-full [-webkit-text-stroke:4px_#fff] md:[-webkit-text-stroke:8px_#fff] [paint-order:stroke_fill] [filter:drop-shadow(1px_1px_0_#191919)_drop-shadow(-1px_-1px_0_#191919)_drop-shadow(1px_-1px_0_#191919)_drop-shadow(-1px_1px_0_#191919)] md:[filter:drop-shadow(2px_2px_0_#191919)_drop-shadow(-2px_-2px_0_#191919)_drop-shadow(2px_-2px_0_#191919)_drop-shadow(-2px_2px_0_#191919)]">
+                    <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[48px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.9] md:leading-[0.9] tracking-[-1.4px] sm:tracking-[-1.5px] md:tracking-[-2px] lg:tracking-[-2.6px] relative px-4 md:px-0 w-full">
                         <span className="block mt-1">
                             <span className="text-[#2260a1]">Mais de 50 especialistas</span>
                         </span>

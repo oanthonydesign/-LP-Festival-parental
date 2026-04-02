@@ -29,7 +29,7 @@ function TextsTrilhas() {
 function Text() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-center leading-[0] relative shrink-0 text-center w-full" data-name="text">
-      <div className="flex flex-col font-sugar-peachy justify-center not-italic relative shrink-0 text-[#2260a1] text-[46px] md:text-[76px] w-full break-words">
+      <div className="flex flex-col font-sugar-peachy justify-center not-italic relative shrink-0 text-[#2260a1] text-[46px] md:text-[72px] tracking-[-1.4px] md:tracking-[-2px] w-full break-words">
         <p className="leading-[0.8] whitespace-pre-wrap">Transamérica Expo, São Paulo/SP</p>
       </div>
       <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[18px] lg:text-[24px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
@@ -62,11 +62,11 @@ function Variant() {
   return (
     <div className="bg-[rgba(255,255,255,0.1)] flex-1 relative rounded-[16px] w-full flex flex-col" data-name="Variant 1">
       <div className="flex-1 flex flex-col items-start justify-end overflow-clip relative rounded-[inherit] w-full">
-         <Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng />
-         <div className="absolute inset-0 rounded-[16px]" data-name="Border">
-           <div aria-hidden="true" className="absolute border border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none rounded-[16px]" />
-         </div>
-       </div>
+        <Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng />
+        <div className="absolute inset-0 rounded-[16px]" data-name="Border">
+          <div aria-hidden="true" className="absolute border border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none rounded-[16px]" />
+        </div>
+      </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
   );
@@ -124,11 +124,11 @@ function Variant1() {
   return (
     <div className="bg-[rgba(255,255,255,0.1)] flex-1 relative rounded-[16px] w-full flex flex-col" data-name="Variant 1">
       <div className="flex-1 flex flex-col items-start justify-end overflow-clip relative rounded-[inherit] w-full">
-         <Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng1 />
-         <div className="absolute inset-0 rounded-[16px]" data-name="Border">
-           <div aria-hidden="true" className="absolute border border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none rounded-[16px]" />
-         </div>
-       </div>
+        <Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng1 />
+        <div className="absolute inset-0 rounded-[16px]" data-name="Border">
+          <div aria-hidden="true" className="absolute border border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none rounded-[16px]" />
+        </div>
+      </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
   );
@@ -186,11 +186,11 @@ function Variant2() {
   return (
     <div className="bg-[rgba(255,255,255,0.1)] flex-1 relative rounded-[16px] w-full flex flex-col" data-name="Variant 1">
       <div className="flex-1 flex flex-col items-start justify-end overflow-clip relative rounded-[inherit] w-full">
-         <Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng2 />
-         <div className="absolute inset-0 rounded-[16px]" data-name="Border">
-           <div aria-hidden="true" className="absolute border border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none rounded-[16px]" />
-         </div>
-       </div>
+        <Image117Bn7IqnVfcTfYln1HkE0Lm5K0WEqPng2 />
+        <div className="absolute inset-0 rounded-[16px]" data-name="Border">
+          <div aria-hidden="true" className="absolute border border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none rounded-[16px]" />
+        </div>
+      </div>
       <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[7px_7px_0px_0px_#191919]" />
     </div>
   );

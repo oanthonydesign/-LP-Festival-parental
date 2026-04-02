@@ -35,7 +35,7 @@ export default function Section2() {
                 <div className="flex flex-col items-center gap-10 w-full max-w-full text-center">
                     {/* Header Group */}
                     <div className="flex flex-col gap-6 items-center w-full max-w-[1200px]">
-                        <div className="flex flex-col font-sugar-peachy justify-center relative text-[#ef7d25] text-[36px] md:text-[46px] leading-[0.9]">
+                        <div className="flex flex-col font-sugar-peachy justify-center relative text-[#ef7d25] text-[36px] md:text-[46px] tracking-[-1.3px] md:tracking-[-1.4px] leading-[0.9]">
                             <p className="whitespace-pre-wrap break-words">Nunca se falou tanto sobre parentalidade.</p>
                             <p className="whitespace-pre-wrap break-words">E nunca foi tão difícil se sentir seguro nela.</p>
                         </div>

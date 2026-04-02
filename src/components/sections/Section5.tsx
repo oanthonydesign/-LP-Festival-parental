@@ -5,7 +5,7 @@ import svgPaths from "@/components/svg/svg-hwvyp88bcy";
 function Text() {
     return (
         <div className="content-stretch flex flex-col gap-[24px] items-center leading-[0] relative shrink-0 text-center w-full" data-name="text">
-            <div className="flex flex-col font-sugar-peachy justify-center not-italic relative shrink-0 text-[#2260a1] text-[40px] lg:text-[72px] w-full max-w-[1102px]">
+            <div className="flex flex-col font-sugar-peachy justify-center not-italic relative shrink-0 text-[#2260a1] text-[40px] lg:text-[72px] tracking-[-1.3px] lg:tracking-[-2px] w-full max-w-[1102px]">
                 <p className="leading-[0.8] whitespace-pre-wrap">Um evento sobre parentalidade como o Brasil nunca viu</p>
             </div>
             <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[18px] lg:text-[24px] w-full max-w-[1148px]" style={{ fontVariationSettings: "'opsz' 14" }}>
@@ -49,7 +49,7 @@ function Frame() {
 function Heading3() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
-            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] w-full">
+            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] tracking-[-1px] w-full">
                 <p className="leading-none whitespace-pre-wrap">+50 palestrantes convidados</p>
             </div>
         </div>
@@ -127,7 +127,7 @@ function Frame1() {
 function Heading4() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
-            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] w-full">
+            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] tracking-[-1px] w-full">
                 <p className="leading-none whitespace-pre-wrap">+4.000 participantes de todo o Brasil</p>
             </div>
         </div>
@@ -205,7 +205,7 @@ function Frame2() {
 function Heading5() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
-            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] w-full">
+            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] tracking-[-1px] w-full">
                 <p className="leading-none whitespace-pre-wrap">Trilhas de conteúdo para públicos distintos</p>
             </div>
         </div>
@@ -283,7 +283,7 @@ function Frame3() {
 function Heading7() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
-            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] w-full">
+            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] tracking-[-1px] w-full">
                 <p className="leading-none whitespace-pre-wrap">Vivências e oficinas práticas</p>
             </div>
         </div>
@@ -361,7 +361,7 @@ function Frame4() {
 function Heading9() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
-            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] w-full">
+            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] tracking-[-1px] w-full">
                 <p className="leading-none whitespace-pre-wrap">Feira de produtos e serviços</p>
             </div>
         </div>
@@ -439,7 +439,7 @@ function Frame5() {
 function Heading11() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
-            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] w-full">
+            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] tracking-[-1px] w-full">
                 <p className="leading-none whitespace-pre-wrap">Espaços de cuidado e autorregulação</p>
             </div>
         </div>
@@ -517,7 +517,7 @@ function Frame6() {
 function Heading13() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
-            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] w-full">
+            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] tracking-[-1px] w-full">
                 <p className="leading-none whitespace-pre-wrap">Experiências culturais e artísticas</p>
             </div>
         </div>
@@ -595,7 +595,7 @@ function Frame7() {
 function Heading15() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
-            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] w-full">
+            <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] tracking-[-1px] w-full">
                 <p className="leading-none whitespace-pre-wrap">Conecte-se com quem vive a parentalidade</p>
             </div>
         </div>
