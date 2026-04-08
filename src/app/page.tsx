@@ -23,7 +23,7 @@ import SectionSpecialGuests from '@/components/sections/SectionSpecialGuests';
 import StickyBottomBar from '@/components/sections/StickyBottomBar';
 import WhatsAppButton from '@/components/sections/WhatsAppButton';
 
-const SHOW_STICKY_BAR = false;
+const SHOW_STICKY_BAR = true;
 
 export default function Home() {
     return (
@@ -39,14 +39,14 @@ export default function Home() {
                 <Section2 />
                 <SectionSpecialGuests />
                 <Section8 />
-                <Section5 />
                 <Section6 />
-                <Section15 />
                 <Section16 />
                 <SpeakersSection />
                 <Marquee01 />
                 <Marquee02 />
                 <SectionScheduleSimple />
+                <Section15 />
+                <Section5 />
                 <Section7 />
                 <Section9 />
                 <Section10 />

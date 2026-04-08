@@ -12,6 +12,7 @@ function Heading() {
       <div className="flex flex-col font-sugar-peachy justify-center leading-[0.8] lg:leading-[0.8] not-italic relative shrink-0 text-[#f7a73c] text-[46px] lg:text-[72px] w-full whitespace-pre-wrap text-center lg:text-left">
         <p className="mb-0">Tudo o que você</p>
         <p>precisa saber</p>
+        <p className="text-[#2260a1]">sobre o Festival</p>
       </div>
     </div>
   );

@@ -84,7 +84,7 @@ export default function StickyBottomBar() {
                     <div className="flex items-center gap-3">
                         <HourglassIcon />
                         <p className="font-dm-sans font-bold text-[14px] md:text-[18px] uppercase tracking-tight whitespace-nowrap">
-                            LOTE 1 TERMINA EM{" "}
+                            LOTE 2 TERMINA EM{" "}
                             <span className="font-black text-[18px] md:text-[22px] tabular-nums">{countdownText}</span>
                         </p>
                     </div>
@@ -92,7 +92,7 @@ export default function StickyBottomBar() {
                     <span className="hidden md:block text-[24px] font-light text-black/30">|</span>
 
                     <p className="font-dm-sans font-medium text-[14px] md:text-[18px] text-center md:text-left tracking-tight">
-                        Garanta seu ingresso <span className="font-bold">antes da virada de preço</span>
+                        Garanta seu ingresso <span className="font-bold">antes da virada para o Lote 3 (15/04 às 23:59)</span>
                     </p>
                 </div>
             </div>

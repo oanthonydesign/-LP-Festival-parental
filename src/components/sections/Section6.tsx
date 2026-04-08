@@ -5,9 +5,9 @@ import svgPaths from "@/components/svg/svgPaths";
 import { useCountdown } from "@/hooks/useCountdown";
 
 // Flags de controle para fácil ativação/desativação
-const SHOW_PROMO_RIBBON = false;
+const SHOW_PROMO_RIBBON = true;
 const SHOW_PRICE_STATUS_BADGE = true;
-const SHOW_COUNTDOWN_BADGE = false;
+const SHOW_COUNTDOWN_BADGE = true;
 
 interface Benefit {
   text: string;
@@ -167,7 +167,7 @@ function CountdownBadge() {
       </div>
       <div className="flex flex-col items-start">
         <p className="font-dm-sans text-[16px] md:text-[18px] leading-tight text-[#191919]">
-          <span className="font-bold text-[#2260a1]">Lote 1</span> termina em
+          <span className="font-bold text-[#2260a1]">Lote 2</span> termina em
         </p>
         <p className="font-sugar-peachy text-[28px] md:text-[34px] tracking-[-1px] md:tracking-[-1.25px] leading-[0.9] text-[#191919] mt-1 tabular-nums">
           {countdownText}

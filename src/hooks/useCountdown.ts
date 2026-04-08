@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 // Data-alvo: 22/03/2026 às 23:59:00 horário de Brasília (UTC-3)
-export const TARGET_DATE = new Date("2026-03-23T02:59:00Z"); // 22/03 23:59 BRT = 23/03 02:59 UTC
+export const TARGET_DATE = new Date("2026-04-16T02:59:00Z"); // 15/04 23:59 BRT = 16/04 02:59 UTC
 
 export function useCountdown(targetDate: Date = TARGET_DATE) {
     const calcRemaining = () => Math.max(0, targetDate.getTime() - Date.now());
