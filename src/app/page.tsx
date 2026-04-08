@@ -1,5 +1,5 @@
 import Header from '@/components/sections/Header';
-import HeroSectionV2 from '@/components/sections/HeroSectionV2';
+import HeroSection from '@/components/sections/HeroSection';
 import Marquee01 from '@/components/sections/Marquee01';
 import Marquee02 from '@/components/sections/Marquee02';
 import Section2 from '@/components/sections/Section2';
@@ -31,24 +31,23 @@ export default function Home() {
         <>
             <main className="min-h-screen relative overflow-x-clip">
                 <Header />
-                {/* <HeroSection /> */}
-                <HeroSectionV2 />
+                <HeroSection />
                 <div className="-mt-24 relative z-30">
                     <Marquee01 />
                     <Marquee02 />
                 </div>
                 <Section2 />
-                <SectionSpecialGuests />
                 <Section8 />
+                <Section5 />
                 <PreTicketSection />
                 <Section6 />
+                <SectionSpecialGuests />
                 <Section16 />
                 <SpeakersSection />
                 <Marquee01 />
                 <Marquee02 />
                 <SectionScheduleSimple />
                 <Section15 />
-                <Section5 />
                 <Section7 />
                 <Section9 />
                 <Section10 />

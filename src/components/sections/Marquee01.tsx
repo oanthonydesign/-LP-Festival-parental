@@ -48,7 +48,7 @@ export default function Marquee01() {
 
     const items = [
         "4 DIAS",
-        "+50 PALESTRANTES",
+        "+60 marcas e expositores",
         "4 PALCOS",
     ];
 

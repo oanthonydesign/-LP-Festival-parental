@@ -1,5 +1,5 @@
 import Header from '@/components/sections/Header';
-import HeroSectionV2B from '@/components/sections/HeroSectionV2B';
+import HeroSectionB from '@/components/sections/HeroSectionB';
 import Marquee01 from '@/components/sections/Marquee01';
 import Marquee02 from '@/components/sections/Marquee02';
 import Section2 from '@/components/sections/Section2';
@@ -31,7 +31,7 @@ export default function LPB() {
         <>
             <main className="min-h-screen relative overflow-x-clip">
                 <Header />
-                <HeroSectionV2B />
+                <HeroSectionB />
                 <div className="-mt-24 relative z-30">
                     <Marquee01 />
                     <Marquee02 />

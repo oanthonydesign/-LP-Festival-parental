@@ -53,10 +53,23 @@ export default function SectionSpecialGuests() {
                             </p>
                         </div>
 
-                        {/* Images Container - Polaroid Style - Gordon */}
-                        <div className="mt-auto flex flex-col sm:flex-row items-center justify-center gap-6 relative z-10">
+                        {/* Images Container - Book on Left, Gordon on Right */}
+                        <div className="mt-auto flex flex-col sm:flex-row items-center justify-center gap-0 relative z-10">
+                            
+                            {/* Livro - Agora à esquerda com borda e fundo branco */}
+                            <div className="relative z-20 w-[160px] sm:w-[180px] aspect-[2/3] bg-white border-2 border-[#191919] rounded-xl shadow-[4px_4px_0px_0px_#191919] rotate-[-8deg] transition-all duration-300 hover:rotate-[-4deg] hover:scale-105 sm:-mr-16 mb-[-40px] sm:mb-0 sm:mt-24 overflow-hidden p-1">
+                                <img
+                                    src="/images/livrogordonn.webp"
+                                    alt="Livro Pais Ocupados Filhos Distantes"
+                                    className="w-full h-full object-contain"
+                                    onError={(e) => {
+                                        e.currentTarget.src = 'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100%25" height="100%25" viewBox="0 0 400 500"%3E%3Crect fill="%23fff6ef" width="400" height="500"/%3E%3Ctext fill="%23191919" font-family="sans-serif" font-size="20" font-weight="bold" x="50%25" y="50%25" text-anchor="middle"%3ECapa do Livro%3C/text%3E%3C/svg%3E';
+                                    }}
+                                />
+                            </div>
+
                             {/* Polaroid 1 - Gordon */}
-                            <div className="relative z-10 w-full sm:w-1/2 max-w-[280px] aspect-[3/4] bg-white p-3 pb-12 border-2 border-[#191919] rounded-xl shadow-[6px_6px_0px_0px_#191919] rotate-[-4deg] transition-all duration-300 hover:rotate-[-1deg] hover:scale-105 hover:z-20">
+                            <div className="relative z-10 w-full sm:w-auto max-w-[320px] aspect-[3/4] bg-white p-3 pb-12 border-2 border-[#191919] rounded-xl shadow-[6px_6px_0px_0px_#191919] rotate-[2deg] transition-all duration-300 hover:rotate-[1deg] hover:scale-105">
                                 <div className="w-full h-full border-2 border-[#191919] rounded-lg overflow-hidden bg-[#fff6ef] relative">
                                     <img
                                         src="/images/gordonneufeld1.webp"
@@ -69,23 +82,6 @@ export default function SectionSpecialGuests() {
                                 </div>
                                 <div className="absolute bottom-3 left-0 w-full text-center font-sugar-peachy text-[22px] tracking-[-0.8px] text-[#191919]">
                                     Dr. Gordon
-                                </div>
-                            </div>
-
-                            {/* Polaroid 2 - Livro - Hidden on mobile */}
-                            <div className="relative hidden sm:block w-full sm:w-1/2 max-w-[280px] aspect-[3/4] bg-white p-3 pb-12 border-2 border-[#191919] rounded-xl shadow-[6px_6px_0px_0px_#191919] rotate-[6deg] transition-all duration-300 hover:rotate-[2deg] hover:scale-105 hover:z-20 sm:-ml-12 mt-8 sm:mt-0">
-                                <div className="w-full h-full border-2 border-[#191919] rounded-lg overflow-hidden bg-[#fff6ef] relative">
-                                    <img
-                                        src="/images/livrogordonn.webp"
-                                        alt="Livro Pais Ocupados Filhos Distantes"
-                                        className="w-full h-full object-cover"
-                                        onError={(e) => {
-                                            e.currentTarget.src = 'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100%25" height="100%25" viewBox="0 0 400 500"%3E%3Crect fill="%23fff6ef" width="400" height="500"/%3E%3Ctext fill="%23191919" font-family="sans-serif" font-size="20" font-weight="bold" x="50%25" y="50%25" text-anchor="middle"%3ECapa do Livro%3C/text%3E%3C/svg%3E';
-                                        }}
-                                    />
-                                </div>
-                                <div className="absolute bottom-3 left-0 w-full text-center font-sugar-peachy text-[22px] text-[#191919] px-2 leading-tight">
-                                    O Livro
                                 </div>
                             </div>
                         </div>
