@@ -62,7 +62,7 @@ const PASSAPORTES: PassportData[] = [
       "Acesso ao conteúdo gravado dos dois primeiros dias do Festival"
     ],
     target: "Para profissionais da parentalidade",
-    buttonText: "Quero participar como profissional",
+    buttonText: "Quero o passaporte profissional",
     href: "https://sun.eduzz.com/39VEQVEDWR",
     bgColor: "bg-[#3399CC]",
     borderColor: "border-[#191919]",
@@ -87,20 +87,20 @@ const PASSAPORTES: PassportData[] = [
       "Acesso à feira de produtos e serviços para a parentalidade"
     ],
     target: "Para pais e cuidadores",
-    buttonText: "Quero participar do Festival",
+    buttonText: "Quero o passaporte parental",
     href: "https://sun.eduzz.com/39VEAVA5WR",
     doubleOptions: {
       priceInstallment: "R$ 74,70",
       priceFull: "ou R$ 747,00 à vista",
       priceOriginal: "R$ 1.947,00",
       benefits: [
-        "Parentalidade não se constrói sozinho. Aqui, pode viver esta experiência com quem partilha a mesma jornada e com melhor custo por participante",
+        "Parentalidade não se constrói sozinho. Viva essa experiência com quem partilha a mesma jornada e com melhor custo por participante",
         "Sacola com brindes",
         "Acesso às sessões de autógrafos com palestrantes",
         "Acesso à feira de produtos e serviços para a parentalidade"
       ],
       href: "https://sun.eduzz.com/G92ERDR4WE",
-      buttonText: "Quero participar do Festival"
+      buttonText: "Quero 2 passaportes parental"
     },
     bgColor: "bg-[#ED9F8C]",
     borderColor: "border-[#191919]",
@@ -319,7 +319,7 @@ function PassportCard({ data }: { data: PassportData }) {
 
 export default function Section6() {
   return (
-    <section className="bg-[#fff6ef] pt-[56px] lg:pt-[80px] pb-[80px] lg:pb-[120px] px-4 lg:px-12 flex flex-col items-center relative overflow-hidden scroll-mt-24" id="ingressos">
+    <section className="bg-[#fff6ef] pt-[56px] lg:pt-[80px] pb-[40px] lg:pb-[64px] px-4 lg:px-12 flex flex-col items-center relative overflow-hidden scroll-mt-24" id="ingressos">
       <div className="max-w-[1280px] w-full flex flex-col items-center gap-[64px]">
         {/* Header */}
         <div className="flex flex-col items-center gap-7 text-center">
@@ -330,7 +330,7 @@ export default function Section6() {
 
           <div className="flex flex-col gap-6 max-w-[800px]">
             <h2 className="font-sugar-peachy text-[46px] lg:text-[72px] tracking-[-1.4px] lg:tracking-[-2px] text-[#2260a1] leading-[0.8]">
-              Como você quer atravessar essa experiência?
+              Como você quer participar do Festival Parental?
             </h2>
             <p className="font-dm-sans text-[18px] lg:text-[24px] text-[#4c4d4f] leading-tight">
               Dois caminhos diferentes. Um mesmo ponto de virada.

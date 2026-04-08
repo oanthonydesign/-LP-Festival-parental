@@ -2,6 +2,8 @@
 
 import { useState, useRef, useEffect } from "react";
 
+import svgPaths from "@/components/svg/svgPaths";
+
 function BackgroundCurves() {
     return (
         <div className="absolute top-[700px] lg:top-[60px] left-1/2 -translate-x-1/2 w-screen z-0 pointer-events-none select-none opacity-100 overflow-visible">
@@ -28,7 +30,7 @@ export default function Section2() {
     };
 
     return (
-        <section className="bg-[#fff6ef] w-full flex flex-col items-center px-4 md:px-0 pb-[56px] pt-[56px] relative isolate overflow-visible" id="contexto" data-name="Section - 2">
+        <section className="bg-[#fff6ef] w-full flex flex-col items-center px-4 md:px-0 pb-[80px] pt-[56px] relative isolate overflow-visible" id="contexto" data-name="Section - 2">
             <BackgroundCurves />
 
             <div className="layout-container flex flex-col gap-[48px] items-center relative z-10 w-full">
@@ -51,7 +53,7 @@ export default function Section2() {
                                 Profissionais enfrentam outro lado do mesmo cenário: um campo em expansão, com múltiplas linhas e demandas, onde transformar teoria em prática consistente nem sempre é simples.
                             </p>
                             <p>
-                                O Festival Parental nasce como um ponto de ruptura. Um espaço onde o excesso de informação dá lugar à compreensão e onde a parentalidade deixa de ser tentativa e passa a ser construção consciente.
+                                O Festival Parental é a evolução do Congresso Internacional de Educação Parental. Um espaço onde o excesso de informação dá lugar à compreensão e onde a parentalidade deixa de ser tentativa e passa a ser construção consciente.
                             </p>
                         </div>
                     </div>
@@ -88,7 +90,20 @@ export default function Section2() {
                         </div>
                     )}
                 </div>
+
+                {/* CTA Button */}
+                <a href="#ingressos" className="group relative w-full md:w-[332px]">
+                    <div className="bg-[#f7a73c] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0 text-[#191919]">
+                            <path d={svgPaths.p60d3f00} fill="currentColor" />
+                        </svg>
+                        <span className="font-dm-sans font-bold text-[#191919] text-[13px] md:text-[14px] uppercase tracking-[0.8px] md:tracking-[1px] whitespace-nowrap">
+                            Garanta seu ingresso
+                        </span>
+                    </div>
+                </a>
             </div>
+
         </section>
     );
 }

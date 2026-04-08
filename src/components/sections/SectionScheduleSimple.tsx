@@ -111,15 +111,15 @@ export default function SectionScheduleSimple() {
 
                 {/* Cards Layout Grouped by Phases */}
                 <div className="flex flex-col gap-16 md:gap-24">
-                    
+
                     {/* Phase 1: Professionals */}
                     <div className="flex flex-col gap-8">
                         <div className="flex flex-col items-center md:items-start text-center md:text-left gap-3 border-l-0 md:border-l-8 border-[#3399CC] md:pl-8 py-2">
                             <h3 className="font-sugar-peachy text-[#3399CC] text-[32px] md:text-[52px] leading-tight tracking-tight">
                                 Dias 1 e 2: A Base Profissional
                             </h3>
-                            <p className="font-dm-sans text-[#4c4d4f] text-[18px] md:text-[32px] font-bold italic opacity-90 leading-tight">
-                                “Do improviso à autoridade científica.”
+                            <p className="font-dm-sans text-[#4c4d4f] text-[18px] md:text-[32px] opacity-90 leading-tight">
+                                Do improviso à autoridade científica.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -134,8 +134,8 @@ export default function SectionScheduleSimple() {
                             <h3 className="font-sugar-peachy text-[#ED9F8C] text-[32px] md:text-[52px] leading-tight tracking-tight">
                                 Dias 3 e 4: A Vivência Parental
                             </h3>
-                            <p className="font-dm-sans text-[#4c4d4f] text-[18px] md:text-[32px] font-bold italic opacity-90 leading-tight">
-                                “Da culpa à clareza prática nas relações.”
+                            <p className="font-dm-sans text-[#4c4d4f] text-[18px] md:text-[32px] opacity-90 leading-tight">
+                                Da culpa à clareza prática nas relações.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">

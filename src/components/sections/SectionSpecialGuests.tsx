@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function SectionSpecialGuests() {
     return (
-        <section className="bg-[#fff6ef] w-full flex flex-col items-center pb-[32px] pt-[72px] relative isolate z-20 scroll-mt-24" id="convidados-especiais">
+        <section className="bg-[#fff6ef] w-full flex flex-col items-center pb-[80px] lg:pb-[120px] pt-[72px] relative isolate z-20 scroll-mt-24" id="convidados-especiais">
             <div className="layout-container flex flex-col gap-[64px] items-center relative px-4 md:px-0 w-full max-w-[1240px]">
 
                 {/* Header Section */}
@@ -12,9 +12,6 @@ export default function SectionSpecialGuests() {
                     <h2 className="font-sugar-peachy text-[#ef7d25] text-[56px] lg:text-[72px] tracking-[-1.55px] lg:tracking-[-2px] leading-[0.8]">
                         Destaques da Programação
                     </h2>
-                    <p className="font-dm-sans text-[#4c4d4f] text-[18px] lg:text-[24px] leading-tight max-w-[900px]">
-                        Uma das principais referências mundiais em desenvolvimento emocional infantil
-                    </p>
                 </div>
 
                 {/* Cards Grid */}
@@ -45,7 +42,7 @@ export default function SectionSpecialGuests() {
                             </h3>
 
                             <p className="font-dm-sans font-bold text-[18px] lg:text-[24px] text-[#fff6ef] pt-2 text-center lg:text-left">
-                                Autor do livro "Pais Ocupados filhos distantes"
+                                Autor do livro "Pais Ocupados filhos distantes", uma das principais referências mundiais em desenvolvimento emocional infantil
                             </p>
 
                             <p className="font-dm-sans text-[18px] lg:text-[24px] text-[#fff6ef] leading-[1.3] font-medium opacity-95 text-center lg:text-left">
@@ -55,7 +52,7 @@ export default function SectionSpecialGuests() {
 
                         {/* Images Container - Book on Left, Gordon on Right */}
                         <div className="mt-auto flex flex-col sm:flex-row items-center justify-center gap-0 relative z-10">
-                            
+
                             {/* Livro - Agora à esquerda com borda e fundo branco */}
                             <div className="relative z-20 w-[160px] sm:w-[180px] aspect-[2/3] bg-white border-2 border-[#191919] rounded-xl shadow-[4px_4px_0px_0px_#191919] rotate-[-8deg] transition-all duration-300 hover:rotate-[-4deg] hover:scale-105 sm:-mr-16 mb-[-40px] sm:mb-0 sm:mt-24 overflow-hidden p-1">
                                 <img

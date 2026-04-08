@@ -101,7 +101,7 @@ export default function Section8() {
                         bgColor="#3399CC"
                         textColor="text-[#fff6ef]"
                         heading="Para profissionais que trabalham com famílias"
-                        subtext="Para profissionais que buscam a excelência técnica que o mercado exige e a segurança para ser referência no atendimento a famílias"
+                        subtext="Dois dias de aprofundamento técnico para quem enfrenta a complexidade das relações familiares na prática, com base científica, troca qualificada e caminhos para transformar teoria em intervenção real com famílias."
                         image={imgProfissionais}
                         badgeText="+1.500 profissionais"
                     />
@@ -110,7 +110,7 @@ export default function Section8() {
                         bgColor="#ED9F8C"
                         textColor="text-[#191919]"
                         heading="Para pais, mães e cuidadores"
-                        subtext="Para pais e cuidadores que decidiram substituir a culpa e o excesso de informação por clareza prática e segurança na educação dos filhos"
+                        subtext="Dois dias de conversas acessíveis e profundas, com palestras, reflexões e experiências para lidar com os desafios reais da criação de filhos hoje com clareza, sem julgamentos ou fórmulas prontas."
                         image={imgPais}
                     />
                 </div>
