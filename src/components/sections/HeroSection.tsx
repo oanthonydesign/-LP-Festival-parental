@@ -50,7 +50,7 @@ export default function HeroSection() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[36px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.8] md:leading-[0.9] tracking-[-1.4px] sm:tracking-[-1.5px] md:tracking-[-2px] lg:tracking-[-2.6px] relative px-4 md:px-0 max-w-[1100px] w-full text-balance">
+                    <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[36px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.8] md:leading-[0.9] tracking-[-1.4px] sm:tracking-[-1.5px] md:tracking-[-2px] lg:tracking-[-2.6px] relative px-4 md:px-0 max-w-[1100px] w-[92%] text-balance">
                         <span className="mt-1">
                             A parentalidade não precisa de mais dicas. <span className="text-[#2260a1]">Precisa de mais clareza e compreensão.</span>
                         </span>
@@ -59,10 +59,7 @@ export default function HeroSection() {
                     {/* Subtext */}
                     <div className="font-dm-sans text-[#4c4d4f] text-[16px] sm:text-[18px] md:text-[24px] text-center leading-[1.2] md:leading-[1.1] flex flex-col gap-3 md:gap-4 max-w-full md:max-w-[1150px] px-2 md:px-0">
                         <p>
-                            Um encontro presencial de quatro dias que reúne profissionais, especialistas e famílias para aprofundar o desenvolvimento emocional de crianças e as relações que moldam quem elas se tornam.
-                        </p>
-                        <p>
-                            Evolução do Congresso Internacional de Educação Parental.
+                            O Festival Parental reúne as maiores autoridades da área em um encontro desenhado para profissionais que buscam excelência técnica e pais que decidiram abandonar o improviso para educar com consciência e segurança.
                         </p>
                     </div>
                 </div>
@@ -155,14 +152,45 @@ export default function HeroSection() {
                     <img src="/images/murilo gun.webp" alt="Murilo Gun" className="w-full h-full object-contain" />
                 </div>
 
-                {/* Grafismo 1 (Small Circle) */}
-                <div className="hidden lg:block absolute lg:top-[170px] lg:left-[840px] w-[105px] h-[105px] z-[70]">
-                    <img src="/images/grafismo_1.svg" alt="" className="w-full h-full" />
+                {/* --- Speaker Names (Desktop) --- */}
+                {/* Maya Eigenmann */}
+                <div className="hidden lg:block absolute lg:top-[134px] lg:left-[81px] lg:w-[163px] lg:h-[28px] z-[80] transition-transform duration-300 hover:scale-110 pointer-events-auto cursor-pointer">
+                    <img src="/images/text_Maya Eigenmann.svg" alt="Maya Eigenmann" className="w-full h-full object-contain" />
                 </div>
 
-                {/* Grafismo 2 (Shape) */}
-                <div className="hidden lg:block absolute lg:top-[330px] lg:left-[230px] w-[60px] h-[60px] z-[71]">
-                    <img src="/images/grafismo_2.svg" alt="" className="w-full h-full" />
+                {/* Daniel Becker */}
+                <div className="hidden lg:block absolute lg:top-[349px] lg:left-[4px] lg:w-[131px] lg:h-[28px] z-[80] transition-transform duration-300 hover:scale-110 pointer-events-auto cursor-pointer">
+                    <img src="/images/text_Daniel Becker.svg" alt="Daniel Becker" className="w-full h-full object-contain" />
+                </div>
+
+                {/* Isa Minatel */}
+                <div className="hidden lg:block absolute lg:top-[317px] lg:left-[307px] lg:w-[105px] lg:h-[28px] z-[80] transition-transform duration-300 hover:scale-110 pointer-events-auto cursor-pointer">
+                    <img src="/images/text_Isa Minatel.svg" alt="Isa Minatel" className="w-full h-full object-contain" />
+                </div>
+
+                {/* Nanda Perim */}
+                <div className="hidden lg:block absolute lg:top-[353px] lg:left-[492px] lg:w-[123px] lg:h-[28px] z-[80] transition-transform duration-300 hover:scale-110 pointer-events-auto cursor-pointer">
+                    <img src="/images/text_Nanda Perim.svg" alt="Nanda Perim" className="w-full h-full object-contain" />
+                </div>
+
+                {/* Marcos Piangers */}
+                <div className="hidden lg:block absolute lg:top-[317px] lg:left-[698px] lg:w-[158px] lg:h-[28px] z-[80] transition-transform duration-300 hover:scale-110 pointer-events-auto cursor-pointer">
+                    <img src="/images/text_Marcos Piangers.svg" alt="Marcos Piangers" className="w-full h-full object-contain" />
+                </div>
+
+                {/* Telma Abrahão */}
+                <div className="hidden lg:block absolute lg:top-[360px] lg:left-[902px] lg:w-[143px] lg:h-[28px] z-[80] transition-transform duration-300 hover:scale-110 pointer-events-auto cursor-pointer">
+                    <img src="/images/text_Telma Abrahão.svg" alt="Telma Abrahão" className="w-full h-full object-contain" />
+                </div>
+
+                {/* Elisama Santos */}
+                <div className="hidden lg:block absolute lg:top-[141px] lg:left-[1111px] lg:w-[147px] lg:h-[28px] z-[80] transition-transform duration-300 hover:scale-110 pointer-events-auto cursor-pointer">
+                    <img src="/images/text_Elisama Santos.svg" alt="Elisama Santos" className="w-full h-full object-contain" />
+                </div>
+
+                {/* Murilo Gun */}
+                <div className="hidden lg:block absolute lg:top-[356px] lg:left-[1207px] lg:w-[108px] lg:h-[28px] z-[80] transition-transform duration-300 hover:scale-110 pointer-events-auto cursor-pointer">
+                    <img src="/images/text_Murilo Gun.svg" alt="Murilo Gun" className="w-full h-full object-contain" />
                 </div>
             </div>
 
