@@ -22,6 +22,7 @@ import SectionScheduleSimple from '@/components/sections/SectionScheduleSimple';
 import SectionSpecialGuests from '@/components/sections/SectionSpecialGuests';
 import StickyBottomBar from '@/components/sections/StickyBottomBar';
 import WhatsAppButton from '@/components/sections/WhatsAppButton';
+import PreTicketSection from '@/components/sections/PreTicketSection';
 
 const SHOW_STICKY_BAR = true;
 
@@ -39,6 +40,7 @@ export default function Home() {
                 <Section2 />
                 <SectionSpecialGuests />
                 <Section8 />
+                <PreTicketSection />
                 <Section6 />
                 <Section16 />
                 <SpeakersSection />
