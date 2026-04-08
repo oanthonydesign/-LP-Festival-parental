@@ -47,6 +47,19 @@ export default function RootLayout({
                     async
                     defer
                 />
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=G-2P6C784S1B"
+                    strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag(){dataLayer.push(arguments);}
+                      gtag('js', new Date());
+
+                      gtag('config', 'G-2P6C784S1B');
+                    `}
+                </Script>
             </head>
             <body className={`${dmSans.variable} ${archivo.variable} antialiased bg-[#fff6ef] font-[family-name:var(--font-dm-sans)]`}>
                 {children}
