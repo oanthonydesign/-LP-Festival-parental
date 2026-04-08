@@ -4,11 +4,11 @@ import { useState, useRef, useEffect } from "react";
 
 function BackgroundCurves() {
     return (
-        <div className="absolute top-[520px] lg:top-[60px] left-0 w-full z-[1] pointer-events-none select-none opacity-100 overflow-hidden lg:overflow-visible">
+        <div className="absolute top-[700px] lg:top-[60px] left-1/2 -translate-x-1/2 w-screen z-0 pointer-events-none select-none opacity-100 overflow-visible">
             <img
                 src="/images/grafismo_wave.svg"
                 alt="Grafismo de ondas"
-                className="w-full h-auto min-w-0 max-w-none lg:min-w-[1440px]"
+                className="w-[150%] lg:w-full h-auto lg:min-w-[1440px] max-w-none"
                 loading="lazy"
             />
         </div>
@@ -28,7 +28,7 @@ export default function Section2() {
     };
 
     return (
-        <section className="bg-[#fff6ef] w-full flex flex-col items-center px-4 md:px-0 pb-[56px] pt-[56px] relative isolate overflow-hidden" id="contexto" data-name="Section - 2">
+        <section className="bg-[#fff6ef] w-full flex flex-col items-center px-4 md:px-0 pb-[56px] pt-[56px] relative isolate overflow-visible" id="contexto" data-name="Section - 2">
             <BackgroundCurves />
 
             <div className="layout-container flex flex-col gap-[48px] items-center relative z-10 w-full">
