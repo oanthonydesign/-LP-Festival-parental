@@ -674,7 +674,7 @@ function Content() {
 function Grafismo() {
     return (
         <div
-            className="absolute top-[200px] left-1/4 ml-[-1200px] w-[2662px] h-[682px] z-[1] pointer-events-none select-none overflow-visible"
+            className="absolute top-[200px] left-1/4 ml-[-1100px] w-[2662px] h-[682px] z-[1] pointer-events-none select-none overflow-visible"
             data-name="grafismo_nuvem"
         >
             <svg

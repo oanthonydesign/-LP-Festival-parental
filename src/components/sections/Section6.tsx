@@ -54,14 +54,15 @@ const PASSAPORTES: PassportData[] = [
     priceFull: "ou R$ 1.397,90 à vista",
     priceOriginal: "R$ 2.197,00",
     benefits: [
-      "Acesso presencial aos 4 dias do Festival Parental 2026 (2 dias de conteúdo para profissionais + 2 dias de conteúdo para pais e cuidadores)",
+      "Quatro dias para consolidar o repertório técnico e a segurança prática que a atuação com famílias exige hoje",
+      "Acesso exclusivo à rede que está definindo o futuro da educação parental no Brasil",
       "Sacola com brindes",
       "Acesso às sessões de autógrafos com palestrantes",
       "Acesso à feira de produtos e serviços para a parentalidade",
       "Acesso ao conteúdo gravado dos dois primeiros dias do Festival"
     ],
     target: "Para profissionais da parentalidade",
-    buttonText: "Quero o passaporte profissional",
+    buttonText: "Quero participar como profissional",
     href: "https://sun.eduzz.com/39VEQVEDWR",
     bgColor: "bg-[#3399CC]",
     borderColor: "border-[#191919]",
@@ -80,26 +81,26 @@ const PASSAPORTES: PassportData[] = [
     priceFull: "ou R$ 497,00 à vista",
     priceOriginal: "R$ 1.497,00",
     benefits: [
-      "Acesso presencial individual aos 2 últimos dias do Festival Parental 2026 (dias 21 e 22.11), com conteúdo para pais e cuidadores",
+      "Dois dias para sair da sobrecarga de informação e ter mais clareza, presença e direção na relação com os seus filhos",
       "Sacola com brindes",
       "Acesso às sessões de autógrafos com palestrantes",
       "Acesso à feira de produtos e serviços para a parentalidade"
     ],
     target: "Para pais e cuidadores",
-    buttonText: "Quero o passaporte parental",
+    buttonText: "Quero participar do Festival",
     href: "https://sun.eduzz.com/39VEAVA5WR",
     doubleOptions: {
       priceInstallment: "R$ 74,70",
       priceFull: "ou R$ 747,00 à vista",
       priceOriginal: "R$ 1.947,00",
       benefits: [
-        "Acesso presencial para duas pessoas aos 2 últimos dias do Festival Parental 2026 (dias 21 e 22.11), com conteúdo para pais e cuidadores",
+        "Parentalidade não se constrói sozinho. Aqui, pode viver esta experiência com quem partilha a mesma jornada e com melhor custo por participante",
         "Sacola com brindes",
         "Acesso às sessões de autógrafos com palestrantes",
         "Acesso à feira de produtos e serviços para a parentalidade"
       ],
       href: "https://sun.eduzz.com/G92ERDR4WE",
-      buttonText: "Quero 2 passaportes parental"
+      buttonText: "Quero participar do Festival"
     },
     bgColor: "bg-[#ED9F8C]",
     borderColor: "border-[#191919]",
@@ -237,18 +238,23 @@ function PassportCard({ data }: { data: PassportData }) {
         )}
 
         {hasDoubleOption && (
-          <div className="flex w-full border-2 border-[#191919] rounded-[40px] overflow-hidden bg-white/10 p-1">
+          <div className="flex w-full border-2 border-[#191919] rounded-[40px] bg-white/10 p-1 relative">
             <button
               onClick={() => setIsDouble(false)}
               className={`flex-1 py-3 text-center font-dm-sans font-bold text-[14px] uppercase tracking-wider rounded-[32px] transition-all duration-300 ${!isDouble ? 'bg-[#f7a73c] text-[#191919] shadow-[2px_2px_0px_0px_#191919] border-2 border-[#191919]' : 'text-current opacity-70 border-2 border-transparent hover:opacity-100'}`}
             >
-              Único
+              1 pessoa
             </button>
             <button
               onClick={() => setIsDouble(true)}
-              className={`flex-1 py-3 text-center font-dm-sans font-bold text-[14px] uppercase tracking-wider rounded-[32px] transition-all duration-300 ${isDouble ? 'bg-[#f7a73c] text-[#191919] shadow-[2px_2px_0px_0px_#191919] border-2 border-[#191919]' : 'text-current opacity-70 border-2 border-transparent hover:opacity-100'}`}
+              className={`relative flex-1 py-3 text-center font-dm-sans font-bold text-[14px] uppercase tracking-wider rounded-[32px] transition-all duration-300 ${isDouble ? 'bg-[#f7a73c] text-[#191919] shadow-[2px_2px_0px_0px_#191919] border-2 border-[#191919]' : 'text-current opacity-70 border-2 border-transparent hover:opacity-100 hover:bg-black/5'}`}
             >
-              Duplo
+              {isDouble && (
+                <span className="absolute -top-5 -right-2 bg-[#2260a1] text-white text-[12px] md:text-[14px] font-sugar-peachy tracking-normal px-3 py-1 rounded-[8px] border-2 border-[#191919] rotate-6 shadow-[3px_3px_0px_0px_#191919] z-30 whitespace-nowrap pointer-events-none transition-all duration-300 group-hover:rotate-[8deg] group-hover:scale-105">
+                  Melhor Valor!
+                </span>
+              )}
+              2 pessoas
             </button>
           </div>
         )}
@@ -291,13 +297,7 @@ function PassportCard({ data }: { data: PassportData }) {
         )} */}
 
 
-        {/* Action Area */}
         <div className="mt-auto flex flex-col items-center gap-3 w-full">
-          {data.id === 'parental' && isDouble && (
-            <p className="font-dm-sans font-medium text-[13px] md:text-[14px] text-center text-current opacity-80">
-              Melhor custo por participante
-            </p>
-          )}
 
           {/* Action Button */}
           <a
@@ -328,12 +328,12 @@ export default function Section6() {
             <span className="font-dm-sans font-bold text-[14px] uppercase tracking-wider">escolha seu ingresso</span>
           </div>
 
-          <div className="flex flex-col gap-6 max-w-[1000px]">
+          <div className="flex flex-col gap-6 max-w-[800px]">
             <h2 className="font-sugar-peachy text-[46px] lg:text-[72px] tracking-[-1.4px] lg:tracking-[-2px] text-[#2260a1] leading-[0.8]">
-              Agora é escolher como você quer participar do Festival Parental
+              Como você quer atravessar essa experiência?
             </h2>
             <p className="font-dm-sans text-[18px] lg:text-[24px] text-[#4c4d4f] leading-tight">
-              Dois caminhos diferentes, pensados para públicos distintos. Escolha o passaporte que melhor se conecta com o seu momento.
+              Dois caminhos diferentes. Um mesmo ponto de virada.
             </p>
           </div>
         </div>

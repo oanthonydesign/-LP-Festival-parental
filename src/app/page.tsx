@@ -36,8 +36,8 @@ export default function Home() {
                     <Marquee01 />
                     <Marquee02 />
                 </div>
-                <SectionSpecialGuests />
                 <Section2 />
+                <SectionSpecialGuests />
                 <Section8 />
                 <Section5 />
                 <Section6 />

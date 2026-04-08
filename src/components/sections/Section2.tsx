@@ -45,13 +45,13 @@ export default function Section2() {
                     <div className="flex flex-col items-center w-full max-w-[900px]">
                         <div className="flex flex-col gap-6 font-dm-sans justify-center leading-tight relative text-[#4c4d4f] text-[18px] lg:text-[24px]">
                             <p>
-                                Pais e cuidadores convivem com excesso de informação, pressão e dúvida.
+                                Dica de Instagram virou rotina. Informação não falta. Mas, na prática, muitos adultos seguem inseguros, oscilando entre abordagens e tentando acertar, mas sem clareza sobre o que realmente sustenta o desenvolvimento emocional de uma criança.
                             </p>
                             <p>
-                                Profissionais atuam em um campo em constante transformação, buscando traduzir teoria em prática no trabalho com famílias.
+                                Profissionais enfrentam outro lado do mesmo cenário: um campo em expansão, com múltiplas linhas e demandas, onde transformar teoria em prática consistente nem sempre é simples.
                             </p>
                             <p>
-                                O  Festival Parental nasce desse cenário: um encontro presencial – a evolução do Congresso Internacional de Educação Parental – que reúne ciência, prática e experiência real para aprofundar a parentalidade com mais clareza, menos ruído e mais conexão.
+                                O Festival Parental nasce como um ponto de ruptura. Um espaço onde o excesso de informação dá lugar à compreensão e onde a parentalidade deixa de ser tentativa e passa a ser construção consciente.
                             </p>
                         </div>
                     </div>

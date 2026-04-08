@@ -281,17 +281,15 @@ export default function HeroSectionV2() {
                         </span>
                     </div>
 
-                    <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[48px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.9] md:leading-[0.9] tracking-[-1.4px] sm:tracking-[-1.5px] md:tracking-[-2px] lg:tracking-[-2.6px] relative px-4 md:px-0 w-full">
+                    <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[48px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.9] md:leading-[0.9] tracking-[-1.4px] sm:tracking-[-1.5px] md:tracking-[-2px] lg:tracking-[-2.6px] relative px-4 md:px-0 w-[1100px]">
                         <span className="block mt-1">
-                            <span className="text-[#2260a1]">Mais de 50 especialistas</span>
+                            A parentalidade não precisa de mais dicas. <span className="text-[#2260a1]">Precisa de mais clareza e compreensão.</span>
                         </span>
-                        <span className="block">reunidos para discutir os</span>
-                        <span className="block">desafios da parentalidade</span>
                     </h1>
 
-                    <div className="font-dm-sans text-[#4c4d4f] text-[16px] sm:text-[18px] md:text-[24px] text-center leading-[1.2] md:leading-[1.1] flex flex-col gap-3 md:gap-4 max-w-full md:max-w-[1150px] px-2 md:px-0">
+                    <div className="font-dm-sans text-[#4c4d4f] text-[16px] sm:text-[18px] md:text-[24px] text-center leading-[1.2] md:leading-[1.1] flex flex-col gap-3 md:gap-4 max-w-full md:max-w-[900px] px-2 md:px-0">
                         <p>
-                            Um encontro que reúne profissionais, especialistas e famílias para aprofundar o desenvolvimento emocional de crianças e as relações que moldam quem elas se tornam.
+                            O Festival Parental reúne as maiores autoridades da área em um encontro desenhado para profissionais que buscam excelência técnica e pais que decidiram abandonar o improviso para educar com consciência e segurança.
                         </p>
 
                     </div>

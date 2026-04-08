@@ -9,9 +9,12 @@ export default function SectionSpecialGuests() {
 
                 {/* Header Section */}
                 <div className="flex flex-col gap-[24px] items-center text-center relative w-full">
-                    <h2 className="font-sugar-peachy text-[#ef7d25] text-[56px] lg:text-[72px] tracking-[-1.55px] lg:tracking-[-2px] leading-[0.8] mb-4">
+                    <h2 className="font-sugar-peachy text-[#ef7d25] text-[56px] lg:text-[72px] tracking-[-1.55px] lg:tracking-[-2px] leading-[0.8]">
                         Destaques da Programação
                     </h2>
+                    <p className="font-dm-sans text-[#4c4d4f] text-[18px] lg:text-[24px] leading-tight max-w-[900px]">
+                        Uma das principais referências mundiais em desenvolvimento emocional infantil
+                    </p>
                 </div>
 
                 {/* Cards Grid */}
