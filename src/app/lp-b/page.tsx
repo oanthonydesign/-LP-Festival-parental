@@ -1,0 +1,64 @@
+import Header from '@/components/sections/Header';
+import HeroSectionV2B from '@/components/sections/HeroSectionV2B';
+import Marquee01 from '@/components/sections/Marquee01';
+import Marquee02 from '@/components/sections/Marquee02';
+import Section2 from '@/components/sections/Section2';
+import Section8 from '@/components/sections/Section8';
+import SpeakersSection from '@/components/sections/SpeakersSection';
+import Section6 from '@/components/sections/Section6';
+import Section7 from '@/components/sections/Section7';
+import Section5 from '@/components/sections/Section5';
+import Section9 from '@/components/sections/Section9';
+import Section10 from '@/components/sections/Section10';
+import Section11 from '@/components/sections/Section11';
+import Section12 from '@/components/sections/Section12';
+import Section13 from '@/components/sections/Section13';
+import Section14 from '@/components/sections/Section14';
+import Section15 from '@/components/sections/Section15';
+import Section16 from '@/components/sections/Section16';
+import Rodape from '@/components/sections/Rodape';
+import Copyright from '@/components/sections/Copyright';
+import SectionScheduleSimple from '@/components/sections/SectionScheduleSimple';
+import SectionSpecialGuests from '@/components/sections/SectionSpecialGuests';
+import StickyBottomBar from '@/components/sections/StickyBottomBar';
+import WhatsAppButton from '@/components/sections/WhatsAppButton';
+import PreTicketSection from '@/components/sections/PreTicketSection';
+
+const SHOW_STICKY_BAR = true;
+
+export default function LPB() {
+    return (
+        <>
+            <main className="min-h-screen relative overflow-x-clip">
+                <Header />
+                <HeroSectionV2B />
+                <div className="-mt-24 relative z-30">
+                    <Marquee01 />
+                    <Marquee02 />
+                </div>
+                <Section2 />
+                <SectionSpecialGuests />
+                <Section8 />
+                <PreTicketSection />
+                <Section6 />
+                <Section16 />
+                <SpeakersSection />
+                <Marquee01 />
+                <Marquee02 />
+                <SectionScheduleSimple />
+                <Section15 />
+                <Section5 />
+                <Section7 />
+                <Section9 />
+                <Section10 />
+                <Section11 />
+                <Section12 />
+                <Section13 />
+                <Rodape />
+                <Copyright />
+            </main>
+            <WhatsAppButton />
+            {SHOW_STICKY_BAR && <StickyBottomBar />}
+        </>
+    )
+}
