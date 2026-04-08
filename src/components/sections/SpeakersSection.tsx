@@ -172,7 +172,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 18,
         name: "Elisama Santos",
-        description: "Pedagoga, escritora e educadora parental especialista em Educação Positiva",
+        description: "Psicanalista, especialista em comunicação não violenta e escritora.",
         image: "/images/elisamas.webp",
         instagram: "https://www.instagram.com/elisamasantosc/",
         linkedin: "https://www.linkedin.com/in/elisama-santos/",
