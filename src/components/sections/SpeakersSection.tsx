@@ -154,11 +154,29 @@ export const allSpeakers: Speaker[] = [
     {
         id: 16,
         name: "Dr. Gordon Neufeld",
-        description: "Psicólogo canadense, autor do best-seller 'Hold On to Your Kids' e fundador do Neufeld Institute",
+        description: "Psicólogo canadense, autor best-seller e fundador do Neufeld Institute",
         image: "/images/gordonn.webp",
         instagram: "https://www.instagram.com/neufeldinstitute/",
         website: "https://www.neufeldinstitute.org/link",
         bgColor: "#79c3ab",
+    },
+    {
+        id: 17,
+        name: "Maya Eigenmann",
+        description: "Pedagoga, escritora e educadora parental especialista em Educação Positiva",
+        image: "/images/mayae.webp",
+        instagram: "https://www.instagram.com/maya_eigenmann/",
+        linkedin: "https://www.linkedin.com/in/mayaeigenmann/",
+        bgColor: "#74acde",
+    },
+    {
+        id: 18,
+        name: "Elisama Santos",
+        description: "Pedagoga, escritora e educadora parental especialista em Educação Positiva",
+        image: "/images/elisamas.webp",
+        instagram: "https://www.instagram.com/elisamasantosc/",
+        linkedin: "https://www.linkedin.com/in/elisama-santos/",
+        bgColor: "#f7a73c",
     },
 ];
 

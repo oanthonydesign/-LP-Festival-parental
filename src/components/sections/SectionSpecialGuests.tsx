@@ -51,10 +51,10 @@ export default function SectionSpecialGuests() {
                         </div>
 
                         {/* Images Container - Book on Left, Gordon on Right */}
-                        <div className="mt-auto flex flex-col sm:flex-row items-center justify-center gap-0 relative z-10">
+                        <div className="mt-auto flex flex-row items-center justify-center sm:justify-center gap-0 relative z-10">
 
                             {/* Livro - Agora à esquerda com borda e fundo branco */}
-                            <div className="relative z-20 w-[160px] sm:w-[180px] aspect-[2/3] bg-white border-2 border-[#191919] rounded-xl shadow-[4px_4px_0px_0px_#191919] rotate-[-8deg] transition-all duration-300 hover:rotate-[-4deg] hover:scale-105 sm:-mr-16 mb-[-40px] sm:mb-0 sm:mt-24 overflow-hidden p-1">
+                            <div className="relative z-20 w-[110px] sm:w-[180px] aspect-[2/3] bg-white border-2 border-[#191919] rounded-xl shadow-[4px_4px_0px_0px_#191919] rotate-[-8deg] transition-all duration-300 hover:rotate-[-4deg] hover:scale-105 -mr-10 sm:-mr-16 sm:mt-24 overflow-hidden p-1">
                                 <img
                                     src="/images/livrogordonn.webp"
                                     alt="Livro Pais Ocupados Filhos Distantes"
@@ -66,7 +66,7 @@ export default function SectionSpecialGuests() {
                             </div>
 
                             {/* Polaroid 1 - Gordon */}
-                            <div className="relative z-10 w-full sm:w-auto max-w-[320px] aspect-[3/4] bg-white p-3 pb-12 border-2 border-[#191919] rounded-xl shadow-[6px_6px_0px_0px_#191919] rotate-[2deg] transition-all duration-300 hover:rotate-[1deg] hover:scale-105">
+                            <div className="relative z-10 w-[210px] sm:w-auto max-w-[320px] aspect-[3/4] bg-white p-3 pb-10 sm:pb-12 border-2 border-[#191919] rounded-xl shadow-[6px_6px_0px_0px_#191919] rotate-[2deg] transition-all duration-300 hover:rotate-[1deg] hover:scale-105">
                                 <div className="w-full h-full border-2 border-[#191919] rounded-lg overflow-hidden bg-[#fff6ef] relative">
                                     <img
                                         src="/images/gordonneufeld1.webp"
@@ -77,7 +77,7 @@ export default function SectionSpecialGuests() {
                                         }}
                                     />
                                 </div>
-                                <div className="absolute bottom-3 left-0 w-full text-center font-sugar-peachy text-[22px] tracking-[-0.8px] text-[#191919]">
+                                <div className="absolute bottom-2 sm:bottom-3 left-0 w-full text-center font-sugar-peachy text-[18px] sm:text-[22px] tracking-[-0.8px] text-[#191919]">
                                     Dr. Gordon
                                 </div>
                             </div>

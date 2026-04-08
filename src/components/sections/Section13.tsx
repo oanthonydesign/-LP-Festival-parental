@@ -42,7 +42,7 @@ export default function Section13() {
                     </a>
 
                     {/* Botão Expositor */}
-                    <a href="https://wa.me/5511915983957?text=Quero%20ser%20expositor%20no%20Festival%20Parental%202026" target="_blank" rel="noopener noreferrer" className="bg-[#fff6ef] border-[2px] border-[#191919] rounded-[40px] px-[32px] py-[16px] shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] inline-flex items-center justify-center w-full sm:w-auto min-w-[260px]">
+                    <a href="https://wa.me/5511915983957?text=Quero%20ser%20expositor%20no%20Festival%20Parental%202026" target="_blank" rel="noopener noreferrer" className="bg-[#90E0C5] border-[2px] border-[#191919] rounded-[40px] px-[32px] py-[16px] shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] inline-flex items-center justify-center w-full sm:w-auto min-w-[260px]">
                         <span className="font-dm-sans font-bold text-[#191919] text-[14px] uppercase tracking-wide">
                             quero ser expositor
                         </span>
