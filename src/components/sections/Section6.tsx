@@ -54,7 +54,7 @@ const PASSAPORTES: PassportData[] = [
     priceFull: "ou R$ 1.397,90 à vista",
     priceOriginal: "R$ 2.197,00",
     benefits: [
-      "Quatro dias para consolidar o repertório técnico e a segurança prática que a atuação com famílias exige hoje",
+      "Quatro dias para consolidar o repertório técnico e a segurança prática que a atuação com famílias exige hoje (2 dias de conteúdo para profissionais + 2 dias de conteúdo para pais e cuidadores)",
       "Acesso exclusivo à rede que está definindo o futuro da educação parental no Brasil",
       "Sacola com brindes",
       "Acesso às sessões de autógrafos com palestrantes",
@@ -62,7 +62,7 @@ const PASSAPORTES: PassportData[] = [
       "Acesso ao conteúdo gravado dos dois primeiros dias do Festival"
     ],
     target: "Para profissionais da parentalidade",
-    buttonText: "Quero o passaporte profissional",
+    buttonText: "QUERO O PASSAPORTE EDUCADOR",
     href: "https://sun.eduzz.com/39VEQVEDWR",
     bgColor: "bg-[#3399CC]",
     borderColor: "border-[#191919]",
@@ -81,7 +81,7 @@ const PASSAPORTES: PassportData[] = [
     priceFull: "ou R$ 497,00 à vista",
     priceOriginal: "R$ 1.497,00",
     benefits: [
-      "Dois dias para sair da sobrecarga de informação e ter mais clareza, presença e direção na relação com os seus filhos",
+      "Dois dias (21 e 22/11) para sair da sobrecarga de informação e ter mais clareza, presença e direção na relação com os seus filhos. Parentalidade não se constrói sozinho.",
       "Sacola com brindes",
       "Acesso às sessões de autógrafos com palestrantes",
       "Acesso à feira de produtos e serviços para a parentalidade"
@@ -94,7 +94,7 @@ const PASSAPORTES: PassportData[] = [
       priceFull: "ou R$ 747,00 à vista",
       priceOriginal: "R$ 1.947,00",
       benefits: [
-        "Parentalidade não se constrói sozinho. Viva essa experiência com quem partilha a mesma jornada e com melhor custo por participante",
+        "Viva os dois dias dessa experiência (21 e 22/11) com quem partilha a mesma jornada e com melhor custo por participante",
         "Sacola com brindes",
         "Acesso às sessões de autógrafos com palestrantes",
         "Acesso à feira de produtos e serviços para a parentalidade"
@@ -200,7 +200,7 @@ function PassportCard({ data }: { data: PassportData }) {
   const currentButtonText = isDouble && hasDoubleOption ? data.doubleOptions!.buttonText : data.buttonText;
 
   return (
-    <div id={data.id} className={`flex flex-col w-full lg:max-w-[420px] ${data.textColor} h-full relative group`}>
+    <div id={data.id} className={`flex flex-col w-full lg:max-w-[420px] ${data.textColor} relative group`}>
       {/* Header with Title and Lote */}
       <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[16px] w-full z-10 relative overflow-hidden`}>
         {SHOW_PROMO_RIBBON && <Ribbon />}
@@ -215,7 +215,7 @@ function PassportCard({ data }: { data: PassportData }) {
       </div>
 
       {/* Main Content Area */}
-      <div className={`flex-1 flex flex-col ${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[24px] md:rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[20px] md:p-[24px] w-full -mt-[2px] pt-8 md:pt-10 gap-6 z-20 relative`}>
+      <div className={`flex flex-col ${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[24px] md:rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[20px] md:p-[24px] w-full -mt-[2px] pt-8 md:pt-10 gap-6 z-20 relative`}>
 
         {/* Passaporte Tags */}
         {data.id === 'educador' && (
@@ -339,7 +339,7 @@ export default function Section6() {
         </div>
 
         {/* Passport Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[20px] w-full lg:max-w-[860px] items-stretch justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[20px] w-full lg:max-w-[860px] items-start justify-center">
           {PASSAPORTES.map((passport) => (
             <PassportCard key={passport.id} data={passport} />
           ))}
