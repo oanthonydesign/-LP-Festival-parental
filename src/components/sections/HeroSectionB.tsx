@@ -50,7 +50,7 @@ export default function HeroSectionB() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[36px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.8] md:leading-[0.9] tracking-[-1.4px] sm:tracking-[-1.5px] md:tracking-[-2px] lg:tracking-[-2.6px] relative px-4 md:px-0 max-w-[1100px] w-[100%] text-balance">
+                    <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[44px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.8] md:leading-[0.9] tracking-[-1.4px] sm:tracking-[-1.5px] md:tracking-[-2px] lg:tracking-[-2.6px] relative px-4 md:px-0 max-w-[1100px] w-[100%] text-balance">
                         <span className="mt-1">
                             Criar filhos nunca foi fácil. <span className="text-[#2260a1]">Agora, ficou ainda mais complexo.</span>
                         </span>
