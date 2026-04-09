@@ -13,7 +13,6 @@ import Section10 from '@/components/sections/Section10';
 import Section11 from '@/components/sections/Section11';
 import Section12 from '@/components/sections/Section12';
 import Section13 from '@/components/sections/Section13';
-import Section14 from '@/components/sections/Section14';
 import Section15 from '@/components/sections/Section15';
 import Section16 from '@/components/sections/Section16';
 import Rodape from '@/components/sections/Rodape';
@@ -23,6 +22,10 @@ import SectionSpecialGuests from '@/components/sections/SectionSpecialGuests';
 import StickyBottomBar from '@/components/sections/StickyBottomBar';
 import WhatsAppButton from '@/components/sections/WhatsAppButton';
 import PreTicketSection from '@/components/sections/PreTicketSection';
+
+export const metadata = {
+    robots: 'noindex, nofollow',
+}
 
 const SHOW_STICKY_BAR = true;
 
@@ -54,6 +57,7 @@ export default function LPB() {
                 <Section11 />
                 <Section12 />
                 <Section13 />
+                {/* <Section14 /> */}
                 <Rodape />
                 <Copyright />
             </main>

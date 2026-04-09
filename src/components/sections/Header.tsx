@@ -56,7 +56,7 @@ export default function Header() {
                     <div className="flex lg:hidden items-center gap-3">
                         {/* Ingresso Button - Orange with Icon */}
                         <a
-                            href="/#ingressos"
+                            href="#ingressos"
                             className="bg-[#f7a73c] text-[#191919] text-[12px] font-bold uppercase tracking-wider px-4 py-2.5 rounded-[40px] shadow-[2px_2px_0px_0px_#191919] active:translate-y-[1px] active:shadow-none transition-all border border-[#191919] flex items-center gap-2"
                         >
                             <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,10 +80,10 @@ export default function Header() {
                     <nav className="hidden lg:flex items-center gap-[32px]">
                         <div className="flex items-center gap-[8px] p-[10px]">
                             {[
-                                { name: "Atrações", href: "/#convidados-especiais" },
-                                { name: "Palestrantes", href: "/#palestrantes" },
-                                { name: "Programação", href: "/#programacao" },
-                                { name: "O Festival", href: "/#festival" }
+                                { name: "Atrações", href: "#convidados-especiais" },
+                                { name: "Palestrantes", href: "#palestrantes" },
+                                { name: "Programação", href: "#programacao" },
+                                { name: "O Festival", href: "#festival" }
                             ].map((item) => (
                                 <a
                                     key={item.name}
@@ -103,10 +103,10 @@ export default function Header() {
 
                     {/* CTA Button & Sponsor Link - Desktop */}
                     <div className="hidden lg:flex items-center gap-[16px]">
-                        <a href="/#patrocinador" className="font-dm-sans text-[#191919] text-[13px] font-bold uppercase tracking-[0.8px] hover:text-[#ef7d25] transition-colors whitespace-nowrap">
+                        <a href="#patrocinador" className="font-dm-sans text-[#191919] text-[13px] font-bold uppercase tracking-[0.8px] hover:text-[#ef7d25] transition-colors whitespace-nowrap">
                             Seja patrocinador
                         </a>
-                        <a href="/#ingressos" className="group relative">
+                        <a href="#ingressos" className="group relative">
                             <div className="bg-[#f7a73c] border border-[#191919] flex items-center justify-center gap-[10px] px-[24px] py-[12px] rounded-[40px] shadow-[2px_2px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[1px_1px_0px_0px_#191919] transition-all">
                                 <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#191919]">
                                     <path d={svgPaths.p60d3f00} fill="currentColor" />
@@ -127,11 +127,11 @@ export default function Header() {
                 `}>
                     <div className="flex flex-col px-6 gap-6 items-center">
                         {[
-                            { name: "Atrações", href: "/#convidados-especiais" },
-                            { name: "Palestrantes", href: "/#palestrantes" },
-                            { name: "Programação", href: "/#programacao" },
-                            { name: "O Festival", href: "/#festival" },
-                            { name: "Seja patrocinador", href: "/#patrocinador" }
+                            { name: "Atrações", href: "#convidados-especiais" },
+                            { name: "Palestrantes", href: "#palestrantes" },
+                            { name: "Programação", href: "#programacao" },
+                            { name: "O Festival", href: "#festival" },
+                            { name: "Seja patrocinador", href: "#patrocinador" }
                         ].map((item) => (
                             <a
                                 key={item.name}
