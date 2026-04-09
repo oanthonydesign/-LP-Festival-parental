@@ -92,7 +92,7 @@ export default function StickyBottomBar() {
                     <span className="hidden md:block text-[24px] font-light text-black/30">|</span>
 
                     <p className="font-dm-sans font-medium text-[14px] md:text-[18px] text-center md:text-left tracking-tight">
-                        Garanta seu ingresso <span className="font-bold">antes da virada para o Lote 3 (15/04 às 23:59)</span>
+                        Garanta seu ingresso <span className="font-bold">antes da virada para o Lote 3</span>
                     </p>
                 </div>
             </div>

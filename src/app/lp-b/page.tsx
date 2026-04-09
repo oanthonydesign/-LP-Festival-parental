@@ -37,17 +37,17 @@ export default function LPB() {
                     <Marquee02 />
                 </div>
                 <Section2 />
-                <SectionSpecialGuests />
                 <Section8 />
+                <Section5 />
                 <PreTicketSection />
                 <Section6 />
+                <SectionSpecialGuests />
                 <Section16 />
                 <SpeakersSection />
                 <Marquee01 />
                 <Marquee02 />
                 <SectionScheduleSimple />
                 <Section15 />
-                <Section5 />
                 <Section7 />
                 <Section9 />
                 <Section10 />

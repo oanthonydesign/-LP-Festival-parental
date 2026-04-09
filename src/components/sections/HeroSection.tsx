@@ -180,7 +180,7 @@ export default function HeroSection() {
 
                 {/* Telma Abrahão */}
                 <div className="hidden lg:block absolute lg:top-[360px] lg:left-[902px] lg:w-[143px] lg:h-[28px] z-[80] transition-transform duration-300 hover:scale-110 pointer-events-auto cursor-pointer">
-                    <img src="/images/text_Telma Abrahão.svg" alt="Telma Abrahão" className="w-full h-full object-contain" />
+                    <img src="/images/text_Telma Abrahao.svg" alt="Telma Abrahão" className="w-full h-full object-contain" />
                 </div>
 
                 {/* Elisama Santos */}
