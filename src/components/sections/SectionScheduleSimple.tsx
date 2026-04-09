@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { Info } from 'lucide-react';
+import svgCommon from '@/components/svg/svgPaths';
+
 
 const scheduleData = [
     {
@@ -146,12 +148,25 @@ export default function SectionScheduleSimple() {
 
                 </div>
 
-                <div className="flex justify-center mt-8">
+                <div className="flex flex-col items-center gap-8 mt-8">
                     <p className="font-dm-sans text-[#4c4d4f] text-[18px] md:text-[24px] opacity-70 italic text-center">
                         Programação completa em breve
                     </p>
+                    
+                    <a 
+                        href="#ingressos" 
+                        className="group relative"
+                    >
+                        <div className="bg-[#f7a73c] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[32px] md:px-[64px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full md:w-auto">
+                            <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0 text-[#191919]">
+                                <path d={svgCommon.p60d3f00} fill="currentColor" />
+                            </svg>
+                            <span className="font-dm-sans font-bold text-[#191919] text-[14px] md:text-[16px] uppercase tracking-[1px] whitespace-nowrap">
+                                Quero garantir meu lugar
+                            </span>
+                        </div>
+                    </a>
                 </div>
-
             </div>
         </section>
     );

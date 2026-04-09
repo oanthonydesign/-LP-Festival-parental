@@ -3,6 +3,8 @@
 // ⚠️ IMPORTANTE: Este componente usa animações CSS e precisa de 'use client'
 
 'use client';
+import svgCommon from '@/components/svg/svgPaths';
+
 
 export default function Section12() {
   return (
@@ -25,6 +27,19 @@ function Content() {
     <div className="content-stretch flex flex-col gap-10 md:gap-[86px] items-center relative shrink-0 w-full" data-name="Content">
       <Frame />
       <Frame2 />
+      <a 
+          href="#ingressos" 
+          className="group relative mt-6"
+      >
+          <div className="bg-[#f7a73c] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[32px] md:px-[64px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full md:w-auto">
+              <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0 text-[#191919]">
+                  <path d={svgCommon.p60d3f00} fill="currentColor" />
+              </svg>
+              <span className="font-dm-sans font-bold text-[#191919] text-[14px] md:text-[16px] uppercase tracking-[1px] whitespace-nowrap">
+                  Quero garantir meu lugar
+              </span>
+          </div>
+      </a>
     </div>
   );
 }
