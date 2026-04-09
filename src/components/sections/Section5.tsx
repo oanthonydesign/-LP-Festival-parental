@@ -1,6 +1,8 @@
 "use client";
 
 import svgPaths from "@/components/svg/svg-hwvyp88bcy";
+import svgCommon from "@/components/svg/svgPaths";
+
 
 function Text() {
     return (
@@ -9,7 +11,7 @@ function Text() {
                 <p className="leading-[0.8] whitespace-pre-wrap">Um encontro que integra ciência, prática e experiência em um mesmo espaço</p>
             </div>
             <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[18px] lg:text-[24px] w-full max-w-[1148px]" style={{ fontVariationSettings: "'opsz' 14" }}>
-                <p className="leading-[1.1] whitespace-pre-wrap">Prepare-se pra viver quatro dias intensos de conexões, conteúdos e experiências. Um ambiente pensado pra integrar conhecimento técnico, prática de vida e afeto. Tudo isso num só lugar.</p>
+                <p className="leading-[1.1] whitespace-pre-wrap">Prepare-se pra viver dias intensos de conexões, conteúdos e experiências. Um ambiente pensado pra integrar conhecimento técnico, prática de vida e afeto. Tudo isso num só lugar.</p>
             </div>
         </div>
     );
@@ -667,6 +669,19 @@ function Content() {
         <div className="flex flex-col gap-[46px] items-center relative shrink-0 w-full max-w-[1280px] z-[2]" data-name="Content">
             <TextsTrilhas />
             <Cards />
+            <a 
+                href="#ingressos" 
+                className="group relative"
+            >
+                <div className="bg-[#f7a73c] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[32px] md:px-[64px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full md:w-auto">
+                    <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0 text-[#191919]">
+                        <path d={svgCommon.p60d3f00} fill="currentColor" />
+                    </svg>
+                    <span className="font-dm-sans font-bold text-[#191919] text-[14px] md:text-[16px] uppercase tracking-[1px] whitespace-nowrap">
+                        Quero garantir meu lugar
+                    </span>
+                </div>
+            </a>
         </div>
     );
 }
