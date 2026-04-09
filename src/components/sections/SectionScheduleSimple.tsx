@@ -118,7 +118,7 @@ export default function SectionScheduleSimple() {
                             <h3 className="font-sugar-peachy text-[#3399CC] text-[32px] md:text-[52px] leading-tight tracking-tight">
                                 Dias 1 e 2: A Base Profissional
                             </h3>
-                            <p className="font-dm-sans text-[#4c4d4f] text-[18px] md:text-[32px] opacity-90 leading-tight">
+                            <p className="font-dm-sans text-[#4c4d4f] text-[18px] lg:text-[24px] opacity-90 leading-tight">
                                 Do improviso à autoridade científica.
                             </p>
                         </div>
@@ -134,7 +134,7 @@ export default function SectionScheduleSimple() {
                             <h3 className="font-sugar-peachy text-[#ED9F8C] text-[32px] md:text-[52px] leading-tight tracking-tight">
                                 Dias 3 e 4: A Vivência Parental
                             </h3>
-                            <p className="font-dm-sans text-[#4c4d4f] text-[18px] md:text-[32px] opacity-90 leading-tight">
+                            <p className="font-dm-sans text-[#4c4d4f] text-[18px] lg:text-[24px] opacity-90 leading-tight">
                                 Da culpa à clareza prática nas relações.
                             </p>
                         </div>
