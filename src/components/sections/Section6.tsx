@@ -54,12 +54,12 @@ const PASSAPORTES: PassportData[] = [
     priceFull: "ou R$ 1.397,90 à vista",
     priceOriginal: "R$ 2.197,00",
     benefits: [
-      "Quatro dias para consolidar o repertório técnico e a segurança prática que a atuação com famílias exige hoje (2 dias de conteúdo para profissionais – 7º Congresso Internacional de Educação Parental + 2 dias de conteúdo para pais e cuidadores)",
+      "Quatro dias para consolidar o repertório técnico e a segurança prática que a atuação com famílias exige hoje (2 dias de conteúdo para profissionais – 7º Congresso Internacional de Educação Parental + 2 dias de conteúdo aberto também para pais e cuidadores)",
       "Acesso exclusivo à rede que está definindo o futuro da educação parental no Brasil",
       "Sacola com brindes",
       "Acesso às sessões de autógrafos com palestrantes",
       "Acesso à feira de produtos e serviços para a parentalidade",
-      "Acesso ao conteúdo gravado dos dois primeiros dias do Festival"
+      "Acesso ao conteúdo gravado de todos os dias do Festival"
     ],
     target: "Para profissionais da parentalidade",
     buttonText: "QUERO O PASSAPORTE EDUCADOR",
