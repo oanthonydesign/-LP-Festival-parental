@@ -43,9 +43,42 @@ interface PassportData {
   benefitBg: string;
   benefitBorder: string;
   benefitTextColor: string;
+  isSoldOut?: boolean;
 }
 
 const PASSAPORTES: PassportData[] = [
+  {
+    id: "embaixador",
+    name: "Passaporte Embaixador",
+    lote: "ESGOTADO",
+    priceInstallment: "",
+    priceFull: "",
+    priceOriginal: "",
+    benefits: [
+      "Acesso aos 4 dias do Festival Parental 2026 (2 dias de conteúdo para profissionais – 7º Congresso Internacional de Educação Parental + 2 dias de conteúdo aberto também para pais e cuidadores)",
+      "Sacola com brindes",
+      "Acesso às sessões de autógrafos com palestrantes",
+      "Acesso à feira de produtos e serviços para a parentalidade",
+      "Acesso ao conteúdo gravado de todos os dias do Festival",
+      "Credenciamento para Embaixadores",
+      "Acesso ao Coquetel Exclusivo para Embaixadores no dia 20.11.26",
+      "Botton de Identificação de Embaixadores",
+      "Cupom personalizado de desconto para seguidores e convidados",
+      "Acesso à seletiva de palestras e workshops para pais e cuidadores"
+    ],
+    target: "PRESENÇA E PROTAGONISMO",
+    buttonText: "ESGOTADO",
+    href: "#",
+    isSoldOut: true,
+    bgColor: "bg-[#3399CC]/40",
+    borderColor: "border-[#191919]",
+    textColor: "text-[#191919]/60",
+    priceColor: "text-[#191919]/60",
+    accentColor: "text-[#191919]/60",
+    benefitBg: "bg-transparent",
+    benefitBorder: "border-[#191919]/20",
+    benefitTextColor: "text-[#191919]/70"
+  },
   {
     id: "educador",
     name: "Passaporte Educador",
@@ -199,6 +232,62 @@ function PassportCard({ data }: { data: PassportData }) {
   const currentHref = isDouble && hasDoubleOption ? data.doubleOptions!.href : data.href;
   const currentButtonText = isDouble && hasDoubleOption ? data.doubleOptions!.buttonText : data.buttonText;
 
+  if (data.isSoldOut) {
+    return (
+      <div id={data.id} className={`flex flex-col w-full lg:max-w-[420px] ${data.textColor} relative group grayscale opacity-80`}>
+        {/* Header with Title and Lote */}
+        <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[16px] w-full z-10 relative overflow-hidden`}>
+          <div className={`border-2 ${data.borderColor} border-solid rounded-[16px] flex items-center justify-between px-2 py-[12px] gap-2 relative z-20`}>
+            <div className="bg-[#505050] border-2 border-[#191919] border-solid rounded-[6px] shadow-[3px_3px_0px_0px_#191919] px-[12px] py-[4px] shrink-0">
+              <span className="font-sugar-peachy text-[18px] tracking-[-0.5px] text-white leading-none">{data.lote}</span>
+            </div>
+            <h3 className="font-sugar-peachy text-[22px] sm:text-[24px] lg:text-[28px] tracking-[-1px] leading-[0.8] text-center flex-1 whitespace-nowrap">
+              {data.name}
+            </h3>
+          </div>
+        </div>
+
+        {/* Main Content Area */}
+        <div className={`flex flex-col ${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[24px] md:rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[20px] md:p-[24px] w-full -mt-[2px] pt-8 md:pt-10 gap-6 z-20 relative flex-1`}>
+          <div className="bg-transparent border-[1px] border-[#191919]/20 rounded-[40px] px-1 sm:px-3 py-2.5 md:py-3 flex items-center justify-center gap-1.5 sm:gap-2 w-full -mt-1 md:-mt-2 overflow-hidden">
+            <span className="font-dm-sans font-bold text-[11px] sm:text-[11px] md:text-[12px] lg:text-[13px] uppercase text-[#191919] tracking-wider text-center whitespace-nowrap">
+              {data.target}
+            </span>
+          </div>
+
+          {/* Benefits List */}
+          <div className={`border-2 ${data.benefitBorder} border-solid rounded-[24px] p-[16px] flex flex-col gap-4 ${data.benefitBg}`}>
+            {data.benefits.map((benefit, idx) => (
+              <div key={idx} className="flex gap-3 items-center">
+                <StarIcon color="#505050" />
+                <p className={`font-dm-sans text-[16px] leading-tight ${data.benefitTextColor}`}>
+                  {benefit}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Sold Out Badge */}
+          <div className="text-center flex flex-col items-center py-4">
+            <div className="font-sugar-peachy text-[40px] md:text-[54px] tracking-[-1.5px] text-[#191919] leading-none uppercase">
+              ESGOTADO
+            </div>
+          </div>
+
+          <div className="mt-auto flex flex-col items-center gap-3 w-full">
+            <div
+              className={`bg-[#505050] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] px-[24px] py-[16px] flex items-center justify-center gap-2 w-full cursor-not-allowed`}
+            >
+              <span className="font-dm-sans font-bold text-[14px] uppercase text-white tracking-wider text-center">
+                {data.buttonText}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div id={data.id} className={`flex flex-col w-full lg:max-w-[420px] ${data.textColor} relative group`}>
       {/* Header with Title and Lote */}
@@ -339,7 +428,7 @@ export default function Section6() {
         </div>
 
         {/* Passport Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[20px] w-full lg:max-w-[860px] items-start justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-[20px] w-full items-start justify-center">
           {PASSAPORTES.map((passport) => (
             <PassportCard key={passport.id} data={passport} />
           ))}
