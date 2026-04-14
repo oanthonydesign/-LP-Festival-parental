@@ -236,10 +236,10 @@ function PassportCard({ data }: { data: PassportData }) {
     return (
       <div id={data.id} className={`flex flex-col w-full lg:max-w-[420px] ${data.textColor} relative group grayscale opacity-80`}>
         {/* Header with Title and Lote */}
-        <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[16px] w-full z-10 relative overflow-hidden`}>
+        <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[12px] w-full z-10 relative overflow-hidden`}>
           <div className={`border-2 ${data.borderColor} border-solid rounded-[16px] flex items-center justify-between px-2 py-[12px] gap-2 relative z-20`}>
             <div className="bg-[#505050] border-2 border-[#191919] border-solid rounded-[6px] shadow-[3px_3px_0px_0px_#191919] px-[12px] py-[4px] shrink-0">
-              <span className="font-sugar-peachy text-[18px] tracking-[-0.5px] text-white leading-none">{data.lote}</span>
+              <span className="font-sugar-peachy text-[14px] tracking-[-0.5px] text-white leading-none">{data.lote}</span>
             </div>
             <h3 className="font-sugar-peachy text-[22px] sm:text-[24px] lg:text-[28px] tracking-[-1px] leading-[0.8] text-center flex-1 whitespace-nowrap">
               {data.name}
@@ -291,7 +291,7 @@ function PassportCard({ data }: { data: PassportData }) {
   return (
     <div id={data.id} className={`flex flex-col w-full lg:max-w-[420px] ${data.textColor} relative group`}>
       {/* Header with Title and Lote */}
-      <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[16px] w-full z-10 relative overflow-hidden`}>
+      <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[12px] w-full z-10 relative overflow-hidden`}>
         {SHOW_PROMO_RIBBON && <Ribbon />}
         <div className={`border-2 ${data.borderColor} border-solid rounded-[16px] flex items-center justify-between px-[12px] py-[12px] gap-3 relative z-20`}>
           <div className="bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[6px] shadow-[3px_3px_0px_0px_#191919] px-[12px] py-[4px] shrink-0">
