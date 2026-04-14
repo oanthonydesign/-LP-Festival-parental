@@ -121,7 +121,7 @@ export default function SectionScheduleSimple() {
                                 Dias 1 e 2: A Base Profissional
                             </h3>
                             <p className="font-dm-sans text-[#4c4d4f] text-[18px] lg:text-[24px] opacity-90 leading-tight">
-                                Do improviso à autoridade científica.
+                                Da teoria à prática com consistência.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -137,7 +137,7 @@ export default function SectionScheduleSimple() {
                                 Dias 3 e 4: A Vivência Parental
                             </h3>
                             <p className="font-dm-sans text-[#4c4d4f] text-[18px] lg:text-[24px] opacity-90 leading-tight">
-                                Da culpa à clareza prática nas relações.
+                                Do improviso à clareza prática nas relações.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -152,9 +152,9 @@ export default function SectionScheduleSimple() {
                     <p className="font-dm-sans text-[#4c4d4f] text-[18px] md:text-[24px] opacity-70 italic text-center">
                         Programação completa em breve
                     </p>
-                    
-                    <a 
-                        href="#ingressos" 
+
+                    <a
+                        href="#ingressos"
                         className="group relative"
                     >
                         <div className="bg-[#f7a73c] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[32px] md:px-[64px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full md:w-auto">

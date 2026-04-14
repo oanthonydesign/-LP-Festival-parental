@@ -6,7 +6,7 @@ import svgPaths from "@/components/svg/svgPaths";
 
 function BackgroundCurves() {
     return (
-        <div className="absolute top-[700px] lg:top-[60px] left-1/2 -translate-x-1/2 w-screen z-0 pointer-events-none select-none opacity-100 overflow-visible">
+        <div className="absolute top-[700px] lg:top-[90px] left-1/2 -translate-x-1/2 w-screen z-0 pointer-events-none select-none opacity-100 overflow-visible">
             <img
                 src="/images/grafismo_wave.svg"
                 alt="Grafismo de ondas"
