@@ -23,6 +23,7 @@ import SectionSpecialGuests from '@/components/sections/SectionSpecialGuests';
 import StickyBottomBar from '@/components/sections/StickyBottomBar';
 import WhatsAppButton from '@/components/sections/WhatsAppButton';
 import PreTicketSection from '@/components/sections/PreTicketSection';
+import SectionForWho from '@/components/sections/SectionForWho';
 
 const SHOW_STICKY_BAR = false;
 
@@ -40,6 +41,7 @@ export default function Home() {
                 <Section8 />
                 <Section5 />
                 <PreTicketSection />
+                <SectionForWho />
                 <Section6 />
                 <SectionSpecialGuests />
                 <Section16 />
