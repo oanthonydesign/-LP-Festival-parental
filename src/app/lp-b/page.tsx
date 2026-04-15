@@ -22,6 +22,8 @@ import SectionSpecialGuests from '@/components/sections/SectionSpecialGuests';
 import StickyBottomBar from '@/components/sections/StickyBottomBar';
 import WhatsAppButton from '@/components/sections/WhatsAppButton';
 import PreTicketSection from '@/components/sections/PreTicketSection';
+import SectionForWho from '@/components/sections/SectionForWho';
+import SectionTakeaways from '@/components/sections/SectionTakeaways';
 
 export const metadata = {
     robots: 'noindex, nofollow',
@@ -43,6 +45,8 @@ export default function LPB() {
                 <Section8 />
                 <Section5 />
                 <PreTicketSection />
+                <SectionForWho />
+                <SectionTakeaways />
                 <Section6 />
                 <SectionSpecialGuests />
                 <Section16 />
