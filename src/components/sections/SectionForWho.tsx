@@ -7,8 +7,8 @@ type Group = "profissionais" | "pais";
 const GROUPS = {
   profissionais: {
     label: "Para profissionais",
-    toggleColor: "bg-[#2260a1] text-white border-[#2260a1]",
-    accentColor: "#2260a1",
+    toggleColor: "bg-[#2260a1] text-white border-white/20",
+    accentColor: "#3399CC",
     items: [
       {
         title: "As autoridades que definem o mercado",
@@ -68,59 +68,65 @@ export default function SectionForWho() {
   const group = GROUPS[active];
 
   return (
-    <section className="bg-[#fff6ef] w-full flex flex-col items-center pt-[64px] pb-[64px] px-4 overflow-hidden">
-      <div className="max-w-[1280px] w-full flex flex-col items-center gap-12">
+    <section className="bg-[#2260a1] w-full flex flex-col items-center pt-[40px] pb-[40px] px-4 overflow-hidden relative" id="para-quem">
+       {/* Background Elements to add depth */}
+       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white opacity-[0.02] rounded-full blur-[80px] pointer-events-none translate-x-[20%] -translate-y-[20%]" />
+       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#f7a73c] opacity-[0.03] rounded-full blur-[80px] pointer-events-none -translate-x-[20%] translate-y-[20%]" />
+
+      <div className="max-w-[1280px] w-full flex flex-col items-center gap-12 relative z-10">
 
         {/* Header */}
         <div className="flex flex-col items-center gap-6 text-center">
-          <div className="border-2 border-[#505050] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#505050] px-[24px] py-[12px] flex items-center gap-2 text-[#505050] bg-transparent">
-            <span className="font-dm-sans font-bold text-[13px] uppercase tracking-wider">O que você vai viver</span>
+          <div className="border border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] px-4 lg:px-[32px] py-[16px] flex items-center gap-2 text-[#191919] bg-[#fff6ef] transition-transform hover:translate-y-[-2px]">
+            <span className="font-dm-sans font-bold text-[14px] uppercase tracking-wider">O que você vai viver</span>
           </div>
-          <h2 className="font-sugar-peachy text-[38px] md:text-[56px] lg:text-[64px] leading-[0.85] tracking-[-1.5px] text-[#2260a1] max-w-[680px]">
+          <h2 className="font-sugar-peachy text-[38px] md:text-[56px] lg:text-[64px] leading-[0.85] tracking-[-1.5px] text-white max-w-[680px]">
             Uma experiência feita para quem você é
           </h2>
         </div>
 
         {/* Toggle */}
-        <div className="flex border-2 border-[#191919] rounded-[40px] p-1 gap-1">
+        <div className="flex border border-white/20 rounded-full p-1.5 gap-1.5 bg-[#17487c]/50 backdrop-blur-md self-center shadow-inner relative z-20">
           {(["profissionais", "pais"] as Group[]).map((key) => (
             <button
               key={key}
               onClick={() => setActive(key)}
-              className={`px-6 py-3 rounded-[32px] font-dm-sans font-bold text-[12px] md:text-[13px] uppercase tracking-wider transition-all duration-300 border-2 ${active === key
-                  ? `${GROUPS[key].toggleColor} shadow-[2px_2px_0px_0px_#191919]`
-                  : "bg-transparent text-[#4c4d4f] border-transparent opacity-70 hover:opacity-100"
-                }`}
+              className={`px-8 py-3.5 rounded-full font-dm-sans font-bold text-[13px] md:text-[14px] uppercase tracking-wider transition-all duration-300 border ${
+                active === key
+                  ? `${GROUPS[key].toggleColor} shadow-md scale-100`
+                  : "bg-transparent text-white/50 border-transparent hover:text-white/80 hover:bg-white/5 scale-95"
+              }`}
             >
               {GROUPS[key].label}
             </button>
           ))}
         </div>
 
-        {/* Items Grid */}
-        <div
-          key={active}
-          className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 animate-section-fade-in"
-        >
-          {group.items.map((item, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col gap-3 p-6 md:p-8 border-2 border-[#191919] border-solid rounded-[24px] shadow-[4px_4px_0px_0px_#191919] bg-white relative overflow-hidden"
-            >
-              <span
-                className="font-sugar-peachy text-[80px] md:text-[96px] leading-none tracking-[-2px] select-none pointer-events-none absolute top-1 right-4 opacity-[0.07]"
-                style={{ color: group.accentColor }}
+         {/* Items Grid */}
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 relative z-10 w-full animate-section-fade-in" key={active}>
+            {group.items.map((item, idx) => (
+              <div
+                key={idx}
+                className="flex p-6 md:p-8 border-2 border-[#191919] border-solid rounded-[24px] shadow-[4px_4px_0px_0px_#191919] bg-white relative overflow-hidden group hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#191919] transition-all duration-300 items-start justify-between gap-4 md:gap-6"
               >
-                {pad(idx + 1)}
-              </span>
-              <h3 className="font-dm-sans font-bold text-[17px] md:text-[18px] text-[#191919] leading-tight pr-14">
-                {item.title}
-              </h3>
-              <p className="font-dm-sans text-[14px] md:text-[15px] text-[#4c4d4f] leading-relaxed">
-                {item.description}
-              </p>
-            </div>
-          ))}
+                <div className="flex flex-col gap-2 md:gap-3 flex-1 relative z-10">
+                   <h3 className="font-dm-sans font-bold text-[18px] md:text-[20px] text-[#191919] leading-tight">
+                      {item.title}
+                   </h3>
+                   <p className="font-dm-sans text-[15px] md:text-[16px] text-[#4c4d4f] leading-relaxed">
+                     {item.description}
+                   </p>
+                </div>
+                <div className="shrink-0 flex justify-end relative z-10 w-[20%] max-w-[80px]">
+                   <span
+                      className="font-sugar-peachy text-[56px] md:text-[80px] leading-[0.7] tracking-[-2px] select-none pointer-events-none opacity-[0.6]"
+                      style={{ color: group.accentColor }}
+                   >
+                      {pad(idx + 1)}
+                   </span>
+                </div>
+              </div>
+            ))}
         </div>
       </div>
     </section>

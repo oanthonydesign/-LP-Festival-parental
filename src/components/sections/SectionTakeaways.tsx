@@ -2,7 +2,7 @@ const GROUPS = [
   {
     id: "profissionais",
     label: "Para profissionais",
-    bgColor: "bg-[#2260a1]",
+    bgColor: "bg-[#1b4d81]",
     textColor: "text-[#fff6ef]",
     dividerColor: "border-[#fff6ef]/20",
     descColor: "text-[#fff6ef]/70",
@@ -63,17 +63,15 @@ const GROUPS = [
 
 export default function SectionTakeaways() {
   return (
-    <section className="bg-[#fff6ef] w-full flex flex-col items-center pt-[64px] pb-[80px] px-4 lg:px-12 overflow-hidden">
+    <section className="bg-[#2260a1] w-full flex flex-col items-center pt-[40px] pb-[100px] px-4 lg:px-12 overflow-hidden">
       <div className="max-w-[1280px] w-full flex flex-col items-center gap-12">
 
         {/* Header */}
         <div className="flex flex-col items-center gap-6 text-center">
-          <div className="border-2 border-[#505050] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#505050] px-[24px] py-[12px] flex items-center bg-transparent">
-            <span className="font-dm-sans font-bold text-[13px] uppercase tracking-wider text-[#505050]">
-              O que você vai levar
-            </span>
+          <div className="border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] px-4 lg:px-[32px] py-[16px] flex items-center gap-2 text-[#191919] bg-[#fff6ef]">
+            <span className="font-dm-sans font-bold text-[14px] uppercase tracking-wider">O que você vai levar</span>
           </div>
-          <h2 className="font-sugar-peachy text-[38px] md:text-[56px] lg:text-[64px] leading-[0.85] tracking-[-1.5px] text-[#2260a1] max-w-[680px]">
+          <h2 className="font-sugar-peachy text-[38px] md:text-[56px] lg:text-[64px] leading-[0.85] tracking-[-1.5px] text-white max-w-[680px]">
             Resultados que ficam depois do Festival
           </h2>
         </div>
@@ -83,10 +81,10 @@ export default function SectionTakeaways() {
           {GROUPS.map((group) => (
             <div
               key={group.id}
-              className={`${group.bgColor} border-2 border-[#191919] border-solid rounded-[32px] shadow-[6px_6px_0px_0px_#191919] overflow-hidden`}
+              className={`${group.bgColor} border-2 border-white/40 border-solid rounded-[32px] shadow-[6px_6px_0px_0px_rgba(0,0,0,0.2)] overflow-hidden`}
             >
               {/* Panel Header */}
-              <div className={`px-7 pt-7 pb-5 border-b-2 border-[#191919]`}>
+              <div className={`px-7 pt-7 pb-5 border-b-2 border-white/20`}>
                 <h3 className={`font-sugar-peachy text-[28px] md:text-[34px] tracking-[-1px] leading-[0.85] ${group.textColor}`}>
                   {group.label}
                 </h3>

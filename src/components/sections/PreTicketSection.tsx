@@ -4,17 +4,14 @@ import React from 'react';
 
 export default function PreTicketSection() {
     return (
-        <section className="bg-[#2260a1] w-full flex flex-col items-center pt-[100px] pb-[100px] px-4 md:px-0 relative overflow-hidden" data-name="Pre-Ticket Transition">
-            {/* Background Graphic - Simple Circle */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/5 rounded-full blur-[120px] pointer-events-none" />
-
+        <section className="bg-[#2260a1] w-full flex flex-col items-center pt-[100px] pb-[40px] px-4 md:px-0 relative overflow-hidden" data-name="Pre-Ticket Transition">
             <div className="layout-container flex flex-col items-center gap-10 relative z-10 w-full max-w-[1000px]">
 
                 {/* Visual Accent */}
                 <div className="w-[80px] h-1 bg-white/30 rounded-full" />
 
                 <div className="flex flex-col items-center gap-8 text-center">
-                    <h2 className="font-sugar-peachy text-white text-[38px] md:text-[56px] lg:text-[72px] leading-[0.9] tracking-[-1.5px] md:tracking-[-2px] max-w-[1050px]">
+                    <h2 className="font-sugar-peachy text-white text-[32px] md:text-[32px] lg:text-[46px] leading-[0.9] tracking-[-1.5px] md:tracking-[-2px] max-w-[900px]">
                         Não é falta de conteúdo. É dificuldade de transformar tudo isso em compreensão. <span className="text-[#f7a73c]">É exatamente esse ponto que o Festival resolve.</span>
                     </h2>
 
