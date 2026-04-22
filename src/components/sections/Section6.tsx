@@ -5,9 +5,9 @@ import svgPaths from "@/components/svg/svgPaths";
 import { useCountdown } from "@/hooks/useCountdown";
 
 // Flags de controle para fácil ativação/desativação
-const SHOW_PROMO_RIBBON = true;
-const SHOW_PRICE_STATUS_BADGE = true;
-const SHOW_COUNTDOWN_BADGE = true;
+const SHOW_PROMO_RIBBON = false;
+const SHOW_PRICE_STATUS_BADGE = false;
+const SHOW_COUNTDOWN_BADGE = false;
 
 interface Benefit {
   text: string;
@@ -82,9 +82,9 @@ const PASSAPORTES: PassportData[] = [
   {
     id: "educador",
     name: "Passaporte Educador",
-    lote: "Lote 2",
-    priceInstallment: "R$ 139,70",
-    priceFull: "ou R$ 1.397,90 à vista",
+    lote: "Lote 3",
+    priceInstallment: "R$ 149,70",
+    priceFull: "ou R$ 1.497,00 à vista",
     priceOriginal: "R$ 2.197,00",
     benefits: [
       "Quatro dias para consolidar o repertório técnico e a segurança prática que a atuação com famílias exige hoje (2 dias de conteúdo para profissionais – 7º Congresso Internacional de Educação Parental + 2 dias de conteúdo aberto também para pais e cuidadores)",
@@ -109,7 +109,7 @@ const PASSAPORTES: PassportData[] = [
   {
     id: "parental",
     name: "Passaporte Parental",
-    lote: "Lote 2",
+    lote: "Lote 3",
     priceInstallment: "R$ 49,70",
     priceFull: "ou R$ 497,00 à vista",
     priceOriginal: "R$ 1.497,00",

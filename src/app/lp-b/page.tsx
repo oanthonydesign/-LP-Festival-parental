@@ -27,7 +27,7 @@ export const metadata = {
     robots: 'noindex, nofollow',
 }
 
-const SHOW_STICKY_BAR = true;
+const SHOW_STICKY_BAR = false;
 
 export default function LPB() {
     return (

@@ -24,7 +24,7 @@ import StickyBottomBar from '@/components/sections/StickyBottomBar';
 import WhatsAppButton from '@/components/sections/WhatsAppButton';
 import PreTicketSection from '@/components/sections/PreTicketSection';
 
-const SHOW_STICKY_BAR = true;
+const SHOW_STICKY_BAR = false;
 
 export default function Home() {
     return (

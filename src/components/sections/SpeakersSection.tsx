@@ -178,6 +178,33 @@ export const allSpeakers: Speaker[] = [
         website: "https://www.neufeldinstitute.org/link",
         bgColor: "#f7a73c",
     },
+    {
+        id: 19,
+        name: "Vanessa Cavalieri",
+        description: "Juíza titular da Vara da Infância e Juventude do Rio de Janeiro",
+        image: "/images/vanessac.webp",
+        instagram: "https://www.instagram.com/protocoloeutevejo/",
+        linkedin: "https://www.linkedin.com/in/vanessa-cavalieri-099b98146/",
+        bgColor: "#79c3ab",
+    },
+    {
+        id: 20,
+        name: "Priscila Xavier",
+        description: "Pediatra e neurocientista, especialista em trauma infantil",
+        image: "/images/priscilax.webp",
+        instagram: "https://www.instagram.com/drapriscilaxavierpediatra/",
+        website: "https://linktr.ee/drapriscilaxavierpediatra",
+        bgColor: "#74acde",
+    },
+    {
+        id: 21,
+        name: "Luciana Loureiro",
+        description: "Educadora, escritora em aprendizagem no mundo digital",
+        image: "/images/lucianal.webp",
+        instagram: "https://www.instagram.com/lucianarloureiro/",
+        website: "https://lucianaloureiro.keepo.bio",
+        bgColor: "#f7a73c",
+    },
 ];
 
 function UilCalendar() {
