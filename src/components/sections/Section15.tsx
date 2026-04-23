@@ -158,6 +158,10 @@ function Container1() {
       answer: "Não há política de meia-entrada ou desconto para estudantes."
     },
     {
+      question: "Sou estudante de Psicologia, Pedagogia ou áreas relacionadas. Qual passaporte devo escolher?",
+      answer: "Se você está em formação ou atua na área, o mais indicado é o Passaporte Educador.\n\nEle dá acesso aos quatro dias do Festival Parental, com conteúdos aprofundados, base científica e aplicação prática para quem trabalha ou pretende trabalhar com famílias.\n\nO Passaporte Parental é voltado para pais e cuidadores e dá acesso apenas aos dois últimos dias do evento."
+    },
+    {
       question: "Comprei meu passaporte e não poderei comparecer. O que devo fazer?",
       answer: "As informações sobre prazos e condições de reembolso podem ser consultadas na política oficial disponível na página do evento."
     },

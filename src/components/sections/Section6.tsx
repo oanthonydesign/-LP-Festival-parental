@@ -59,12 +59,13 @@ const PASSAPORTES: PassportData[] = [
       "Sacola com brindes",
       "Acesso às sessões de autógrafos com palestrantes",
       "Acesso à feira de produtos e serviços para a parentalidade",
-      "Acesso ao conteúdo gravado de todos os dias do Festival",
+      "Acesso à gravação completa do Festival por 90 dias",
       "Credenciamento para Embaixadores",
       "Acesso ao Coquetel Exclusivo para Embaixadores no dia 20.11.26",
       "Botton de Identificação de Embaixadores",
       "Cupom personalizado de desconto para seguidores e convidados",
-      "Acesso à seletiva de palestras e workshops para pais e cuidadores"
+      "Acesso à seletiva de palestras e workshops para pais e cuidadores",
+      "Certificado de participação"
     ],
     target: "PRESENÇA E PROTAGONISMO",
     buttonText: "ESGOTADO",
@@ -92,7 +93,7 @@ const PASSAPORTES: PassportData[] = [
       "Sacola com brindes",
       "Acesso às sessões de autógrafos com palestrantes",
       "Acesso à feira de produtos e serviços para a parentalidade",
-      "Acesso ao conteúdo gravado de todos os dias do Festival"
+      "Acesso à gravação completa do Festival por 90 dias"
     ],
     target: "Para profissionais da parentalidade",
     buttonText: "QUERO O PASSAPORTE EDUCADOR",
