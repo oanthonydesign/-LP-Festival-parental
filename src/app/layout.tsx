@@ -47,6 +47,16 @@ export default function RootLayout({
                     async
                     defer
                 />
+                <Script id="utmify-google-ads-config" strategy="beforeInteractive">
+                    {`window.googlePixelId = "69e91b26e1b8b8560d2cbc5e";`}
+                </Script>
+                <Script
+                    id="utmify-google-ads-pixel"
+                    src="https://cdn.utmify.com.br/scripts/pixel/pixel-google.js"
+                    strategy="afterInteractive"
+                    async
+                    defer
+                />
                 <Script
                     src="https://www.googletagmanager.com/gtag/js?id=G-2P6C784S1B"
                     strategy="afterInteractive"
