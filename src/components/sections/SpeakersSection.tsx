@@ -4,15 +4,18 @@ import { useState } from "react";
 import svgPaths from "@/components/svg/svg-paths";
 import { Globe } from "lucide-react";
 
+export type SpeakerCategory = "profissionais" | "pais-cuidadores" | "todos";
+
 export type Speaker = {
     id: number;
     name: string;
     description: string;
     image: string;
-    instagram: string;
+    instagram?: string;
     linkedin?: string;
     website?: string;
     bgColor: string;
+    category: Exclude<SpeakerCategory, "todos">;
 };
 
 export const allSpeakers: Speaker[] = [
@@ -24,6 +27,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/psimamaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         linkedin: "https://www.linkedin.com/in/nanda-perim-b64692214/",
         bgColor: "#79c3ab",
+        category: "pais-cuidadores",
     },
     {
         id: 2,
@@ -33,6 +37,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/isa.minatel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         linkedin: "https://www.linkedin.com/in/isa-minatel-85852732/",
         bgColor: "#74acde",
+        category: "pais-cuidadores",
     },
     {
         id: 3,
@@ -42,6 +47,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/telma.abrahao?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         linkedin: "https://www.linkedin.com/in/telmaabrahao/",
         bgColor: "#f7a73c",
+        category: "profissionais",
     },
     {
         id: 4,
@@ -51,6 +57,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/piangers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         linkedin: "https://www.linkedin.com/in/piangers/",
         bgColor: "#79c3ab",
+        category: "pais-cuidadores",
     },
     {
         id: 5,
@@ -60,6 +67,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/pediatriaintegralbr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         linkedin: "https://www.linkedin.com/in/daniel-becker-672590a/",
         bgColor: "#74acde",
+        category: "pais-cuidadores",
     },
     {
         id: 6,
@@ -69,6 +77,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/maya_eigenmann/",
         linkedin: "https://www.linkedin.com/in/mayaeigenmann/",
         bgColor: "#f7a73c",
+        category: "pais-cuidadores",
     },
     {
         id: 7,
@@ -78,6 +87,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/elisamasantosc/",
         linkedin: "https://www.linkedin.com/in/elisama-santos/",
         bgColor: "#79c3ab",
+        category: "pais-cuidadores",
     },
     {
         id: 8,
@@ -87,6 +97,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/murilogun/?hl=pt-br",
         linkedin: "https://www.linkedin.com/in/murilogun/?originalSubdomain=br",
         bgColor: "#74acde",
+        category: "pais-cuidadores",
     },
     {
         id: 9,
@@ -96,6 +107,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/wimerbotturajuniorpsiquiatra/",
         linkedin: "https://www.linkedin.com/in/dr-wimer-bottura-junior/",
         bgColor: "#f7a73c",
+        category: "profissionais",
     },
     {
         id: 10,
@@ -105,6 +117,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/cecilia.laurianooficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         linkedin: "https://www.linkedin.com/in/cecilialauriano/",
         bgColor: "#79c3ab",
+        category: "profissionais",
     },
     {
         id: 11,
@@ -114,6 +127,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/iaramastine?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         linkedin: "https://www.linkedin.com/in/iara-mastine-5aab5863/",
         bgColor: "#74acde",
+        category: "profissionais",
     },
     {
         id: 12,
@@ -123,6 +137,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/jacqvilela?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         linkedin: "https://www.linkedin.com/in/jacquelinevilela/",
         bgColor: "#f7a73c",
+        category: "profissionais",
     },
     {
         id: 13,
@@ -132,6 +147,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/alinecestaroli?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         linkedin: "http://www.linkedin.com/in/alinecestaroli",
         bgColor: "#79c3ab",
+        category: "profissionais",
     },
     {
         id: 14,
@@ -141,6 +157,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/crisrayes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         linkedin: "https://www.linkedin.com/in/crisrayes/",
         bgColor: "#74acde",
+        category: "profissionais",
     },
     {
         id: 15,
@@ -150,6 +167,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/disciplinapositivabrasil?igsh=NTQ4c2RreTVyZTBz",
         linkedin: "https://www.linkedin.com/in/beteprodrigues?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         bgColor: "#f7a73c",
+        category: "profissionais",
     },
     {
         id: 16,
@@ -159,6 +177,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/euivanamoreira?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         linkedin: "https://www.linkedin.com/in/ivana-moreira-679489ba/",
         bgColor: "#79c3ab",
+        category: "profissionais",
     },
     {
         id: 17,
@@ -168,6 +187,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/draelainepadua/",
         website: "https://linktr.ee/draelainepadua_",
         bgColor: "#74acde",
+        category: "pais-cuidadores",
     },
     {
         id: 18,
@@ -177,6 +197,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/neufeldinstitute/",
         website: "https://www.neufeldinstitute.org/link",
         bgColor: "#f7a73c",
+        category: "profissionais",
     },
     {
         id: 19,
@@ -186,6 +207,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/protocoloeutevejo/",
         linkedin: "https://www.linkedin.com/in/vanessa-cavalieri-099b98146/",
         bgColor: "#79c3ab",
+        category: "profissionais",
     },
     {
         id: 20,
@@ -195,6 +217,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/drapriscilaxavierpediatra/",
         website: "https://linktr.ee/drapriscilaxavierpediatra",
         bgColor: "#74acde",
+        category: "profissionais",
     },
     {
         id: 21,
@@ -204,8 +227,31 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/lucianarloureiro/",
         website: "https://lucianaloureiro.keepo.bio",
         bgColor: "#f7a73c",
+        category: "profissionais",
+    },
+    {
+        id: 22,
+        name: "Bebel Soares",
+        description: "Psicanalista, escritora e colunista do jornal Estado de Minas",
+        image: "/images/bebels.webp",
+        instagram: "https://www.instagram.com/padecendo/",
+        linkedin: "https://www.linkedin.com/groups/16964048/",
+        bgColor: "#79c3ab",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 23,
+        name: "Roberta Bento e Taís Bento",
+        description: "Educadoras, especialistas em neurociência e fundadoras do SOS Educação",
+        image: "/images/robertataisbento.webp",
+        instagram: "https://www.instagram.com/soseducacao/",
+        website: "https://www.soseducacao.com.br",
+        bgColor: "#74acde",
+        category: "profissionais",
     },
 ];
+
+// ─── Helpers ────────────────────────────────────────────────────────────────
 
 function UilCalendar() {
     return (
@@ -221,7 +267,7 @@ function UilCalendar() {
 
 function SocialIcons({ type }: { type: "linkedin" | "instagram" | "website" }) {
     if (type === "website") {
-        return <Globe className="w-full h-full text-current" strokeWidth={2} />
+        return <Globe className="w-full h-full text-current" strokeWidth={2} />;
     }
     return (
         <div className="relative shrink-0 size-[8.842px]" data-name="Social Icons">
@@ -263,6 +309,8 @@ function SocialIconButton({ type, href }: { type: "linkedin" | "instagram" | "we
     );
 }
 
+// ─── Speaker Card ────────────────────────────────────────────────────────────
+
 export function SpeakerCard({ speaker }: { speaker: Speaker }) {
     return (
         <div className="flex-[1_0_0] min-h-px min-w-px relative rounded-[24px]" style={{ backgroundColor: speaker.bgColor }}>
@@ -295,7 +343,7 @@ export function SpeakerCard({ speaker }: { speaker: Speaker }) {
                         <div className="content-stretch flex gap-[8px] items-start justify-center relative shrink-0">
                             {speaker.linkedin && <SocialIconButton type="linkedin" href={speaker.linkedin} />}
                             {speaker.website && <SocialIconButton type="website" href={speaker.website} />}
-                            <SocialIconButton type="instagram" href={speaker.instagram} />
+                            {speaker.instagram && <SocialIconButton type="instagram" href={speaker.instagram} />}
                         </div>
                     </div>
                 </div>
@@ -305,14 +353,73 @@ export function SpeakerCard({ speaker }: { speaker: Speaker }) {
     );
 }
 
+// ─── Filter Toggle ───────────────────────────────────────────────────────────
+
+const FILTER_TABS: { label: string; value: SpeakerCategory }[] = [
+    { label: "Todos", value: "todos" },
+    { label: "Para profissionais", value: "profissionais" },
+    { label: "Para pais e cuidadores", value: "pais-cuidadores" },
+];
+
+function FilterToggle({
+    active,
+    onChange,
+}: {
+    active: SpeakerCategory;
+    onChange: (v: SpeakerCategory) => void;
+}) {
+    return (
+        <div
+            role="tablist"
+            aria-label="Filtrar palestrantes"
+            className="flex w-full max-w-[640px] border-2 border-[#191919] rounded-[40px] bg-white/10 p-1 relative"
+        >
+            {FILTER_TABS.map((tab) => {
+                const isActive = active === tab.value;
+                const isTodos = tab.value === "todos";
+                return (
+                    <button
+                        key={tab.value}
+                        role="tab"
+                        aria-selected={isActive}
+                        onClick={() => onChange(tab.value)}
+                        className={[
+                            isTodos ? "shrink-0 px-5 py-3" : "flex-1 py-3",
+                            "text-center font-dm-sans font-bold text-[13px] uppercase tracking-wider leading-[1.1] rounded-[32px] transition-all duration-300 cursor-pointer",
+                            isActive
+                                ? "bg-[#f7a73c] text-[#191919] shadow-[2px_2px_0px_0px_#191919] border-2 border-[#191919]"
+                                : "text-[#191919] opacity-70 border-2 border-transparent hover:opacity-100 hover:bg-black/5",
+                        ].join(" ")}
+                    >
+                        {tab.label}
+                    </button>
+                );
+            })}
+        </div>
+    );
+}
+
+// ─── Main Section ────────────────────────────────────────────────────────────
+
 export default function SpeakersSection() {
+    const [activeFilter, setActiveFilter] = useState<SpeakerCategory>("todos");
     const [visibleCount, setVisibleCount] = useState(8);
 
-    const visibleSpeakers = allSpeakers.slice(0, visibleCount);
-    const hasMore = visibleCount < allSpeakers.length;
+    const filteredSpeakers =
+        activeFilter === "todos"
+            ? allSpeakers
+            : allSpeakers.filter((s) => s.category === activeFilter);
+
+    const visibleSpeakers = filteredSpeakers.slice(0, visibleCount);
+    const hasMore = visibleCount < filteredSpeakers.length;
+
+    const handleFilterChange = (filter: SpeakerCategory) => {
+        setActiveFilter(filter);
+        setVisibleCount(8);
+    };
 
     const handleLoadMore = () => {
-        setVisibleCount((prev) => Math.min(prev + 4, allSpeakers.length));
+        setVisibleCount((prev) => Math.min(prev + 4, filteredSpeakers.length));
     };
 
     return (
@@ -349,6 +456,9 @@ export default function SpeakersSection() {
                         </div>
                     </div>
                 </div>
+
+                {/* Filter Toggle */}
+                <FilterToggle active={activeFilter} onChange={handleFilterChange} />
 
                 {/* Speakers Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] relative shrink-0 w-full">
