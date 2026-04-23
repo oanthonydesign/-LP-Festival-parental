@@ -97,6 +97,42 @@ export default function ObrigadoPelaCompra() {
                                 </div>
                             </div>
                         </div>
+
+                        {/* Segundo Box - Pesquisa */}
+                        <div className="bg-[#fff6ef] relative rounded-[32px] w-full max-w-[800px] mt-8 mb-4">
+                            {/* Borda e Sombra idênticas à Landing Page */}
+                            <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[32px] shadow-[8px_8px_0px_0px_#191919] z-0" />
+
+                            <div className="flex flex-col items-center w-full px-6 py-12 md:p-12 relative z-10">
+                                {/* Título */}
+                                <h2 className="text-3xl md:text-4xl font-normal mb-6 text-center font-sugar-peachy text-[#ef7d25] tracking-wide leading-[1]">
+                                    Ajude a construir o Festival Parental
+                                </h2>
+
+                                {/* Descrição */}
+                                <div className="flex flex-col gap-4 items-center text-center font-dm-sans text-[#4c4d4f] text-[16px] md:text-[18px] w-full max-w-[600px] mb-8">
+                                    <p className="leading-relaxed">
+                                        Queremos entender melhor quem está com a gente.<br className="hidden md:block"/> Suas respostas ajudam a definir conteúdos, experiências e decisões do evento.
+                                    </p>
+                                    <p className="font-bold text-[#191919] bg-[#f7a73c]/20 px-4 py-2 rounded-full">
+                                        ⏱️ Leva menos de 2 minutos.
+                                    </p>
+                                </div>
+
+                                {/* Botão Form */}
+                                <a 
+                                    href="https://forms.gle/bgDxTnkGyJY8epqB8" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center justify-center gap-2 bg-[#ef7d25] text-[#fff6ef] px-8 py-4 rounded-[32px] font-dm-sans font-bold text-[16px] md:text-[18px] border-2 border-[#191919] shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full md:w-auto text-center"
+                                >
+                                    Responder pesquisa
+                                    <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
