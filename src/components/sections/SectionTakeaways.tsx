@@ -2,10 +2,10 @@ const GROUPS = [
   {
     id: "profissionais",
     label: "Para profissionais",
-    bgColor: "bg-[#1b4d81]",
-    textColor: "text-[#fff6ef]",
-    dividerColor: "border-[#fff6ef]/20",
-    descColor: "text-[#fff6ef]/70",
+    bgColor: "bg-[#3399CC]",
+    textColor: "text-[#191919]",
+    dividerColor: "border-[#191919]",
+    descColor: "text-white",
     items: [
       {
         title: "Segurança técnica para atuar",
@@ -34,8 +34,8 @@ const GROUPS = [
     label: "Para pais e cuidadores",
     bgColor: "bg-[#ED9F8C]",
     textColor: "text-[#191919]",
-    dividerColor: "border-[#191919]/20",
-    descColor: "text-[#191919]/65",
+    dividerColor: "border-[#191919]",
+    descColor: "text-white",
     items: [
       {
         title: "Confiança nas suas decisões",
@@ -81,10 +81,10 @@ export default function SectionTakeaways() {
           {GROUPS.map((group) => (
             <div
               key={group.id}
-              className={`${group.bgColor} border-2 border-white/40 border-solid rounded-[32px] shadow-[6px_6px_0px_0px_rgba(0,0,0,0.2)] overflow-hidden`}
+              className={`${group.bgColor} border-2 border-[#191919] border-solid rounded-[32px] shadow-[4px_4px_0px_0px_#191919] overflow-hidden`}
             >
               {/* Panel Header */}
-              <div className={`px-7 pt-7 pb-5 border-b-2 border-white/20`}>
+              <div className={`px-7 pt-7 pb-5 border-b-2 border-[#191919]`}>
                 <h3 className={`font-sugar-peachy text-[28px] md:text-[34px] tracking-[-1px] leading-[0.85] ${group.textColor}`}>
                   {group.label}
                 </h3>
@@ -97,10 +97,10 @@ export default function SectionTakeaways() {
                     key={idx}
                     className={`flex flex-col gap-2 px-7 py-5 ${idx < group.items.length - 1 ? `border-b border-solid ${group.dividerColor}` : ""}`}
                   >
-                    <h4 className={`font-dm-sans font-bold text-[15px] md:text-[16px] leading-tight ${group.textColor}`}>
+                    <h4 className={`font-dm-sans font-bold text-[15px] md:text-[21px] leading-tight ${group.textColor}`}>
                       {item.title}
                     </h4>
-                    <p className={`font-dm-sans text-[13px] md:text-[14px] leading-relaxed ${group.descColor}`}>
+                    <p className={`font-dm-sans text-[13px] md:text-[16px] leading-relaxed ${group.descColor}`}>
                       {item.description}
                     </p>
                   </div>
