@@ -48,7 +48,7 @@ export default function Marquee02() {
     );
 
     const rawItems = [
-        "+50 especialistas",
+        "+50 palestrantes",
         "+1.500 profissionais",
         "+2.500 Pais e mães"
     ];

@@ -44,6 +44,7 @@ interface PassportData {
   benefitBorder: string;
   benefitTextColor: string;
   isSoldOut?: boolean;
+  badgeText?: string;
 }
 
 const PASSAPORTES: PassportData[] = [
@@ -105,7 +106,8 @@ const PASSAPORTES: PassportData[] = [
     accentColor: "text-[#fff6ef]",
     benefitBg: "bg-transparent",
     benefitBorder: "border-[#fff6ef]/40",
-    benefitTextColor: "text-[#fff6ef]"
+    benefitTextColor: "text-[#fff6ef]",
+    badgeText: "2 eventos|em 1 só"
   },
   {
     id: "parental",
@@ -291,6 +293,20 @@ function PassportCard({ data }: { data: PassportData }) {
 
   return (
     <div id={data.id} className={`flex flex-col w-full lg:max-w-[420px] ${data.textColor} relative group`}>
+      {data.badgeText && (
+        <div className="absolute -top-10 -right-4 bg-[#f7a73c] border-2 border-[#191919] rounded-full w-[80px] h-[80px] md:w-[90px] md:h-[90px] flex items-center justify-center rotate-12 shadow-[4px_4px_0px_0px_#191919] z-50 animate-bounce-slow">
+            <span className="font-sugar-peachy text-[#191919] text-center leading-[0.9]">
+                {data.badgeText.split('|').map((line, i) => (
+                    <span
+                        key={i}
+                        className="block text-[14px] md:text-[18px] tracking-[-1px] uppercase whitespace-nowrap"
+                    >
+                        {line}
+                    </span>
+                ))}
+            </span>
+        </div>
+      )}
       {/* Header with Title and Lote */}
       <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[12px] w-full z-10 relative overflow-hidden`}>
         {SHOW_PROMO_RIBBON && <Ribbon />}
