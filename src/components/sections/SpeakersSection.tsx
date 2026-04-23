@@ -241,7 +241,7 @@ export const allSpeakers: Speaker[] = [
     },
     {
         id: 23,
-        name: "Roberta Bento e Taís Bento",
+        name: "Roberta e Taís Bento",
         description: "Educadoras, especialistas em neurociência e fundadoras do SOS Educação",
         image: "/images/robertataisbento.webp",
         instagram: "https://www.instagram.com/soseducacao/",
