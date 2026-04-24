@@ -53,7 +53,7 @@ export default function Section2() {
                                 Profissionais enfrentam outro lado do mesmo cenário: um campo em expansão, com múltiplas linhas e demandas, onde transformar teoria em prática consistente nem sempre é simples.
                             </p>
                             <p>
-                                O Festival Parental é a evolução do Congresso Internacional de Educação Parental. Um espaço onde o excesso de informação dá lugar à compreensão e onde a parentalidade deixa de ser tentativa e passa a ser construção consciente.
+                                O Festival Parental nasce para transformar essa complexidade em compreensão. Um encontro presencial que reúne ciência, prática e experiência real para pensar a parentalidade com mais profundidade e construir caminhos mais conscientes para quem vive e trabalha com famílias, com a convicção de que a parentalidade muda o mundo.
                             </p>
                         </div>
                     </div>

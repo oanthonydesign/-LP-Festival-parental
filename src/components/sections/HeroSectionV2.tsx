@@ -289,7 +289,7 @@ export default function HeroSectionV2() {
 
                     <div className="font-dm-sans text-[#4c4d4f] text-[16px] sm:text-[18px] md:text-[24px] text-center leading-[1.2] md:leading-[1.1] flex flex-col gap-3 md:gap-4 max-w-full md:max-w-[900px] px-2 md:px-0">
                         <p>
-                            O Festival Parental reúne as maiores autoridades da área em um encontro desenhado para profissionais que buscam excelência técnica e pais que decidiram abandonar o improviso para educar com consciência e segurança.
+                            O Festival Parental reúne a profundidade científica e a experiência prática necessárias para navegar nos desafios reais da infância e adolescência hoje. Um encontro desenhado para profissionais que buscam excelência e pais que decidiram abandonar o improviso para educar com consciência e segurança.
                         </p>
 
                     </div>

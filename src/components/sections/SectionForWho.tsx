@@ -23,12 +23,12 @@ const GROUPS = {
       {
         title: "O epicentro do networking qualificado",
         description:
-          "Um espaço onde psicólogos, educadores e terapeutas saem do isolamento profissional para construir juntos os próximos passos da área.",
+          "Um espaço onde psicólogos, educadores, terapeutas e afins saem do isolamento profissional para construir juntos os próximos passos da área.",
       },
       {
         title: "Onde as parcerias de negócio acontecem",
         description:
-          "O ambiente que deu origem à Abraep e onde continuam surgindo as redes, sociedades e projetos que movimentam o setor o ano todo.",
+          "O ambiente que deu origem à ABRAEP e onde continuam surgindo as redes, sociedades e projetos que movimentam o setor o ano todo.",
       },
     ],
   },

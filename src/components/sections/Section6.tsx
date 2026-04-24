@@ -108,7 +108,7 @@ const PASSAPORTES: PassportData[] = [
     benefitBg: "bg-transparent",
     benefitBorder: "border-[#fff6ef]/40",
     benefitTextColor: "text-[#fff6ef]",
-    badgeText: "2 eventos|em 1 só"
+    badgeText: "2|eventos|em 1 só"
   },
   {
     id: "parental",
@@ -295,12 +295,15 @@ function PassportCard({ data }: { data: PassportData }) {
   return (
     <div id={data.id} className={`flex flex-col w-full lg:max-w-[420px] ${data.textColor} relative group`}>
       {data.badgeText && (
-        <div className="absolute -top-10 -right-4 bg-[#f7a73c] border-2 border-[#191919] rounded-full w-[80px] h-[80px] md:w-[90px] md:h-[90px] flex items-center justify-center rotate-12 shadow-[4px_4px_0px_0px_#191919] z-50 animate-bounce-slow">
+        <div className="absolute -top-12 -right-4 bg-[#f7a73c] border-2 border-[#191919] rounded-full w-[85px] h-[85px] md:w-[95px] md:h-[95px] flex items-center justify-center rotate-12 shadow-[4px_4px_0px_0px_#191919] z-50 animate-bounce-slow">
           <span className="font-sugar-peachy text-[#191919] text-center leading-[0.9]">
             {data.badgeText.split('|').map((line, i) => (
               <span
                 key={i}
-                className="block text-[14px] md:text-[18px] tracking-[-1px] uppercase whitespace-nowrap"
+                className={`block uppercase whitespace-nowrap ${i === 0
+                  ? "text-[42px] md:text-[52px] tracking-[-1px] -mb-2"
+                  : "text-[12px] md:text-[14px] tracking-[-0.5px]"
+                  }`}
               >
                 {line}
               </span>

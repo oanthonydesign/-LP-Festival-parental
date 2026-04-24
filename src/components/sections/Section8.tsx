@@ -43,12 +43,15 @@ function Card({
     return (
         <div className="flex flex-col items-start w-full lg:w-1/2 relative group" id={id}>
             {badgeText && (
-                <div className="absolute -top-6 -right-4 md:-right-8 bg-[#f7a73c] border-2 border-[#191919] rounded-full w-[80px] h-[80px] md:w-[100px] md:h-[100px] flex items-center justify-center rotate-12 shadow-[4px_4px_0px_0px_#191919] z-30 animate-bounce-slow">
+                <div className="absolute -top-10 -right-4 md:-right-8 bg-[#f7a73c] border-2 border-[#191919] rounded-full w-[85px] h-[85px] md:w-[120px] md:h-[120px] flex items-center justify-center rotate-12 shadow-[4px_4px_0px_0px_#191919] z-30 animate-bounce-slow">
                     <span className="font-sugar-peachy text-[#191919] text-center leading-[0.9]">
                         {badgeText.split('|').map((line, i) => (
                             <span
                                 key={i}
-                                className="block text-[14px] md:text-[20px] tracking-[-1px] uppercase"
+                                className={`block uppercase whitespace-nowrap ${i === 0
+                                    ? "text-[42px] md:text-[56px] tracking-[-2px] -mb-2"
+                                    : "text-[12px] md:text-[14px] tracking-[-0.5px]"
+                                    }`}
                             >
                                 {line}
                             </span>
@@ -103,7 +106,7 @@ export default function Section8() {
                         heading="Para profissionais que trabalham com famílias"
                         subtext="Quatro dias de aprofundamento técnico para quem enfrenta a complexidade das relações familiares na prática, com base científica, troca qualificada e caminhos para transformar teoria em intervenção real com famílias."
                         image={imgProfissionais}
-                        badgeText="2 eventos|em 1 só"
+                        badgeText="2|eventos|em 1 só"
                     />
                     <Card
                         id="pais"
