@@ -20,16 +20,6 @@ export type Speaker = {
 
 export const allSpeakers: Speaker[] = [
     {
-        id: 16,
-        name: "Ivana Moreira",
-        description: "Jornalista e idealizadora do Festival Parental",
-        image: "/images/ivanam.webp",
-        instagram: "https://www.instagram.com/euivanamoreira?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-        linkedin: "https://www.linkedin.com/in/ivana-moreira-679489ba/",
-        bgColor: "#79c3ab",
-        category: "profissionais",
-    },
-    {
         id: 1,
         name: "Nanda Perim",
         description: "Psicóloga referência em desenvolvimento infantil",
@@ -177,6 +167,16 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/disciplinapositivabrasil?igsh=NTQ4c2RreTVyZTBz",
         linkedin: "https://www.linkedin.com/in/beteprodrigues?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         bgColor: "#f7a73c",
+        category: "profissionais",
+    },
+    {
+        id: 16,
+        name: "Ivana Moreira",
+        description: "Jornalista e idealizadora do Festival Parental",
+        image: "/images/ivanam.webp",
+        instagram: "https://www.instagram.com/euivanamoreira?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/ivana-moreira-679489ba/",
+        bgColor: "#79c3ab",
         category: "profissionais",
     },
     {
@@ -384,7 +384,7 @@ function FilterToggle({
                         aria-selected={isActive}
                         onClick={() => onChange(tab.value)}
                         className={[
-                            isTodos ? "shrink-0 px-5 py-3" : "flex-1 py-3",
+                            isTodos ? "shrink-0 px-5 lg:flex-1 lg:px-0 py-3" : "flex-1 py-3",
                             "text-center font-dm-sans font-bold text-[13px] uppercase tracking-wider leading-[1.1] rounded-[32px] transition-all duration-300 cursor-pointer",
                             isActive
                                 ? "bg-[#f7a73c] text-[#191919] shadow-[2px_2px_0px_0px_#191919] border-2 border-[#191919]"
