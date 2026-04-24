@@ -94,7 +94,8 @@ const PASSAPORTES: PassportData[] = [
       "Sacola com brindes",
       "Acesso às sessões de autógrafos com palestrantes",
       "Acesso à feira de produtos e serviços para a parentalidade",
-      "Acesso à gravação completa do Festival por 90 dias"
+      "Acesso à gravação completa do Festival por 90 dias",
+      "Certificado de participação"
     ],
     target: "Para profissionais da parentalidade",
     buttonText: "QUERO O PASSAPORTE EDUCADOR",
@@ -295,16 +296,16 @@ function PassportCard({ data }: { data: PassportData }) {
     <div id={data.id} className={`flex flex-col w-full lg:max-w-[420px] ${data.textColor} relative group`}>
       {data.badgeText && (
         <div className="absolute -top-10 -right-4 bg-[#f7a73c] border-2 border-[#191919] rounded-full w-[80px] h-[80px] md:w-[90px] md:h-[90px] flex items-center justify-center rotate-12 shadow-[4px_4px_0px_0px_#191919] z-50 animate-bounce-slow">
-            <span className="font-sugar-peachy text-[#191919] text-center leading-[0.9]">
-                {data.badgeText.split('|').map((line, i) => (
-                    <span
-                        key={i}
-                        className="block text-[14px] md:text-[18px] tracking-[-1px] uppercase whitespace-nowrap"
-                    >
-                        {line}
-                    </span>
-                ))}
-            </span>
+          <span className="font-sugar-peachy text-[#191919] text-center leading-[0.9]">
+            {data.badgeText.split('|').map((line, i) => (
+              <span
+                key={i}
+                className="block text-[14px] md:text-[18px] tracking-[-1px] uppercase whitespace-nowrap"
+              >
+                {line}
+              </span>
+            ))}
+          </span>
         </div>
       )}
       {/* Header with Title and Lote */}

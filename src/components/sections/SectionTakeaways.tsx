@@ -97,10 +97,10 @@ export default function SectionTakeaways() {
                     key={idx}
                     className={`flex flex-col gap-2 px-7 py-5 ${idx < group.items.length - 1 ? `border-b border-solid ${group.dividerColor}` : ""}`}
                   >
-                    <h4 className={`font-dm-sans font-bold text-[15px] md:text-[21px] leading-tight ${group.textColor}`}>
+                    <h4 className={`font-dm-sans font-bold text-[18px] md:text-[20px] leading-tight ${group.textColor}`}>
                       {item.title}
                     </h4>
-                    <p className={`font-dm-sans text-[13px] md:text-[16px] leading-relaxed ${group.descColor}`}>
+                    <p className={`font-dm-sans text-[15px] md:text-[16px] leading-relaxed ${group.descColor}`}>
                       {item.description}
                     </p>
                   </div>

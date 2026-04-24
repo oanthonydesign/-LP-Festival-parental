@@ -101,7 +101,7 @@ export default function Section8() {
                         bgColor="#3399CC"
                         textColor="text-[#fff6ef]"
                         heading="Para profissionais que trabalham com famílias"
-                        subtext="Dois dias de aprofundamento técnico para quem enfrenta a complexidade das relações familiares na prática, com base científica, troca qualificada e caminhos para transformar teoria em intervenção real com famílias."
+                        subtext="Quatro dias de aprofundamento técnico para quem enfrenta a complexidade das relações familiares na prática, com base científica, troca qualificada e caminhos para transformar teoria em intervenção real com famílias."
                         image={imgProfissionais}
                         badgeText="2 eventos|em 1 só"
                     />

@@ -20,6 +20,16 @@ export type Speaker = {
 
 export const allSpeakers: Speaker[] = [
     {
+        id: 16,
+        name: "Ivana Moreira",
+        description: "Jornalista e idealizadora do Festival Parental",
+        image: "/images/ivanam.webp",
+        instagram: "https://www.instagram.com/euivanamoreira?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/ivana-moreira-679489ba/",
+        bgColor: "#79c3ab",
+        category: "profissionais",
+    },
+    {
         id: 1,
         name: "Nanda Perim",
         description: "Psicóloga referência em desenvolvimento infantil",
@@ -167,16 +177,6 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/disciplinapositivabrasil?igsh=NTQ4c2RreTVyZTBz",
         linkedin: "https://www.linkedin.com/in/beteprodrigues?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         bgColor: "#f7a73c",
-        category: "profissionais",
-    },
-    {
-        id: 16,
-        name: "Ivana Moreira",
-        description: "Jornalista e idealizadora do Festival Parental",
-        image: "/images/ivanam.webp",
-        instagram: "https://www.instagram.com/euivanamoreira?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-        linkedin: "https://www.linkedin.com/in/ivana-moreira-679489ba/",
-        bgColor: "#79c3ab",
         category: "profissionais",
     },
     {
