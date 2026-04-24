@@ -302,7 +302,7 @@ function PassportCard({ data }: { data: PassportData }) {
                 key={i}
                 className={`block uppercase whitespace-nowrap ${i === 0
                   ? "text-[42px] md:text-[52px] tracking-[-1px] -mb-2"
-                  : "text-[12px] md:text-[14px] tracking-[-0.5px]"
+                  : "text-[14px] md:text-[18px] tracking-[-0.5px]"
                   }`}
               >
                 {line}

@@ -50,7 +50,7 @@ function Card({
                                 key={i}
                                 className={`block uppercase whitespace-nowrap ${i === 0
                                     ? "text-[42px] md:text-[56px] tracking-[-2px] -mb-2"
-                                    : "text-[12px] md:text-[14px] tracking-[-0.5px]"
+                                    : "text-[18px] md:text-[22px] tracking-[-0.5px]"
                                     }`}
                             >
                                 {line}
