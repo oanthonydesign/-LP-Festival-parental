@@ -5,7 +5,7 @@ const GROUPS = [
     bgColor: "bg-[#3399CC]",
     textColor: "text-[#191919]",
     dividerColor: "border-[#191919]",
-    descColor: "text-white",
+    descColor: "text-[#191919]",
     items: [
       {
         title: "Segurança técnica para atuar",
@@ -35,7 +35,7 @@ const GROUPS = [
     bgColor: "bg-[#ED9F8C]",
     textColor: "text-[#191919]",
     dividerColor: "border-[#191919]",
-    descColor: "text-white",
+    descColor: "text-[#191919]",
     items: [
       {
         title: "Confiança nas suas decisões",

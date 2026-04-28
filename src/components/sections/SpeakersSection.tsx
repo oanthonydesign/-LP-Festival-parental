@@ -21,21 +21,21 @@ export type Speaker = {
 export const allSpeakers: Speaker[] = [
     {
         id: 1,
-        name: "Nanda Perim",
-        description: "Psicóloga referência em desenvolvimento infantil",
-        image: "/images/nandap.webp",
-        instagram: "https://www.instagram.com/psimamaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-        linkedin: "https://www.linkedin.com/in/nanda-perim-b64692214/",
+        name: "Dr. Gordon Neufeld",
+        description: "Psicólogo canadense, autor best-seller e fundador do Neufeld Institute",
+        image: "/images/gordonn.webp",
+        instagram: "https://www.instagram.com/neufeldinstitute/",
+        website: "https://www.neufeldinstitute.org/link",
         bgColor: "#79c3ab",
-        category: "pais-cuidadores",
+        category: "profissionais",
     },
     {
         id: 2,
-        name: "Isa Minatel",
-        description: "Psicopedagoga referência em desenvolvimento infantil",
-        image: "/images/isam.webp",
-        instagram: "https://www.instagram.com/isa.minatel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-        linkedin: "https://www.linkedin.com/in/isa-minatel-85852732/",
+        name: "Daniel Becker",
+        description: "Um dos pediatras mais respeitados do país",
+        image: "/images/danielb.webp",
+        instagram: "https://www.instagram.com/pediatriaintegralbr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/daniel-becker-672590a/",
         bgColor: "#74acde",
         category: "pais-cuidadores",
     },
@@ -51,36 +51,66 @@ export const allSpeakers: Speaker[] = [
     },
     {
         id: 4,
-        name: "Marcos Piangers",
-        description: "Um dos palestrantes mais influentes do Brasil",
-        image: "/images/marcosp.webp",
-        instagram: "https://www.instagram.com/piangers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-        linkedin: "https://www.linkedin.com/in/piangers/",
+        name: "Isa Minatel",
+        description: "Psicopedagoga referência em desenvolvimento infantil",
+        image: "/images/isam.webp",
+        instagram: "https://www.instagram.com/isa.minatel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/isa-minatel-85852732/",
         bgColor: "#79c3ab",
         category: "pais-cuidadores",
     },
     {
         id: 5,
-        name: "Daniel Becker",
-        description: "Um dos pediatras mais respeitados do país",
-        image: "/images/danielb.webp",
-        instagram: "https://www.instagram.com/pediatriaintegralbr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-        linkedin: "https://www.linkedin.com/in/daniel-becker-672590a/",
+        name: "Vanessa Cavalieri",
+        description: "Juíza titular da Vara da Infância e Juventude do Rio de Janeiro",
+        image: "/images/vanessac.webp",
+        instagram: "https://www.instagram.com/protocoloeutevejo/",
+        linkedin: "https://www.linkedin.com/in/vanessa-cavalieri-099b98146/",
         bgColor: "#74acde",
-        category: "pais-cuidadores",
+        category: "profissionais",
     },
     {
         id: 6,
-        name: "Maya Eigenmann",
-        description: "Pedagoga, escritora e educadora parental especialista em Educação Positiva",
-        image: "/images/mayae.webp",
-        instagram: "https://www.instagram.com/maya_eigenmann/",
-        linkedin: "https://www.linkedin.com/in/mayaeigenmann/",
+        name: "Murilo Gun",
+        description: "Referência em pensamento inovador e criatividade",
+        image: "/images/murilog.webp",
+        instagram: "https://www.instagram.com/murilogun/?hl=pt-br",
+        linkedin: "https://www.linkedin.com/in/murilogun/?originalSubdomain=br",
         bgColor: "#f7a73c",
         category: "pais-cuidadores",
     },
     {
         id: 7,
+        name: "Priscila Xavier",
+        description: "Pediatra e neurocientista, especialista em trauma infantil",
+        image: "/images/priscilax.webp",
+        instagram: "https://www.instagram.com/drapriscilaxavierpediatra/",
+        website: "https://linktr.ee/drapriscilaxavierpediatra",
+        bgColor: "#79c3ab",
+        category: "profissionais",
+    },
+    {
+        id: 8,
+        name: "Maya Eigenmann",
+        description: "Pedagoga, escritora e educadora parental especialista em Educação Positiva",
+        image: "/images/mayae.webp",
+        instagram: "https://www.instagram.com/maya_eigenmann/",
+        linkedin: "https://www.linkedin.com/in/mayaeigenmann/",
+        bgColor: "#74acde",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 9,
+        name: "Cecília Lauriano",
+        description: "Mestre em Psicologia clínica especialista no trabalho com trauma",
+        image: "/images/cecilial.webp",
+        instagram: "https://www.instagram.com/cecilia.laurianooficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/cecilialauriano/",
+        bgColor: "#f7a73c",
+        category: "profissionais",
+    },
+    {
+        id: 10,
         name: "Elisama Santos",
         description: "Psicanalista, especialista em comunicação não violenta e escritora",
         image: "/images/elisamas.webp",
@@ -90,74 +120,44 @@ export const allSpeakers: Speaker[] = [
         category: "pais-cuidadores",
     },
     {
-        id: 8,
-        name: "Murilo Gun",
-        description: "Referência em pensamento inovador e criatividade",
-        image: "/images/murilog.webp",
-        instagram: "https://www.instagram.com/murilogun/?hl=pt-br",
-        linkedin: "https://www.linkedin.com/in/murilogun/?originalSubdomain=br",
-        bgColor: "#74acde",
-        category: "pais-cuidadores",
-    },
-    {
-        id: 9,
-        name: "Dr. Wimer Bottura",
-        description: "Psiquiatra especialista em relações familiares",
-        image: "/images/drwimerb.webp",
-        instagram: "https://www.instagram.com/wimerbotturajuniorpsiquiatra/",
-        linkedin: "https://www.linkedin.com/in/dr-wimer-bottura-junior/",
-        bgColor: "#f7a73c",
-        category: "profissionais",
-    },
-    {
-        id: 10,
-        name: "Cecília Lauriano",
-        description: "Mestre em Psicologia clínica especialista no trabalho com trauma",
-        image: "/images/cecilial.webp",
-        instagram: "https://www.instagram.com/cecilia.laurianooficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-        linkedin: "https://www.linkedin.com/in/cecilialauriano/",
-        bgColor: "#79c3ab",
-        category: "profissionais",
-    },
-    {
         id: 11,
-        name: "Iara Mastine",
-        description: "Neuropsicóloga infantil, referência em livroterapia",
-        image: "/images/iaram.webp",
-        instagram: "https://www.instagram.com/iaramastine?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-        linkedin: "https://www.linkedin.com/in/iara-mastine-5aab5863/",
+        name: "Roberta e Taís Bento",
+        description: "Educadoras, especialistas em neurociência e fundadoras do SOS Educação",
+        image: "/images/robertataisbento.webp",
+        instagram: "https://www.instagram.com/soseducacao/",
+        website: "https://www.soseducacao.com.br",
         bgColor: "#74acde",
         category: "profissionais",
     },
     {
         id: 12,
+        name: "Nanda Perim",
+        description: "Psicóloga referência em desenvolvimento infantil",
+        image: "/images/nandap.webp",
+        instagram: "https://www.instagram.com/psimamaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/nanda-perim-b64692214/",
+        bgColor: "#f7a73c",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 13,
         name: "Jacqueline Vilela",
         description: "Psicanalista e formadora em Educação Parental",
         image: "/images/jacquelinev.webp",
         instagram: "https://www.instagram.com/jacqvilela?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         linkedin: "https://www.linkedin.com/in/jacquelinevilela/",
-        bgColor: "#f7a73c",
-        category: "profissionais",
-    },
-    {
-        id: 13,
-        name: "Aline Cestarolli",
-        description: "Psicóloga especialista em educação encorajadora",
-        image: "/images/alinec.webp",
-        instagram: "https://www.instagram.com/alinecestaroli?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-        linkedin: "http://www.linkedin.com/in/alinecestaroli",
         bgColor: "#79c3ab",
         category: "profissionais",
     },
     {
         id: 14,
-        name: "Cris Rayes",
-        description: "Psicóloga especialista em orientação familiar",
-        image: "/images/crisr.webp",
-        instagram: "https://www.instagram.com/crisrayes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-        linkedin: "https://www.linkedin.com/in/crisrayes/",
+        name: "Marcos Piangers",
+        description: "Um dos palestrantes mais influentes do Brasil",
+        image: "/images/marcosp.webp",
+        instagram: "https://www.instagram.com/piangers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/piangers/",
         bgColor: "#74acde",
-        category: "profissionais",
+        category: "pais-cuidadores",
     },
     {
         id: 15,
@@ -171,51 +171,51 @@ export const allSpeakers: Speaker[] = [
     },
     {
         id: 16,
-        name: "Ivana Moreira",
-        description: "Jornalista e idealizadora do Festival Parental",
-        image: "/images/ivanam.webp",
-        instagram: "https://www.instagram.com/euivanamoreira?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-        linkedin: "https://www.linkedin.com/in/ivana-moreira-679489ba/",
-        bgColor: "#79c3ab",
-        category: "profissionais",
-    },
-    {
-        id: 17,
         name: "Dra. Elaine Pádua",
         description: "Nutricionista mestre em Ciências e especialista em saúde materno-infantil",
         image: "/images/elainep.webp",
         instagram: "https://www.instagram.com/draelainepadua/",
         website: "https://linktr.ee/draelainepadua_",
-        bgColor: "#74acde",
+        bgColor: "#79c3ab",
         category: "pais-cuidadores",
     },
     {
-        id: 18,
-        name: "Dr. Gordon Neufeld",
-        description: "Psicólogo canadense, autor best-seller e fundador do Neufeld Institute",
-        image: "/images/gordonn.webp",
-        instagram: "https://www.instagram.com/neufeldinstitute/",
-        website: "https://www.neufeldinstitute.org/link",
-        bgColor: "#f7a73c",
+        id: 17,
+        name: "Aline Cestarolli",
+        description: "Psicóloga especialista em educação encorajadora",
+        image: "/images/alinec.webp",
+        instagram: "https://www.instagram.com/alinecestaroli?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "http://www.linkedin.com/in/alinecestaroli",
+        bgColor: "#74acde",
         category: "profissionais",
     },
     {
+        id: 18,
+        name: "Bebel Soares",
+        description: "Psicanalista, escritora e colunista do jornal Estado de Minas",
+        image: "/images/bebels.webp",
+        instagram: "https://www.instagram.com/padecendo/",
+        linkedin: "https://www.linkedin.com/groups/16964048/",
+        bgColor: "#f7a73c",
+        category: "pais-cuidadores",
+    },
+    {
         id: 19,
-        name: "Vanessa Cavalieri",
-        description: "Juíza titular da Vara da Infância e Juventude do Rio de Janeiro",
-        image: "/images/vanessac.webp",
-        instagram: "https://www.instagram.com/protocoloeutevejo/",
-        linkedin: "https://www.linkedin.com/in/vanessa-cavalieri-099b98146/",
+        name: "Iara Mastine",
+        description: "Neuropsicóloga infantil, referência em livroterapia",
+        image: "/images/iaram.webp",
+        instagram: "https://www.instagram.com/iaramastine?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/iara-mastine-5aab5863/",
         bgColor: "#79c3ab",
         category: "profissionais",
     },
     {
         id: 20,
-        name: "Priscila Xavier",
-        description: "Pediatra e neurocientista, especialista em trauma infantil",
-        image: "/images/priscilax.webp",
-        instagram: "https://www.instagram.com/drapriscilaxavierpediatra/",
-        website: "https://linktr.ee/drapriscilaxavierpediatra",
+        name: "Cris Rayes",
+        description: "Psicóloga especialista em orientação familiar",
+        image: "/images/crisr.webp",
+        instagram: "https://www.instagram.com/crisrayes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/crisrayes/",
         bgColor: "#74acde",
         category: "profissionais",
     },
@@ -231,21 +231,21 @@ export const allSpeakers: Speaker[] = [
     },
     {
         id: 22,
-        name: "Bebel Soares",
-        description: "Psicanalista, escritora e colunista do jornal Estado de Minas",
-        image: "/images/bebels.webp",
-        instagram: "https://www.instagram.com/padecendo/",
-        linkedin: "https://www.linkedin.com/groups/16964048/",
+        name: "Dr. Wimer Bottura",
+        description: "Psiquiatra especialista em relações familiares",
+        image: "/images/drwimerb.webp",
+        instagram: "https://www.instagram.com/wimerbotturajuniorpsiquiatra/",
+        linkedin: "https://www.linkedin.com/in/dr-wimer-bottura-junior/",
         bgColor: "#79c3ab",
-        category: "pais-cuidadores",
+        category: "profissionais",
     },
     {
         id: 23,
-        name: "Roberta e Taís Bento",
-        description: "Educadoras, especialistas em neurociência e fundadoras do SOS Educação",
-        image: "/images/robertataisbento.webp",
-        instagram: "https://www.instagram.com/soseducacao/",
-        website: "https://www.soseducacao.com.br",
+        name: "Ivana Moreira",
+        description: "Jornalista e idealizadora do Festival Parental",
+        image: "/images/ivanam.webp",
+        instagram: "https://www.instagram.com/euivanamoreira?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        linkedin: "https://www.linkedin.com/in/ivana-moreira-679489ba/",
         bgColor: "#74acde",
         category: "profissionais",
     },
@@ -311,9 +311,12 @@ function SocialIconButton({ type, href }: { type: "linkedin" | "instagram" | "we
 
 // ─── Speaker Card ────────────────────────────────────────────────────────────
 
-export function SpeakerCard({ speaker }: { speaker: Speaker }) {
+const COLOR_PALETTE = ["#79c3ab", "#74acde", "#f7a73c"];
+
+export function SpeakerCard({ speaker, bgColorOverride }: { speaker: Speaker; bgColorOverride?: string }) {
+    const bgColor = bgColorOverride ?? speaker.bgColor;
     return (
-        <div className="flex-[1_0_0] min-h-px min-w-px relative rounded-[24px]" style={{ backgroundColor: speaker.bgColor }}>
+        <div className="flex-[1_0_0] min-h-px min-w-px relative rounded-[24px]" style={{ backgroundColor: bgColor }}>
             <div className="flex flex-col items-center overflow-clip rounded-[inherit] size-full">
                 <div className="content-stretch flex flex-col gap-[12px] items-center pb-[12px] pt-[8px] px-[8px] relative w-full">
                     {/* Image Container */}
@@ -405,10 +408,40 @@ export default function SpeakersSection() {
     const [activeFilter, setActiveFilter] = useState<SpeakerCategory>("todos");
     const [visibleCount, setVisibleCount] = useState(8);
 
-    const filteredSpeakers =
-        activeFilter === "todos"
-            ? allSpeakers
-            : allSpeakers.filter((s) => s.category === activeFilter);
+    const professionalOrder = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 20, 21, 22];
+    const parentsOrder = [2, 4, 6, 8, 10, 12, 14, 16, 18];
+
+    const filteredSpeakers = (() => {
+        if (activeFilter === "todos") return allSpeakers;
+
+        const filtered = allSpeakers.filter((s) => s.category === activeFilter);
+
+        if (activeFilter === "profissionais") {
+            return [...filtered].sort((a, b) => {
+                const indexA = professionalOrder.indexOf(a.id);
+                const indexB = professionalOrder.indexOf(b.id);
+
+                if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+                if (indexA !== -1) return -1;
+                if (indexB !== -1) return 1;
+                return 0;
+            });
+        }
+
+        if (activeFilter === "pais-cuidadores") {
+            return [...filtered].sort((a, b) => {
+                const indexA = parentsOrder.indexOf(a.id);
+                const indexB = parentsOrder.indexOf(b.id);
+
+                if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+                if (indexA !== -1) return -1;
+                if (indexB !== -1) return 1;
+                return 0;
+            });
+        }
+
+        return filtered;
+    })();
 
     const visibleSpeakers = filteredSpeakers.slice(0, visibleCount);
     const hasMore = visibleCount < filteredSpeakers.length;
@@ -462,8 +495,12 @@ export default function SpeakersSection() {
 
                 {/* Speakers Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] relative shrink-0 w-full">
-                    {visibleSpeakers.map((speaker) => (
-                        <SpeakerCard key={speaker.id} speaker={speaker} />
+                    {visibleSpeakers.map((speaker, index) => (
+                        <SpeakerCard
+                            key={speaker.id}
+                            speaker={speaker}
+                            bgColorOverride={activeFilter !== "todos" ? COLOR_PALETTE[index % 3] : undefined}
+                        />
                     ))}
                 </div>
 
