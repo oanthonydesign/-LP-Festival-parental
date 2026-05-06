@@ -9,6 +9,7 @@ const GROUPS = {
     label: "Para profissionais",
     toggleColor: "bg-[#3399CC] text-white border-white/20",
     accentColor: "#3399CC",
+    itemBgColor: "#D6ECF7",
     items: [
       {
         title: "As autoridades que definem o mercado",
@@ -36,6 +37,7 @@ const GROUPS = {
     label: "Para pais e cuidadores",
     toggleColor: "bg-[#ED9F8C] text-[#191919] border-[#ED9F8C]",
     accentColor: "#ED9F8C",
+    itemBgColor: "#F6D2C8",
     items: [
       {
         title: "Respostas para o mundo real",
@@ -106,7 +108,8 @@ export default function SectionForWho() {
           {group.items.map((item, idx) => (
             <div
               key={idx}
-              className="flex p-6 md:p-8 border-2 border-[#191919] border-solid rounded-[24px] shadow-[4px_4px_0px_0px_#191919] bg-white relative overflow-hidden group hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#191919] transition-all duration-300 items-start justify-between gap-4 md:gap-6"
+              className="flex p-6 md:p-8 border-2 border-[#191919] border-solid rounded-[24px] shadow-[4px_4px_0px_0px_#191919] relative overflow-hidden group hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#191919] transition-all duration-300 items-start justify-between gap-4 md:gap-6"
+              style={{ backgroundColor: group.itemBgColor }}
             >
               <div className="flex flex-col gap-2 md:gap-3 flex-1 relative z-10">
                 <h3 className="font-dm-sans font-bold text-[18px] md:text-[20px] text-[#191919] leading-tight">
