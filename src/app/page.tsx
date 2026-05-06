@@ -18,7 +18,7 @@ import Section15 from '@/components/sections/Section15';
 import Section16 from '@/components/sections/Section16';
 import Rodape from '@/components/sections/Rodape';
 import Copyright from '@/components/sections/Copyright';
-import SectionScheduleSimple from '@/components/sections/SectionScheduleSimple';
+import SectionSchedule from '@/components/sections/SectionSchedule';
 import SectionSpecialGuests from '@/components/sections/SectionSpecialGuests';
 import StickyBottomBar from '@/components/sections/StickyBottomBar';
 import WhatsAppButton from '@/components/sections/WhatsAppButton';
@@ -50,7 +50,7 @@ export default function Home() {
                 <SpeakersSection />
                 <Marquee01 />
                 <Marquee02 />
-                <SectionScheduleSimple />
+                <SectionSchedule />
                 <Section15 />
                 <Section7 />
                 <Section9 />
