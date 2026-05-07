@@ -153,23 +153,20 @@ const PASSAPORTES: PassportData[] = [
 function StarIcon({ color = "#2DAA96" }: { color?: string }) {
   return (
     <div className="relative shrink-0 size-[20px] mt-0.5">
-      <svg className="block size-full overflow-visible" fill="none" viewBox="0 0 20 20">
-        <g style={{ filter: 'drop-shadow(0.48px 0.64px 0px #191919)' }}>
-          <path d={svgPaths.p2ced7a00} fill={color} />
-          <path d={svgPaths.p3c37a600} stroke="#191919" strokeWidth="0.5" />
-          <path d={svgPaths.p27bba100} fill="#191919" />
-        </g>
-      </svg>
+      <img src="/images/icons/Credibilidade cor.svg" alt="Check" className="w-full h-full object-contain" loading="lazy" />
     </div>
   );
 }
 
-function TicketIcon() {
+function TicketIcon({ isWhite }: { isWhite?: boolean }) {
   return (
     <div className="shrink-0 size-[20px]">
-      <svg className="block size-full" fill="none" viewBox="0 0 15 12">
-        <path d={svgPaths.p60d3f00} fill="currentColor" />
-      </svg>
+      <img 
+        src={isWhite ? "/images/icons/Ingresso linha branca.svg" : "/images/icons/Ingresso linha preta.svg"} 
+        alt="Ticket" 
+        className="w-full h-full object-contain" 
+        loading="lazy" 
+      />
     </div>
   );
 }
@@ -330,9 +327,7 @@ function PassportCard({ data }: { data: PassportData }) {
         {/* Passaporte Tags */}
         {data.id === 'educador' && (
           <div className="bg-[#fff6ef] rounded-[40px] px-1 sm:px-3 py-2.5 md:py-3 flex items-center justify-center gap-1.5 sm:gap-2 w-full -mt-1 md:-mt-2 overflow-hidden">
-            <svg className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f7a73c" />
-            </svg>
+            <img src="/images/icons/Estrela cor.svg" alt="Estrela" className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" loading="lazy" />
             <span className="font-dm-sans font-bold text-[11px] sm:text-[11px] md:text-[12px] lg:text-[12px] uppercase text-[#191919] tracking-wider text-left whitespace-nowrap">
               EXPERIÊNCIA COMPLETA PARA PROFISSIONAIS
             </span>

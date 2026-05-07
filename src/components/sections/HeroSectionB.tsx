@@ -35,16 +35,11 @@ export default function HeroSectionB() {
                 {/* Text Block */}
                 <div className="flex flex-col items-center gap-[28px] w-full">
                     {/* Date/Location Tag */}
-                    <div className="inline-flex items-center gap-[6px] px-4 py-3 md:px-[32px] md:py-[16px] rounded-[40px] border-2 border-[#505050] shadow-[4px_4px_0px_0px_#505050] bg-transparent max-w-[92vw] md:max-w-none text-center">
-                        <div className="hidden md:block w-[18px] h-[18px] relative shrink-0">
-                            <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z" stroke="#505050" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M16 2V6" stroke="#505050" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M8 2V6" stroke="#505050" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M3 10H21" stroke="#505050" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
+                    <div className="inline-flex items-center justify-center gap-[8px] px-4 py-3 md:px-[32px] md:py-[16px] rounded-[40px] border-2 border-[#505050] shadow-[4px_4px_0px_0px_#505050] bg-transparent max-w-[92vw] md:max-w-none">
+                        <div className="hidden md:flex items-center justify-center relative shrink-0">
+                            <img src="/images/icons/Calendário cor.svg" alt="Calendario" className="w-[18px] h-[18px] object-contain" loading="lazy" />
                         </div>
-                        <span className="font-dm-sans font-bold text-[#505050] text-[12px] md:text-[14px] uppercase tracking-[0.14px] whitespace-normal md:whitespace-nowrap leading-tight">
+                        <span className="font-dm-sans font-bold text-[#505050] text-[12px] md:text-[14px] uppercase tracking-[0.14px] whitespace-normal md:whitespace-nowrap leading-none mt-[2px]">
                             19 a 22 de novembro · São Paulo/SP
                         </span>
                     </div>
@@ -69,9 +64,7 @@ export default function HeroSectionB() {
                     {/* Botão Profissional */}
                     <a href="#profissional" className="group relative w-full md:w-[332px]">
                         <div className="bg-[#f7a73c] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
-                            <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0 text-[#191919]">
-                                <path d={svgPaths.p60d3f00} fill="currentColor" />
-                            </svg>
+                            <img src="/images/icons/Ingresso linha preta.svg" alt="Ingresso" className="w-[20px] h-[20px] shrink-0" loading="lazy" />
                             <span className="font-dm-sans font-bold text-[#191919] text-[13px] md:text-[14px] uppercase tracking-[0.8px] md:tracking-[1px] whitespace-nowrap">
                                 Sou profissional da área
                             </span>
@@ -81,9 +74,7 @@ export default function HeroSectionB() {
                     {/* Botão Pais */}
                     <a href="#pais" className="group relative w-full md:w-[332px]">
                         <div className="bg-[#2260a1] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
-                            <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0 text-[#fff6ee]">
-                                <path d={svgPaths.p60d3f00} fill="currentColor" />
-                            </svg>
+                            <img src="/images/icons/Ingresso linha branca.svg" alt="Ingresso" className="w-[20px] h-[20px] shrink-0" loading="lazy" />
                             <span className="font-dm-sans font-bold text-[#fff6ee] text-[13px] md:text-[14px] uppercase tracking-[0.8px] md:tracking-[1px] whitespace-nowrap">
                                 Sou pai, mãe ou cuidador(a)
                             </span>

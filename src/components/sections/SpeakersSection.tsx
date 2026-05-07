@@ -255,41 +255,34 @@ export const allSpeakers: Speaker[] = [
 
 function UilCalendar() {
     return (
-        <div className="relative shrink-0 size-[18px]" data-name="uil:calendar">
-            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 18 18">
-                <g id="uil:calendar">
-                    <path d={svgPaths.p3f159180} fill="var(--fill-0, #505050)" id="Vector" />
-                </g>
-            </svg>
+        <div className="shrink-0 size-[20px]" data-name="uil:calendar">
+            <img src="/images/icons/Calendário cor.svg" alt="Calendario" className="w-full h-full object-contain" loading="lazy" />
         </div>
     );
 }
 
 function SocialIcons({ type }: { type: "linkedin" | "instagram" | "website" }) {
     if (type === "website") {
-        return <Globe className="w-full h-full text-current" strokeWidth={2} />;
+        return (
+            <div className="relative shrink-0 size-[14px] flex items-center justify-center">
+                <Globe className="w-full h-full text-current transition-colors" strokeWidth={2} />
+            </div>
+        );
     }
     return (
-        <div className="relative shrink-0 size-[8.842px]" data-name="Social Icons">
-            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 8.84211 8.84211">
-                {type === "linkedin" && (
-                    <g clipPath="url(#clip0_1_487)" id="Social Icons">
-                        <path d={svgPaths.p26754780} fill="currentColor" id="Vector" />
-                    </g>
-                )}
-                {type === "instagram" && (
-                    <g clipPath="url(#clip0_1_482)" id="Social Icons">
-                        <path d={svgPaths.p31d46470} fill="currentColor" id="Vector" />
-                        <path d={svgPaths.p1f5a5880} fill="currentColor" id="Vector_2" />
-                        <path d={svgPaths.p363e11f0} fill="currentColor" id="Vector_3" />
-                    </g>
-                )}
-                <defs>
-                    <clipPath id={`clip0_1_${type === "linkedin" ? "487" : "482"}`}>
-                        <rect fill="white" height="8.84211" width="8.84211" />
-                    </clipPath>
-                </defs>
-            </svg>
+        <div className="relative shrink-0 size-[14px] flex items-center justify-center" data-name="Social Icons">
+            {type === "linkedin" && (
+                <>
+                    <img src="/images/icons/Linkedin linha preta.svg" alt="LinkedIn" className="w-full h-full object-contain absolute inset-0 transition-opacity duration-200 group-hover:opacity-0" loading="lazy" />
+                    <img src="/images/icons/Linkedin preenchido branco.svg" alt="LinkedIn" className="w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100" loading="lazy" />
+                </>
+            )}
+            {type === "instagram" && (
+                <>
+                    <img src="/images/icons/Instagram linha preta.svg" alt="Instagram" className="w-full h-full object-contain absolute inset-0 transition-opacity duration-200 group-hover:opacity-0" loading="lazy" />
+                    <img src="/images/icons/Instagram branco.svg" alt="Instagram" className="w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100" loading="lazy" />
+                </>
+            )}
         </div>
     );
 }
@@ -301,9 +294,9 @@ function SocialIconButton({ type, href }: { type: "linkedin" | "instagram" | "we
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="content-stretch flex items-center p-[7.579px] relative rounded-[630.947px] shrink-0 size-[24px] hover:bg-[#191919] hover:text-white transition-all text-[#191919]"
+            className="flex items-center justify-center relative rounded-full shrink-0 size-[26px] hover:bg-[#191919] hover:text-white transition-all text-[#191919] group"
         >
-            <div aria-hidden="true" className="absolute border-[#191919] border-[0.632px] border-solid inset-0 pointer-events-none rounded-[630.947px]" />
+            <div aria-hidden="true" className="absolute border-[#191919] border-[1.5px] border-solid inset-0 pointer-events-none rounded-full" />
             <SocialIcons type={type} />
         </a>
     );
@@ -461,14 +454,13 @@ export default function SpeakersSection() {
                 {/* Header */}
                 <div className="content-stretch flex flex-col gap-[28px] items-center relative shrink-0 w-full">
                     {/* Event Badge */}
-                    <div className="content-stretch flex gap-[6px] items-center justify-center px-4 sm:px-[32px] py-[16px] relative rounded-[40px] shrink-0 self-center w-full max-w-full lg:w-auto">
-                        <div aria-hidden="true" className="absolute border-2 border-[#505050] border-solid inset-0 pointer-events-none rounded-[40px] shadow-[4px_4px_0px_0px_#505050]" />
-                        <div className="hidden lg:block">
+                    <div className="inline-flex items-center justify-center gap-[8px] px-4 py-3 md:px-[32px] md:py-[16px] rounded-[40px] border-2 border-[#505050] shadow-[4px_4px_0px_0px_#505050] bg-transparent max-w-[92vw] md:max-w-none">
+                        <div className="hidden md:flex items-center justify-center relative shrink-0">
                             <UilCalendar />
                         </div>
-                        <div className="flex flex-col font-dm-sans font-bold justify-center leading-normal relative shrink-0 text-[#505050] text-[14px] uppercase whitespace-normal break-words text-center flex-1" style={{ fontVariationSettings: "'opsz' 14" }}>
-                            <p className="">19 a 22 de novembro · São Paulo/SP</p>
-                        </div>
+                        <span className="font-dm-sans font-bold text-[#505050] text-[12px] md:text-[14px] uppercase tracking-[0.14px] whitespace-normal md:whitespace-nowrap leading-none mt-[2px]">
+                            19 a 22 de novembro · São Paulo/SP
+                        </span>
                     </div>
 
                     {/* Title & Description */}

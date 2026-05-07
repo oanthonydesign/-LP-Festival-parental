@@ -7,9 +7,7 @@ import svgPaths from "@/components/svg/svgPaths";
 function TicketIcon() {
     return (
         <div className="shrink-0 size-[20px]">
-            <svg className="block size-full" fill="none" viewBox="0 0 15 12">
-                <path d={svgPaths.p60d3f00} fill="currentColor" />
-            </svg>
+            <img src="/images/icons/Ingresso linha branca.svg" alt="Ticket" className="w-full h-full object-contain" loading="lazy" />
         </div>
     );
 }
@@ -460,7 +458,7 @@ function ScheduleModal({ isOpen, onClose, initialDay }: { isOpen: boolean; onClo
                         style={{ backgroundColor: currentDay.themeColor + '15' }}
                     >
                         <div className="flex items-center gap-3">
-                            <CalendarDays size={20} style={{ color: currentDay.themeColor }} />
+                            <img src="/images/icons/Calendário cor.svg" alt="Calendário" className="w-[20px] h-[20px] shrink-0" loading="lazy" />
                             <h2 className="font-sugar-peachy text-[22px] md:text-[28px] text-[#191919] leading-none">
                                 Confira a programação completa dos 4 dias do Festival
                             </h2>
@@ -572,13 +570,13 @@ function DayOverviewCard({ day, onClick }: { day: DayData; onClick: () => void }
                 {/* Stage info */}
                 <div className="flex flex-col gap-1.5">
                     <div className="flex items-center gap-2">
-                        <Mic2 size={13} style={{ color: day.themeColor }} />
+                        <img src="/images/icons/Violão cor.svg" alt="Palcos" className="w-[14px] h-[14px]" loading="lazy" />
                         <span className="text-xs font-dm-sans font-bold text-[#4c4d4f]">{palcoCount} palcos simultâneos + Arena Ciranda</span>
                     </div>
                     <div className="flex items-center gap-2">
                         {isProfessional
-                            ? <Users size={13} style={{ color: day.themeColor }} />
-                            : <Baby size={13} style={{ color: day.themeColor }} />
+                            ? <img src="/images/icons/Profissionais cor.svg" alt="Profissionais" className="w-[14px] h-[14px]" loading="lazy" />
+                            : <img src="/images/icons/Pais cor.svg" alt="Pais" className="w-[14px] h-[14px]" loading="lazy" />
                         }
                         <span className="text-xs font-dm-sans text-[#4c4d4f]">{day.accessLabel}</span>
                     </div>

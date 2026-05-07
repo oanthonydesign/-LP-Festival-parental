@@ -59,9 +59,7 @@ export default function Header() {
                             href="#ingressos"
                             className="bg-[#f7a73c] text-[#191919] text-[12px] font-bold uppercase tracking-wider px-4 py-2.5 rounded-[40px] shadow-[2px_2px_0px_0px_#191919] active:translate-y-[1px] active:shadow-none transition-all border border-[#191919] flex items-center gap-2"
                         >
-                            <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d={svgPaths.p60d3f00} fill="currentColor" />
-                            </svg>
+                            <img src="/images/icons/Ingresso linha preta.svg" alt="Ingresso" className="w-[20px] h-[20px] shrink-0" loading="lazy" />
                             Ingresso
                         </a>
 
@@ -108,9 +106,7 @@ export default function Header() {
                         </a>
                         <a href="#ingressos" className="group relative">
                             <div className="bg-[#f7a73c] border border-[#191919] flex items-center justify-center gap-[10px] px-[24px] py-[12px] rounded-[40px] shadow-[2px_2px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[1px_1px_0px_0px_#191919] transition-all">
-                                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#191919]">
-                                    <path d={svgPaths.p60d3f00} fill="currentColor" />
-                                </svg>
+                                <img src="/images/icons/Ingresso linha preta.svg" alt="Ingresso" className="w-[20px] h-[20px] shrink-0" loading="lazy" />
                                 <span className="font-dm-sans font-bold text-[#191919] text-[13px] uppercase tracking-[0.8px] whitespace-nowrap">
                                     Garanta seu INGRESSO agora
                                 </span>
