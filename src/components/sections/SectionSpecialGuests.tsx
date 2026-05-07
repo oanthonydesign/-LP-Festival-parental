@@ -65,11 +65,11 @@ export default function SectionSpecialGuests() {
                             </h3>
 
                             <p className="font-dm-sans font-bold text-[18px] lg:text-[24px] text-[#fff6ef] pt-2 text-center lg:text-left">
-                                Autor do livro "Pais Ocupados filhos distantes", uma das principais referências mundiais em desenvolvimento emocional infantil
+                                Psiquiatra, psicólogo do desenvolvimento e uma das maiores referências mundiais em apego e desenvolvimento humano.
                             </p>
 
                             <p className="font-dm-sans text-[18px] lg:text-[24px] text-[#fff6ef] leading-[1.3] font-medium opacity-95 text-center lg:text-left">
-                                O autor que revolucionou a compreensão do apego e mostrou por que os pais precisam importar mais do que os colegas. Em um mundo que empurra nossas crianças para longe da família cada vez mais cedo, o psicólogo canadense nos lembra de algo simples e poderoso: <span className="bg-[#fff6ef] text-[#191919] px-2 py-0.5 leading-relaxed box-decoration-clone rounded-sm">a relação vem antes da educação.</span>
+                                Um dos pensadores mais influentes da parentalidade contemporânea. Sua obra transformou a forma como milhares de famílias e profissionais compreendem vínculo, apego e desenvolvimento emocional infantil. Em um mundo que empurra nossas crianças para longe da família cada vez mais cedo, o psicólogo canadense nos lembra de algo simples e poderoso: <span className="bg-[#fff6ef] text-[#191919] px-2 py-0.5 leading-relaxed box-decoration-clone rounded-sm">a relação vem antes da educação.</span>
                             </p>
                         </div>
 

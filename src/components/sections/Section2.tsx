@@ -47,13 +47,13 @@ export default function Section2() {
                     <div className="flex flex-col items-center w-full max-w-[900px]">
                         <div className="flex flex-col gap-6 font-dm-sans justify-center leading-tight relative text-[#4c4d4f] text-[18px] lg:text-[24px]">
                             <p>
-                                Dica de Instagram virou rotina. Informação não falta. Mas, na prática, muitos adultos seguem inseguros, oscilando entre abordagens e tentando acertar, mas sem clareza sobre o que realmente sustenta o desenvolvimento emocional de uma criança.
+                                Hoje, pais e profissionais têm acesso a mais informação do que nunca. Mas informação acumulada nem sempre gera segurança, clareza ou presença nas relações.
                             </p>
                             <p>
-                                Profissionais enfrentam outro lado do mesmo cenário: um campo em expansão, com múltiplas linhas e demandas, onde transformar teoria em prática consistente nem sempre é simples.
+                                Muitos adultos vivem entre excessos: excesso de estímulo, excesso de opinião, excesso de abordagem e excesso de culpa. E, no meio disso, educar, cuidar e construir vínculos consistentes se tornou cada vez mais complexo.
                             </p>
                             <p>
-                                O Festival Parental nasce para transformar essa complexidade em compreensão. Um encontro presencial que reúne ciência, prática e experiência real para pensar a parentalidade com mais profundidade e construir caminhos mais conscientes para quem vive e trabalha com famílias, com a convicção de que a parentalidade muda o mundo.
+                                O Festival Parental nasce como um espaço de pausa, profundidade e reconexão. Um encontro presencial para transformar teoria em compreensão, ampliar repertórios e refletir sobre o desenvolvimento humano de forma mais consciente, prática e sustentável.
                             </p>
                         </div>
                     </div>

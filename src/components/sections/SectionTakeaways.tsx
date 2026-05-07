@@ -18,7 +18,7 @@ const GROUPS = [
       {
         title: "Identidade profissional fortalecida",
         description:
-          "O sentimento de pertencer ao movimento que está profissionalizando a educação parental no país e elevando o nível do mercado.",
+          "O sentimento de pertencimento a um campo que amadurece rapidamente e exige cada vez mais profundidade, responsabilidade e consistência técnica.",
       },
       {
         title: "Clareza estratégica",
@@ -36,12 +36,12 @@ const GROUPS = [
       {
         title: "Confiança nas suas decisões",
         description:
-          "Menos dúvida sobre o que fazer no próximo conflito e o alívio de se livrar daquela culpa que paralisa a educação.",
+          "Menos sensação de estar sempre errando. Mais clareza para lidar com conflitos, limites e vínculo sem depender de fórmulas prontas ou perfeição constante.",
       },
       {
         title: "Ferramentas de aplicação imediata",
         description:
-          "Mudanças práticas de postura que transformam a rotina da casa e a qualidade da relação com seus filhos logo no primeiro dia.",
+          "Mudanças práticas de postura que impactam a rotina da casa, a qualidade das relações e a forma como sua família atravessa os desafios do cotidiano.",
       },
       {
         title: "Uma nova perspectiva sobre educar",
