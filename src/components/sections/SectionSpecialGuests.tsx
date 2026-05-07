@@ -4,7 +4,30 @@ import React from 'react';
 
 export default function SectionSpecialGuests() {
     return (
-        <section className="bg-[#fff6ef] w-full flex flex-col items-center pb-[80px] lg:pb-[120px] pt-[72px] relative isolate z-20 scroll-mt-24" id="convidados-especiais">
+        <section className="bg-[#fff6ef] w-full flex flex-col items-center pb-[80px] lg:pb-[120px] pt-[72px] relative overflow-hidden isolate z-20 scroll-mt-24" id="convidados-especiais">
+            {/* --- Background Graphics --- */}
+            {/* Grafismo Onda 1 - Desktop Top Right */}
+            <div className="hidden lg:flex absolute lg:top-[-150px] lg:w-[1800px] lg:h-[1800px] items-center justify-center pointer-events-none z-0"
+                style={{ left: '56vw' }}>
+                <div className="relative w-full h-full lg:w-[1600px] lg:h-[1600px]">
+                    <img
+                        src="/images/grafismo_onda2.1.svg"
+                        alt=""
+                        className="w-full h-full object-contain -scale-x-100"
+                    />
+                </div>
+            </div>
+
+            {/* Grafismo Onda 2 - Desktop Top Left */}
+            <div className="hidden lg:block absolute lg:top-[-120px] lg:w-[1605px] lg:h-[1605px] pointer-events-none z-0"
+                style={{ right: '70vw' }}>
+                <img
+                    src="/images/grafismo_onda1.1.svg"
+                    alt=""
+                    className="w-full h-full object-contain -scale-x-195"
+                />
+            </div>
+
             <div className="layout-container flex flex-col gap-[64px] items-center relative px-4 md:px-0 w-full max-w-[1240px]">
 
                 {/* Header Section */}

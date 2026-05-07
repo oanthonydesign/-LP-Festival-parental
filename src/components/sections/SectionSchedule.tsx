@@ -48,7 +48,7 @@ const scheduleFullData: DayData[] = [
         dayLabel: 'Dia 1',
         weekday: 'quinta-feira',
         access: 'professional',
-        accessLabel: 'Passaporte Embaixador e Educador',
+        accessLabel: 'Exclusivo para profissionais',
         themeColor: '#3399CC',
         credenciamento: [
             { time: '07h00', note: 'exclusivo para embaixadores' },
@@ -120,7 +120,7 @@ const scheduleFullData: DayData[] = [
         dayLabel: 'Dia 2',
         weekday: 'sexta-feira',
         access: 'professional',
-        accessLabel: 'Passaporte Embaixador e Educador',
+        accessLabel: 'Exclusivo para profissionais',
         themeColor: '#3399CC',
         credenciamento: [
             { time: '08h00' },
@@ -188,7 +188,7 @@ const scheduleFullData: DayData[] = [
         dayLabel: 'Dia 3',
         weekday: 'sábado',
         access: 'all',
-        accessLabel: 'Embaixador, Educador e Parental',
+        accessLabel: 'Aberto também para pais e cuidadores',
         themeColor: '#ED9F8C',
         credenciamento: [
             { time: '07h30' },
@@ -271,7 +271,7 @@ const scheduleFullData: DayData[] = [
         dayLabel: 'Dia 4',
         weekday: 'domingo',
         access: 'all',
-        accessLabel: 'Embaixador, Educador e Parental',
+        accessLabel: 'Aberto também para pais e cuidadores',
         themeColor: '#ED9F8C',
         credenciamento: [
             { time: '07h30' },
