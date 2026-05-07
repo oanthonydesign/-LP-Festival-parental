@@ -41,26 +41,26 @@ export default function Section13() {
                 {/* Buttons Container */}
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6 lg:gap-8 w-full mt-4">
                     {/* Botão Patrocinador */}
-                    <a 
-                        href="https://wa.me/5511915983957?text=Quero%20patrocinar%20o%20Festival%20Parental%202026" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                    <a
+                        href="https://wa.me/5511915983957?text=Quero%20patrocinar%20o%20Festival%20Parental%202026"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="bg-[#F7A73C] border-[3px] border-[#191919] rounded-[40px] px-[40px] py-[20px] shadow-[6px_6px_0px_0px_#191919] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] inline-flex items-center justify-center w-full sm:w-auto min-w-[280px] group"
                     >
                         <span className="font-dm-sans font-black text-[#191919] text-[16px] uppercase tracking-wider">
-                            quero ser patrocinador
+                            Quero ser patrocinador
                         </span>
                     </a>
 
                     {/* Botão Expositor */}
-                    <a 
-                        href="https://wa.me/5511915983957?text=Quero%20ser%20expositor%20no%20Festival%20Parental%202026" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                    <a
+                        href="https://wa.me/5511915983957?text=Quero%20ser%20expositor%20no%20Festival%20Parental%202026"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="bg-[#FFF6EF] border-[3px] border-[#191919] rounded-[40px] px-[40px] py-[20px] shadow-[6px_6px_0px_0px_#191919] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] inline-flex items-center justify-center w-full sm:w-auto min-w-[280px] group"
                     >
                         <span className="font-dm-sans font-black text-[#191919] text-[16px] uppercase tracking-wider">
-                            quero ser expositor
+                            Quero expor minha marca
                         </span>
                     </a>
                 </div>

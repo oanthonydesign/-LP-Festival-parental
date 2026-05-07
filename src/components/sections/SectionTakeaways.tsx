@@ -88,7 +88,7 @@ export default function SectionTakeaways() {
               </div>
               <div className="flex flex-col gap-3 mt-1">
                 {group.items.map((item, idx) => (
-                  <div key={idx} className={`${group.cardColor} rounded-2xl px-6 py-4`}>
+                  <div key={idx} className={`${group.cardColor} rounded-2xl px-6 py-4 border-2 border-[#191919] shadow-[4px_4px_0px_0px_#191919]`}>
                     <h4 className={CARD_TEXT_TITLE}>{item.title}</h4>
                     <p className={CARD_TEXT_DESC}>{item.description}</p>
                   </div>
@@ -124,7 +124,7 @@ export default function SectionTakeaways() {
               key={`prof-${idx}`}
               className={`flex ${idx % 2 === 0 ? "justify-end" : "justify-start"} ${idx === 0 ? "mt-6" : ""}`}
             >
-              <div className={`${prof.cardColor} rounded-2xl px-6 py-4 w-[85%] flex flex-col`}>
+              <div className={`${prof.cardColor} rounded-2xl px-6 py-4 w-[85%] flex flex-col border-2 border-[#191919] shadow-[4px_4px_0px_0px_#191919]`}>
                 <h4 className={CARD_TEXT_TITLE}>{prof.items[idx].title}</h4>
                 <p className={CARD_TEXT_DESC}>{prof.items[idx].description}</p>
               </div>
@@ -133,7 +133,7 @@ export default function SectionTakeaways() {
               key={`pais-${idx}`}
               className={`flex ${idx % 2 === 0 ? "justify-start" : "justify-end"} ${idx === 0 ? "mt-6" : ""}`}
             >
-              <div className={`${pais.cardColor} rounded-2xl px-6 py-4 w-[85%] flex flex-col`}>
+              <div className={`${pais.cardColor} rounded-2xl px-6 py-4 w-[85%] flex flex-col border-2 border-[#191919] shadow-[4px_4px_0px_0px_#191919]`}>
                 <h4 className={CARD_TEXT_TITLE}>{pais.items[idx].title}</h4>
                 <p className={CARD_TEXT_DESC}>{pais.items[idx].description}</p>
               </div>
