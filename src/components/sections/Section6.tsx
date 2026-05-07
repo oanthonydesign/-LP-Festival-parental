@@ -161,11 +161,11 @@ function StarIcon({ color = "#2DAA96" }: { color?: string }) {
 function TicketIcon({ isWhite }: { isWhite?: boolean }) {
   return (
     <div className="shrink-0 size-[20px]">
-      <img 
-        src={isWhite ? "/images/icons/Ingresso linha branca.svg" : "/images/icons/Ingresso linha preta.svg"} 
-        alt="Ticket" 
-        className="w-full h-full object-contain" 
-        loading="lazy" 
+      <img
+        src={isWhite ? "/images/icons/Ingresso linha branca.svg" : "/images/icons/Ingresso linha preta.svg"}
+        alt="Ticket"
+        className="w-full h-full object-contain"
+        loading="lazy"
       />
     </div>
   );
