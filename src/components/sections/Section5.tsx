@@ -41,9 +41,9 @@ function Group() {
 
 function Frame() {
     return (
-        <div className="bg-[#2daa96] relative rounded-[8px] shrink-0 size-[40px] flex items-center justify-center p-2" data-name="Frame">
+        <div className="bg-[#2daa96] relative rounded-[8px] shrink-0 size-[56px] flex items-center justify-center p-2" data-name="Frame">
             <div aria-hidden="true" className="absolute border border-[#191919] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[2px_2px_0px_0px_#191919]" />
-            <img src="/images/icons/Profissionais linha preta.svg" alt="Icon" className="w-[24px] h-[24px] object-contain relative z-10" loading="lazy" />
+            <img src="/images/icons/profissionais_linha_preta.svg" alt="Icon" className="w-[32px] h-[32px] object-contain relative z-10" loading="lazy" />
         </div>
     );
 }
@@ -119,9 +119,9 @@ function Group1() {
 
 function Frame1() {
     return (
-        <div className="bg-[#79c3ab] relative rounded-[8px] shrink-0 size-[40px] flex items-center justify-center p-2" data-name="Frame">
+        <div className="bg-[#79c3ab] relative rounded-[8px] shrink-0 size-[56px] flex items-center justify-center p-2" data-name="Frame">
             <div aria-hidden="true" className="absolute border border-[#191919] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[2px_2px_0px_0px_#191919]" />
-            <img src="/images/icons/Brasil linha preta.svg" alt="Icon" className="w-[24px] h-[24px] object-contain relative z-10" loading="lazy" />
+            <img src="/images/icons/brasil_linha_preta.svg" alt="Icon" className="w-[32px] h-[32px] object-contain relative z-10" loading="lazy" />
         </div>
     );
 }
@@ -197,9 +197,9 @@ function Group2() {
 
 function Frame2() {
     return (
-        <div className="bg-[#74acde] relative rounded-[8px] shrink-0 size-[40px] flex items-center justify-center p-2" data-name="Frame">
+        <div className="bg-[#74acde] relative rounded-[8px] shrink-0 size-[56px] flex items-center justify-center p-2" data-name="Frame">
             <div aria-hidden="true" className="absolute border border-[#191919] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[2px_2px_0px_0px_#191919]" />
-            <img src="/images/icons/Programação linha preta.svg" alt="Icon" className="w-[24px] h-[24px] object-contain relative z-10" loading="lazy" />
+            <img src="/images/icons/programacao_linha_preta.svg" alt="Icon" className="w-[32px] h-[32px] object-contain relative z-10" loading="lazy" />
         </div>
     );
 }
@@ -275,9 +275,9 @@ function Group3() {
 
 function Frame3() {
     return (
-        <div className="bg-[#f7a73c] relative rounded-[8px] shrink-0 size-[40px] flex items-center justify-center p-2" data-name="Frame">
+        <div className="bg-[#f7a73c] relative rounded-[8px] shrink-0 size-[56px] flex items-center justify-center p-2" data-name="Frame">
             <div aria-hidden="true" className="absolute border border-[#191919] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[2px_2px_0px_0px_#191919]" />
-            <img src="/images/icons/Oficina linha preta.svg" alt="Icon" className="w-[24px] h-[24px] object-contain relative z-10" loading="lazy" />
+            <img src="/images/icons/oficina_linha_preta.svg" alt="Icon" className="w-[32px] h-[32px] object-contain relative z-10" loading="lazy" />
         </div>
     );
 }
@@ -353,9 +353,9 @@ function Group4() {
 
 function Frame4() {
     return (
-        <div className="bg-[#f7a73c] relative rounded-[8px] shrink-0 size-[40px] flex items-center justify-center p-2" data-name="Frame">
+        <div className="bg-[#f7a73c] relative rounded-[8px] shrink-0 size-[56px] flex items-center justify-center p-2" data-name="Frame">
             <div aria-hidden="true" className="absolute border border-[#191919] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[2px_2px_0px_0px_#191919]" />
-            <img src="/images/icons/Produto linha preta.svg" alt="Icon" className="w-[24px] h-[24px] object-contain relative z-10" loading="lazy" />
+            <img src="/images/icons/produto_linha_preta.svg" alt="Icon" className="w-[32px] h-[32px] object-contain relative z-10" loading="lazy" />
         </div>
     );
 }
@@ -431,9 +431,9 @@ function Group5() {
 
 function Frame5() {
     return (
-        <div className="bg-[#74acde] relative rounded-[8px] shrink-0 size-[40px] flex items-center justify-center p-2" data-name="Frame">
+        <div className="bg-[#74acde] relative rounded-[8px] shrink-0 size-[56px] flex items-center justify-center p-2" data-name="Frame">
             <div aria-hidden="true" className="absolute border border-[#191919] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[2px_2px_0px_0px_#191919]" />
-            <img src="/images/icons/Autorregulação linha preta.svg" alt="Icon" className="w-[24px] h-[24px] object-contain relative z-10" loading="lazy" />
+            <img src="/images/icons/autorregulação_linha_preta.svg" alt="Icon" className="w-[32px] h-[32px] object-contain relative z-10" loading="lazy" />
         </div>
     );
 }
@@ -509,9 +509,9 @@ function Group6() {
 
 function Frame6() {
     return (
-        <div className="bg-[#79c3ab] relative rounded-[8px] shrink-0 size-[40px] flex items-center justify-center p-2" data-name="Frame">
+        <div className="bg-[#79c3ab] relative rounded-[8px] shrink-0 size-[56px] flex items-center justify-center p-2" data-name="Frame">
             <div aria-hidden="true" className="absolute border border-[#191919] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[2px_2px_0px_0px_#191919]" />
-            <img src="/images/icons/Cultura linha preta.svg" alt="Icon" className="w-[24px] h-[24px] object-contain relative z-10" loading="lazy" />
+            <img src="/images/icons/cultura_linha_preta.svg" alt="Icon" className="w-[32px] h-[32px] object-contain relative z-10" loading="lazy" />
         </div>
     );
 }
@@ -587,9 +587,9 @@ function Group7() {
 
 function Frame7() {
     return (
-        <div className="bg-[#2daa96] relative rounded-[8px] shrink-0 size-[40px] flex items-center justify-center p-2" data-name="Frame">
+        <div className="bg-[#2daa96] relative rounded-[8px] shrink-0 size-[56px] flex items-center justify-center p-2" data-name="Frame">
             <div aria-hidden="true" className="absolute border border-[#191919] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[2px_2px_0px_0px_#191919]" />
-            <img src="/images/icons/Conecte-se linha preta.svg" alt="Icon" className="w-[24px] h-[24px] object-contain relative z-10" loading="lazy" />
+            <img src="/images/icons/conexao_linha_preta.svg" alt="Icon" className="w-[32px] h-[32px] object-contain relative z-10" loading="lazy" />
         </div>
     );
 }
@@ -669,12 +669,12 @@ function Content() {
         <div className="flex flex-col gap-[46px] items-center relative shrink-0 w-full max-w-[1280px] z-[2]" data-name="Content">
             <TextsTrilhas />
             <Cards />
-            <a 
-                href="#ingressos" 
+            <a
+                href="#ingressos"
                 className="group relative"
             >
                 <div className="bg-[#f7a73c] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[32px] md:px-[64px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full md:w-auto">
-                    <img src="/images/icons/Ingresso linha preta.svg" alt="Ticket" className="w-[20px] h-[20px] shrink-0" />
+                    <img src="/images/icons/ingresso_linha_preta.svg" alt="Ticket" className="w-[24px] h-[24px] shrink-0" />
                     <span className="font-dm-sans font-bold text-[#191919] text-[14px] md:text-[16px] uppercase tracking-[1px] whitespace-nowrap">
                         Quero garantir meu lugar
                     </span>

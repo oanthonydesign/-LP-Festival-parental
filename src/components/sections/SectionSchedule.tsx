@@ -7,7 +7,7 @@ import svgPaths from "@/components/svg/svgPaths";
 function TicketIcon() {
     return (
         <div className="shrink-0 size-[20px]">
-            <img src="/images/icons/Ingresso linha branca.svg" alt="Ticket" className="w-full h-full object-contain" loading="lazy" />
+            <img src="/images/icons/ingresso_linha_branca.svg" alt="Ticket" className="w-full h-full object-contain" loading="lazy" />
         </div>
     );
 }
@@ -131,7 +131,7 @@ const scheduleFullData: DayData[] = [
                 events: [
                     { time: '09h00', title: 'Em breve', type: 'placeholder' },
                     { time: '10h30', title: 'Intervalo', type: 'interval' },
-                    { time: '11h00', title: 'Em breve + Ivana / pré-venda', type: 'named' },
+                    { time: '11h00', title: 'Ivana', type: 'named' },
                     { time: '12h30', title: 'Almoço', type: 'interval' },
                     { time: '14h00', title: 'Em breve', type: 'placeholder' },
                     { time: '15h00', title: 'Em breve', type: 'placeholder' },
@@ -458,7 +458,7 @@ function ScheduleModal({ isOpen, onClose, initialDay }: { isOpen: boolean; onClo
                         style={{ backgroundColor: currentDay.themeColor + '15' }}
                     >
                         <div className="flex items-center gap-3">
-                            <img src="/images/icons/Calendário cor.svg" alt="Calendário" className="w-[20px] h-[20px] shrink-0" loading="lazy" />
+                            <img src="/images/icons/calendario_cor.svg" alt="Calendário" className="w-[24px] h-[24px] shrink-0" loading="lazy" />
                             <h2 className="font-sugar-peachy text-[22px] md:text-[28px] text-[#191919] leading-none">
                                 Confira a programação completa dos 4 dias do Festival
                             </h2>
@@ -558,25 +558,25 @@ function DayOverviewCard({ day, onClick }: { day: DayData; onClick: () => void }
             <div className="mt-2 flex flex-col gap-4">
                 {/* Date */}
                 <div>
-                    <p className="text-[11px] font-dm-sans font-bold text-[#4c4d4f] uppercase tracking-widest mb-0.5">
+                    <p className="text-[11px] font-dm-sans font-bold text-[#191919] uppercase tracking-widest mb-0.5">
                         {day.dayLabel} · {day.weekday}
                     </p>
-                    <h3 className="font-sugar-peachy leading-none text-[#191919]">
-                        <span className="text-[42px]">{day.date.split(' ')[0]}</span>{' '}
-                        <span className="text-[26px]" style={{ color: day.themeColor }}>{day.date.split(' ')[1]}</span>
+                    <h3 className="font-sugar-peachy leading-none">
+                        <span className="text-[42px]" style={{ color: day.themeColor }}>{day.date.split(' ')[0]}</span>{' '}
+                        <span className="text-[26px] text-[#191919]">{day.date.split(' ')[1]}</span>
                     </h3>
                 </div>
 
                 {/* Stage info */}
                 <div className="flex flex-col gap-1.5">
                     <div className="flex items-center gap-2">
-                        <img src="/images/icons/Violão cor.svg" alt="Palcos" className="w-[14px] h-[14px]" loading="lazy" />
+                        <img src="/images/icons/violao_cor.svg" alt="Palcos" className="w-[14px] h-[14px]" loading="lazy" />
                         <span className="text-xs font-dm-sans font-bold text-[#4c4d4f]">{palcoCount} palcos simultâneos + Arena Ciranda</span>
                     </div>
                     <div className="flex items-center gap-2">
                         {isProfessional
-                            ? <img src="/images/icons/Profissionais cor.svg" alt="Profissionais" className="w-[14px] h-[14px]" loading="lazy" />
-                            : <img src="/images/icons/Pais cor.svg" alt="Pais" className="w-[14px] h-[14px]" loading="lazy" />
+                            ? <img src="/images/icons/profissionais_cor.svg" alt="Profissionais" className="w-[14px] h-[14px]" loading="lazy" />
+                            : <img src="/images/icons/pais_cor.svg" alt="Pais" className="w-[14px] h-[14px]" loading="lazy" />
                         }
                         <span className="text-xs font-dm-sans text-[#4c4d4f]">{day.accessLabel}</span>
                     </div>
@@ -649,7 +649,7 @@ export default function SectionSchedule() {
                             className="group relative"
                         >
                             <div className="bg-[#ef7d25] text-white border-2 border-[#191919] flex items-center justify-center gap-3 px-8 py-4 rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] group-active:translate-y-[2px] group-active:shadow-none transition-all">
-                                <TicketIcon />
+                                <img src="/images/icons/calendario_linha_branca.svg" alt="Calendário" className="w-[24px] h-[24px] shrink-0" loading="lazy" />
                                 <span className="font-dm-sans font-bold text-[14px] uppercase tracking-[1px] whitespace-nowrap">
                                     Ver Programação Completa
                                 </span>

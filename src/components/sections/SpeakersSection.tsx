@@ -256,7 +256,7 @@ export const allSpeakers: Speaker[] = [
 function UilCalendar() {
     return (
         <div className="shrink-0 size-[20px]" data-name="uil:calendar">
-            <img src="/images/icons/Calendário cor.svg" alt="Calendario" className="w-full h-full object-contain" loading="lazy" />
+            <img src="/images/icons/calendario_cor.svg" alt="Calendario" className="w-full h-full object-contain" loading="lazy" />
         </div>
     );
 }
@@ -273,14 +273,14 @@ function SocialIcons({ type }: { type: "linkedin" | "instagram" | "website" }) {
         <div className="relative shrink-0 size-[14px] flex items-center justify-center" data-name="Social Icons">
             {type === "linkedin" && (
                 <>
-                    <img src="/images/icons/Linkedin linha preta.svg" alt="LinkedIn" className="w-full h-full object-contain absolute inset-0 transition-opacity duration-200 group-hover:opacity-0" loading="lazy" />
-                    <img src="/images/icons/Linkedin preenchido branco.svg" alt="LinkedIn" className="w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100" loading="lazy" />
+                    <img src="/images/icons/linkedin_linha_preta.svg" alt="LinkedIn" className="w-full h-full object-contain absolute inset-0 transition-opacity duration-200 group-hover:opacity-0" loading="lazy" />
+                    <img src="/images/icons/linkedin_preenchido_branco.svg" alt="LinkedIn" className="w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100" loading="lazy" />
                 </>
             )}
             {type === "instagram" && (
                 <>
-                    <img src="/images/icons/Instagram linha preta.svg" alt="Instagram" className="w-full h-full object-contain absolute inset-0 transition-opacity duration-200 group-hover:opacity-0" loading="lazy" />
-                    <img src="/images/icons/Instagram branco.svg" alt="Instagram" className="w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100" loading="lazy" />
+                    <img src="/images/icons/instagram_linha_preta.svg" alt="Instagram" className="w-full h-full object-contain absolute inset-0 transition-opacity duration-200 group-hover:opacity-0" loading="lazy" />
+                    <img src="/images/icons/instagram_preenchido_branco.svg" alt="Instagram" className="w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100" loading="lazy" />
                 </>
             )}
         </div>

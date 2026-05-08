@@ -269,7 +269,7 @@ export default function HeroSectionV2() {
                 <div className="flex flex-col items-center gap-[28px] w-full">
                     <div className="inline-flex items-center justify-center gap-[8px] px-4 py-3 md:px-[32px] md:py-[16px] rounded-[40px] border-2 border-[#505050] shadow-[4px_4px_0px_0px_#505050] bg-transparent max-w-[92vw] md:max-w-none">
                         <div className="hidden md:flex items-center justify-center relative shrink-0">
-                            <img src="/images/icons/Calendário cor.svg" alt="Calendario" className="w-[18px] h-[18px] object-contain" loading="lazy" />
+                            <img src="/images/icons/calendario_cor.svg" alt="Calendario" className="w-[20px] h-[20px] object-contain" loading="lazy" />
                         </div>
                         <span className="font-dm-sans font-bold text-[#505050] text-[12px] md:text-[14px] uppercase tracking-[0.14px] whitespace-normal md:whitespace-nowrap leading-none mt-[2px]">
                             19 a 22 de novembro · São Paulo/SP
@@ -293,7 +293,7 @@ export default function HeroSectionV2() {
                 <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-[16px] w-full max-w-[400px] md:max-w-none">
                     <a href="#para-quem" className="group relative w-full md:w-[332px]">
                         <div className="bg-[#f7a73c] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
-                            <img src="/images/icons/Ingresso linha preta.svg" alt="Ingresso" className="w-[20px] h-[20px] shrink-0" loading="lazy" />
+                            <img src="/images/icons/ingresso_linha_preta.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="lazy" />
                             <span className="font-dm-sans font-bold text-[#191919] text-[13px] md:text-[14px] uppercase tracking-[0.8px] md:tracking-[1px] whitespace-nowrap">
                                 Sou profissional da área
                             </span>
@@ -302,7 +302,7 @@ export default function HeroSectionV2() {
 
                     <a href="#para-quem" className="group relative w-full md:w-[332px]">
                         <div className="bg-[#2260a1] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
-                            <img src="/images/icons/Ingresso linha branca.svg" alt="Ingresso" className="w-[20px] h-[20px] shrink-0" loading="lazy" />
+                            <img src="/images/icons/ingresso_linha_branca.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="lazy" />
                             <span className="font-dm-sans font-bold text-[#fff6ee] text-[13px] md:text-[14px] uppercase tracking-[0.8px] md:tracking-[1px] whitespace-nowrap">
                                 Sou pai, mãe ou cuidador(a)
                             </span>

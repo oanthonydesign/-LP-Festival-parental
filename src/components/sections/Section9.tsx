@@ -5,13 +5,13 @@ const imgStoryImage = "/images/banner_adultos.webp";
 
 function WarningIcon() {
     return (
-        <img src="/images/icons/Alerta linha branca.svg" alt="Importante" className="w-[18px] h-[18px] shrink-0" loading="lazy" />
+        <img src="/images/icons/alerta_linha_branca.svg" alt="Importante" className="w-[18px] h-[18px] shrink-0" loading="lazy" />
     );
 }
 
 function TicketIcon() {
     return (
-        <img src="/images/icons/Ingresso linha branca.svg" alt="Ingresso" className="w-[20px] h-[20px] shrink-0" loading="lazy" />
+        <img src="/images/icons/ingresso_linha_branca.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="lazy" />
     );
 }
 
