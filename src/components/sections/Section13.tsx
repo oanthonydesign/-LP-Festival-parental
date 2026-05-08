@@ -19,7 +19,7 @@ export default function Section13() {
                             O Festival Parental reúne um público altamente engajado em um dos temas mais relevantes da atualidade: <strong>a parentalidade</strong>.
                         </p>
 
-                        <p className="text-[22px] lg:text-[28px] leading-tight font-medium">
+                        <p className="font-medium">
                             Não é só visibilidade – <strong>é contexto</strong>.
                         </p>
 
@@ -27,9 +27,8 @@ export default function Section13() {
                             Um ambiente onde marcas se conectam com famílias, profissionais e especialistas em um nível que dificilmente acontece em outros canais.
                         </p>
 
-                        <p className="text-[24px] lg:text-[34px] leading-tight font-bold">
-                            Aqui, sua marca não aparece.<br className="hidden md:block" />
-                            Ela participa da conversa.
+                        <p className="font-bold">
+                            Aqui, sua marca não aparece. Ela participa da conversa.
                         </p>
                     </div>
 
