@@ -65,7 +65,7 @@ export default function SectionSpecialGuests() {
                             </h3>
 
                             <p className="font-dm-sans font-bold text-[18px] lg:text-[24px] text-[#fff6ef] pt-2 text-center lg:text-left">
-                                Psiquiatra, psicólogo do desenvolvimento e uma das maiores referências mundiais em apego e desenvolvimento humano.
+                                Psicólogo do desenvolvimento, referência mundial em apego e fundador do Neufeld Institute.
                             </p>
 
                             <p className="font-dm-sans text-[18px] lg:text-[24px] text-[#fff6ef] leading-[1.3] font-medium opacity-95 text-center lg:text-left">
