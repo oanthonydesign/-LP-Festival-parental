@@ -26,7 +26,7 @@ import PreTicketSection from '@/components/sections/PreTicketSection';
 import SectionForWho from '@/components/sections/SectionForWho';
 import SectionTakeaways from '@/components/sections/SectionTakeaways';
 
-const SHOW_STICKY_BAR = false;
+const SHOW_STICKY_BAR = true;
 
 export default function Home() {
     return (
