@@ -99,7 +99,7 @@ const PASSAPORTES: PassportData[] = [
     ],
     target: "Para profissionais da parentalidade",
     buttonText: "QUERO O PASSAPORTE EDUCADOR",
-    href: "https://sun.eduzz.com/39VEQVEDWR",
+    href: "https://chk.eduzz.com/39VEQVEDWR",
     bgColor: "bg-[#3399CC]",
     borderColor: "border-[#191919]",
     textColor: "text-[#191919]",
@@ -125,7 +125,7 @@ const PASSAPORTES: PassportData[] = [
     ],
     target: "Para pais e cuidadores",
     buttonText: "Quero o passaporte parental",
-    href: "https://sun.eduzz.com/39VEAVA5WR",
+    href: "https://chk.eduzz.com/39VEAVA5WR",
     doubleOptions: {
       priceInstallment: "R$ 74,70",
       priceFull: "ou R$ 747,00 à vista",
@@ -136,7 +136,7 @@ const PASSAPORTES: PassportData[] = [
         "Acesso às sessões de autógrafos com palestrantes",
         "Acesso à feira de produtos e serviços para a parentalidade"
       ],
-      href: "https://sun.eduzz.com/G92ERDR4WE",
+      href: "https://chk.eduzz.com/G92ERDR4WE",
       buttonText: "Quero 2 passaportes parental"
     },
     bgColor: "bg-[#ED9F8C]",

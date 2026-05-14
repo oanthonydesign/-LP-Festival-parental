@@ -249,6 +249,16 @@ export const allSpeakers: Speaker[] = [
         bgColor: "#74acde",
         category: "profissionais",
     },
+    {
+        id: 24,
+        name: "Patrícia Noleto",
+        description: "Psicóloga, Supervisora Clínica e Educadora Parental",
+        image: "/images/patrician.webp",
+        instagram: "https://www.instagram.com/patnoleto/",
+        linkedin: "https://www.linkedin.com/in/patricianoleto/",
+        bgColor: "#f7a73c",
+        category: "pais-cuidadores",
+    },
 ];
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
@@ -402,7 +412,7 @@ export default function SpeakersSection() {
     const [visibleCount, setVisibleCount] = useState(8);
 
     const professionalOrder = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 20, 21, 22];
-    const parentsOrder = [2, 4, 6, 8, 10, 12, 14, 16, 18];
+    const parentsOrder = [2, 4, 6, 8, 10, 12, 14, 16, 18, 24];
 
     const filteredSpeakers = (() => {
         if (activeFilter === "todos") return allSpeakers;

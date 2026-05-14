@@ -92,7 +92,7 @@ export default function StickyBottomBar() {
                     <span className="hidden md:block text-[24px] font-light text-black/30">|</span>
 
                     <p className="font-dm-sans font-medium text-[14px] md:text-[18px] text-center md:text-left tracking-tight">
-                        Garanta seu ingresso <span className="font-bold">do aumento de preço</span>
+                        Garanta seu ingresso antes <span className="font-bold">do aumento de preço</span>
                     </p>
                 </div>
             </div>

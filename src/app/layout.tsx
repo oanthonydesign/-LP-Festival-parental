@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: 'Festival Parental 2026 | Evento sobre Parentalidade com Especialistas',
     description: 'Um encontro presencial que reúne especialistas e famílias para discutir o desenvolvimento emocional de crianças e os desafios da parentalidade no mundo atual.',
     icons: {
-        icon: '/favicon.svg',
+        icon: '/favicon_festival-parental-lp.png',
     },
     openGraph: {
         title: 'Festival Parental 2026 | Evento sobre Parentalidade com Especialistas',
