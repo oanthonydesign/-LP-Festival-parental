@@ -5,7 +5,7 @@ import svgPaths from "@/components/svg/svgPaths";
 import { useCountdown } from "@/hooks/useCountdown";
 
 // Flags de controle para fácil ativação/desativação
-const SHOW_PROMO_RIBBON = false;
+const SHOW_PROMO_RIBBON = true;
 const SHOW_PRICE_STATUS_BADGE = false;
 const SHOW_COUNTDOWN_BADGE = true;
 
@@ -174,8 +174,8 @@ function TicketIcon({ isWhite, size = 24 }: { isWhite?: boolean, size?: number }
 function Ribbon() {
   return (
     <div className="absolute inset-0 overflow-hidden rounded-[inherit] pointer-events-none z-[100]">
-      <div className="bg-[#f7a73c] border-y-2 border-[#191919] border-solid -rotate-[25deg] py-0.5 w-[180px] absolute top-[10px] left-[-45px] shadow-[0px_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center">
-        <span className="font-sugar-peachy text-[12px] md:text-[13px] text-black uppercase tracking-tight block text-center">
+      <div className="bg-[#ff4b4b] border-y-2 border-[#191919] border-solid -rotate-[25deg] py-0.5 w-[180px] absolute top-[10px] left-[-45px] shadow-[0px_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center">
+        <span className="font-sugar-peachy text-[12px] md:text-[13px] text-white uppercase tracking-tight block text-center">
           ÚLTIMOS DIAS
         </span>
       </div>
