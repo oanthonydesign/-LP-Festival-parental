@@ -174,8 +174,8 @@ function TicketIcon({ isWhite, size = 24 }: { isWhite?: boolean, size?: number }
 function Ribbon() {
   return (
     <div className="absolute inset-0 overflow-hidden rounded-[inherit] pointer-events-none z-[100]">
-      <div className="bg-[#ff4b4b] border-y-2 border-[#191919] border-solid -rotate-[25deg] py-0.5 w-[180px] absolute top-[10px] left-[-45px] shadow-[0px_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center">
-        <span className="font-sugar-peachy text-[12px] md:text-[13px] text-white uppercase tracking-tight block text-center">
+      <div className="bg-[#ff4b4b] border-y-2 border-[#191919] border-solid -rotate-[20deg] py-0.5 w-[180px] absolute top-[3px] md:top-[2px] left-[-48px] md:left-[-35px] shadow-[0px_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center">
+        <span className="font-sugar-peachy text-[14px] md:text-[16px] text-white uppercase tracking-tight block text-center">
           ÚLTIMOS DIAS
         </span>
       </div>
