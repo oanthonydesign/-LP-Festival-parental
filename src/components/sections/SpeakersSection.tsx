@@ -22,7 +22,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 1,
         name: "Dr. Gordon Neufeld",
-        description: "Psicólogo canadense, autor best-seller e fundador do Neufeld Institute",
+        description: "Psicólogo do desenvolvimento, referência mundial em apego e fundador do Neufeld Institute",
         image: "/images/gordonn.webp",
         instagram: "https://www.instagram.com/neufeldinstitute/",
         website: "https://www.neufeldinstitute.org/link",

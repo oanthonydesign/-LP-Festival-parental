@@ -65,7 +65,7 @@ export default function SectionSpecialGuests() {
                             </h3>
 
                             <p className="font-dm-sans font-bold text-[18px] lg:text-[24px] text-[#fff6ef] pt-2 text-center lg:text-left">
-                                Psicólogo do desenvolvimento, referência mundial em apego e fundador do Neufeld Institute.
+                                Autor do livro “Pais Ocupados filhos distantes”, uma das principais referências mundiais em desenvolvimento emocional infantil
                             </p>
 
                             <p className="font-dm-sans text-[18px] lg:text-[24px] text-[#fff6ef] leading-[1.3] font-medium opacity-95 text-center lg:text-left">
