@@ -1,0 +1,14 @@
+# Bloqueio de indexação para o subdomínio de homologação
+<IfModule mod_headers.c>
+    SetEnvIf Host "homo\.festivalparental\.com\.br" IS_HOMO
+    Header set X-Robots-Tag "noindex, nofollow" env=IS_HOMO
+</IfModule>
+
+# Configurações recomendadas para Next.js static export
+Options -MultiViews
+RewriteEngine On
+
+# Remove .html das URLs (caso necessário, embora trailingSlash: true já ajude)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]

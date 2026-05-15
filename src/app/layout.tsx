@@ -20,6 +20,16 @@ export const metadata: Metadata = {
     icons: {
         icon: '/favicon_festival-parental-lp.png',
     },
+    robots: {
+        index: process.env.NEXT_PUBLIC_IS_HOMO !== 'true',
+        follow: process.env.NEXT_PUBLIC_IS_HOMO !== 'true',
+        nocache: process.env.NEXT_PUBLIC_IS_HOMO === 'true',
+        googleBot: {
+            index: process.env.NEXT_PUBLIC_IS_HOMO !== 'true',
+            follow: process.env.NEXT_PUBLIC_IS_HOMO !== 'true',
+            noimageindex: process.env.NEXT_PUBLIC_IS_HOMO === 'true',
+        },
+    },
     openGraph: {
         title: 'Festival Parental 2026 | Evento sobre Parentalidade com Especialistas',
         description: 'Um encontro presencial que reúne especialistas e famílias para discutir o desenvolvimento emocional de crianças e os desafios da parentalidade no mundo atual.',
