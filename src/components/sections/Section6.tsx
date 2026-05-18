@@ -5,9 +5,9 @@ import svgPaths from "@/components/svg/svgPaths";
 import { useCountdown } from "@/hooks/useCountdown";
 
 // Flags de controle para fácil ativação/desativação
-const SHOW_PROMO_RIBBON = true;
+const SHOW_PROMO_RIBBON = false;
 const SHOW_PRICE_STATUS_BADGE = false;
-const SHOW_COUNTDOWN_BADGE = true;
+const SHOW_COUNTDOWN_BADGE = false;
 
 interface Benefit {
   text: string;
@@ -84,9 +84,9 @@ const PASSAPORTES: PassportData[] = [
   {
     id: "educador",
     name: "Passaporte Educador",
-    lote: "Lote 3",
-    priceInstallment: "R$ 149,70",
-    priceFull: "ou R$ 1.497,00 à vista",
+    lote: "Lote 4",
+    priceInstallment: "R$ 159,70",
+    priceFull: "ou R$ 1.597,00 à vista",
     priceOriginal: "R$ 2.197,00",
     benefits: [
       "Quatro dias para consolidar o repertório técnico e a segurança prática que a atuação com famílias exige hoje (2 dias de conteúdo para profissionais – 7º Congresso Internacional de Educação Parental + 2 dias de conteúdo aberto também para pais e cuidadores)",
@@ -113,7 +113,7 @@ const PASSAPORTES: PassportData[] = [
   {
     id: "parental",
     name: "Passaporte Parental",
-    lote: "Lote 3",
+    lote: "Lote 4",
     priceInstallment: "R$ 49,70",
     priceFull: "ou R$ 497,00 à vista",
     priceOriginal: "R$ 1.497,00",
@@ -176,7 +176,7 @@ function Ribbon() {
     <div className="absolute inset-0 overflow-hidden rounded-[inherit] pointer-events-none z-[100]">
       <div className="bg-[#ff4b4b] border-y-2 border-[#191919] border-solid -rotate-[20deg] py-0.5 w-[180px] absolute top-[3px] md:top-[2px] left-[-48px] md:left-[-35px] shadow-[0px_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center">
         <span className="font-sugar-peachy text-[14px] md:text-[16px] text-white uppercase tracking-tight block text-center">
-          ÚLTIMOS DIAS
+          ÚLTIMO DIA!
         </span>
       </div>
     </div>
@@ -201,7 +201,7 @@ function CountdownBadge() {
       </div>
       <div className="flex flex-col items-start">
         <p className="font-dm-sans text-[16px] md:text-[18px] leading-tight text-[#191919]">
-          <span className="font-bold text-[#2260a1]">Lote 3</span> termina em
+          <span className="font-bold text-[#2260a1]">Lote 4</span> termina em
         </p>
         <p className="font-sugar-peachy text-[28px] md:text-[34px] tracking-[-1px] md:tracking-[-1.25px] leading-[0.9] text-[#191919] mt-1 tabular-nums">
           {countdownText}
