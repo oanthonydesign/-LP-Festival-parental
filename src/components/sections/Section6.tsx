@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import svgPaths from "@/components/svg/svgPaths";
 import { useCountdown } from "@/hooks/useCountdown";
 
@@ -221,6 +221,110 @@ function CountdownBadge() {
 //   );
 // }
 
+function EducadorProgressBar() {
+  const [progress, setProgress] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          let start = 0;
+          const end = 52;
+          const duration = 1200; // 1.2 segundos
+          const startTime = performance.now();
+
+          const animate = (currentTime: number) => {
+            const elapsedTime = currentTime - startTime;
+            const progressFraction = Math.min(elapsedTime / duration, 1);
+            
+            // Efeito de desaceleração (easeOutCubic)
+            const easeProgress = 1 - Math.pow(1 - progressFraction, 3);
+            const currentProgress = Math.round(easeProgress * end);
+
+            setProgress(currentProgress);
+
+            if (progressFraction < 1) {
+              requestAnimationFrame(animate);
+            }
+          };
+
+          setTimeout(() => {
+            requestAnimationFrame(animate);
+          }, 300); // Pequeno delay de 300ms após aparecer na tela
+
+          if (containerRef.current) {
+            observer.unobserve(containerRef.current);
+          }
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  return (
+    <div 
+      ref={containerRef}
+      className="bg-[#191919] border-2 border-[#191919] rounded-[24px] p-4 flex flex-col gap-3 shadow-[3px_3px_0px_0px_#191919] text-white my-1"
+    >
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          {/* Indicador pulsante / mini-spinner laranja */}
+          <div className="relative flex h-2.5 w-2.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#f7a73c] opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#f7a73c]"></span>
+          </div>
+          <span className="font-dm-sans font-bold text-[13px] tracking-wider text-[#f7a73c] uppercase">
+            Vagas Preenchidas
+          </span>
+        </div>
+        <span className="font-sugar-peachy text-[36px] tracking-tight leading-none text-white flex items-baseline">
+          {progress}<span className="text-white/40 text-[24px] ml-0.5">%</span>
+        </span>
+      </div>
+      
+      {/* Track da Barra */}
+      <div className="relative w-full h-[16px] bg-[#333333] rounded-full overflow-visible border border-black/40">
+        {/* Progresso com Gradiente Laranja */}
+        <div 
+          className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#d97706] via-[#f7a73c] to-[#fde047] rounded-full transition-all duration-[100ms] ease-out"
+          style={{ width: `${progress}%` }}
+        >
+          {/* Glow interno e reflexo 3D do progresso */}
+          <div className="absolute inset-x-0 top-0.5 h-[4px] bg-white/20 rounded-full"></div>
+        </div>
+
+        {/* Botão/Indicador com Glow no final da barra (52%) */}
+        <div 
+          className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center pointer-events-none transition-all duration-[100ms] ease-out"
+          style={{ left: `${progress}%`, opacity: progress > 0 ? 1 : 0 }}
+        >
+          {/* Halo laranja claro externo */}
+          <div className="absolute size-[24px] rounded-full border border-[#f7a73c]/80 bg-[#f7a73c]/20 animate-pulse"></div>
+          {/* Círculo do glow principal */}
+          <div className="absolute size-[16px] rounded-full bg-[#f7a73c]/40 blur-[4px]"></div>
+          {/* Bolinha branca brilhante */}
+          <div className="absolute size-[12px] rounded-full bg-white shadow-[0_0_8px_#fff,0_0_16px_#f7a73c]"></div>
+          
+          {/* Partículas de brilho no final do preenchimento laranja */}
+          <div className="absolute -left-[14px] top-[-5px] size-[3px] rounded-full bg-[#ffbe6b]/90 blur-[0.5px]"></div>
+          <div className="absolute -left-[8px] bottom-[-6px] size-[2px] rounded-full bg-[#fde047]/80"></div>
+          <div className="absolute -left-[18px] top-[4px] size-[2px] rounded-full bg-[#f7a73c]/70"></div>
+          <div className="absolute -left-[11px] top-[-1px] size-[4px] rounded-full bg-white/90 blur-[0.5px]"></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function PassportCard({ data }: { data: PassportData }) {
   const [isDouble, setIsDouble] = useState(false);
 
@@ -375,6 +479,10 @@ function PassportCard({ data }: { data: PassportData }) {
             </div>
           ))}
         </div>
+
+        {/* PROGRESS BAR FOR EDUCADOR */}
+        {data.id === 'educador' && <EducadorProgressBar />}
+
         {SHOW_COUNTDOWN_BADGE && (
           <div className="flex flex-col items-center gap-2 w-full">
             <CountdownBadge />
