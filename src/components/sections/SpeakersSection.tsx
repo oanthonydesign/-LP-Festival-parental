@@ -259,6 +259,16 @@ export const allSpeakers: Speaker[] = [
         bgColor: "#f7a73c",
         category: "pais-cuidadores",
     },
+    {
+        id: 25,
+        name: "Elisa Altafim",
+        description: "Psicóloga e pós-doutora em Saúde Mental",
+        image: "/images/elisaa.webp",
+        instagram: "https://www.instagram.com/elisaaltafim/",
+        linkedin: "https://www.linkedin.com/in/elisa-rachel-pisani-altafim-62631b65/?isSelfProfile=false",
+        bgColor: "#79c3ab",
+        category: "profissionais",
+    },
 ];
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
@@ -411,7 +421,7 @@ export default function SpeakersSection() {
     const [activeFilter, setActiveFilter] = useState<SpeakerCategory>("todos");
     const [visibleCount, setVisibleCount] = useState(8);
 
-    const professionalOrder = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 20, 21, 22];
+    const professionalOrder = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 20, 21, 22, 25];
     const parentsOrder = [2, 4, 6, 8, 10, 12, 14, 16, 18, 24];
 
     const filteredSpeakers = (() => {
