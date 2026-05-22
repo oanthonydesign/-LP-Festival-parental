@@ -12,22 +12,22 @@ const GROUPS = {
     itemBgColor: "#D6ECF7",
     items: [
       {
-        title: "As autoridades que definem o mercado",
+        title: "As vozes que aprofundam a parentalidade",
         description:
-          "O palco que fundou a educação parental no Brasil agora está ampliado com as referências nacionais e internacionais que você já segue, reunidas em um só lugar.",
+          "Contato com profissionais e pesquisadores que vêm ampliando as conversas sobre infância, desenvolvimento emocional e relações familiares no Brasil e no mundo.",
       },
       {
         title: "A ciência traduzida para a prática",
         description:
-          "Neurociência, desenvolvimento humano e clínica sem enrolação para garantir o que há de mais atualizado para quem atua na linha de frente com famílias.",
+          "Neurociência, desenvolvimento humano e clínica apresentados com clareza para quem atua diretamente com famílias.",
       },
       {
-        title: "O epicentro do networking qualificado",
+        title: "Onde profissionais deixam de atuar sozinhos",
         description:
-          "Um espaço onde psicólogos, educadores, terapeutas e afins saem do isolamento profissional para construir juntos os próximos passos da área.",
+          "Um espaço para criar conexões, compartilhar desafios e construir os próximos movimentos de um campo que amadurece rapidamente.",
       },
       {
-        title: "Onde as parcerias de negócio acontecem",
+        title: "Conexões que se transformam em projetos reais",
         description:
           "O ambiente que deu origem à ABRAEP e onde continuam surgindo as redes, sociedades e projetos que movimentam o setor o ano todo.",
       },
@@ -42,22 +42,22 @@ const GROUPS = {
       {
         title: "Respostas para o mundo real",
         description:
-          "Abordagens sobre birras, limites, telas e exaustão sem julgamentos e sem as fórmulas mágicas que não funcionam na rotina da sua casa.",
+          "Conversas sobre birras, limites, telas e exaustão sem julgamentos ou fórmulas mágicas que não sobrevivem à rotina da vida real.",
       },
       {
         title: "Filtro contra o excesso de informação",
         description:
-          "Uma curadoria do que realmente importa para o desenvolvimento do seu filho, validada por quem estuda e vive a parentalidade todos os dias.",
+          "Uma curadoria do que realmente importa no desenvolvimento infantil, construída por quem vive, estuda e atravessa a parentalidade todos os dias.",
       },
       {
-        title: "Conteúdo que vira ação",
+        title: "Conversas que continuam depois do Festival",
         description:
-          "Palestras e oficinas desenhadas para você entender o \"como fazer\" e não sair apenas com mais teorias acumuladas na cabeça.",
+          "Palestras e oficinas desenhadas para você entender o 'como fazer' e não sair apenas com mais teorias acumuladas na cabeça.",
       },
       {
         title: "Respiro e cultura",
         description:
-          "Momentos de leveza entre uma conversa e outra com teatro, humor, música e experiências feitas para você relaxar e se reconectar.",
+          "Momentos de leveza entre uma conversa e outra com teatro, humor, música e experiências que ajudam a desacelerar e se reconectar.",
       },
     ],
   },

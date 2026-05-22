@@ -155,13 +155,13 @@ function Content() {
         <div className="flex flex-col gap-[32px] md:gap-[48px] items-center relative z-10 text-[#191919] text-center w-full px-6" data-name="Content">
             <div className="flex flex-col font-sugar-peachy justify-center relative max-w-[900px] w-full">
                 <h2 className="text-[36px] lg:text-[68px] leading-[0.85] whitespace-pre-wrap">
-                    Há 7 edições, responsável por decidir e mudar o futuro da Educação Parental no Brasil
+                    Há sete edições, reunindo as vozes que ajudam a aprofundar a parentalidade no Brasil.
                 </h2>
             </div>
 
             <div className="flex flex-col font-dm-sans font-medium relative max-w-[800px] w-full text-[18px] lg:text-[22px]">
                 <p className="leading-[1.2] whitespace-pre-wrap">
-                    São quatro dias de programação que misturam ciência, prática e experiências reais com o objetivo de transformar a forma como vivemos a parentalidade no Brasil.
+                    Quatro dias de encontros, palestras e experiências que conectam ciência, prática e vida real para aprofundar as conversas sobre infância, desenvolvimento humano e relações familiares.
                 </p>
             </div>
 
@@ -169,7 +169,7 @@ function Content() {
 
             <div className="flex flex-col font-sugar-peachy justify-center relative text-[24px] lg:text-[32px] w-full max-w-[842px] mt-4">
                 <p className="leading-[0.9] text-[#2260A1]">
-                    Profissionais e famílias, lado a lado, com um objetivo em comum: transformar a educação no Brasil.
+                    Profissionais e famílias, lado a lado, aprofundando as conversas que a infância e o mundo atual exigem.
                 </p>
             </div>
         </div>

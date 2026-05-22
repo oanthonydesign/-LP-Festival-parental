@@ -148,7 +148,7 @@ function Container1() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.605px] relative shrink-0 w-full" data-name="Container">
             <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#191919] text-[16px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
-                <p className="leading-[1.1] whitespace-pre-wrap">Um encontro entre quem vive e quem estuda a parentalidade, no mesmo espaço de troca e aprendizado</p>
+                <p className="leading-[1.1] whitespace-pre-wrap">Um encontro entre quem vive e quem estuda a parentalidade</p>
             </div>
         </div>
     );

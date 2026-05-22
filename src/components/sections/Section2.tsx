@@ -39,21 +39,28 @@ export default function Section2() {
                     <div className="flex flex-col gap-6 items-center w-full max-w-[1200px]">
                         <div className="flex flex-col font-sugar-peachy justify-center relative text-[#ef7d25] text-[36px] md:text-[46px] tracking-[-1.3px] md:tracking-[-1.4px] leading-[0.9]">
                             <p className="whitespace-pre-wrap break-words">Nunca se falou tanto sobre parentalidade.</p>
-                            <p className="whitespace-pre-wrap break-words">E nunca foi tão difícil se sentir seguro nela.</p>
+                            <p className="whitespace-pre-wrap break-words">E, ainda assim, nunca foi tão difícil se sentir seguro nela.</p>
                         </div>
                     </div>
 
                     {/* Text Group */}
-                    <div className="flex flex-col items-center w-full max-w-[900px]">
+                    <div className="flex flex-col items-center w-full max-w-[1000px]">
                         <div className="flex flex-col gap-6 font-dm-sans justify-center leading-tight relative text-[#4c4d4f] text-[18px] lg:text-[24px]">
                             <p>
-                                Hoje, pais e profissionais têm acesso a mais informação do que nunca. Mas informação acumulada nem sempre gera segurança, clareza ou presença nas relações.
+                                Pais e profissionais vivem hoje uma realidade atravessada por excesso de estímulo, excesso de opinião, excesso de informação e pouca clareza sobre como tudo isso realmente se conecta na prática.
                             </p>
                             <p>
-                                Muitos adultos vivem entre excessos: excesso de estímulo, excesso de opinião, excesso de abordagem e excesso de culpa. E, no meio disso, educar, cuidar e construir vínculos consistentes se tornou cada vez mais complexo.
+                                As respostas rápidas já não sustentam os desafios emocionais, sociais e humanos da infância contemporânea. E quem trabalha com famílias sente isso todos os dias.
                             </p>
+
+                            <div className="flex flex-col font-sugar-peachy justify-center relative text-[26px] lg:text-[36px] w-full max-w-[900px] mt-4 mx-auto leading-[1] text-[#2260A1]">
+                                <p>
+                                    A parentalidade não precisa de mais dicas. Precisa de mais clareza e compreensão.
+                                </p>
+                            </div>
+
                             <p>
-                                O Festival Parental nasce como um espaço de pausa, profundidade e reconexão. Um encontro presencial para transformar teoria em compreensão, ampliar repertórios e refletir sobre o desenvolvimento humano de forma mais consciente, prática e sustentável.
+                                O Festival Parental nasce desse contexto: um encontro presencial para aprofundar as conversas sobre infância, vínculos e desenvolvimento humano no mundo atual.
                             </p>
                         </div>
                     </div>

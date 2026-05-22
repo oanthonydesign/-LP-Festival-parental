@@ -6,24 +6,24 @@ const GROUPS = [
     cardColor: "bg-[#C2E6F5]",
     items: [
       {
-        title: "Segurança técnica para atuar",
+        title: "Mais clareza para atuar",
         description:
-          "Você sai com o repertório renovado para atender famílias com consistência, autoridade e embasamento científico de ponta.",
+          "Você sai com o repertório renovado para lidar com os desafios emocionais, relacionais e humanos que atravessam hoje o trabalho com famílias.",
       },
       {
-        title: "Projetos e parcerias no radar",
+        title: "Conexões que continuam depois do Festival",
         description:
-          "Oportunidade de criar conexões que não ficam no superficial e geram indicações, sociedades e novos negócios para a sua carreira.",
+          "Parcerias construídas a partir de interesses, desafios e visões de mundo em comum.",
       },
       {
-        title: "Identidade profissional fortalecida",
+        title: "O sentimento de fazer parte de uma área em transformação",
         description:
-          "O sentimento de pertencimento a um campo que amadurece rapidamente e exige cada vez mais profundidade, responsabilidade e consistência técnica.",
+          "A sensação de pertencer a um campo que amadurece rapidamente e exige novas formas de compreender infância, vínculos e relações humanas.",
       },
       {
-        title: "Clareza estratégica",
+        title: "Mais clareza sobre o seu papel",
         description:
-          "Uma visão nítida do seu papel profissional e de como escalar seu impacto no campo do desenvolvimento humano.",
+          "Uma compreensão mais clara sobre como sustentar sua prática profissional de forma consistente, humana e relevante no mundo atual.",
       },
     ],
   },
@@ -36,22 +36,22 @@ const GROUPS = [
       {
         title: "Confiança nas suas decisões",
         description:
-          "Menos sensação de estar sempre errando. Mais clareza para lidar com conflitos, limites e vínculo sem depender de fórmulas prontas ou perfeição constante.",
+          "Menos culpa e menos sensação de estar sempre errando. Mais clareza para lidar com conflitos, limites e relações de forma possível na vida real.",
       },
       {
-        title: "Ferramentas de aplicação imediata",
+        title: "Mudanças que começam na rotina",
         description:
-          "Mudanças práticas de postura que impactam a rotina da casa, a qualidade das relações e a forma como sua família atravessa os desafios do cotidiano.",
+          "Pequenas mudanças de olhar, presença e postura que transformam a rotina, os conflitos e a forma como sua família atravessa os desafios do dia a dia.",
       },
       {
         title: "Uma nova perspectiva sobre educar",
         description:
-          "A compreensão de que a educação começa no seu olhar para a criança e, principalmente, no seu olhar para si mesmo.",
+          "A percepção de que educar também passa pela forma como você olha para si, para suas relações e para a infância.",
       },
       {
         title: "A certeza de que não está sozinho",
         description:
-          "O acolhimento de perceber que suas dúvidas são compartilhadas e que existe um caminho seguro e possível para a sua família.",
+          "O alívio de perceber que outras famílias vivem dúvidas parecidas e que criar filhos no mundo de hoje pode ser menos solitário do que parece.",
       },
     ],
   },

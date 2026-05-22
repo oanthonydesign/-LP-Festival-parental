@@ -45,16 +45,16 @@ export default function HeroSection() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[44px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.8] md:leading-[0.9] tracking-[-1.4px] sm:tracking-[-1.5px] md:tracking-[-2px] lg:tracking-[-2.6px] relative px-4 md:px-0 max-w-[1100px] w-[92%] text-balance">
+                    <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[44px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.8] md:leading-[0.9] tracking-[-1.4px] sm:tracking-[-1.5px] md:tracking-[-2px] lg:tracking-[-2.6px] relative px-4 md:px-0 max-w-[1200px] w-[92%] text-balance">
                         <span className="mt-1">
-                            A parentalidade não precisa de mais dicas. <span className="text-[#2260a1]">Precisa de mais clareza e compreensão.</span>
+                            Educar ficou mais complexo. <span className="text-[#2260a1]">Um encontro sobre como estamos formando crianças e adolescentes hoje</span>
                         </span>
                     </h1>
 
                     {/* Subtext */}
                     <div className="font-dm-sans text-[#4c4d4f] text-[18px] sm:text-[20px] md:text-[24px] text-center leading-[1.2] md:leading-[1.1] flex flex-col gap-3 md:gap-4 max-w-full md:max-w-[1150px] px-2 md:px-0">
                         <p>
-                            O Festival Parental reúne a profundidade científica e a experiência prática necessárias para navegar nos desafios reais da infância e adolescência hoje. Um encontro desenhado para profissionais que buscam excelência e pais que decidiram educar com consciência e segurança.
+                            Durante quatro dias, profissionais, famílias e algumas das vozes mais relevantes do país se encontram em São Paulo para aprofundar conversas urgentes sobre desenvolvimento emocional, vínculos e os desafios contemporâneos de educar e crescer.
                         </p>
                     </div>
                 </div>
