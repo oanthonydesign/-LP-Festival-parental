@@ -46,7 +46,7 @@ export default function Section13() {
                         rel="noopener noreferrer"
                         className="bg-[#F7A73C] border-[3px] border-[#191919] rounded-[40px] px-[40px] py-[20px] shadow-[6px_6px_0px_0px_#191919] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] inline-flex items-center justify-center w-full sm:w-auto min-w-[280px] group"
                     >
-                        <span className="font-dm-sans font-black text-[#191919] text-[16px] uppercase tracking-wider">
+                        <span className="font-dm-sans font-bold text-[#191919] text-[16px] uppercase tracking-wider">
                             Quero ser patrocinador
                         </span>
                     </a>
@@ -58,7 +58,7 @@ export default function Section13() {
                         rel="noopener noreferrer"
                         className="bg-[#FFF6EF] border-[3px] border-[#191919] rounded-[40px] px-[40px] py-[20px] shadow-[6px_6px_0px_0px_#191919] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] inline-flex items-center justify-center w-full sm:w-auto min-w-[280px] group"
                     >
-                        <span className="font-dm-sans font-black text-[#191919] text-[16px] uppercase tracking-wider">
+                        <span className="font-dm-sans font-bold text-[#191919] text-[16px] uppercase tracking-wider">
                             Quero expor minha marca
                         </span>
                     </a>
