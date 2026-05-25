@@ -11,7 +11,7 @@ export default function PreTicketSection() {
                 <div className="w-[80px] h-1 bg-white/30 rounded-full" />
 
                 <div className="flex flex-col items-center gap-8 text-center">
-                    <h2 className="font-sugar-peachy text-white text-[32px] md:text-[32px] lg:text-[46px] leading-[0.9] tracking-[-1.5px] md:tracking-[-2px] max-w-[1000px]">
+                    <h2 className="font-sugar-peachy text-white text-[32px] md:text-[32px] lg:text-[46px] leading-[0.9] max-w-[1000px]">
                         Nunca houve tanta informação disponível sobre infância, educação e desenvolvimento emocional. <span className="text-[#f7a73c]">E talvez nunca tenha sido tão difícil encontrar clareza no meio de tantas vozes, abordagens e respostas rápidas.</span>
                     </h2>
                     <p className="font-dm-sans text-white text-[18px] md:text-[24px] leading-tight md:leading-snug">

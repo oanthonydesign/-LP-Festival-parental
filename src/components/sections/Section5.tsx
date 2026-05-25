@@ -8,10 +8,10 @@ function Text() {
     return (
         <div className="content-stretch flex flex-col gap-[24px] items-center leading-[0] relative shrink-0 text-center w-full" data-name="text">
             <div className="flex flex-col font-sugar-peachy justify-center not-italic relative shrink-0 text-[#2260a1] text-[40px] lg:text-[72px] tracking-[-1.3px] lg:tracking-[-2px] w-full max-w-[1102px]">
-                <p className="leading-[0.8] whitespace-pre-wrap">Um encontro que integra ciência, prática e experiência em um mesmo espaço</p>
+                <p className="leading-[0.8] whitespace-pre-wrap">Ciência, prática, cultura e vida real no mesmo espaço</p>
             </div>
             <div className="flex flex-col font-dm-sans font-normal justify-center relative shrink-0 text-[#4c4d4f] text-[18px] lg:text-[24px] w-full max-w-[1148px]" style={{ fontVariationSettings: "'opsz' 14" }}>
-                <p className="leading-[1.1] whitespace-pre-wrap">Prepare-se pra viver dias intensos de conexões, conteúdos e experiências. Um ambiente pensado pra integrar conhecimento técnico, prática de vida e afeto. Tudo isso num só lugar.</p>
+                <p className="leading-[1.1] whitespace-pre-wrap">Prepare-se pra viver dias intensos de conexões, conteúdos e experiências. Um ambiente pensado pra integrar conhecimento técnico, prática de vida e afeto.</p>
             </div>
         </div>
     );
@@ -70,7 +70,7 @@ function Container() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.605px] relative shrink-0 w-full" data-name="Container">
             <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#191919] text-[16px] w-full" style={{ fontVariationSettings: "'opsz' 14" }}>
-                <p className="leading-[1.1] whitespace-pre-wrap">Profissionais que são referência em saúde, educação e comportamento</p>
+                <p className="leading-[1.1] whitespace-pre-wrap">Profissionais referência em saúde, educação e comportamento</p>
             </div>
         </div>
     );
