@@ -276,18 +276,11 @@ export default function HeroSectionV2() {
                         </span>
                     </div>
 
-                    {/* Headline Block */}
-                    <div className="flex flex-col items-center gap-[12px] md:gap-[20px] w-full">
-                        {/* Headline */}
-                        <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[36px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.8] md:leading-[0.9] tracking-[-1.4px] sm:tracking-[-1.5px] md:tracking-[-2px] lg:tracking-[-2.6px] relative px-4 md:px-0 max-w-[1100px] w-full text-balance">
-                            Educar ficou mais complexo
-                        </h1>
-
-                        {/* Subtitle */}
-                        <h2 className="font-sugar-peachy font-normal text-[#2260a1] text-[36px] md:text-[46px] text-center leading-[0.9] tracking-[-1.3px] md:tracking-[-1.4px] relative px-4 md:px-0 max-w-[1000px] text-balance whitespace-pre-wrap break-words">
-                            Um encontro sobre como preparar crianças e adolescentes para o mundo de hoje
-                        </h2>
-                    </div>
+                    <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[36px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.8] md:leading-[0.9] tracking-[-1.4px] sm:tracking-[-1.5px] md:tracking-[-2px] lg:tracking-[-2.6px] relative px-4 md:px-0 max-w-[1100px] w-full text-balance">
+                        <span className="mt-1">
+                            Educar ficou mais complexo precisa de mais dicas. <span className="text-[#2260a1]">Um encontro sobre como estamos formando crianças e adolescentes hoje.</span>
+                        </span>
+                    </h1>
 
                     <div className="font-dm-sans text-[#4c4d4f] text-[18px] sm:text-[20px] md:text-[24px] text-center leading-[1.2] md:leading-[1.1] flex flex-col gap-3 md:gap-4 max-w-full md:max-w-[900px] px-2 md:px-0">
                         <p>

@@ -70,7 +70,7 @@ export default function SectionForWho() {
   const group = GROUPS[active];
 
   return (
-    <section className="bg-[#2260a1] w-full flex flex-col items-center pt-[40px] pb-[40px] px-4 overflow-hidden relative" id="para-quem">
+    <section className="bg-[#2260a1] w-full flex flex-col items-center pt-[80px] pb-[40px] px-4 overflow-hidden relative" id="para-quem">
       {/* Background Elements to add depth */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white opacity-[0.02] rounded-full blur-[80px] pointer-events-none translate-x-[20%] -translate-y-[20%]" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#f7a73c] opacity-[0.03] rounded-full blur-[80px] pointer-events-none -translate-x-[20%] translate-y-[20%]" />

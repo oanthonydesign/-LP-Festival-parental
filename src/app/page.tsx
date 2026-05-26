@@ -22,7 +22,6 @@ import SectionSchedule from '@/components/sections/SectionSchedule';
 import SectionSpecialGuests from '@/components/sections/SectionSpecialGuests';
 import StickyBottomBar from '@/components/sections/StickyBottomBar';
 import WhatsAppButton from '@/components/sections/WhatsAppButton';
-import PreTicketSection from '@/components/sections/PreTicketSection';
 import SectionForWho from '@/components/sections/SectionForWho';
 import SectionTakeaways from '@/components/sections/SectionTakeaways';
 
@@ -41,7 +40,6 @@ export default function Home() {
                 <Section2 />
                 <Section8 />
                 <Section5 />
-                <PreTicketSection />
                 <SectionForWho />
                 <SectionTakeaways />
                 <Section6 />
