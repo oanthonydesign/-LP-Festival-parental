@@ -337,7 +337,9 @@ function PassportCard({ data }: { data: PassportData }) {
   const currentPriceFull = isDouble && hasDoubleOption ? data.doubleOptions!.priceFull : data.priceFull;
   const currentPriceOriginal = isDouble && hasDoubleOption ? data.doubleOptions!.priceOriginal : data.priceOriginal;
   const currentBenefits = isDouble && hasDoubleOption ? data.doubleOptions!.benefits : data.benefits;
-  const currentHref = isDouble && hasDoubleOption ? data.doubleOptions!.href : data.href;
+  const currentHref = isAcaoDia && data.id === 'educador'
+    ? "https://chk.eduzz.com/Z0B1O2B39A"
+    : (isDouble && hasDoubleOption ? data.doubleOptions!.href : data.href);
   const currentButtonText = isDouble && hasDoubleOption ? data.doubleOptions!.buttonText : data.buttonText;
 
   if (data.isSoldOut) {
@@ -398,25 +400,33 @@ function PassportCard({ data }: { data: PassportData }) {
 
   return (
     <div id={data.id} className={`flex flex-col w-full lg:max-w-[420px] ${data.textColor} relative group`}>
-      {effectiveBadgeText && (
+      {isAcaoDia && data.id === 'educador' ? (
+        <div className="absolute -top-[60px] -right-4 z-50 [animation:var(--animate-vibrate-alarm)]">
+          <img
+            src="/images/somente-hoje.svg"
+            alt="Somente hoje"
+            className="w-[110px] h-[110px] md:w-[120px] md:h-[120px]"
+            loading="eager"
+          />
+        </div>
+      ) : data.badgeText ? (
         <div className="absolute -top-12 -right-4 bg-[#f7a73c] border-2 border-[#191919] rounded-full w-[85px] h-[85px] md:w-[95px] md:h-[95px] flex items-center justify-center rotate-12 shadow-[4px_4px_0px_0px_#191919] z-50 animate-bounce-slow">
           <span className="font-sugar-peachy text-[#191919] text-center leading-[0.9]">
-            {effectiveBadgeText.split('|').map((line, i) => (
+            {data.badgeText.split('|').map((line, i) => (
               <span
                 key={i}
-                className={`block uppercase whitespace-nowrap ${isAcaoDia && data.id === 'educador'
-                    ? (i === 0 ? "text-[22px] md:text-[26px] tracking-[-0.3px] -mb-0.5" : "text-[14px] md:text-[15px] tracking-[-0.2px]")
-                    : (i === 0 ? "text-[42px] md:text-[52px] tracking-[-1px] -mb-2" : "text-[14px] md:text-[18px] tracking-[-0.5px]")
-                  }`}
+                className={`block uppercase whitespace-nowrap ${
+                  i === 0 ? "text-[42px] md:text-[52px] tracking-[-1px] -mb-2" : "text-[14px] md:text-[18px] tracking-[-0.5px]"
+                }`}
               >
                 {line}
               </span>
             ))}
           </span>
         </div>
-      )}
+      ) : null}
       {/* Header with Title and Lote */}
-      <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] p-[12px] w-full z-10 relative overflow-hidden ${isAcaoDia && data.id === 'educador' ? 'shadow-[3px_3px_0px_0px_#191919,0_0_24px_rgba(247,167,60,0.5),0_0_48px_rgba(247,167,60,0.2)]' : 'shadow-[3px_3px_0px_0px_#191919]'}`}>
+      <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] p-[12px] w-full z-10 relative overflow-hidden ${isAcaoDia && data.id === 'educador' ? 'shadow-[3px_3px_0px_0px_#191919,0_0_32px_rgba(247,167,60,0.75),0_0_64px_rgba(247,167,60,0.4)]' : 'shadow-[3px_3px_0px_0px_#191919]'}`}>
         {SHOW_PROMO_RIBBON && <Ribbon />}
         <div className={`border-2 ${data.borderColor} border-solid rounded-[16px] flex items-center justify-between px-[12px] py-[12px] gap-4 relative z-20`}>
           <div className="bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[6px] shadow-[3px_3px_0px_0px_#191919] px-[12px] py-[4px] shrink-0">
@@ -429,28 +439,15 @@ function PassportCard({ data }: { data: PassportData }) {
       </div>
 
       {/* Main Content Area */}
-      <div className={`flex flex-col ${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[24px] md:rounded-[32px] p-[20px] md:p-[24px] w-full -mt-[2px] pt-8 md:pt-10 gap-6 z-20 relative ${isAcaoDia && data.id === 'educador' ? 'shadow-[3px_3px_0px_0px_#191919,0_0_24px_rgba(247,167,60,0.5),0_0_48px_rgba(247,167,60,0.2)]' : 'shadow-[3px_3px_0px_0px_#191919]'}`}>
+      <div className={`flex flex-col ${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[24px] md:rounded-[32px] p-[20px] md:p-[24px] w-full -mt-[2px] pt-8 md:pt-10 gap-6 z-20 relative ${isAcaoDia && data.id === 'educador' ? 'shadow-[3px_3px_0px_0px_#191919,0_0_32px_rgba(247,167,60,0.75),0_0_64px_rgba(247,167,60,0.4)]' : 'shadow-[3px_3px_0px_0px_#191919]'}`}>
 
         {/* Passaporte Tags */}
         {data.id === 'educador' && (
-          <div className="bg-[#fff6ef] rounded-[24px] px-3 sm:px-4 py-2.5 md:py-3 flex flex-col items-center justify-center gap-1 w-full -mt-1 md:-mt-2">
-            <div className="flex items-center gap-1.5 sm:gap-2">
-              <img src="/images/icons/estrela_cor.svg" alt="Estrela" className="shrink-0 w-4 h-4 sm:w-5 sm:h-5" loading="lazy" />
-              <span className="font-dm-sans font-bold text-[11px] sm:text-[12px] uppercase text-[#191919] tracking-wider text-center">
-                EXPERIÊNCIA COMPLETA PARA PROFISSIONAIS
-              </span>
-            </div>
-            {isAcaoDia && (
-              <div className="flex items-center gap-2">
-                <span className="font-dm-sans font-bold text-[12px] md:text-[13px] uppercase text-[#191919] tracking-wider">
-                  EM DOBRO
-                </span>
-                <span className="w-[1px] h-[12px] bg-[#191919]/30 inline-block" />
-                <span className="font-dm-sans text-[11px] md:text-[12px] text-[#2260a1] font-bold uppercase tracking-wider">
-                  Somente dia 30/05
-                </span>
-              </div>
-            )}
+          <div className="bg-[#fff6ef] rounded-[40px] px-1 sm:px-3 py-2.5 md:py-3 flex items-center justify-center gap-1.5 sm:gap-2 w-full -mt-1 md:-mt-2 overflow-hidden">
+            <img src="/images/icons/estrela_cor.svg" alt="Estrela" className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" loading="lazy" />
+            <span className="font-dm-sans font-bold text-[11px] sm:text-[11px] md:text-[12px] lg:text-[12px] uppercase text-[#191919] tracking-wider text-left whitespace-nowrap">
+              EXPERIÊNCIA COMPLETA PARA PROFISSIONAIS
+            </span>
           </div>
         )}
 
@@ -486,11 +483,12 @@ function PassportCard({ data }: { data: PassportData }) {
 
         {/* Benefits List */}
         <div className={`border-2 ${data.benefitBorder} border-solid rounded-[24px] p-[16px] flex flex-col gap-4 ${data.benefitBg}`}>
-          {/* Bullet especial da ação relâmpago — visível apenas no dia 30/05 */}
+          {/* Bullet especial da ação relâmpago — visível apenas no dia 31/05 */}
           {isAcaoDia && data.id === 'educador' && (
-            <div className="bg-[#191919] rounded-[16px] px-4 py-3.5">
-              <p className="font-dm-sans font-bold text-[15px] leading-tight text-white">
-                Somente hoje: adquira um Passaporte Educador e convide outro profissional para viver os 4 dias do Festival com você.
+            <div className="flex gap-3 items-center">
+              <StarIcon />
+              <p className={`font-dm-sans text-[16px] leading-tight ${data.benefitTextColor}`}>
+                <span className="font-bold">SÓ HOJE (31/5):</span> adquira o Passaporte Educador e ganhe mais um ingresso para levar outro profissional com você.
               </p>
             </div>
           )}

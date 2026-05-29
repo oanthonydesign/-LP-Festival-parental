@@ -12,7 +12,7 @@ export function useIsAcaoDia(): boolean {
     setIsAcaoDia(
       brt.getFullYear() === 2026 &&
       brt.getMonth() === 4 && // 0-indexed: 4 = maio
-      brt.getDate() === 30
+      brt.getDate() === 31
     );
   }, []);
 
