@@ -24,6 +24,7 @@ import WhatsAppButton from '@/components/sections/WhatsAppButton';
 import PreTicketSection from '@/components/sections/PreTicketSection';
 import SectionForWho from '@/components/sections/SectionForWho';
 import SectionTakeaways from '@/components/sections/SectionTakeaways';
+import AcaoRelampagoBanner from '@/components/sections/AcaoRelampagoBanner';
 
 export const metadata = {
     robots: 'noindex, nofollow',
@@ -67,6 +68,7 @@ export default function LPB() {
             </main>
             <WhatsAppButton />
             {SHOW_STICKY_BAR && <StickyBottomBar />}
+            <AcaoRelampagoBanner />
         </>
     )
 }

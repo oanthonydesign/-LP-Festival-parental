@@ -269,6 +269,26 @@ export const allSpeakers: Speaker[] = [
         bgColor: "#79c3ab",
         category: "profissionais",
     },
+    {
+        id: 26,
+        name: "Pedro de Oliveira",
+        description: "Apresentador de TV, palestrante e criador do Canal S.E.R. Pai",
+        image: "/images/pedroo.webp",
+        instagram: "https://www.instagram.com/ocanalserpai/",
+        website: "https://www.youtube.com/@canalserpai",
+        bgColor: "#74acde",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 27,
+        name: "Rosely Maria",
+        description: "Diretora de comunicação do Instituto Vidas Raras",
+        image: "/images/roselym.webp",
+        instagram: "https://www.instagram.com/roselymariafgc/",
+        website: "https://vidasraras.org.br/sitewp/",
+        bgColor: "#f7a73c",
+        category: "pais-cuidadores",
+    },
 ];
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
@@ -422,7 +442,7 @@ export default function SpeakersSection() {
     const [visibleCount, setVisibleCount] = useState(8);
 
     const professionalOrder = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 20, 21, 22, 25];
-    const parentsOrder = [2, 4, 6, 8, 10, 12, 14, 16, 18, 24];
+    const parentsOrder = [2, 4, 6, 8, 10, 12, 14, 16, 18, 24, 26, 27];
 
     const filteredSpeakers = (() => {
         if (activeFilter === "todos") return allSpeakers;

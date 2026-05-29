@@ -60,7 +60,7 @@ export default function Section2() {
                             </div>
 
                             <p>
-                                O Festival Parental nasce desse contexto: um encontro presencial para aprofundar as conversas sobre infância, vínculos e desenvolvimento humano no mundo atual.
+                                O Festival Parental nasce desse contexto e da evolução do Congresso Internacional de Educação Parental: um encontro presencial para aprofundar as conversas sobre infância, vínculos e desenvolvimento humano no mundo atual.
                             </p>
                         </div>
                     </div>
