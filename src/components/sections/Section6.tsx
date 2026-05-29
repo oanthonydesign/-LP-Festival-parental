@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import svgPaths from "@/components/svg/svgPaths";
 import { useCountdown } from "@/hooks/useCountdown";
+import { useIsAcaoDia } from "@/hooks/useIsAcaoDia";
 
 // Flags de controle para fácil ativação/desativação
 const SHOW_PROMO_RIBBON = false;
@@ -237,7 +238,7 @@ function EducadorProgressBar() {
           const animate = (currentTime: number) => {
             const elapsedTime = currentTime - startTime;
             const progressFraction = Math.min(elapsedTime / duration, 1);
-            
+
             // Efeito de desaceleração (easeOutCubic)
             const easeProgress = 1 - Math.pow(1 - progressFraction, 3);
             const currentProgress = Math.round(easeProgress * end);
@@ -271,7 +272,7 @@ function EducadorProgressBar() {
   }, []);
 
   return (
-    <div 
+    <div
       ref={containerRef}
       className="bg-[#191919] border-2 border-[#191919] rounded-[24px] p-4 flex flex-col gap-3 shadow-[3px_3px_0px_0px_#191919] text-white my-1"
     >
@@ -283,18 +284,18 @@ function EducadorProgressBar() {
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#f7a73c]"></span>
           </div>
           <span className="font-dm-sans font-bold text-[13px] tracking-wider text-[#f7a73c] uppercase">
-            Vagas Preenchidas
+            PASSAPORTES VENDIDOS
           </span>
         </div>
         <span className="font-sugar-peachy text-[36px] tracking-tight leading-none text-white flex items-baseline">
           {progress}<span className="text-white/40 text-[24px] ml-0.5">%</span>
         </span>
       </div>
-      
+
       {/* Track da Barra */}
       <div className="relative w-full h-[16px] bg-[#333333] rounded-full overflow-visible border border-black/40">
         {/* Progresso com Gradiente Laranja */}
-        <div 
+        <div
           className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#d97706] via-[#f7a73c] to-[#fde047] rounded-full transition-all duration-[100ms] ease-out"
           style={{ width: `${progress}%` }}
         >
@@ -303,7 +304,7 @@ function EducadorProgressBar() {
         </div>
 
         {/* Botão/Indicador com Glow no final da barra (52%) */}
-        <div 
+        <div
           className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center pointer-events-none transition-all duration-[100ms] ease-out"
           style={{ left: `${progress}%`, opacity: progress > 0 ? 1 : 0 }}
         >
@@ -313,7 +314,7 @@ function EducadorProgressBar() {
           <div className="absolute size-[16px] rounded-full bg-[#f7a73c]/40 blur-[4px]"></div>
           {/* Bolinha branca brilhante */}
           <div className="absolute size-[12px] rounded-full bg-white shadow-[0_0_8px_#fff,0_0_16px_#f7a73c]"></div>
-          
+
           {/* Partículas de brilho no final do preenchimento laranja */}
           <div className="absolute -left-[14px] top-[-5px] size-[3px] rounded-full bg-[#ffbe6b]/90 blur-[0.5px]"></div>
           <div className="absolute -left-[8px] bottom-[-6px] size-[2px] rounded-full bg-[#fde047]/80"></div>
@@ -327,6 +328,8 @@ function EducadorProgressBar() {
 
 function PassportCard({ data }: { data: PassportData }) {
   const [isDouble, setIsDouble] = useState(false);
+  const isAcaoDia = useIsAcaoDia();
+  const effectiveBadgeText = (data.id === 'educador' && isAcaoDia) ? "LEVE 2|pelo valor|de 1" : data.badgeText;
 
   const hasDoubleOption = !!data.doubleOptions;
 
@@ -395,15 +398,15 @@ function PassportCard({ data }: { data: PassportData }) {
 
   return (
     <div id={data.id} className={`flex flex-col w-full lg:max-w-[420px] ${data.textColor} relative group`}>
-      {data.badgeText && (
+      {effectiveBadgeText && (
         <div className="absolute -top-12 -right-4 bg-[#f7a73c] border-2 border-[#191919] rounded-full w-[85px] h-[85px] md:w-[95px] md:h-[95px] flex items-center justify-center rotate-12 shadow-[4px_4px_0px_0px_#191919] z-50 animate-bounce-slow">
           <span className="font-sugar-peachy text-[#191919] text-center leading-[0.9]">
-            {data.badgeText.split('|').map((line, i) => (
+            {effectiveBadgeText.split('|').map((line, i) => (
               <span
                 key={i}
-                className={`block uppercase whitespace-nowrap ${i === 0
-                  ? "text-[42px] md:text-[52px] tracking-[-1px] -mb-2"
-                  : "text-[14px] md:text-[18px] tracking-[-0.5px]"
+                className={`block uppercase whitespace-nowrap ${isAcaoDia && data.id === 'educador'
+                    ? (i === 0 ? "text-[22px] md:text-[26px] tracking-[-0.3px] -mb-0.5" : "text-[14px] md:text-[15px] tracking-[-0.2px]")
+                    : (i === 0 ? "text-[42px] md:text-[52px] tracking-[-1px] -mb-2" : "text-[14px] md:text-[18px] tracking-[-0.5px]")
                   }`}
               >
                 {line}
@@ -413,7 +416,7 @@ function PassportCard({ data }: { data: PassportData }) {
         </div>
       )}
       {/* Header with Title and Lote */}
-      <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[12px] w-full z-10 relative overflow-hidden`}>
+      <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] p-[12px] w-full z-10 relative overflow-hidden ${isAcaoDia && data.id === 'educador' ? 'shadow-[3px_3px_0px_0px_#191919,0_0_24px_rgba(247,167,60,0.5),0_0_48px_rgba(247,167,60,0.2)]' : 'shadow-[3px_3px_0px_0px_#191919]'}`}>
         {SHOW_PROMO_RIBBON && <Ribbon />}
         <div className={`border-2 ${data.borderColor} border-solid rounded-[16px] flex items-center justify-between px-[12px] py-[12px] gap-4 relative z-20`}>
           <div className="bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[6px] shadow-[3px_3px_0px_0px_#191919] px-[12px] py-[4px] shrink-0">
@@ -426,15 +429,28 @@ function PassportCard({ data }: { data: PassportData }) {
       </div>
 
       {/* Main Content Area */}
-      <div className={`flex flex-col ${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[24px] md:rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[20px] md:p-[24px] w-full -mt-[2px] pt-8 md:pt-10 gap-6 z-20 relative`}>
+      <div className={`flex flex-col ${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[24px] md:rounded-[32px] p-[20px] md:p-[24px] w-full -mt-[2px] pt-8 md:pt-10 gap-6 z-20 relative ${isAcaoDia && data.id === 'educador' ? 'shadow-[3px_3px_0px_0px_#191919,0_0_24px_rgba(247,167,60,0.5),0_0_48px_rgba(247,167,60,0.2)]' : 'shadow-[3px_3px_0px_0px_#191919]'}`}>
 
         {/* Passaporte Tags */}
         {data.id === 'educador' && (
-          <div className="bg-[#fff6ef] rounded-[40px] px-1 sm:px-3 py-2.5 md:py-3 flex items-center justify-center gap-1.5 sm:gap-2 w-full -mt-1 md:-mt-2 overflow-hidden">
-            <img src="/images/icons/estrela_cor.svg" alt="Estrela" className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" loading="lazy" />
-            <span className="font-dm-sans font-bold text-[11px] sm:text-[11px] md:text-[12px] lg:text-[12px] uppercase text-[#191919] tracking-wider text-left whitespace-nowrap">
-              EXPERIÊNCIA COMPLETA PARA PROFISSIONAIS
-            </span>
+          <div className="bg-[#fff6ef] rounded-[24px] px-3 sm:px-4 py-2.5 md:py-3 flex flex-col items-center justify-center gap-1 w-full -mt-1 md:-mt-2">
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <img src="/images/icons/estrela_cor.svg" alt="Estrela" className="shrink-0 w-4 h-4 sm:w-5 sm:h-5" loading="lazy" />
+              <span className="font-dm-sans font-bold text-[11px] sm:text-[12px] uppercase text-[#191919] tracking-wider text-center">
+                EXPERIÊNCIA COMPLETA PARA PROFISSIONAIS
+              </span>
+            </div>
+            {isAcaoDia && (
+              <div className="flex items-center gap-2">
+                <span className="font-dm-sans font-bold text-[12px] md:text-[13px] uppercase text-[#191919] tracking-wider">
+                  EM DOBRO
+                </span>
+                <span className="w-[1px] h-[12px] bg-[#191919]/30 inline-block" />
+                <span className="font-dm-sans text-[11px] md:text-[12px] text-[#2260a1] font-bold uppercase tracking-wider">
+                  Somente dia 30/05
+                </span>
+              </div>
+            )}
           </div>
         )}
 
@@ -470,6 +486,14 @@ function PassportCard({ data }: { data: PassportData }) {
 
         {/* Benefits List */}
         <div className={`border-2 ${data.benefitBorder} border-solid rounded-[24px] p-[16px] flex flex-col gap-4 ${data.benefitBg}`}>
+          {/* Bullet especial da ação relâmpago — visível apenas no dia 30/05 */}
+          {isAcaoDia && data.id === 'educador' && (
+            <div className="bg-[#191919] rounded-[16px] px-4 py-3.5">
+              <p className="font-dm-sans font-bold text-[15px] leading-tight text-white">
+                Somente hoje: adquira um Passaporte Educador e convide outro profissional para viver os 4 dias do Festival com você.
+              </p>
+            </div>
+          )}
           {currentBenefits.map((benefit, idx) => (
             <div key={idx} className="flex gap-3 items-center">
               <StarIcon />

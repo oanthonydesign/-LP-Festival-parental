@@ -22,6 +22,7 @@ import SectionSchedule from '@/components/sections/SectionSchedule';
 import SectionSpecialGuests from '@/components/sections/SectionSpecialGuests';
 import StickyBottomBar from '@/components/sections/StickyBottomBar';
 import WhatsAppButton from '@/components/sections/WhatsAppButton';
+import AcaoRelampagoBanner from '@/components/sections/AcaoRelampagoBanner';
 import SectionForWho from '@/components/sections/SectionForWho';
 import SectionTakeaways from '@/components/sections/SectionTakeaways';
 
@@ -62,6 +63,7 @@ export default function Home() {
             </main>
             <WhatsAppButton />
             {SHOW_STICKY_BAR && <StickyBottomBar />}
+            <AcaoRelampagoBanner />
         </>
     )
 }
