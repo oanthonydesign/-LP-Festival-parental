@@ -39,9 +39,8 @@ export default function AcaoRelampagoBanner() {
 
   return (
     <div
-      className={`fixed bottom-0 inset-x-0 z-[60] pointer-events-none transition-all duration-500 ease-in-out ${
-        isVisible && !isFooterVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
-      }`}
+      className={`fixed bottom-0 inset-x-0 z-[60] pointer-events-none transition-all duration-500 ease-in-out ${isVisible && !isFooterVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
+        }`}
     >
       <div className="w-full bg-[#2260a1] border-t-2 border-[#191919] shadow-[0_-4px_0px_0px_#191919] pointer-events-auto">
         <div className="max-w-[1280px] mx-auto px-4 py-2.5 sm:py-3 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
@@ -49,12 +48,12 @@ export default function AcaoRelampagoBanner() {
           {/* Texto + Contador */}
           <div className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-4 flex-1 text-center sm:text-left">
             <p className="font-dm-sans font-bold text-[15px] sm:text-[18px] uppercase tracking-tight text-white whitespace-nowrap">
-              Somente hoje —{" "}
+              SOMENTE HOJE —{" "}
               <span className="inline-block w-[118px] sm:w-[132px] font-black tabular-nums text-[#f7a73c]">{countdownText}</span>
             </p>
             <span className="hidden sm:block text-[22px] font-light text-white/30">|</span>
-            <p className="font-dm-sans font-medium text-[13px] sm:text-[16px] text-white/85 leading-tight">
-              Compre 1 Passaporte Educador e leve outro profissional para viver o Festival com você.
+            <p className="font-dm-sans font-medium text-[18px] sm:text-[20px] text-white/85 leading-tight">
+              COMPRE 1 PASSAPORTE EDUCADOR E GANHE OUTRO
             </p>
           </div>
 

@@ -51,7 +51,7 @@ export default function WhatsAppButton() {
 
     return (
         <div
-            className="fixed bottom-24 right-6 z-[998] flex items-center gap-4"
+            className="fixed bottom-36 sm:bottom-24 right-6 z-[998] flex items-center gap-4"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
