@@ -79,9 +79,9 @@ export default function SectionSpecialGuests() {
                             {/* Livro - Agora à esquerda com borda e fundo branco */}
                             <div className="relative z-20 w-[110px] sm:w-[180px] aspect-[2/3] bg-white border-2 border-[#191919] rounded-xl shadow-[4px_4px_0px_0px_#191919] rotate-[-8deg] transition-all duration-300 hover:rotate-[-4deg] hover:scale-105 -mr-10 sm:-mr-16 sm:mt-24 overflow-hidden p-1">
                                 <img
-                                    src="/images/livrogordonn.webp"
+                                    src="/images/cap_nova1.webp"
                                     alt="Livro Pais Ocupados Filhos Distantes"
-                                    className="w-full h-full object-contain"
+                                    className="w-full h-full object-cover"
                                     onError={(e) => {
                                         e.currentTarget.src = 'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100%25" height="100%25" viewBox="0 0 400 500"%3E%3Crect fill="%23fff6ef" width="400" height="500"/%3E%3Ctext fill="%23191919" font-family="sans-serif" font-size="20" font-weight="bold" x="50%25" y="50%25" text-anchor="middle"%3ECapa do Livro%3C/text%3E%3C/svg%3E';
                                     }}

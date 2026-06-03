@@ -161,7 +161,7 @@ function Content() {
 
             <div className="flex flex-col font-dm-sans font-medium relative max-w-[800px] w-full text-[18px] lg:text-[22px]">
                 <p className="leading-[1.2] whitespace-pre-wrap">
-                    Quatro dias de encontros, palestras e experiências que conectam ciência, prática e vida real para aprofundar as conversas sobre infância, desenvolvimento humano e relações familiares.
+                    Evolução do Congresso Internacional de Educação Parental, o Festival reúne quatro dias de encontros, palestras e experiências que conectam ciência, prática e vida real para aprofundar as conversas sobre infância, desenvolvimento humano e relações familiares.
                 </p>
             </div>
 

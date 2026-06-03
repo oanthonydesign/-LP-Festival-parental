@@ -700,9 +700,6 @@ function Grafismo() {
                     <path d={svgPaths.p264f9600} id="Vector 4" stroke="#EF7D25" strokeWidth="50" />
                     <path d={svgPaths.p3b487900} id="Vector 5" stroke="#2260A1" strokeWidth="50" />
                     <path d={svgPaths.p2edb8900} id="Vector 6" stroke="#79C3AB" strokeWidth="30" />
-                    <g id="Group 19">
-                        <path d={svgPaths.p2b18dff0} fill="#74ACDE" id="Vector" stroke="#191919" strokeWidth="6" />
-                    </g>
                 </g>
             </svg>
         </div>

@@ -231,7 +231,7 @@ function EducadorProgressBar() {
       ([entry]) => {
         if (entry.isIntersecting) {
           let start = 0;
-          const end = 52;
+          const end = 55;
           const duration = 1200; // 1.2 segundos
           const startTime = performance.now();
 
@@ -303,7 +303,7 @@ function EducadorProgressBar() {
           <div className="absolute inset-x-0 top-0.5 h-[4px] bg-white/20 rounded-full"></div>
         </div>
 
-        {/* Botão/Indicador com Glow no final da barra (52%) */}
+        {/* Botão/Indicador com Glow no final da barra (55%) */}
         <div
           className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center pointer-events-none transition-all duration-[100ms] ease-out"
           style={{ left: `${progress}%`, opacity: progress > 0 ? 1 : 0 }}
