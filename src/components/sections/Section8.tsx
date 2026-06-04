@@ -41,7 +41,7 @@ function Card({
     badgeText?: string;
 }) {
     return (
-        <div className="flex flex-col items-start w-full lg:w-1/2 relative group" id={id}>
+        <div className="flex flex-col items-start w-full lg:w-1/2 relative group scroll-mt-24 lg:scroll-mt-32" id={id}>
             {badgeText && (
                 <div className="absolute -top-10 -right-4 md:-right-8 bg-[#f7a73c] border-2 border-[#191919] rounded-full w-[85px] h-[85px] md:w-[120px] md:h-[120px] flex items-center justify-center rotate-12 shadow-[4px_4px_0px_0px_#191919] z-30 animate-bounce-slow">
                     <span className="font-sugar-peachy text-[#191919] text-center leading-[0.9]">

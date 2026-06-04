@@ -62,7 +62,7 @@ export default function HeroSection() {
                 {/* CTAs */}
                 <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-[16px] w-full max-w-[400px] md:max-w-none">
                     {/* Botão Profissional */}
-                    <a href="#profissional" className="group relative w-full md:w-[332px]">
+                    <a href="#para-quem" className="group relative w-full md:w-[332px]">
                         <div className="bg-[#f7a73c] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
                             <img src="/images/icons/ingresso_linha_preta.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="lazy" />
                             <span className="font-dm-sans font-bold text-[#191919] text-[13px] md:text-[14px] uppercase tracking-[0.8px] md:tracking-[1px] whitespace-nowrap">
@@ -72,7 +72,7 @@ export default function HeroSection() {
                     </a>
 
                     {/* Botão Pais */}
-                    <a href="#pais" className="group relative w-full md:w-[332px]">
+                    <a href="#para-quem" className="group relative w-full md:w-[332px]">
                         <div className="bg-[#2260a1] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
                             <img src="/images/icons/ingresso_linha_branca.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="lazy" />
                             <span className="font-dm-sans font-bold text-[#fff6ee] text-[13px] md:text-[14px] uppercase tracking-[0.8px] md:tracking-[1px] whitespace-nowrap">
