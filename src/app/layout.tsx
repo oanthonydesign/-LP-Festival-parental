@@ -15,6 +15,7 @@ const archivo = Archivo({
 })
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://festivalparental.com.br'),
     title: 'Festival Parental 2026 | Evento sobre Parentalidade com Especialistas',
     description: 'Um encontro presencial que reúne especialistas e famílias para discutir o desenvolvimento emocional de crianças e os desafios da parentalidade no mundo atual.',
     icons: {
