@@ -15,7 +15,7 @@ export type Speaker = {
     linkedin?: string;
     website?: string;
     bgColor: string;
-    category: Exclude<SpeakerCategory, "todos">;
+    category: Exclude<SpeakerCategory, "todos"> | "ambos";
 };
 
 export const allSpeakers: Speaker[] = [
@@ -127,7 +127,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/soseducacao/",
         website: "https://www.soseducacao.com.br",
         bgColor: "#74acde",
-        category: "profissionais",
+        category: "pais-cuidadores",
     },
     {
         id: 12,
@@ -147,7 +147,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/jacqvilela?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         linkedin: "https://www.linkedin.com/in/jacquelinevilela/",
         bgColor: "#79c3ab",
-        category: "profissionais",
+        category: "ambos",
     },
     {
         id: 14,
@@ -207,7 +207,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/iaramastine?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         linkedin: "https://www.linkedin.com/in/iara-mastine-5aab5863/",
         bgColor: "#79c3ab",
-        category: "profissionais",
+        category: "ambos",
     },
     {
         id: 20,
@@ -237,7 +237,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/wimerbotturajuniorpsiquiatra/",
         linkedin: "https://www.linkedin.com/in/dr-wimer-bottura-junior/",
         bgColor: "#79c3ab",
-        category: "profissionais",
+        category: "ambos",
     },
     {
         id: 23,
@@ -247,7 +247,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/euivanamoreira?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         linkedin: "https://www.linkedin.com/in/ivana-moreira-679489ba/",
         bgColor: "#74acde",
-        category: "profissionais",
+        category: "ambos",
     },
     {
         id: 24,
@@ -257,7 +257,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/patnoleto/",
         linkedin: "https://www.linkedin.com/in/patricianoleto/",
         bgColor: "#f7a73c",
-        category: "pais-cuidadores",
+        category: "profissionais",
     },
     {
         id: 25,
@@ -297,7 +297,7 @@ export const allSpeakers: Speaker[] = [
         instagram: "https://www.instagram.com/negramagda_/",
         website: "https://linktr.ee/negramagda_",
         bgColor: "#79c3ab",
-        category: "pais-cuidadores",
+        category: "profissionais",
     },
 ];
 
@@ -451,13 +451,13 @@ export default function SpeakersSection() {
     const [activeFilter, setActiveFilter] = useState<SpeakerCategory>("todos");
     const [visibleCount, setVisibleCount] = useState(8);
 
-    const professionalOrder = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 20, 21, 22, 25];
-    const parentsOrder = [2, 4, 6, 8, 10, 12, 14, 16, 18, 24, 26, 27, 28];
+    const professionalOrder = [1, 3, 5, 7, 9, 13, 15, 17, 19, 20, 21, 22, 23, 24, 25, 28];
+    const parentsOrder = [2, 4, 6, 8, 10, 11, 12, 13, 14, 16, 18, 19, 22, 23, 26, 27];
 
     const filteredSpeakers = (() => {
         if (activeFilter === "todos") return allSpeakers;
 
-        const filtered = allSpeakers.filter((s) => s.category === activeFilter);
+        const filtered = allSpeakers.filter((s) => s.category === activeFilter || s.category === "ambos");
 
         if (activeFilter === "profissionais") {
             return [...filtered].sort((a, b) => {
