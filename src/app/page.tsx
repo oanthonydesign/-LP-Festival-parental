@@ -26,7 +26,7 @@ import AcaoRelampagoBanner from '@/components/sections/AcaoRelampagoBanner';
 import SectionForWho from '@/components/sections/SectionForWho';
 import SectionTakeaways from '@/components/sections/SectionTakeaways';
 
-const SHOW_STICKY_BAR = false;
+const SHOW_STICKY_BAR = true;
 
 export default function Home() {
     return (

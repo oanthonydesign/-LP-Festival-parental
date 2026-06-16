@@ -6,9 +6,9 @@ import { useCountdown } from "@/hooks/useCountdown";
 import { useIsAcaoDia } from "@/hooks/useIsAcaoDia";
 
 // Flags de controle para fácil ativação/desativação
-const SHOW_PROMO_RIBBON = false;
+const SHOW_PROMO_RIBBON = true;
 const SHOW_PRICE_STATUS_BADGE = false;
-const SHOW_COUNTDOWN_BADGE = false;
+const SHOW_COUNTDOWN_BADGE = true;
 
 interface Benefit {
   text: string;
@@ -177,7 +177,7 @@ function Ribbon() {
     <div className="absolute inset-0 overflow-hidden rounded-[inherit] pointer-events-none z-[100]">
       <div className="bg-[#ff4b4b] border-y-2 border-[#191919] border-solid -rotate-[20deg] py-0.5 w-[180px] absolute top-[3px] md:top-[2px] left-[-48px] md:left-[-35px] shadow-[0px_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center">
         <span className="font-sugar-peachy text-[14px] md:text-[16px] text-white uppercase tracking-tight block text-center">
-          ÚLTIMO DIA!
+          ÚLTIMOS DIAS!
         </span>
       </div>
     </div>
@@ -415,9 +415,8 @@ function PassportCard({ data }: { data: PassportData }) {
             {data.badgeText.split('|').map((line, i) => (
               <span
                 key={i}
-                className={`block uppercase whitespace-nowrap ${
-                  i === 0 ? "text-[42px] md:text-[52px] tracking-[-1px] -mb-2" : "text-[14px] md:text-[18px] tracking-[-0.5px]"
-                }`}
+                className={`block uppercase whitespace-nowrap ${i === 0 ? "text-[42px] md:text-[52px] tracking-[-1px] -mb-2" : "text-[14px] md:text-[18px] tracking-[-0.5px]"
+                  }`}
               >
                 {line}
               </span>
@@ -509,7 +508,7 @@ function PassportCard({ data }: { data: PassportData }) {
           <div className="flex flex-col items-center gap-2 w-full">
             <CountdownBadge />
             <p className="font-dm-sans text-[13px] text-[#191919]/60 text-center">
-              Domingo, 17/05 às 23:59 — após essa data, o preço muda.
+              Segunda-feira, 22/06 às 23:59 — após essa data, o preço muda.
             </p>
           </div>
         )}
