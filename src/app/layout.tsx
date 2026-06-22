@@ -80,6 +80,26 @@ export default function RootLayout({
                 </Script>
                 {/* End Google Tag Manager */}
 
+                {/* Facebook Pixel */}
+                <Script id="facebook-pixel" strategy="afterInteractive">
+                    {`
+                      !function(f,b,e,v,n,t,s)
+                      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                      n.queue=[];t=b.createElement(e);t.async=!0;
+                      t.src=v;s=b.getElementsByTagName(e)[0];
+                      s.parentNode.insertBefore(t,s)}(window, document,'script',
+                      'https://connect.facebook.net/en_US/fbevents.js');
+                      fbq('init', '339713875849904', {
+                        em: 'email@email.com',
+                        ph: '1234567890'
+                      });
+                      fbq('track', 'PageView');
+                    `}
+                </Script>
+                {/* End Facebook Pixel */}
+
             </head>
             <body className={`${dmSans.variable} ${archivo.variable} antialiased bg-[#fff6ef] font-[family-name:var(--font-dm-sans)]`}>
                 {/* Google Tag Manager (noscript) */}
@@ -92,6 +112,17 @@ export default function RootLayout({
                     />
                 </noscript>
                 {/* End Google Tag Manager (noscript) */}
+
+                {/* Facebook Pixel (noscript) */}
+                <noscript>
+                    <img 
+                        height="1" 
+                        width="1" 
+                        style={{ display: 'none' }} 
+                        src="https://www.facebook.com/tr?id=339713875849904&ev=PageView&noscript=1" 
+                    />
+                </noscript>
+                {/* End Facebook Pixel (noscript) */}
 
                 {children}
                 <Script
