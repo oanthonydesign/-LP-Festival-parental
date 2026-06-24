@@ -113,7 +113,7 @@ export default function RootLayout({
                 {/* End Microsoft Clarity */}
 
             </head>
-            <body className={`${dmSans.variable} ${archivo.variable} antialiased bg-[#fff6ef] font-[family-name:var(--font-dm-sans)]`}>
+            <body className={`${dmSans.variable} ${archivo.variable} antialiased bg-[#fff6ef] font-[family-name:var(--font-dm-sans)]`} >
                 {/* Google Tag Manager (noscript) */}
                 <noscript>
                     <iframe 
