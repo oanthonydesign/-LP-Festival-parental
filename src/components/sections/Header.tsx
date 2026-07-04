@@ -7,13 +7,36 @@ import svgPaths from "@/components/svg/svgPaths";
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const [showMobileHeader, setShowMobileHeader] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 20);
+
+            if (window.innerWidth < 1024) {
+                const section8 = document.getElementById("para-quem");
+                if (section8) {
+                    const rect = section8.getBoundingClientRect();
+                    // Show when user reaches or passes the section
+                    setShowMobileHeader(rect.top <= window.innerHeight / 1.5);
+                } else {
+                    setShowMobileHeader(window.scrollY > 600);
+                }
+            } else {
+                setShowMobileHeader(true);
+            }
         };
+
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        window.addEventListener("resize", handleScroll);
+        
+        // Initial check
+        handleScroll();
+        
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("resize", handleScroll);
+        };
     }, []);
 
     // Prevent scroll when mobile menu is open
@@ -36,7 +59,7 @@ export default function Header() {
 
             <header
                 className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 h-[72px] flex items-center justify-center border-b border-transparent ${scrolled || isOpen ? "bg-[#fff6ee]/95 backdrop-blur-md border-[#191919]/5 shadow-sm" : "bg-transparent"
-                    }`}
+                    } ${!showMobileHeader && !isOpen ? "-translate-y-full lg:translate-y-0" : "translate-y-0"}`}
             >
                 <div className={`absolute inset-0 transition-opacity duration-300 pointer-events-none ${scrolled ? 'opacity-0' : 'opacity-100'}`}>
                     <div className="absolute inset-x-[320px] top-1/2 -translate-y-1/2 h-[72px] border border-[rgba(255,255,255,0.08)] hidden lg:block pointer-events-none"></div>
@@ -56,7 +79,7 @@ export default function Header() {
                     <div className="flex lg:hidden items-center gap-3">
                         {/* Ingresso Button - Orange with Icon */}
                         <a
-                            href="#ingressos"
+                            href="#convidados-especiais"
                             className="bg-[#f7a73c] text-[#191919] text-[12px] font-bold uppercase tracking-wider px-4 py-2.5 rounded-[40px] shadow-[2px_2px_0px_0px_#191919] active:translate-y-[1px] active:shadow-none transition-all border border-[#191919] flex items-center gap-2"
                         >
                             <img src="/images/icons/ingresso_linha_preta.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="lazy" />
@@ -78,10 +101,11 @@ export default function Header() {
                     <nav className="hidden lg:flex items-center gap-[32px]">
                         <div className="flex items-center gap-[8px] p-[10px]">
                             {[
-                                { name: "Atrações", href: "#convidados-especiais" },
+                                { name: "O Festival", href: "#para-quem" },
                                 { name: "Palestrantes", href: "#palestrantes" },
                                 { name: "Programação", href: "#programacao" },
-                                { name: "O Festival", href: "#festival" }
+                                { name: "Destaques", href: "#convidados-especiais" },
+                                { name: "FAQ", href: "#faq" }
                             ].map((item) => (
                                 <a
                                     key={item.name}
@@ -123,10 +147,11 @@ export default function Header() {
                 `}>
                     <div className="flex flex-col px-6 gap-6 items-center">
                         {[
-                            { name: "Atrações", href: "#convidados-especiais" },
+                            { name: "O Festival", href: "#para-quem" },
                             { name: "Palestrantes", href: "#palestrantes" },
                             { name: "Programação", href: "#programacao" },
-                            { name: "O Festival", href: "#festival" },
+                            { name: "Destaques", href: "#convidados-especiais" },
+                            { name: "FAQ", href: "#faq" },
                             { name: "Seja patrocinador", href: "#patrocinador" }
                         ].map((item) => (
                             <a

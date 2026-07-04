@@ -95,7 +95,7 @@ function Text1() {
 
 function Component() {
     return (
-        <div className="bg-[#2daa96] content-stretch flex flex-col gap-[46px] items-start p-[20px] relative rounded-[12px] shrink-0 w-full" data-name="1">
+        <div className="bg-[#2daa96] content-stretch flex flex-col gap-[46px] items-start p-[20px] relative rounded-[12px] shrink-0 snap-center w-[85vw] sm:w-[400px] lg:w-auto h-auto" data-name="1">
             <div aria-hidden="true" className="absolute border-3 border-[#191919] border-solid inset-0 pointer-events-none rounded-[12px] shadow-[4px_4px_0px_0px_#191919]" />
             <Frame />
             <Text1 />
@@ -173,7 +173,7 @@ function Text3() {
 
 function Component1() {
     return (
-        <div className="bg-[#79c3ab] content-stretch flex flex-col gap-[46px] items-start p-[20px] relative rounded-[12px] shrink-0 w-full" data-name="2">
+        <div className="bg-[#79c3ab] content-stretch flex flex-col gap-[46px] items-start p-[20px] relative rounded-[12px] shrink-0 snap-center w-[85vw] sm:w-[400px] lg:w-auto h-auto" data-name="2">
             <div aria-hidden="true" className="absolute border-3 border-[#191919] border-solid inset-0 pointer-events-none rounded-[12px] shadow-[4px_4px_0px_0px_#191919]" />
             <Frame1 />
             <Text3 />
@@ -251,7 +251,7 @@ function Text5() {
 
 function Component2() {
     return (
-        <div className="bg-[#74acde] content-stretch flex flex-col gap-[46px] items-start p-[20px] relative rounded-[12px] shrink-0 w-full" data-name="3">
+        <div className="bg-[#74acde] content-stretch flex flex-col gap-[46px] items-start p-[20px] relative rounded-[12px] shrink-0 snap-center w-[85vw] sm:w-[400px] lg:w-auto h-auto" data-name="3">
             <div aria-hidden="true" className="absolute border-3 border-[#191919] border-solid inset-0 pointer-events-none rounded-[12px] shadow-[4px_4px_0px_0px_#191919]" />
             <Frame2 />
             <Text5 />
@@ -329,7 +329,7 @@ function Text7() {
 
 function Component3() {
     return (
-        <div className="bg-[#f7a73c] content-stretch flex flex-col gap-[46px] items-start p-[20px] relative rounded-[12px] shrink-0 w-full" data-name="4">
+        <div className="bg-[#f7a73c] content-stretch flex flex-col gap-[46px] items-start p-[20px] relative rounded-[12px] shrink-0 snap-center w-[85vw] sm:w-[400px] lg:w-auto h-auto" data-name="4">
             <div aria-hidden="true" className="absolute border-3 border-[#191919] border-solid inset-0 pointer-events-none rounded-[12px] shadow-[4px_4px_0px_0px_#191919]" />
             <Frame3 />
             <Text7 />
@@ -407,7 +407,7 @@ function Text9() {
 
 function Component4() {
     return (
-        <div className="bg-[#f7a73c] content-stretch flex flex-col gap-[46px] items-start p-[20px] relative rounded-[12px] shrink-0 w-full" data-name="5">
+        <div className="bg-[#f7a73c] content-stretch flex flex-col gap-[46px] items-start p-[20px] relative rounded-[12px] shrink-0 snap-center w-[85vw] sm:w-[400px] lg:w-auto h-auto" data-name="5">
             <div aria-hidden="true" className="absolute border-3 border-[#191919] border-solid inset-0 pointer-events-none rounded-[12px] shadow-[4px_4px_0px_0px_#191919]" />
             <Frame4 />
             <Text9 />
@@ -485,7 +485,7 @@ function Text11() {
 
 function Component5() {
     return (
-        <div className="bg-[#74acde] content-stretch flex flex-col gap-[46px] items-start p-[20px] relative rounded-[12px] shrink-0 w-full" data-name="6">
+        <div className="bg-[#74acde] content-stretch flex flex-col gap-[46px] items-start p-[20px] relative rounded-[12px] shrink-0 snap-center w-[85vw] sm:w-[400px] lg:w-auto h-auto" data-name="6">
             <div aria-hidden="true" className="absolute border-3 border-[#191919] border-solid inset-0 pointer-events-none rounded-[12px] shadow-[4px_4px_0px_0px_#191919]" />
             <Frame5 />
             <Text11 />
@@ -563,7 +563,7 @@ function Text13() {
 
 function Component6() {
     return (
-        <div className="bg-[#79c3ab] content-stretch flex flex-col gap-[46px] items-start p-[20px] relative rounded-[12px] shrink-0 w-full" data-name="7">
+        <div className="bg-[#79c3ab] content-stretch flex flex-col gap-[46px] items-start p-[20px] relative rounded-[12px] shrink-0 snap-center w-[85vw] sm:w-[400px] lg:w-auto h-auto" data-name="7">
             <div aria-hidden="true" className="absolute border-3 border-[#191919] border-solid inset-0 pointer-events-none rounded-[12px] shadow-[4px_4px_0px_0px_#191919]" />
             <Frame6 />
             <Text13 />
@@ -641,7 +641,7 @@ function Text15() {
 
 function Component7() {
     return (
-        <div className="bg-[#2daa96] content-stretch flex flex-col gap-[46px] items-start p-[20px] relative rounded-[12px] shrink-0 w-full" data-name="8">
+        <div className="bg-[#2daa96] content-stretch flex flex-col gap-[46px] items-start p-[20px] relative rounded-[12px] shrink-0 snap-center w-[85vw] sm:w-[400px] lg:w-auto h-auto" data-name="8">
             <div aria-hidden="true" className="absolute border-3 border-[#191919] border-solid inset-0 pointer-events-none rounded-[12px] shadow-[4px_4px_0px_0px_#191919]" />
             <Frame7 />
             <Text15 />
@@ -651,7 +651,7 @@ function Component7() {
 
 function Cards() {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] relative shrink-0 w-full max-w-[1280px]" data-name="Cards">
+        <div className="flex lg:grid overflow-x-auto lg:overflow-visible snap-x snap-mandatory lg:snap-none lg:grid-cols-4 gap-4 lg:gap-[20px] w-[calc(100%+32px)] -mx-4 px-4 lg:w-full lg:mx-0 lg:px-0 py-4 -my-4 hide-scrollbar items-stretch relative shrink-0 max-w-[1280px]" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }} data-name="Cards">
             <Component />
             <Component1 />
             <Component2 />
@@ -709,6 +709,12 @@ function Grafismo() {
 export default function Section5() {
     return (
         <section className="bg-[#fff6ef] w-full overflow-hidden flex flex-col items-center pb-[80px] lg:pb-[120px] pt-[32px] md:pt-[40px] relative isolate scroll-mt-24" data-name="Section - 5" id="festival">
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                .hide-scrollbar::-webkit-scrollbar {
+                  display: none;
+                }
+              `}} />
             <div className="layout-container relative flex flex-col items-center">
                 <Content />
             </div>

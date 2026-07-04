@@ -84,7 +84,7 @@ const PASSAPORTES: PassportData[] = [
   },
   {
     id: "educador",
-    name: "Passaporte Educador",
+    name: "Passaporte Profissional",
     lote: "Lote 5",
     priceInstallment: "R$ 164,70",
     priceFull: "ou R$ 1.647,00 à vista",
@@ -99,7 +99,7 @@ const PASSAPORTES: PassportData[] = [
       "Certificado de participação"
     ],
     target: "Para profissionais da parentalidade",
-    buttonText: "QUERO O PASSAPORTE EDUCADOR",
+    buttonText: "QUERO O PASSAPORTE PROFISSIONAL",
     href: "https://chk.eduzz.com/39VEQVEDWR",
     bgColor: "bg-[#3399CC]",
     borderColor: "border-[#191919]",
@@ -109,7 +109,7 @@ const PASSAPORTES: PassportData[] = [
     benefitBg: "bg-transparent",
     benefitBorder: "border-[#191919]/20",
     benefitTextColor: "text-[#191919]",
-    badgeText: "2|eventos|em 1 só"
+    badgeText: "Bônus|de Julho"
   },
   {
     id: "parental",
@@ -308,13 +308,15 @@ function PassportCard({ data }: { data: PassportData }) {
           />
         </div>
       ) : data.badgeText ? (
-        <div className="absolute -top-12 -right-4 bg-[#f7a73c] border-2 border-[#191919] rounded-full w-[85px] h-[85px] md:w-[95px] md:h-[95px] flex items-center justify-center rotate-12 shadow-[4px_4px_0px_0px_#191919] z-50 animate-bounce-slow">
-          <span className="font-sugar-peachy text-[#191919] text-center leading-[0.9]">
+        <div className="absolute -top-10 -right-2 md:-right-4 bg-[#f7a73c] border-2 border-[#191919] rounded-full w-[75px] h-[75px] md:w-[90px] md:h-[90px] flex items-center justify-center rotate-12 shadow-[4px_4px_0px_0px_#191919] z-50 animate-bounce-slow">
+          <span className="font-sugar-peachy text-[#191919] text-center leading-[0.9] flex flex-col items-center justify-center mt-1">
             {data.badgeText.split('|').map((line, i) => (
               <span
                 key={i}
-                className={`block uppercase whitespace-nowrap ${i === 0 ? "text-[42px] md:text-[52px] tracking-[-1px] -mb-2" : "text-[14px] md:text-[18px] tracking-[-0.5px]"
-                  }`}
+                className={`block uppercase whitespace-nowrap ${
+                  i === 0 ? "text-[22px] md:text-[28px] tracking-[-1px] leading-[0.8] mb-0.5" : 
+                  "text-[12px] md:text-[16px] tracking-[-0.5px] leading-[0.8]"
+                }`}
               >
                 {line}
               </span>
@@ -385,7 +387,7 @@ function PassportCard({ data }: { data: PassportData }) {
             <div className="flex gap-3 items-center">
               <StarIcon />
               <p className={`font-dm-sans text-[16px] leading-tight ${data.benefitTextColor}`}>
-                <span className="font-bold">SÓ HOJE (31/5):</span> adquira o Passaporte Educador e ganhe mais um ingresso para levar outro profissional com você.
+                <span className="font-bold">SÓ HOJE (31/5):</span> adquira o Passaporte Profissional e ganhe mais um ingresso para levar outro profissional com você.
               </p>
             </div>
           )}
@@ -457,9 +459,8 @@ export default function Section6() {
       <div className="max-w-[1280px] w-full flex flex-col items-center gap-[64px]">
         {/* Header */}
         <div className="flex flex-col items-center gap-7 text-center">
-          <div className="border-2 border-[#505050] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#505050] px-4 lg:px-[32px] py-[16px] flex items-center gap-2 text-[#505050] bg-transparent">
-            <TicketIcon size={20} />
-            <span className="font-dm-sans font-bold text-[14px] uppercase tracking-wider">escolha seu ingresso</span>
+          <div className="flex items-center text-[#ef7d25]">
+            <span className="font-dm-sans font-bold text-[16px] uppercase tracking-wider">escolha seu ingresso</span>
           </div>
 
           <div className="flex flex-col gap-6 max-w-[800px]">

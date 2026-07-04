@@ -19,7 +19,7 @@ export default function PoliticaDeReembolso() {
 
                     <div className="space-y-6 text-base md:text-lg leading-relaxed">
                         <p>
-                            O pagamento da inscrição dá direito à participação presencial ao Festival Parental 2026, nos dias e horários estipulados, conforme o ticket escolhido (Passaporte Educador ou Passaporte Parental).
+                            O pagamento da inscrição dá direito à participação presencial ao Festival Parental 2026, nos dias e horários estipulados, conforme o ticket escolhido (Passaporte Profissional ou Passaporte Parental).
                         </p>
 
                         <p>

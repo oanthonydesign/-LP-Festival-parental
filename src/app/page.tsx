@@ -43,9 +43,9 @@ export default function Home() {
                 <Section5 />
                 <SectionForWho />
                 <SectionTakeaways />
-                <Section6 />
-                <SectionSpecialGuests />
                 <Section16 />
+                <SectionSpecialGuests />
+                <Section6 />
                 <SpeakersSection />
                 <Marquee01 />
                 <Marquee02 />

@@ -119,7 +119,7 @@ function Container1() {
     },
     {
       question: "Qual passaporte dá acesso a cada dia do evento?",
-      answer: "O Passaporte Educador dá acesso aos quatro dias do Festival Parental.\n\nO Passaporte Parental dá acesso apenas aos dois últimos dias do evento."
+      answer: "O Passaporte Profissional dá acesso aos quatro dias do Festival Parental.\n\nO Passaporte Parental dá acesso apenas aos dois últimos dias do evento."
     },
     {
       question: "Qual é a relação entre o Festival Parental e o Congresso Internacional de Educação Parental?",
@@ -147,11 +147,11 @@ function Container1() {
     },
     {
       question: "O Festival será gravado?",
-      answer: "Profissionais que adquirirem o Passaporte Educador terão acesso às gravações dos dois primeiros dias do evento (19 e 20 de novembro), que correspondem ao conteúdo do Congresso Internacional de Educação Parental.\n\nO acesso ficará disponível por 90 dias."
+      answer: "Profissionais que adquirirem o Passaporte Profissional terão acesso às gravações dos dois primeiros dias do evento (19 e 20 de novembro), que correspondem ao conteúdo do Congresso Internacional de Educação Parental.\n\nO acesso ficará disponível por 90 dias."
     },
     {
       question: "Haverá certificado de participação?",
-      answer: "Sim.\n\nO certificado de participação será concedido exclusivamente aos participantes que adquirirem o Passaporte Educador.\n\nA emissão será eletrônica e as orientações para gerar o certificado serão disponibilizadas na plataforma do evento."
+      answer: "Sim.\n\nO certificado de participação será concedido exclusivamente aos participantes que adquirirem o Passaporte Profissional.\n\nA emissão será eletrônica e as orientações para gerar o certificado serão disponibilizadas na plataforma do evento."
     },
     {
       question: "Há meia-entrada ou desconto para estudantes?",
@@ -159,7 +159,7 @@ function Container1() {
     },
     {
       question: "Sou estudante de Psicologia, Pedagogia ou áreas relacionadas. Qual passaporte devo escolher?",
-      answer: "Se você está em formação ou atua na área, o mais indicado é o Passaporte Educador.\n\nEle dá acesso aos quatro dias do Festival Parental, com conteúdos aprofundados, base científica e aplicação prática para quem trabalha ou pretende trabalhar com famílias.\n\nO Passaporte Parental é voltado para pais e cuidadores e dá acesso apenas aos dois últimos dias do evento."
+      answer: "Se você está em formação ou atua na área, o mais indicado é o Passaporte Profissional.\n\nEle dá acesso aos quatro dias do Festival Parental, com conteúdos aprofundados, base científica e aplicação prática para quem trabalha ou pretende trabalhar com famílias.\n\nO Passaporte Parental é voltado para pais e cuidadores e dá acesso apenas aos dois últimos dias do evento."
     },
     {
       question: "Comprei meu passaporte e não poderei comparecer. O que devo fazer?",

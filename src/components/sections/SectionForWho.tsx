@@ -71,6 +71,12 @@ export default function SectionForWho() {
 
   return (
     <section className="bg-[#2260a1] w-full flex flex-col items-center pt-[80px] pb-[40px] px-4 overflow-hidden relative" id="para-quem">
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      `}} />
       {/* Background Elements to add depth */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white opacity-[0.02] rounded-full blur-[80px] pointer-events-none translate-x-[20%] -translate-y-[20%]" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#f7a73c] opacity-[0.03] rounded-full blur-[80px] pointer-events-none -translate-x-[20%] translate-y-[20%]" />
@@ -104,18 +110,18 @@ export default function SectionForWho() {
         </div>
 
         {/* Items Grid */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 relative z-10 w-full animate-section-fade-in" key={active}>
+        <div className="flex flex-row overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none md:grid md:grid-cols-2 gap-4 md:gap-5 relative z-10 w-[calc(100%+32px)] -mx-4 px-4 md:w-full md:mx-0 md:px-0 py-4 -my-4 animate-section-fade-in hide-scrollbar items-stretch md:items-stretch" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }} key={active}>
           {group.items.map((item, idx) => (
             <div
               key={idx}
-              className="flex p-6 md:p-8 border-2 border-[#191919] border-solid rounded-[24px] shadow-[4px_4px_0px_0px_#191919] relative overflow-hidden group hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#191919] transition-all duration-300 items-start justify-between gap-4 md:gap-6"
+              className="flex p-6 md:p-8 border-2 border-[#191919] border-solid rounded-[24px] shadow-[4px_4px_0px_0px_#191919] relative overflow-hidden group hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#191919] transition-all duration-300 items-start justify-between gap-4 md:gap-6 shrink-0 snap-center w-[85vw] md:w-auto h-auto"
               style={{ backgroundColor: group.itemBgColor }}
             >
               <div className="flex flex-col gap-2 md:gap-3 flex-1 relative z-10">
-                <h3 className="font-dm-sans font-bold text-[18px] md:text-[20px] text-[#191919] leading-tight">
+                <h3 className="font-dm-sans font-bold text-[24px] text-[#191919] leading-[1.2]">
                   {item.title}
                 </h3>
-                <p className="font-dm-sans text-[15px] md:text-[16px] text-[#4c4d4f] leading-relaxed">
+                <p className="font-dm-sans text-[15px] md:text-[16px] text-[#4c4d4f] leading-[1.2]">
                   {item.description}
                 </p>
               </div>

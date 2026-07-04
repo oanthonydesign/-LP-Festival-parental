@@ -39,7 +39,7 @@ export default function Section2() {
                     <div className="flex flex-col gap-6 items-center w-full max-w-[1200px]">
                         <div className="flex flex-col font-sugar-peachy justify-center relative text-[#ef7d25] text-[36px] md:text-[46px] tracking-[-1.3px] md:tracking-[-1.4px] leading-[0.9]">
                             <p className="whitespace-pre-wrap break-words">Nunca se falou tanto sobre parentalidade.</p>
-                            <p className="whitespace-pre-wrap break-words">E, ainda assim, nunca foi tão difícil se sentir seguro nela.</p>
+                            <p className="whitespace-pre-wrap break-words">E nunca foi tão difícil se sentir seguro nela.</p>
                         </div>
                     </div>
 
@@ -47,20 +47,20 @@ export default function Section2() {
                     <div className="flex flex-col items-center w-full max-w-[1000px]">
                         <div className="flex flex-col gap-6 font-dm-sans justify-center leading-tight relative text-[#4c4d4f] text-[18px] lg:text-[24px]">
                             <p>
-                                Pais e profissionais vivem hoje uma realidade atravessada por excesso de estímulo, excesso de opinião, excesso de informação e pouca clareza sobre como tudo isso realmente se conecta na prática.
+                                Pais e profissionais vivem a mesma realidade: excesso de estímulo, de opinião, de informação – e pouca clareza sobre como tudo isso se conecta na prática.
                             </p>
                             <p>
-                                As respostas rápidas já não sustentam os desafios emocionais, sociais e humanos da infância contemporânea. E quem trabalha com famílias sente isso todos os dias.
+                                As respostas rápidas não sustentam mais os desafios emocionais e humanos da infância de hoje. E quem trabalha com famílias, ou vive a parentalidade na prática, sente isso todos os dias.
                             </p>
 
                             <div className="flex flex-col font-sugar-peachy justify-center relative text-[26px] lg:text-[36px] w-full max-w-[900px] mt-4 mx-auto leading-[1] text-[#2260A1]">
                                 <p>
-                                    A parentalidade não precisa de mais dicas. Precisa de mais clareza e compreensão.
+                                    A parentalidade não precisa de mais dicas. Precisa de mais clareza. E de mais profundidade.
                                 </p>
                             </div>
 
                             <p>
-                                O Festival Parental nasce desse contexto e da evolução do Congresso Internacional de Educação Parental: um encontro presencial para aprofundar as conversas sobre infância, vínculos e desenvolvimento humano no mundo atual.
+                                O Festival Parental nasce desse contexto – a evolução do Congresso Internacional de Educação Parental – um encontro presencial para aprofundar as conversas sobre infância, vínculo e desenvolvimento humano no mundo de hoje.
                             </p>
                         </div>
                     </div>

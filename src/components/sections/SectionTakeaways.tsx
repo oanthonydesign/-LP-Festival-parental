@@ -1,9 +1,14 @@
+"use client";
+
+import { useState } from "react";
+
 const GROUPS = [
   {
     id: "profissionais",
     label: "Para profissionais",
     pillColor: "bg-[#3399CC]",
     cardColor: "bg-[#C2E6F5]",
+    toggleColor: "bg-[#3399CC] text-white border-white/20",
     items: [
       {
         title: "Mais clareza para atuar",
@@ -32,6 +37,7 @@ const GROUPS = [
     label: "Para pais e cuidadores",
     pillColor: "bg-[#ED9F8C]",
     cardColor: "bg-[#F8CEC4]",
+    toggleColor: "bg-[#ED9F8C] text-[#191919] border-[#ED9F8C]",
     items: [
       {
         title: "Confiança nas suas decisões",
@@ -59,14 +65,22 @@ const GROUPS = [
 
 const PILL_CLASS = "rounded-full px-8 py-4 border-2 border-[#191919] shadow-[4px_4px_0px_0px_#191919] flex items-center justify-center";
 const PILL_TEXT = "font-sugar-peachy text-[26px] md:text-[32px] tracking-[-0.5px] leading-[1] text-[#191919] text-center";
-const CARD_TEXT_TITLE = "font-dm-sans font-bold text-[20px] leading-tight text-[#191919]";
-const CARD_TEXT_DESC = "font-dm-sans text-[16px] leading-relaxed text-[#191919] opacity-75 mt-1";
+const CARD_TEXT_TITLE = "font-dm-sans font-bold text-[24px] leading-[1.2] text-[#191919]";
+const CARD_TEXT_DESC = "font-dm-sans text-[16px] leading-[1.2] text-[#191919] opacity-75 mt-1";
 
 export default function SectionTakeaways() {
   const [prof, pais] = GROUPS;
+  const [active, setActive] = useState<"profissionais" | "pais">("profissionais");
+  const activeGroup = GROUPS.find(g => g.id === active) || prof;
 
   return (
-    <section className="bg-[#2260a1] w-full flex flex-col items-center pt-[40px] pb-[100px] px-4 lg:px-12 overflow-hidden">
+    <section className="bg-[#2260a1] w-full flex flex-col items-center pt-[40px] pb-[60px] px-4 lg:px-12 overflow-hidden">
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      `}} />
       <div className="max-w-[1280px] w-full flex flex-col items-center gap-12">
 
         {/* Header */}
@@ -79,21 +93,37 @@ export default function SectionTakeaways() {
           </h2>
         </div>
 
-        {/* MOBILE: duas colunas empilhadas */}
-        <div className="w-full flex flex-col gap-8 lg:hidden">
-          {GROUPS.map((group) => (
-            <div key={group.id} className="flex flex-col gap-3">
-              <div className={`${group.pillColor} ${PILL_CLASS}`}>
-                <h3 className={PILL_TEXT}>{group.label}</h3>
-              </div>
-              <div className="flex flex-col gap-3 mt-1">
-                {group.items.map((item, idx) => (
-                  <div key={idx} className={`${group.cardColor} rounded-2xl px-6 py-4 border-2 border-[#191919] shadow-[4px_4px_0px_0px_#191919]`}>
-                    <h4 className={CARD_TEXT_TITLE}>{item.title}</h4>
-                    <p className={CARD_TEXT_DESC}>{item.description}</p>
-                  </div>
-                ))}
-              </div>
+        {/* Toggle (Mobile Only) */}
+        <div className="flex border border-white/20 rounded-full p-1.5 gap-1.5 bg-[#17487c]/50 backdrop-blur-md self-center shadow-inner relative z-20 lg:hidden">
+          {GROUPS.map((g) => (
+            <button
+              key={g.id}
+              onClick={() => setActive(g.id as any)}
+              className={`px-8 py-3.5 rounded-full font-dm-sans font-bold text-[13px] md:text-[14px] uppercase tracking-wider transition-all duration-300 border ${active === g.id
+                ? `${g.toggleColor} shadow-md scale-100`
+                : "bg-transparent text-white/50 border-transparent hover:text-white/80 hover:bg-white/5 scale-95"
+                }`}
+            >
+              {g.label}
+            </button>
+          ))}
+        </div>
+
+        {/* MOBILE: Carrossel nativo RTL */}
+        <div
+          className="flex overflow-x-auto snap-x snap-mandatory lg:hidden gap-4 w-[calc(100%+32px)] -mx-4 px-4 py-4 -my-4 hide-scrollbar items-stretch"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          dir="rtl"
+          key={active}
+        >
+          {activeGroup.items.map((item, idx) => (
+            <div
+              key={idx}
+              dir="ltr"
+              className={`${activeGroup.cardColor} shrink-0 snap-center w-[85vw] h-auto rounded-2xl px-6 py-4 border-2 border-[#191919] shadow-[4px_4px_0px_0px_#191919] flex flex-col gap-1 hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#191919] transition-all duration-300`}
+            >
+              <h4 className={CARD_TEXT_TITLE}>{item.title}</h4>
+              <p className={CARD_TEXT_DESC}>{item.description}</p>
             </div>
           ))}
         </div>

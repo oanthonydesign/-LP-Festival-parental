@@ -53,7 +53,7 @@ export default function AcaoRelampagoBanner() {
             </p>
             <span className="hidden sm:block text-[22px] font-light text-white/30">|</span>
             <p className="font-dm-sans font-medium text-[18px] sm:text-[20px] text-white/85 leading-tight">
-              COMPRE 1 PASSAPORTE EDUCADOR E GANHE OUTRO
+              COMPRE 1 PASSAPORTE PROFISSIONAL E GANHE OUTRO
             </p>
           </div>
 

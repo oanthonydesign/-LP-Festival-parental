@@ -5,6 +5,12 @@ import React from 'react';
 export default function SectionSpecialGuests() {
     return (
         <section className="bg-[#fff6ef] w-full flex flex-col items-center pb-[80px] lg:pb-[120px] pt-[72px] relative overflow-hidden isolate z-20 scroll-mt-24" id="convidados-especiais">
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                .hide-scrollbar::-webkit-scrollbar {
+                  display: none;
+                }
+              `}} />
             {/* --- Background Graphics --- */}
             {/* Grafismo Onda 1 - Desktop Top Right */}
             <div className="hidden lg:flex absolute lg:top-[-150px] lg:w-[1800px] lg:h-[1800px] items-center justify-center pointer-events-none z-0"
@@ -38,12 +44,14 @@ export default function SectionSpecialGuests() {
                 </div>
 
                 {/* Cards Grid */}
-                <div className="flex flex-col lg:flex-row justify-between w-full relative z-10 gap-[40px] lg:gap-0">
+                <div className="flex flex-row overflow-x-auto lg:overflow-visible snap-x snap-mandatory lg:snap-none justify-between lg:justify-between relative z-10 gap-4 lg:gap-0 w-[calc(100%+32px)] -mx-4 px-4 lg:w-full lg:mx-0 lg:px-0 py-4 -my-4 hide-scrollbar items-start lg:items-start" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
 
                     {/* Card Gordon */}
-                    <div className="flex flex-col w-full lg:w-[62%] bg-[#3399CC] border-[3px] border-[#191919] rounded-[40px] p-8 lg:p-12 shadow-[8px_12px_0px_0px_#191919] relative group">
+                    <div className="flex flex-col shrink-0 snap-center w-[85vw] lg:w-[62%] h-auto bg-[#3399CC] border-[3px] border-[#191919] rounded-[40px] p-8 lg:p-12 shadow-[8px_12px_0px_0px_#191919] relative group">
                         {/* Decorative background shape */}
-                        <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/20 rounded-full blur-2xl pointer-events-none"></div>
+                        <div className="absolute inset-0 overflow-hidden rounded-[40px] pointer-events-none">
+                            <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/20 rounded-full blur-2xl"></div>
+                        </div>
 
                         <div className="flex flex-col gap-6 mb-12 relative z-10">
                             <div className="flex flex-col items-center lg:items-start gap-4">
@@ -52,13 +60,14 @@ export default function SectionSpecialGuests() {
                                 </span>
                                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
                                     <span className="font-dm-sans font-bold text-white bg-[#191919] px-4 py-2.5 rounded-full text-sm lg:text-base uppercase tracking-wider">
-                                        PASSAPORTE EDUCADOR
+                                        PASSAPORTE PROFISSIONAL
                                     </span>
                                     <span className="font-dm-sans font-bold text-white bg-[#ef7d25] px-4 py-2.5 rounded-full text-sm lg:text-base border-2 border-[#191919]">
                                         Online
                                     </span>
                                 </div>
                             </div>
+
 
                             <h3 className="font-sugar-peachy text-[42px] lg:text-[72px] tracking-[-1.35px] lg:tracking-[-2px] leading-[0.85] text-[#fff6ef] mt-4 text-center lg:text-left">
                                 Gordon Neufeld
@@ -73,44 +82,61 @@ export default function SectionSpecialGuests() {
                             </p>
                         </div>
 
-                        {/* Images Container - Book on Left, Gordon on Right */}
-                        <div className="mt-auto flex flex-row items-center justify-center sm:justify-center gap-0 relative z-10">
-
-                            {/* Livro - Agora à esquerda com borda e fundo branco */}
-                            <div className="relative z-20 w-[110px] sm:w-[180px] aspect-[2/3] bg-white border-2 border-[#191919] rounded-xl shadow-[4px_4px_0px_0px_#191919] rotate-[-8deg] transition-all duration-300 hover:rotate-[-4deg] hover:scale-105 -mr-10 sm:-mr-16 sm:mt-24 overflow-hidden p-1">
-                                <img
-                                    src="/images/cap_nova1.webp"
-                                    alt="Livro Pais Ocupados Filhos Distantes"
-                                    className="w-full h-full object-cover"
-                                    onError={(e) => {
-                                        e.currentTarget.src = 'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100%25" height="100%25" viewBox="0 0 400 500"%3E%3Crect fill="%23fff6ef" width="400" height="500"/%3E%3Ctext fill="%23191919" font-family="sans-serif" font-size="20" font-weight="bold" x="50%25" y="50%25" text-anchor="middle"%3ECapa do Livro%3C/text%3E%3C/svg%3E';
-                                    }}
-                                />
-                            </div>
-
-                            {/* Polaroid 1 - Gordon */}
-                            <div className="relative z-10 w-[210px] sm:w-auto max-w-[320px] aspect-[3/4] bg-white p-3 pb-10 sm:pb-12 border-2 border-[#191919] rounded-xl shadow-[6px_6px_0px_0px_#191919] rotate-[2deg] transition-all duration-300 hover:rotate-[1deg] hover:scale-105">
-                                <div className="w-full h-full border-2 border-[#191919] rounded-lg overflow-hidden bg-[#fff6ef] relative">
+                        {/* 2 Columns Container: Images on Left, Promo Splash on Right */}
+                        <div className="mt-auto flex flex-col xl:flex-row items-center justify-between gap-10 xl:gap-4 relative z-10 w-full pt-8">
+                            
+                            {/* Images Container - Left Column */}
+                            <div className="w-full xl:w-[55%] flex flex-row items-center justify-center gap-0 relative z-10">
+                                {/* Livro - Agora à esquerda com borda e fundo branco */}
+                                <div className="relative z-20 w-[110px] sm:w-[180px] aspect-[2/3] bg-white border-2 border-[#191919] rounded-xl shadow-[4px_4px_0px_0px_#191919] rotate-[-8deg] transition-all duration-300 hover:rotate-[-4deg] hover:scale-105 -mr-10 sm:-mr-16 sm:mt-24 overflow-hidden p-1">
                                     <img
-                                        src="/images/gordonneufeld1.webp"
-                                        alt="Dr. Gordon Neufeld"
+                                        src="/images/cap_nova1.webp"
+                                        alt="Livro Pais Ocupados Filhos Distantes"
                                         className="w-full h-full object-cover"
                                         onError={(e) => {
-                                            e.currentTarget.src = 'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100%25" height="100%25" viewBox="0 0 400 500"%3E%3Crect fill="%23fff6ef" width="400" height="500"/%3E%3Ctext fill="%23191919" font-family="sans-serif" font-size="20" font-weight="bold" x="50%25" y="50%25" text-anchor="middle"%3EGordon Neufeld%3C/text%3E%3C/svg%3E';
+                                            e.currentTarget.src = 'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100%25" height="100%25" viewBox="0 0 400 500"%3E%3Crect fill="%23fff6ef" width="400" height="500"/%3E%3Ctext fill="%23191919" font-family="sans-serif" font-size="20" font-weight="bold" x="50%25" y="50%25" text-anchor="middle"%3ECapa do Livro%3C/text%3E%3C/svg%3E';
                                         }}
                                     />
                                 </div>
-                                <div className="absolute bottom-2 sm:bottom-3 left-0 w-full text-center font-sugar-peachy text-[18px] sm:text-[22px] tracking-[-0.8px] text-[#191919]">
-                                    Dr. Gordon
+
+                                {/* Polaroid 1 - Gordon */}
+                                <div className="relative z-10 w-[210px] sm:w-auto max-w-[320px] aspect-[3/4] bg-white p-3 pb-10 sm:pb-12 border-2 border-[#191919] rounded-xl shadow-[6px_6px_0px_0px_#191919] rotate-[2deg] transition-all duration-300 hover:rotate-[1deg] hover:scale-105">
+                                    <div className="w-full h-full border-2 border-[#191919] rounded-lg overflow-hidden bg-[#fff6ef] relative">
+                                        <img
+                                            src="/images/gordonneufeld1.webp"
+                                            alt="Dr. Gordon Neufeld"
+                                            className="w-full h-full object-cover"
+                                            onError={(e) => {
+                                                e.currentTarget.src = 'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100%25" height="100%25" viewBox="0 0 400 500"%3E%3Crect fill="%23fff6ef" width="400" height="500"/%3E%3Ctext fill="%23191919" font-family="sans-serif" font-size="20" font-weight="bold" x="50%25" y="50%25" text-anchor="middle"%3EGordon Neufeld%3C/text%3E%3C/svg%3E';
+                                            }}
+                                        />
+                                    </div>
+                                    <div className="absolute bottom-2 sm:bottom-3 left-0 w-full text-center font-sugar-peachy text-[18px] sm:text-[22px] tracking-[-0.8px] text-[#191919]">
+                                        Dr. Gordon
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Promo Splash - Right Column */}
+                            <div className="w-full xl:w-[45%] flex items-center justify-center xl:justify-end lg:pr-4">
+                                <div className="bg-[#fbce32] border-2 border-[#191919] rounded-[24px] shadow-[4px_4px_0px_0px_#191919] px-6 py-5 md:px-8 md:py-6 rotate-2 w-full max-w-[340px] flex flex-col gap-3">
+                                    <p className="font-dm-sans font-medium text-[#191919] text-[16px] md:text-[18px] leading-[1.2] text-center xl:text-left">
+                                        Ao adquirir o <span className="font-bold">Passaporte Profissional</span> GANHE O LIVRO:
+                                    </p>
+                                    <p className="font-dm-sans font-bold uppercase text-[#191919] text-[20px] md:text-[22px] tracking-tight leading-[1.1] text-center xl:text-left">
+                                        Aproxime-se dos seus filhos.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     {/* Card Pato Fu */}
-                    <div className="flex flex-col w-full lg:w-[34%] bg-[#ED9F8C] border-[3px] border-[#191919] rounded-[40px] p-8 lg:p-12 shadow-[8px_12px_0px_0px_#191919] relative group">
+                    <div className="flex flex-col shrink-0 snap-center w-[85vw] lg:w-[34%] h-auto bg-[#ED9F8C] border-[3px] border-[#191919] rounded-[40px] p-8 lg:p-12 shadow-[8px_12px_0px_0px_#191919] relative group">
                         {/* Decorative background shape */}
-                        <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-white/20 rounded-full blur-2xl pointer-events-none"></div>
+                        <div className="absolute inset-0 overflow-hidden rounded-[40px] pointer-events-none">
+                            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-white/20 rounded-full blur-2xl"></div>
+                        </div>
 
                         <div className="flex flex-col gap-6 mb-12 relative z-10">
                             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">

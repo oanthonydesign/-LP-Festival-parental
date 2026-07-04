@@ -264,7 +264,7 @@ export default function HeroSectionV2() {
             </div>
 
             {/* --- Main Content (Centered) --- */}
-            <div className="relative lg:absolute lg:top-[120px] pt-[90px] lg:pt-0 left-0 lg:left-1/2 -translate-x-0 lg:-translate-x-1/2 w-full max-w-[1280px] flex flex-col items-center gap-[28px] md:gap-[46px] z-20 px-4 md:px-6 lg:px-0">
+            <div className="relative lg:absolute lg:top-[120px] pt-[70px] lg:pt-0 left-0 lg:left-1/2 -translate-x-0 lg:-translate-x-1/2 w-full max-w-[1280px] flex flex-col items-center gap-[28px] md:gap-[46px] z-20 px-4 md:px-6 lg:px-0">
 
                 <div className="flex flex-col items-center gap-[28px] w-full">
                     <div className="inline-flex items-center justify-center gap-[8px] px-4 py-3 md:px-[32px] md:py-[16px] rounded-[40px] border-2 border-[#505050] shadow-[4px_4px_0px_0px_#505050] bg-transparent max-w-[92vw] md:max-w-none">
@@ -272,19 +272,19 @@ export default function HeroSectionV2() {
                             <img src="/images/icons/calendario_cor.svg" alt="Calendario" className="w-[20px] h-[20px] object-contain" loading="lazy" />
                         </div>
                         <span className="font-dm-sans font-bold text-[#505050] text-[12px] md:text-[14px] uppercase tracking-[0.14px] whitespace-normal md:whitespace-nowrap leading-none mt-[2px]">
-                            19 a 22 de novembro · São Paulo/SP
+                            19 a 22 de novembro · Transamérica Expo, São Paulo · 7ª edição
                         </span>
                     </div>
 
                     <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[36px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.8] md:leading-[0.9] tracking-[-1.4px] sm:tracking-[-1.5px] md:tracking-[-2px] lg:tracking-[-2.6px] relative px-4 md:px-0 max-w-[1100px] w-full text-balance">
                         <span className="mt-1">
-                            Educar ficou mais complexo precisa de mais dicas. <span className="text-[#2260a1]">Um encontro sobre como estamos formando crianças e adolescentes hoje.</span>
+                            A maior reunião <span className="text-[#2260a1]">sobre parentalidade, infância e vínculo da América Latina.</span>
                         </span>
                     </h1>
 
                     <div className="font-dm-sans text-[#4c4d4f] text-[18px] sm:text-[20px] md:text-[24px] text-center leading-[1.2] md:leading-[1.1] flex flex-col gap-3 md:gap-4 max-w-full md:max-w-[900px] px-2 md:px-0">
                         <p>
-                            Durante quatro dias, profissionais, famílias e algumas das vozes mais relevantes do país se encontram em São Paulo para aprofundar conversas urgentes sobre desenvolvimento emocional, vínculos e os desafios contemporâneos de educar e crescer.
+                            O lugar de quem leva a infância a sério. Quatro dias com +50 das maiores referências em desenvolvimento humano para transformar ciência em prática real — para profissionais que atuam com famílias, e para os pais e mães que vivem a parentalidade todos os dias.
                         </p>
 
                     </div>
@@ -301,9 +301,9 @@ export default function HeroSectionV2() {
                     </a>
 
                     <a href="#para-quem" className="group relative w-full md:w-[332px]">
-                        <div className="bg-[#2260a1] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
-                            <img src="/images/icons/ingresso_linha_branca.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="lazy" />
-                            <span className="font-dm-sans font-bold text-[#fff6ee] text-[13px] md:text-[14px] uppercase tracking-[0.8px] md:tracking-[1px] whitespace-nowrap">
+                        <div className="bg-[#D6ECF7] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
+                            <img src="/images/icons/ingresso_linha_preta.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="lazy" />
+                            <span className="font-dm-sans font-bold text-[#191919] text-[13px] md:text-[14px] uppercase tracking-[0.8px] md:tracking-[1px] whitespace-nowrap">
                                 Sou pai, mãe ou cuidador(a)
                             </span>
                         </div>
