@@ -8,7 +8,7 @@ export default function HeroSectionB() {
             {/* --- Background Graphics --- */}
 
             {/* Grafismo Novo 2 - Centralizado e Ampliado */}
-            <div className="hidden lg:block absolute left-1/2 bottom-[-100px] -translate-x-1/2 w-[1800px] pointer-events-none z-0">
+            <div className="hidden lg:block absolute left-1/2 bottom-[-150px] -translate-x-1/2 w-[2000px] pointer-events-none z-0">
                 <img
                     src="/images/grafismo_novo2.svg"
                     alt=""
