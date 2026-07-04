@@ -7,21 +7,19 @@ export default function HeroSection() {
         <section className="bg-[#fff6ee] relative w-full h-auto lg:h-[1230px] overflow-hidden pb-0" id="hero" data-name="Section - 1">
             {/* --- Background Graphics --- */}
 
-            {/* Grafismo Novo 2 - Bottom Left */}
-            <div className="hidden lg:block absolute left-0 bottom-0 w-[55%] max-w-[800px] h-auto pointer-events-none z-0">
+            {/* Centralized Background Graphics (Desktop) */}
+            <div className="hidden lg:block absolute left-1/2 bottom-0 -translate-x-1/2 w-[1336px] h-[500px] pointer-events-none z-0">
+                {/* Left Wave */}
                 <img
                     src="/images/grafismo_novo2.svg"
                     alt=""
-                    className="w-full h-auto object-contain object-left-bottom"
+                    className="absolute left-[-180px] bottom-0 w-[950px] h-auto object-contain object-left-bottom"
                 />
-            </div>
-
-            {/* Grafismo Novo 1 - Bottom Right */}
-            <div className="hidden lg:block absolute right-0 bottom-0 w-[55%] max-w-[800px] h-auto pointer-events-none z-0">
+                {/* Right Wave */}
                 <img
                     src="/images/grafismo_novo1.svg"
                     alt=""
-                    className="w-full h-auto object-contain object-right-bottom"
+                    className="absolute right-[-180px] bottom-0 w-[950px] h-auto object-contain object-right-bottom"
                 />
             </div>
 
