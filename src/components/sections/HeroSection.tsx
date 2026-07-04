@@ -39,9 +39,8 @@ export default function HeroSection() {
                         <div className="hidden md:flex items-center justify-center relative shrink-0">
                             <img src="/images/icons/calendario_cor.svg" alt="Calendario" className="w-[20px] h-[20px] object-contain" loading="lazy" />
                         </div>
-                        <span className="font-dm-sans font-bold text-[#505050] text-[12px] md:text-[14px] uppercase tracking-[0.14px] text-center leading-[1.4] mt-[2px]">
-                            19 a 22 de novembro · Transamérica Expo, <br />
-                            São Paulo · 7ª edição
+                        <span className="font-dm-sans font-bold text-[#505050] text-[12px] md:text-[14px] uppercase tracking-[0.14px] text-center leading-[1.4] md:leading-none mt-[2px] whitespace-normal md:whitespace-nowrap">
+                            19 a 22 de novembro · Transamérica Expo, <br className="md:hidden" /> São Paulo · 7ª edição
                         </span>
                     </div>
 
