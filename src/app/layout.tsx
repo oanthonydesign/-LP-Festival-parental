@@ -46,7 +46,7 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="pt-BR">
+        <html lang="pt-BR" suppressHydrationWarning>
             <head>
                 <Script id="utmify-config" strategy="beforeInteractive">
                     {`window.pixelId = "698a1cc063e361a00f21dd5a";`}
