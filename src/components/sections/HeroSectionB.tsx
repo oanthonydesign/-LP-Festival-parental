@@ -8,7 +8,7 @@ export default function HeroSectionB() {
             {/* --- Background Graphics --- */}
 
             {/* Grafismo Novo 2 - Centralizado e Ampliado */}
-            <div className="hidden lg:block absolute left-1/2 bottom-[-150px] -translate-x-1/2 w-[2000px] pointer-events-none z-0">
+            <div className="hidden lg:block absolute left-1/2 bottom-[-280px] -translate-x-1/2 w-[2500px] pointer-events-none z-0">
                 <img
                     src="/images/grafismo_novo2.svg"
                     alt=""
@@ -49,7 +49,7 @@ export default function HeroSectionB() {
                 {/* CTAs */}
                 <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-[16px] w-full max-w-[400px] md:max-w-none">
                     {/* Botão Profissional */}
-                    <a href="#profissional" className="group relative w-full md:w-[332px]">
+                    <a href="#contexto" className="group relative w-full md:w-[332px]">
                         <div className="bg-[#f7a73c] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
                             <img src="/images/icons/ingresso_linha_preta.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="lazy" />
                             <span className="font-dm-sans font-bold text-[#191919] text-[13px] md:text-[14px] uppercase tracking-[0.8px] md:tracking-[1px] whitespace-nowrap">
@@ -59,7 +59,7 @@ export default function HeroSectionB() {
                     </a>
 
                     {/* Botão Pais */}
-                    <a href="#pais" className="group relative w-full md:w-[332px]">
+                    <a href="#contexto" className="group relative w-full md:w-[332px]">
                         <div className="bg-[#2260a1] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
                             <img src="/images/icons/ingresso_linha_branca.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="lazy" />
                             <span className="font-dm-sans font-bold text-[#fff6ee] text-[13px] md:text-[14px] uppercase tracking-[0.8px] md:tracking-[1px] whitespace-nowrap">
