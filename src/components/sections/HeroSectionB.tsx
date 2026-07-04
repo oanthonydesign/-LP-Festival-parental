@@ -7,25 +7,12 @@ export default function HeroSectionB() {
         <section className="bg-[#fff6ee] relative w-full h-auto lg:h-[1230px] overflow-hidden pb-0" id="hero" data-name="Section - 1">
             {/* --- Background Graphics --- */}
 
-            {/* Grafismo Onda 2 - Mobile Bottom Right / Desktop Top Right */}
-            <div className="hidden lg:flex absolute lg:top-[-150px] lg:w-[1800px] lg:h-[1800px] items-center justify-center pointer-events-none z-0"
-                style={{ left: '56vw' }}>
-                <div className="relative w-full h-full lg:w-[1600px] lg:h-[1600px]">
-                    <img
-                        src="/images/grafismo_onda2.svg"
-                        alt=""
-                        className="w-full h-full object-contain"
-                    />
-                </div>
-            </div>
-
-            {/* Grafismo Onda 1 - Mobile Bottom Left / Desktop Top Left */}
-            <div className="hidden lg:block absolute lg:top-[-108px] lg:w-[1105px] lg:h-[1133px] pointer-events-none z-0"
-                style={{ right: '75vw' }}>
+            {/* Grafismo Novo 2 - Centralizado e Ampliado */}
+            <div className="hidden lg:block absolute left-1/2 bottom-0 -translate-x-1/2 w-[1800px] pointer-events-none z-0">
                 <img
-                    src="/images/grafismo_onda1.svg"
+                    src="/images/grafismo_novo2.svg"
                     alt=""
-                    className="w-full h-full object-contain"
+                    className="w-full h-auto object-contain object-bottom"
                 />
             </div>
 
