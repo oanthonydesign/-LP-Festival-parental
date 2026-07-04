@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import svgPaths from "@/components/svg/svgPaths";
 import { useCountdown } from "@/hooks/useCountdown";
 import { useIsAcaoDia } from "@/hooks/useIsAcaoDia";
+import { Gift, Files, BookOpen } from "lucide-react";
 
 // Flags de controle para fácil ativação/desativação
 const SHOW_PROMO_RIBBON = false;
@@ -90,12 +91,11 @@ const PASSAPORTES: PassportData[] = [
     priceFull: "ou R$ 1.647,00 à vista",
     priceOriginal: "R$ 2.197,00",
     benefits: [
-      "Quatro dias para consolidar o repertório técnico e a segurança prática que a atuação com famílias exige hoje (2 dias de conteúdo para profissionais – 7º Congresso Internacional de Educação Parental + 2 dias de conteúdo aberto também para pais e cuidadores)",
-      "Acesso exclusivo à rede que está definindo o futuro da educação parental no Brasil",
-      "Sacola com brindes",
-      "Acesso às sessões de autógrafos com palestrantes",
-      "Acesso à feira de produtos e serviços para a parentalidade",
-      "Acesso à gravação completa do Festival por 90 dias",
+      "4 dias para aprofundar conhecimento, prática e visão sobre a parentalidade contemporânea. Trilha Técnica (dias 1–2, exclusiva para profissionais) + Trilha Parental (dias 3–4, aberta também para pais e cuidadores)",
+      "+50 palestrantes, referências em saúde, educação e comportamento",
+      "Acesso à rede que está definindo a educação parental no Brasil",
+      "Autógrafos com palestrantes, feira de produtos e serviços e sacola de brindes",
+      "Gravação do Festival 2026 — 90 dias de acesso",
       "Certificado de participação"
     ],
     target: "Para profissionais da parentalidade",
@@ -103,12 +103,12 @@ const PASSAPORTES: PassportData[] = [
     href: "https://chk.eduzz.com/39VEQVEDWR",
     bgColor: "bg-[#3399CC]",
     borderColor: "border-[#191919]",
-    textColor: "text-[#191919]",
+    textColor: "text-white",
     priceColor: "text-[#191919]",
     accentColor: "text-[#191919]",
     benefitBg: "bg-transparent",
     benefitBorder: "border-[#191919]/20",
-    benefitTextColor: "text-[#191919]",
+    benefitTextColor: "text-white",
     badgeText: "Bônus|de Julho"
   },
   {
@@ -119,10 +119,9 @@ const PASSAPORTES: PassportData[] = [
     priceFull: "ou R$ 497,00 à vista",
     priceOriginal: "R$ 1.497,00",
     benefits: [
-      "Dois dias (21 e 22/11) para sair da sobrecarga de informação e ter mais clareza, presença e direção na relação com os seus filhos. Parentalidade não se constrói sozinho.",
-      "Sacola com brindes",
-      "Acesso às sessões de autógrafos com palestrantes",
-      "Acesso à feira de produtos e serviços para a parentalidade"
+      "Dois dias de palestras, espetáculos e vivências (21–22/11) — para sair da sobrecarga e ganhar clareza, presença e direção na relação com seus filhos.",
+      "Autógrafos com palestrantes, feira de produtos e serviços e sacola de brindes",
+      "O mesmo Festival, a mesma energia — com conteúdo e formato pensado para famílias."
     ],
     target: "Para pais e cuidadores",
     buttonText: "Quero o passaporte parental",
@@ -132,10 +131,9 @@ const PASSAPORTES: PassportData[] = [
       priceFull: "ou R$ 747,00 à vista",
       priceOriginal: "R$ 1.947,00",
       benefits: [
-        "Viva os dois dias dessa experiência (21 e 22/11) com quem partilha a mesma jornada e com melhor custo por participante",
-        "Sacola com brindes",
-        "Acesso às sessões de autógrafos com palestrantes",
-        "Acesso à feira de produtos e serviços para a parentalidade"
+        "Viva os dois dias dessa experiência (21 e 22/11) com quem partilha a mesma jornada e com melhor custo por participante.",
+        "Autógrafos com palestrantes, feira de produtos e serviços e sacola de brindes",
+        "O mesmo Festival, a mesma energia — com conteúdo e formato pensado para famílias."
       ],
       href: "https://chk.eduzz.com/G92ERDR4WE",
       buttonText: "Quero 2 passaportes parental"
@@ -264,9 +262,9 @@ function PassportCard({ data }: { data: PassportData }) {
           </div>
 
           {/* Benefits List */}
-          <div className={`border-2 ${data.benefitBorder} border-solid rounded-[24px] p-[16px] flex flex-col gap-4 ${data.benefitBg}`}>
+          <div className="flex flex-col gap-4 w-full">
             {data.benefits.map((benefit, idx) => (
-              <div key={idx} className="flex gap-3 items-center">
+              <div key={idx} className="flex gap-3 items-start">
                 <StarIcon color="#505050" />
                 <p className={`font-dm-sans text-[16px] leading-tight ${data.benefitTextColor}`}>
                   {benefit}
@@ -331,7 +329,7 @@ function PassportCard({ data }: { data: PassportData }) {
           <div className="bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[6px] shadow-[3px_3px_0px_0px_#191919] px-[12px] py-[4px] shrink-0">
             <span className="font-sugar-peachy text-[18px] tracking-[-0.5px] text-black leading-none">{data.lote}</span>
           </div>
-          <h3 className="font-sugar-peachy text-[28px] tracking-[-1px] leading-[0.8] text-left flex-1">
+          <h3 className={`font-sugar-peachy tracking-[-1px] leading-[0.8] text-left flex-1 ${data.id === 'educador' ? 'text-[25px] md:text-[28px]' : 'text-[28px]'}`}>
             {data.name}
           </h3>
         </div>
@@ -381,10 +379,10 @@ function PassportCard({ data }: { data: PassportData }) {
         )}
 
         {/* Benefits List */}
-        <div className={`border-2 ${data.benefitBorder} border-solid rounded-[24px] p-[16px] flex flex-col gap-4 ${data.benefitBg}`}>
+        <div className="flex flex-col gap-4 w-full">
           {/* Bullet especial da ação relâmpago — visível apenas no dia 31/05 */}
           {isAcaoDia && data.id === 'educador' && (
-            <div className="flex gap-3 items-center">
+            <div className="flex gap-3 items-start">
               <StarIcon />
               <p className={`font-dm-sans text-[16px] leading-tight ${data.benefitTextColor}`}>
                 <span className="font-bold">SÓ HOJE (31/5):</span> adquira o Passaporte Profissional e ganhe mais um ingresso para levar outro profissional com você.
@@ -392,7 +390,7 @@ function PassportCard({ data }: { data: PassportData }) {
             </div>
           )}
           {currentBenefits.map((benefit, idx) => (
-            <div key={idx} className="flex gap-3 items-center">
+            <div key={idx} className="flex gap-3 items-start">
               <StarIcon />
               <p className={`font-dm-sans text-[16px] leading-tight ${data.benefitTextColor}`}>
                 {benefit}
@@ -401,28 +399,88 @@ function PassportCard({ data }: { data: PassportData }) {
           ))}
         </div>
 
-
+        {/* July Bonus Card (Only for Passaporte Profissional) */}
+        {data.id === 'educador' && (
+          <div className="bg-white border-2 border-[#191919] rounded-[24px] p-5 flex flex-col gap-4 shadow-[3px_3px_0px_0px_#191919] w-full text-left">
+            {/* Header: gift icon and title */}
+            <div className="flex items-center gap-3 text-[#191919]">
+              <Gift className="w-5 h-5 text-[#ef7d25] shrink-0" />
+              <span className="font-dm-sans font-bold text-[15px] sm:text-[16px]">
+                Comprando em julho, você leva:
+              </span>
+            </div>
+            
+            {/* Item 1: Biblioteca Parental */}
+            <div className="flex gap-2.5 items-start text-[#191919]">
+              <Files className="w-5 h-5 text-[#2260a1] shrink-0 mt-0.5" />
+              <p className="font-dm-sans text-[14px] leading-relaxed">
+                <span className="font-semibold">Biblioteca Parental</span> — acervo das 6 edições do Congresso. +180h · +100 especialistas · 1 ano de acesso. Siegel, Nelsen, Porges e outras referências mundiais.
+              </p>
+            </div>
+            
+            {/* Item 2: Livro */}
+            <div className="flex gap-2.5 items-start text-[#191919]">
+              <BookOpen className="w-5 h-5 text-[#ef7d25] shrink-0 mt-0.5" />
+              <p className="font-dm-sans text-[14px] leading-relaxed">
+                <span className="font-semibold">O novo livro de Gordon Neufeld</span> — brinde físico para as 200 primeiras compras.
+              </p>
+            </div>
+          </div>
+        )}
 
         {SHOW_COUNTDOWN_BADGE && (
           <div className="flex flex-col items-center gap-2 w-full">
             <CountdownBadge />
-            <p className="font-dm-sans text-[13px] text-[#191919]/60 text-center">
+            <p className={`font-dm-sans text-[13px] text-center ${data.id === 'educador' ? 'text-white/70' : 'text-[#191919]/60'}`}>
               Segunda-feira, 22/06 às 23:59 — após essa data, o preço muda.
             </p>
           </div>
         )}
 
         {/* Price Section */}
-        <div className="text-center flex flex-col items-center">
-          <div className="font-sugar-peachy text-[20px] md:text-[24px] tracking-[-0.6px] md:tracking-[-0.9px] text-current opacity-70 mb-2">
-            De <span className="line-through">{currentPriceOriginal}</span> por
+        {data.id === 'educador' || data.id === 'parental' ? (
+          <div className="w-full flex flex-col items-center gap-2">
+            {/* Dashed separator */}
+            <div className={`border-t-2 border-dashed ${data.id === 'educador' ? 'border-[#fff6ef]/40' : 'border-[#191919]/20'} w-full my-1`} />
+
+            <div className="text-center flex flex-col items-center gap-1.5 w-full">
+              <p className={`font-dm-sans text-[15px] md:text-[16px] font-medium ${data.id === 'educador' ? 'text-white/95' : 'text-[#191919]/90'}`}>
+                Garantindo agora, no Lote 5:
+              </p>
+              
+              <div className={`font-sugar-peachy text-[40px] md:text-[54px] leading-none tracking-tight flex items-center justify-center gap-2 ${data.id === 'educador' ? 'text-white' : 'text-[#191919]'}`}>
+                <span>12x de</span>
+                <span>{currentPriceInstallment}</span>
+              </div>
+              
+              <div className="flex items-center justify-center gap-2 flex-wrap">
+                <span className={`font-dm-sans text-[18px] md:text-[20px] ${data.id === 'educador' ? 'text-white/95' : 'text-[#191919]/90'}`}>
+                  ou {currentPriceFull.replace("ou ", "").replace(",00", "")}
+                </span>
+                <span className="bg-[#c2f2c5] border-2 border-[#191919] rounded-[8px] px-2 py-0.5 font-dm-sans font-bold text-[13px] text-[#191919] shadow-[1px_1px_0px_0px_#191919] whitespace-nowrap">
+                  economize R$ {data.id === 'educador' ? 329 : (isDouble ? 149 : 99)}
+                </span>
+              </div>
+              
+              {data.id === 'educador' && (
+                <p className="font-dm-sans text-[13px] md:text-[14px] text-white/85 mt-1">
+                  menos de R$ 4,51 por dia · sobe para <span className="text-[#fbce32] font-bold">R$ 2.197</span> em nov.
+                </p>
+              )}
+            </div>
           </div>
-          <div className="font-sugar-peachy leading-[0.8] flex flex-col md:flex-row items-center gap-1 md:gap-3">
-            <span className={`text-[28px] md:text-[40px] tracking-[-1px] md:tracking-[-1.3px] ${data.accentColor}`}>12x de</span>
-            <span className={`${data.priceColor} text-[46px] md:text-[64px] tracking-[-1.4px] md:tracking-[-1.7px]`}>{currentPriceInstallment}</span>
+        ) : (
+          <div className="text-center flex flex-col items-center">
+            <div className="font-sugar-peachy text-[20px] md:text-[24px] tracking-[-0.6px] md:tracking-[-0.9px] text-current opacity-70 mb-2">
+              De <span className="line-through">{currentPriceOriginal}</span> por
+            </div>
+            <div className="font-sugar-peachy leading-[0.8] flex flex-col md:flex-row items-center gap-1 md:gap-3">
+              <span className={`text-[28px] md:text-[40px] tracking-[-1px] md:tracking-[-1.3px] ${data.accentColor}`}>12x de</span>
+              <span className={`${data.priceColor} text-[46px] md:text-[64px] tracking-[-1.4px] md:tracking-[-1.7px]`}>{currentPriceInstallment}</span>
+            </div>
+            <p className="font-dm-sans text-[24px] mt-2 opacity-80">{currentPriceFull}</p>
           </div>
-          <p className="font-dm-sans text-[24px] mt-2 opacity-80">{currentPriceFull}</p>
-        </div>
+        )}
 
 
 
@@ -438,7 +496,7 @@ function PassportCard({ data }: { data: PassportData }) {
           {/* Action Button */}
           <a
             href={currentHref}
-            className={`bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] ${data.id === 'educador' ? 'px-[6px] lg:px-[24px]' : 'px-[24px]'} py-[16px] flex items-center justify-center gap-2 hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] group w-full lg:w-auto`}
+            className={`bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] ${data.id === 'educador' ? 'px-[6px] lg:px-[10px]' : 'px-[16px]'} py-[16px] flex items-center justify-center gap-2 hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] group w-full`}
           >
             <div className="text-[#191919] hidden md:block">
               <TicketIcon />
