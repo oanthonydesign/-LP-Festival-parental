@@ -90,7 +90,7 @@ export default function Section8() {
                         heading="Para profissionais que trabalham com famílias"
                         subtext="Quatro dias de repertório para quem enfrenta a complexidade das relações familiares na prática, com base científica, troca qualificada e caminhos para transformar teoria em intervenção real com famílias."
                         image={imgProfissionais}
-                        label="Profissional e Passaporte"
+                        label="Passaporte Profissional"
                     />
                     <Card
                         id="pais"
@@ -99,7 +99,7 @@ export default function Section8() {
                         heading="Para pais, mães e cuidadores"
                         subtext="Dois dias de conversas acessíveis e profundas, com reflexões e experiências para lidar com os desafios reais da criação de filhos hoje com clareza, sem julgamentos ou fórmulas prontas."
                         image={imgPais}
-                        label="Profissional e Parental"
+                        label="Passaporte Parental"
                     />
                 </div>
             </div>
