@@ -109,17 +109,15 @@ export default function SectionTakeaways() {
           ))}
         </div>
 
-        {/* MOBILE: Carrossel nativo RTL */}
+        {/* MOBILE: Carrossel nativo */}
         <div
           className="flex overflow-x-auto snap-x snap-mandatory lg:hidden gap-4 w-[calc(100%+32px)] -mx-4 px-4 py-4 -my-4 hide-scrollbar items-stretch"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          dir="rtl"
           key={active}
         >
           {activeGroup.items.map((item, idx) => (
             <div
               key={idx}
-              dir="ltr"
               className={`${activeGroup.cardColor} shrink-0 snap-center w-[85vw] h-auto rounded-2xl px-6 py-4 border-2 border-[#191919] shadow-[4px_4px_0px_0px_#191919] flex flex-col gap-1 hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#191919] transition-all duration-300`}
             >
               <h4 className={CARD_TEXT_TITLE}>{item.title}</h4>

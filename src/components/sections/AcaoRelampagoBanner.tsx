@@ -40,7 +40,10 @@ export default function AcaoRelampagoBanner() {
       className={`fixed bottom-0 inset-x-0 z-[60] pointer-events-none transition-all duration-500 ease-in-out ${isVisible && !isFooterVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
         }`}
     >
-      <div className="w-full bg-[#2260a1] border-t-2 border-[#191919] shadow-[0_-4px_0px_0px_#191919] pointer-events-auto">
+      <a
+        href="#ingressos"
+        className="block w-full bg-[#2260a1] border-t-2 border-[#191919] shadow-[0_-4px_0px_0px_#191919] pointer-events-auto hover:bg-[#1a4f88] transition-colors duration-200 cursor-pointer"
+      >
         <div className="max-w-[1280px] mx-auto px-4 py-2.5 sm:py-3 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
 
           {/* Texto + Contador */}
@@ -55,10 +58,8 @@ export default function AcaoRelampagoBanner() {
             </p>
           </div>
 
-
-
         </div>
-      </div>
+      </a>
     </div>
   );
 }
