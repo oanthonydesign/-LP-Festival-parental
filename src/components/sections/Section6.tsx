@@ -460,7 +460,7 @@ function PassportCard({ data }: { data: PassportData }) {
                   ou {currentPriceFull.replace("ou ", "").replace(",00", "")}
                 </span>
                 <span className="bg-[#c2f2c5] border-2 border-[#191919] rounded-[8px] px-2 py-0.5 font-dm-sans font-bold text-[13px] text-[#191919] shadow-[1px_1px_0px_0px_#191919] whitespace-nowrap">
-                  economize R$ {data.id === 'educador' ? 329 : (isDouble ? 149 : 99)}
+                  economize R$ {data.id === 'educador' ? 329 : (isDouble ? 445 : 99)}
                 </span>
               </div>
 
