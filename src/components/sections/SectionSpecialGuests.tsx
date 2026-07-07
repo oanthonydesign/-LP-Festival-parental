@@ -55,14 +55,14 @@ export default function SectionSpecialGuests() {
 
                         <div className="flex flex-col gap-6 mb-12 relative z-10">
                             <div className="flex flex-col items-center lg:items-start gap-4">
-                                <span className="font-dm-sans font-bold text-[#191919] text-sm lg:text-base uppercase tracking-wider bg-white px-5 py-2.5 rounded-full border-2 border-[#191919] shadow-[2px_2px_0px_0px_#191919]">
+                                <span className="font-dm-sans font-bold text-[#191919] text-sm lg:text-base uppercase tracking-wider bg-white px-3 py-2.5 rounded-full border-2 border-[#191919] shadow-[2px_2px_0px_0px_#191919]">
                                     Palestrante Internacional
                                 </span>
                                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
                                     <span className="font-dm-sans font-bold text-white bg-[#191919] px-4 py-2.5 rounded-full text-sm lg:text-base uppercase tracking-wider">
                                         PASSAPORTE PROFISSIONAL
                                     </span>
-                                    <span className="font-dm-sans font-bold text-white bg-[#ef7d25] px-4 py-2.5 rounded-full text-sm lg:text-base border-2 border-[#191919]">
+                                    <span className="hidden lg:inline-block font-dm-sans font-bold text-white bg-[#ef7d25] px-4 py-2.5 rounded-full text-sm lg:text-base border-2 border-[#191919]">
                                         Online
                                     </span>
                                 </div>
@@ -87,6 +87,9 @@ export default function SectionSpecialGuests() {
                             
                             {/* Images Container - Left Column */}
                             <div className="w-full xl:w-[55%] flex flex-row items-center justify-center gap-0 relative z-10">
+                                
+
+
                                 {/* Livro - Agora à esquerda com borda e fundo branco */}
                                 <div className="relative z-20 w-[110px] sm:w-[180px] aspect-[2/3] bg-white border-2 border-[#191919] rounded-xl shadow-[4px_4px_0px_0px_#191919] rotate-[-8deg] transition-all duration-300 hover:rotate-[-4deg] hover:scale-105 -mr-10 sm:-mr-16 sm:mt-24 overflow-hidden p-1">
                                     <img
@@ -101,6 +104,14 @@ export default function SectionSpecialGuests() {
 
                                 {/* Polaroid 1 - Gordon */}
                                 <div className="relative z-10 w-[210px] sm:w-auto max-w-[320px] aspect-[3/4] bg-white p-3 pb-10 sm:pb-12 border-2 border-[#191919] rounded-xl shadow-[6px_6px_0px_0px_#191919] rotate-[2deg] transition-all duration-300 hover:rotate-[1deg] hover:scale-105">
+                                    
+                                    {/* Badge Online Mobile no canto */}
+                                    <div className="absolute z-30 -top-3 -right-3 lg:hidden">
+                                        <span className="font-dm-sans font-bold text-white bg-[#ef7d25] px-4 py-1 sm:py-1.5 rounded-full text-[13px] sm:text-[14px] border-2 border-[#191919] shadow-[2px_2px_0px_0px_#191919] inline-block rotate-[4deg]">
+                                            Online
+                                        </span>
+                                    </div>
+
                                     <div className="w-full h-full border-2 border-[#191919] rounded-lg overflow-hidden bg-[#fff6ef] relative">
                                         <img
                                             src="/images/gordonneufeld1.webp"

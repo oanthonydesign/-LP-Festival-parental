@@ -10,6 +10,7 @@ body {
 }
 
 @theme {
+    --breakpoint-fhd: 1921px;
     --font-dm-sans: 'DM Sans', sans-serif;
     --font-sugar-peachy: 'Sugar Peachy', sans-serif;
     --font-archivo: 'Archivo', sans-serif;

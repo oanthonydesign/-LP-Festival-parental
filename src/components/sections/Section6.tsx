@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import svgPaths from "@/components/svg/svgPaths";
 import { useCountdown } from "@/hooks/useCountdown";
 import { useIsAcaoDia } from "@/hooks/useIsAcaoDia";
-import { Gift, Files, BookOpen } from "lucide-react";
+import { Gift, Files, BookOpen, Video } from "lucide-react";
 
 // Flags de controle para fácil ativação/desativação
 const SHOW_PROMO_RIBBON = false;
@@ -145,7 +145,8 @@ const PASSAPORTES: PassportData[] = [
     accentColor: "text-[#191919]",
     benefitBg: "bg-transparent",
     benefitBorder: "border-[#191919]/20",
-    benefitTextColor: "text-[#191919]"
+    benefitTextColor: "text-[#191919]",
+    badgeText: "Bônus|de Julho"
   }
 ];
 
@@ -311,10 +312,9 @@ function PassportCard({ data }: { data: PassportData }) {
             {data.badgeText.split('|').map((line, i) => (
               <span
                 key={i}
-                className={`block uppercase whitespace-nowrap ${
-                  i === 0 ? "text-[22px] md:text-[28px] tracking-[-1px] leading-[0.8] mb-0.5" : 
-                  "text-[12px] md:text-[16px] tracking-[-0.5px] leading-[0.8]"
-                }`}
+                className={`block uppercase whitespace-nowrap ${i === 0 ? "text-[22px] md:text-[28px] tracking-[-1px] leading-[0.8] mb-0.5" :
+                    "text-[12px] md:text-[16px] tracking-[-0.5px] leading-[0.8]"
+                  }`}
               >
                 {line}
               </span>
@@ -399,8 +399,8 @@ function PassportCard({ data }: { data: PassportData }) {
           ))}
         </div>
 
-        {/* July Bonus Card (Only for Passaporte Profissional) */}
-        {data.id === 'educador' && (
+        {/* July Bonus Card */}
+        {(data.id === 'educador' || data.id === 'parental') && (
           <div className="bg-white border-2 border-[#191919] rounded-[24px] p-5 flex flex-col gap-4 shadow-[3px_3px_0px_0px_#191919] w-full text-left">
             {/* Header: gift icon and title */}
             <div className="flex items-center gap-3 text-[#191919]">
@@ -409,20 +409,22 @@ function PassportCard({ data }: { data: PassportData }) {
                 Comprando em julho, você leva:
               </span>
             </div>
-            
-            {/* Item 1: Biblioteca Parental */}
-            <div className="flex gap-2.5 items-start text-[#191919]">
-              <Files className="w-5 h-5 text-[#2260a1] shrink-0 mt-0.5" />
-              <p className="font-dm-sans text-[14px] leading-relaxed">
-                <span className="font-semibold">Biblioteca Parental</span> — acervo das 6 edições do Congresso. +180h · +100 especialistas · 1 ano de acesso. Siegel, Nelsen, Porges e outras referências mundiais.
-              </p>
-            </div>
-            
+
+            {/* Item 1: Biblioteca Parental (Only for Profissional) */}
+            {data.id === 'educador' && (
+              <div className="flex gap-2.5 items-start text-[#191919]">
+                <Video className="w-5 h-5 text-[#2260a1] shrink-0 mt-0.5" />
+                <p className="font-dm-sans text-[14px] leading-relaxed">
+                  <span className="font-semibold">Biblioteca Parental:</span> todas as palestras das 6 edições do Congresso, gravadas em vídeo. +180h · +100 especialistas · 1 ano de acesso. Siegel, Nelsen, Porges e outras referências mundiais.
+                </p>
+              </div>
+            )}
+
             {/* Item 2: Livro */}
             <div className="flex gap-2.5 items-start text-[#191919]">
               <BookOpen className="w-5 h-5 text-[#ef7d25] shrink-0 mt-0.5" />
               <p className="font-dm-sans text-[14px] leading-relaxed">
-                <span className="font-semibold">O novo livro de Gordon Neufeld</span> — brinde físico para as 200 primeiras compras.
+                <span className="font-semibold">Novo livro de Gordon Neufeld</span> – “Aproxime-se dos seus filhos” – para as primeiras 200 compras.
               </p>
             </div>
           </div>
@@ -447,12 +449,12 @@ function PassportCard({ data }: { data: PassportData }) {
               <p className={`font-dm-sans text-[15px] md:text-[16px] font-medium ${data.id === 'educador' ? 'text-white/95' : 'text-[#191919]/90'}`}>
                 Garantindo agora, no Lote 5:
               </p>
-              
+
               <div className={`font-sugar-peachy text-[40px] md:text-[54px] leading-none tracking-tight flex items-center justify-center gap-2 ${data.id === 'educador' ? 'text-white' : 'text-[#191919]'}`}>
                 <span>12x de</span>
                 <span>{currentPriceInstallment}</span>
               </div>
-              
+
               <div className="flex items-center justify-center gap-2 flex-wrap">
                 <span className={`font-dm-sans text-[18px] md:text-[20px] ${data.id === 'educador' ? 'text-white/95' : 'text-[#191919]/90'}`}>
                   ou {currentPriceFull.replace("ou ", "").replace(",00", "")}
@@ -461,10 +463,10 @@ function PassportCard({ data }: { data: PassportData }) {
                   economize R$ {data.id === 'educador' ? 329 : (isDouble ? 149 : 99)}
                 </span>
               </div>
-              
+
               {data.id === 'educador' && (
                 <p className="font-dm-sans text-[13px] md:text-[14px] text-white/85 mt-1">
-                  menos de R$ 4,51 por dia · sobe para <span className="text-[#fbce32] font-bold">R$ 2.197</span> em nov.
+                  menos de R$ 412 por dia · sobe para <span className="text-[#fbce32] font-bold">R$ 2.197</span> em nov.
                 </p>
               )}
             </div>

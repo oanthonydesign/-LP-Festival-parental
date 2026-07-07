@@ -7,18 +7,19 @@ import { imgChatGptImage26DeJanDe20261948541, imgChatGptImage26DeJanDe2026200212
 const imgProfissionais = "/images/img_profissionais.webp";
 const imgPais = "/images/img_pais.webp";
 
-function CloseBarMac() {
+function CloseBarMac({ label }: { label?: string }) {
     return (
-        <div className="bg-[#fff6ee] border-2 border-[#191919] border-solid h-[56px] overflow-clip relative rounded-tl-[24px] rounded-tr-[24px] shadow-[7px_7px_0px_0px_#191919] shrink-0 w-full" data-name="close bar_mac">
-            <div className="absolute left-[28px] size-[12px] top-[19.8px]">
-                <div className="bg-[#FC3F51] rounded-full size-full" />
+        <div className="bg-[#fff6ee] border-2 border-[#191919] border-solid h-[56px] overflow-clip relative rounded-tl-[24px] rounded-tr-[24px] shadow-[7px_7px_0px_0px_#191919] shrink-0 w-full flex items-center justify-between px-6" data-name="close bar_mac">
+            <div className="flex gap-[7px] items-center">
+                <div className="size-[12px] bg-[#FC3F51] rounded-full" />
+                <div className="size-[12px] bg-[#ECA031] rounded-full" />
+                <div className="size-[12px] bg-[#1CB638] rounded-full" />
             </div>
-            <div className="absolute left-[45px] size-[12px] top-[19.8px]">
-                <div className="bg-[#ECA031] rounded-full size-full" />
-            </div>
-            <div className="absolute left-[62px] size-[12px] top-[19.8px]">
-                <div className="bg-[#1CB638] rounded-full size-full" />
-            </div>
+            {label && (
+                <span className="font-dm-sans font-bold text-[#505050] text-[12px] md:text-[14px] uppercase tracking-[0.14px]">
+                    {label}
+                </span>
+            )}
         </div>
     );
 }
@@ -30,7 +31,7 @@ function Card({
     subtext,
     image,
     id,
-    badgeText
+    label
 }: {
     bgColor: string;
     textColor: string;
@@ -38,28 +39,11 @@ function Card({
     subtext: string;
     image: string;
     id?: string;
-    badgeText?: string;
+    label?: string;
 }) {
     return (
         <div className="flex flex-col items-start w-full lg:w-1/2 relative group scroll-mt-24 lg:scroll-mt-32" id={id}>
-            {badgeText && (
-                <div className="absolute -top-10 -right-4 md:-right-8 bg-[#f7a73c] border-2 border-[#191919] rounded-full w-[90px] h-[90px] md:w-[110px] md:h-[110px] flex items-center justify-center rotate-12 shadow-[4px_4px_0px_0px_#191919] z-30 animate-bounce-slow">
-                    <span className="font-sugar-peachy text-[#191919] text-center leading-[0.9] flex flex-col items-center justify-center mt-1">
-                        {badgeText.split('|').map((line, i) => (
-                            <span
-                                key={i}
-                                className={`block uppercase whitespace-nowrap ${
-                                    i === 0 ? "text-[28px] md:text-[36px] tracking-[-1px] leading-[0.8] mb-0.5" : 
-                                    "text-[16px] md:text-[20px] tracking-[-0.5px] leading-[0.8]"
-                                }`}
-                            >
-                                {line}
-                            </span>
-                        ))}
-                    </span>
-                </div>
-            )}
-            <CloseBarMac />
+            <CloseBarMac label={label} />
             <div className={`flex-1 flex flex-col items-center p-6 gap-6 relative rounded-bl-[16px] rounded-br-[16px] shadow-[7px_7px_0px_0px_#191919] shrink-0 w-full border-b-2 border-l-2 border-r-2 border-[#191919] border-solid`} style={{ backgroundColor: bgColor }}>
                 <div className={`flex flex-col gap-6 items-center text-center ${textColor}`}>
                     <h3 className="font-dm-sans font-semibold text-[26px] md:text-[36px] leading-tight max-w-[458px]">
@@ -106,7 +90,7 @@ export default function Section8() {
                         heading="Para profissionais que trabalham com famílias"
                         subtext="Quatro dias de repertório para quem enfrenta a complexidade das relações familiares na prática, com base científica, troca qualificada e caminhos para transformar teoria em intervenção real com famílias."
                         image={imgProfissionais}
-                        badgeText="Bônus|de Julho"
+                        label="Profissional e Passaporte"
                     />
                     <Card
                         id="pais"
@@ -115,6 +99,7 @@ export default function Section8() {
                         heading="Para pais, mães e cuidadores"
                         subtext="Dois dias de conversas acessíveis e profundas, com reflexões e experiências para lidar com os desafios reais da criação de filhos hoje com clareza, sem julgamentos ou fórmulas prontas."
                         image={imgPais}
+                        label="Profissional e Parental"
                     />
                 </div>
             </div>

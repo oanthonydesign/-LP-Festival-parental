@@ -8,7 +8,7 @@ export default function HeroSection() {
             {/* --- Background Graphics --- */}
 
             {/* Grafismo Novo 1 - Centralizado e Ampliado */}
-            <div className="hidden lg:block absolute left-1/2 bottom-[-280px] -translate-x-1/2 w-[2350px] pointer-events-none z-0">
+            <div className="hidden lg:block absolute left-1/2 bottom-[-300px] -translate-x-1/2 w-[2500px] fhd:w-[3100px] fhd:bottom-[-420px] pointer-events-none z-0">
                 <img
                     src="/images/grafismo_novo1.svg"
                     alt=""
@@ -17,7 +17,7 @@ export default function HeroSection() {
             </div>
 
             {/* --- Main Content (Centered) --- */}
-            <div className="relative lg:absolute lg:top-[132px] pt-[70px] lg:pt-0 left-0 lg:left-1/2 -translate-x-0 lg:-translate-x-1/2 w-full max-w-[1280px] flex flex-col items-center gap-[28px] md:gap-[46px] z-20 px-4 md:px-6 lg:px-0">
+            <div className="relative lg:absolute lg:top-[132px] pt-[92px] lg:pt-0 left-0 lg:left-1/2 -translate-x-0 lg:-translate-x-1/2 w-full max-w-[1280px] flex flex-col items-center gap-[28px] md:gap-[46px] z-20 px-4 md:px-6 lg:px-0">
 
                 {/* Text Block */}
                 <div className="flex flex-col items-center gap-[28px] w-full">
@@ -27,14 +27,14 @@ export default function HeroSection() {
                             <img src="/images/icons/calendario_cor.svg" alt="Calendario" className="w-[20px] h-[20px] object-contain" loading="lazy" />
                         </div>
                         <span className="font-dm-sans font-bold text-[#505050] text-[12px] md:text-[14px] uppercase tracking-[0.14px] text-center leading-[1.4] md:leading-none mt-[2px] whitespace-normal md:whitespace-nowrap">
-                            19 a 22 de novembro · Transamérica Expo, <br className="md:hidden" /> São Paulo · 7ª edição
+                            19 a 22 de novembro · 7ª edição · São Paulo
                         </span>
                     </div>
 
                     {/* Headline */}
                     <h1 className="font-sugar-peachy font-bold text-[#ef7d25] text-[36px] sm:text-[52px] md:text-[72px] lg:text-[88px] text-center leading-[0.8] md:leading-[0.9] tracking-[-1.4px] sm:tracking-[-1.5px] md:tracking-[-2px] lg:tracking-[-2.6px] relative px-4 md:px-0 max-w-[1200px] w-[92%] text-balance">
                         <span className="mt-1">
-                            A maior reunião <span className="text-[#2260a1]">sobre parentalidade, infância e vínculo da América Latina.</span>
+                            O maior encontro <span className="text-[#2260a1]">sobre parentalidade, infância e vínculo da América Latina</span>
                         </span>
                     </h1>
 
@@ -60,7 +60,7 @@ export default function HeroSection() {
 
                     {/* Botão Pais */}
                     <a href="#contexto" className="group relative w-full md:w-[332px]">
-                        <div className="bg-[#D6ECF7] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
+                        <div className="bg-[#F6D2C8] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
                             <img src="/images/icons/ingresso_linha_preta.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="lazy" />
                             <span className="font-dm-sans font-bold text-[#191919] text-[13px] md:text-[14px] uppercase tracking-[0.8px] md:tracking-[1px] whitespace-nowrap">
                                 Sou pai, mãe ou cuidador(a)
@@ -77,8 +77,8 @@ export default function HeroSection() {
             <div className="relative mt-8 lg:mt-0 w-full max-w-[500px] mx-auto lg:mx-0 lg:max-w-none lg:w-[1336px] lg:h-[501px] lg:absolute lg:top-[709px] lg:left-1/2 lg:-translate-x-1/2 pointer-events-none z-10 px-4 lg:px-0">
 
                 {/* Mobile wave graphic behind speakers */}
-                <div className="absolute bottom-[30px] left-1/2 -translate-x-1/2 w-[calc(100%+80px)] h-auto block lg:hidden z-0 opacity-100">
-                    <img src="/images/grafismo_wave_mb.svg" alt="" className="w-full h-auto" />
+                <div className="absolute bottom-[-30px] left-1/2 -translate-x-1/2 w-[calc(100%+120px)] h-auto block lg:hidden z-0 opacity-100">
+                    <img src="/images/grafismo_novo1.svg" alt="" className="w-full h-auto" />
                 </div>
 
                 {/* Mobile Single Image */}

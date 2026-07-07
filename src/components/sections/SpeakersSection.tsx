@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import svgPaths from "@/components/svg/svg-paths";
 import { Globe } from "lucide-react";
 
@@ -356,10 +356,10 @@ function SocialIconButton({ type, href }: { type: "linkedin" | "instagram" | "we
 
 const COLOR_PALETTE = ["#79c3ab", "#74acde", "#f7a73c"];
 
-export function SpeakerCard({ speaker, bgColorOverride }: { speaker: Speaker; bgColorOverride?: string }) {
+export function SpeakerCard({ speaker, bgColorOverride, className }: { speaker: Speaker; bgColorOverride?: string; className?: string }) {
     const bgColor = bgColorOverride ?? speaker.bgColor;
     return (
-        <div className="flex-[1_0_0] min-h-px min-w-px relative rounded-[24px]" style={{ backgroundColor: bgColor }}>
+        <div className={`relative min-h-px rounded-[24px] shrink-0 snap-center w-[85vw] sm:w-[45vw] lg:w-auto h-auto ${className || ""}`} style={{ backgroundColor: bgColor }}>
             <div className="flex flex-col items-center overflow-clip rounded-[inherit] size-full">
                 <div className="content-stretch flex flex-col gap-[12px] items-center pb-[12px] pt-[8px] px-[8px] relative w-full">
                     {/* Image Container */}
@@ -450,6 +450,7 @@ function FilterToggle({
 export default function SpeakersSection() {
     const [activeFilter, setActiveFilter] = useState<SpeakerCategory>("todos");
     const [visibleCount, setVisibleCount] = useState(8);
+    const carouselRef = useRef<HTMLDivElement>(null);
 
     const professionalOrder = [1, 3, 5, 7, 9, 13, 15, 17, 19, 20, 21, 22, 23, 24, 25, 28];
     const parentsOrder = [2, 4, 6, 8, 10, 11, 12, 13, 14, 16, 18, 19, 22, 23, 26, 27];
@@ -486,21 +487,23 @@ export default function SpeakersSection() {
         return filtered;
     })();
 
-    const visibleSpeakers = filteredSpeakers.slice(0, visibleCount);
-    const hasMore = visibleCount < filteredSpeakers.length;
-
     const handleFilterChange = (filter: SpeakerCategory) => {
         setActiveFilter(filter);
         setVisibleCount(8);
-    };
-
-    const handleLoadMore = () => {
-        setVisibleCount((prev) => Math.min(prev + 4, filteredSpeakers.length));
+        if (carouselRef.current) {
+            carouselRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+        }
     };
 
     return (
         <section className="bg-[#fff6ef] w-full flex flex-col items-center pb-[32px] md:pb-[72px] pt-[32px] md:pt-[48px] relative isolate scroll-mt-24" id="palestrantes">
-            <div className="layout-container flex flex-col gap-[64px] items-center relative px-16 md:px-0">
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                .hide-scrollbar::-webkit-scrollbar {
+                    display: none;
+                }
+            `}} />
+            <div className="layout-container flex flex-col gap-[64px] items-center relative px-4 md:px-0 w-full">
                 {/* Header */}
                 <div className="content-stretch flex flex-col gap-[28px] items-center relative shrink-0 w-full">
                     {/* Event Badge */}
@@ -535,22 +538,27 @@ export default function SpeakersSection() {
                 {/* Filter Toggle */}
                 <FilterToggle active={activeFilter} onChange={handleFilterChange} />
 
-                {/* Speakers Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] relative shrink-0 w-full">
-                    {visibleSpeakers.map((speaker, index) => (
+                {/* Speakers Grid (Carousel on Mobile, Paginated on Desktop) */}
+                <div 
+                    ref={carouselRef}
+                    className="flex flex-row overflow-x-auto lg:overflow-visible snap-x snap-mandatory lg:snap-none lg:grid lg:grid-cols-4 gap-4 lg:gap-[20px] relative shrink-0 w-[calc(100%+32px)] -mx-4 px-4 lg:w-full lg:mx-0 lg:px-0 py-4 -my-4 hide-scrollbar items-stretch lg:items-stretch"
+                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                >
+                    {filteredSpeakers.map((speaker, index) => (
                         <SpeakerCard
                             key={speaker.id}
                             speaker={speaker}
                             bgColorOverride={activeFilter !== "todos" ? COLOR_PALETTE[index % 3] : undefined}
+                            className={index >= visibleCount ? "lg:hidden" : ""}
                         />
                     ))}
                 </div>
 
-                {/* Load More Button */}
-                {hasMore && (
-                    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full max-w-[236px] mx-auto">
+                {/* Load More Button (Desktop Only) */}
+                {visibleCount < filteredSpeakers.length && (
+                    <div className="hidden lg:flex content-stretch flex-col items-start relative shrink-0 w-full max-w-[236px] mx-auto">
                         <button
-                            onClick={handleLoadMore}
+                            onClick={() => setVisibleCount((prev) => Math.min(prev + 4, filteredSpeakers.length))}
                             className="bg-[rgba(25,25,25,0.05)] border-2 border-[#191919] relative rounded-[40px] shrink-0 w-full cursor-pointer hover:bg-[rgba(25,25,25,0.1)] transition-all hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] shadow-[4px_4px_0px_0px_#191919]"
                         >
                             <div className="flex flex-row items-center justify-center size-full">

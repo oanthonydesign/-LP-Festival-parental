@@ -272,7 +272,7 @@ export default function HeroSectionV2() {
                             <img src="/images/icons/calendario_cor.svg" alt="Calendario" className="w-[20px] h-[20px] object-contain" loading="lazy" />
                         </div>
                         <span className="font-dm-sans font-bold text-[#505050] text-[12px] md:text-[14px] uppercase tracking-[0.14px] whitespace-normal md:whitespace-nowrap leading-none mt-[2px]">
-                            19 a 22 de novembro · Transamérica Expo, São Paulo · 7ª edição
+                            19 a 22 de novembro · 7ª edição · São Paulo
                         </span>
                     </div>
 
