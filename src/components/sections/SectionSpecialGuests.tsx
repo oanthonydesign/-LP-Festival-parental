@@ -84,10 +84,10 @@ export default function SectionSpecialGuests() {
 
                         {/* 2 Columns Container: Images on Left, Promo Splash on Right */}
                         <div className="mt-auto flex flex-col xl:flex-row items-center justify-between gap-10 xl:gap-4 relative z-10 w-full pt-8">
-                            
+
                             {/* Images Container - Left Column */}
                             <div className="w-full xl:w-[55%] flex flex-row items-center justify-center gap-0 relative z-10">
-                                
+
 
 
                                 {/* Livro - Agora à esquerda com borda e fundo branco */}
@@ -104,7 +104,7 @@ export default function SectionSpecialGuests() {
 
                                 {/* Polaroid 1 - Gordon */}
                                 <div className="relative z-10 w-[210px] sm:w-auto max-w-[320px] aspect-[3/4] bg-white p-3 pb-10 sm:pb-12 border-2 border-[#191919] rounded-xl shadow-[6px_6px_0px_0px_#191919] rotate-[2deg] transition-all duration-300 hover:rotate-[1deg] hover:scale-105">
-                                    
+
                                     {/* Badge Online Mobile no canto */}
                                     <div className="absolute z-30 -top-3 -right-3 lg:hidden">
                                         <span className="font-dm-sans font-bold text-white bg-[#ef7d25] px-4 py-1 sm:py-1.5 rounded-full text-[13px] sm:text-[14px] border-2 border-[#191919] shadow-[2px_2px_0px_0px_#191919] inline-block rotate-[4deg]">
@@ -130,12 +130,12 @@ export default function SectionSpecialGuests() {
 
                             {/* Promo Splash - Right Column */}
                             <div className="w-full xl:w-[45%] flex items-center justify-center xl:justify-end lg:pr-4">
-                                <div className="bg-[#fbce32] border-2 border-[#191919] rounded-[24px] shadow-[4px_4px_0px_0px_#191919] px-6 py-5 md:px-8 md:py-6 rotate-2 w-full max-w-[340px] flex flex-col gap-3">
+                                <div className="bg-[#fbce32] border-2 border-[#191919] rounded-[24px] shadow-[4px_4px_0px_0px_#191919] px-4 py-5 md:px-5 md:py-6 rotate-2 w-full max-w-[340px] flex flex-col gap-3">
                                     <p className="font-dm-sans font-medium text-[#191919] text-[16px] md:text-[18px] leading-[1.2] text-center xl:text-left">
                                         Ao adquirir o <span className="font-bold">Passaporte Profissional</span> GANHE O LIVRO:
                                     </p>
                                     <p className="font-dm-sans font-bold uppercase text-[#191919] text-[20px] md:text-[22px] tracking-tight leading-[1.1] text-center xl:text-left">
-                                        Aproxime-se dos seus filhos.
+                                        Aproxime-se dos seus filhos
                                     </p>
                                 </div>
                             </div>
