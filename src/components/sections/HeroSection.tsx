@@ -41,7 +41,7 @@ export default function HeroSection() {
                     {/* Subtext */}
                     <div className="font-dm-sans text-[#4c4d4f] text-[18px] sm:text-[20px] md:text-[24px] text-center leading-[1.2] md:leading-[1.1] flex flex-col gap-3 md:gap-4 max-w-full md:max-w-[1150px] px-2 md:px-0">
                         <p>
-                            O lugar de quem leva a infância a sério. Quatro dias com +50 das maiores referências em desenvolvimento humano para transformar ciência em prática real — para profissionais que atuam com famílias, e para os pais e mães que vivem a parentalidade todos os dias.
+                            Quatro dias com as maiores referências em infância e adolescência para transformar ciência em prática real – para profissionais que atuam com famílias, e para mães e pais que vivem a parentalidade todos os dias.
                         </p>
                     </div>
                 </div>

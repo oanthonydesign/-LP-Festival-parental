@@ -83,10 +83,10 @@ export default function SectionSpecialGuests() {
                         </div>
 
                         {/* 2 Columns Container: Images on Left, Promo Splash on Right */}
-                        <div className="mt-auto flex flex-col xl:flex-row items-center justify-between gap-10 xl:gap-4 relative z-10 w-full pt-8">
+                        <div className="mt-auto flex flex-col xl:flex-row items-center justify-center gap-10 xl:gap-4 relative z-10 w-full pt-8">
 
                             {/* Images Container - Left Column */}
-                            <div className="w-full xl:w-[55%] flex flex-row items-center justify-center gap-0 relative z-10">
+                            <div className="w-full flex flex-row items-center justify-center gap-0 relative z-10">
 
 
 
@@ -129,7 +129,7 @@ export default function SectionSpecialGuests() {
                             </div>
 
                             {/* Promo Splash - Right Column */}
-                            <div className="w-full xl:w-[45%] flex items-center justify-center xl:justify-end lg:pr-4">
+                            {/* <div className="w-full xl:w-[45%] flex items-center justify-center xl:justify-end lg:pr-4">
                                 <div className="bg-[#fbce32] border-2 border-[#191919] rounded-[24px] shadow-[4px_4px_0px_0px_#191919] px-4 py-5 md:px-5 md:py-6 rotate-2 w-full max-w-[340px] flex flex-col gap-3">
                                     <p className="font-dm-sans font-medium text-[#191919] text-[16px] md:text-[18px] leading-[1.2] text-center">
                                         Ao adquirir o Passaporte Profissional<span className="font-bold"> GANHE O LIVRO:</span>
@@ -138,7 +138,7 @@ export default function SectionSpecialGuests() {
                                         Aproxime-se dos seus filhos
                                     </p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 

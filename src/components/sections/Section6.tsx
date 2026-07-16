@@ -87,9 +87,9 @@ const PASSAPORTES: PassportData[] = [
     id: "educador",
     name: "Passaporte Profissional",
     lote: "Lote 5",
-    priceInstallment: "R$ 164,70",
-    priceFull: "ou R$ 1.647,00 à vista",
-    priceOriginal: "R$ 2.197,00",
+    priceInstallment: "R$ 164.70",
+    priceFull: "ou R$ 1647.00 à vista",
+    priceOriginal: "R$ 2197.00",
     benefits: [
       "4 dias para aprofundar conhecimento, prática e visão sobre a parentalidade contemporânea. Trilha Técnica (dias 1–2, exclusiva para profissionais) + Trilha Parental (dias 3–4, aberta também para pais e cuidadores)",
       "+50 palestrantes, referências em saúde, educação e comportamento",
@@ -109,15 +109,15 @@ const PASSAPORTES: PassportData[] = [
     benefitBg: "bg-transparent",
     benefitBorder: "border-[#191919]/20",
     benefitTextColor: "text-white",
-    badgeText: "Bônus|de Julho"
+    // badgeText: "Bônus|de Julho"
   },
   {
     id: "parental",
     name: "Passaporte Parental",
     lote: "Lote 5",
-    priceInstallment: "R$ 49,70",
-    priceFull: "ou R$ 497,00 à vista",
-    priceOriginal: "R$ 1.497,00",
+    priceInstallment: "R$ 49.70",
+    priceFull: "ou R$ 497.00 à vista",
+    priceOriginal: "R$ 1497.00",
     benefits: [
       "Dois dias de palestras, espetáculos e vivências (21–22/11) — para sair da sobrecarga e ganhar clareza, presença e direção na relação com seus filhos.",
       "Autógrafos com palestrantes, feira de produtos e serviços e sacola de brindes",
@@ -127,9 +127,9 @@ const PASSAPORTES: PassportData[] = [
     buttonText: "Quero o passaporte parental",
     href: "https://chk.eduzz.com/39VEAVA5WR",
     doubleOptions: {
-      priceInstallment: "R$ 74,70",
-      priceFull: "ou R$ 747,00 à vista",
-      priceOriginal: "R$ 1.947,00",
+      priceInstallment: "R$ 74.70",
+      priceFull: "ou R$ 747.00 à vista",
+      priceOriginal: "R$ 1947.00",
       benefits: [
         "Viva os dois dias dessa experiência (21 e 22/11) com quem partilha a mesma jornada e com melhor custo por participante.",
         "Autógrafos com palestrantes, feira de produtos e serviços e sacola de brindes",
@@ -146,7 +146,7 @@ const PASSAPORTES: PassportData[] = [
     benefitBg: "bg-transparent",
     benefitBorder: "border-[#191919]/20",
     benefitTextColor: "text-[#191919]",
-    badgeText: "Bônus|de Julho"
+    // badgeText: "Bônus|de Julho"
   }
 ];
 
@@ -313,7 +313,7 @@ function PassportCard({ data }: { data: PassportData }) {
               <span
                 key={i}
                 className={`block uppercase whitespace-nowrap ${i === 0 ? "text-[22px] md:text-[28px] tracking-[-1px] leading-[0.8] mb-0.5" :
-                    "text-[12px] md:text-[16px] tracking-[-0.5px] leading-[0.8]"
+                  "text-[12px] md:text-[16px] tracking-[-0.5px] leading-[0.8]"
                   }`}
               >
                 {line}
@@ -400,9 +400,8 @@ function PassportCard({ data }: { data: PassportData }) {
         </div>
 
         {/* July Bonus Card */}
-        {(data.id === 'educador' || data.id === 'parental') && (
+        {/* {(data.id === 'educador' || data.id === 'parental') && (
           <div className="bg-white border-2 border-[#191919] rounded-[24px] p-5 flex flex-col gap-4 shadow-[3px_3px_0px_0px_#191919] w-full text-left">
-            {/* Header: gift icon and title */}
             <div className="flex items-center gap-3 text-[#191919]">
               <Gift className="w-5 h-5 text-[#ef7d25] shrink-0" />
               <span className="font-dm-sans font-bold text-[15px] sm:text-[16px]">
@@ -410,7 +409,6 @@ function PassportCard({ data }: { data: PassportData }) {
               </span>
             </div>
 
-            {/* Item 1: Biblioteca Parental (Only for Profissional) */}
             {data.id === 'educador' && (
               <div className="flex gap-2.5 items-start text-[#191919]">
                 <Video className="w-5 h-5 text-[#2260a1] shrink-0 mt-0.5" />
@@ -420,7 +418,6 @@ function PassportCard({ data }: { data: PassportData }) {
               </div>
             )}
 
-            {/* Item 2: Livro */}
             <div className="flex gap-2.5 items-start text-[#191919]">
               <BookOpen className="w-5 h-5 text-[#ef7d25] shrink-0 mt-0.5" />
               <p className="font-dm-sans text-[14px] leading-relaxed">
@@ -428,7 +425,7 @@ function PassportCard({ data }: { data: PassportData }) {
               </p>
             </div>
           </div>
-        )}
+        )} */}
 
         {SHOW_COUNTDOWN_BADGE && (
           <div className="flex flex-col items-center gap-2 w-full">
@@ -460,13 +457,13 @@ function PassportCard({ data }: { data: PassportData }) {
                   ou {currentPriceFull.replace("ou ", "").replace(",00", "")}
                 </span>
                 <span className="bg-[#c2f2c5] border-2 border-[#191919] rounded-[8px] px-2 py-0.5 font-dm-sans font-bold text-[13px] text-[#191919] shadow-[1px_1px_0px_0px_#191919] whitespace-nowrap">
-                  economize R$ {data.id === 'educador' ? 329 : (isDouble ? 445 : 99)}
+                  economize R$ {data.id === 'educador' ? 329 : (isDouble ? 145 : 99)}
                 </span>
               </div>
 
               {data.id === 'educador' && (
                 <p className="font-dm-sans text-[13px] md:text-[14px] text-white/85 mt-1">
-                  menos de R$ 412 por dia · sobe para <span className="text-[#fbce32] font-bold">R$ 2.197</span> em nov.
+                  menos de R$ 412 por dia · sobe para <span className="text-[#fbce32] font-bold">R$ 2197</span> em nov.
                 </p>
               )}
             </div>

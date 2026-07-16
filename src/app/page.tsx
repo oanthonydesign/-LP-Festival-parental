@@ -63,7 +63,7 @@ export default function Home() {
             </main>
             <WhatsAppButton />
             {SHOW_STICKY_BAR && <StickyBottomBar />}
-            <AcaoRelampagoBanner />
+            {/* <AcaoRelampagoBanner /> */}
         </>
     )
 }

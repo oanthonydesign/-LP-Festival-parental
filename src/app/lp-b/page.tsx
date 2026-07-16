@@ -71,7 +71,7 @@ export default function LPB() {
             </main>
             <WhatsAppButton />
             {SHOW_STICKY_BAR && <StickyBottomBar />}
-            <AcaoRelampagoBanner />
+            {/* <AcaoRelampagoBanner /> */}
         </>
     )
 }
