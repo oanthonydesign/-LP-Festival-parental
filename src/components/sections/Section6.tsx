@@ -87,9 +87,9 @@ const PASSAPORTES: PassportData[] = [
     id: "educador",
     name: "Passaporte Profissional",
     lote: "Lote 5",
-    priceInstallment: "R$ 164.70",
+    priceInstallment: "R$ 164,70",
     priceFull: "ou R$ 1647.00 à vista",
-    priceOriginal: "R$ 2197.00",
+    priceOriginal: "R$ 2.197",
     benefits: [
       "4 dias para aprofundar conhecimento, prática e visão sobre a parentalidade contemporânea. Trilha Técnica (dias 1–2, exclusiva para profissionais) + Trilha Parental (dias 3–4, aberta também para pais e cuidadores)",
       "+50 palestrantes, referências em saúde, educação e comportamento",
@@ -115,7 +115,7 @@ const PASSAPORTES: PassportData[] = [
     id: "parental",
     name: "Passaporte Parental",
     lote: "Lote 5",
-    priceInstallment: "R$ 49.70",
+    priceInstallment: "R$ 49,70",
     priceFull: "ou R$ 497.00 à vista",
     priceOriginal: "R$ 1497.00",
     benefits: [
@@ -127,7 +127,7 @@ const PASSAPORTES: PassportData[] = [
     buttonText: "Quero o passaporte parental",
     href: "https://chk.eduzz.com/39VEAVA5WR",
     doubleOptions: {
-      priceInstallment: "R$ 74.70",
+      priceInstallment: "R$ 74,70",
       priceFull: "ou R$ 747.00 à vista",
       priceOriginal: "R$ 1947.00",
       benefits: [
@@ -235,7 +235,7 @@ function PassportCard({ data }: { data: PassportData }) {
   const currentPriceOriginal = isDouble && hasDoubleOption ? data.doubleOptions!.priceOriginal : data.priceOriginal;
   const currentBenefits = isDouble && hasDoubleOption ? data.doubleOptions!.benefits : data.benefits;
   const currentHref = isAcaoDia && data.id === 'educador'
-    ? "https://chk.eduzz.com/Z0B1O2B39A"
+    ? "https://chk.eduzz.com/39VK8PJ5WR"
     : (isDouble && hasDoubleOption ? data.doubleOptions!.href : data.href);
   const currentButtonText = isDouble && hasDoubleOption ? data.doubleOptions!.buttonText : data.buttonText;
 
@@ -298,11 +298,11 @@ function PassportCard({ data }: { data: PassportData }) {
   return (
     <div id={data.id} className={`flex flex-col w-full lg:max-w-[420px] ${data.textColor} relative group`}>
       {isAcaoDia && data.id === 'educador' ? (
-        <div className="absolute -top-[60px] -right-4 z-50 [animation:var(--animate-vibrate-alarm)]">
+        <div className="absolute -top-[55px] -right-6 md:-right-8 z-50 [animation:var(--animate-vibrate-alarm)]">
           <img
             src="/images/somente-hoje.svg"
             alt="Somente hoje"
-            className="w-[110px] h-[110px] md:w-[120px] md:h-[120px]"
+            className="w-[104px] h-[104px] md:w-[114px] md:h-[114px]"
             loading="eager"
           />
         </div>
@@ -323,7 +323,7 @@ function PassportCard({ data }: { data: PassportData }) {
         </div>
       ) : null}
       {/* Header with Title and Lote */}
-      <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] p-[12px] w-full z-10 relative overflow-hidden ${isAcaoDia && data.id === 'educador' ? 'shadow-[3px_3px_0px_0px_#191919,0_0_32px_rgba(247,167,60,0.75),0_0_64px_rgba(247,167,60,0.4)]' : 'shadow-[3px_3px_0px_0px_#191919]'}`}>
+      <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] p-[12px] w-full z-10 relative overflow-hidden shadow-[3px_3px_0px_0px_#191919]`}>
         {SHOW_PROMO_RIBBON && <Ribbon />}
         <div className={`border-2 ${data.borderColor} border-solid rounded-[16px] flex items-center justify-between px-[12px] py-[12px] gap-4 relative z-20`}>
           <div className="bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[6px] shadow-[3px_3px_0px_0px_#191919] px-[12px] py-[4px] shrink-0">
@@ -336,7 +336,7 @@ function PassportCard({ data }: { data: PassportData }) {
       </div>
 
       {/* Main Content Area */}
-      <div className={`flex flex-col ${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[24px] md:rounded-[32px] p-[20px] md:p-[24px] w-full -mt-[2px] pt-8 md:pt-10 gap-6 z-20 relative ${isAcaoDia && data.id === 'educador' ? 'shadow-[3px_3px_0px_0px_#191919,0_0_32px_rgba(247,167,60,0.75),0_0_64px_rgba(247,167,60,0.4)]' : 'shadow-[3px_3px_0px_0px_#191919]'}`}>
+      <div className={`flex flex-col ${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[24px] md:rounded-[32px] p-[20px] md:p-[24px] w-full -mt-[2px] pt-8 md:pt-10 gap-6 z-20 relative shadow-[3px_3px_0px_0px_#191919]`}>
 
         {/* Passaporte Tags */}
         {data.id === 'educador' && (
@@ -380,15 +380,6 @@ function PassportCard({ data }: { data: PassportData }) {
 
         {/* Benefits List */}
         <div className="flex flex-col gap-4 w-full">
-          {/* Bullet especial da ação relâmpago — visível apenas no dia 31/05 */}
-          {isAcaoDia && data.id === 'educador' && (
-            <div className="flex gap-3 items-start">
-              <StarIcon />
-              <p className={`font-dm-sans text-[16px] leading-tight ${data.benefitTextColor}`}>
-                <span className="font-bold">SÓ HOJE (31/5):</span> adquira o Passaporte Profissional e ganhe mais um ingresso para levar outro profissional com você.
-              </p>
-            </div>
-          )}
           {currentBenefits.map((benefit, idx) => (
             <div key={idx} className="flex gap-3 items-start">
               <StarIcon />
@@ -398,6 +389,21 @@ function PassportCard({ data }: { data: PassportData }) {
             </div>
           ))}
         </div>
+
+        {/* Card de Bônus da Ação Relâmpago — DIA DO AMIGO */}
+        {isAcaoDia && data.id === 'educador' && (
+          <div className="bg-white border-2 border-[#191919] rounded-[24px] p-4 md:p-5 flex flex-col gap-2 shadow-[3px_3px_0px_0px_#191919] w-full text-left">
+            <div className="flex items-center gap-2 text-[#191919]">
+              <span className="text-xl">🎁</span>
+              <span className="font-dm-sans font-bold text-[15px] sm:text-[16px] text-[#191919] uppercase tracking-tight">
+                SÓ HOJE: DIA DO AMIGO
+              </span>
+            </div>
+            <p className="font-dm-sans text-[14px] sm:text-[15px] leading-relaxed text-[#191919]">
+              comprando um Passaporte Profissional, o segundo é por nossa conta. Dois acessos completos aos 4 dias, com certificados e acessos à gravação — traga quem também atende famílias.
+            </p>
+          </div>
+        )}
 
         {/* July Bonus Card */}
         {/* {(data.id === 'educador' || data.id === 'parental') && (
@@ -463,7 +469,7 @@ function PassportCard({ data }: { data: PassportData }) {
 
               {data.id === 'educador' && (
                 <p className="font-dm-sans text-[13px] md:text-[14px] text-white/85 mt-1">
-                  menos de R$ 412 por dia · sobe para <span className="text-[#fbce32] font-bold">R$ 2197</span> em nov.
+                  menos de R$ 412 por dia · sobe para <span className="text-[#fbce32] font-bold">R$ 2.197</span> em nov.
                 </p>
               )}
             </div>
