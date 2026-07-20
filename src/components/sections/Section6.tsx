@@ -400,7 +400,7 @@ function PassportCard({ data }: { data: PassportData }) {
               </span>
             </div>
             <p className="font-dm-sans text-[14px] sm:text-[15px] leading-relaxed text-[#191919]">
-              comprando um Passaporte Profissional, o segundo é por nossa conta. Dois acessos completos aos 4 dias, com certificados e acessos à gravação — traga quem também atende famílias.
+              Comprando um Passaporte Profissional, o segundo é por nossa conta. Dois acessos completos aos 4 dias, com certificados e acessos à gravação — traga quem também atende famílias.
             </p>
           </div>
         )}
