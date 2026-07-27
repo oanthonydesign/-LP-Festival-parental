@@ -507,7 +507,7 @@ function ScheduleModal({ isOpen, onClose, initialDay }: { isOpen: boolean; onClo
                             <img
                                 src="/images/logo7ciepsite1.webp"
                                 alt="7º Congresso Internacional de Educação Parental"
-                                className="h-16 md:h-24 max-w-[280px] md:max-w-[360px] w-auto object-contain"
+                                className="h-20 md:h-28 lg:h-32 max-w-[340px] md:max-w-[440px] w-auto object-contain"
                                 loading="lazy"
                             />
                         </div>
