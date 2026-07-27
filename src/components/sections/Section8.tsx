@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import { imgChatGptImage26DeJanDe20261948541, imgChatGptImage26DeJanDe20262002121 } from "@/components/svg/svg-ph0rc";
 
 // Import real images
 const imgProfissionais = "/images/img_profissionais.webp";
@@ -31,7 +30,8 @@ function Card({
     subtext,
     image,
     id,
-    label
+    label,
+    logo
 }: {
     bgColor: string;
     textColor: string;
@@ -40,6 +40,7 @@ function Card({
     image: string;
     id?: string;
     label?: string;
+    logo?: string;
 }) {
     return (
         <div className="flex flex-col items-start w-full lg:w-1/2 relative group scroll-mt-24 lg:scroll-mt-32" id={id}>
@@ -54,13 +55,22 @@ function Card({
                     </p>
                 </div>
 
-                <div className="relative w-full aspect-[537/325] max-w-[537px] overflow-hidden mt-auto">
+                <div className="relative w-full aspect-[537/325] max-w-[537px] overflow-hidden mt-auto rounded-b-[12px]">
                     <img
                         src={image}
                         alt={heading}
                         className="w-full h-full object-cover"
                         loading="lazy"
                     />
+                    {logo && (
+                        <div className="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 z-10 w-[140px] sm:w-[180px] md:w-[220px] flex justify-center items-center pointer-events-none drop-shadow-md">
+                            <img
+                                src={logo}
+                                alt="Logo Congresso"
+                                className="w-full h-auto object-contain"
+                            />
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
@@ -91,6 +101,7 @@ export default function Section8() {
                         subtext="Quatro dias de repertório para quem enfrenta a complexidade das relações familiares na prática, com base científica, troca qualificada e caminhos para transformar teoria em intervenção real com famílias."
                         image={imgProfissionais}
                         label="Passaporte Profissional"
+                        logo="/images/logociepv1.webp"
                     />
                     <Card
                         id="pais"

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Play } from "lucide-react";
+import { Volume2 } from "lucide-react";
 import Marquee01 from "@/components/sections/Marquee01";
 import Marquee02 from "@/components/sections/Marquee02";
 
@@ -16,13 +16,7 @@ function loadYouTubeApi(cb: () => void) {
     const prev = w.onYouTubeIframeAPIReady;
     w.onYouTubeIframeAPIReady = () => { prev?.(); cb(); };
     if (!document.getElementById("youtube-iframe-api")) {
-        // Speed up first play: warm up the YouTube/thumbnail hosts before the script loads
-        for (const href of ["https://www.youtube.com", "https://i.ytimg.com", "https://www.google.com"]) {
-            const link = document.createElement("link");
-            link.rel = "preconnect";
-            link.href = href;
-            document.head.appendChild(link);
-        }
+        // Preconnect + preload live in the document <head> (layout.tsx); this reads from cache
         const tag = document.createElement("script");
         tag.id = "youtube-iframe-api";
         tag.src = "https://www.youtube.com/iframe_api";
@@ -35,8 +29,7 @@ export default function HeroSectionVSL({
 }: HeroSectionVSLProps) {
     const playerRef = useRef<any>(null);
     const mountRef = useRef<HTMLDivElement>(null);
-    const prebufferedRef = useRef(false);
-    const [isPlaying, setIsPlaying] = useState(false);
+    const [activated, setActivated] = useState(false);
 
     useEffect(() => {
         let cancelled = false;
@@ -46,52 +39,33 @@ export default function HeroSectionVSL({
             playerRef.current = new w.YT.Player(mountRef.current, {
                 videoId,
                 playerVars: {
-                    autoplay: 1, // plays muted to warm the buffer, then we pause at frame 0
+                    autoplay: 1,       // starts on load, muted (browser autoplay policy)
                     mute: 1,
-                    controls: 0,
+                    loop: 1,
+                    playlist: videoId, // required for single-video loop
+                    controls: 0,       // no YouTube controls
                     modestbranding: 1,
-                    rel: 0,
+                    rel: 0,            // no related-video grid
                     playsinline: 1,
                     disablekb: 1,
                     fs: 0,
-                    iv_load_policy: 3, // hide annotations/cards
+                    iv_load_policy: 3, // no annotations/cards
                 },
                 events: {
                     onReady: (e: any) => { e.target.mute(); e.target.playVideo(); },
-                    onStateChange: (e: any) => {
-                        // 0 = ended, 1 = playing, 2 = paused
-                        if (e.data === 1) {
-                            if (!prebufferedRef.current) {
-                                // Prebuffer trick: opening segment is now cached; park at 0 so
-                                // the first user click starts with sound and no rebuffer delay.
-                                prebufferedRef.current = true;
-                                e.target.pauseVideo();
-                                e.target.seekTo(0, true);
-                                setIsPlaying(false);
-                                return;
-                            }
-                            setIsPlaying(true);
-                        }
-                        if (e.data === 2) setIsPlaying(false);
-                        if (e.data === 0) { e.target.seekTo(0, true); e.target.pauseVideo(); setIsPlaying(false); }
-                    },
                 },
             });
         });
         return () => { cancelled = true; playerRef.current?.destroy?.(); };
     }, [videoId]);
 
-    const togglePlay = () => {
+    const handleActivate = () => {
         const p = playerRef.current;
         if (!p) return;
-        if (p.getPlayerState() === 1) {
-            p.pauseVideo();
-            setIsPlaying(false);
-        } else {
-            p.unMute(); // VSL always plays with sound
-            p.playVideo();
-            setIsPlaying(true);
-        }
+        p.seekTo(0, true); // restart from the beginning
+        p.unMute();        // turn sound on
+        p.playVideo();
+        setActivated(true); // fades the overlay out
     };
 
     return (
@@ -130,10 +104,10 @@ export default function HeroSectionVSL({
                     </div>
                 </div>
 
-                {/* --- VSL Video Frame (16:9 - z-10) --- */}
+                {/* --- VSL Video Frame (responsive 16:9) --- */}
                 <div
-                    className="w-full max-w-[960px] aspect-video relative rounded-[20px] md:rounded-[32px] overflow-hidden border-2 md:border-4 border-[#191919] shadow-[6px_6px_0px_0px_#191919] md:shadow-[10px_10px_0px_0px_#191919] bg-black bg-center my-2 group z-10"
-                    style={{ backgroundImage: `url(https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg)`, backgroundSize: "135%" }}
+                    className="w-full max-w-[960px] aspect-video relative rounded-[20px] md:rounded-[32px] overflow-hidden border-2 md:border-4 border-[#191919] shadow-[6px_6px_0px_0px_#191919] md:shadow-[10px_10px_0px_0px_#191919] bg-black bg-center my-2 z-10"
+                    style={{ backgroundImage: `url(https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg)`, backgroundSize: "120%", backgroundPosition: "center bottom" }}
                 >
                     {/* YouTube player mounts inside; wrapper keeps pointer-events-none (API replaces the inner div) */}
                     <div className="yt-frame absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
@@ -142,28 +116,31 @@ export default function HeroSectionVSL({
                     <style jsx>{`
                         .yt-frame :global(iframe) {
                             position: absolute;
-                            top: 50%;
-                            left: 50%;
+                            left: 0;
+                            bottom: 0;
                             width: 100%;
                             height: 100%;
-                            /* ponytail: zoom crops the YT title (top) + logo (bottom) out of view.
-                               Raise scale if any chrome peeks; lower it if VSL framing gets cut. */
-                            transform: translate(-50%, -50%) scale(1.35);
+                            /* ponytail: zoom-crop anchored to the bottom, so the crop removes the
+                               YT title (top) while keeping burned-in captions (bottom) visible.
+                               Raise scale if the title peeks; lower it if too much top is cut. */
+                            transform: scale(1.2);
+                            transform-origin: bottom center;
                         }
                     `}</style>
 
-                    {/* Single click layer: transparent while playing (click to pause);
-                        dim + centered play button when stopped/paused (also masks any YT chrome) */}
+                    {/* Overlay: "ativar o som". Fades out (and stops catching clicks) once activated */}
                     <button
-                        onClick={togglePlay}
-                        className={`absolute inset-0 w-full h-full z-[5] cursor-pointer flex items-center justify-center transition-colors ${isPlaying ? "bg-transparent" : "bg-black/40"}`}
-                        aria-label={isPlaying ? "Pausar" : "Reproduzir"}
+                        onClick={handleActivate}
+                        className={`absolute inset-0 w-full h-full flex items-center justify-center bg-black/35 backdrop-blur-[1px] z-10 p-4 transition-opacity duration-500 ${activated ? "opacity-0 pointer-events-none" : "opacity-100 cursor-pointer"}`}
+                        aria-label="Aperte aqui para ativar o som"
+                        tabIndex={activated ? -1 : 0}
                     >
-                        {!isPlaying && (
-                            <span className="bg-[#f7a73c] border-2 md:border-[3px] border-[#191919] rounded-full flex items-center justify-center w-[64px] h-[64px] md:w-[88px] md:h-[88px] shadow-[4px_4px_0px_0px_#191919] md:shadow-[6px_6px_0px_0px_#191919] hover:scale-105 hover:bg-[#ffb44d] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all">
-                                <Play className="w-[28px] h-[28px] md:w-[38px] md:h-[38px] text-[#191919] fill-[#191919] ml-1" />
+                        <span className="bg-[#f7a73c] border-2 border-[#191919] flex items-center justify-center gap-[10px] md:gap-[14px] px-[22px] py-[14px] md:px-[32px] md:py-[18px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] md:shadow-[6px_6px_0px_0px_#191919] hover:scale-105 hover:bg-[#ffb44d] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-transform">
+                            <Volume2 className="w-[22px] h-[22px] md:w-[28px] md:h-[28px] text-[#191919] animate-bounce shrink-0" />
+                            <span className="font-dm-sans font-bold text-[#191919] text-[13px] sm:text-[15px] md:text-[17px] uppercase tracking-[0.8px] md:tracking-[1.2px] whitespace-nowrap">
+                                Aperte aqui para ativar o som
                             </span>
-                        )}
+                        </span>
                     </button>
                 </div>
 

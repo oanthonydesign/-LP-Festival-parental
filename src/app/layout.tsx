@@ -53,6 +53,15 @@ export default function RootLayout({
                 <link rel="preload" as="image" href="/images/palestrantes_hero_mob.webp" media="(max-width: 1023px)" type="image/webp" />
                 <link rel="preload" as="image" href="/images/grafismo_HERO.svg" type="image/svg+xml" />
 
+                {/* Hero VSL (YouTube) — warm up hosts and pre-download the player loader early,
+                    without beforeInteractive so it doesn't block hero LCP */}
+                <link rel="preconnect" href="https://www.youtube.com" />
+                <link rel="preconnect" href="https://i.ytimg.com" />
+                <link rel="preconnect" href="https://www.google.com" />
+                <link rel="preconnect" href="https://googleads.g.doubleclick.net" />
+                <link rel="preconnect" href="https://static.doubleclick.net" />
+                <link rel="preload" as="script" href="https://www.youtube.com/iframe_api" />
+
                 <Script id="utmify-config" strategy="beforeInteractive">
                     {`window.pixelId = "698a1cc063e361a00f21dd5a";`}
                 </Script>
