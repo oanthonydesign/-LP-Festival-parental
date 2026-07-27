@@ -63,7 +63,7 @@ function Card({
                         loading="lazy"
                     />
                     {logo && (
-                        <div className="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 z-10 w-[140px] sm:w-[180px] md:w-[220px] flex justify-center items-center pointer-events-none drop-shadow-md">
+                        <div className="absolute bottom-2 md:bottom-3 left-1/2 -translate-x-1/2 z-10 w-[80px] sm:w-[100px] md:w-[120px] flex justify-center items-center pointer-events-none drop-shadow-md">
                             <img
                                 src={logo}
                                 alt="Logo Congresso"

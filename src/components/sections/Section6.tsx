@@ -352,7 +352,7 @@ function PassportCard({ data }: { data: PassportData }) {
               <img
                 src="/images/logociepv1.webp"
                 alt="Congresso Internacional de Educação Parental"
-                className="w-full max-w-[240px] sm:max-w-[280px] h-auto object-contain"
+                className="w-full max-w-[120px] sm:max-w-[140px] h-auto object-contain"
                 loading="lazy"
               />
             </div>
