@@ -501,15 +501,17 @@ function ScheduleModal({ isOpen, onClose, initialDay }: { isOpen: boolean; onClo
                         })}
                     </div>
 
-                    {/* Logo 7° Congresso */}
-                    <div className="flex justify-center items-center px-4 pt-3 flex-shrink-0">
-                        <img
-                            src="/images/logo7ciepsite1.webp"
-                            alt="7º Congresso Internacional de Educação Parental"
-                            className="h-9 md:h-11 w-auto object-contain"
-                            loading="lazy"
-                        />
-                    </div>
+                    {/* Logo 7° Congresso (Apenas Dia 1 e Dia 2) */}
+                    {(activeDayId === 0 || activeDayId === 1) && (
+                        <div className="flex justify-center items-center px-4 pt-3 flex-shrink-0">
+                            <img
+                                src="/images/logo7ciepsite1.webp"
+                                alt="7º Congresso Internacional de Educação Parental"
+                                className="h-16 md:h-24 max-w-[280px] md:max-w-[360px] w-auto object-contain"
+                                loading="lazy"
+                            />
+                        </div>
+                    )}
 
                     {/* Stage tabs */}
                     <div
@@ -577,13 +579,13 @@ function DayOverviewCard({ day, onClick }: { day: DayData; onClick: () => void }
                     </h3>
                 </div>
 
-                {/* Logo 7° Congresso para dias profissionais */}
+                {/* Logo 7° Congresso para dias profissionais (Dia 19 e 20) */}
                 {isProfessional && (
-                    <div className="flex items-center pt-0.5">
+                    <div className="flex items-center pt-1 pb-1">
                         <img
                             src="/images/logo7ciepsite1.webp"
                             alt="7º Congresso Internacional de Educação Parental"
-                            className="h-8 md:h-9 w-auto object-contain"
+                            className="h-14 md:h-20 w-auto max-w-[260px] object-contain"
                             loading="lazy"
                         />
                     </div>
