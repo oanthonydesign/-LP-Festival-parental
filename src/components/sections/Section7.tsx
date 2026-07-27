@@ -4,9 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import svgPaths from "@/components/svg/svg-jj8ggrv19k";
-
-gsap.registerPlugin(ScrollTrigger);
-
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -31,6 +28,52 @@ function Group() {
                     </g>
                 </svg>
             </div>
+        </div>
+    );
+}
+
+function VideoPlayer() {
+    const [isStarted, setIsStarted] = useState(false);
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    const handlePlayVideo = () => {
+        if (videoRef.current) {
+            videoRef.current.currentTime = 0;
+            videoRef.current.play();
+            setIsStarted(true);
+        }
+    };
+
+    return (
+        <div
+            className="border-3 border-[#191919] border-solid h-auto lg:h-[480px] overflow-hidden relative rounded-[20px] shadow-[5px_6px_0px_0px_#191919] w-full max-w-[800px] cursor-pointer group my-2"
+            onClick={!isStarted ? handlePlayVideo : undefined}
+        >
+            <video
+                ref={videoRef}
+                className="w-full h-auto lg:h-full object-cover"
+                src="https://vismo.com.br/wp-content/uploads/2026/02/after_movie.webm#t=10"
+                controls={isStarted}
+                preload="auto"
+                playsInline
+            />
+
+            {!isStarted && (
+                <div className="absolute inset-0 bg-black/20 flex items-center justify-center transition-colors group-hover:bg-black/30">
+                    <div className="w-20 h-20 bg-[#ef7d25] rounded-full border-4 border-[#191919] shadow-[4px_4px_0px_0px_#191919] flex items-center justify-center transition-transform group-hover:scale-110 active:scale-95">
+                        <svg
+                            width="32"
+                            height="36"
+                            viewBox="0 0 32 36"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="ml-1"
+                        >
+                            <path d="M30 14.5359C32.6667 16.0755 32.6667 19.9245 30 21.4641L6 35.3205C3.33333 36.8601 0 34.9356 0 31.8564V4.14359C0 1.06439 3.33333 -0.860114 6 0.679487L30 14.5359Z" fill="#191919" />
+                        </svg>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
@@ -78,7 +121,7 @@ function PhotoStackCarousel() {
 
     return (
         <div
-            className="relative w-full max-w-[600px] aspect-[4/3] md:aspect-[16/10] mt-8 mb-12 group cursor-grab active:cursor-grabbing select-none"
+            className="relative w-full max-w-[600px] aspect-[4/3] md:aspect-[16/10] mt-6 mb-12 group cursor-grab active:cursor-grabbing select-none"
             ref={containerRef}
             onMouseDown={(e) => handleStart(e.clientX)}
             onMouseUp={(e) => handleEnd(e.clientX)}
@@ -165,6 +208,9 @@ function Content() {
                 </p>
             </div>
 
+            {/* Vídeo After Movie (adicionado antes do carrossel de fotos) */}
+            <VideoPlayer />
+
             <PhotoStackCarousel />
 
             <div className="flex flex-col font-sugar-peachy justify-center relative text-[24px] lg:text-[32px] w-full max-w-[842px] mt-4">
@@ -202,7 +248,7 @@ function CloseBarMac() {
 
 function EventCard() {
     return (
-        <div className="bg-[#F4B63E] min-h-[900px] lg:min-h-[1050px] relative rounded-[24px] w-full flex flex-col" data-name="Event Card">
+        <div className="bg-[#F4B63E] min-h-auto relative rounded-[24px] w-full flex flex-col pb-8" data-name="Event Card">
             <div className="absolute inset-0 rounded-[24px] overflow-hidden pointer-events-none">
                 <Group />
             </div>

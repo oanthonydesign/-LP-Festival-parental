@@ -16,6 +16,13 @@ function loadYouTubeApi(cb: () => void) {
     const prev = w.onYouTubeIframeAPIReady;
     w.onYouTubeIframeAPIReady = () => { prev?.(); cb(); };
     if (!document.getElementById("youtube-iframe-api")) {
+        // Speed up first play: warm up the YouTube/thumbnail hosts before the script loads
+        for (const href of ["https://www.youtube.com", "https://i.ytimg.com", "https://www.google.com"]) {
+            const link = document.createElement("link");
+            link.rel = "preconnect";
+            link.href = href;
+            document.head.appendChild(link);
+        }
         const tag = document.createElement("script");
         tag.id = "youtube-iframe-api";
         tag.src = "https://www.youtube.com/iframe_api";
@@ -50,6 +57,7 @@ export default function HeroSectionVSL({
                     playsinline: 1,
                     disablekb: 1,
                     fs: 0,
+                    iv_load_policy: 3, // hide annotations/cards
                 },
                 events: {
                     onReady: (e: any) => { e.target.mute(); e.target.playVideo(); },
@@ -128,17 +136,36 @@ export default function HeroSectionVSL({
                 </div>
 
                 {/* --- VSL Video Frame (16:9 - z-10) --- */}
-                <div className="w-full max-w-[960px] aspect-video relative rounded-[20px] md:rounded-[32px] overflow-hidden border-2 md:border-4 border-[#191919] shadow-[6px_6px_0px_0px_#191919] md:shadow-[10px_10px_0px_0px_#191919] bg-black my-2 group z-10">
-                    {/* YouTube player mounts here; pointer-events-none so all interaction goes through our overlays */}
-                    <div ref={mountRef} className="w-full h-full pointer-events-none" />
+                <div
+                    className="w-full max-w-[960px] aspect-video relative rounded-[20px] md:rounded-[32px] overflow-hidden border-2 md:border-4 border-[#191919] shadow-[6px_6px_0px_0px_#191919] md:shadow-[10px_10px_0px_0px_#191919] bg-black bg-center my-2 group z-10"
+                    style={{ backgroundImage: `url(https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg)`, backgroundSize: "135%" }}
+                >
+                    {/* YouTube player mounts inside; wrapper keeps pointer-events-none (API replaces the inner div) */}
+                    <div className="yt-frame absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+                        <div ref={mountRef} className="w-full h-full" />
+                    </div>
+                    <style jsx>{`
+                        .yt-frame :global(iframe) {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: 100%;
+                            height: 100%;
+                            /* ponytail: zoom crops the YT title (top) + logo (bottom) out of view.
+                               Raise scale if any chrome peeks; lower it if VSL framing gets cut. */
+                            transform: translate(-50%, -50%) scale(1.35);
+                        }
+                    `}</style>
 
-                    {/* Click layer to toggle play once audio is activated */}
+                    {/* Click layer: transparent while playing (click to pause); masks YouTube's chrome when paused */}
                     {hasActivatedAudio && (
                         <button
                             onClick={togglePlay}
-                            className="absolute inset-0 w-full h-full z-[5] cursor-pointer"
+                            className={`absolute inset-0 w-full h-full z-[5] cursor-pointer flex items-center justify-center transition-colors ${isPlaying ? "bg-transparent" : "bg-black/60"}`}
                             aria-label={isPlaying ? "Pausar" : "Reproduzir"}
-                        />
+                        >
+                            {!isPlaying && <Play className="w-14 h-14 md:w-20 md:h-20 text-white/90" />}
+                        </button>
                     )}
 
                     {/* Unmute Overlay Button (Appears when audio is muted / not yet activated) */}
