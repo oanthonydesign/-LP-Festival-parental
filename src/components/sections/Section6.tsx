@@ -340,12 +340,23 @@ function PassportCard({ data }: { data: PassportData }) {
 
         {/* Passaporte Tags */}
         {data.id === 'educador' && (
-          <div className="bg-[#fff6ef] rounded-[40px] px-1 sm:px-3 py-2.5 md:py-3 flex items-center justify-center gap-1.5 sm:gap-2 w-full -mt-1 md:-mt-2 overflow-hidden">
-            <img src="/images/icons/estrela_cor.svg" alt="Estrela" className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" loading="lazy" />
-            <span className="font-dm-sans font-bold text-[11px] sm:text-[11px] md:text-[12px] lg:text-[12px] uppercase text-[#191919] tracking-wider text-left whitespace-nowrap">
-              EXPERIÊNCIA COMPLETA PARA PROFISSIONAIS
-            </span>
-          </div>
+          <>
+            <div className="bg-[#fff6ef] rounded-[40px] px-1 sm:px-3 py-2.5 md:py-3 flex items-center justify-center gap-1.5 sm:gap-2 w-full -mt-1 md:-mt-2 overflow-hidden">
+              <img src="/images/icons/estrela_cor.svg" alt="Estrela" className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" loading="lazy" />
+              <span className="font-dm-sans font-bold text-[11px] sm:text-[11px] md:text-[12px] lg:text-[12px] uppercase text-[#191919] tracking-wider text-left whitespace-nowrap">
+                EXPERIÊNCIA COMPLETA PARA PROFISSIONAIS
+              </span>
+            </div>
+
+            <div className="flex justify-center items-center w-full py-1">
+              <img
+                src="/images/logociepv1.webp"
+                alt="Congresso Internacional de Educação Parental"
+                className="w-full max-w-[240px] sm:max-w-[280px] h-auto object-contain"
+                loading="lazy"
+              />
+            </div>
+          </>
         )}
 
         {data.id === 'parental' && (
