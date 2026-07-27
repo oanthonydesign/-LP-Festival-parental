@@ -168,7 +168,7 @@ export default function HeroSectionVSL({
                 </div>
 
                 {/* --- Speakers & Grafismo + Marquee Static Block (Clean & Fast) --- */}
-                <div className="relative mt-3 sm:mt-6 md:mt-10 lg:mt-14 w-full flex flex-col items-center justify-center z-30">
+                <div className="relative mt-5 sm:mt-8 md:mt-10 lg:mt-14 w-full flex flex-col items-center justify-center z-30">
                     {/* Grafismo HERO (100% Width da Tela de Ponta a Ponta) */}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen min-w-[100vw] pointer-events-none z-0 overflow-hidden flex justify-center">
                         <img
@@ -193,7 +193,7 @@ export default function HeroSectionVSL({
                     </picture>
 
                     {/* Marquee 01 & 02 Attached directly to bottom of speakers image */}
-                    <div className="-mt-6 sm:-mt-10 md:-mt-24 w-screen min-w-[100vw] relative z-40">
+                    <div className="-mt-10 sm:-mt-14 md:-mt-24 w-screen min-w-[100vw] relative z-40">
                         <Marquee01 />
                         <Marquee02 />
                     </div>
