@@ -26,7 +26,7 @@ import SectionForWho from '@/components/sections/SectionForWho';
 import SectionTakeaways from '@/components/sections/SectionTakeaways';
 import AcaoRelampagoBanner from '@/components/sections/AcaoRelampagoBanner';
 
-import { redirect } from 'next/navigation';
+
 
 export const metadata = {
     robots: 'noindex, nofollow',
@@ -35,7 +35,6 @@ export const metadata = {
 const SHOW_STICKY_BAR = true;
 
 export default function LPB() {
-    redirect('/');
     return (
         <>
             <main className="min-h-screen relative overflow-x-clip">

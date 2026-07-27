@@ -1,5 +1,5 @@
 import Header from '@/components/sections/Header';
-import HeroSection from '@/components/sections/HeroSection';
+import HeroSectionVSL from '@/components/sections/HeroSectionVSL';
 import Marquee01 from '@/components/sections/Marquee01';
 import Marquee02 from '@/components/sections/Marquee02';
 import Section2 from '@/components/sections/Section2';
@@ -33,11 +33,7 @@ export default function Home() {
         <>
             <main className="min-h-screen relative overflow-x-clip">
                 <Header />
-                <HeroSection />
-                <div className="-mt-24 relative z-30">
-                    <Marquee01 />
-                    <Marquee02 />
-                </div>
+                <HeroSectionVSL />
                 <Section2 />
                 <Section8 />
                 <Section5 />

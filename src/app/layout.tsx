@@ -48,6 +48,11 @@ export default function RootLayout({
     return (
         <html lang="pt-BR" suppressHydrationWarning>
             <head>
+                {/* Preload Critical Hero Assets for Ultra Fast Load / LCP */}
+                <link rel="preload" as="image" href="/images/palestrantes_hero_desk.webp" media="(min-width: 1024px)" type="image/webp" />
+                <link rel="preload" as="image" href="/images/palestrantes_hero_mob.webp" media="(max-width: 1023px)" type="image/webp" />
+                <link rel="preload" as="image" href="/images/grafismo_HERO.svg" type="image/svg+xml" />
+
                 <Script id="utmify-config" strategy="beforeInteractive">
                     {`window.pixelId = "698a1cc063e361a00f21dd5a";`}
                 </Script>
