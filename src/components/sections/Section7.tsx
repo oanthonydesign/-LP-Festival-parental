@@ -196,6 +196,16 @@ function PhotoStackCarousel() {
 function Content() {
     return (
         <div className="flex flex-col gap-[32px] md:gap-[48px] items-center relative z-10 text-[#191919] text-center w-full px-6" data-name="Content">
+            {/* Logo do 7º Congresso */}
+            <div className="flex justify-center items-center w-full -mb-2 md:-mb-4">
+                <img
+                    src="/images/logo7ciepsite1.webp"
+                    alt="7º Congresso Internacional de Educação Parental"
+                    className="h-12 md:h-16 lg:h-20 w-auto object-contain"
+                    loading="lazy"
+                />
+            </div>
+
             <div className="flex flex-col font-sugar-peachy justify-center relative max-w-[900px] w-full">
                 <h2 className="text-[36px] lg:text-[68px] leading-[0.85] whitespace-pre-wrap">
                     Há sete edições, reunindo as vozes que ajudam a aprofundar a parentalidade no Brasil.
