@@ -196,12 +196,12 @@ function PhotoStackCarousel() {
 function Content() {
     return (
         <div className="flex flex-col gap-[32px] md:gap-[48px] items-center relative z-10 text-[#191919] text-center w-full px-6" data-name="Content">
-            {/* Logo do 7º Congresso */}
+            {/* Logo do Congresso CIEP */}
             <div className="flex justify-center items-center w-full -mb-2 md:-mb-4">
                 <img
-                    src="/images/logo7ciepsite1.webp"
-                    alt="7º Congresso Internacional de Educação Parental"
-                    className="h-12 md:h-16 lg:h-20 w-auto object-contain"
+                    src="/images/logociepv1.webp"
+                    alt="Congresso Internacional de Educação Parental"
+                    className="h-16 md:h-24 lg:h-28 max-w-[320px] md:max-w-[440px] w-auto object-contain"
                     loading="lazy"
                 />
             </div>
