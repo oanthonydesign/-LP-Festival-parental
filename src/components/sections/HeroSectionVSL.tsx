@@ -168,7 +168,7 @@ export default function HeroSectionVSL({
                 </div>
 
                 {/* --- Speakers & Grafismo + Marquee Static Block (Clean & Fast) --- */}
-                <div className="relative mt-6 md:mt-10 lg:mt-14 w-full flex flex-col items-center justify-center z-30">
+                <div className="relative mt-3 sm:mt-6 md:mt-10 lg:mt-14 w-full flex flex-col items-center justify-center z-30">
                     {/* Grafismo HERO (100% Width da Tela de Ponta a Ponta) */}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen min-w-[100vw] pointer-events-none z-0 overflow-hidden flex justify-center">
                         <img
@@ -181,19 +181,19 @@ export default function HeroSectionVSL({
                     </div>
 
                     {/* Single Responsive Picture Element (Eliminates double image download on mobile & desktop) */}
-                    <picture className="relative z-10 w-full flex justify-center px-4 lg:px-0">
+                    <picture className="relative z-10 w-full flex justify-center px-2 lg:px-0">
                         <source media="(min-width: 1024px)" srcSet="/images/palestrantes_hero_desk.webp" />
                         <img
                             src="/images/palestrantes_hero_mob.webp"
                             alt="Palestrantes Festival Parental"
-                            className="w-full max-w-[500px] lg:max-w-[1280px] h-auto object-contain mx-auto"
+                            className="w-full max-w-[540px] lg:max-w-[1280px] h-auto object-contain mx-auto"
                             loading="eager"
                             decoding="async"
                         />
                     </picture>
 
                     {/* Marquee 01 & 02 Attached directly to bottom of speakers image */}
-                    <div className="-mt-16 md:-mt-24 w-screen min-w-[100vw] relative z-40">
+                    <div className="-mt-6 sm:-mt-10 md:-mt-24 w-screen min-w-[100vw] relative z-40">
                         <Marquee01 />
                         <Marquee02 />
                     </div>
