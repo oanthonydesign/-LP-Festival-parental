@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Volume2, VolumeX, Play, Pause } from "lucide-react";
+import { Play } from "lucide-react";
 import Marquee01 from "@/components/sections/Marquee01";
 import Marquee02 from "@/components/sections/Marquee02";
 
@@ -35,9 +35,8 @@ export default function HeroSectionVSL({
 }: HeroSectionVSLProps) {
     const playerRef = useRef<any>(null);
     const mountRef = useRef<HTMLDivElement>(null);
-    const [isMuted, setIsMuted] = useState(true);
-    const [isPlaying, setIsPlaying] = useState(true);
-    const [hasActivatedAudio, setHasActivatedAudio] = useState(false);
+    const prebufferedRef = useRef(false);
+    const [isPlaying, setIsPlaying] = useState(false);
 
     useEffect(() => {
         let cancelled = false;
@@ -47,10 +46,8 @@ export default function HeroSectionVSL({
             playerRef.current = new w.YT.Player(mountRef.current, {
                 videoId,
                 playerVars: {
-                    autoplay: 1,
+                    autoplay: 1, // plays muted to warm the buffer, then we pause at frame 0
                     mute: 1,
-                    loop: 1,
-                    playlist: videoId, // required for single-video loop
                     controls: 0,
                     modestbranding: 1,
                     rel: 0,
@@ -62,9 +59,21 @@ export default function HeroSectionVSL({
                 events: {
                     onReady: (e: any) => { e.target.mute(); e.target.playVideo(); },
                     onStateChange: (e: any) => {
-                        // 1 = playing, 2 = paused
-                        if (e.data === 1) setIsPlaying(true);
+                        // 0 = ended, 1 = playing, 2 = paused
+                        if (e.data === 1) {
+                            if (!prebufferedRef.current) {
+                                // Prebuffer trick: opening segment is now cached; park at 0 so
+                                // the first user click starts with sound and no rebuffer delay.
+                                prebufferedRef.current = true;
+                                e.target.pauseVideo();
+                                e.target.seekTo(0, true);
+                                setIsPlaying(false);
+                                return;
+                            }
+                            setIsPlaying(true);
+                        }
                         if (e.data === 2) setIsPlaying(false);
+                        if (e.data === 0) { e.target.seekTo(0, true); e.target.pauseVideo(); setIsPlaying(false); }
                     },
                 },
             });
@@ -72,31 +81,17 @@ export default function HeroSectionVSL({
         return () => { cancelled = true; playerRef.current?.destroy?.(); };
     }, [videoId]);
 
-    const handleActivateAudio = () => {
-        const p = playerRef.current;
-        if (!p) return;
-        p.seekTo(0);
-        p.unMute();
-        p.playVideo();
-        setIsMuted(false);
-        setIsPlaying(true);
-        setHasActivatedAudio(true);
-    };
-
-    const toggleMute = (e: React.MouseEvent) => {
-        e.stopPropagation();
-        const p = playerRef.current;
-        if (!p) return;
-        if (p.isMuted()) { p.unMute(); setIsMuted(false); }
-        else { p.mute(); setIsMuted(true); }
-        if (!hasActivatedAudio) setHasActivatedAudio(true);
-    };
-
     const togglePlay = () => {
         const p = playerRef.current;
         if (!p) return;
-        if (p.getPlayerState() === 1) { p.pauseVideo(); setIsPlaying(false); }
-        else { p.playVideo(); setIsPlaying(true); }
+        if (p.getPlayerState() === 1) {
+            p.pauseVideo();
+            setIsPlaying(false);
+        } else {
+            p.unMute(); // VSL always plays with sound
+            p.playVideo();
+            setIsPlaying(true);
+        }
     };
 
     return (
@@ -157,52 +152,19 @@ export default function HeroSectionVSL({
                         }
                     `}</style>
 
-                    {/* Click layer: transparent while playing (click to pause); masks YouTube's chrome when paused */}
-                    {hasActivatedAudio && (
-                        <button
-                            onClick={togglePlay}
-                            className={`absolute inset-0 w-full h-full z-[5] cursor-pointer flex items-center justify-center transition-colors ${isPlaying ? "bg-transparent" : "bg-black/60"}`}
-                            aria-label={isPlaying ? "Pausar" : "Reproduzir"}
-                        >
-                            {!isPlaying && <Play className="w-14 h-14 md:w-20 md:h-20 text-white/90" />}
-                        </button>
-                    )}
-
-                    {/* Unmute Overlay Button (Appears when audio is muted / not yet activated) */}
-                    {(!hasActivatedAudio || isMuted) && (
-                        <button
-                            onClick={handleActivateAudio}
-                            className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-black/35 backdrop-blur-[1px] transition-all z-10 cursor-pointer p-4"
-                            aria-label="Clique para ativar o áudio"
-                        >
-                            <div className="bg-[#f7a73c] border-2 border-[#191919] flex items-center justify-center gap-[10px] md:gap-[14px] px-[22px] py-[14px] md:px-[32px] md:py-[18px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] md:shadow-[6px_6px_0px_0px_#191919] hover:scale-105 hover:bg-[#ffb44d] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all transform">
-                                <Volume2 className="w-[22px] h-[22px] md:w-[28px] md:h-[28px] text-[#191919] animate-bounce shrink-0" />
-                                <span className="font-dm-sans font-bold text-[#191919] text-[13px] sm:text-[15px] md:text-[17px] uppercase tracking-[0.8px] md:tracking-[1.2px] whitespace-nowrap">
-                                    Clique para ativar o áudio
-                                </span>
-                            </div>
-                        </button>
-                    )}
-
-                    {/* Controls Bar (Visible on hover when audio activated) */}
-                    {hasActivatedAudio && (
-                        <div className="absolute bottom-3 right-3 md:bottom-4 md:right-4 flex items-center gap-2 z-20">
-                            <button
-                                onClick={toggleMute}
-                                className="bg-[#191919]/80 hover:bg-[#191919] text-white p-2.5 rounded-full border border-white/20 shadow-md backdrop-blur-sm transition-all"
-                                title={isMuted ? "Ativar som" : "Mutar som"}
-                            >
-                                {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5 text-[#f7a73c]" />}
-                            </button>
-                            <button
-                                onClick={(e) => { e.stopPropagation(); togglePlay(); }}
-                                className="bg-[#191919]/80 hover:bg-[#191919] text-white p-2.5 rounded-full border border-white/20 shadow-md backdrop-blur-sm transition-all"
-                                title={isPlaying ? "Pausar" : "Reproduzir"}
-                            >
-                                {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 text-[#f7a73c]" />}
-                            </button>
-                        </div>
-                    )}
+                    {/* Single click layer: transparent while playing (click to pause);
+                        dim + centered play button when stopped/paused (also masks any YT chrome) */}
+                    <button
+                        onClick={togglePlay}
+                        className={`absolute inset-0 w-full h-full z-[5] cursor-pointer flex items-center justify-center transition-colors ${isPlaying ? "bg-transparent" : "bg-black/40"}`}
+                        aria-label={isPlaying ? "Pausar" : "Reproduzir"}
+                    >
+                        {!isPlaying && (
+                            <span className="bg-[#f7a73c] border-2 md:border-[3px] border-[#191919] rounded-full flex items-center justify-center w-[64px] h-[64px] md:w-[88px] md:h-[88px] shadow-[4px_4px_0px_0px_#191919] md:shadow-[6px_6px_0px_0px_#191919] hover:scale-105 hover:bg-[#ffb44d] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all">
+                                <Play className="w-[28px] h-[28px] md:w-[38px] md:h-[38px] text-[#191919] fill-[#191919] ml-1" />
+                            </span>
+                        )}
+                    </button>
                 </div>
 
                 {/* --- CTAs (Below Video - z-20) --- */}

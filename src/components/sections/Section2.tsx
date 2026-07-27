@@ -1,23 +1,8 @@
 "use client";
 
-function BackgroundCurves() {
-    return (
-        <div className="absolute top-[700px] lg:top-[320px] xl:top-[400px] 2xl:top-[200px] left-1/2 -translate-x-1/2 w-screen z-0 pointer-events-none select-none opacity-100 overflow-visible">
-            <img
-                src="/images/grafismo_wave.svg"
-                alt="Grafismo de ondas"
-                className="w-[150%] lg:w-full h-auto lg:min-w-[1440px] max-w-none"
-                loading="lazy"
-            />
-        </div>
-    );
-}
-
 export default function Section2() {
     return (
         <section className="bg-[#fff6ef] w-full flex flex-col items-center px-4 md:px-0 pb-[80px] pt-[56px] relative isolate overflow-visible" id="contexto" data-name="Section - 2">
-            <BackgroundCurves />
-
             <div className="layout-container flex flex-col gap-[48px] items-center relative z-10 w-full">
                 <div className="flex flex-col items-center gap-10 w-full max-w-full text-center">
                     {/* Header Group */}
