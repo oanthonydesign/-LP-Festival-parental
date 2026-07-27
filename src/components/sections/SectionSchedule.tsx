@@ -501,9 +501,19 @@ function ScheduleModal({ isOpen, onClose, initialDay }: { isOpen: boolean; onClo
                         })}
                     </div>
 
+                    {/* Logo 7° Congresso */}
+                    <div className="flex justify-center items-center px-4 pt-3 flex-shrink-0">
+                        <img
+                            src="/images/logo7ciepsite1.webp"
+                            alt="7º Congresso Internacional de Educação Parental"
+                            className="h-9 md:h-11 w-auto object-contain"
+                            loading="lazy"
+                        />
+                    </div>
+
                     {/* Stage tabs */}
                     <div
-                        className="flex flex-wrap justify-center gap-2 px-4 md:px-8 pt-5 pb-5 flex-shrink-0"
+                        className="flex flex-wrap justify-center gap-2 px-4 md:px-8 pt-3 pb-5 flex-shrink-0"
                     >
                         {currentDay.stages.map((stage) => {
                             const isActive = activeStageId === stage.id;
@@ -567,10 +577,22 @@ function DayOverviewCard({ day, onClick }: { day: DayData; onClick: () => void }
                     </h3>
                 </div>
 
+                {/* Logo 7° Congresso para dias profissionais */}
+                {isProfessional && (
+                    <div className="flex items-center pt-0.5">
+                        <img
+                            src="/images/logo7ciepsite1.webp"
+                            alt="7º Congresso Internacional de Educação Parental"
+                            className="h-8 md:h-9 w-auto object-contain"
+                            loading="lazy"
+                        />
+                    </div>
+                )}
+
                 {/* Stage info */}
                 <div className="flex flex-col gap-1.5">
                     <div className="flex items-center gap-2">
-                        <img src="/images/icons/violao_cor.svg" alt="Palcos" className="w-[14px] h-[14px]" loading="lazy" />
+                        <Mic2 className="w-3.5 h-3.5 text-[#ef7d25] shrink-0" />
                         <span className="text-xs font-dm-sans font-bold text-[#4c4d4f]">{palcoCount} palcos simultâneos + Arena Ciranda</span>
                     </div>
                     <div className="flex items-center gap-2">
