@@ -350,9 +350,9 @@ function PassportCard({ data }: { data: PassportData }) {
 
             <div className="flex justify-center items-center w-full py-1">
               <img
-                src="/images/logociepv1.webp"
+                src="/images/logo7ciephbranco1.webp"
                 alt="Congresso Internacional de Educação Parental"
-                className="w-full max-w-[120px] sm:max-w-[140px] h-auto object-contain"
+                className="w-full max-w-[180px] sm:max-w-[220px] h-auto object-contain"
                 loading="lazy"
               />
             </div>
@@ -469,9 +469,13 @@ function PassportCard({ data }: { data: PassportData }) {
                 <span>{currentPriceInstallment}</span>
               </div>
 
-              <div className="flex items-center justify-center gap-2 flex-wrap">
-                <span className={`font-dm-sans text-[18px] md:text-[20px] ${data.id === 'educador' ? 'text-white/95' : 'text-[#191919]/90'}`}>
-                  ou {currentPriceFull.replace("ou ", "").replace(",00", "")}
+              <div className="flex items-center justify-center gap-1.5 flex-wrap">
+                <span className={`font-dm-sans text-[18px] md:text-[20px] inline-flex items-center gap-1 ${data.id === 'educador' ? 'text-white/95' : 'text-[#191919]/90'}`}>
+                  <span>ou</span>
+                  <span className="price-value font-bold" data-amount={isDouble && hasDoubleOption ? "747.00" : (data.id === 'educador' ? "1647.00" : "497.00")} itemProp="price">
+                    {isDouble && hasDoubleOption ? "R$ 747,00" : (data.id === 'educador' ? "R$ 1.647,00" : "R$ 497,00")}
+                  </span>
+                  <span>à vista</span>
                 </span>
                 <span className="bg-[#c2f2c5] border-2 border-[#191919] rounded-[8px] px-2 py-0.5 font-dm-sans font-bold text-[13px] text-[#191919] shadow-[1px_1px_0px_0px_#191919] whitespace-nowrap">
                   economize R$ {data.id === 'educador' ? 329 : (isDouble ? 145 : 99)}
@@ -494,7 +498,13 @@ function PassportCard({ data }: { data: PassportData }) {
               <span className={`text-[28px] md:text-[40px] tracking-[-1px] md:tracking-[-1.3px] ${data.accentColor}`}>12x de</span>
               <span className={`${data.priceColor} text-[46px] md:text-[64px] tracking-[-1.4px] md:tracking-[-1.7px]`}>{currentPriceInstallment}</span>
             </div>
-            <p className="font-dm-sans text-[24px] mt-2 opacity-80">{currentPriceFull}</p>
+            <p className="font-dm-sans text-[24px] mt-2 opacity-80 flex items-center justify-center gap-1">
+              <span>ou</span>
+              <span className="price-value font-bold" data-amount={isDouble && hasDoubleOption ? "747.00" : (data.id === 'educador' ? "1647.00" : "497.00")} itemProp="price">
+                {isDouble && hasDoubleOption ? "R$ 747,00" : (data.id === 'educador' ? "R$ 1.647,00" : "R$ 497,00")}
+              </span>
+              <span>à vista</span>
+            </p>
           </div>
         )}
 

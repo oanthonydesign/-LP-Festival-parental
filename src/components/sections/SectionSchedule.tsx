@@ -505,9 +505,9 @@ function ScheduleModal({ isOpen, onClose, initialDay }: { isOpen: boolean; onClo
                     {(activeDayId === 0 || activeDayId === 1) && (
                         <div className="flex justify-center items-center px-4 pt-3 flex-shrink-0">
                             <img
-                                src="/images/logo7ciepsite1.webp"
+                                src="/images/logo7ciephazul1.webp"
                                 alt="7º Congresso Internacional de Educação Parental"
-                                className="h-20 md:h-28 lg:h-32 max-w-[340px] md:max-w-[440px] w-auto object-contain"
+                                className="h-10 md:h-14 lg:h-16 max-w-[180px] md:max-w-[240px] w-auto object-contain"
                                 loading="lazy"
                             />
                         </div>
@@ -583,9 +583,9 @@ function DayOverviewCard({ day, onClick }: { day: DayData; onClick: () => void }
                 {isProfessional && (
                     <div className="flex items-center pt-1 pb-1">
                         <img
-                            src="/images/logo7ciepsite1.webp"
+                            src="/images/logo7ciephazul1.webp"
                             alt="7º Congresso Internacional de Educação Parental"
-                            className="h-14 md:h-20 w-auto max-w-[260px] object-contain"
+                            className="h-8 md:h-11 w-auto max-w-[150px] md:max-w-[180px] object-contain"
                             loading="lazy"
                         />
                     </div>
