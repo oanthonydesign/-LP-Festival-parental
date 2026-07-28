@@ -63,7 +63,7 @@ function Card({
                         loading="lazy"
                     />
                     {logo && (
-                        <div className="absolute bottom-2 md:bottom-3 left-1/2 -translate-x-1/2 z-10 w-[80px] sm:w-[100px] md:w-[120px] flex justify-center items-center pointer-events-none drop-shadow-md">
+                        <div className="absolute bottom-2 md:bottom-3 left-1/2 -translate-x-1/2 z-10 w-[130px] sm:w-[150px] md:w-[170px] flex justify-center items-center pointer-events-none drop-shadow-md">
                             <img
                                 src={logo}
                                 alt="Logo Congresso"
@@ -101,7 +101,7 @@ export default function Section8() {
                         subtext="Quatro dias de repertório para quem enfrenta a complexidade das relações familiares na prática, com base científica, troca qualificada e caminhos para transformar teoria em intervenção real com famílias."
                         image={imgProfissionais}
                         label="Passaporte Profissional"
-                        logo="/images/logociepv1.webp"
+                        logo="/images/logo7ciepbranco1.webp"
                     />
                     <Card
                         id="pais"

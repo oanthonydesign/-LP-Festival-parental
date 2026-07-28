@@ -32,18 +32,18 @@ export default function Section2() {
                             <p>
                                 O Festival Parental nasce desse contexto – a evolução do Congresso Internacional de Educação Parental – um encontro presencial para aprofundar as conversas sobre infância, vínculo e desenvolvimento humano no mundo de hoje.
                             </p>
+
+                            {/* Logo do Congresso CIEP */}
+                            <div className="flex justify-center items-center w-full max-w-[240px] md:max-w-[290px] mt-2 md:mt-3 mx-auto">
+                                <img
+                                    src="/images/logo7ciepazul1.webp"
+                                    alt="Congresso Internacional de Educação Parental"
+                                    className="w-full h-auto object-contain"
+                                    loading="lazy"
+                                />
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                {/* Logo do Congresso CIEP */}
-                <div className="flex justify-center items-center w-full max-w-[360px] md:max-w-[480px] my-2">
-                    <img
-                        src="/images/logociepv1.webp"
-                        alt="Congresso Internacional de Educação Parental"
-                        className="w-full h-auto object-contain"
-                        loading="lazy"
-                    />
                 </div>
 
                 {/* CTA Button */}

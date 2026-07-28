@@ -29,18 +29,23 @@ export default function HeroSectionVSL({
 }: HeroSectionVSLProps) {
     const playerRef = useRef<any>(null);
     const mountRef = useRef<HTMLDivElement>(null);
-    const [activated, setActivated] = useState(false);
+    const containerRef = useRef<HTMLDivElement>(null);
+    const isReadyRef = useRef<boolean>(false);
+    const fadeIntervalRef = useRef<any>(null);
+    const [isPaused, setIsPaused] = useState<boolean>(true);
 
     useEffect(() => {
         let cancelled = false;
+        let observer: IntersectionObserver | null = null;
+
         loadYouTubeApi(() => {
             if (cancelled || !mountRef.current) return;
             const w = window as any;
             playerRef.current = new w.YT.Player(mountRef.current, {
                 videoId,
                 playerVars: {
-                    autoplay: 1,       // starts on load, muted (browser autoplay policy)
-                    mute: 1,
+                    autoplay: 0,       // Não inicia sozinho no carregamento
+                    mute: 0,
                     loop: 1,
                     playlist: videoId, // required for single-video loop
                     controls: 0,       // no YouTube controls
@@ -50,23 +55,127 @@ export default function HeroSectionVSL({
                     disablekb: 1,
                     fs: 0,
                     iv_load_policy: 3, // no annotations/cards
+                    cc_load_policy: 0, // desativar legendas do YouTube
+                    cc_lang_pref: "none",
                 },
                 events: {
-                    onReady: (e: any) => { e.target.mute(); e.target.playVideo(); },
+                    onReady: (e: any) => {
+                        isReadyRef.current = true;
+                        try {
+                            e.target.unloadModule?.("captions");
+                            e.target.unloadModule?.("cc");
+                        } catch {}
+                        setupObserver();
+                    },
+                    onStateChange: (e: any) => {
+                        // Quando o vídeo começa a tocar (state 1 = PLAYING), força a remoção das legendas do YouTube
+                        if (e.data === 1 || e.data === (window as any).YT?.PlayerState?.PLAYING) {
+                            try {
+                                e.target.unloadModule?.("captions");
+                                e.target.unloadModule?.("cc");
+                                e.target.setOption?.("captions", "track", {});
+                                e.target.setOption?.("cc", "track", {});
+                            } catch {}
+                        }
+                    },
                 },
             });
         });
-        return () => { cancelled = true; playerRef.current?.destroy?.(); };
-    }, [videoId]);
 
-    const handleActivate = () => {
-        const p = playerRef.current;
-        if (!p) return;
-        p.seekTo(0, true); // restart from the beginning
-        p.unMute();        // turn sound on
-        p.playVideo();
-        setActivated(true); // fades the overlay out
-    };
+        function fadeOutAndPause(p: any) {
+            if (!p) return;
+            setIsPaused(true);
+            if (fadeIntervalRef.current) clearInterval(fadeIntervalRef.current);
+
+            let vol = 100;
+            try {
+                if (typeof p.getVolume === "function") {
+                    vol = p.getVolume() || 100;
+                }
+            } catch {}
+
+            fadeIntervalRef.current = setInterval(() => {
+                vol -= 15;
+                if (vol <= 0) {
+                    clearInterval(fadeIntervalRef.current);
+                    fadeIntervalRef.current = null;
+                    try {
+                        p.setVolume(0);
+                        p.pauseVideo();
+                    } catch {}
+                } else {
+                    try {
+                        p.setVolume(vol);
+                    } catch {}
+                }
+            }, 35);
+        }
+
+        function fadeInAndPlay(p: any) {
+            if (!p) return;
+            setIsPaused(false);
+            if (fadeIntervalRef.current) clearInterval(fadeIntervalRef.current);
+
+            try {
+                p.setVolume(0);
+                p.playVideo();
+            } catch {
+                try {
+                    p.mute();
+                    p.playVideo();
+                } catch {}
+            }
+
+            let vol = 0;
+            fadeIntervalRef.current = setInterval(() => {
+                vol += 15;
+                if (vol >= 100) {
+                    clearInterval(fadeIntervalRef.current);
+                    fadeIntervalRef.current = null;
+                    try {
+                        p.setVolume(100);
+                    } catch {}
+                } else {
+                    try {
+                        p.setVolume(vol);
+                    } catch {}
+                }
+            }, 35);
+        }
+
+        function setupObserver() {
+            if (!containerRef.current || observer) return;
+
+            observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        const p = playerRef.current;
+                        if (!p || !isReadyRef.current) return;
+
+                        // Se o player estiver 100% visível na tela (>= 0.95 para precisão subpixel)
+                        if (entry.intersectionRatio >= 0.95) {
+                            fadeInAndPlay(p);
+                        } else if (entry.intersectionRatio < 0.3) {
+                            // Inicia o fade suave assim que o player começa a sair da tela
+                            fadeOutAndPause(p);
+                        }
+                    });
+                },
+                {
+                    threshold: [0, 0.3, 0.95, 1.0],
+                }
+            );
+
+            observer.observe(containerRef.current);
+        }
+
+        return () => {
+            cancelled = true;
+            if (fadeIntervalRef.current) clearInterval(fadeIntervalRef.current);
+            observer?.disconnect();
+            playerRef.current?.destroy?.();
+        };
+    }, [videoId]);
 
     return (
         <section
@@ -106,42 +215,32 @@ export default function HeroSectionVSL({
 
                 {/* --- VSL Video Frame (responsive 16:9) --- */}
                 <div
+                    ref={containerRef}
                     className="w-full max-w-[960px] aspect-video relative rounded-[20px] md:rounded-[32px] overflow-hidden border-2 md:border-4 border-[#191919] shadow-[6px_6px_0px_0px_#191919] md:shadow-[10px_10px_0px_0px_#191919] bg-black bg-center my-2 z-10"
-                    style={{ backgroundImage: `url(https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg)`, backgroundSize: "120%", backgroundPosition: "center bottom" }}
+                    style={{ backgroundImage: `url(https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg)`, backgroundSize: "cover", backgroundPosition: "center" }}
                 >
-                    {/* YouTube player mounts inside; wrapper keeps pointer-events-none (API replaces the inner div) */}
+                    {/* YouTube player mounts inside */}
                     <div className="yt-frame absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
                         <div ref={mountRef} className="w-full h-full" />
                     </div>
+
+                    {/* Overlay sutil de transição visual ao pausar */}
+                    <div
+                        className={`absolute inset-0 bg-black/25 pointer-events-none transition-opacity duration-700 ease-in-out ${
+                            isPaused ? "opacity-100" : "opacity-0"
+                        }`}
+                    />
+
                     <style jsx>{`
                         .yt-frame :global(iframe) {
                             position: absolute;
                             left: 0;
-                            bottom: 0;
+                            top: 0;
                             width: 100%;
                             height: 100%;
-                            /* ponytail: zoom-crop anchored to the bottom, so the crop removes the
-                               YT title (top) while keeping burned-in captions (bottom) visible.
-                               Raise scale if the title peeks; lower it if too much top is cut. */
-                            transform: scale(1.2);
-                            transform-origin: bottom center;
+                            pointer-events: none;
                         }
                     `}</style>
-
-                    {/* Overlay: "ativar o som". Fades out (and stops catching clicks) once activated */}
-                    <button
-                        onClick={handleActivate}
-                        className={`absolute inset-0 w-full h-full flex items-center justify-center bg-black/35 backdrop-blur-[1px] z-10 p-4 transition-opacity duration-500 ${activated ? "opacity-0 pointer-events-none" : "opacity-100 cursor-pointer"}`}
-                        aria-label="Aperte aqui para ativar o som"
-                        tabIndex={activated ? -1 : 0}
-                    >
-                        <span className="bg-[#f7a73c] border-2 border-[#191919] flex items-center justify-center gap-[10px] md:gap-[14px] px-[22px] py-[14px] md:px-[32px] md:py-[18px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] md:shadow-[6px_6px_0px_0px_#191919] hover:scale-105 hover:bg-[#ffb44d] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-transform">
-                            <Volume2 className="w-[22px] h-[22px] md:w-[28px] md:h-[28px] text-[#191919] animate-bounce shrink-0" />
-                            <span className="font-dm-sans font-bold text-[#191919] text-[13px] sm:text-[15px] md:text-[17px] uppercase tracking-[0.8px] md:tracking-[1.2px] whitespace-nowrap">
-                                Aperte aqui para ativar o som
-                            </span>
-                        </span>
-                    </button>
                 </div>
 
                 {/* --- CTAs (Below Video - z-20) --- */}
@@ -168,9 +267,9 @@ export default function HeroSectionVSL({
                 </div>
 
                 {/* --- Speakers & Grafismo + Marquee Static Block (Clean & Fast) --- */}
-                <div className="relative mt-5 sm:mt-8 md:mt-10 lg:mt-14 w-full flex flex-col items-center justify-center z-30">
+                <div className="relative -mt-4 sm:-mt-2 md:mt-0 lg:mt-4 w-full flex flex-col items-center justify-center z-30">
                     {/* Grafismo HERO (100% Width da Tela de Ponta a Ponta) */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen min-w-[100vw] pointer-events-none z-0 overflow-hidden flex justify-center">
+                    <div className="absolute top-[50%] md:top-[51%] left-1/2 -translate-x-1/2 -translate-y-1/2 mt-[10px] w-screen min-w-[100vw] pointer-events-none z-0 overflow-hidden flex justify-center">
                         <img
                             src="/images/grafismo_HERO.svg"
                             alt=""
@@ -193,7 +292,7 @@ export default function HeroSectionVSL({
                     </picture>
 
                     {/* Marquee 01 & 02 Attached directly to bottom of speakers image */}
-                    <div className="-mt-10 sm:-mt-14 md:-mt-24 w-screen min-w-[100vw] relative z-40">
+                    <div className="-mt-[42px] sm:-mt-[66px] md:-mt-[124px] w-screen min-w-[100vw] relative z-40">
                         <Marquee01 />
                         <Marquee02 />
                     </div>
