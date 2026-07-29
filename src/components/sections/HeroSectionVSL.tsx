@@ -1,181 +1,28 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import { Volume2 } from "lucide-react";
+import { useEffect } from "react";
 import Marquee01 from "@/components/sections/Marquee01";
 import Marquee02 from "@/components/sections/Marquee02";
 
-interface HeroSectionVSLProps {
-    videoId?: string;
-}
-
-// ponytail: minimal YT IFrame API loader — single hero player, no wrapper lib
-function loadYouTubeApi(cb: () => void) {
-    const w = window as any;
-    if (w.YT && w.YT.Player) { cb(); return; }
-    const prev = w.onYouTubeIframeAPIReady;
-    w.onYouTubeIframeAPIReady = () => { prev?.(); cb(); };
-    if (!document.getElementById("youtube-iframe-api")) {
-        // Preconnect + preload live in the document <head> (layout.tsx); this reads from cache
-        const tag = document.createElement("script");
-        tag.id = "youtube-iframe-api";
-        tag.src = "https://www.youtube.com/iframe_api";
-        document.head.appendChild(tag);
+declare global {
+    namespace JSX {
+        interface IntrinsicElements {
+            'vturb-smartplayer': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement> & { id?: string }, HTMLElement>;
+        }
     }
 }
 
-export default function HeroSectionVSL({
-    videoId = "43nQXAVRh-E"
-}: HeroSectionVSLProps) {
-    const playerRef = useRef<any>(null);
-    const mountRef = useRef<HTMLDivElement>(null);
-    const containerRef = useRef<HTMLDivElement>(null);
-    const isReadyRef = useRef<boolean>(false);
-    const fadeIntervalRef = useRef<any>(null);
-    const [isPaused, setIsPaused] = useState<boolean>(true);
-
+export default function HeroSectionVSL() {
     useEffect(() => {
-        let cancelled = false;
-        let observer: IntersectionObserver | null = null;
-
-        loadYouTubeApi(() => {
-            if (cancelled || !mountRef.current) return;
-            const w = window as any;
-            playerRef.current = new w.YT.Player(mountRef.current, {
-                videoId,
-                playerVars: {
-                    autoplay: 0,       // Não inicia sozinho no carregamento
-                    mute: 0,
-                    loop: 1,
-                    playlist: videoId, // required for single-video loop
-                    controls: 0,       // no YouTube controls
-                    modestbranding: 1,
-                    rel: 0,            // no related-video grid
-                    playsinline: 1,
-                    disablekb: 1,
-                    fs: 0,
-                    iv_load_policy: 3, // no annotations/cards
-                    cc_load_policy: 0, // desativar legendas do YouTube
-                    cc_lang_pref: "none",
-                },
-                events: {
-                    onReady: (e: any) => {
-                        isReadyRef.current = true;
-                        try {
-                            e.target.unloadModule?.("captions");
-                            e.target.unloadModule?.("cc");
-                        } catch {}
-                        setupObserver();
-                    },
-                    onStateChange: (e: any) => {
-                        // Quando o vídeo começa a tocar (state 1 = PLAYING), força a remoção das legendas do YouTube
-                        if (e.data === 1 || e.data === (window as any).YT?.PlayerState?.PLAYING) {
-                            try {
-                                e.target.unloadModule?.("captions");
-                                e.target.unloadModule?.("cc");
-                                e.target.setOption?.("captions", "track", {});
-                                e.target.setOption?.("cc", "track", {});
-                            } catch {}
-                        }
-                    },
-                },
-            });
-        });
-
-        function fadeOutAndPause(p: any) {
-            if (!p) return;
-            setIsPaused(true);
-            if (fadeIntervalRef.current) clearInterval(fadeIntervalRef.current);
-
-            let vol = 100;
-            try {
-                if (typeof p.getVolume === "function") {
-                    vol = p.getVolume() || 100;
-                }
-            } catch {}
-
-            fadeIntervalRef.current = setInterval(() => {
-                vol -= 15;
-                if (vol <= 0) {
-                    clearInterval(fadeIntervalRef.current);
-                    fadeIntervalRef.current = null;
-                    try {
-                        p.setVolume(0);
-                        p.pauseVideo();
-                    } catch {}
-                } else {
-                    try {
-                        p.setVolume(vol);
-                    } catch {}
-                }
-            }, 35);
+        const scriptId = "vturb-player-script";
+        if (!document.getElementById(scriptId)) {
+            const s = document.createElement("script");
+            s.id = scriptId;
+            s.src = "https://scripts.converteai.net/45503b29-1a7d-4696-ac1d-75f7fc87b786/players/6a693af5a9935db927668857/v4/player.js";
+            s.async = true;
+            document.head.appendChild(s);
         }
-
-        function fadeInAndPlay(p: any) {
-            if (!p) return;
-            setIsPaused(false);
-            if (fadeIntervalRef.current) clearInterval(fadeIntervalRef.current);
-
-            try {
-                p.setVolume(0);
-                p.playVideo();
-            } catch {
-                try {
-                    p.mute();
-                    p.playVideo();
-                } catch {}
-            }
-
-            let vol = 0;
-            fadeIntervalRef.current = setInterval(() => {
-                vol += 15;
-                if (vol >= 100) {
-                    clearInterval(fadeIntervalRef.current);
-                    fadeIntervalRef.current = null;
-                    try {
-                        p.setVolume(100);
-                    } catch {}
-                } else {
-                    try {
-                        p.setVolume(vol);
-                    } catch {}
-                }
-            }, 35);
-        }
-
-        function setupObserver() {
-            if (!containerRef.current || observer) return;
-
-            observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        const p = playerRef.current;
-                        if (!p || !isReadyRef.current) return;
-
-                        // Se o player estiver 100% visível na tela (>= 0.95 para precisão subpixel)
-                        if (entry.intersectionRatio >= 0.95) {
-                            fadeInAndPlay(p);
-                        } else if (entry.intersectionRatio < 0.3) {
-                            // Inicia o fade suave assim que o player começa a sair da tela
-                            fadeOutAndPause(p);
-                        }
-                    });
-                },
-                {
-                    threshold: [0, 0.3, 0.95, 1.0],
-                }
-            );
-
-            observer.observe(containerRef.current);
-        }
-
-        return () => {
-            cancelled = true;
-            if (fadeIntervalRef.current) clearInterval(fadeIntervalRef.current);
-            observer?.disconnect();
-            playerRef.current?.destroy?.();
-        };
-    }, [videoId]);
+    }, []);
 
     return (
         <section
@@ -213,34 +60,19 @@ export default function HeroSectionVSL({
                     </div>
                 </div>
 
-                {/* --- VSL Video Frame (responsive 16:9) --- */}
+                {/* --- VSL Video Frame (VTurb SmartPlayer) --- */}
                 <div
-                    ref={containerRef}
-                    className="w-full max-w-[960px] aspect-video relative rounded-[20px] md:rounded-[32px] overflow-hidden border-2 md:border-4 border-[#191919] shadow-[6px_6px_0px_0px_#191919] md:shadow-[10px_10px_0px_0px_#191919] bg-black bg-center my-2 z-10"
-                    style={{ backgroundImage: `url(https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg)`, backgroundSize: "cover", backgroundPosition: "center" }}
+                    className="w-full max-w-[960px] relative rounded-[20px] md:rounded-[32px] overflow-hidden border-2 md:border-4 border-[#191919] shadow-[6px_6px_0px_0px_#191919] md:shadow-[10px_10px_0px_0px_#191919] bg-black my-2 z-10"
                 >
-                    {/* YouTube player mounts inside */}
-                    <div className="yt-frame absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
-                        <div ref={mountRef} className="w-full h-full" />
-                    </div>
-
-                    {/* Overlay sutil de transição visual ao pausar */}
-                    <div
-                        className={`absolute inset-0 bg-black/25 pointer-events-none transition-opacity duration-700 ease-in-out ${
-                            isPaused ? "opacity-100" : "opacity-0"
-                        }`}
-                    />
-
-                    <style jsx>{`
-                        .yt-frame :global(iframe) {
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                            width: 100%;
-                            height: 100%;
-                            pointer-events: none;
-                        }
-                    `}</style>
+                    <vturb-smartplayer
+                        id="vid-6a693af5a9935db927668857"
+                        style={{ display: "block", margin: "0 auto", width: "100%" }}
+                    >
+                        <div
+                            className="vturb-player-placeholder"
+                            style={{ position: "relative", width: "100%", padding: "56.25% 0 0", zIndex: 0, backgroundColor: "black" }}
+                        />
+                    </vturb-smartplayer>
                 </div>
 
                 {/* --- CTAs (Below Video - z-20) --- */}
