@@ -594,7 +594,7 @@ function DayOverviewCard({ day, onClick }: { day: DayData; onClick: () => void }
                 {/* Stage info */}
                 <div className="flex flex-col gap-1.5">
                     <div className="flex items-center gap-2">
-                        <img src="/images/icons/violao_cor.svg" alt="Palcos" className="w-[14px] h-[14px]" loading="lazy" />
+                        <img src="/images/icons/Ícones_MIC-COR-120.png" alt="Palcos" className="w-[14px] h-[14px]" loading="lazy" />
                         <span className="text-xs font-dm-sans font-bold text-[#4c4d4f]">{palcoCount} palcos simultâneos + Arena Ciranda</span>
                     </div>
                     <div className="flex items-center gap-2">
