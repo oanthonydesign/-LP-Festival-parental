@@ -213,7 +213,7 @@ function ScheduleModal({ isOpen, onClose, initialDay }: { isOpen: boolean; onClo
 
                     {/* Logo 7° Congresso (Apenas Dia 1 e Dia 2) */}
                     {(activeDayId === 0 || activeDayId === 1) && (
-                        <div className="flex justify-center items-center px-4 pt-1 flex-shrink-0">
+                        <div className="flex justify-center items-center px-4 py-4 flex-shrink-0">
                             <img
                                 src="/images/logo7ciephazul1.webp"
                                 alt="7º Congresso Internacional de Educação Parental"
