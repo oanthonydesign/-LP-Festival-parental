@@ -7,9 +7,9 @@ import { useIsAcaoDia } from "@/hooks/useIsAcaoDia";
 import { Gift, Files, BookOpen, Video } from "lucide-react";
 
 // Flags de controle para fácil ativação/desativação
-const SHOW_PROMO_RIBBON = false;
+const SHOW_PROMO_RIBBON = true;
 const SHOW_PRICE_STATUS_BADGE = false;
-const SHOW_COUNTDOWN_BADGE = false;
+const SHOW_COUNTDOWN_BADGE = true;
 
 interface Benefit {
   text: string;
@@ -448,7 +448,7 @@ function PassportCard({ data }: { data: PassportData }) {
           <div className="flex flex-col items-center gap-2 w-full">
             <CountdownBadge />
             <p className={`font-dm-sans text-[13px] text-center ${data.id === 'educador' ? 'text-white/70' : 'text-[#191919]/60'}`}>
-              Segunda-feira, 22/06 às 23:59 — após essa data, o preço muda.
+              Segunda-feira, 17/08 às 23:59 — após essa data, entra o Lote 6.
             </p>
           </div>
         )}

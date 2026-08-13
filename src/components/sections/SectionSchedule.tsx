@@ -12,335 +12,8 @@ function TicketIcon() {
     );
 }
 
-type EventType = 'named' | 'placeholder' | 'interval' | 'system' | 'special';
+import { scheduleFullData, DayData, Stage, ScheduleEvent } from "@/data/scheduleData";
 
-type ScheduleEvent = {
-    time: string;
-    title: string;
-    type: EventType;
-};
-
-type Stage = {
-    id: string;
-    label: string;
-    events: ScheduleEvent[];
-};
-
-type DayData = {
-    id: number;
-    date: string;
-    dayLabel: string;
-    weekday: string;
-    access: 'professional' | 'all';
-    accessLabel: string;
-    themeColor: string;
-    credenciamento: { time: string; note?: string }[];
-    overviewHighlights: string[];
-    stages: Stage[];
-};
-
-const scheduleFullData: DayData[] = [
-    {
-        id: 0,
-        date: '19 Novembro',
-        dayLabel: 'Dia 1',
-        weekday: 'quinta-feira',
-        access: 'professional',
-        accessLabel: 'Exclusivo para profissionais',
-        themeColor: '#3399CC',
-        credenciamento: [
-            { time: '07h00', note: 'exclusivo para embaixadores' },
-            { time: '08h00' },
-        ],
-        overviewHighlights: ['Telma Abrahão', 'Gordon Neufeld', 'Lançamento de livros'],
-        stages: [
-            {
-                id: 'palco1',
-                label: 'Palco 1',
-                events: [
-                    { time: '09h00', title: 'Abertura 7° Congresso Internacional de Educação Parental com convidado especial', type: 'named' },
-                    { time: '09h45', title: 'Em breve', type: 'placeholder' },
-                    { time: '10h30', title: 'Intervalo', type: 'interval' },
-                    { time: '11h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '12h30', title: 'Almoço', type: 'interval' },
-                    { time: '14h00', title: 'Telma Abrahão', type: 'named' },
-                    { time: '15h00', title: 'Gordon Neufeld', type: 'named' },
-                    { time: '16h00', title: 'Intervalo', type: 'interval' },
-                    { time: '16h30', title: 'Em breve', type: 'placeholder' },
-                    { time: '18h00', title: 'Encerramento', type: 'system' },
-                    { time: '18h00', title: 'Lançamento de livros — Espaço Literare Books', type: 'special' },
-                ],
-            },
-            {
-                id: 'palco2',
-                label: 'Palco 2',
-                events: [
-                    { time: '09h45', title: 'Em breve', type: 'placeholder' },
-                    { time: '10h30', title: 'Intervalo', type: 'interval' },
-                    { time: '11h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '12h30', title: 'Almoço', type: 'interval' },
-                    { time: '14h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '15h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '16h00', title: 'Intervalo', type: 'interval' },
-                    { time: '16h30', title: 'Em breve', type: 'placeholder' },
-                    { time: '18h00', title: 'Encerramento', type: 'system' },
-                ],
-            },
-            {
-                id: 'palco3',
-                label: 'Palco 3',
-                events: [
-                    { time: '09h45', title: 'Em breve', type: 'placeholder' },
-                    { time: '10h30', title: 'Intervalo', type: 'interval' },
-                    { time: '11h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '12h30', title: 'Almoço', type: 'interval' },
-                    { time: '14h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '15h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '16h00', title: 'Intervalo', type: 'interval' },
-                    { time: '16h30', title: 'Em breve', type: 'placeholder' },
-                    { time: '18h00', title: 'Encerramento', type: 'system' },
-                ],
-            },
-            {
-                id: 'arena',
-                label: 'Arena Ciranda Cultural',
-                events: [
-                    { time: '10h30', title: 'Roda 1', type: 'named' },
-                    { time: '12h30', title: 'Roda 2', type: 'named' },
-                    { time: '16h00', title: 'Roda 3', type: 'named' },
-                ],
-            },
-        ],
-    },
-    {
-        id: 1,
-        date: '20 Novembro',
-        dayLabel: 'Dia 2',
-        weekday: 'sexta-feira',
-        access: 'professional',
-        accessLabel: 'Exclusivo para profissionais',
-        themeColor: '#3399CC',
-        credenciamento: [
-            { time: '08h00' },
-        ],
-        overviewHighlights: ['Encerramento 7° Congresso', 'Coquetel exclusivo embaixadores'],
-        stages: [
-            {
-                id: 'palco1',
-                label: 'Palco 1',
-                events: [
-                    { time: '09h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '10h30', title: 'Intervalo', type: 'interval' },
-                    { time: '11h00', title: 'Ivana', type: 'named' },
-                    { time: '12h30', title: 'Almoço', type: 'interval' },
-                    { time: '14h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '15h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '16h00', title: 'Intervalo', type: 'interval' },
-                    { time: '16h30', title: 'Em breve', type: 'placeholder' },
-                    { time: '18h00', title: 'Encerramento 7° Congresso Internacional de Educação Parental com convidado especial', type: 'system' },
-                    { time: '18h00', title: 'Coquetel exclusivo para embaixadores', type: 'special' },
-                ],
-            },
-            {
-                id: 'palco2',
-                label: 'Palco 2',
-                events: [
-                    { time: '09h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '10h30', title: 'Intervalo', type: 'interval' },
-                    { time: '11h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '12h30', title: 'Almoço', type: 'interval' },
-                    { time: '14h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '15h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '16h00', title: 'Intervalo', type: 'interval' },
-                    { time: '18h00', title: 'Coquetel exclusivo para embaixadores', type: 'special' },
-                ],
-            },
-            {
-                id: 'palco3',
-                label: 'Palco 3',
-                events: [
-                    { time: '09h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '10h30', title: 'Intervalo', type: 'interval' },
-                    { time: '11h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '12h30', title: 'Almoço', type: 'interval' },
-                    { time: '14h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '15h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '16h00', title: 'Intervalo', type: 'interval' },
-                    { time: '18h00', title: 'Coquetel exclusivo para embaixadores', type: 'special' },
-                ],
-            },
-            {
-                id: 'arena',
-                label: 'Arena Ciranda Cultural',
-                events: [
-                    { time: '10h30', title: 'Roda 4', type: 'named' },
-                    { time: '12h30', title: 'Roda 5', type: 'named' },
-                    { time: '16h00', title: 'Roda 6', type: 'named' },
-                ],
-            },
-        ],
-    },
-    {
-        id: 2,
-        date: '21 Novembro',
-        dayLabel: 'Dia 3',
-        weekday: 'sábado',
-        access: 'all',
-        accessLabel: 'Aberto também para pais e cuidadores',
-        themeColor: '#ED9F8C',
-        credenciamento: [
-            { time: '07h30' },
-        ],
-        overviewHighlights: ['Maya Eigenmann', 'Daniel Becker e Flávia Reis', 'Murilo Gun', 'Elisama Santos'],
-        stages: [
-            {
-                id: 'palco1',
-                label: 'Palco 1',
-                events: [
-                    { time: '09h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '10h30', title: 'Intervalo', type: 'interval' },
-                    { time: '11h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '12h30', title: 'Almoço', type: 'interval' },
-                    { time: '14h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '15h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '16h00', title: 'Intervalo', type: 'interval' },
-                    { time: '16h30', title: 'Em breve', type: 'placeholder' },
-                    { time: '18h00', title: 'Encerramento', type: 'system' },
-                ],
-            },
-            {
-                id: 'palco2',
-                label: 'Palco 2',
-                events: [
-                    { time: '09h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '10h30', title: 'Intervalo', type: 'interval' },
-                    { time: '11h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '12h30', title: 'Almoço', type: 'interval' },
-                    { time: '14h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '15h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '16h00', title: 'Intervalo', type: 'interval' },
-                    { time: '16h30', title: 'Em breve', type: 'placeholder' },
-                    { time: '18h00', title: 'Encerramento', type: 'system' },
-                ],
-            },
-            {
-                id: 'palco3',
-                label: 'Palco 3',
-                events: [
-                    { time: '09h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '10h30', title: 'Intervalo', type: 'interval' },
-                    { time: '11h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '12h30', title: 'Almoço', type: 'interval' },
-                    { time: '14h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '15h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '16h00', title: 'Intervalo', type: 'interval' },
-                    { time: '16h30', title: 'Em breve', type: 'placeholder' },
-                    { time: '18h00', title: 'Encerramento', type: 'system' },
-                ],
-            },
-            {
-                id: 'palco4',
-                label: 'Palco 4',
-                events: [
-                    { time: '09h00', title: 'Maya Eigenmann', type: 'named' },
-                    { time: '10h30', title: 'Intervalo', type: 'interval' },
-                    { time: '11h00', title: 'Daniel Becker e Flávia Reis — Nossos filhos no século XXI', type: 'named' },
-                    { time: '12h30', title: 'Almoço', type: 'interval' },
-                    { time: '14h30', title: 'Murilo Gun', type: 'named' },
-                    { time: '16h00', title: 'Intervalo', type: 'interval' },
-                    { time: '16h30', title: 'Elisama Santos', type: 'named' },
-                    { time: '18h00', title: 'Encerramento', type: 'system' },
-                ],
-            },
-            {
-                id: 'arena',
-                label: 'Arena Ciranda Cultural',
-                events: [
-                    { time: '10h30', title: 'Roda 7', type: 'named' },
-                    { time: '12h30', title: 'Roda 8', type: 'named' },
-                    { time: '16h00', title: 'Roda 9', type: 'named' },
-                ],
-            },
-        ],
-    },
-    {
-        id: 3,
-        date: '22 Novembro',
-        dayLabel: 'Dia 4',
-        weekday: 'domingo',
-        access: 'all',
-        accessLabel: 'Aberto também para pais e cuidadores',
-        themeColor: '#ED9F8C',
-        credenciamento: [
-            { time: '07h30' },
-        ],
-        overviewHighlights: ['Nanda Perim', 'Isa Minatel — Mamma Ria', 'Marcos Piangers', 'Pato Fu e Giramundo'],
-        stages: [
-            {
-                id: 'palco1',
-                label: 'Palco 1',
-                events: [
-                    { time: '09h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '10h30', title: 'Intervalo', type: 'interval' },
-                    { time: '11h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '12h30', title: 'Almoço', type: 'interval' },
-                    { time: '14h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '15h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '16h00', title: 'Intervalo', type: 'interval' },
-                ],
-            },
-            {
-                id: 'palco2',
-                label: 'Palco 2',
-                events: [
-                    { time: '09h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '10h30', title: 'Intervalo', type: 'interval' },
-                    { time: '11h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '12h30', title: 'Almoço', type: 'interval' },
-                    { time: '14h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '15h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '16h00', title: 'Intervalo', type: 'interval' },
-                ],
-            },
-            {
-                id: 'palco3',
-                label: 'Palco 3',
-                events: [
-                    { time: '09h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '10h30', title: 'Intervalo', type: 'interval' },
-                    { time: '11h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '12h30', title: 'Almoço', type: 'interval' },
-                    { time: '14h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '15h00', title: 'Em breve', type: 'placeholder' },
-                    { time: '16h00', title: 'Intervalo', type: 'interval' },
-                ],
-            },
-            {
-                id: 'palco4',
-                label: 'Palco 4',
-                events: [
-                    { time: '09h00', title: 'Nanda Perim', type: 'named' },
-                    { time: '10h30', title: 'Intervalo', type: 'interval' },
-                    { time: '11h00', title: 'Isa Minatel — Mamma Ria', type: 'named' },
-                    { time: '12h30', title: 'Almoço', type: 'interval' },
-                    { time: '14h30', title: 'Marcos Piangers', type: 'named' },
-                    { time: '16h00', title: 'Intervalo', type: 'interval' },
-                    { time: '16h30', title: 'Pato Fu e Grupo Giramundo — Música de Brinquedo 2', type: 'special' },
-                    { time: '18h00', title: 'Encerramento', type: 'system' },
-                ],
-            },
-            {
-                id: 'arena',
-                label: 'Arena Ciranda Cultural',
-                events: [
-                    { time: '10h30', title: 'Roda 10', type: 'named' },
-                    { time: '12h30', title: 'Roda 11', type: 'named' },
-                    { time: '16h00', title: 'Roda 12', type: 'named' },
-                ],
-            },
-        ],
-    },
-];
 
 function EventRow({ event, themeColor }: { event: ScheduleEvent; themeColor: string }) {
     if (event.type === 'interval') {
@@ -352,6 +25,17 @@ function EventRow({ event, themeColor }: { event: ScheduleEvent; themeColor: str
                     <span className="text-sm font-dm-sans text-[#4c4d4f]/40 whitespace-nowrap">{event.title}</span>
                     <div className="flex-1 border-t border-dashed border-[#191919]/15" />
                 </div>
+            </div>
+        );
+    }
+
+    if (event.type === 'info') {
+        return (
+            <div className="flex items-center gap-4 px-5 py-3.5 rounded-[12px] bg-[#191919]/5 border border-[#191919]/10 text-[#4c4d4f]">
+                <span className="w-16 text-base font-dm-sans font-bold flex-shrink-0 tabular-nums">{event.time}</span>
+                <p className="text-xs md:text-sm font-dm-sans italic text-[#4c4d4f]/80 leading-tight flex-1">
+                    {event.title}
+                </p>
             </div>
         );
     }
@@ -372,8 +56,14 @@ function EventRow({ event, themeColor }: { event: ScheduleEvent; themeColor: str
         return (
             <div className="flex items-start gap-5 px-5 py-5 rounded-[14px] border-2 border-[#191919] shadow-[3px_3px_0px_0px_#191919]" style={{ backgroundColor: '#F7A73C' }}>
                 <span className="w-16 text-base font-dm-sans font-bold text-[#191919] flex-shrink-0 tabular-nums pt-0.5">{event.time}</span>
-                <div className="flex-1 min-w-0">
+                <div className="flex-1 min-w-0 flex flex-col gap-1">
                     <p className="text-base md:text-lg font-dm-sans font-bold text-[#191919] leading-tight">{event.title}</p>
+                    {event.speakers && (
+                        <p className="text-sm font-dm-sans font-semibold text-[#191919]/80">{event.speakers}</p>
+                    )}
+                    {event.description && (
+                        <p className="text-xs md:text-sm font-dm-sans text-[#191919]/80 leading-relaxed mt-1">{event.description}</p>
+                    )}
                 </div>
             </div>
         );
@@ -381,21 +71,42 @@ function EventRow({ event, themeColor }: { event: ScheduleEvent; themeColor: str
 
     if (event.type === 'system') {
         return (
-            <div className="flex items-center gap-5 px-5 py-3.5 rounded-[12px] border border-[#191919]/10">
+            <div className="flex items-center gap-5 px-5 py-3.5 rounded-[12px] border border-[#191919]/10 bg-white/50">
                 <span className="w-16 text-base font-dm-sans font-bold text-[#4c4d4f] flex-shrink-0 tabular-nums">{event.time}</span>
-                <span className="text-base font-dm-sans text-[#191919] leading-tight">{event.title}</span>
+                <span className="text-base font-dm-sans font-bold text-[#191919] leading-tight">{event.title}</span>
             </div>
         );
     }
 
     return (
         <div
-            className="flex items-start gap-5 px-5 py-4 rounded-[12px]"
-            style={{ border: '1px solid rgba(25,25,25,0.12)', borderLeft: `3px solid ${themeColor}` }}
+            className="flex flex-col md:flex-row items-start gap-3 md:gap-5 px-5 py-4.5 rounded-[16px] bg-white transition-all hover:shadow-[3px_3px_0px_0px_#191919]"
+            style={{ border: '2px solid #191919', borderLeft: `6px solid ${themeColor}` }}
         >
-            <span className="w-16 text-base font-dm-sans font-bold text-[#4c4d4f] flex-shrink-0 tabular-nums pt-0.5">{event.time}</span>
-            <p className="flex-1 min-w-0 text-base md:text-lg font-dm-sans font-bold text-[#191919] leading-tight">{event.title}</p>
-            <Star size={15} className="flex-shrink-0 mt-1" style={{ color: themeColor }} fill={themeColor} />
+            <span className="w-16 text-base font-dm-sans font-bold text-[#191919] flex-shrink-0 tabular-nums pt-0.5">
+                {event.time}
+            </span>
+            <div className="flex-1 min-w-0 flex flex-col gap-1.5">
+                <div className="flex items-start justify-between gap-3">
+                    <h4 className="text-base md:text-lg font-dm-sans font-bold text-[#191919] leading-snug">
+                        {event.title}
+                    </h4>
+                    <Star size={16} className="flex-shrink-0 mt-0.5" style={{ color: themeColor }} fill={themeColor} />
+                </div>
+
+                {event.speakers && (
+                    <div className="flex items-center gap-2 text-sm font-dm-sans font-semibold text-[#ef7d25] pt-0.5">
+                        <Mic2 size={15} className="flex-shrink-0 text-[#ef7d25]" />
+                        <span>{event.speakers}</span>
+                    </div>
+                )}
+
+                {event.description && (
+                    <p className="text-xs md:text-sm font-dm-sans text-[#4c4d4f] leading-relaxed pt-1.5 border-t border-[#191919]/10 mt-1">
+                        {event.description}
+                    </p>
+                )}
+            </div>
         </div>
     );
 }
@@ -474,7 +185,7 @@ function ScheduleModal({ isOpen, onClose, initialDay }: { isOpen: boolean; onClo
 
                     {/* Day tabs */}
                     <div
-                        className="flex gap-2 px-5 md:px-8 pt-4 pb-4 flex-shrink-0"
+                        className="flex gap-2 px-5 md:px-8 pt-4 pb-2 flex-shrink-0"
                     >
                         {scheduleFullData.map((day) => {
                             const isActive = activeDayId === day.id;
@@ -503,11 +214,11 @@ function ScheduleModal({ isOpen, onClose, initialDay }: { isOpen: boolean; onClo
 
                     {/* Logo 7° Congresso (Apenas Dia 1 e Dia 2) */}
                     {(activeDayId === 0 || activeDayId === 1) && (
-                        <div className="flex justify-center items-center px-4 pt-3 flex-shrink-0">
+                        <div className="flex justify-center items-center px-4 pt-1 flex-shrink-0">
                             <img
                                 src="/images/logo7ciephazul1.webp"
                                 alt="7º Congresso Internacional de Educação Parental"
-                                className="h-10 md:h-14 lg:h-16 max-w-[180px] md:max-w-[240px] w-auto object-contain"
+                                className="h-8 md:h-10 max-w-[160px] md:max-w-[200px] w-auto object-contain"
                                 loading="lazy"
                             />
                         </div>
@@ -515,7 +226,7 @@ function ScheduleModal({ isOpen, onClose, initialDay }: { isOpen: boolean; onClo
 
                     {/* Stage tabs */}
                     <div
-                        className="flex flex-wrap justify-center gap-2 px-4 md:px-8 pt-3 pb-5 flex-shrink-0"
+                        className="flex flex-wrap justify-center gap-2 px-4 md:px-8 pt-2 pb-5 flex-shrink-0"
                     >
                         {currentDay.stages.map((stage) => {
                             const isActive = activeStageId === stage.id;
@@ -523,7 +234,7 @@ function ScheduleModal({ isOpen, onClose, initialDay }: { isOpen: boolean; onClo
                                 <button
                                     key={stage.id}
                                     onClick={() => setActiveStageId(stage.id)}
-                                    className="flex-shrink-0 px-5 py-2.5 rounded-full text-[15px] font-dm-sans font-bold border-2 border-[#191919] transition-all whitespace-nowrap"
+                                    className="flex-shrink-0 px-4 py-2 rounded-full text-[13px] md:text-[14px] font-dm-sans font-bold border-2 border-[#191919] transition-all whitespace-nowrap"
                                     style={{
                                         backgroundColor: isActive ? currentDay.themeColor : '#ffffff',
                                         color: isActive ? '#ffffff' : '#191919',
@@ -538,7 +249,7 @@ function ScheduleModal({ isOpen, onClose, initialDay }: { isOpen: boolean; onClo
 
                     {/* Timeline */}
                     <div className="flex-1 overflow-y-auto px-5 md:px-8 pb-10">
-                        <div className="space-y-2.5">
+                        <div className="space-y-3">
                             {currentStage.events.map((event, idx) => (
                                 <EventRow key={idx} event={event} themeColor={currentDay.themeColor} />
                             ))}
@@ -594,7 +305,7 @@ function DayOverviewCard({ day, onClick }: { day: DayData; onClick: () => void }
                 {/* Stage info */}
                 <div className="flex flex-col gap-1.5">
                     <div className="flex items-center gap-2">
-                        <img src="/images/icons/Ícones_MIC-COR-120.png" alt="Palcos" className="w-[14px] h-[14px]" loading="lazy" />
+                        <img src="/images/icons/mic_cor.png" alt="Palcos" className="w-[14px] h-[14px]" loading="lazy" />
                         <span className="text-xs font-dm-sans font-bold text-[#4c4d4f]">{palcoCount} palcos simultâneos + Arena Ciranda</span>
                     </div>
                     <div className="flex items-center gap-2">

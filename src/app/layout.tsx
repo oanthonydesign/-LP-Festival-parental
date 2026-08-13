@@ -108,10 +108,7 @@ export default function RootLayout({
                       t.src=v;s=b.getElementsByTagName(e)[0];
                       s.parentNode.insertBefore(t,s)}(window, document,'script',
                       'https://connect.facebook.net/en_US/fbevents.js');
-                      fbq('init', '339713875849904', {
-                        em: 'email@email.com',
-                        ph: '1234567890'
-                      });
+                      fbq('init', '339713875849904');
                       fbq('track', 'PageView');
                     `}
                 </Script>
@@ -133,10 +130,10 @@ export default function RootLayout({
             <body className={`${dmSans.variable} ${archivo.variable} antialiased bg-[#fff6ef] font-[family-name:var(--font-dm-sans)]`} >
                 {/* Google Tag Manager (noscript) */}
                 <noscript>
-                    <iframe 
+                    <iframe
                         src="https://www.googletagmanager.com/ns.html?id=GTM-NKNHM3BW"
-                        height="0" 
-                        width="0" 
+                        height="0"
+                        width="0"
                         style={{ display: 'none', visibility: 'hidden' }}
                     />
                 </noscript>
@@ -144,11 +141,11 @@ export default function RootLayout({
 
                 {/* Facebook Pixel (noscript) */}
                 <noscript>
-                    <img 
-                        height="1" 
-                        width="1" 
-                        style={{ display: 'none' }} 
-                        src="https://www.facebook.com/tr?id=339713875849904&ev=PageView&noscript=1" 
+                    <img
+                        height="1"
+                        width="1"
+                        style={{ display: 'none' }}
+                        src="https://www.facebook.com/tr?id=339713875849904&ev=PageView&noscript=1"
                     />
                 </noscript>
                 {/* End Facebook Pixel (noscript) */}
