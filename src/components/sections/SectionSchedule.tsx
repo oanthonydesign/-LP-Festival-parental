@@ -46,7 +46,6 @@ function EventRow({ event, themeColor }: { event: ScheduleEvent; themeColor: str
                 <span className="w-16 text-base font-dm-sans font-bold text-[#4c4d4f] flex-shrink-0 tabular-nums">{event.time}</span>
                 <div className="flex items-center gap-2.5">
                     <span className="text-base font-dm-sans italic text-[#4c4d4f]/40">Em breve</span>
-                    <span className="hidden sm:inline text-[11px] font-dm-sans uppercase tracking-wider text-[#4c4d4f]/30 border border-[#191919]/10 px-2.5 py-0.5 rounded-full">A confirmar</span>
                 </div>
             </div>
         );

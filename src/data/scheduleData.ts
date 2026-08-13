@@ -72,7 +72,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '11h00',
                         title: 'Depois das telas: quem está educando nossas crianças?',
-                        speakers: 'Vanessa Cavalieri + representante ChildFund (a confirmar)',
+                        speakers: 'Vanessa Cavalieri',
                         description: 'As maiores transformações da infância aconteceram em menos de duas décadas. Redes sociais, algoritmos, inteligência artificial e economia da atenção estão mudando a forma como crianças crescem, aprendem e constroem vínculos.',
                         type: 'named',
                     },
@@ -103,7 +103,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '17h00',
                         title: 'Neurodivergências: o que mudou na forma de compreender o desenvolvimento infantil',
-                        speakers: 'Paula Fratti e Mayra Gaiato (confirmar)',
+                        speakers: 'Paula Fratti',
                         description: 'TEA, TDAH, altas habilidades e outros perfis de desenvolvimento desafiam antigas certezas sobre infância, aprendizagem e inclusão. O que os profissionais precisam atualizar?',
                         type: 'named',
                     },
@@ -168,7 +168,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '17h00',
                         title: 'Neurociência ou "neuro-mito"? O que o educador parental precisa saber para não cair em armadilhas',
-                        speakers: 'Dra Liubiana Arantes (confirmar)',
+                        speakers: 'Dra Liubiana Arantes (a confirmar)',
                         description: 'Dopamina, córtex pré-frontal, cérebro emocional, autorregulação e neuroplasticidade aparecem cada vez mais in cursos, conteúdos e explicações sobre o comportamento de crianças e adolescentes. Mas nem tudo o que usa a linguagem da neurociência é sustentado pela ciência. O que o educador parental realmente precisa compreender para qualificar sua atuação? Quais conceitos são úteis e quais simplificações, neuromitos e explicações sedutoras precisam ser questionados?',
                         type: 'named',
                     },
@@ -221,7 +221,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '15h30',
                         title: 'Educação Sexual e Rede de Proteção: Como lidar com os perigos, acionar responsáveis e agir em cada situação',
-                        speakers: 'Kênnya Gama e Sheylli Caleffi (confirmar)',
+                        speakers: 'Kênnya Gama',
                         description: 'Educação sexual, consentimento e prevenção do abuso continuam sendo fundamentais, mas o que o educador parental deve fazer quando uma criança ou adolescente revela uma situação de violência? Como acolher sem investigar, orientar a família, respeitar os limites da atuação profissional e cumprir sua responsabilidade ética e legal?',
                         type: 'named',
                     },
@@ -279,7 +279,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '09h00',
                         title: 'Da casa para o mundo: por que a educação parental é uma causa de toda a sociedade?',
-                        speakers: 'Rodolfo Canônico e Thaís Ferreira (sugestão)',
+                        speakers: 'Rodolfo Canônico',
                         description: 'Violência, aprendizagem, saúde mental, produtividade e desenvolvimento humano são influenciados pelas relações familiares. Como tirar a educação parental da esfera exclusivamente privada e transformá-la em pauta social, institucional e política?',
                         type: 'named',
                     },
@@ -296,7 +296,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '15h30',
                         title: 'Educar sem excluir: o que o educador parental precisa saber sobre diversidade, preconceito e pertencimento',
-                        speakers: 'Magda Figueiredo e outros palestrantes a definir',
+                        speakers: 'Magda Figueiredo',
                         description: 'Racismo, homofobia, transfobia e outras formas de discriminação atravessam a infância, a adolescência e as relações familiares, mesmo quando não aparecem como a queixa principal de uma família. Como o educador parental reconhece seus próprios pontos cegos, conduz conversas difíceis e orienta famílias sem reproduzir preconceitos ou simplificar experiências que exigem conhecimento específico?',
                         type: 'named',
                     },
@@ -321,7 +321,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '09h00',
                         title: 'Da teoria à prática: como implementar programas de educação parental nas escolas',
-                        speakers: 'Daniela Hoppe e convidado a definir',
+                        speakers: 'Daniela Hoppe',
                         description: 'Muito além das palestras para pais: caminhos para construir programas permanentes de fortalecimento das famílias dentro das instituições de ensino.',
                         type: 'named',
                     },
@@ -337,14 +337,14 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '14h00',
                         title: 'Quando escola e família deixam de ser adversárias',
-                        speakers: 'Aline Castro e Giuliano Tierno (sugestão)',
+                        speakers: 'Aline Castro',
                         description: 'Conflitos, expectativas e comunicação ainda desafiam a relação entre famílias e instituições de ensino. Como construir alianças que favoreçam o desenvolvimento das crianças?',
                         type: 'named',
                     },
                     {
                         time: '15h30',
                         title: 'Muito além do certificado: o profissional que o futuro vai exigir',
-                        speakers: 'Carol Bueno e convidado a definir',
+                        speakers: 'Carol Bueno',
                         description: 'Formação técnica é o ponto de partida, mas a atuação também exige escuta, comunicação, ética, capacidade de trabalhar em rede, atualização e clareza sobre os próprios limites.',
                         type: 'named',
                     },
@@ -388,7 +388,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '15h30',
                         title: 'A coragem de se posicionar profissionalmente: Decisão, risco e reinvenção na construção de uma carreira.',
-                        speakers: 'Dani Junco e convidado a confirmar',
+                        speakers: 'Dani Junco',
                         description: 'Muitas decisões profissionais que tomamos dependem da decisão de agir, de correr riscos, de se reinventar.',
                         type: 'named',
                     },
@@ -543,7 +543,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '14h00',
                         title: 'Meu filho não está bem: como reconhecer os sinais e procurar ajuda',
-                        speakers: 'Wimer Bottura Jr e Cristina Groberio (a confirmar)',
+                        speakers: 'Wimer Bottura Jr',
                         description: 'Isolamento, irritabilidade, crises de ansiedade, mudanças no sono, queda no rendimento e autolesão exigem atenção. Como os pais podem reconhecer sinais de sofrimento e saber quando buscar ajuda profissional?',
                         type: 'named',
                     },
@@ -624,7 +624,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '11h00',
                         title: 'Pais presentes: a paternidade que nossos filhos levam para a vida',
-                        speakers: 'Pedro Oliveira + Diego Silva (a confirmar) + Pesquisa Meninos (a confirmar)',
+                        speakers: 'Pedro Oliveira',
                         description: 'A presença paterna deixa marcas que acompanham os filhos ao longo da vida. Participar não significa apenas ajudar nas tarefas, mas conhecer a rotina, assumir responsabilidades, sustentar limites, oferecer afeto e construir vínculo.',
                         type: 'named',
                     },
@@ -639,7 +639,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '15h00',
                         title: 'As conversas que protegem nossos filhos: corpo, consentimento e segurança digital',
-                        speakers: 'Lua Barros e Delegada Dalis (convidar)',
+                        speakers: 'Lua Barros',
                         description: 'Conversar cedo sobre corpo, intimidade, consentimento, pornografia, relacionamentos e segurança digital ajuda crianças e adolescentes a reconhecer limites e procurar ajuda.',
                         type: 'named',
                     },
@@ -655,7 +655,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '09h00',
                         title: 'Depois que os filhos chegam: como continuar sendo casal e educar juntos',
-                        speakers: 'Thiago Queiroz e convidado a definir',
+                        speakers: 'Thiago Queiroz',
                         description: 'A chegada dos filhos transforma a rotina, a intimidade e a forma como o casal toma decisões. Diferenças na educação, cansaço, cobranças e divisão desigual do cuidado podem gerar afastamento e ressentimento.',
                         type: 'named',
                     },
@@ -706,7 +706,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '14h00',
                         title: 'Os rituais que fazem uma família',
-                        speakers: 'Elaine Paiva e convidado a definir (professora Harvard)',
+                        speakers: 'Elaine Paiva',
                         description: 'Refeições compartilhadas, brincadeiras, histórias, celebrações e pequenas tradições constroem pertencimento e fortalecem vínculos. Como criar rituais possíveis, que façam sentido para a rotina e a história de cada família?',
                         type: 'named',
                     },
