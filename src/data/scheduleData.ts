@@ -168,7 +168,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '17h00',
                         title: 'Neurociência ou "neuro-mito"? O que o educador parental precisa saber para não cair em armadilhas',
-                        speakers: 'Dra Liubiana Arantes (a confirmar)',
+                        speakers: 'A confirmar',
                         description: 'Dopamina, córtex pré-frontal, cérebro emocional, autorregulação e neuroplasticidade aparecem cada vez mais in cursos, conteúdos e explicações sobre o comportamento de crianças e adolescentes. Mas nem tudo o que usa a linguagem da neurociência é sustentado pela ciência. O que o educador parental realmente precisa compreender para qualificar sua atuação? Quais conceitos são úteis e quais simplificações, neuromitos e explicações sedutoras precisam ser questionados?',
                         type: 'named',
                     },
@@ -491,7 +491,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '11h00',
                         title: 'Bullying: como família e escola podem agir antes que piore',
-                        speakers: 'Andreza Menezes e Benjamin Horta',
+                        speakers: 'Andreza Menezes',
                         description: 'Quando uma criança ou adolescente sofre, presencia ou pratica bullying, a família nem sempre sabe como agir e a escola pode demorar a compreender a dimensão do problema. Como perceber os sinais, acolher sem interrogar, registrar o que está acontecendo e construir uma resposta conjunta?',
                         type: 'named',
                     },
@@ -499,7 +499,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '14h00',
                         title: 'Toda família precisa se sentir parte',
-                        speakers: 'Dani Arrais e Robert e Gustavo (@2depais)',
+                        speakers: 'Dani Arrais',
                         description: 'Famílias com duas mães, dois pais e outras configurações familiares ainda convivem com perguntas invasivas, formulários que não as representam e espaços que tratam sua existência como exceção. Como conversar com os filhos sobre diversidade e construir ambientes inclusivos?',
                         type: 'named',
                     },
@@ -507,7 +507,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '16h00',
                         title: 'Sobrecarga materna',
-                        speakers: 'Patrícia (do minidoc), Ana Cardoso e Bebel Soares',
+                        speakers: 'Patrícia Fassa, Ana Cardoso e Bebel Soares',
                         description: 'A rotina de cuidado ainda recai de forma desigual sobre muitas mulheres. Como reconhecer a sobrecarga, dividir responsabilidades e construir uma rede de apoio que não dependa de a mãe chegar ao limite para ser percebida?',
                         type: 'named',
                     },
@@ -522,7 +522,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '09h00',
                         title: 'A geração online e o vínculo offline: como (re)construir proximidade com crianças e adolescentes na era digital',
-                        speakers: 'Fernanda Montano, Camila Bruzzi e Eva Pereira',
+                        speakers: 'Fernanda Montano e Eva Pereira',
                         description: 'Celulares, jogos e redes sociais ocupam cada vez mais espaço na rotina familiar. Como estabelecer acordos, reduzir conflitos e recuperar momentos de conexão sem transformar tudo em vigilância ou proibição?',
                         type: 'named',
                     },
@@ -632,14 +632,14 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '14h00',
                         title: 'Meu Filho Cresceu. E Agora? Como lidar com a adolescência nesses tempos difíceis',
-                        speakers: 'Jacqueline Vilela, Claudia Alaminos',
+                        speakers: 'Jacqueline Vilela',
                         description: 'A adolescência modifica a forma como os filhos se comunicam, pedem ajuda, enfrentam limites e buscam autonomia. Muitos pais sentem que perderam espaço justamente quando os adolescentes continuam precisando de orientação.',
                         type: 'named',
                     },
                     {
                         time: '15h00',
                         title: 'As conversas que protegem nossos filhos: corpo, consentimento e segurança digital',
-                        speakers: 'Lua Barros',
+                        speakers: 'A confirmar',
                         description: 'Conversar cedo sobre corpo, intimidade, consentimento, pornografia, relacionamentos e segurança digital ajuda crianças e adolescentes a reconhecer limites e procurar ajuda.',
                         type: 'named',
                     },
@@ -666,7 +666,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '14h00',
                         title: 'Comunicação sem ruídos: Como ajustar a comunicação, reduzir ruídos e preservar a conexão',
-                        speakers: 'Alessandra Palazzin e Carol Nalon',
+                        speakers: 'Alessandra Palazzin',
                         description: 'Quando toda conversa termina em cobrança, defesa ou discussão, pais e filhos deixam de se escutar. Como ajustar a comunicação, reduzir ruídos e preservar a conexão mesmo diante de limites, erros e discordâncias?',
                         type: 'named',
                     },
@@ -713,7 +713,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '15h00',
                         title: 'Inteligência artificial na vida dos nossos filhos: quando ajuda e quando atrapalha',
-                        speakers: 'Luciana Loureiro e Diretor da Rede Bernoulli',
+                        speakers: 'Luciana Loureiro e Marcos Ragazzi (Representante da Rede Bernoulli)',
                         description: 'Tópicos sobre como a tecnologia e IA estão moldando o aprendizado e comportamento dos filhos no cotidiano.',
                         type: 'named',
                     },

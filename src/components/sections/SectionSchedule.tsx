@@ -253,6 +253,9 @@ function ScheduleModal({ isOpen, onClose, initialDay }: { isOpen: boolean; onClo
                                 <EventRow key={idx} event={event} themeColor={currentDay.themeColor} />
                             ))}
                         </div>
+                        <p className="text-xs font-dm-sans italic text-[#4c4d4f]/60 text-center mt-6">
+                            *Programação sujeita a alterações sem aviso prévio
+                        </p>
                     </div>
                 </div>
             </div>
@@ -267,7 +270,7 @@ function DayOverviewCard({ day, onClick }: { day: DayData; onClick: () => void }
     return (
         <button
             onClick={onClick}
-            className="w-full text-left bg-white rounded-[24px] border-2 border-[#191919] p-6 hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#191919] transition-all duration-200 shadow-[4px_4px_0px_0px_#191919] group relative"
+            className="w-full text-left bg-white rounded-[24px] border-2 border-[#191919] p-6 hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#191919] transition-all duration-200 shadow-[4px_4px_0px_0px_#191919] group relative cursor-pointer"
         >
             {/* Access badge */}
             <div
@@ -390,6 +393,9 @@ export default function SectionSchedule() {
                                 <ChevronRight size={18} />
                             </div>
                         </button>
+                        <p className="text-xs font-dm-sans italic text-[#4c4d4f]/60 text-center mt-2">
+                            *Programação sujeita a alterações sem aviso prévio
+                        </p>
                     </div>
 
                 </div>
