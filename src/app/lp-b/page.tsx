@@ -53,10 +53,10 @@ export default function LPB() {
                 <Section6 />
                 <SectionSpecialGuests />
                 <Section16 />
-                <SpeakersSection />
+                <SectionScheduleSimple />
                 <Marquee01 />
                 <Marquee02 />
-                <SectionScheduleSimple />
+                <SpeakersSection />
                 <Section15 />
                 <Section7 />
                 <Section9 />
