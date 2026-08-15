@@ -253,7 +253,7 @@ function ScheduleModal({ isOpen, onClose, initialDay }: { isOpen: boolean; onClo
                                 <EventRow key={idx} event={event} themeColor={currentDay.themeColor} />
                             ))}
                         </div>
-                        <p className="text-xs font-dm-sans italic text-[#4c4d4f]/60 text-center mt-6">
+                        <p className="text-sm font-dm-sans italic text-[#4c4d4f]/70 text-center mt-6">
                             *Programação sujeita a alterações sem aviso prévio
                         </p>
                     </div>
@@ -393,7 +393,7 @@ export default function SectionSchedule() {
                                 <ChevronRight size={18} />
                             </div>
                         </button>
-                        <p className="text-xs font-dm-sans italic text-[#4c4d4f]/60 text-center mt-2">
+                        <p className="text-sm font-dm-sans italic text-[#4c4d4f]/70 text-center mt-2">
                             *Programação sujeita a alterações sem aviso prévio
                         </p>
                     </div>
