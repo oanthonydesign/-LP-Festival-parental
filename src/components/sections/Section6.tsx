@@ -7,9 +7,9 @@ import { useIsAcaoDia } from "@/hooks/useIsAcaoDia";
 import { Gift, Files, BookOpen, Video } from "lucide-react";
 
 // Flags de controle para fácil ativação/desativação
-const SHOW_PROMO_RIBBON = true;
+const SHOW_PROMO_RIBBON = false;
 const SHOW_PRICE_STATUS_BADGE = false;
-const SHOW_COUNTDOWN_BADGE = true;
+const SHOW_COUNTDOWN_BADGE = false;
 
 interface Benefit {
   text: string;
@@ -86,9 +86,9 @@ const PASSAPORTES: PassportData[] = [
   {
     id: "educador",
     name: "Passaporte Profissional",
-    lote: "Lote 5",
-    priceInstallment: "R$ 164,70",
-    priceFull: "ou R$ 1647.00 à vista",
+    lote: "Lote 6",
+    priceInstallment: "R$ 169,70",
+    priceFull: "ou R$ 1.697,00 à vista",
     priceOriginal: "R$ 2.197",
     benefits: [
       "4 dias para aprofundar conhecimento, prática e visão sobre a parentalidade contemporânea. Trilha Técnica (dias 1–2, exclusiva para profissionais) + Trilha Parental (dias 3–4, aberta também para pais e cuidadores)",
@@ -114,10 +114,10 @@ const PASSAPORTES: PassportData[] = [
   {
     id: "parental",
     name: "Passaporte Parental",
-    lote: "Lote 5",
+    lote: "Lote 6",
     priceInstallment: "R$ 49,70",
-    priceFull: "ou R$ 497.00 à vista",
-    priceOriginal: "R$ 1497.00",
+    priceFull: "ou R$ 497,00 à vista",
+    priceOriginal: "R$ 1.497,00",
     benefits: [
       "Dois dias de palestras, espetáculos e vivências (21–22/11) — para sair da sobrecarga e ganhar clareza, presença e direção na relação com seus filhos.",
       "Autógrafos com palestrantes, feira de produtos e serviços e sacola de brindes",
@@ -128,8 +128,8 @@ const PASSAPORTES: PassportData[] = [
     href: "https://chk.eduzz.com/39VEAVA5WR",
     doubleOptions: {
       priceInstallment: "R$ 74,70",
-      priceFull: "ou R$ 747.00 à vista",
-      priceOriginal: "R$ 1947.00",
+      priceFull: "ou R$ 747,00 à vista",
+      priceOriginal: "R$ 1.947,00",
       benefits: [
         "Viva os dois dias dessa experiência (21 e 22/11) com quem partilha a mesma jornada e com melhor custo por participante.",
         "Autógrafos com palestrantes, feira de produtos e serviços e sacola de brindes",
@@ -201,7 +201,7 @@ function CountdownBadge() {
       </div>
       <div className="flex flex-col items-start">
         <p className="font-dm-sans text-[16px] md:text-[18px] leading-tight text-[#191919]">
-          <span className="font-bold text-[#2260a1]">Lote 5</span> termina em
+          <span className="font-bold text-[#2260a1]">Lote 6</span> termina em
         </p>
         <p className="font-sugar-peachy text-[28px] md:text-[34px] tracking-[-1px] md:tracking-[-1.25px] leading-[0.9] text-[#191919] mt-1 tabular-nums">
           {countdownText}
@@ -238,6 +238,51 @@ function PassportCard({ data }: { data: PassportData }) {
     ? "https://chk.eduzz.com/39VK8PJ5WR"
     : (isDouble && hasDoubleOption ? data.doubleOptions!.href : data.href);
   const currentButtonText = isDouble && hasDoubleOption ? data.doubleOptions!.buttonText : data.buttonText;
+
+  const formatPriceValue = (val: string) => {
+    if (!val) return "";
+    let clean = val.replace(/^ou\s+/i, "").replace(/\s+à\s+vista$/i, "").trim();
+    if (clean.includes(".00")) {
+      clean = clean.replace(".00", ",00");
+    }
+    return clean;
+  };
+
+  const getNumericAmount = (val: string) => {
+    if (!val) return 0;
+    const clean = formatPriceValue(val).replace("R$", "").trim();
+    if (!clean) return 0;
+
+    if (clean.includes(".") && clean.includes(",")) {
+      const normalized = clean.replace(/\./g, "").replace(",", ".");
+      return parseFloat(normalized) || 0;
+    }
+    if (clean.includes(",")) {
+      const normalized = clean.replace(",", ".");
+      return parseFloat(normalized) || 0;
+    }
+    if (clean.includes(".")) {
+      const parts = clean.split(".");
+      if (parts[parts.length - 1].length === 2) {
+        return parseFloat(clean) || 0;
+      } else {
+        return parseFloat(clean.replace(/\./g, "")) || 0;
+      }
+    }
+    return parseFloat(clean) || 0;
+  };
+
+  const formattedFullPrice = formatPriceValue(currentPriceFull);
+  const numericFullPrice = getNumericAmount(currentPriceFull);
+  const numericInstallment = getNumericAmount(currentPriceInstallment);
+  const numericInstallmentTotal = numericInstallment * 12;
+
+  // Cálculo de economia: (12 * valor parcela) - valor à vista, arredondado
+  const calculatedSavings = Math.round(numericInstallmentTotal - numericFullPrice);
+  const currentSavings = calculatedSavings > 0 ? calculatedSavings : null;
+
+  // Preço por dia (para o educador/4 dias)
+  const currentPricePerDay = numericFullPrice > 0 ? Math.ceil(numericFullPrice / 4) : 0;
 
   if (data.isSoldOut) {
     return (
@@ -461,7 +506,7 @@ function PassportCard({ data }: { data: PassportData }) {
 
             <div className="text-center flex flex-col items-center gap-1.5 w-full">
               <p className={`font-dm-sans text-[15px] md:text-[16px] font-medium ${data.id === 'educador' ? 'text-white/95' : 'text-[#191919]/90'}`}>
-                Garantindo agora, no Lote 5:
+                Garantindo agora, no Lote 6:
               </p>
 
               <div className={`font-sugar-peachy text-[40px] md:text-[54px] leading-none tracking-tight flex items-center justify-center gap-2 ${data.id === 'educador' ? 'text-white' : 'text-[#191919]'}`}>
@@ -472,19 +517,21 @@ function PassportCard({ data }: { data: PassportData }) {
               <div className="flex items-center justify-center gap-1.5 flex-wrap">
                 <span className={`font-dm-sans text-[18px] md:text-[20px] inline-flex items-center gap-1 ${data.id === 'educador' ? 'text-white/95' : 'text-[#191919]/90'}`}>
                   <span>ou</span>
-                  <span className="price-value font-bold" data-amount={isDouble && hasDoubleOption ? "747.00" : (data.id === 'educador' ? "1647.00" : "497.00")} itemProp="price">
-                    {isDouble && hasDoubleOption ? "R$ 747,00" : (data.id === 'educador' ? "R$ 1.647,00" : "R$ 497,00")}
+                  <span className="price-value font-bold" data-amount={numericFullPrice > 0 ? numericFullPrice.toFixed(2) : ""} itemProp="price">
+                    {formattedFullPrice}
                   </span>
                   <span>à vista</span>
                 </span>
-                <span className="bg-[#c2f2c5] border-2 border-[#191919] rounded-[8px] px-2 py-0.5 font-dm-sans font-bold text-[13px] text-[#191919] shadow-[1px_1px_0px_0px_#191919] whitespace-nowrap">
-                  economize R$ {data.id === 'educador' ? 329 : (isDouble ? 145 : 99)}
-                </span>
+                {currentSavings !== null && (
+                  <span className="bg-[#c2f2c5] border-2 border-[#191919] rounded-[8px] px-2 py-0.5 font-dm-sans font-bold text-[13px] text-[#191919] shadow-[1px_1px_0px_0px_#191919] whitespace-nowrap">
+                    economize R$ {currentSavings}
+                  </span>
+                )}
               </div>
 
               {data.id === 'educador' && (
                 <p className="font-dm-sans text-[13px] md:text-[14px] text-white/85 mt-1">
-                  menos de R$ 412 por dia · sobe para <span className="text-[#fbce32] font-bold">R$ 2.197</span> em nov.
+                  menos de R$ {currentPricePerDay} por dia · sobe para <span className="text-[#fbce32] font-bold">{currentPriceOriginal}</span> em nov.
                 </p>
               )}
             </div>
@@ -500,8 +547,8 @@ function PassportCard({ data }: { data: PassportData }) {
             </div>
             <p className="font-dm-sans text-[24px] mt-2 opacity-80 flex items-center justify-center gap-1">
               <span>ou</span>
-              <span className="price-value font-bold" data-amount={isDouble && hasDoubleOption ? "747.00" : (data.id === 'educador' ? "1647.00" : "497.00")} itemProp="price">
-                {isDouble && hasDoubleOption ? "R$ 747,00" : (data.id === 'educador' ? "R$ 1.647,00" : "R$ 497,00")}
+              <span className="price-value font-bold" data-amount={numericFullPrice > 0 ? numericFullPrice.toFixed(2) : ""} itemProp="price">
+                {formattedFullPrice}
               </span>
               <span>à vista</span>
             </p>
