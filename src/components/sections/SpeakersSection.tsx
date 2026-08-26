@@ -302,7 +302,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 29,
         name: "Dani Arrais",
-        description: "Uma das mães do Martin. Jornalista, escritora, uma das criadoras da @contente.vc e diretora institucional do Coletivo Dupla Maternidade.",
+        description: "Jornalista, escritora e diretora institucional do Coletivo Dupla Maternidade",
         image: "/images/daniar.webp",
         instagram: "https://www.instagram.com/daniarrais/?hl=pt",
         linkedin: "https://www.linkedin.com/in/daniarrais/",
@@ -312,7 +312,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 30,
         name: "Dani Junco",
-        description: "Mãe do Lucas, empreendedora serial, palestrante, escritora e creator nos temas de Inovação, Liderança, Creator Economy, Futuro do Trabalho e Comunidades.",
+        description: "Empreendedora, palestrante, escritora e creator nos temas de Inovação e Liderança",
         image: "/images/daniju.webp",
         instagram: "https://www.instagram.com/danijunco/",
         linkedin: "https://www.linkedin.com/in/danijunco/",
@@ -322,7 +322,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 31,
         name: "Patrícia Fassa",
-        description: "Documentarista, empresária e diretora da P2 Vídeos. Formada em Gestão Empreendedora e conselheira da Economia de Comunhão (EdC)",
+        description: "Documentarista, empresária e conselheira da Economia de Comunhão (EdC)",
         image: "/images/patriciafa.webp",
         instagram: "https://www.instagram.com/patriciafassa/",
         linkedin: "https://www.linkedin.com/in/patricia-fassa-50806160/",
@@ -332,7 +332,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 32,
         name: "Lucelmo Lacerda",
-        description: "É uma das principais referências brasileiras em Educação Especial, políticas educacionais, TEA e práticas educacionais baseadas em evidências científicas.",
+        description: "Pesquisador, professor e referência no país em Transtorno do Espectro Autista (TEA)",
         image: "/images/lucelmola.webp",
         instagram: "https://www.instagram.com/lucelmo.lacerda/",
         website: "https://educacaoeevidencia.com.br/index.php/ree/pt_BR",
@@ -342,7 +342,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 33,
         name: "Thaís Ferreira",
-        description: "Preside a Comissão de Direitos da Criança, do Adolescente e da Juventude e é formada em Inovação e Estratégia pelo MIT.",
+        description: "Preside a Comissão de Direitos da Criança, do Adolescente e da Juventude",
         image: "/images/thaisfe.webp",
         instagram: "https://www.instagram.com/sou_thaisferreira",
         linkedin: "https://www.linkedin.com/in/thais-ferreira-907819311",
