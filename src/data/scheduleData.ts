@@ -103,7 +103,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '17h00',
                         title: 'Neurodivergências: o que mudou na forma de compreender o desenvolvimento infantil',
-                        speakers: 'Paula Fratti',
+                        speakers: 'Paula Fratti e Lucelmo Lacerda de Brito',
                         description: 'TEA, TDAH, altas habilidades e outros perfis de desenvolvimento desafiam antigas certezas sobre infância, aprendizagem e inclusão. O que os profissionais precisam atualizar?',
                         type: 'named',
                     },
@@ -221,7 +221,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '15h30',
                         title: 'Educação Sexual e Rede de Proteção: Como lidar com os perigos, acionar responsáveis e agir em cada situação',
-                        speakers: 'Kênnya Gama',
+                        speakers: 'Kênnya Gralha',
                         description: 'Educação sexual, consentimento e prevenção do abuso continuam sendo fundamentais, mas o que o educador parental deve fazer quando uma criança ou adolescente revela uma situação de violência? Como acolher sem investigar, orientar a família, respeitar os limites da atuação profissional e cumprir sua responsabilidade ética e legal?',
                         type: 'named',
                     },
@@ -279,7 +279,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '09h00',
                         title: 'Da casa para o mundo: por que a educação parental é uma causa de toda a sociedade?',
-                        speakers: 'Rodolfo Canônico',
+                        speakers: 'Rodolfo Canônico e Thaís Ferreira',
                         description: 'Violência, aprendizagem, saúde mental, produtividade e desenvolvimento humano são influenciados pelas relações familiares. Como tirar a educação parental da esfera exclusivamente privada e transformá-la em pauta social, institucional e política?',
                         type: 'named',
                     },

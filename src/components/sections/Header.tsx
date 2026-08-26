@@ -105,6 +105,7 @@ export default function Header() {
                                 { name: "Palestrantes", href: "#palestrantes" },
                                 { name: "Programação", href: "#programacao" },
                                 { name: "Destaques", href: "#convidados-especiais" },
+                                { name: "Imprensa", href: "#imprensa" },
                                 { name: "FAQ", href: "#faq" }
                             ].map((item) => (
                                 <a
@@ -152,6 +153,7 @@ export default function Header() {
                             { name: "Programação", href: "#programacao" },
                             { name: "Destaques", href: "#convidados-especiais" },
                             { name: "FAQ", href: "#faq" },
+                            { name: "Imprensa", href: "#imprensa" },
                             { name: "Seja patrocinador", href: "#patrocinador" }
                         ].map((item) => (
                             <a
