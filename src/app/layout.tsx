@@ -57,7 +57,7 @@ export default function RootLayout({
                 <Script id="vturb-plt" strategy="beforeInteractive">
                     {`!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);`}
                 </Script>
-                <link rel="preload" href="https://scripts.converteai.net/45503b29-1a7d-4696-ac1d-75f7fc87b786/players/6a722ee481786e04ca490251/v4/player.js" as="script" />
+                <link rel="preload" href="https://scripts.converteai.net/45503b29-1a7d-4696-ac1d-75f7fc87b786/players/6a85a1668df297a6712fb774/v4/player.js" as="script" />
                 <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script" />
                 <link rel="preload" href="https://cdn.converteai.net/45503b29-1a7d-4696-ac1d-75f7fc87b786/6a6b6f64101ce042e0a4ec70/main.m3u8" as="fetch" />
                 <link rel="dns-prefetch" href="https://cdn.converteai.net" />

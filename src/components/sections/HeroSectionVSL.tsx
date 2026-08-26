@@ -18,7 +18,7 @@ export default function HeroSectionVSL() {
         if (!document.getElementById(scriptId)) {
             const s = document.createElement("script");
             s.id = scriptId;
-            s.src = "https://scripts.converteai.net/45503b29-1a7d-4696-ac1d-75f7fc87b786/players/6a722ee481786e04ca490251/v4/player.js";
+            s.src = "https://scripts.converteai.net/45503b29-1a7d-4696-ac1d-75f7fc87b786/players/6a85a1668df297a6712fb774/v4/player.js";
             s.async = true;
             document.head.appendChild(s);
         }
@@ -65,7 +65,7 @@ export default function HeroSectionVSL() {
                     className="w-full max-w-[960px] relative rounded-[20px] md:rounded-[32px] overflow-hidden border-2 md:border-4 border-[#191919] shadow-[6px_6px_0px_0px_#191919] md:shadow-[10px_10px_0px_0px_#191919] bg-black my-2 z-10"
                 >
                     <vturb-smartplayer
-                        id="vid-6a722ee481786e04ca490251"
+                        id="vid-6a85a1668df297a6712fb774"
                         style={{ display: "block", margin: "0 auto", width: "100%" }}
                     >
                         <div
