@@ -160,6 +160,36 @@ export const allSpeakers: Speaker[] = [
         category: "pais-cuidadores",
     },
     {
+        id: 32,
+        name: "Lucelmo Lacerda",
+        description: "Pesquisador, professor e referência no país em Transtorno do Espectro Autista (TEA)",
+        image: "/images/lucelmola.webp",
+        instagram: "https://www.instagram.com/lucelmo.lacerda/",
+        website: "https://educacaoeevidencia.com.br/index.php/ree/pt_BR",
+        bgColor: "#f7a73c",
+        category: "profissionais",
+    },
+    {
+        id: 29,
+        name: "Dani Arrais",
+        description: "Jornalista, escritora e diretora institucional do Coletivo Dupla Maternidade",
+        image: "/images/daniar.webp",
+        instagram: "https://www.instagram.com/daniarrais/?hl=pt",
+        linkedin: "https://www.linkedin.com/in/daniarrais/",
+        bgColor: "#79c3ab",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 30,
+        name: "Dani Junco",
+        description: "Empreendedora, palestrante, escritora e creator nos temas de Inovação e Liderança",
+        image: "/images/daniju.webp",
+        instagram: "https://www.instagram.com/danijunco/",
+        linkedin: "https://www.linkedin.com/in/danijunco/",
+        bgColor: "#74acde",
+        category: "profissionais",
+    },
+    {
         id: 15,
         name: "Bete P. Rodrigues",
         description: "Educadora e trainer em Disciplina Positiva",
@@ -300,44 +330,14 @@ export const allSpeakers: Speaker[] = [
         category: "profissionais",
     },
     {
-        id: 29,
-        name: "Dani Arrais",
-        description: "Jornalista, escritora e diretora institucional do Coletivo Dupla Maternidade",
-        image: "/images/daniar.webp",
-        instagram: "https://www.instagram.com/daniarrais/?hl=pt",
-        linkedin: "https://www.linkedin.com/in/daniarrais/",
-        bgColor: "#74acde",
-        category: "pais-cuidadores",
-    },
-    {
-        id: 30,
-        name: "Dani Junco",
-        description: "Empreendedora, palestrante, escritora e creator nos temas de Inovação e Liderança",
-        image: "/images/daniju.webp",
-        instagram: "https://www.instagram.com/danijunco/",
-        linkedin: "https://www.linkedin.com/in/danijunco/",
-        bgColor: "#f7a73c",
-        category: "profissionais",
-    },
-    {
         id: 31,
         name: "Patrícia Fassa",
         description: "Documentarista, empresária e conselheira da Economia de Comunhão (EdC)",
         image: "/images/patriciafa.webp",
         instagram: "https://www.instagram.com/patriciafassa/",
         linkedin: "https://www.linkedin.com/in/patricia-fassa-50806160/",
-        bgColor: "#79c3ab",
-        category: "pais-cuidadores",
-    },
-    {
-        id: 32,
-        name: "Lucelmo Lacerda",
-        description: "Pesquisador, professor e referência no país em Transtorno do Espectro Autista (TEA)",
-        image: "/images/lucelmola.webp",
-        instagram: "https://www.instagram.com/lucelmo.lacerda/",
-        website: "https://educacaoeevidencia.com.br/index.php/ree/pt_BR",
         bgColor: "#74acde",
-        category: "profissionais",
+        category: "pais-cuidadores",
     },
     {
         id: 33,
@@ -502,8 +502,8 @@ export default function SpeakersSection() {
     const [visibleCount, setVisibleCount] = useState(8);
     const carouselRef = useRef<HTMLDivElement>(null);
 
-    const professionalOrder = [1, 3, 5, 7, 9, 13, 15, 17, 19, 20, 21, 22, 23, 24, 25, 28];
-    const parentsOrder = [2, 4, 6, 8, 10, 11, 12, 13, 14, 16, 18, 19, 22, 23, 26, 27];
+    const professionalOrder = [1, 3, 5, 7, 9, 32, 33, 30, 13, 15, 17, 19, 20, 21, 22, 23, 24, 25, 28];
+    const parentsOrder = [2, 4, 6, 8, 10, 11, 12, 13, 14, 29, 16, 18, 19, 22, 23, 26, 27];
 
     const filteredSpeakers = (() => {
         if (activeFilter === "todos") return allSpeakers;
