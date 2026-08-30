@@ -13,10 +13,23 @@ type Highlight = {
     stage: string;
     speakers: { name: string; image?: string }[];
     audience: Audience;
+    eyebrow?: string;
+    credit?: string;
 };
 
 // Fotos provisórias: reaproveitadas da seção de palestrantes
 const highlights: Highlight[] = [
+    {
+        title: 'Gordon Neufeld',
+        description: 'Autor do livro “Pais Ocupados filhos distantes”, uma das principais referências mundiais em desenvolvimento emocional infantil e vínculo.',
+        day: 'Dia 1 (19/11)',
+        time: '14h00',
+        stage: 'Palco 1',
+        speakers: [{ name: 'Gordon Neufeld', image: '/images/gordonneufeld1.webp' }],
+        audience: 'profissional',
+        eyebrow: 'Palestrante Internacional',
+        credit: 'com Gordon Neufeld (online, ao vivo)',
+    },
     {
         title: 'Depois das telas: quem está educando nossas crianças?',
         description: 'Uma análise de como as novas tecnologias estão mudando a forma como crianças crescem, aprendem e constroem vínculos.',
@@ -62,22 +75,41 @@ const highlights: Highlight[] = [
         speakers: [{ name: 'Lua Barros' }, { name: 'Delegada Lisandréa' }],
         audience: 'ambos',
     },
+    {
+        title: 'Pato Fu e Giramundo',
+        description: 'Um espetáculo premiado que transforma brinquedos em instrumentos e devolve adultos à própria infância. Para encerrar com leveza nosso fim de semana de reflexões profundas.',
+        day: 'Dia 4 (22/11)',
+        time: '16h30',
+        stage: 'Palco 4',
+        speakers: [{ name: 'Pato Fu e Grupo Giramundo', image: '/images/patofu1.webp' }],
+        audience: 'ambos',
+        eyebrow: 'Show de encerramento',
+        credit: 'Pato Fu e Grupo Giramundo',
+    },
 ];
 
-const audienceTheme: Record<Audience, { bg: string; ink: string; eyebrow: string; tags: string[] }> = {
-    profissional: { bg: '#3399CC', ink: '#fff6ef', eyebrow: '#fbce32', tags: ['Passaporte Profissional'] },
-    parental: { bg: '#ED9F8C', ink: '#191919', eyebrow: '#2260a1', tags: ['Passaporte Parental'] },
-    ambos: { bg: '#79C3AB', ink: '#191919', eyebrow: '#ef7d25', tags: ['Passaporte Profissional', 'Passaporte Parental'] },
+// Mesma sequencia de cores dos cards da Section5
+const cardColors = ['#2daa96', '#79c3ab', '#74acde', '#f7a73c'];
+
+const passportTag = {
+    profissional: { label: 'Passaporte Profissional', bg: '#3399CC', ink: '#fff6ef' },
+    parental: { label: 'Passaporte Parental', bg: '#ED9F8C', ink: '#191919' },
+};
+
+const audienceTags: Record<Audience, (keyof typeof passportTag)[]> = {
+    profissional: ['profissional'],
+    parental: ['parental'],
+    ambos: ['profissional', 'parental'],
 };
 
 function HighlightCard({ item, index }: { item: Highlight; index: number }) {
-    const theme = audienceTheme[item.audience];
+    const bg = cardColors[index % cardColors.length];
     const withPhotos = item.speakers.filter((s) => s.image);
 
     return (
         <article
             className="flex flex-col shrink-0 snap-center w-[85vw] sm:w-[420px] lg:w-[540px] bg-[color:var(--card-bg)] border-[3px] border-[#191919] rounded-[40px] p-8 lg:p-10 shadow-[8px_12px_0px_0px_#191919] relative isolate"
-            style={{ '--card-bg': theme.bg, color: theme.ink } as React.CSSProperties}
+            style={{ '--card-bg': bg, color: '#191919' } as React.CSSProperties}
         >
             <div className="absolute inset-0 overflow-hidden rounded-[38px] pointer-events-none">
                 <div className="absolute -top-12 -right-12 size-44 bg-white/25 rounded-full blur-2xl" />
@@ -86,18 +118,19 @@ function HighlightCard({ item, index }: { item: Highlight; index: number }) {
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-6">
-                {theme.tags.map((tag) => (
+                {audienceTags[item.audience].map((key) => (
                     <span
-                        key={tag}
-                        className="font-dm-sans font-bold text-white bg-[#191919] px-4 py-2 rounded-full text-[12px] lg:text-[13px] uppercase tracking-wider"
+                        key={key}
+                        className="font-dm-sans font-bold border-2 border-[#191919] px-4 py-2 rounded-full text-[12px] lg:text-[13px] uppercase tracking-wider shadow-[2px_2px_0px_0px_#191919]"
+                        style={{ backgroundColor: passportTag[key].bg, color: passportTag[key].ink }}
                     >
-                        {tag}
+                        {passportTag[key].label}
                     </span>
                 ))}
             </div>
 
-            <span className="font-dm-sans font-bold text-[14px] lg:text-[16px] uppercase tracking-[1px]" style={{ color: theme.eyebrow }}>
-                Painel {String(index + 1).padStart(2, '0')}
+            <span className="font-dm-sans font-bold text-[14px] lg:text-[16px] uppercase tracking-[1px] text-[#191919]/60">
+                {item.eyebrow ?? `Painel ${String(index + 1).padStart(2, '0')}`}
             </span>
 
             <h3 className="font-sugar-peachy text-[34px] lg:text-[46px] leading-[0.85] tracking-[-1px] mt-3">
@@ -131,7 +164,7 @@ function HighlightCard({ item, index }: { item: Highlight; index: number }) {
                     </div>
                 )}
                 <p className="font-dm-sans font-bold text-[16px] lg:text-[20px] leading-tight">
-                    com {item.speakers.map((s) => s.name).join(' e ')}
+                    {item.credit ?? `com ${item.speakers.map((s) => s.name).join(' e ')}`}
                 </p>
             </div>
         </article>
@@ -155,20 +188,10 @@ export default function SectionSpecialGuests() {
                 __html: `.hide-scrollbar::-webkit-scrollbar { display: none; }`
             }} />
 
-            {/* --- Background Graphics --- */}
-            <div className="hidden lg:flex absolute lg:top-[-150px] lg:w-[1800px] lg:h-[1800px] items-center justify-center pointer-events-none z-0" style={{ left: '56vw' }}>
-                <div className="relative w-full h-full lg:w-[1600px] lg:h-[1600px]">
-                    <img src="/images/grafismo_onda2.1.svg" alt="" className="w-full h-full object-contain -scale-x-100" />
-                </div>
-            </div>
-            <div className="hidden lg:block absolute lg:top-[-120px] lg:w-[1605px] lg:h-[1605px] pointer-events-none z-0" style={{ right: '70vw' }}>
-                <img src="/images/grafismo_onda1.1.svg" alt="" className="w-full h-full object-contain -scale-x-195" />
-            </div>
-
             <div className="layout-container flex flex-col items-center relative px-4 md:px-0 w-full max-w-[1240px]">
 
                 {/* Header */}
-                <div className="flex flex-col lg:flex-row gap-[24px] lg:gap-8 items-center lg:items-end lg:justify-between text-center lg:text-left relative w-full">
+                <div className="flex flex-col lg:flex-row gap-[24px] lg:gap-8 items-center lg:items-end lg:justify-between text-center lg:text-left relative z-10 w-full">
                     <h2 className="font-sugar-peachy text-[#ef7d25] text-[56px] lg:text-[72px] tracking-[-1.55px] lg:tracking-[-2px] leading-[0.8]">
                         Destaques da Programação
                     </h2>

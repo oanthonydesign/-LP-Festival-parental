@@ -2,29 +2,23 @@
 
 import { useState, useEffect } from "react";
 
+// Janela da ação relâmpago (BRT, UTC-3)
+export const ACAO_START = new Date("2026-08-29T23:59:00-03:00");
+export const ACAO_END = new Date("2026-08-30T23:59:59-03:00");
+
 export function useIsAcaoDia(): boolean {
   const [isAcaoDia, setIsAcaoDia] = useState(false);
 
   useEffect(() => {
-    const checkIsAcao = () => {
+    const check = () => {
       const now = new Date();
-      const endOfAcao = new Date("2026-07-20T23:59:59-03:00");
-      const brtStr = now.toLocaleString("en-US", { timeZone: "America/Sao_Paulo" });
-      const brtDate = new Date(brtStr);
-
-      const isToday =
-        brtDate.getFullYear() === 2026 &&
-        brtDate.getMonth() === 6 && // 0-indexed: 6 = julho
-        brtDate.getDate() === 20;
-
-      setIsAcaoDia(isToday && now <= endOfAcao);
+      setIsAcaoDia(now >= ACAO_START && now <= ACAO_END);
     };
 
-    checkIsAcao();
-    const interval = setInterval(checkIsAcao, 1000);
+    check();
+    const interval = setInterval(check, 1000);
     return () => clearInterval(interval);
   }, []);
 
   return isAcaoDia;
 }
-

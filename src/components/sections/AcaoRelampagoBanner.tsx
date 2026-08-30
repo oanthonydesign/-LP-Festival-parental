@@ -2,13 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { useCountdown } from "@/hooks/useCountdown";
-
-// Fim do dia 20/07/2026 às 23:59:59 BRT (UTC-3)
-const ACAO_END = new Date("2026-07-20T23:59:59-03:00");
+import { useIsAcaoDia, ACAO_END } from "@/hooks/useIsAcaoDia";
 
 export default function AcaoRelampagoBanner() {
   const [isVisible, setIsVisible] = useState(false);
   const [isFooterVisible, setIsFooterVisible] = useState(false);
+  const isAcaoDia = useIsAcaoDia();
   const countdown = useCountdown(ACAO_END);
 
   useEffect(() => {
@@ -29,7 +28,7 @@ export default function AcaoRelampagoBanner() {
     return () => observer.disconnect();
   }, []);
 
-  if (countdown.expired) return null;
+  if (!isAcaoDia || countdown.expired) return null;
 
   const pad = (n: number) => String(n).padStart(2, "0");
   const totalHours = countdown.days * 24 + countdown.hours;
@@ -51,7 +50,7 @@ export default function AcaoRelampagoBanner() {
 
           {/* Texto Principal */}
           <p className="font-dm-sans font-bold text-[13px] sm:text-[15px] md:text-[17px] uppercase tracking-tight text-white leading-tight text-center">
-            DIA DO AMIGO · 2 Passaportes Profissionais pelo preço de 1
+            SÓ HOJE: 2 Passaportes Profissionais pelo preço de 1
           </p>
 
           {/* Lado Direito: Só até hoje + Contador + Botão Garantir */}

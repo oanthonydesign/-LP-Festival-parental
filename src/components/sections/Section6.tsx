@@ -235,7 +235,7 @@ function PassportCard({ data }: { data: PassportData }) {
   const currentPriceOriginal = isDouble && hasDoubleOption ? data.doubleOptions!.priceOriginal : data.priceOriginal;
   const currentBenefits = isDouble && hasDoubleOption ? data.doubleOptions!.benefits : data.benefits;
   const currentHref = isAcaoDia && data.id === 'educador'
-    ? "https://chk.eduzz.com/39VK8PJ5WR"
+    ? "https://chk.eduzz.com/VWGN37ZX07"
     : (isDouble && hasDoubleOption ? data.doubleOptions!.href : data.href);
   const currentButtonText = isDouble && hasDoubleOption ? data.doubleOptions!.buttonText : data.buttonText;
 
@@ -446,17 +446,17 @@ function PassportCard({ data }: { data: PassportData }) {
           ))}
         </div>
 
-        {/* Card de Bônus da Ação Relâmpago — DIA DO AMIGO */}
+        {/* Card de Bônus da Ação Relâmpago */}
         {isAcaoDia && data.id === 'educador' && (
           <div className="bg-white border-2 border-[#191919] rounded-[24px] p-4 md:p-5 flex flex-col gap-2 shadow-[3px_3px_0px_0px_#191919] w-full text-left">
             <div className="flex items-center gap-2 text-[#191919]">
               <span className="text-xl">🎁</span>
               <span className="font-dm-sans font-bold text-[15px] sm:text-[16px] text-[#191919] uppercase tracking-tight">
-                SÓ HOJE: DIA DO AMIGO
+                SÓ HOJE
               </span>
             </div>
             <p className="font-dm-sans text-[14px] sm:text-[15px] leading-relaxed text-[#191919]">
-              Comprando um Passaporte Profissional, o segundo é por nossa conta. Dois acessos completos aos 4 dias, com certificados e acessos à gravação — traga quem também atende famílias.
+              Ao adquirir um Passaporte Profissional, o segundo é por nossa conta. Dois acessos completos aos 4 dias, com certificados e acessos à gravação.
             </p>
           </div>
         )}
