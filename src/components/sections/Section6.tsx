@@ -452,7 +452,7 @@ function PassportCard({ data }: { data: PassportData }) {
             <div className="flex items-center gap-2 text-[#191919]">
               <span className="text-xl">🎁</span>
               <span className="font-dm-sans font-bold text-[15px] sm:text-[16px] text-[#191919] uppercase tracking-tight">
-                SÓ HOJE
+                SÓ ATÉ SEGUNDA
               </span>
             </div>
             <p className="font-dm-sans text-[14px] sm:text-[15px] leading-relaxed text-[#191919]">

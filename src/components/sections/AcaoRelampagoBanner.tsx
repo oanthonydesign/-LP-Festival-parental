@@ -50,13 +50,13 @@ export default function AcaoRelampagoBanner() {
 
           {/* Texto Principal */}
           <p className="font-dm-sans font-bold text-[13px] sm:text-[15px] md:text-[17px] uppercase tracking-tight text-white leading-tight text-center">
-            SÓ HOJE: 2 Passaportes Profissionais pelo preço de 1
+            2 Passaportes Profissionais pelo preço de 1 — Só até segunda
           </p>
 
-          {/* Lado Direito: Só até hoje + Contador + Botão Garantir */}
+          {/* Lado Direito: Contador + Botão Garantir */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0 justify-center">
             <p className="font-dm-sans font-bold text-[12px] sm:text-[14px] md:text-[15px] uppercase tracking-tight text-white/95 whitespace-nowrap">
-              só até hoje —{" "}
+              A oferta termina em{" "}
               <span className="inline-block font-black tabular-nums text-[#f7a73c]">
                 {countdownText}
               </span>
