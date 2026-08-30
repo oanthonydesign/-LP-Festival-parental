@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 // Janela da ação relâmpago (BRT, UTC-3)
 export const ACAO_START = new Date("2026-08-29T23:59:00-03:00");
-export const ACAO_END = new Date("2026-08-30T23:59:59-03:00");
+export const ACAO_END = new Date("2026-08-31T23:30:00-03:00");
 
 export function useIsAcaoDia(): boolean {
   const [isAcaoDia, setIsAcaoDia] = useState(false);
