@@ -20,15 +20,15 @@ type Highlight = {
 // Fotos provisórias: reaproveitadas da seção de palestrantes
 const highlights: Highlight[] = [
     {
-        title: 'Gordon Neufeld',
-        description: 'Autor do livro “Pais Ocupados filhos distantes”, uma das principais referências mundiais em desenvolvimento emocional infantil e vínculo.',
+        title: 'Relações: a “tecnologia” mais poderosa para transformar uma vida',
+        description: 'O que a ciência do apego nos ensina sobre construir relações fortes em tempos de tantas distrações?',
         day: 'Dia 1 (19/11)',
         time: '14h00',
         stage: 'Palco 1',
-        speakers: [{ name: 'Gordon Neufeld', image: '/images/gordonneufeld1.webp' }],
+        speakers: [{ name: 'Dr. Gordon Neufeld', image: '/images/gordonneufeld1.webp' }, { name: 'Telma Abrahão', image: '/images/telmaa.webp' }],
         audience: 'profissional',
         eyebrow: 'Palestrante Internacional',
-        credit: 'com Gordon Neufeld (online, ao vivo)',
+        credit: 'com Dr. Gordon Neufeld e Telma Abrahão (online, ao vivo)',
     },
     {
         title: 'Depois das telas: quem está educando nossas crianças?',
@@ -72,7 +72,7 @@ const highlights: Highlight[] = [
         day: 'Dia 4 (22/11)',
         time: '15h00',
         stage: 'Palco 1',
-        speakers: [{ name: 'Lua Barros' }, { name: 'Delegada Lisandréa' }],
+        speakers: [{ name: 'Lua Barros', image: '/images/luabar.webp' }, { name: 'Delegada Lisandréa Colabuono', image: '/images/delegada.webp' }],
         audience: 'ambos',
     },
     {

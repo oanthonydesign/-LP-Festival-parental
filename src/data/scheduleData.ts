@@ -381,7 +381,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '14h00',
                         title: 'Como produzir conteúdo sem perder a própria voz',
-                        speakers: 'Natália Garrote (a confirmar)',
+                        speakers: 'Nathália Garrote',
                         description: 'Produzir conteúdo pode gerar insegurança, comparação e a sensação de precisar representar um personagem nas redes. Como transformar conhecimento e experiências profissionais em narrativas claras, éticas e coerentes com a própria forma de trabalhar?',
                         type: 'named',
                     },
@@ -522,7 +522,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '09h00',
                         title: 'A geração online e o vínculo offline: como (re)construir proximidade com crianças e adolescentes na era digital',
-                        speakers: 'Fernanda Montano e Eva Pereira',
+                        speakers: 'Fernanda Montano, Eva Pereira e Tamiris Mariano',
                         description: 'Celulares, jogos e redes sociais ocupam cada vez mais espaço na rotina familiar. Como estabelecer acordos, reduzir conflitos e recuperar momentos de conexão sem transformar tudo em vigilância ou proibição?',
                         type: 'named',
                     },
@@ -639,7 +639,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '15h00',
                         title: 'As conversas que protegem nossos filhos: corpo, consentimento e segurança digital',
-                        speakers: 'A confirmar',
+                        speakers: 'Lua Barros e Lisandréa Zonzini Salvariego Colabuono',
                         description: 'Conversar cedo sobre corpo, intimidade, consentimento, pornografia, relacionamentos e segurança digital ajuda crianças e adolescentes a reconhecer limites e procurar ajuda.',
                         type: 'named',
                     },

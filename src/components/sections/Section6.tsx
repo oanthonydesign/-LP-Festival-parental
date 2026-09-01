@@ -115,8 +115,8 @@ const PASSAPORTES: PassportData[] = [
     id: "parental",
     name: "Passaporte Parental",
     lote: "Lote 6",
-    priceInstallment: "R$ 49,70",
-    priceFull: "ou R$ 497,00 à vista",
+    priceInstallment: "R$ 24,70",
+    priceFull: "ou R$ 247,00 à vista",
     priceOriginal: "R$ 1.497,00",
     benefits: [
       "Dois dias de palestras, espetáculos e vivências (21–22/11) — para sair da sobrecarga e ganhar clareza, presença e direção na relação com seus filhos.",
@@ -127,8 +127,8 @@ const PASSAPORTES: PassportData[] = [
     buttonText: "Quero o passaporte parental",
     href: "https://chk.eduzz.com/39VEAVA5WR",
     doubleOptions: {
-      priceInstallment: "R$ 74,70",
-      priceFull: "ou R$ 747,00 à vista",
+      priceInstallment: "R$ 44,70",
+      priceFull: "ou R$ 447,00 à vista",
       priceOriginal: "R$ 1.947,00",
       benefits: [
         "Viva os dois dias dessa experiência (21 e 22/11) com quem partilha a mesma jornada e com melhor custo por participante.",
