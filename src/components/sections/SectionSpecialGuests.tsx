@@ -158,6 +158,7 @@ function HighlightCard({ item, index }: { item: Highlight; index: number }) {
                                 src={s.image}
                                 alt={s.name}
                                 loading="lazy"
+                                draggable={false}
                                 className="size-[56px] lg:size-[64px] rounded-full object-cover border-[3px] border-[#191919] bg-[#fff6ef]"
                             />
                         ))}
@@ -173,6 +174,36 @@ function HighlightCard({ item, index }: { item: Highlight; index: number }) {
 
 export default function SectionSpecialGuests() {
     const scrollRef = useRef<HTMLDivElement>(null);
+
+    // Arrastar para rolar (mouse). O touch ja rola nativamente.
+    const drag = useRef({ active: false, startX: 0, startScroll: 0 });
+
+    const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+        if (e.pointerType !== 'mouse') return;
+        const el = scrollRef.current;
+        if (!el) return;
+        drag.current = { active: true, startX: e.clientX, startScroll: el.scrollLeft };
+        el.setPointerCapture(e.pointerId);
+        el.style.scrollSnapType = 'none';
+        el.style.cursor = 'grabbing';
+    };
+
+    const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+        if (!drag.current.active) return;
+        const el = scrollRef.current;
+        if (!el) return;
+        el.scrollLeft = drag.current.startScroll - (e.clientX - drag.current.startX);
+    };
+
+    const endDrag = (e: React.PointerEvent<HTMLDivElement>) => {
+        if (!drag.current.active) return;
+        drag.current.active = false;
+        const el = scrollRef.current;
+        if (!el) return;
+        el.releasePointerCapture(e.pointerId);
+        el.style.scrollSnapType = '';
+        el.style.cursor = '';
+    };
 
     const scroll = (dir: 1 | -1) => {
         const el = scrollRef.current;
@@ -191,39 +222,44 @@ export default function SectionSpecialGuests() {
             <div className="layout-container flex flex-col items-center relative px-4 md:px-0 w-full max-w-[1240px]">
 
                 {/* Header */}
-                <div className="flex flex-col lg:flex-row gap-[24px] lg:gap-8 items-center lg:items-end lg:justify-between text-center lg:text-left relative z-10 w-full">
+                <div className="flex flex-col items-center text-center relative z-10 w-full">
                     <h2 className="font-sugar-peachy text-[#ef7d25] text-[56px] lg:text-[72px] tracking-[-1.55px] lg:tracking-[-2px] leading-[0.8]">
                         Destaques da Programação
                     </h2>
-
-                    <div className="hidden lg:flex gap-3 shrink-0 pb-2">
-                        <button
-                            onClick={() => scroll(-1)}
-                            aria-label="Destaque anterior"
-                            className="bg-[#f7a73c] border-2 border-[#191919] p-4 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:-translate-y-[1px] hover:shadow-[5px_5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all cursor-pointer"
-                        >
-                            <ChevronLeft size={24} className="text-[#191919]" />
-                        </button>
-                        <button
-                            onClick={() => scroll(1)}
-                            aria-label="Próximo destaque"
-                            className="bg-[#f7a73c] border-2 border-[#191919] p-4 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:-translate-y-[1px] hover:shadow-[5px_5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all cursor-pointer"
-                        >
-                            <ChevronRight size={24} className="text-[#191919]" />
-                        </button>
-                    </div>
                 </div>
             </div>
 
             {/* Carrossel — full-bleed no desktop, alinhado ao grid na primeira coluna */}
             <div
                 ref={scrollRef}
-                className="flex flex-row items-stretch gap-6 overflow-x-auto snap-x snap-mandatory relative z-10 w-full mt-[48px] px-4 lg:px-[max(24px,calc((100vw-1240px)/2))] py-4 -my-4 hide-scrollbar"
+                onPointerDown={onPointerDown}
+                onPointerMove={onPointerMove}
+                onPointerUp={endDrag}
+                onPointerCancel={endDrag}
+                className="flex flex-row items-stretch gap-6 overflow-x-auto snap-x snap-mandatory relative z-10 w-full mt-[48px] px-4 lg:px-[max(24px,calc((100vw-1240px)/2))] py-4 -my-4 hide-scrollbar lg:cursor-grab lg:select-none"
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
                 {highlights.map((item, i) => (
                     <HighlightCard key={item.title} item={item} index={i} />
                 ))}
+            </div>
+
+            {/* Setas — abaixo do carrossel, apenas no desktop */}
+            <div className="hidden lg:flex gap-3 justify-center mt-[40px] relative z-10">
+                <button
+                    onClick={() => scroll(-1)}
+                    aria-label="Destaque anterior"
+                    className="bg-[#f7a73c] border-2 border-[#191919] p-4 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:-translate-y-[1px] hover:shadow-[5px_5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all cursor-pointer"
+                >
+                    <ChevronLeft size={24} className="text-[#191919]" />
+                </button>
+                <button
+                    onClick={() => scroll(1)}
+                    aria-label="Próximo destaque"
+                    className="bg-[#f7a73c] border-2 border-[#191919] p-4 rounded-full shadow-[4px_4px_0px_0px_#191919] hover:-translate-y-[1px] hover:shadow-[5px_5px_0px_0px_#191919] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] transition-all cursor-pointer"
+                >
+                    <ChevronRight size={24} className="text-[#191919]" />
+                </button>
             </div>
         </section>
     );
