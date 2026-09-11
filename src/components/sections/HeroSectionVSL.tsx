@@ -106,6 +106,8 @@ export default function HeroSectionVSL() {
                             src="/images/grafismo_HERO.svg"
                             alt=""
                             className="w-full min-w-[100vw] h-auto object-cover max-w-none"
+                            width={1920}
+                            height={570}
                             loading="eager"
                             decoding="async"
                         />
@@ -113,11 +115,14 @@ export default function HeroSectionVSL() {
 
                     {/* Single Responsive Picture Element (Eliminates double image download on mobile & desktop) */}
                     <picture className="relative z-10 w-full flex justify-center px-2 lg:px-0">
-                        <source media="(min-width: 1024px)" srcSet="/images/palestrantes_hero_desk.webp" />
+                        <source media="(min-width: 1024px)" srcSet="/images/palestrantes_hero_desk.webp" width={1444} height={702} />
                         <img
                             src="/images/palestrantes_hero_mob.webp"
                             alt="Palestrantes Festival Parental"
                             className="w-full max-w-[540px] lg:max-w-[1280px] h-auto object-contain mx-auto"
+                            width={401}
+                            height={343}
+                            fetchPriority="high"
                             loading="eager"
                             decoding="async"
                         />

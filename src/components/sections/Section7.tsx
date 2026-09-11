@@ -37,11 +37,12 @@ function VideoPlayer() {
     const videoRef = useRef<HTMLVideoElement>(null);
 
     const handlePlayVideo = () => {
-        if (videoRef.current) {
-            videoRef.current.currentTime = 0;
-            videoRef.current.play();
-            setIsStarted(true);
-        }
+        const v = videoRef.current;
+        if (!v) return;
+        // Sem mexer em currentTime aqui: com preload="none" os metadados ainda nao
+        // carregaram, e o seek disputava com a posicao de inicio durante o startup,
+        // podendo deixar o video parado no primeiro clique. Comeca do zero naturalmente.
+        v.play().catch(() => { });
     };
 
     return (
@@ -52,10 +53,12 @@ function VideoPlayer() {
             <video
                 ref={videoRef}
                 className="w-full h-auto lg:h-full object-cover"
-                src="https://vismo.com.br/wp-content/uploads/2026/02/after_movie.webm#t=10"
+                src="https://vismo.com.br/wp-content/uploads/2026/02/after_movie.webm"
                 controls={isStarted}
-                preload="auto"
+                preload="none"
+                poster="/images/after_movie_poster.webp"
                 playsInline
+                onPlaying={() => setIsStarted(true)}
             />
 
             {!isStarted && (
@@ -142,7 +145,7 @@ function PhotoStackCarousel() {
                         }}
                     >
                         <div className="bg-white border-2 border-[#191919] rounded-[24px] shadow-[4px_4px_0px_0px_#191919] overflow-hidden size-full">
-                            <img src={images[idx]} alt="" className="w-full h-full object-cover grayscale-[0.3]" />
+                            <img src={images[idx]} alt="" className="w-full h-full object-cover grayscale-[0.3]" loading="lazy" decoding="async" />
                         </div>
                     </div>
                 );
@@ -158,6 +161,8 @@ function PhotoStackCarousel() {
                         src={images[currentIndex]}
                         alt="Festival Parental"
                         className="w-full h-full object-cover transition-opacity duration-300 pointer-events-none"
+                        loading="lazy"
+                        decoding="async"
                     />
                 </div>
             </div>

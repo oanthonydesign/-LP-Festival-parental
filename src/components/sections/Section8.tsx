@@ -68,6 +68,8 @@ function Card({
                                 src={logo}
                                 alt="Logo Congresso"
                                 className="w-full h-auto object-contain"
+                                loading="lazy"
+                                decoding="async"
                             />
                         </div>
                     )}

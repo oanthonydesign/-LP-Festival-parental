@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { DM_Sans, Archivo } from 'next/font/google'
+import { DM_Sans } from 'next/font/google'
 import './globals.css'
 import Script from 'next/script'
 
@@ -7,11 +7,6 @@ const dmSans = DM_Sans({
     subsets: ['latin'],
     weight: ['400', '500', '700'],
     variable: '--font-dm-sans',
-})
-
-const archivo = Archivo({
-    subsets: ['latin'],
-    variable: '--font-archivo',
 })
 
 export const metadata: Metadata = {
@@ -48,6 +43,15 @@ export default function RootLayout({
     return (
         <html lang="pt-BR" suppressHydrationWarning>
             <head>
+                {/* Fonte do <h1> (texto de LCP) - sem isto ela so comeca a baixar depois do CSS */}
+                <link
+                    rel="preload"
+                    href="/fonts/Sugar%20Peachy/Sugar%20Peachy%20Bold.woff2"
+                    as="font"
+                    type="font/woff2"
+                    crossOrigin="anonymous"
+                />
+
                 {/* Preload Critical Hero Assets for Ultra Fast Load / LCP */}
                 <link rel="preload" as="image" href="/images/palestrantes_hero_desk.webp" media="(min-width: 1024px)" type="image/webp" />
                 <link rel="preload" as="image" href="/images/palestrantes_hero_mob.webp" media="(max-width: 1023px)" type="image/webp" />
@@ -127,7 +131,7 @@ export default function RootLayout({
                 {/* End Microsoft Clarity */}
 
             </head>
-            <body className={`${dmSans.variable} ${archivo.variable} antialiased bg-[#fff6ef] font-[family-name:var(--font-dm-sans)]`} >
+            <body className={`${dmSans.variable} antialiased bg-[#fff6ef] font-[family-name:var(--font-dm-sans)]`} >
                 {/* Google Tag Manager (noscript) */}
                 <noscript>
                     <iframe

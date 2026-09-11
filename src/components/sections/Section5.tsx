@@ -674,7 +674,7 @@ function Content() {
                 className="group relative"
             >
                 <div className="bg-[#f7a73c] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[32px] md:px-[64px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full md:w-auto">
-                    <img src="/images/icons/ingresso_linha_preta.svg" alt="Ticket" className="w-[24px] h-[24px] shrink-0" />
+                    <img src="/images/icons/ingresso_linha_preta.svg" alt="Ticket" className="w-[24px] h-[24px] shrink-0" loading="lazy" decoding="async" />
                     <span className="font-dm-sans font-bold text-[#191919] text-[14px] md:text-[16px] uppercase tracking-[1px] whitespace-nowrap">
                         Quero garantir meu lugar
                     </span>

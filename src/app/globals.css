@@ -13,7 +13,6 @@ body {
     --breakpoint-fhd: 1921px;
     --font-dm-sans: 'DM Sans', sans-serif;
     --font-sugar-peachy: 'Sugar Peachy', sans-serif;
-    --font-archivo: 'Archivo', sans-serif;
 
     --color-speaker-green: #79c3ab;
     --color-speaker-blue: #74acde;
@@ -87,17 +86,13 @@ body {
 }
 
 /* Fonte Customizada Sugar Peachy */
-@font-face {
-    font-family: 'Sugar Peachy';
-    src: url('/fonts/Sugar%20Peachy/Sugar%20Peachy%20Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
+/* Servida em WOFF2 (~67% menor que o TTF). Os .ttf/.otf seguem em public/fonts/ como fonte original. */
+/* Pesos 300 (Light) e 500 (Medium) existem como arquivo mas nao sao usados em lugar nenhum do site,
+   entao nao sao declarados aqui - declara-los so adicionaria peso potencial ao carregamento. */
 
 @font-face {
     font-family: 'Sugar Peachy';
-    src: url('/fonts/Sugar%20Peachy/Sugar%20Peachy%20Regular.ttf') format('truetype');
+    src: url('/fonts/Sugar%20Peachy/Sugar%20Peachy%20Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -105,15 +100,7 @@ body {
 
 @font-face {
     font-family: 'Sugar Peachy';
-    src: url('/fonts/Sugar%20Peachy/Sugar%20Peachy%20Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Sugar Peachy';
-    src: url('/fonts/Sugar%20Peachy/Sugar%20Peachy%20Bold.ttf') format('truetype');
+    src: url('/fonts/Sugar%20Peachy/Sugar%20Peachy%20Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -121,7 +108,7 @@ body {
 
 @font-face {
     font-family: 'Sugar Peachy';
-    src: url('/fonts/Sugar%20Peachy/Sugar%20Peachy%20Black.ttf') format('truetype');
+    src: url('/fonts/Sugar%20Peachy/Sugar%20Peachy%20Black.woff2') format('woff2');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
