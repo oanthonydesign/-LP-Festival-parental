@@ -352,7 +352,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 34,
         name: "Glaucia Marini",
-        description: "Educadora Parental, professora, pesquisadora das relações familiares e do desenvolvimento humano.",
+        description: "Educadora Parental, professora e pesquisadora das relações familiares",
         image: "/images/glaumar.webp",
         instagram: "https://www.instagram.com/glauciamarini/",
         bgColor: "#79c3ab",
@@ -361,7 +361,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 35,
         name: "Paula Fratti",
-        description: "Psicóloga, neuropsicóloga, palestrante e autora do livro Além do TDAH. Referência nacional em TDAH na infância e adolescência.",
+        description: "Psicóloga, neuropsicóloga e autora do livro Além do TDAH",
         image: "/images/paufra.webp",
         instagram: "https://www.instagram.com/paulafrati/",
         website: "https://paulafrati.com/cadastro-evento-org",
@@ -371,7 +371,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 36,
         name: "Fernanda Montano",
-        description: "Jornalista especializada em educação e parentalidade, com quase 20 anos de experiência em conteúdo e projetos voltados ao desenvolvimento humano e às relações familiares",
+        description: "Jornalista especializada em educação e parentalidade",
         image: "/images/fermon.webp",
         instagram: "https://www.instagram.com/fernandakmontano/",
         linkedin: "https://www.linkedin.com/in/fernandamontano/",
@@ -380,8 +380,8 @@ export const allSpeakers: Speaker[] = [
     },
     {
         id: 37,
-        name: "Robert e Gustavo",
-        description: "Casados há 15 anos, pais do Marc e da Maya (gêmeos) e do Rafa, o Golden Retriever da família. Engenheiros de formação, criam conteúdo sobre família, paternidade, viagens, receitas, casa e reformas.",
+        name: "Robert e Gustavo (@2depais)",
+        description: "Pais do Marc e da Maya (gêmeos) e criadores de conteúdo sobre família, paternidade",
         image: "/images/robegus.webp",
         instagram: "https://www.instagram.com/2depais/",
         bgColor: "#79c3ab",
@@ -389,8 +389,8 @@ export const allSpeakers: Speaker[] = [
     },
     {
         id: 38,
-        name: "Lisandréa Zonzini",
-        description: "Delegada de Polícia há 19 anos, atualmente Coordenadora do NOAD — Núcleo de Observação e Análise Digital. Mestre em Direito Constitucional e professora universitária",
+        name: "Lisandréa Z. S. Colabuono",
+        description: "Delegada de Polícia há 19 anos, atualmente Coordenadora do NOAD (Núcleo de Observação e Análise Digital)",
         image: "/images/delegada.webp",
         bgColor: "#74acde",
         category: "pais-cuidadores",
@@ -398,7 +398,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 39,
         name: "Lua Barros",
-        description: "Educadora parental, autora do best-seller “Eu Não Nasci Mãe”, fundadora da Rede Amparo e podcaster no Dilemas.",
+        description: "Educadora parental, autora do best-seller “Eu Não Nasci Mãe” e fundadora da Rede Amparo",
         image: "/images/luabar.webp",
         instagram: "https://www.instagram.com/luabarrosf/?hl=pt-br",
         linkedin: "https://www.linkedin.com/in/lua-barros-983452310/",

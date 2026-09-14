@@ -26,7 +26,7 @@ const GROUPS = [
           "A sensação de pertencer a um campo que amadurece rapidamente e exige novas formas de compreender infância, vínculos e relações humanas.",
       },
       {
-        title: "Mais clareza sobre o seu papel",
+        title: "Entendimento sobre o seu papel",
         description:
           "Uma compreensão mais clara sobre como sustentar sua prática profissional de forma consistente, humana e relevante no mundo atual.",
       },
