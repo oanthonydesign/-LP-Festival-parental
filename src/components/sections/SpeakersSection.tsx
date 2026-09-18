@@ -381,7 +381,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 37,
         name: "Robert e Gustavo (@2depais)",
-        description: "Pais do Marc e da Maya (gêmeos) e criadores de conteúdo sobre família, paternidade",
+        description: "Pais do Marc e da Maya (gêmeos) e criadores de conteúdo sobre família e paternidade",
         image: "/images/robegus.webp",
         instagram: "https://www.instagram.com/2depais/",
         bgColor: "#79c3ab",
@@ -645,7 +645,7 @@ export default function SpeakersSection() {
                 <FilterToggle active={activeFilter} onChange={handleFilterChange} />
 
                 {/* Speakers Grid (Carousel on Mobile, Paginated on Desktop) */}
-                <div 
+                <div
                     ref={carouselRef}
                     className="flex flex-row overflow-x-auto lg:overflow-visible snap-x snap-mandatory lg:snap-none lg:grid lg:grid-cols-4 gap-4 lg:gap-[20px] relative shrink-0 w-[calc(100%+32px)] -mx-4 px-4 lg:w-full lg:mx-0 lg:px-0 py-4 -my-4 hide-scrollbar items-stretch lg:items-stretch"
                     style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
