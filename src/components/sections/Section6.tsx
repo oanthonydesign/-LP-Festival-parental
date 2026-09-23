@@ -2,14 +2,10 @@
 
 import { useState, useEffect, useRef } from "react";
 import svgPaths from "@/components/svg/svgPaths";
-import { useCountdown } from "@/hooks/useCountdown";
 import { useIsAcaoDia } from "@/hooks/useIsAcaoDia";
 import { Gift, Files, BookOpen, Video } from "lucide-react";
 
-// Flags de controle para fácil ativação/desativação
-const SHOW_PROMO_RIBBON = true;
 const SHOW_PRICE_STATUS_BADGE = false;
-const SHOW_COUNTDOWN_BADGE = true;
 
 interface Benefit {
   text: string;
@@ -86,9 +82,9 @@ const PASSAPORTES: PassportData[] = [
   {
     id: "educador",
     name: "Passaporte Profissional",
-    lote: "Lote 6",
-    priceInstallment: "R$ 169,70",
-    priceFull: "ou R$ 1.697,00 à vista",
+    lote: "Lote 7",
+    priceInstallment: "R$ 174,70",
+    priceFull: "ou R$ 1.747,00 à vista",
     priceOriginal: "R$ 2.197",
     benefits: [
       "4 dias para aprofundar conhecimento, prática e visão sobre a parentalidade contemporânea. Trilha Técnica (dias 1–2, exclusiva para profissionais) + Trilha Parental (dias 3–4, aberta também para pais e cuidadores)",
@@ -114,7 +110,7 @@ const PASSAPORTES: PassportData[] = [
   {
     id: "parental",
     name: "Passaporte Parental",
-    lote: "Lote 6",
+    lote: "Lote 7",
     priceInstallment: "R$ 24,70",
     priceFull: "ou R$ 247,00 à vista",
     priceOriginal: "R$ 1.497,00",
@@ -171,46 +167,6 @@ function TicketIcon({ isWhite, size = 24 }: { isWhite?: boolean, size?: number }
   );
 }
 
-function Ribbon() {
-  return (
-    <div className="absolute inset-0 overflow-hidden rounded-[inherit] pointer-events-none z-[100]">
-      <div className="bg-[#ff4b4b] border-y-2 border-[#191919] border-solid -rotate-[20deg] py-0.5 w-[180px] absolute top-[3px] md:top-[0px] left-[-30px] md:left-[-25px] shadow-[0px_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center">
-        <span className="font-sugar-peachy text-[14px] md:text-[16px] text-white uppercase tracking-tight block text-center -translate-x-4 md:-translate-x-5">
-          ÚLTIMOS DIAS!
-        </span>
-      </div>
-    </div>
-  );
-}
-
-function CountdownBadge() {
-  const countdown = useCountdown();
-  const pad = (n: number) => String(n).padStart(2, "0");
-
-  const countdownText = countdown.expired
-    ? "00d 00h 00m"
-    : `${pad(countdown.days)}d ${pad(countdown.hours)}h ${pad(countdown.minutes)}m`;
-
-  return (
-    <div className="bg-linear-to-b from-[#FFCF6B] to-[#F4B63E] border-2 border-[#191919] border-solid rounded-[16px] p-4 shadow-[3px_3px_0px_0px_#191919] flex items-center justify-center gap-4 mb-5 w-full max-w-[320px] self-center">
-      <div className="shrink-0 scale-125">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5 2H19M5 22H19M5 2C5 2 5 9 12 12M19 2C19 2 19 9 12 12M5 22C5 22 5 15 12 12M19 22C19 22 19 15 12 12" stroke="#191919" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M12 12L8 17H16L12 12Z" fill="#191919" />
-        </svg>
-      </div>
-      <div className="flex flex-col items-start">
-        <p className="font-dm-sans text-[16px] md:text-[18px] leading-tight text-[#191919]">
-          <span className="font-bold text-[#2260a1]">Lote 6</span> termina em
-        </p>
-        <p className="font-sugar-peachy text-[28px] md:text-[34px] tracking-[-1px] md:tracking-[-1.25px] leading-[0.9] text-[#191919] mt-1 tabular-nums">
-          {countdownText}
-        </p>
-      </div>
-    </div>
-  );
-}
-
 // function PriceStatusBadge({ price }: { price: string }) {
 //   return (
 //     <div className="bg-[#fbce32] border-2 border-[#191919] border-solid rounded-[40px] px-4 py-1.5 flex items-center justify-center shadow-[2px_2px_0px_0px_#191919]">
@@ -232,7 +188,7 @@ function EducadorProgressBar() {
       ([entry]) => {
         if (entry.isIntersecting) {
           let start = 0;
-          const end = 81;
+          const end = 86;
           const duration = 1200; // 1.2 segundos
           const startTime = performance.now();
 
@@ -381,12 +337,14 @@ function PassportCard({ data }: { data: PassportData }) {
   const numericInstallment = getNumericAmount(currentPriceInstallment);
   const numericInstallmentTotal = numericInstallment * 12;
 
-  // Cálculo de economia: (12 * valor parcela) - valor à vista, arredondado
-  const calculatedSavings = Math.round(numericInstallmentTotal - numericFullPrice);
-  const currentSavings = calculatedSavings > 0 ? calculatedSavings : null;
+  // Cálculo de economia: total parcelado menos o valor à vista.
+  const calculatedSavings = Math.round((numericInstallmentTotal - numericFullPrice) * 100) / 100;
+  const currentSavings = calculatedSavings > 0
+    ? calculatedSavings.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+    : null;
 
   // Preço por dia (para o educador/4 dias)
-  const currentPricePerDay = numericFullPrice > 0 ? Math.ceil(numericFullPrice / 4) : 0;
+  const currentPricePerDay = (numericFullPrice / 4).toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
   if (data.isSoldOut) {
     return (
@@ -473,7 +431,6 @@ function PassportCard({ data }: { data: PassportData }) {
       ) : null}
       {/* Header with Title and Lote */}
       <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] p-[12px] w-full z-10 relative overflow-hidden shadow-[3px_3px_0px_0px_#191919]`}>
-        {SHOW_PROMO_RIBBON && <Ribbon />}
         <div className={`border-2 ${data.borderColor} border-solid rounded-[16px] flex items-center justify-between px-[12px] py-[12px] gap-4 relative z-20`}>
           <div className="bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[6px] shadow-[3px_3px_0px_0px_#191919] px-[12px] py-[4px] shrink-0">
             <span className="font-sugar-peachy text-[18px] tracking-[-0.5px] text-black leading-none">{data.lote}</span>
@@ -596,15 +553,6 @@ function PassportCard({ data }: { data: PassportData }) {
         {/* PROGRESS BAR FOR EDUCADOR */}
         {data.id === 'educador' && <EducadorProgressBar />}
 
-        {SHOW_COUNTDOWN_BADGE && (
-          <div className="flex flex-col items-center gap-2 w-full">
-            <CountdownBadge />
-            <p className={`font-dm-sans text-[13px] text-center ${data.id === 'educador' ? 'text-white/70' : 'text-[#191919]/60'}`}>
-              Terça-feira, 22/09 às 23:59 — após essa data, entra o Lote 7: 12x de R$ 174,70 ou R$ 1.747,00 à vista.
-            </p>
-          </div>
-        )}
-
         {/* Price Section */}
         {data.id === 'educador' || data.id === 'parental' ? (
           <div className="w-full flex flex-col items-center gap-2">
@@ -613,7 +561,7 @@ function PassportCard({ data }: { data: PassportData }) {
 
             <div className="text-center flex flex-col items-center gap-1.5 w-full">
               <p className={`font-dm-sans text-[15px] md:text-[16px] font-medium ${data.id === 'educador' ? 'text-white/95' : 'text-[#191919]/90'}`}>
-                Garantindo agora, no Lote 6:
+                Garantindo agora, no {data.lote}:
               </p>
 
               <div className={`font-sugar-peachy text-[40px] md:text-[54px] leading-none tracking-tight flex items-center justify-center gap-2 ${data.id === 'educador' ? 'text-white' : 'text-[#191919]'}`}>
@@ -638,7 +586,7 @@ function PassportCard({ data }: { data: PassportData }) {
 
               {data.id === 'educador' && (
                 <p className="font-dm-sans text-[13px] md:text-[14px] text-white/85 mt-1">
-                  menos de R$ {currentPricePerDay} por dia · sobe para <span className="text-[#fbce32] font-bold">{currentPriceOriginal}</span> em nov.
+                  R$ {currentPricePerDay} por dia de Festival
                 </p>
               )}
             </div>

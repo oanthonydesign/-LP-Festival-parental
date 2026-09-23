@@ -19,7 +19,6 @@ import Rodape from '@/components/sections/Rodape';
 import Copyright from '@/components/sections/Copyright';
 import SectionScheduleSimple from '@/components/sections/SectionScheduleSimple';
 import SectionSpecialGuests from '@/components/sections/SectionSpecialGuests';
-import StickyBottomBar from '@/components/sections/StickyBottomBar';
 import WhatsAppButton from '@/components/sections/WhatsAppButton';
 import PreTicketSection from '@/components/sections/PreTicketSection';
 import SectionForWho from '@/components/sections/SectionForWho';
@@ -31,8 +30,6 @@ import AcaoRelampagoBanner from '@/components/sections/AcaoRelampagoBanner';
 export const metadata = {
     robots: 'noindex, nofollow',
 }
-
-const SHOW_STICKY_BAR = true;
 
 export default function LPB() {
     return (
@@ -69,7 +66,6 @@ export default function LPB() {
                 <Copyright />
             </main>
             <WhatsAppButton />
-            {SHOW_STICKY_BAR && <StickyBottomBar />}
             <AcaoRelampagoBanner />
         </>
     )

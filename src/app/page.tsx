@@ -21,13 +21,10 @@ import Rodape from '@/components/sections/Rodape';
 import Copyright from '@/components/sections/Copyright';
 import SectionSchedule from '@/components/sections/SectionSchedule';
 import SectionSpecialGuests from '@/components/sections/SectionSpecialGuests';
-import StickyBottomBar from '@/components/sections/StickyBottomBar';
 import WhatsAppButton from '@/components/sections/WhatsAppButton';
 import AcaoRelampagoBanner from '@/components/sections/AcaoRelampagoBanner';
 import SectionForWho from '@/components/sections/SectionForWho';
 import SectionTakeaways from '@/components/sections/SectionTakeaways';
-
-const SHOW_STICKY_BAR = true;
 
 export default function Home() {
     return (
@@ -60,7 +57,6 @@ export default function Home() {
                 <Copyright />
             </main>
             <WhatsAppButton />
-            {SHOW_STICKY_BAR && <StickyBottomBar />}
             <AcaoRelampagoBanner />
         </>
     )
