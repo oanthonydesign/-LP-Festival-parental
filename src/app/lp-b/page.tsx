@@ -23,6 +23,7 @@ import WhatsAppButton from '@/components/sections/WhatsAppButton';
 import PreTicketSection from '@/components/sections/PreTicketSection';
 import SectionForWho from '@/components/sections/SectionForWho';
 import SectionTakeaways from '@/components/sections/SectionTakeaways';
+import SectionSponsors from '@/components/sections/SectionSponsors';
 import AcaoRelampagoBanner from '@/components/sections/AcaoRelampagoBanner';
 
 
@@ -55,13 +56,13 @@ export default function LPB() {
                 <Marquee02 />
                 <SpeakersSection />
                 <Section15 />
+                <SectionSponsors />
                 <Section7 />
                 <Section9 />
                 <Section10 />
                 <Section11 />
                 <Section12 />
                 <Section13 />
-                {/* <Section14 /> */}
                 <Rodape />
                 <Copyright />
             </main>

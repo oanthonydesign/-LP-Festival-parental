@@ -105,6 +105,7 @@ export default function Header() {
                                 { name: "Palestrantes", href: "#palestrantes" },
                                 { name: "Programação", href: "#programacao" },
                                 { name: "Destaques", href: "#convidados-especiais" },
+                                { name: "Patrocinadores", href: "#patrocinadores" },
                                 { name: "Imprensa", href: "#imprensa" },
                                 { name: "FAQ", href: "#faq" }
                             ].map((item) => (
@@ -124,11 +125,8 @@ export default function Header() {
                         </div>
                     </nav>
 
-                    {/* CTA Button & Sponsor Link - Desktop */}
+                    {/* CTA Button - Desktop */}
                     <div className="hidden lg:flex items-center gap-[16px]">
-                        <a href="#patrocinador" className="font-dm-sans text-[#191919] text-[13px] font-bold uppercase tracking-[0.8px] hover:text-[#ef7d25] transition-colors whitespace-nowrap">
-                            Seja patrocinador
-                        </a>
                         <a href="#ingressos" className="group relative">
                             <div className="bg-[#f7a73c] border border-[#191919] flex items-center justify-center gap-[10px] px-[24px] py-[12px] rounded-[40px] shadow-[2px_2px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[1px_1px_0px_0px_#191919] transition-all">
                                 <img src="/images/icons/ingresso_linha_preta.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="lazy" />
@@ -152,9 +150,9 @@ export default function Header() {
                             { name: "Palestrantes", href: "#palestrantes" },
                             { name: "Programação", href: "#programacao" },
                             { name: "Destaques", href: "#convidados-especiais" },
+                            { name: "Patrocinadores", href: "#patrocinadores" },
                             { name: "FAQ", href: "#faq" },
-                            { name: "Imprensa", href: "#imprensa" },
-                            { name: "Seja patrocinador", href: "#patrocinador" }
+                            { name: "Imprensa", href: "#imprensa" }
                         ].map((item) => (
                             <a
                                 key={item.name}

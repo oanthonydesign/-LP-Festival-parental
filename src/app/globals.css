@@ -9,6 +9,23 @@ body {
     width: 100%;
 }
 
+@keyframes sponsors-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+.sponsors-marquee-track {
+    animation: sponsors-marquee 24s linear infinite;
+}
+
+.sponsors-marquee-slow { animation-duration: 52s; }
+
+@media (prefers-reduced-motion: reduce) {
+    .sponsors-carousel { overflow-x: auto; }
+    .sponsors-marquee-track { animation: none; }
+    .sponsors-marquee-track > :last-child { display: none; }
+}
+
 @theme {
     --breakpoint-fhd: 1921px;
     --font-dm-sans: 'DM Sans', sans-serif;

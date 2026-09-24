@@ -271,52 +271,13 @@ function Container9() {
   );
 }
 
-// Coluna 2: PATROCÍNIO, INGRESSOS, LOCALIZAÇÃO, CONTATO
+// Coluna 2: INGRESSOS, LOCALIZAÇÃO, CONTATO
 function Frame() {
   return (
     <div className="content-stretch flex flex-col items-center lg:items-start justify-center relative shrink-0 w-full sm:w-[48%] lg:w-[250px]">
-      <Container10 />
       <Container12 />
       <Container14 />
       <Container16 />
-    </div>
-  );
-}
-
-function Container10() {
-  return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-[100px]" data-name="Container">
-      <LinkVariant4 />
-    </div>
-  );
-}
-
-function LinkVariant4() {
-  return (
-    <a href="https://wa.me/5511915983957?text=Quero%20patrocinar%20o%20Festival%20Parental%202026" target="_blank" rel="noopener noreferrer" className="relative shrink-0 w-full block group" data-name="Link - Variant 1">
-      <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center justify-center md:justify-start pr-[8px] py-[8px] relative w-full group-hover:text-[#ef7d25] transition-colors">
-          <Palestrantes4 />
-        </div>
-      </div>
-    </a>
-  );
-}
-
-function Palestrantes4() {
-  return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Palestrantes">
-      <Container11 />
-    </div>
-  );
-}
-
-function Container11() {
-  return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-dm-sans font-normal justify-center leading-[0] relative shrink-0 text-[#4c4d4f] text-[12.9px] tracking-[0.14px] whitespace-normal md:whitespace-nowrap text-center md:text-left" style={{ fontVariationSettings: "'opsz' 14" }}>
-        <p className="leading-[21px]">PATROCÍNIO</p>
-      </div>
     </div>
   );
 }
@@ -722,5 +683,4 @@ function Container29() {
     </div>
   );
 }
-
 

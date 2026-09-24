@@ -14,7 +14,7 @@ import Section11 from '@/components/sections/Section11';
 import Section12 from '@/components/sections/Section12';
 import Section13 from '@/components/sections/Section13';
 import SectionPress from '@/components/sections/SectionPress';
-import Section14 from '@/components/sections/Section14';
+import SectionSponsors from '@/components/sections/SectionSponsors';
 import Section15 from '@/components/sections/Section15';
 import Section16 from '@/components/sections/Section16';
 import Rodape from '@/components/sections/Rodape';
@@ -45,6 +45,7 @@ export default function Home() {
                 <Marquee02 />
                 <SpeakersSection />
                 <Section15 />
+                <SectionSponsors />
                 <Section7 />
                 <Section9 />
                 <Section10 />
@@ -52,7 +53,6 @@ export default function Home() {
                 <Section12 />
                 <SectionPress />
                 <Section13 />
-                {/* <Section14 /> */}
                 <Rodape />
                 <Copyright />
             </main>
