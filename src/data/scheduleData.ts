@@ -289,7 +289,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '14h00',
                         title: 'Famílias apoiadas, organizações mais fortes',
-                        speakers: 'Ana Luíza Meireles, Luciana Catonny e Luíza Gottschalk',
+                        speakers: 'Ana Luíza Meireles, Luciana Cattony e Luíza Gottschalk',
                         description: 'Cada vez mais organizações compreendem que apoiar pais e cuidadores é também uma estratégia de saúde, retenção e desenvolvimento humano. O que as empresas podem fazer para fortalecer quem educa?',
                         type: 'named',
                     },
