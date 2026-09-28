@@ -53,8 +53,8 @@ export default function RootLayout({
                 />
 
                 {/* Preload Critical Hero Assets for Ultra Fast Load / LCP */}
-                <link rel="preload" as="image" href="/images/palestrantes_hero_desk_v2.webp" media="(min-width: 1024px)" type="image/webp" />
-                <link rel="preload" as="image" href="/images/palestrantes_hero_mob_v2.webp" media="(max-width: 1023px)" type="image/webp" />
+                <link rel="preload" as="image" href="/images/palestrantesherodesk.webp" media="(min-width: 1024px)" type="image/webp" />
+                <link rel="preload" as="image" href="/images/palestrantesheromob.webp" media="(max-width: 1023px)" type="image/webp" />
                 <link rel="preload" as="image" href="/images/grafismo_HERO.svg" type="image/svg+xml" />
 
                 {/* VTurb SmartPlayer Optimizations & Preloads */}
