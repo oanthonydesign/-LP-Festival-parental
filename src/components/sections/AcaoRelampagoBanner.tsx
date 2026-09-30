@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useCountdown } from "@/hooks/useCountdown";
-import { useIsAcaoDia, ACAO_END, ACAO_CHECKOUT } from "@/hooks/useIsAcaoDia";
+import { useIsAcaoDia, ACAO_END } from "@/hooks/useIsAcaoDia";
 
 export default function AcaoRelampagoBanner() {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,7 +43,7 @@ export default function AcaoRelampagoBanner() {
       }`}
     >
       <a
-        href={ACAO_CHECKOUT}
+        href="#ingressos"
         className="block w-full bg-[#2260a1] border-t-2 border-[#191919] shadow-[0_-4px_0px_0px_#191919] pointer-events-auto hover:bg-[#1a4f88] transition-colors duration-200 cursor-pointer"
       >
         <div className="max-w-[1280px] mx-auto px-4 py-2.5 sm:py-3 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 md:gap-8">
