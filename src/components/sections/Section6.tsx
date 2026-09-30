@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import svgPaths from "@/components/svg/svgPaths";
-import { useIsAcaoDia } from "@/hooks/useIsAcaoDia";
+import { useIsAcaoDia, ACAO_CHECKOUT } from "@/hooks/useIsAcaoDia";
 import { Gift, Files, BookOpen, Video } from "lucide-react";
 
 const SHOW_PRICE_STATUS_BADGE = false;
@@ -295,7 +295,7 @@ function PassportCard({ data }: { data: PassportData }) {
   const currentPriceOriginal = isDouble && hasDoubleOption ? data.doubleOptions!.priceOriginal : data.priceOriginal;
   const currentBenefits = isDouble && hasDoubleOption ? data.doubleOptions!.benefits : data.benefits;
   const currentHref = isAcaoDia && data.id === 'educador'
-    ? "https://chk.eduzz.com/VWGN37ZX07"
+    ? ACAO_CHECKOUT
     : (isDouble && hasDoubleOption ? data.doubleOptions!.href : data.href);
   const currentButtonText = isDouble && hasDoubleOption ? data.doubleOptions!.buttonText : data.buttonText;
 
@@ -513,7 +513,7 @@ function PassportCard({ data }: { data: PassportData }) {
             <div className="flex items-center gap-2 text-[#191919]">
               <span className="text-xl">🎁</span>
               <span className="font-dm-sans font-bold text-[15px] sm:text-[16px] text-[#191919] uppercase tracking-tight">
-                SÓ ATÉ SEGUNDA
+                SÓ HOJE
               </span>
             </div>
             <p className="font-dm-sans text-[14px] sm:text-[15px] leading-relaxed text-[#191919]">

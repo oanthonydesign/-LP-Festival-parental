@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useCountdown } from "@/hooks/useCountdown";
-import { useIsAcaoDia, ACAO_END } from "@/hooks/useIsAcaoDia";
+import { useIsAcaoDia, ACAO_END, ACAO_CHECKOUT } from "@/hooks/useIsAcaoDia";
 
 export default function AcaoRelampagoBanner() {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,20 +43,19 @@ export default function AcaoRelampagoBanner() {
       }`}
     >
       <a
-        href="#ingressos"
+        href={ACAO_CHECKOUT}
         className="block w-full bg-[#2260a1] border-t-2 border-[#191919] shadow-[0_-4px_0px_0px_#191919] pointer-events-auto hover:bg-[#1a4f88] transition-colors duration-200 cursor-pointer"
       >
         <div className="max-w-[1280px] mx-auto px-4 py-2.5 sm:py-3 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 md:gap-8">
 
           {/* Texto Principal */}
           <p className="font-dm-sans font-bold text-[13px] sm:text-[15px] md:text-[17px] uppercase tracking-tight text-white leading-tight text-center">
-            2 Passaportes Profissionais pelo preço de 1 — Só até segunda
+            SÓ HOJE: 2 Passaportes Profissionais pelo preço de 1
           </p>
 
           {/* Lado Direito: Contador + Botão Garantir */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0 justify-center">
             <p className="font-dm-sans font-bold text-[12px] sm:text-[14px] md:text-[15px] uppercase tracking-tight text-white/95 whitespace-nowrap">
-              A oferta termina em{" "}
               <span className="inline-block font-black tabular-nums text-[#f7a73c]">
                 {countdownText}
               </span>
