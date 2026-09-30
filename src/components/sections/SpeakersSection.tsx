@@ -50,16 +50,6 @@ export const allSpeakers: Speaker[] = [
         category: "profissionais",
     },
     {
-        id: 4,
-        name: "Isa Minatel",
-        description: "Psicopedagoga referência em desenvolvimento infantil",
-        image: "/images/isam.webp",
-        instagram: "https://www.instagram.com/isa.minatel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-        linkedin: "https://www.linkedin.com/in/isa-minatel-85852732/",
-        bgColor: "#79c3ab",
-        category: "pais-cuidadores",
-    },
-    {
         id: 5,
         name: "Vanessa Cavalieri",
         description: "Juíza titular da Vara da Infância e Juventude do Rio de Janeiro",
@@ -617,7 +607,7 @@ export default function SpeakersSection() {
     const carouselRef = useRef<HTMLDivElement>(null);
 
     const professionalOrder = [1, 3, 5, 7, 9, 32, 33, 30, 13, 15, 17, 19, 20, 21, 22, 23, 24, 25, 28];
-    const parentsOrder = [2, 4, 6, 8, 10, 11, 12, 13, 14, 29, 16, 18, 19, 22, 23, 26, 27];
+    const parentsOrder = [2, 6, 8, 10, 11, 12, 13, 14, 29, 16, 18, 19, 22, 23, 26, 27];
 
     const filteredSpeakers = (() => {
         if (activeFilter === "todos") return allSpeakers;

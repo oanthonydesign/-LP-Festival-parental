@@ -577,12 +577,6 @@ export const scheduleFullData: DayData[] = [
                     { time: '14h00', title: 'Não há programação neste horário', type: 'info' },
                     { time: '15h30', title: 'Intervalo', type: 'interval' },
                     { time: '16h00', title: 'Não há programação neste horário', type: 'info' },
-                    {
-                        time: '16h30',
-                        title: 'Mamma Ria',
-                        speakers: 'Isa Minatel',
-                        type: 'special',
-                    },
                     { time: '17h30', title: 'Encerramento', type: 'system' },
                 ],
             },
