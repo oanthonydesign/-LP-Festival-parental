@@ -188,7 +188,7 @@ function EducadorProgressBar() {
       ([entry]) => {
         if (entry.isIntersecting) {
           let start = 0;
-          const end = 86;
+          const end = 87;
           const duration = 1200; // 1.2 segundos
           const startTime = performance.now();
 

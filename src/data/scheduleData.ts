@@ -49,8 +49,8 @@ export const scheduleFullData: DayData[] = [
         stages: [
             {
                 id: 'palco1',
-                label: 'Palco 1',
-                fullTitle: 'PALCO 1 — VISÃO CONTEMPORÂNEA DA INFÂNCIA E DAS FAMÍLIAS',
+                label: 'Palco Vínculo',
+                fullTitle: 'PALCO VÍNCULO — VISÃO CONTEMPORÂNEA DA INFÂNCIA E DAS FAMÍLIAS',
                 events: [
                     {
                         time: '09h00',
@@ -116,8 +116,8 @@ export const scheduleFullData: DayData[] = [
             },
             {
                 id: 'palco2',
-                label: 'Palco 2',
-                fullTitle: 'PALCO 2 — SAÚDE MENTAL, DESENVOLVIMENTO E NEURODIVERGÊNCIAS',
+                label: 'Palco Presença',
+                fullTitle: 'PALCO PRESENÇA — SAÚDE MENTAL, DESENVOLVIMENTO E NEURODIVERGÊNCIAS',
                 events: [
                     {
                         time: '09h00',
@@ -181,8 +181,8 @@ export const scheduleFullData: DayData[] = [
             },
             {
                 id: 'palco3',
-                label: 'Palco 3',
-                fullTitle: 'PALCO 3 — RELAÇÕES, PROTEÇÃO E PRÁTICAS PARENTAIS',
+                label: 'Palco Escuta',
+                fullTitle: 'PALCO ESCUTA — RELAÇÕES, PROTEÇÃO E PRÁTICAS PARENTAIS',
                 events: [
                     {
                         time: '09h00',
@@ -273,8 +273,8 @@ export const scheduleFullData: DayData[] = [
         stages: [
             {
                 id: 'palco1',
-                label: 'Palco 1',
-                fullTitle: 'PALCO 1 — EDUCAÇÃO PARENTAL COMO CAUSA SOCIAL',
+                label: 'Palco Vínculo',
+                fullTitle: 'PALCO VÍNCULO — EDUCAÇÃO PARENTAL COMO CAUSA SOCIAL',
                 events: [
                     {
                         time: '09h00',
@@ -315,8 +315,8 @@ export const scheduleFullData: DayData[] = [
             },
             {
                 id: 'palco2',
-                label: 'Palco 2',
-                fullTitle: 'PALCO 2 — IMPLEMENTAÇÃO EM ESCOLAS, CLÍNICAS E INSTITUIÇÕES',
+                label: 'Palco Presença',
+                fullTitle: 'PALCO PRESENÇA — IMPLEMENTAÇÃO EM ESCOLAS, CLÍNICAS E INSTITUIÇÕES',
                 events: [
                     {
                         time: '09h00',
@@ -359,8 +359,8 @@ export const scheduleFullData: DayData[] = [
             },
             {
                 id: 'palco3',
-                label: 'Palco 3',
-                fullTitle: 'PALCO 3 — CARREIRA, AUTORIDADE E NEGÓCIOS PARA EDUCADORES PARENTAIS',
+                label: 'Palco Escuta',
+                fullTitle: 'PALCO ESCUTA — CARREIRA, AUTORIDADE E NEGÓCIOS PARA EDUCADORES PARENTAIS',
                 events: [
                     {
                         time: '09h00',
@@ -430,8 +430,8 @@ export const scheduleFullData: DayData[] = [
         stages: [
             {
                 id: 'palco1',
-                label: 'Palco 1',
-                fullTitle: 'PALCO 1 — GRANDES CONVERSAS SOBRE VÍNCULO E AUTONOMIA',
+                label: 'Palco Vínculo',
+                fullTitle: 'PALCO VÍNCULO — GRANDES CONVERSAS SOBRE VÍNCULO E AUTONOMIA',
                 events: [
                     {
                         time: '09h00',
@@ -476,8 +476,8 @@ export const scheduleFullData: DayData[] = [
             },
             {
                 id: 'palco2',
-                label: 'Palco 2',
-                fullTitle: 'PALCO 2 — DESAFIOS CONTEMPORÂNEOS DAS FAMÍLIAS',
+                label: 'Palco Presença',
+                fullTitle: 'PALCO PRESENÇA — DESAFIOS CONTEMPORÂNEOS DAS FAMÍLIAS',
                 events: [
                     {
                         time: '09h00',
@@ -516,8 +516,8 @@ export const scheduleFullData: DayData[] = [
             },
             {
                 id: 'palco3',
-                label: 'Palco 3',
-                fullTitle: 'PALCO 3 — RELAÇÕES COTIDIANAS, REPARAÇÃO E MEMÓRIAS',
+                label: 'Palco Escuta',
+                fullTitle: 'PALCO ESCUTA — RELAÇÕES COTIDIANAS, REPARAÇÃO E MEMÓRIAS',
                 events: [
                     {
                         time: '09h00',
@@ -560,8 +560,8 @@ export const scheduleFullData: DayData[] = [
             },
             {
                 id: 'palco4',
-                label: 'Palco 4',
-                fullTitle: 'PALCO 4 — EXPERIÊNCIAS E ESPETÁCULOS',
+                label: 'Palco Conexão',
+                fullTitle: 'PALCO CONEXÃO — EXPERIÊNCIAS E ESPETÁCULOS',
                 events: [
                     { time: '09h00', title: 'Não há programação neste horário', type: 'info' },
                     { time: '09h30', title: 'Não há programação neste horário', type: 'info' },
@@ -609,8 +609,8 @@ export const scheduleFullData: DayData[] = [
         stages: [
             {
                 id: 'palco1',
-                label: 'Palco 1',
-                fullTitle: 'PALCO 1 — HISTÓRIA, LEGADO E RECOMEÇOS',
+                label: 'Palco Vínculo',
+                fullTitle: 'PALCO VÍNCULO — HISTÓRIA, LEGADO E RECOMEÇOS',
                 events: [
                     { time: '09h00', title: 'Não há programação neste horário', type: 'info' },
                     { time: '09h30', title: 'Não há programação neste horário', type: 'info' },
@@ -643,8 +643,8 @@ export const scheduleFullData: DayData[] = [
             },
             {
                 id: 'palco2',
-                label: 'Palco 2',
-                fullTitle: 'PALCO 2 — CASAL, REDE DE APOIO E CRISES FAMILIARES',
+                label: 'Palco Presença',
+                fullTitle: 'PALCO PRESENÇA — CASAL, REDE DE APOIO E CRISES FAMILIARES',
                 events: [
                     {
                         time: '09h00',
@@ -677,8 +677,8 @@ export const scheduleFullData: DayData[] = [
             },
             {
                 id: 'palco3',
-                label: 'Palco 3',
-                fullTitle: 'PALCO 3 — HABILIDADES SOCIOEMOCIONAIS, RITUAIS E BRINCAR',
+                label: 'Palco Escuta',
+                fullTitle: 'PALCO ESCUTA — HABILIDADES SOCIOEMOCIONAIS, RITUAIS E BRINCAR',
                 events: [
                     {
                         time: '09h00',
@@ -717,8 +717,8 @@ export const scheduleFullData: DayData[] = [
             },
             {
                 id: 'palco4',
-                label: 'Palco 4',
-                fullTitle: 'PALCO 4 — EXPERIÊNCIAS E ESPETÁCULOS',
+                label: 'Palco Conexão',
+                fullTitle: 'PALCO CONEXÃO — EXPERIÊNCIAS E ESPETÁCULOS',
                 events: [
                     {
                         time: '09h00',
