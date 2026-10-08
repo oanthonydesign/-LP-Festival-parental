@@ -476,6 +476,10 @@ function PassportCard({ data }: { data: PassportData }) {
               </span>
             </div>
 
+            <p className="font-dm-sans text-[15px] md:text-[16px] leading-snug text-white text-center -mt-2">
+              <span className="font-bold">Gordon Neufeld, Vanessa Cavalieri, Priscila Xavier</span> e mais de 50 palestrantes em conversas sobre vínculo, desenvolvimento infantil, trauma e os desafios reais de quem trabalha com famílias.
+            </p>
+
             <div className="flex justify-center items-center w-full py-1">
               <img
                 src="/images/logo7ciephbranco1.webp"
