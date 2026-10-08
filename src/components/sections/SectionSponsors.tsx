@@ -181,7 +181,7 @@ export default function SectionSponsors() {
 
         {/* Apoiadores — mesmo padrão de divisória, logo menor */}
         <div className="mt-10 md:mt-12">
-          <SectionDivider label="Apoiador" />
+          <SectionDivider label="Apoio" />
 
           <div
             className={gridClass.apoiadores}
