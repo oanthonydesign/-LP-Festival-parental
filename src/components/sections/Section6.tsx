@@ -141,7 +141,7 @@ const PASSAPORTES: PassportData[] = [
 
 function WhatsAppIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="w-[20px] h-[20px] shrink-0" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="w-[20px] h-[20px] md:w-[24px] md:h-[24px] shrink-0 overflow-visible" aria-hidden="true">
       <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.502 1.14 6.744 3.072 9.378L1.062 31.16l5.964-1.97A15.914 15.914 0 0016.004 32C24.826 32 32 24.824 32 16.004 32 7.176 24.826 0 16.004 0zm9.318 22.59c-.39 1.102-1.936 2.016-3.178 2.282-.852.18-1.964.324-5.708-1.226-4.792-1.984-7.872-6.848-8.114-7.166-.23-.318-1.948-2.596-1.948-4.95 0-2.356 1.234-3.514 1.672-3.992.39-.426 1.026-.638 1.636-.638.198 0 .374.01.534.018.478.02.718.048 1.034.8.392.936 1.348 3.292 1.466 3.532.12.24.24.558.08.876-.148.326-.278.47-.518.744-.24.274-.468.484-.708.778-.218.258-.464.534-.198 1.012.266.47 1.184 1.952 2.542 3.162 1.746 1.556 3.218 2.038 3.674 2.264.358.18.784.148 1.06-.148.352-.376.786-.998 1.228-1.612.314-.438.712-.494 1.104-.328.398.16 2.524 1.19 2.958 1.408.434.218.724.326.832.506.106.18.106 1.044-.284 2.148z" />
     </svg>
   );
@@ -668,10 +668,10 @@ function PassportCard({ data }: { data: PassportData }) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackClarity('clique_grupos_card')}
-              className="border-2 border-[#191919] rounded-[40px] px-[16px] py-[12px] flex items-center justify-center gap-2 w-full text-[#191919] hover:bg-white/15 transition-colors"
+              className="bg-transparent border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] px-[16px] py-[16px] flex items-center justify-center gap-2 hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] w-full text-[#191919]"
             >
               <WhatsAppIcon />
-              <span className="font-dm-sans font-bold text-[13px] uppercase tracking-wider text-center">
+              <span className="font-dm-sans font-bold text-[14px] uppercase tracking-wider text-center">
                 Compra em grupo (3+)
               </span>
             </a>
