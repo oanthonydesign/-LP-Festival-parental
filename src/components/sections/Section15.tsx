@@ -4,7 +4,8 @@
 'use client';
 
 import { useState } from 'react';
-import { waGrupoUrl, trackWhatsAppClick } from '@/utils/whatsapp';
+import { waGrupoUrl } from '@/utils/whatsapp';
+import { trackClarity } from '@/utils/clarity';
 
 // Link de grupos dentro das respostas — não fecha o acordeão ao clicar
 function GrupoLink({ children }: { children: React.ReactNode }) {
@@ -16,7 +17,7 @@ function GrupoLink({ children }: { children: React.ReactNode }) {
       className="underline underline-offset-2 font-bold"
       onClick={(e) => {
         e.stopPropagation();
-        trackWhatsAppClick('grupo_faq');
+        trackClarity('clique_grupos_faq');
       }}
     >
       {children}

@@ -9,7 +9,3 @@ const MENSAGENS_GRUPO = {
 export const waGrupoUrl = (origem: keyof typeof MENSAGENS_GRUPO) =>
     `https://wa.me/${WHATSAPP_GRUPOS_NUMBER}?text=${encodeURIComponent(MENSAGENS_GRUPO[origem])}`;
 
-export function trackWhatsAppClick(origem: string) {
-    const w = window as unknown as { dataLayer?: object[] };
-    (w.dataLayer = w.dataLayer || []).push({ event: 'whatsapp_click', whatsapp_origem: origem });
-}

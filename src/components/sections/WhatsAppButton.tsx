@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { trackWhatsAppClick } from '@/utils/whatsapp';
+import { trackClarity } from '@/utils/clarity';
 
 // Número do WhatsApp (trocar pelo número real)
 const WHATSAPP_NUMBER = '5511915983957';
@@ -61,7 +61,7 @@ export default function WhatsAppButton() {
                 className="relative block pointer-events-auto"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => trackWhatsAppClick('flutuante')}
+                onClick={() => trackClarity('clique_whatsapp')}
             >
                 {/* Tooltip (dentro do link: tocar no balão também abre o WhatsApp) */}
                 <div

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import svgPaths from "@/components/svg/svgPaths";
+import { trackClarity } from "@/utils/clarity";
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
@@ -80,6 +81,7 @@ export default function Header() {
                         {/* Ingresso Button - Orange with Icon */}
                         <a
                             href="#convidados-especiais"
+                            onClick={() => trackClarity("clique_header_ingresso")}
                             className={`bg-[#f7a73c] text-[#191919] text-[12px] font-bold uppercase tracking-wider px-4 py-2.5 rounded-[40px] shadow-[2px_2px_0px_0px_#191919] active:translate-y-[1px] active:shadow-none transition-all duration-300 border border-[#191919] flex items-center gap-2 ${showMobileHeader ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-90 pointer-events-none"}`}
                         >
                             <img src="/images/icons/ingresso_linha_preta.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="lazy" />
@@ -127,7 +129,7 @@ export default function Header() {
 
                     {/* CTA Button - Desktop */}
                     <div className="hidden lg:flex items-center gap-[16px]">
-                        <a href="#ingressos" className="group relative">
+                        <a href="#ingressos" onClick={() => trackClarity("clique_header_ingresso")} className="group relative">
                             <div className="bg-[#f7a73c] border border-[#191919] flex items-center justify-center gap-[10px] px-[24px] py-[12px] rounded-[40px] shadow-[2px_2px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[1px_1px_0px_0px_#191919] transition-all">
                                 <img src="/images/icons/ingresso_linha_preta.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="lazy" />
                                 <span className="font-dm-sans font-bold text-[#191919] text-[13px] uppercase tracking-[0.8px] whitespace-nowrap">

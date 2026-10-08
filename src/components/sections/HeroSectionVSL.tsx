@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import Marquee01 from "@/components/sections/Marquee01";
 import Marquee02 from "@/components/sections/Marquee02";
+import { trackClarity } from "@/utils/clarity";
 
 declare global {
     namespace JSX {
@@ -78,7 +79,7 @@ export default function HeroSectionVSL() {
                 {/* --- CTAs (Below Video - z-20) --- */}
                 <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-[16px] w-full max-w-[400px] md:max-w-none z-20">
                     {/* Botão Profissional */}
-                    <a href="#profissional" className="group relative w-full md:w-[332px]">
+                    <a href="#profissional" onClick={() => trackClarity("clique_hero_profissional")} className="group relative w-full md:w-[332px]">
                         <div className="bg-[#f7a73c] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
                             <img src="/images/icons/ingresso_linha_preta.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="eager" decoding="async" />
                             <span className="font-dm-sans font-bold text-[#191919] text-[13px] md:text-[14px] uppercase tracking-[0.8px] md:tracking-[1px] whitespace-nowrap">
@@ -88,7 +89,7 @@ export default function HeroSectionVSL() {
                     </a>
 
                     {/* Botão Pais */}
-                    <a href="#pais" className="group relative w-full md:w-[332px]">
+                    <a href="#pais" onClick={() => trackClarity("clique_hero_pais")} className="group relative w-full md:w-[332px]">
                         <div className="bg-[#F6D2C8] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
                             <img src="/images/icons/ingresso_linha_preta.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="eager" decoding="async" />
                             <span className="font-dm-sans font-bold text-[#191919] text-[13px] md:text-[14px] uppercase tracking-[0.8px] md:tracking-[1px] whitespace-nowrap">

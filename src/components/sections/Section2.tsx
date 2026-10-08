@@ -1,5 +1,7 @@
 "use client";
 
+import { trackClarity } from "@/utils/clarity";
+
 export default function Section2() {
     return (
         <section className="bg-[#fff6ef] w-full flex flex-col items-center px-4 md:px-0 pb-[80px] pt-[56px] relative isolate overflow-visible scroll-mt-24" id="contexto" data-name="Section - 2">
@@ -47,7 +49,7 @@ export default function Section2() {
                 </div>
 
                 {/* CTA Button */}
-                <a href="#ingressos" className="group relative w-full md:w-[332px]">
+                <a href="#ingressos" onClick={() => trackClarity("clique_cta_contexto")} className="group relative w-full md:w-[332px]">
                     <div className="bg-[#f7a73c] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
                         <img src="/images/icons/ingresso_linha_preta.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="lazy" />
                         <span className="font-dm-sans font-bold text-[#191919] text-[13px] md:text-[14px] uppercase tracking-[0.8px] md:tracking-[1px] whitespace-nowrap">

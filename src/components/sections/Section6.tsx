@@ -3,7 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import svgPaths from "@/components/svg/svgPaths";
 import { useIsAcaoDia, ACAO_CHECKOUT } from "@/hooks/useIsAcaoDia";
-import { waGrupoUrl, trackWhatsAppClick } from "@/utils/whatsapp";
+import { waGrupoUrl } from "@/utils/whatsapp";
+import { trackClarity } from "@/utils/clarity";
 import { Gift, Files, BookOpen, Video } from "lucide-react";
 
 const SHOW_PRICE_STATUS_BADGE = false;
@@ -645,6 +646,7 @@ function PassportCard({ data }: { data: PassportData }) {
           {/* Action Button */}
           <a
             href={currentHref}
+            onClick={() => trackClarity(data.id === 'educador' ? 'clique_checkout_profissional' : 'clique_checkout_parental')}
             className={`bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[40px] shadow-[4px_4px_0px_0px_#191919] ${data.id === 'educador' ? 'px-[6px] lg:px-[10px]' : 'px-[16px]'} py-[16px] flex items-center justify-center gap-2 hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#191919] transition-all active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#191919] group w-full`}
           >
             <div className="text-[#191919] hidden md:block">
@@ -661,7 +663,7 @@ function PassportCard({ data }: { data: PassportData }) {
               href={waGrupoUrl('card')}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackWhatsAppClick('grupo_card')}
+              onClick={() => trackClarity('clique_grupos_card')}
               className="border-2 border-[#191919] rounded-[40px] px-[16px] py-[12px] flex items-center justify-center gap-2 w-full text-[#191919] hover:bg-white/15 transition-colors"
             >
               <WhatsAppIcon />
