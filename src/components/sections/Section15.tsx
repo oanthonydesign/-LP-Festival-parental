@@ -4,6 +4,25 @@
 'use client';
 
 import { useState } from 'react';
+import { waGrupoUrl, trackWhatsAppClick } from '@/utils/whatsapp';
+
+// Link de grupos dentro das respostas — não fecha o acordeão ao clicar
+function GrupoLink({ children }: { children: React.ReactNode }) {
+  return (
+    <a
+      href={waGrupoUrl('faq')}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="underline underline-offset-2 font-bold"
+      onClick={(e) => {
+        e.stopPropagation();
+        trackWhatsAppClick('grupo_faq');
+      }}
+    >
+      {children}
+    </a>
+  );
+}
 import svgPaths from "@/components/svg/svg-94ngdjnt4";
 
 function Heading() {
@@ -70,7 +89,7 @@ function Plus() {
 
 interface AccordionItemProps {
   question: string;
-  answer: string;
+  answer: React.ReactNode;
   isOpen: boolean;
   onToggle: () => void;
 }
@@ -108,66 +127,70 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
 function Container1() {
   const [openIndex, setOpenIndex] = useState<number>(0);
 
-  const faqItems = [
+  const faqItems: { question: string; answer: React.ReactNode }[] = [
     {
       question: "Para quem é o Festival Parental?",
       answer: "O Festival Parental foi pensado para dois públicos principais:\n\nProfissionais que trabalham com famílias, como psicólogos, educadores, terapeutas, pediatras e consultores parentais.\n\nPais, mães e cuidadores que desejam compreender melhor o desenvolvimento de crianças e adolescentes e fortalecer os vínculos familiares."
     },
     {
-      question: "O que é exatamente o Festival Parental?",
-      answer: "O Festival Parental é um encontro presencial que reúne especialistas nacionais e internacionais para discutir o desenvolvimento emocional de crianças e adolescentes e os desafios das relações familiares no mundo contemporâneo.\n\nDurante quatro dias, o evento reúne palestras, reflexões e experiências sobre vínculos, educação e convivência familiar, além de uma feira com iniciativas e marcas dedicadas ao universo da infância."
+      question: "Há desconto para grupos?",
+      answer: <>Sim. Grupos a partir de 3 pessoas têm condição especial no Passaporte Profissional. <GrupoLink>Fale com nossa equipe no WhatsApp</GrupoLink>.</>
     },
     {
-      question: "Qual passaporte dá acesso a cada dia do evento?",
-      answer: "O Passaporte Profissional dá acesso aos quatro dias do Festival Parental.\n\nO Passaporte Parental dá acesso apenas aos dois últimos dias do evento."
+      question: "Onde acontece o Festival Parental?",
+      answer: "O evento será realizado no Transamérica Expo Center, em São Paulo.\n\nO local está a aproximadamente:\n12 km do Aeroporto de Congonhas\n42 km do Aeroporto Internacional de Guarulhos\n\nA estação de metrô mais próxima é Santo Amaro, que atende à Linha 5-Lilás do Metrô e à Linha 9-Esmeralda da CPTM, a cerca de 10 a 15 minutos de caminhada."
     },
     {
-      question: "Qual é a relação entre o Festival Parental e o Congresso Internacional de Educação Parental?",
-      answer: "Os dois primeiros dias do evento (19 e 20 de novembro) correspondem à 7ª edição do Congresso Internacional de Educação Parental, voltada principalmente para profissionais da área.\n\nA proposta do Festival amplia essa experiência, criando um ambiente mais imersivo e integrando diferentes formatos de aprendizado e reflexão ao longo dos quatro dias."
+      question: "Há meia-entrada ou desconto para estudantes?",
+      answer: <>{"Não há política de meia-entrada ou desconto para estudantes.\n\n"}Se você vem com colegas, grupos a partir de 3 pessoas têm condição especial no Passaporte Profissional. <GrupoLink>Fale conosco pelo WhatsApp</GrupoLink>.</>
     },
     {
-      question: "Já acompanho alguns palestrantes nas redes sociais. O evento oferece algo diferente?",
-      answer: "Sim.\n\nRedes sociais e livros oferecem acesso à informação. O evento presencial permite algo diferente: tempo de imersão, aprofundamento das ideias e contato direto com especialistas e com outras pessoas que compartilham das mesmas inquietações.\n\nA experiência coletiva e o ambiente de reflexão costumam gerar insights que dificilmente acontecem no consumo rápido de conteúdo online."
-    },
-    {
-      question: "Vou conseguir aplicar o que aprender no meu trabalho com famílias?",
-      answer: "Sim.\n\nO conteúdo apresentado pelos especialistas foi pensado para ajudar profissionais a compreender melhor os processos emocionais que moldam o desenvolvimento de crianças e adolescentes.\n\nA proposta é oferecer fundamentos sólidos e reflexões que ampliem o olhar sobre as relações familiares e possam ser incorporadas à prática profissional."
-    },
-    {
-      question: "A programação do evento já está definida?",
-      answer: "A programação completa do Festival Parental ainda está em construção. Estamos a alguns meses do evento e novos convidados, palestras e painéis continuam sendo confirmados.\n\nEm breve divulgaremos a programação detalhada com os temas, palestrantes, painéis e horários de cada dia. Nosso objetivo é ampliar continuamente o evento com novos nomes e conteúdos que tornem a experiência ainda mais rica para todos os participantes."
-    },
-    {
-      question: "Posso levar meus filhos?",
-      answer: "O evento foi pensado para adultos.\n\nA proposta é de que os participantes possam aproveitar o encontro com atenção e tranquilidade, dedicando esse tempo à reflexão e ao aprendizado."
+      question: "Sou estudante de Psicologia, Pedagogia ou áreas relacionadas. Qual passaporte devo escolher?",
+      answer: <>{"Se você está em formação ou atua na área, o mais indicado é o Passaporte Profissional.\n\nEle dá acesso aos quatro dias do Festival Parental, com conteúdos aprofundados, base científica e aplicação prática para quem trabalha ou pretende trabalhar com famílias.\n\nO Passaporte Parental é voltado para pais e cuidadores e dá acesso apenas aos dois últimos dias do evento.\n\n"}Se você vem com colegas, grupos a partir de 3 pessoas têm condição especial no Passaporte Profissional. <GrupoLink>Fale conosco pelo WhatsApp</GrupoLink>.</>
     },
     {
       question: "Posso levar um acompanhante?",
       answer: "Sim.\n\nCada participante precisa possuir seu próprio ingresso.\n\nPais, mães ou cuidadores que desejarem participar juntos podem adquirir o Passaporte Parental Duplo, que oferece condições especiais."
     },
     {
+      question: "Qual passaporte dá acesso a cada dia do evento?",
+      answer: "O Passaporte Profissional dá acesso aos quatro dias do Festival Parental.\n\nO Passaporte Parental dá acesso apenas aos dois últimos dias do evento."
+    },
+    {
       question: "O Festival será gravado?",
       answer: "Profissionais que adquirirem o Passaporte Profissional terão acesso às gravações dos dois primeiros dias do evento (19 e 20 de novembro), que correspondem ao conteúdo do Congresso Internacional de Educação Parental.\n\nO acesso ficará disponível por 90 dias."
     },
     {
-      question: "Haverá certificado de participação?",
-      answer: "Sim.\n\nO certificado de participação será concedido exclusivamente aos participantes que adquirirem o Passaporte Profissional.\n\nA emissão será eletrônica e as orientações para gerar o certificado serão disponibilizadas na plataforma do evento."
+      question: "Posso levar meus filhos?",
+      answer: "O evento foi pensado para adultos.\n\nA proposta é de que os participantes possam aproveitar o encontro com atenção e tranquilidade, dedicando esse tempo à reflexão e ao aprendizado."
     },
     {
-      question: "Há meia-entrada ou desconto para estudantes?",
-      answer: "Não há política de meia-entrada ou desconto para estudantes."
-    },
-    {
-      question: "Sou estudante de Psicologia, Pedagogia ou áreas relacionadas. Qual passaporte devo escolher?",
-      answer: "Se você está em formação ou atua na área, o mais indicado é o Passaporte Profissional.\n\nEle dá acesso aos quatro dias do Festival Parental, com conteúdos aprofundados, base científica e aplicação prática para quem trabalha ou pretende trabalhar com famílias.\n\nO Passaporte Parental é voltado para pais e cuidadores e dá acesso apenas aos dois últimos dias do evento."
+      question: "Qual é a relação entre o Festival Parental e o Congresso Internacional de Educação Parental?",
+      answer: "Os dois primeiros dias do evento (19 e 20 de novembro) correspondem à 7ª edição do Congresso Internacional de Educação Parental, voltada principalmente para profissionais da área.\n\nA proposta do Festival amplia essa experiência, criando um ambiente mais imersivo e integrando diferentes formatos de aprendizado e reflexão ao longo dos quatro dias."
     },
     {
       question: "Comprei meu passaporte e não poderei comparecer. O que devo fazer?",
       answer: "As informações sobre prazos e condições de reembolso podem ser consultadas na política oficial disponível na página do evento."
     },
     {
-      question: "Onde acontece o Festival Parental?",
-      answer: "O evento será realizado no Transamérica Expo Center, em São Paulo.\n\nO local está a aproximadamente:\n12 km do Aeroporto de Congonhas\n42 km do Aeroporto Internacional de Guarulhos\n\nA estação de metrô mais próxima é Santo Amaro, que atende à Linha 5-Lilás do Metrô e à Linha 9-Esmeralda da CPTM, a cerca de 10 a 15 minutos de caminhada."
+      question: "A programação do evento já está definida?",
+      answer: "A programação completa do Festival Parental ainda está em construção. Estamos a alguns meses do evento e novos convidados, palestras e painéis continuam sendo confirmados.\n\nEm breve divulgaremos a programação detalhada com os temas, palestrantes, painéis e horários de cada dia. Nosso objetivo é ampliar continuamente o evento com novos nomes e conteúdos que tornem a experiência ainda mais rica para todos os participantes."
+    },
+    {
+      question: "O que é exatamente o Festival Parental?",
+      answer: "O Festival Parental é um encontro presencial que reúne especialistas nacionais e internacionais para discutir o desenvolvimento emocional de crianças e adolescentes e os desafios das relações familiares no mundo contemporâneo.\n\nDurante quatro dias, o evento reúne palestras, reflexões e experiências sobre vínculos, educação e convivência familiar, além de uma feira com iniciativas e marcas dedicadas ao universo da infância."
+    },
+    {
+      question: "Já acompanho alguns palestrantes nas redes sociais. O evento oferece algo diferente?",
+      answer: "Sim.\n\nRedes sociais e livros oferecem acesso à informação. O evento presencial permite algo diferente: tempo de imersão, aprofundamento das ideias e contato direto com especialistas e com outras pessoas que compartilham das mesmas inquietações.\n\nA experiência coletiva e o ambiente de reflexão costumam gerar insights que dificilmente acontecem no consumo rápido de conteúdo online."
+    },
+    {
+      question: "Haverá certificado de participação?",
+      answer: "Sim.\n\nO certificado de participação será concedido exclusivamente aos participantes que adquirirem o Passaporte Profissional.\n\nA emissão será eletrônica e as orientações para gerar o certificado serão disponibilizadas na plataforma do evento."
+    },
+    {
+      question: "Vou conseguir aplicar o que aprender no meu trabalho com famílias?",
+      answer: "Sim.\n\nO conteúdo apresentado pelos especialistas foi pensado para ajudar profissionais a compreender melhor os processos emocionais que moldam o desenvolvimento de crianças e adolescentes.\n\nA proposta é oferecer fundamentos sólidos e reflexões que ampliem o olhar sobre as relações familiares e possam ser incorporadas à prática profissional."
     }
   ];
 

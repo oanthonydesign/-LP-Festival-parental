@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import svgPaths from "@/components/svg/svgPaths";
 import { useIsAcaoDia, ACAO_CHECKOUT } from "@/hooks/useIsAcaoDia";
+import { waGrupoUrl, trackWhatsAppClick } from "@/utils/whatsapp";
 import { Gift, Files, BookOpen, Video } from "lucide-react";
 
 const SHOW_PRICE_STATUS_BADGE = false;
@@ -54,17 +55,8 @@ const PASSAPORTES: PassportData[] = [
     priceFull: "",
     priceOriginal: "",
     benefits: [
-      "Acesso aos 4 dias do Festival Parental 2026 (2 dias de conteúdo para profissionais – 7º Congresso Internacional de Educação Parental + 2 dias de conteúdo aberto também para pais e cuidadores)",
-      "Sacola com brindes",
-      "Acesso às sessões de autógrafos com palestrantes",
-      "Acesso à feira de produtos e serviços para a parentalidade",
-      "Acesso à gravação completa do Festival por 90 dias",
-      "Credenciamento para Embaixadores",
-      "Acesso ao Coquetel Exclusivo para Embaixadores no dia 20.11.26",
-      "Botton de Identificação de Embaixadores",
-      "Cupom personalizado de desconto para seguidores e convidados",
-      "Acesso à seletiva de palestras e workshops para pais e cuidadores",
-      "Certificado de participação"
+      "Tudo do Passaporte Profissional",
+      "Coquetel exclusivo, credenciamento e cupom"
     ],
     target: "PRESENÇA E PROTAGONISMO",
     buttonText: "ESGOTADO",
@@ -146,6 +138,14 @@ const PASSAPORTES: PassportData[] = [
   }
 ];
 
+function WhatsAppIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="w-[20px] h-[20px] shrink-0" aria-hidden="true">
+      <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.502 1.14 6.744 3.072 9.378L1.062 31.16l5.964-1.97A15.914 15.914 0 0016.004 32C24.826 32 32 24.824 32 16.004 32 7.176 24.826 0 16.004 0zm9.318 22.59c-.39 1.102-1.936 2.016-3.178 2.282-.852.18-1.964.324-5.708-1.226-4.792-1.984-7.872-6.848-8.114-7.166-.23-.318-1.948-2.596-1.948-4.95 0-2.356 1.234-3.514 1.672-3.992.39-.426 1.026-.638 1.636-.638.198 0 .374.01.534.018.478.02.718.048 1.034.8.392.936 1.348 3.292 1.466 3.532.12.24.24.558.08.876-.148.326-.278.47-.518.744-.24.274-.468.484-.708.778-.218.258-.464.534-.198 1.012.266.47 1.184 1.952 2.542 3.162 1.746 1.556 3.218 2.038 3.674 2.264.358.18.784.148 1.06-.148.352-.376.786-.998 1.228-1.612.314-.438.712-.494 1.104-.328.398.16 2.524 1.19 2.958 1.408.434.218.724.326.832.506.106.18.106 1.044-.284 2.148z" />
+    </svg>
+  );
+}
+
 function StarIcon({ color = "#2DAA96" }: { color?: string }) {
   return (
     <div className="relative shrink-0 size-[20px] mt-0.5">
@@ -179,16 +179,24 @@ function TicketIcon({ isWhite, size = 24 }: { isWhite?: boolean, size?: number }
 
 
 
+const EDUCADOR_SOLD_PERCENT = 87;
+
 function EducadorProgressBar() {
-  const [progress, setProgress] = useState(0);
+  // HTML estático já sai com o valor final: se o JS falhar (in-app browsers), nunca aparece 0%.
+  const [progress, setProgress] = useState(EDUCADOR_SOLD_PERCENT);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const el = containerRef.current;
+    // Só zera para animar se o navegador suporta e o contador ainda está fora da tela
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    if (el.getBoundingClientRect().top < window.innerHeight) return;
+    setProgress(0);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          let start = 0;
-          const end = 87;
+          const end = EDUCADOR_SOLD_PERCENT;
           const duration = 1200; // 1.2 segundos
           const startTime = performance.now();
 
@@ -219,9 +227,7 @@ function EducadorProgressBar() {
       { threshold: 0.15 }
     );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
+    observer.observe(el);
 
     return () => {
       observer.disconnect();
@@ -279,6 +285,21 @@ function EducadorProgressBar() {
           <div className="absolute -left-[11px] top-[-1px] size-[4px] rounded-full bg-white/90 blur-[0.5px]"></div>
         </div>
       </div>
+    </div>
+  );
+}
+
+// Passaporte Embaixador (esgotado), mobile/tablet: faixa compacta acima do Profissional — no desktop segue o card na 1ª coluna
+function EmbaixadorSoldOutStrip() {
+  return (
+    <div className="lg:hidden w-full -mb-5 bg-[#e5e5e5] border-2 border-[#191919] rounded-[20px] shadow-[3px_3px_0px_0px_#191919] px-4 py-3 flex items-center gap-3 text-[#191919]">
+      <span className="bg-[#191919] text-white font-sugar-peachy text-[15px] md:text-[16px] tracking-[-0.3px] leading-none px-2.5 py-1.5 rounded-[6px] rotate-[-4deg] shrink-0">
+        ESGOTADO
+      </span>
+      <p className="font-dm-sans text-[13px] leading-tight text-left">
+        <span className="font-bold">Passaporte Embaixador</span>
+        <span className="text-[#505050]"> — Tudo do Profissional + coquetel exclusivo, credenciamento e cupom</span>
+      </p>
     </div>
   );
 }
@@ -348,7 +369,7 @@ function PassportCard({ data }: { data: PassportData }) {
 
   if (data.isSoldOut) {
     return (
-      <div id={data.id} className={`flex flex-col w-full lg:max-w-[420px] ${data.textColor} relative group grayscale opacity-80`}>
+      <div id={data.id} className={`hidden lg:flex flex-col w-full lg:max-w-[420px] ${data.textColor} relative group grayscale opacity-80`}>
         {/* Header with Title and Lote */}
         <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] shadow-[3px_3px_0px_0px_#191919] p-[12px] w-full z-10 relative overflow-hidden`}>
           <div className={`border-2 ${data.borderColor} border-solid rounded-[16px] flex items-center justify-between px-2 py-[12px] gap-3 relative z-20`}>
@@ -403,7 +424,7 @@ function PassportCard({ data }: { data: PassportData }) {
   }
 
   return (
-    <div id={data.id} className={`flex flex-col w-full lg:max-w-[420px] ${data.textColor} relative group`}>
+    <div id={data.id} className={`flex flex-col w-full lg:max-w-[420px] md:row-start-2 lg:row-start-auto ${data.textColor} relative group`}>
       {isAcaoDia && data.id === 'educador' ? (
         <div className="absolute -top-[55px] -right-6 md:-right-8 z-50 [animation:var(--animate-vibrate-alarm)]">
           <img
@@ -633,6 +654,22 @@ function PassportCard({ data }: { data: PassportData }) {
               {currentButtonText}
             </span>
           </a>
+
+          {/* Compra em grupo — secundário, via WhatsApp */}
+          {data.id === 'educador' && (
+            <a
+              href={waGrupoUrl('card')}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('grupo_card')}
+              className="border-2 border-[#191919] rounded-[40px] px-[16px] py-[12px] flex items-center justify-center gap-2 w-full text-[#191919] hover:bg-white/15 transition-colors"
+            >
+              <WhatsAppIcon />
+              <span className="font-dm-sans font-bold text-[13px] uppercase tracking-wider text-center">
+                Compra em grupo (3+)
+              </span>
+            </a>
+          )}
         </div>
       </div>
     </div>
@@ -661,6 +698,7 @@ export default function Section6() {
 
         {/* Passport Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-[20px] w-full items-start justify-center">
+          <EmbaixadorSoldOutStrip />
           {PASSAPORTES.map((passport) => (
             <PassportCard key={passport.id} data={passport} />
           ))}

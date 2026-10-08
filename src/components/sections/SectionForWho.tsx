@@ -70,7 +70,7 @@ export default function SectionForWho() {
   const group = GROUPS[active];
 
   return (
-    <section className="bg-[#2260a1] w-full flex flex-col items-center pt-[80px] pb-[40px] px-4 overflow-hidden relative" id="para-quem">
+    <section className="bg-[#2260a1] w-full flex flex-col items-center pt-[80px] pb-[40px] px-4 overflow-hidden relative" id="o-que-viver">
       <style dangerouslySetInnerHTML={{
         __html: `
         .hide-scrollbar::-webkit-scrollbar {

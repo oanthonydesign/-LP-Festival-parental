@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { trackWhatsAppClick } from '@/utils/whatsapp';
 
 // Número do WhatsApp (trocar pelo número real)
 const WHATSAPP_NUMBER = '5511915983957';
@@ -50,32 +51,33 @@ export default function WhatsAppButton() {
     const tooltipVisible = showTooltip || isHovering;
 
     return (
-        <div
-            className="fixed bottom-36 sm:bottom-24 right-6 z-[998] flex items-center gap-4"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-        >
-            {/* Tooltip */}
-            <div
-                className={`bg-white rounded-2xl px-4 py-2.5 shadow-[0_4px_20px_rgba(0,0,0,0.15)] border-2 border-[#191919] whitespace-nowrap transition-all duration-400 ease-out origin-right mr-1 ${tooltipVisible
-                    ? 'opacity-100 translate-x-0 scale-100'
-                    : 'opacity-0 translate-x-3 scale-90 pointer-events-none'
-                    }`}
-            >
-                <span className="font-dm-sans font-semibold text-[14px] text-[#191919]">
-                    Tire suas dúvidas 👋
-                </span>
-                {/* Seta apontando para o botão */}
-                <div className="absolute top-1/2 -translate-y-1/2 -right-[7px] w-[12px] h-[12px] bg-white border-r-2 border-b-2 border-[#191919] rotate-[-45deg]" />
-            </div>
-
-            {/* Botão WhatsApp */}
+        // Container não captura toques: só o link (e o balão quando visível) recebem eventos
+        <div className="fixed bottom-36 sm:bottom-24 right-6 z-[998] pointer-events-none">
             <a
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Fale conosco pelo WhatsApp"
+                className="relative block pointer-events-auto"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                onClick={() => trackWhatsAppClick('flutuante')}
             >
+                {/* Tooltip (dentro do link: tocar no balão também abre o WhatsApp) */}
+                <div
+                    className={`absolute right-full top-1/2 mr-5 bg-white rounded-2xl px-4 py-2.5 shadow-[0_4px_20px_rgba(0,0,0,0.15)] border-2 border-[#191919] whitespace-nowrap transition-all duration-400 ease-out origin-right ${tooltipVisible
+                        ? 'opacity-100 -translate-y-1/2 translate-x-0 scale-100 pointer-events-auto'
+                        : 'opacity-0 -translate-y-1/2 translate-x-3 scale-90 pointer-events-none'
+                        }`}
+                >
+                    <span className="font-dm-sans font-semibold text-[14px] text-[#191919]">
+                        Tire suas dúvidas 👋
+                    </span>
+                    {/* Seta apontando para o botão */}
+                    <div className="absolute top-1/2 -translate-y-1/2 -right-[7px] w-[12px] h-[12px] bg-white border-r-2 border-b-2 border-[#191919] rotate-[-45deg]" />
+                </div>
+
+                {/* Botão WhatsApp */}
                 <div className="bg-[#25D366] w-[60px] h-[60px] rounded-full flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.3)] border-2 border-[#191919] transition-all duration-300 hover:scale-110 hover:shadow-[0_6px_24px_rgba(0,0,0,0.4)]">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

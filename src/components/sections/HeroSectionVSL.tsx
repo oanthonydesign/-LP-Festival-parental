@@ -41,7 +41,7 @@ export default function HeroSectionVSL() {
                             <img src="/images/icons/calendario_cor.svg" alt="Calendario" className="w-[20px] h-[20px] object-contain" loading="eager" decoding="async" />
                         </div>
                         <span className="font-dm-sans font-bold text-[#505050] text-[12px] md:text-[14px] uppercase tracking-[0.14px] text-center leading-[1.4] md:leading-none mt-[2px] whitespace-normal md:whitespace-nowrap">
-                            19 a 22 de novembro · 7ª edição · São Paulo
+                            19 a 22 de novembro · 7ª edição<span className="hidden md:inline"> · </span><br className="md:hidden" />Transamérica Expo, São Paulo
                         </span>
                     </div>
 
@@ -78,7 +78,7 @@ export default function HeroSectionVSL() {
                 {/* --- CTAs (Below Video - z-20) --- */}
                 <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-[16px] w-full max-w-[400px] md:max-w-none z-20">
                     {/* Botão Profissional */}
-                    <a href="#contexto" className="group relative w-full md:w-[332px]">
+                    <a href="#profissional" className="group relative w-full md:w-[332px]">
                         <div className="bg-[#f7a73c] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
                             <img src="/images/icons/ingresso_linha_preta.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="eager" decoding="async" />
                             <span className="font-dm-sans font-bold text-[#191919] text-[13px] md:text-[14px] uppercase tracking-[0.8px] md:tracking-[1px] whitespace-nowrap">
@@ -88,7 +88,7 @@ export default function HeroSectionVSL() {
                     </a>
 
                     {/* Botão Pais */}
-                    <a href="#contexto" className="group relative w-full md:w-[332px]">
+                    <a href="#pais" className="group relative w-full md:w-[332px]">
                         <div className="bg-[#F6D2C8] border-2 border-[#191919] flex items-center justify-center gap-[10px] px-[20px] md:px-[30px] py-[16px] rounded-[40px] shadow-[4px_4px_0px_0px_#191919] group-hover:translate-y-[1px] group-hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full">
                             <img src="/images/icons/ingresso_linha_preta.svg" alt="Ingresso" className="w-[24px] h-[24px] shrink-0" loading="eager" decoding="async" />
                             <span className="font-dm-sans font-bold text-[#191919] text-[13px] md:text-[14px] uppercase tracking-[0.8px] md:tracking-[1px] whitespace-nowrap">
