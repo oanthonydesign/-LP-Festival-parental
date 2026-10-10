@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useCountdown, TARGET_DATE } from "@/hooks/useCountdown";
+import { trackClarity } from "@/utils/clarity";
 
 function HourglassIcon() {
     return (
@@ -80,23 +81,32 @@ export default function StickyBottomBar() {
                 isVisible && !isFooterVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
             }`}
         >
-            <div className="w-full bg-linear-to-b from-[#FFCF6B] to-[#F4B63E] border-t-2 border-b-[6px] border-[#191919] border-solid pointer-events-auto">
-                <div className="flex flex-col md:flex-row items-center justify-center py-2 md:py-3 px-6 gap-2 md:gap-4 text-[#191919]">
-                    <div className="flex items-center gap-3">
+            {/* Barra inteira leva à seção de ingressos (fica abaixo do WhatsApp flutuante: bottom-36 / sm:bottom-24) */}
+            <a
+                href="#ingressos"
+                onClick={() => trackClarity("barra_virada_l7")}
+                className="block w-full bg-linear-to-b from-[#FFCF6B] to-[#F4B63E] border-t-2 border-b-[6px] border-[#191919] border-solid pointer-events-auto"
+            >
+                <div className="flex flex-col md:flex-row items-center justify-center py-2 md:py-3 px-4 gap-1.5 md:gap-4 text-[#191919]">
+                    <div className="flex items-center gap-2 md:gap-3">
                         <HourglassIcon />
                         <p className="font-dm-sans font-bold text-[14px] md:text-[18px] uppercase tracking-tight whitespace-nowrap">
-                            LOTE 6 TERMINA EM{" "}
-                            <span className="font-black text-[18px] md:text-[22px] tabular-nums">{countdownText}</span>
+                            LOTE 7 TERMINA EM{" "}
+                            <span className="font-black text-[16px] md:text-[22px] tabular-nums">{countdownText}</span>
                         </p>
                     </div>
 
-                    <span className="hidden md:block text-[24px] font-light text-black/30">|</span>
-
-                    <p className="font-dm-sans font-medium text-[14px] md:text-[18px] text-center md:text-left tracking-tight">
-                        Garanta seu ingresso antes <span className="font-bold">da virada de lote</span>
-                    </p>
+                    <div className="flex items-center gap-3 md:gap-4">
+                        <span className="hidden md:block text-[18px] font-bold">•</span>
+                        <p className="font-dm-sans font-bold text-[13px] md:text-[18px] uppercase tracking-tight whitespace-nowrap">
+                            Garanta o valor atual
+                        </p>
+                        <span className="bg-[#191919] text-white font-dm-sans font-bold text-[12px] md:text-[14px] uppercase tracking-wider px-3.5 md:px-5 py-1.5 md:py-2 rounded-full border-2 border-[#191919] shadow-[2px_2px_0px_0px_#2260a1] whitespace-nowrap">
+                            Garantir passaporte
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     );
 }

@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 
-// Data-alvo: 22/09/2026 às 23:59:59 horário de Brasília (UTC-3)
-export const TARGET_DATE = new Date("2026-09-22T23:59:59-03:00");
+// Data-alvo: 14/10/2026 às 23:59:59 horário de Brasília (UTC-3) — fim do Lote 7
+export const TARGET_DATE = new Date("2026-10-14T23:59:59-03:00");
 
 export function useCountdown(targetDate: Date = TARGET_DATE) {
     const calcRemaining = () => Math.max(0, targetDate.getTime() - Date.now());

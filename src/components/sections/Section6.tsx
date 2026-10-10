@@ -3,11 +3,17 @@
 import { useState, useEffect, useRef } from "react";
 import svgPaths from "@/components/svg/svgPaths";
 import { useIsAcaoDia, ACAO_CHECKOUT } from "@/hooks/useIsAcaoDia";
+import { useCountdown } from "@/hooks/useCountdown";
 import { waGrupoUrl } from "@/utils/whatsapp";
 import { trackClarity } from "@/utils/clarity";
 import { Gift, Files, BookOpen, Video } from "lucide-react";
 
 const SHOW_PRICE_STATUS_BADGE = false;
+
+// Virada do Lote 7 (contador até 14/10 23h59 — useCountdown/TARGET_DATE).
+// Tudo abaixo some sozinho quando o contador expira (15/10, 00h).
+// Atualizar manualmente todo dia às 12h:
+const PASSAPORTES_RESTANTES = 50;
 
 interface Benefit {
   text: string;
@@ -180,6 +186,88 @@ function TicketIcon({ isWhite, size = 24 }: { isWhite?: boolean, size?: number }
 
 
 
+// Badge ao lado do selo do lote: ÚLTIMOS DIAS até 13/10, ÚLTIMAS HORAS no dia 14/10
+function LoteUrgencyBadge() {
+  const countdown = useCountdown();
+  if (countdown.expired) return null;
+
+  return (
+    <div className="absolute -top-3 left-5 z-30 bg-[#ff4b4b] border-2 border-[#191919] rounded-[8px] px-2.5 py-1 shadow-[2px_2px_0px_0px_#191919] -rotate-3 pointer-events-none">
+      <span className="font-sugar-peachy text-[13px] md:text-[14px] text-white uppercase tracking-tight leading-none whitespace-nowrap block">
+        {countdown.days === 0 ? "Últimas horas" : "Últimos dias"}
+      </span>
+    </div>
+  );
+}
+
+// Contador do lote acima do preço (mesmo visual do CountdownBadge das viradas anteriores)
+function CountdownBadge() {
+  const countdown = useCountdown();
+  if (countdown.expired) return null;
+
+  const pad = (n: number) => String(n).padStart(2, "0");
+  const countdownText = `${pad(countdown.days)}d ${pad(countdown.hours)}h ${pad(countdown.minutes)}m`;
+
+  return (
+    <div className="flex flex-col items-center gap-2 w-full">
+      <div className="bg-linear-to-b from-[#FFCF6B] to-[#F4B63E] border-2 border-[#191919] border-solid rounded-[16px] p-4 shadow-[3px_3px_0px_0px_#191919] flex items-center justify-center gap-4 w-full max-w-[320px] self-center">
+        <div className="shrink-0 scale-125">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 2H19M5 22H19M5 2C5 2 5 9 12 12M19 2C19 2 19 9 12 12M5 22C5 22 5 15 12 12M19 22C19 22 19 15 12 12" stroke="#191919" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M12 12L8 17H16L12 12Z" fill="#191919" />
+          </svg>
+        </div>
+        <div className="flex flex-col items-start">
+          <p className="font-dm-sans text-[16px] md:text-[18px] leading-tight text-[#191919]">
+            <span className="font-bold text-[#2260a1]">Lote 7</span> termina em
+          </p>
+          <p className="font-sugar-peachy text-[28px] md:text-[34px] tracking-[-1px] md:tracking-[-1.25px] leading-[0.9] text-[#191919] mt-1 tabular-nums">
+            {countdownText}
+          </p>
+        </div>
+      </div>
+      <p className="font-dm-sans text-[13px] text-center text-white/80">
+        Após esse prazo, o valor muda.
+      </p>
+    </div>
+  );
+}
+
+// Bloco do teto de passaportes (substitui a barra "Passaportes vendidos"), mesmo container escuro
+function TetoPassaportesBlock() {
+  const countdown = useCountdown();
+  if (countdown.expired) return null;
+
+  return (
+    <div className="bg-[#191919] border-2 border-[#191919] rounded-[24px] p-4 flex flex-col gap-1.5 shadow-[3px_3px_0px_0px_#191919] text-white my-1">
+      <div className="flex items-start gap-2.5">
+        <div className="relative flex h-2.5 w-2.5 mt-[7px] shrink-0">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#f7a73c] opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#f7a73c]"></span>
+        </div>
+        <p className="font-dm-sans font-bold text-[16px] md:text-[17px] leading-snug">
+          Últimos <span className="text-[#f7a73c]">{PASSAPORTES_RESTANTES} Passaportes Profissionais</span> no valor do Lote 7
+        </p>
+      </div>
+      <p className="font-dm-sans text-[13px] text-white/70 pl-5">
+        Até 14/10, às 23h59, ou até acabarem.
+      </p>
+    </div>
+  );
+}
+
+// Subtítulo da seção de ingressos: temporário até o fim do Lote 7
+function IngressosSubtitle() {
+  const countdown = useCountdown();
+  return (
+    <p className="font-dm-sans text-[18px] lg:text-[24px] text-[#4c4d4f] leading-tight">
+      {countdown.expired
+        ? "Dois caminhos diferentes. Um mesmo ponto de virada."
+        : "Últimos dias do Lote 7. Escolha seu passaporte antes que o valor mude."}
+    </p>
+  );
+}
+
 const EDUCADOR_SOLD_PERCENT = 87;
 
 function EducadorProgressBar() {
@@ -293,7 +381,7 @@ function EducadorProgressBar() {
 // Passaporte Embaixador (esgotado), mobile/tablet: faixa compacta acima do Profissional — no desktop segue o card na 1ª coluna
 function EmbaixadorSoldOutStrip() {
   return (
-    <div className="lg:hidden w-full -mb-5 bg-[#e5e5e5] border-2 border-[#191919] rounded-[20px] shadow-[3px_3px_0px_0px_#191919] px-4 py-3 flex items-center gap-3 text-[#191919]">
+    <div className="lg:hidden w-full -mb-1 bg-[#e5e5e5] border-2 border-[#191919] rounded-[20px] shadow-[3px_3px_0px_0px_#191919] px-4 py-3 flex items-center gap-3 text-[#191919]">
       <span className="bg-[#191919] text-white font-sugar-peachy text-[15px] md:text-[16px] tracking-[-0.3px] leading-none px-2.5 py-1.5 rounded-[6px] rotate-[-4deg] shrink-0">
         ESGOTADO
       </span>
@@ -451,6 +539,8 @@ function PassportCard({ data }: { data: PassportData }) {
           </span>
         </div>
       ) : null}
+      {data.id === 'educador' && <LoteUrgencyBadge />}
+
       {/* Header with Title and Lote */}
       <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] p-[12px] w-full z-10 relative overflow-hidden shadow-[3px_3px_0px_0px_#191919]`}>
         <div className={`border-2 ${data.borderColor} border-solid rounded-[16px] flex items-center justify-between px-[12px] py-[12px] gap-4 relative z-20`}>
@@ -576,8 +666,9 @@ function PassportCard({ data }: { data: PassportData }) {
           </div>
         )} */}
 
-        {/* PROGRESS BAR FOR EDUCADOR */}
-        {data.id === 'educador' && <EducadorProgressBar />}
+        {/* Virada do Lote 7: teto de passaportes (no lugar da barra de vendidos) + contador logo acima do preço */}
+        {data.id === 'educador' && <TetoPassaportesBlock />}
+        {data.id === 'educador' && <CountdownBadge />}
 
         {/* Price Section */}
         {data.id === 'educador' || data.id === 'parental' ? (
@@ -696,9 +787,7 @@ export default function Section6() {
             <h2 className="font-sugar-peachy text-[46px] lg:text-[72px] tracking-[-1.4px] lg:tracking-[-2px] text-[#2260a1] leading-[0.8]">
               Como você quer participar do Festival Parental?
             </h2>
-            <p className="font-dm-sans text-[18px] lg:text-[24px] text-[#4c4d4f] leading-tight">
-              Dois caminhos diferentes. Um mesmo ponto de virada.
-            </p>
+            <IngressosSubtitle />
           </div>
         </div>
 
