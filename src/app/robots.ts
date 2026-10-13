@@ -18,7 +18,6 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: '*',
             allow: '/',
-            disallow: '/lp-b',
         },
         sitemap: 'https://festivalparental.com.br/sitemap.xml',
     }
