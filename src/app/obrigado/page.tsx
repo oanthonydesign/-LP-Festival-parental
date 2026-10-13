@@ -61,15 +61,33 @@ export default function ObrigadoPelaCompra() {
                                         Seu pedido foi realizado com sucesso e estamos validando seu pagamento.
                                     </p>
 
-                                    <div className="w-full text-center">
-                                        <p className="leading-relaxed text-[18px] md:text-[22px] text-[#4c4d4f]">
-                                            Após o pagamento aprovado, iremos gerar seus ingressos <br className="hidden md:block" /> e enviá-los para o seu <strong className="text-[#191919] font-bold">e-mail</strong>.
-                                        </p>
-                                    </div>
+                                    <p className="font-medium text-[#191919] max-w-[600px] leading-tight">
+                                        Após o pagamento aprovado, iremos gerar seus ingressos e enviá-los para o seu e-mail.
+                                    </p>
 
                                     <p className="text-[15px] opacity-80 italic max-w-[600px]">
                                         Caso não encontre o e-mail, verifique sua caixa de spam ou lixo eletrônico.
                                     </p>
+                                </div>
+
+                                {/* Divisor */}
+                                <div className="w-full max-w-[400px] h-[1px] bg-gradient-to-r from-transparent via-[#191919]/10 to-transparent my-10"></div>
+
+                                {/* Manual do Participante */}
+                                <div className="flex flex-col items-center gap-6 text-center font-dm-sans w-full">
+                                    <p className="text-[#4c4d4f] text-[16px] md:text-[18px] leading-relaxed max-w-[600px]">
+                                        Para chegar ao Festival já sabendo como tudo funciona, preparamos um manual com as principais informações sobre acesso, programação, estrutura e orientações para aproveitar melhor a experiência.
+                                    </p>
+                                    <a
+                                        href="/manual-do-participante-festival-parental-2026.pdf"
+                                        download="Manual-do-Participante_Festival-Parental-2026.pdf"
+                                        className="inline-flex items-center justify-center gap-2 bg-[#ef7d25] text-[#fff6ef] px-8 py-4 rounded-[32px] font-dm-sans font-bold text-[16px] md:text-[18px] border-2 border-[#191919] shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full md:w-auto text-center"
+                                    >
+                                        Baixar Manual do Participante
+                                        <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                                        </svg>
+                                    </a>
                                 </div>
 
                                 {/* Divisor */}
