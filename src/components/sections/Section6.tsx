@@ -13,7 +13,7 @@ const SHOW_PRICE_STATUS_BADGE = false;
 // Virada do Lote 7 (contador até 14/10 23h59 — useCountdown/TARGET_DATE).
 // Tudo abaixo some sozinho quando o contador expira (15/10, 00h).
 // Atualizar manualmente todo dia às 12h:
-const PASSAPORTES_RESTANTES = 44;
+const PASSAPORTES_RESTANTES = 39;
 
 interface Benefit {
   text: string;
