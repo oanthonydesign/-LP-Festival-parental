@@ -10,11 +10,6 @@ import { Gift, Files, BookOpen, Video } from "lucide-react";
 
 const SHOW_PRICE_STATUS_BADGE = false;
 
-// Virada do Lote 7 (contador até 14/10 23h59 — useCountdown/TARGET_DATE).
-// Tudo abaixo some sozinho quando o contador expira (15/10, 00h).
-// Atualizar manualmente todo dia às 12h:
-const PASSAPORTES_RESTANTES = 39;
-
 interface Benefit {
   text: string;
 }
@@ -228,29 +223,6 @@ function CountdownBadge() {
       </div>
       <p className="font-dm-sans text-[13px] text-center text-white/80">
         Após esse prazo, o valor muda.
-      </p>
-    </div>
-  );
-}
-
-// Bloco do teto de passaportes (substitui a barra "Passaportes vendidos"), mesmo container escuro
-function TetoPassaportesBlock() {
-  const countdown = useCountdown();
-  if (countdown.expired) return null;
-
-  return (
-    <div className="bg-[#191919] border-2 border-[#191919] rounded-[24px] p-4 flex flex-col gap-1.5 shadow-[3px_3px_0px_0px_#191919] text-white my-1">
-      <div className="flex items-start gap-2.5">
-        <div className="relative flex h-2.5 w-2.5 mt-[7px] shrink-0">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#f7a73c] opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#f7a73c]"></span>
-        </div>
-        <p className="font-dm-sans font-bold text-[16px] md:text-[17px] leading-snug">
-          Últimos <span className="text-[#f7a73c]">{PASSAPORTES_RESTANTES} Passaportes Profissionais</span> no valor do Lote 7
-        </p>
-      </div>
-      <p className="font-dm-sans text-[13px] text-white/70 pl-5">
-        Até 14/10, às 23h59, ou até acabarem.
       </p>
     </div>
   );
@@ -666,8 +638,7 @@ function PassportCard({ data }: { data: PassportData }) {
           </div>
         )} */}
 
-        {/* Virada do Lote 7: teto de passaportes (no lugar da barra de vendidos) + contador logo acima do preço */}
-        {data.id === 'educador' && <TetoPassaportesBlock />}
+        {/* Virada do Lote 7: contador logo acima do preço */}
         {data.id === 'educador' && <CountdownBadge />}
 
         {/* Price Section */}
