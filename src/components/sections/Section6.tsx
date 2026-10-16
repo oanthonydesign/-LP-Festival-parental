@@ -76,9 +76,9 @@ const PASSAPORTES: PassportData[] = [
   {
     id: "educador",
     name: "Passaporte Profissional",
-    lote: "Lote 7",
-    priceInstallment: "R$ 174,70",
-    priceFull: "ou R$ 1.747,00 à vista",
+    lote: "Lote 8",
+    priceInstallment: "R$ 179,70",
+    priceFull: "ou R$ 1.797,00 à vista",
     priceOriginal: "R$ 2.197",
     benefits: [
       "4 dias para aprofundar conhecimento, prática e visão sobre a parentalidade contemporânea. Trilha Técnica (dias 1–2, exclusiva para profissionais) + Trilha Parental (dias 3–4, aberta também para pais e cuidadores)",
@@ -104,7 +104,7 @@ const PASSAPORTES: PassportData[] = [
   {
     id: "parental",
     name: "Passaporte Parental",
-    lote: "Lote 7",
+    lote: "Lote 8",
     priceInstallment: "R$ 24,70",
     priceFull: "ou R$ 247,00 à vista",
     priceOriginal: "R$ 1.497,00",
