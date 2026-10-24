@@ -454,10 +454,11 @@ export const allSpeakers: Speaker[] = [
         bgColor: "#f7a73c",
         category: "profissionais",
     },
-    // Novos (out/2026) — ainda sem foto
+    // Novos (out/2026)
     {
         id: 46,
         name: "Izabella Camargo",
+        image: "/images/izaca1x.webp",
         description: "Jornalista e palestrante, criadora do movimento pela Produtividade Sustentável",
         instagram: "https://www.instagram.com/izabellacamargoreal/",
         linkedin: "https://br.linkedin.com/in/izabellacamargoreal",
@@ -476,6 +477,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 48,
         name: "Nathalia Garrote",
+        image: "/images/natga1x.webp",
         description: "Mentora e estrategista digital, fundadora da Escola NDL",
         instagram: "https://www.instagram.com/nathaliagarrote/",
         linkedin: "https://br.linkedin.com/in/nathalia-garrote-82861714b",
@@ -485,6 +487,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 49,
         name: "Livia Máttos",
+        image: "/images/livma1x.webp",
         description: "Educadora parental e mentora especialista em gestão de negócios",
         instagram: "https://www.instagram.com/liviamattosmentora/",
         linkedin: "https://br.linkedin.com/in/liviamattosmentora",
@@ -494,6 +497,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 50,
         name: "Marcela Peconick",
+        image: "/images/marpe1x.webp",
         description: "Conselheira tutelar, pedagoga e educadora parental, defensora das infâncias e adolescências",
         instagram: "https://www.instagram.com/marcela_peconick/",
         linkedin: "https://br.linkedin.com/in/marcela-peconick-574a0a21",
@@ -512,6 +516,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 52,
         name: "Katya Hemelrijk",
+        image: "/images/kathe1x.webp",
         description: "Palestrante e consultora em desenvolvimento humano, pertencimento e segurança psicológica",
         instagram: "https://www.instagram.com/katyahemelrijk/",
         linkedin: "https://br.linkedin.com/in/katyahemelrijk",
@@ -521,6 +526,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 53,
         name: "Antônia Burke",
+        image: "/images/antbu1x.webp",
         description: "Educadora e gestora escolar, especialista em educação socioemocional e mediação de conflitos",
         instagram: "https://www.instagram.com/antoniaburke/",
         linkedin: "https://br.linkedin.com/in/ant%C3%B4nia-burke-070981a5",
@@ -530,6 +536,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 54,
         name: "Carol Nalon",
+        image: "/images/carna1x.webp",
         description: "Mediadora de conflitos e especialista em Comunicação Não Violenta, fundadora do Instituto Tiê",
         instagram: "https://www.instagram.com/carolinanalon/",
         linkedin: "https://br.linkedin.com/in/carolinanalon",
@@ -539,6 +546,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 55,
         name: "Thiago Godoy",
+        image: "/images/thigo1x.webp",
         description: "Especialista em educação financeira, mestre pela FGV e criador do Papai Financeiro",
         instagram: "https://www.instagram.com/papaifinanceiro/",
         linkedin: "https://br.linkedin.com/in/papaifinanceiro",
@@ -548,6 +556,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 56,
         name: "Andreza Menezes",
+        image: "/images/andme1x.webp",
         description: "Psicanalista e educadora parental, especialista em adolescência e neurodesenvolvimento",
         instagram: "https://www.instagram.com/andrezamenezes.terapeuta/",
         linkedin: "https://br.linkedin.com/in/andreza-menezes-35a479164",
@@ -557,6 +566,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 57,
         name: "Flávia Reis",
+        image: "/images/flare1x.webp",
         description: "Atriz e humorista",
         bgColor: "#f7a73c",
         category: "pais-cuidadores",
@@ -564,6 +574,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 58,
         name: "Raysa Lima",
+        image: "/images/rayli1x.webp",
         description: "Psicóloga especialista em prevenção do suicídio e intervenção em crises",
         instagram: "https://www.instagram.com/espaco_amarelo/",
         linkedin: "https://br.linkedin.com/in/raysalima",
@@ -573,6 +584,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 59,
         name: "Marcos Raggazzi",
+        image: "/images/marra1x.webp",
         description: "Educador e gestor, diretor executivo do Bernoulli Educação e especialista em inovação no ensino",
         instagram: "https://www.instagram.com/raggazzi/",
         linkedin: "https://br.linkedin.com/in/raggazzi",
@@ -582,6 +594,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 60,
         name: "Cristiane Pertusi",
+        image: "/images/cripe1x.webp",
         description: "Executiva da Calçados Bibi, especialista em inovação aplicada ao desenvolvimento infantil",
         bgColor: "#f7a73c",
         category: "pais-cuidadores",
@@ -589,6 +602,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 61,
         name: "Michelle Gorin",
+        image: "/images/micgo1x.webp",
         description: "Psicóloga e psicanalista, doutora em Psicologia Clínica com foco em casal, família e criança",
         instagram: "https://www.instagram.com/casadesenvolvimento/",
         bgColor: "#79c3ab",
@@ -597,6 +611,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 62,
         name: "Adriana Cárita",
+        image: "/images/adrcr1x.webp",
         description: "Psicóloga infantojuvenil e educadora parental, especialista em psicotrauma",
         instagram: "https://www.instagram.com/adrianacarita/",
         bgColor: "#74acde",
@@ -605,6 +620,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 63,
         name: "Gisele Hensel",
+        image: "/images/gishe1x.webp",
         description: "Pedagoga e educadora parental, especialista em orientação a pais e desenvolvimento infantil",
         instagram: "https://www.instagram.com/gisele_hensel/",
         bgColor: "#f7a73c",
@@ -613,6 +629,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 64,
         name: "Renata Cafardo",
+        image: "/images/renca1x.webp",
         description: "Jornalista, colunista do Estadão e autora de O Algoritmo das Famílias",
         instagram: "https://www.instagram.com/recafardo/",
         linkedin: "https://br.linkedin.com/in/renata-cafardo-a822a48",
@@ -622,6 +639,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 65,
         name: "Alexandre Ayres",
+        image: "/images/aleay1x.webp",
         description: "Cofundador da MindSelf, especialista em meditação e mindfulness",
         instagram: "https://www.instagram.com/ayres.mindself/",
         linkedin: "https://br.linkedin.com/in/ayresmindself",
@@ -631,6 +649,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 66,
         name: "Issao Imamura",
+        image: "/images/issao1x.webp",
         description: "Ilusionista e palestrante, especialista em percepção e desenvolvimento humano",
         instagram: "https://www.instagram.com/issaoimamura/",
         linkedin: "https://br.linkedin.com/in/issaoimamura",
@@ -640,6 +659,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 67,
         name: "Damião Silva",
+        image: "/images/damiao1x.webp",
         description: "Psicólogo e neuropsicólogo, especialista em neurodesenvolvimento e neurodivergências",
         instagram: "https://www.instagram.com/danpsicologo/",
         bgColor: "#79c3ab",
@@ -648,6 +668,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 68,
         name: "Rebeca Figur",
+        image: "/images/recfi1x.webp",
         description: "Especialista no universo infantil e no desenvolvimento da criança por meio do movimento",
         instagram: "https://www.instagram.com/rebeca.figurs/",
         linkedin: "https://br.linkedin.com/in/rebeca-figur-schoenardie-608b81144",
