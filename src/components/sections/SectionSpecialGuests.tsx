@@ -45,7 +45,7 @@ const highlights: Highlight[] = [
         day: 'Dia 1 (19/11)',
         time: '11h00',
         stage: 'Palco Presença',
-        speakers: [{ name: 'Wimer Bottura Júnior', image: '/images/drwimerb.webp' }],
+        speakers: [{ name: 'Wimer Bottura Júnior', image: '/images/drwimerb.webp' }, { name: 'Ana Luíza Meireles' }],
         audience: 'profissional',
     },
     {
@@ -72,7 +72,7 @@ const highlights: Highlight[] = [
         day: 'Dia 4 (22/11)',
         time: '15h00',
         stage: 'Palco Vínculo',
-        speakers: [{ name: 'Lua Barros', image: '/images/luabar.webp' }, { name: 'Delegada Lisandréa Colabuono', image: '/images/delegada.webp' }],
+        speakers: [{ name: 'Lua Barros', image: '/images/luabar.webp' }, { name: 'Kênnya Gralha' }],
         audience: 'ambos',
     },
     {

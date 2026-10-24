@@ -10,7 +10,7 @@ export type Speaker = {
     id: number;
     name: string;
     description: string;
-    image: string;
+    image?: string; // ponytail: sem foto ainda → card mostra as iniciais
     instagram?: string;
     linkedin?: string;
     website?: string;
@@ -345,12 +345,13 @@ export const allSpeakers: Speaker[] = [
         description: "Educadora Parental, professora e pesquisadora das relações familiares",
         image: "/images/glaumar.webp",
         instagram: "https://www.instagram.com/glauciamarini/",
+        linkedin: "https://br.linkedin.com/in/glaucia-dos-santos-marini-ferreira-1a671b392",
         bgColor: "#79c3ab",
         category: "profissionais",
     },
     {
         id: 35,
-        name: "Paula Fratti",
+        name: "Paula Frati",
         description: "Psicóloga, neuropsicóloga e autora do livro Além do TDAH",
         image: "/images/paufra.webp",
         instagram: "https://www.instagram.com/paulafrati/",
@@ -453,6 +454,206 @@ export const allSpeakers: Speaker[] = [
         bgColor: "#f7a73c",
         category: "profissionais",
     },
+    // Novos (out/2026) — ainda sem foto
+    {
+        id: 46,
+        name: "Izabella Camargo",
+        description: "Jornalista e palestrante, criadora do movimento pela Produtividade Sustentável",
+        instagram: "https://www.instagram.com/izabellacamargoreal/",
+        linkedin: "https://br.linkedin.com/in/izabellacamargoreal",
+        bgColor: "#79c3ab",
+        category: "profissionais",
+    },
+    {
+        id: 47,
+        name: "Sheylli Caleffi",
+        description: "Educadora e palestrante, referência no enfrentamento à violência sexual e aos crimes digitais",
+        instagram: "https://www.instagram.com/sheylli/",
+        linkedin: "https://br.linkedin.com/in/sheylli",
+        bgColor: "#74acde",
+        category: "profissionais",
+    },
+    {
+        id: 48,
+        name: "Nathalia Garrote",
+        description: "Mentora e estrategista digital, fundadora da Escola NDL",
+        instagram: "https://www.instagram.com/nathaliagarrote/",
+        linkedin: "https://br.linkedin.com/in/nathalia-garrote-82861714b",
+        bgColor: "#f7a73c",
+        category: "profissionais",
+    },
+    {
+        id: 49,
+        name: "Livia Máttos",
+        description: "Educadora parental e mentora especialista em gestão de negócios",
+        instagram: "https://www.instagram.com/liviamattosmentora/",
+        linkedin: "https://br.linkedin.com/in/liviamattosmentora",
+        bgColor: "#79c3ab",
+        category: "profissionais",
+    },
+    {
+        id: 50,
+        name: "Marcela Peconick",
+        description: "Conselheira tutelar, pedagoga e educadora parental, defensora das infâncias e adolescências",
+        instagram: "https://www.instagram.com/marcela_peconick/",
+        linkedin: "https://br.linkedin.com/in/marcela-peconick-574a0a21",
+        bgColor: "#74acde",
+        category: "profissionais",
+    },
+    {
+        id: 51,
+        name: "Arú de Oliveira",
+        description: "Pedagogo e educador parental, especialista em diversidade, inclusão e Educação Positiva",
+        instagram: "https://www.instagram.com/aru.ecoapedagogica/",
+        linkedin: "https://br.linkedin.com/in/ar%C3%BA-de-oliveira-902381292",
+        bgColor: "#f7a73c",
+        category: "profissionais",
+    },
+    {
+        id: 52,
+        name: "Katya Hemelrijk",
+        description: "Palestrante e consultora em desenvolvimento humano, pertencimento e segurança psicológica",
+        instagram: "https://www.instagram.com/katyahemelrijk/",
+        linkedin: "https://br.linkedin.com/in/katyahemelrijk",
+        bgColor: "#79c3ab",
+        category: "profissionais",
+    },
+    {
+        id: 53,
+        name: "Antônia Burke",
+        description: "Educadora e gestora escolar, especialista em educação socioemocional e mediação de conflitos",
+        instagram: "https://www.instagram.com/antoniaburke/",
+        linkedin: "https://br.linkedin.com/in/ant%C3%B4nia-burke-070981a5",
+        bgColor: "#74acde",
+        category: "profissionais",
+    },
+    {
+        id: 54,
+        name: "Carol Nalon",
+        description: "Mediadora de conflitos e especialista em Comunicação Não Violenta, fundadora do Instituto Tiê",
+        instagram: "https://www.instagram.com/carolinanalon/",
+        linkedin: "https://br.linkedin.com/in/carolinanalon",
+        bgColor: "#f7a73c",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 55,
+        name: "Thiago Godoy",
+        description: "Especialista em educação financeira, mestre pela FGV e criador do Papai Financeiro",
+        instagram: "https://www.instagram.com/papaifinanceiro/",
+        linkedin: "https://br.linkedin.com/in/papaifinanceiro",
+        bgColor: "#79c3ab",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 56,
+        name: "Andreza Menezes",
+        description: "Psicanalista e educadora parental, especialista em adolescência e neurodesenvolvimento",
+        instagram: "https://www.instagram.com/andrezamenezes.terapeuta/",
+        linkedin: "https://br.linkedin.com/in/andreza-menezes-35a479164",
+        bgColor: "#74acde",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 57,
+        name: "Flávia Reis",
+        description: "Atriz e humorista",
+        bgColor: "#f7a73c",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 58,
+        name: "Raysa Lima",
+        description: "Psicóloga especialista em prevenção do suicídio e intervenção em crises",
+        instagram: "https://www.instagram.com/espaco_amarelo/",
+        linkedin: "https://br.linkedin.com/in/raysalima",
+        bgColor: "#79c3ab",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 59,
+        name: "Marcos Raggazzi",
+        description: "Educador e gestor, diretor executivo do Bernoulli Educação e especialista em inovação no ensino",
+        instagram: "https://www.instagram.com/raggazzi/",
+        linkedin: "https://br.linkedin.com/in/raggazzi",
+        bgColor: "#74acde",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 60,
+        name: "Cristiane Pertusi",
+        description: "Executiva da Calçados Bibi, especialista em inovação aplicada ao desenvolvimento infantil",
+        bgColor: "#f7a73c",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 61,
+        name: "Michelle Gorin",
+        description: "Psicóloga e psicanalista, doutora em Psicologia Clínica com foco em casal, família e criança",
+        instagram: "https://www.instagram.com/casadesenvolvimento/",
+        bgColor: "#79c3ab",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 62,
+        name: "Adriana Cárita",
+        description: "Psicóloga infantojuvenil e educadora parental, especialista em psicotrauma",
+        instagram: "https://www.instagram.com/adrianacarita/",
+        bgColor: "#74acde",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 63,
+        name: "Gisele Hensel",
+        description: "Pedagoga e educadora parental, especialista em orientação a pais e desenvolvimento infantil",
+        instagram: "https://www.instagram.com/gisele_hensel/",
+        bgColor: "#f7a73c",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 64,
+        name: "Renata Cafardo",
+        description: "Jornalista, colunista do Estadão e autora de O Algoritmo das Famílias",
+        instagram: "https://www.instagram.com/recafardo/",
+        linkedin: "https://br.linkedin.com/in/renata-cafardo-a822a48",
+        bgColor: "#79c3ab",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 65,
+        name: "Alexandre Ayres",
+        description: "Cofundador da MindSelf, especialista em meditação e mindfulness",
+        instagram: "https://www.instagram.com/ayres.mindself/",
+        linkedin: "https://br.linkedin.com/in/ayresmindself",
+        bgColor: "#74acde",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 66,
+        name: "Issao Imamura",
+        description: "Ilusionista e palestrante, especialista em percepção e desenvolvimento humano",
+        instagram: "https://www.instagram.com/issaoimamura/",
+        linkedin: "https://br.linkedin.com/in/issaoimamura",
+        bgColor: "#f7a73c",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 67,
+        name: "Damião Silva",
+        description: "Psicólogo e neuropsicólogo, especialista em neurodesenvolvimento e neurodivergências",
+        instagram: "https://www.instagram.com/danpsicologo/",
+        bgColor: "#79c3ab",
+        category: "pais-cuidadores",
+    },
+    {
+        id: 68,
+        name: "Rebeca Figur",
+        description: "Especialista no universo infantil e no desenvolvimento da criança por meio do movimento",
+        instagram: "https://www.instagram.com/rebeca.figurs/",
+        linkedin: "https://br.linkedin.com/in/rebeca-figur-schoenardie-608b81144",
+        bgColor: "#74acde",
+        category: "pais-cuidadores",
+    },
 ];
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
@@ -518,12 +719,18 @@ export function SpeakerCard({ speaker, bgColorOverride, className }: { speaker: 
                 <div className="content-stretch flex flex-col gap-[12px] items-center pb-[12px] pt-[8px] px-[8px] relative w-full">
                     {/* Image Container */}
                     <div className="h-[261px] relative rounded-[24px] shrink-0 w-full overflow-hidden">
-                        <img
-                            alt={speaker.name}
-                            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-                            src={speaker.image}
-                            loading="lazy"
-                        />
+                        {speaker.image ? (
+                            <img
+                                alt={speaker.name}
+                                className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                                src={speaker.image}
+                                loading="lazy"
+                            />
+                        ) : (
+                            <div aria-hidden="true" className="absolute inset-0 flex items-center justify-center bg-white/30 font-sugar-peachy font-bold text-[#191919] text-[72px] tracking-[-2px]">
+                                {speaker.name.split(" ").filter((w) => w.length > 2).slice(0, 2).map((w) => w[0]).join("")}
+                            </div>
+                        )}
                         <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[24px]" />
                     </div>
 
