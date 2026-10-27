@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import svgPaths from "@/components/svg/svgPaths";
-import { useIsAcaoDia, ACAO_CHECKOUT } from "@/hooks/useIsAcaoDia";
+import { useIsAcaoDia, ACAO_CHECKOUT, PROMO_DOBRO_START, PROMO_DOBRO_END } from "@/hooks/useIsAcaoDia";
 import { useCountdown } from "@/hooks/useCountdown";
 import { waGrupoUrl } from "@/utils/whatsapp";
 import { trackClarity } from "@/utils/clarity";
@@ -116,6 +116,7 @@ const PASSAPORTES: PassportData[] = [
     target: "Para pais e cuidadores",
     buttonText: "Quero o passaporte parental",
     href: "https://chk.eduzz.com/39VEAVA5WR",
+    // Sai sozinho a partir de 27/10 00:00 (início do passaporte em dobro) e não volta
     doubleOptions: {
       priceInstallment: "R$ 44,70",
       priceFull: "ou R$ 447,00 à vista",
@@ -139,6 +140,21 @@ const PASSAPORTES: PassportData[] = [
     // badgeText: "Bônus|de Julho"
   }
 ];
+
+// Passaporte em dobro (27–29/10): checkout, botão, selo e card de presente por passaporte
+const PROMO_DOBRO: Record<string, { href: string; gift: string }> = {
+  educador: {
+    href: "https://chk.eduzz.com/G96RY34EW1",
+    gift: "Ao adquirir um Passaporte Profissional, o segundo é por nossa conta. Dois acessos completos aos 4 dias, com certificados e acessos à gravação.",
+  },
+  parental: {
+    href: "https://chk.eduzz.com/1W32QA4592",
+    gift: "Ao adquirir um Passaporte Parental, o segundo é por nossa conta. Dois acessos aos dois dias de Festival (21 e 22/11).",
+  },
+};
+const PROMO_DOBRO_BUTTON = "QUERO APROVEITAR O PASSAPORTE EM DOBRO";
+const PROMO_DOBRO_LOTE = "Oferta promocional";
+const SEM_FIM = new Date(8.64e15); // maior data válida: "do início da promo em diante"
 
 function WhatsAppIcon() {
   return (
@@ -368,18 +384,26 @@ function EmbaixadorSoldOutStrip() {
 function PassportCard({ data }: { data: PassportData }) {
   const [isDouble, setIsDouble] = useState(false);
   const isAcaoDia = useIsAcaoDia();
+  const isPromoDobro = useIsAcaoDia(PROMO_DOBRO_START, PROMO_DOBRO_END);
+  const promo = isPromoDobro ? PROMO_DOBRO[data.id] : undefined;
+  const lote = promo ? PROMO_DOBRO_LOTE : data.lote;
   const effectiveBadgeText = (data.id === 'educador' && isAcaoDia) ? "LEVE 2|pelo valor|de 1" : data.badgeText;
 
-  const hasDoubleOption = !!data.doubleOptions;
+  const isPosPromoStart = useIsAcaoDia(PROMO_DOBRO_START, SEM_FIM);
+  const hasDoubleOption = !!data.doubleOptions && !isPosPromoStart;
 
   const currentPriceInstallment = isDouble && hasDoubleOption ? data.doubleOptions!.priceInstallment : data.priceInstallment;
   const currentPriceFull = isDouble && hasDoubleOption ? data.doubleOptions!.priceFull : data.priceFull;
   const currentPriceOriginal = isDouble && hasDoubleOption ? data.doubleOptions!.priceOriginal : data.priceOriginal;
   const currentBenefits = isDouble && hasDoubleOption ? data.doubleOptions!.benefits : data.benefits;
-  const currentHref = isAcaoDia && data.id === 'educador'
-    ? ACAO_CHECKOUT
-    : (isDouble && hasDoubleOption ? data.doubleOptions!.href : data.href);
-  const currentButtonText = isDouble && hasDoubleOption ? data.doubleOptions!.buttonText : data.buttonText;
+  const currentHref = promo
+    ? promo.href
+    : isAcaoDia && data.id === 'educador'
+      ? ACAO_CHECKOUT
+      : (isDouble && hasDoubleOption ? data.doubleOptions!.href : data.href);
+  const currentButtonText = promo
+    ? PROMO_DOBRO_BUTTON
+    : (isDouble && hasDoubleOption ? data.doubleOptions!.buttonText : data.buttonText);
 
   const formatPriceValue = (val: string) => {
     if (!val) return "";
@@ -517,7 +541,7 @@ function PassportCard({ data }: { data: PassportData }) {
       <div className={`${data.bgColor} border-2 ${data.borderColor} border-solid rounded-[32px] p-[12px] w-full z-10 relative overflow-hidden shadow-[3px_3px_0px_0px_#191919]`}>
         <div className={`border-2 ${data.borderColor} border-solid rounded-[16px] flex items-center justify-between px-[12px] py-[12px] gap-4 relative z-20`}>
           <div className="bg-[#f7a73c] border-2 border-[#191919] border-solid rounded-[6px] shadow-[3px_3px_0px_0px_#191919] px-[12px] py-[4px] shrink-0">
-            <span className="font-sugar-peachy text-[18px] tracking-[-0.5px] text-black leading-none">{data.lote}</span>
+            <span className="font-sugar-peachy text-[18px] tracking-[-0.5px] text-black leading-none">{lote}</span>
           </div>
           <h3 className={`font-sugar-peachy tracking-[-1px] leading-[0.8] text-left flex-1 ${data.id === 'educador' ? 'text-[25px] md:text-[28px]' : 'text-[28px]'}`}>
             {data.name}
@@ -610,6 +634,21 @@ function PassportCard({ data }: { data: PassportData }) {
           </div>
         )}
 
+        {/* Card de presente do Passaporte em Dobro */}
+        {promo && (
+          <div className="bg-white border-2 border-[#191919] rounded-[24px] p-4 md:p-5 flex flex-col gap-2 shadow-[3px_3px_0px_0px_#191919] w-full text-left">
+            <div className="flex items-center gap-2 text-[#191919]">
+              <span className="text-xl">🎁</span>
+              <span className="font-dm-sans font-bold text-[15px] sm:text-[16px] text-[#191919] uppercase tracking-tight">
+                Passaporte em dobro
+              </span>
+            </div>
+            <p className="font-dm-sans text-[14px] sm:text-[15px] leading-relaxed text-[#191919]">
+              {promo.gift}
+            </p>
+          </div>
+        )}
+
         {/* July Bonus Card */}
         {/* {(data.id === 'educador' || data.id === 'parental') && (
           <div className="bg-white border-2 border-[#191919] rounded-[24px] p-5 flex flex-col gap-4 shadow-[3px_3px_0px_0px_#191919] w-full text-left">
@@ -649,7 +688,7 @@ function PassportCard({ data }: { data: PassportData }) {
 
             <div className="text-center flex flex-col items-center gap-1.5 w-full">
               <p className={`font-dm-sans text-[15px] md:text-[16px] font-medium ${data.id === 'educador' ? 'text-white/95' : 'text-[#191919]/90'}`}>
-                Garantindo agora, no {data.lote}:
+                {promo ? "Garantindo agora, na oferta promocional:" : `Garantindo agora, no ${data.lote}:`}
               </p>
 
               <div className={`font-sugar-peachy text-[40px] md:text-[54px] leading-none tracking-tight flex items-center justify-center gap-2 ${data.id === 'educador' ? 'text-white' : 'text-[#191919]'}`}>
