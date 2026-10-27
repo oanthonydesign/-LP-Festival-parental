@@ -152,7 +152,7 @@ const PROMO_DOBRO: Record<string, { href: string; gift: string }> = {
     gift: "Ao adquirir um Passaporte Parental, o segundo é por nossa conta. Dois acessos aos dois dias de Festival (21 e 22/11).",
   },
 };
-const PROMO_DOBRO_BUTTON = "QUERO APROVEITAR O PASSAPORTE EM DOBRO";
+const PROMO_DOBRO_BUTTON = "QUERO APROVEITAR O\nPASSAPORTE EM DOBRO";
 const PROMO_DOBRO_LOTE = "Oferta promocional";
 const SEM_FIM = new Date(8.64e15); // maior data válida: "do início da promo em diante"
 
@@ -757,7 +757,7 @@ function PassportCard({ data }: { data: PassportData }) {
             <div className="text-[#191919] hidden md:block">
               <TicketIcon />
             </div>
-            <span className="font-dm-sans font-bold text-[14px] uppercase text-[#191919] tracking-wider text-center">
+            <span className="font-dm-sans font-bold text-[14px] uppercase text-[#191919] tracking-wider text-center whitespace-pre-line">
               {currentButtonText}
             </span>
           </a>
