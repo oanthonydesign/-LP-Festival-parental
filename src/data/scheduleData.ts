@@ -469,8 +469,8 @@ export const scheduleFullData: DayData[] = [
                     { time: '12h30', title: 'Almoço', type: 'interval' },
                     {
                         time: '14h00',
-                        title: 'Oferecimento Eleva — Meninas e Meninos',
-                        speakers: 'Carol Delboni, Jairo Bouer e Amaral Cunha (moderador)',
+                        title: 'Sororidade e masculinidade saudável: O papel da escola e da família na construção de relações mais saudáveis',
+                        speakers: 'Amaral Cunha - Carolina Delboni, Jairo Bouer Mediação',
                         type: 'named',
                     },
                     {
@@ -591,7 +591,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '09h00',
                         title: 'Prêmio Family Choice: uma conversa que toda família deveria ter — meu filho está bem na escola?',
-                        speakers: "Escolas vencedoras do Selo Family's Choice SchoolAdvisor",
+                        speakers: 'Fernanda Tavolaro, Maria Claudia Minozzo Poletto, Alberto Carneiro e Karen Vecchi',
                         type: 'special',
                     },
                     { time: '10h30', title: 'Intervalo', type: 'interval' },
