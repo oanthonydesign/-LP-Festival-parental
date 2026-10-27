@@ -19,6 +19,8 @@ const sponsorGroups = [
     level: 'prata' as const,
     label: 'Prata',
     brands: [
+      { name: 'Google', logo: '/images/google.svg' },
+      { name: 'YouTube', logo: '/images/youtube.svg' },
       { name: 'Zippy', logo: '/images/zippy.webp' },
       { name: 'Ciranda Cultural', logo: '/images/cirandaazul11x.webp', boxOverride: { w: 170, h: 120 } },
       { name: 'Tauá Resort & Convention Atibaia', logo: '/images/atibaiahorizontal11x.webp', boxOverride: { w: 180, h: 102 } },
@@ -32,16 +34,20 @@ const sponsorGroups = [
       { name: 'Bernoulli', logo: '/images/behorizontal911x.webp' },
       { name: 'Escola Eleva', logo: '/images/logoelevainspiredschool411x.webp' },
       { name: 'Hospital Sabará', logo: '/images/group1661x.webp' },
-      { name: 'Literário Books', logo: '/images/logoliterarenova11x.webp' },
-      { name: 'BB Calçados', logo: '/images/mododeisolamento1x.webp', boxOverride: { w: 100, h: 55 } },
-      { name: 'Cepaco', logo: '/images/logotipo70anosbege11x.webp' },
-      { name: 'Amo Vacina', logo: '/images/logoamovacinas111x.webp' },
+      { name: 'bibi', logo: '/images/mododeisolamento1x.webp', boxOverride: { w: 100, h: 55 } },
+      { name: 'Fadelito', logo: '/images/fadelito.webp' },
+      { name: 'Amo Vacinas', logo: '/images/logoamovacinas111x.webp' },
+      { name: 'Sepaco', logo: '/images/logotipo70anosbege11x.webp' },
+      { name: 'Literare Books', logo: '/images/logoliterarenova11x.webp' },
+      { name: 'Eduzz', logo: '/images/eduzz.webp' },
+      { name: 'NR Acampamentos e Viagens Educacionais', logo: '/images/nr.webp', boxOverride: { w: 220, h: 60 } },
     ],
   },
 ] as const;
 
 const supporters = [
-  { name: 'Eduzz', logo: '/images/eduzz.webp' },
+  { name: 'UNICEF', logo: '/images/unicef.svg' },
+  { name: 'ABRAEP', logo: '/images/abraep.webp' },
 ];
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
