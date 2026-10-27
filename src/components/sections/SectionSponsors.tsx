@@ -7,7 +7,8 @@
    Logos verticais usam mais altura; horizontais usam mais largura —
    mas todas parecem do mesmo "tamanho visual" dentro do mesmo nível.
 
-     prata      → box 200 × 110 px  (maior destaque)
+     ouro       → box 240 × 120 px  (maior destaque, linha própria)
+     prata      → box 200 × 110 px
      bronze     → box 148 × 80  px  (médio)
      apoiadores → box 110 × 60  px  (menor)
 ───────────────────────────────────────────────────────────────────────────── */
@@ -16,11 +17,17 @@
 
 const sponsorGroups = [
   {
-    level: 'prata' as const,
-    label: 'Prata',
+    level: 'ouro' as const,
+    label: 'Ouro',
     brands: [
       { name: 'Google', logo: '/images/google.svg' },
       { name: 'YouTube', logo: '/images/youtube.svg' },
+    ],
+  },
+  {
+    level: 'prata' as const,
+    label: 'Prata',
+    brands: [
       { name: 'Zippy', logo: '/images/zippy.webp' },
       { name: 'Ciranda Cultural', logo: '/images/cirandaazul11x.webp', boxOverride: { w: 170, h: 120 } },
       { name: 'Tauá Resort & Convention Atibaia', logo: '/images/atibaiahorizontal11x.webp', boxOverride: { w: 180, h: 102 } },
@@ -52,10 +59,11 @@ const supporters = [
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
-type Level = 'prata' | 'bronze' | 'apoiadores';
+type Level = 'ouro' | 'prata' | 'bronze' | 'apoiadores';
 
 /** Box ótico: dimensão máxima que a logo pode ocupar dentro do card */
 const opticalBox: Record<Level, { w: number; h: number }> = {
+  ouro: { w: 240, h: 120 },
   prata: { w: 200, h: 110 },
   bronze: { w: 148, h: 80 },
   apoiadores: { w: 110, h: 60 },
@@ -68,6 +76,7 @@ const opticalBox: Record<Level, { w: number; h: number }> = {
  */
 const gridClass: Record<Level, string> = {
   // mobile: grid fixo | desktop: flex-wrap centrado (centraliza linha incompleta)
+  ouro: 'grid grid-cols-1 gap-4 justify-items-center lg:flex lg:flex-wrap lg:justify-center lg:gap-4',
   prata: 'grid grid-cols-1 gap-4 justify-items-center lg:flex lg:flex-wrap lg:justify-center lg:gap-4',
   bronze: 'grid grid-cols-2 gap-3 justify-items-center lg:flex lg:flex-wrap lg:justify-center lg:gap-4',
   apoiadores: 'flex flex-wrap justify-center gap-3 lg:gap-4',
@@ -78,6 +87,8 @@ const cardWidth: Record<Level, string> = {
   // desktop: largura = (100% - gaps) / n-colunas
   // prata 3 cols: (100% - 2×16px) / 3
   // bronze 4 cols: (100% - 3×16px) / 4 = calc(25% - 12px)
+  // ouro 2 cards: um pouco mais largos que os de prata
+  ouro: 'w-full lg:w-[calc(40%-8px)]',
   prata: 'w-full lg:w-[calc((100%-32px)/3)]',
   bronze: 'w-full lg:w-[calc(25%-12px)]',
   apoiadores: 'w-full sm:w-[180px]',
@@ -85,6 +96,7 @@ const cardWidth: Record<Level, string> = {
 
 /** Padding e min-height do card por nível */
 const cardStyle: Record<Level, string> = {
+  ouro: 'px-8 py-8 min-h-[220px]',
   prata: 'px-8 py-8 min-h-[190px]',
   bronze: 'px-6 py-6 min-h-[120px]',
   apoiadores: 'px-5 py-5 min-h-[100px]',
