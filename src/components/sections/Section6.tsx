@@ -441,7 +441,12 @@ function PassportCard({ data }: { data: PassportData }) {
   const numericInstallmentTotal = numericInstallment * 12;
 
   // Cálculo de economia: total parcelado menos o valor à vista.
-  const calculatedSavings = Math.round((numericInstallmentTotal - numericFullPrice) * 100) / 100;
+  // Card com toggle: só o duplo mostra economia (2 únicos à vista menos o duplo à vista); o único fica sem selo.
+  const calculatedSavings = !hasDoubleOption
+    ? Math.round((numericInstallmentTotal - numericFullPrice) * 100) / 100
+    : isDouble
+      ? Math.round((getNumericAmount(data.priceFull) * 2 - numericFullPrice) * 100) / 100
+      : 0;
   const currentSavings = calculatedSavings > 0
     ? calculatedSavings.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
     : null;
