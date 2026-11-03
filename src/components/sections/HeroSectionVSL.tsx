@@ -1,30 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
 import Marquee01 from "@/components/sections/Marquee01";
 import Marquee02 from "@/components/sections/Marquee02";
 import { trackClarity } from "@/utils/clarity";
 
-declare global {
-    namespace JSX {
-        interface IntrinsicElements {
-            'vturb-smartplayer': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement> & { id?: string }, HTMLElement>;
-        }
-    }
-}
-
 export default function HeroSectionVSL() {
-    useEffect(() => {
-        const scriptId = "vturb-player-script";
-        if (!document.getElementById(scriptId)) {
-            const s = document.createElement("script");
-            s.id = scriptId;
-            s.src = "https://scripts.converteai.net/45503b29-1a7d-4696-ac1d-75f7fc87b786/players/6a85a1668df297a6712fb774/v4/player.js";
-            s.async = true;
-            document.head.appendChild(s);
-        }
-    }, []);
-
     return (
         <section
             className="bg-[#fff6ee] relative w-full h-auto overflow-hidden pb-0"
@@ -61,22 +41,7 @@ export default function HeroSectionVSL() {
                     </div>
                 </div>
 
-                {/* --- VSL Video Frame (VTurb SmartPlayer) --- */}
-                <div
-                    className="w-full max-w-[960px] relative rounded-[20px] md:rounded-[32px] overflow-hidden border-2 md:border-4 border-[#191919] shadow-[6px_6px_0px_0px_#191919] md:shadow-[10px_10px_0px_0px_#191919] bg-black my-2 z-10"
-                >
-                    <vturb-smartplayer
-                        id="vid-6a85a1668df297a6712fb774"
-                        style={{ display: "block", margin: "0 auto", width: "100%" }}
-                    >
-                        <div
-                            className="vturb-player-placeholder"
-                            style={{ position: "relative", width: "100%", padding: "56.25% 0 0", zIndex: 0, backgroundColor: "black" }}
-                        />
-                    </vturb-smartplayer>
-                </div>
-
-                {/* --- CTAs (Below Video - z-20) --- */}
+                {/* --- CTAs --- */}
                 <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-[16px] w-full max-w-[400px] md:max-w-none z-20">
                     {/* Botão Profissional */}
                     <a href="#profissional" onClick={() => trackClarity("clique_hero_profissional")} className="group relative w-full md:w-[332px]">

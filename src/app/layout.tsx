@@ -57,18 +57,6 @@ export default function RootLayout({
                 <link rel="preload" as="image" href="/images/palestrantesheromob.webp" media="(max-width: 1023px)" type="image/webp" />
                 <link rel="preload" as="image" href="/images/grafismo_HERO.svg" type="image/svg+xml" />
 
-                {/* VTurb SmartPlayer Optimizations & Preloads */}
-                <Script id="vturb-plt" strategy="beforeInteractive">
-                    {`!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);`}
-                </Script>
-                <link rel="preload" href="https://scripts.converteai.net/45503b29-1a7d-4696-ac1d-75f7fc87b786/players/6a85a1668df297a6712fb774/v4/player.js" as="script" />
-                <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script" />
-                <link rel="preload" href="https://cdn.converteai.net/45503b29-1a7d-4696-ac1d-75f7fc87b786/6a6b6f64101ce042e0a4ec70/main.m3u8" as="fetch" />
-                <link rel="dns-prefetch" href="https://cdn.converteai.net" />
-                <link rel="dns-prefetch" href="https://scripts.converteai.net" />
-                <link rel="dns-prefetch" href="https://images.converteai.net" />
-                <link rel="dns-prefetch" href="https://license.vturb.com" />
-
                 <Script id="utmify-config" strategy="beforeInteractive">
                     {`window.pixelId = "698a1cc063e361a00f21dd5a";`}
                 </Script>
