@@ -116,7 +116,6 @@ const PASSAPORTES: PassportData[] = [
     target: "Para pais e cuidadores",
     buttonText: "Quero o passaporte parental",
     href: "https://chk.eduzz.com/39VEAVA5WR",
-    // Sai sozinho a partir de 27/10 00:00 (início do passaporte em dobro) e não volta
     doubleOptions: {
       priceInstallment: "R$ 44,70",
       priceFull: "ou R$ 447,00 à vista",
@@ -154,7 +153,6 @@ const PROMO_DOBRO: Record<string, { href: string; gift: string }> = {
 };
 const PROMO_DOBRO_BUTTON = "QUERO APROVEITAR O\nPASSAPORTE EM DOBRO";
 const PROMO_DOBRO_LOTE = "Oferta promocional";
-const SEM_FIM = new Date(8.64e15); // maior data válida: "do início da promo em diante"
 
 function WhatsAppIcon() {
   return (
@@ -389,8 +387,7 @@ function PassportCard({ data }: { data: PassportData }) {
   const lote = promo ? PROMO_DOBRO_LOTE : data.lote;
   const effectiveBadgeText = (data.id === 'educador' && isAcaoDia) ? "LEVE 2|pelo valor|de 1" : data.badgeText;
 
-  const isPosPromoStart = useIsAcaoDia(PROMO_DOBRO_START, SEM_FIM);
-  const hasDoubleOption = !!data.doubleOptions && !isPosPromoStart;
+  const hasDoubleOption = !!data.doubleOptions;
 
   const currentPriceInstallment = isDouble && hasDoubleOption ? data.doubleOptions!.priceInstallment : data.priceInstallment;
   const currentPriceFull = isDouble && hasDoubleOption ? data.doubleOptions!.priceFull : data.priceFull;
