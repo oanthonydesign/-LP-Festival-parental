@@ -1242,7 +1242,7 @@ export default function SpeakersSection() {
                         {/* Title */}
                         <div className="content-stretch flex flex-col font-sugar-peachy gap-[6px] items-center not-italic relative shrink-0 w-full">
                             <div className="flex flex-col justify-center relative shrink-0 text-[#ef7d25] text-[46px] lg:text-[72px] tracking-[-1.4px] lg:tracking-[-2px] w-full">
-                                <p className="leading-[0.8] whitespace-pre-wrap">+50 Palestrantes convidados</p>
+                                <p className="leading-[0.8] whitespace-pre-wrap">+100 Palestrantes convidados</p>
                             </div>
                         </div>
 

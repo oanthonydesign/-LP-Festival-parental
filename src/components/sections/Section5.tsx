@@ -52,7 +52,7 @@ function Heading3() {
     return (
         <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-name="Heading 3">
             <div className="flex flex-col font-sugar-peachy font-normal justify-center leading-[0.9] relative shrink-0 text-[#191919] text-[28px] tracking-[-1px] w-full">
-                <p className="leading-none whitespace-pre-wrap">+50 palestrantes convidados</p>
+                <p className="leading-none whitespace-pre-wrap">+100 palestrantes convidados</p>
             </div>
         </div>
     );

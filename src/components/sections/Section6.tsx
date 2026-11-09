@@ -82,7 +82,7 @@ const PASSAPORTES: PassportData[] = [
     priceOriginal: "R$ 2.197",
     benefits: [
       "4 dias para aprofundar conhecimento, prática e visão sobre a parentalidade contemporânea. Trilha Técnica (dias 1–2, exclusiva para profissionais) + Trilha Parental (dias 3–4, aberta também para pais e cuidadores)",
-      "+50 palestrantes, referências em saúde, educação e comportamento",
+      "+100 palestrantes, referências em saúde, educação e comportamento",
       "Acesso à rede que está definindo a educação parental no Brasil",
       "Autógrafos com palestrantes, feira de produtos e serviços e sacola de brindes",
       "Gravação do Festival 2026 — 90 dias de acesso",
@@ -565,7 +565,7 @@ function PassportCard({ data }: { data: PassportData }) {
             </div>
 
             <p className="font-dm-sans text-[15px] md:text-[16px] leading-snug text-white text-center -mt-2">
-              <span className="font-bold">Gordon Neufeld, Vanessa Cavalieri, Priscila Xavier</span> e mais de 50 palestrantes em conversas sobre vínculo, desenvolvimento infantil, trauma e os desafios reais de quem trabalha com famílias.
+              <span className="font-bold">Gordon Neufeld, Vanessa Cavalieri, Priscila Xavier</span> e mais de 100 palestrantes em conversas sobre vínculo, desenvolvimento infantil, trauma e os desafios reais de quem trabalha com famílias.
             </p>
 
             <div className="flex justify-center items-center w-full py-1">
