@@ -282,7 +282,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '16h30',
                         title: 'A coragem de se posicionar profissionalmente: Decisão, risco e reinvenção na construção de uma carreira.',
-                        speakers: 'Dani Junco e convidado especial',
+                        speakers: 'Dani Junco',
                         description: 'Construir uma carreira exige decisões que nem sempre vêm acompanhadas de certeza. Como se posicionar, assumir riscos e mudar de direção quando o caminho profissional pede reinvenção? Uma conversa sobre escolhas, coragem e movimento para quem quer construir uma atuação mais coerente com aquilo que deseja alcançar.',
                         type: 'named',
                     },
@@ -617,8 +617,20 @@ export const scheduleFullData: DayData[] = [
                         type: 'named',
                     },
                     { time: '16h00', title: 'Intervalo', type: 'interval' },
-                    // ponytail: Cris Paz e Dança Vital marcados "a confirmar" (horário) na planilha v3 — não divulgar até confirmar
-                    { time: '16h30', title: 'Em breve', type: 'placeholder' },
+                    {
+                        time: '16h30',
+                        title: 'Dança Vital – presença, autorregulação e vínculo',
+                        speakers: 'Nartan Lemos',
+                        description: 'Uma vivência de dança e expressão corporal para sair do ritmo das tarefas e prestar atenção em si.',
+                        type: 'special',
+                    },
+                    {
+                        time: '17h00',
+                        title: 'A vida que a gente não planejou',
+                        speakers: 'Cris Paz',
+                        description: 'Nem sempre a família que construímos corresponde àquela que imaginamos. E nem por isso ela é menos potente, amorosa ou capaz de produzir felicidade. Partindo de sua experiência com a maternidade e os desafios da vida adulta. Cris fala sobre a coragem de acolher o inesperado e construir novos sentidos para a vida. Uma palestra sobre resiliência, afeto e as muitas formas possíveis de ser família.',
+                        type: 'named',
+                    },
                     { time: '18h00', title: 'Encerramento', type: 'system' },
                 ],
             },
@@ -721,8 +733,20 @@ export const scheduleFullData: DayData[] = [
                         type: 'named',
                     },
                     { time: '10h30', title: 'Intervalo', type: 'interval' },
-                    // ponytail: Rebeca Figur e Gláucia Marini marcadas "a confirmar" (horário) na planilha v3 — não divulgar até confirmar
-                    { time: '11h00', title: 'Em breve', type: 'placeholder' },
+                    {
+                        time: '11h00',
+                        title: 'A criança descobre o mundo pelos pés',
+                        speakers: 'Rebeca Figur',
+                        description: 'Antes de conhecer o mundo pelas palavras, a criança o conhece pelo corpo, pelo movimento e pela exploração. O que ela aprende quando pode tocar, caminhar e descobrir o ambiente ao redor? Uma conversa sobre experiências sensoriais e corporais e sobre como elas participam do desenvolvimento na primeira infância.',
+                        type: 'named',
+                    },
+                    {
+                        time: '11h30',
+                        title: 'Birras e limites: o equilíbrio entre firmeza e conexão',
+                        speakers: 'Gláucia Marini',
+                        description: 'Birras colocam os adultos à prova justamente quando a criança também está no limite. O que fazer nesses momentos sem ceder a tudo nem transformar a situação em uma disputa? Uma conversa prática sobre frustração, acolhimento e limites para orientar os filhos com firmeza, sem gritos, ameaças ou culpa.',
+                        type: 'named',
+                    },
                     { time: '12h30', title: 'Almoço', type: 'interval' },
                     {
                         time: '14h00',
@@ -790,8 +814,13 @@ export const scheduleFullData: DayData[] = [
                 label: 'Palco Conexão',
                 fullTitle: 'PALCO CONEXÃO — EXPERIÊNCIAS E ESPETÁCULOS',
                 events: [
-                    // ponytail: show do Rafinha Acústico marcado "a confirmar" (horário) na planilha v3 — não divulgar até confirmar
-                    { time: '09h00', title: 'Em breve', type: 'placeholder' },
+                    {
+                        time: '09h20',
+                        title: 'Show: Rafinha Acústico: a vida em família',
+                        speakers: 'Rafinha Acústico',
+                        description: 'Psicólogo, pai e músico, Rafinha Acústico combina canções, paródias e reflexões sobre a vida com filhos. Um encontro para rir das situações que reconhecemos em casa, se emocionar e olhar com carinho para os desafios de criar uma família.',
+                        type: 'special',
+                    },
                     { time: '10h30', title: 'Intervalo', type: 'interval' },
                     {
                         time: '10h30',
@@ -819,8 +848,8 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '15h00',
                         title: 'Mauricio de Sousa: um legado que atravessa infâncias e gerações',
-                        speakers: 'Marina de Sousa',
-                        description: 'Há mais de seis décadas, Mauricio de Sousa transforma a infância em histórias que ensinam sem dar lição: personagens erram, se desentendem, brincam e voltam a se entender. Com Marina Sousa, o painel percorre esse legado de escuta, humor e respeito às crianças e o que ele ainda ensina às famílias de hoje.',
+                        speakers: 'Marina Takeda',
+                        description: 'Há mais de seis décadas, Mauricio de Sousa transforma a infância em histórias que ensinam sem dar lição: personagens erram, se desentendem, brincam e voltam a se entender. Com Marina Takeda, o painel percorre esse legado de escuta, humor e respeito às crianças e o que ele ainda ensina às famílias de hoje.',
                         type: 'special',
                     },
                     { time: '16h00', title: 'Intervalo', type: 'interval' },
