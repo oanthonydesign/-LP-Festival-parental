@@ -30,15 +30,6 @@ export const allSpeakers: Speaker[] = [
         category: "profissionais",
     },
     {
-        id: 69,
-        name: "Dr. Michael Rich",
-        image: "/images/drmic1x.webp",
-        description: "Pediatra de Harvard e referência internacional em tecnologia, saúde e desenvolvimento infantil",
-        website: "https://digitalwellnesslab.org/team/michael-rich/",
-        bgColor: "#f7a73c",
-        category: "ambos",
-    },
-    {
         id: 2,
         name: "Daniel Becker",
         description: "Um dos pediatras mais respeitados do país",
@@ -683,6 +674,15 @@ export const allSpeakers: Speaker[] = [
         linkedin: "https://br.linkedin.com/in/rebeca-figur-schoenardie-608b81144",
         bgColor: "#74acde",
         category: "pais-cuidadores",
+    },
+    {
+        id: 69,
+        name: "Dr. Michael Rich",
+        image: "/images/drmic1x.webp",
+        description: "Pediatra de Harvard e referência internacional em tecnologia, saúde e desenvolvimento infantil",
+        website: "https://digitalwellnesslab.org/team/michael-rich/",
+        bgColor: "#f7a73c",
+        category: "ambos",
     },
     {
         id: 70,
