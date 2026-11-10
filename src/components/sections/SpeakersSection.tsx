@@ -984,8 +984,8 @@ export const allSpeakers: Speaker[] = [
     },
     {
         id: 106,
-        name: "Rafinha Acústico",
-        image: "/images/rafac1x.webp",
+        name: "Amanda e Rafinha Acústico",
+        image: "/images/amandaerafinha1x.webp",
         description: "Músico, compositor e psicólogo",
         bgColor: "#79c3ab",
         category: "pais-cuidadores",
