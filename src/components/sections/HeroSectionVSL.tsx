@@ -81,13 +81,13 @@ export default function HeroSectionVSL() {
 
                     {/* Single Responsive Picture Element (Eliminates double image download on mobile & desktop) */}
                     <picture className="relative z-10 w-full flex justify-center px-2 lg:px-0">
-                        <source media="(min-width: 1024px)" srcSet="/images/palestrantesherodesk.webp" width={1444} height={673} />
+                        <source media="(min-width: 1024px)" srcSet="/images/palestrantesherodesk-v2.webp" width={1567} height={593} />
                         <img
-                            src="/images/palestrantesheromob.webp"
+                            src="/images/palestrantesheromob-v2.webp"
                             alt="Palestrantes Festival Parental"
                             className="w-full max-w-[540px] lg:max-w-[1280px] h-auto object-contain mx-auto"
-                            width={415}
-                            height={361}
+                            width={851}
+                            height={711}
                             fetchPriority="high"
                             loading="eager"
                             decoding="async"
