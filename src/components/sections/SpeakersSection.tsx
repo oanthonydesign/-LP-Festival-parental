@@ -468,6 +468,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 47,
         name: "Sheylli Caleffi",
+        image: "/images/sheca1x.webp",
         description: "Educadora e palestrante, referência no enfrentamento à violência sexual e aos crimes digitais",
         instagram: "https://www.instagram.com/sheylli/",
         linkedin: "https://br.linkedin.com/in/sheylli",
@@ -507,6 +508,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 51,
         name: "Arú de Oliveira",
+        image: "/images/aruol1x.webp",
         description: "Pedagogo e educador parental, especialista em diversidade, inclusão e Educação Positiva",
         instagram: "https://www.instagram.com/aru.ecoapedagogica/",
         linkedin: "https://br.linkedin.com/in/ar%C3%BA-de-oliveira-902381292",
