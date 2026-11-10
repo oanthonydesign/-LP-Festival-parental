@@ -30,6 +30,15 @@ export const allSpeakers: Speaker[] = [
         category: "profissionais",
     },
     {
+        id: 69,
+        name: "Dr. Michael Rich",
+        image: "/images/drmic1x.webp",
+        description: "Pediatra de Harvard e referência internacional em tecnologia, saúde e desenvolvimento infantil",
+        website: "https://digitalwellnesslab.org/team/michael-rich/",
+        bgColor: "#f7a73c",
+        category: "ambos",
+    },
+    {
         id: 2,
         name: "Daniel Becker",
         description: "Um dos pediatras mais respeitados do país",
@@ -676,15 +685,6 @@ export const allSpeakers: Speaker[] = [
         category: "pais-cuidadores",
     },
     {
-        id: 69,
-        name: "Dr. Michael Rich",
-        image: "/images/drmic1x.webp",
-        description: "Pediatra de Harvard e referência internacional em tecnologia, saúde e desenvolvimento infantil",
-        website: "https://digitalwellnesslab.org/team/michael-rich/",
-        bgColor: "#f7a73c",
-        category: "ambos",
-    },
-    {
         id: 70,
         name: "Jairo Bouer",
         image: "/images/jaibou1x.webp",
@@ -952,7 +952,7 @@ export const allSpeakers: Speaker[] = [
     },
     {
         id: 102,
-        name: "Mariana com Y",
+        name: "Maryana",
         image: "/images/maricom1x.webp",
         description: "Humorologista e palestrante, usa o humor como ferramenta de bem-estar",
         bgColor: "#f7a73c",
@@ -1173,7 +1173,7 @@ export default function SpeakersSection() {
     const [visibleCount, setVisibleCount] = useState(8);
     const carouselRef = useRef<HTMLDivElement>(null);
 
-    const professionalOrder = [1, 3, 5, 7, 9, 32, 33, 30, 13, 15, 17, 19, 20, 21, 22, 23, 24, 25, 28];
+    const professionalOrder = [1, 69, 3, 5, 7, 9, 32, 33, 30, 13, 15, 17, 19, 20, 21, 22, 23, 24, 25, 28];
     const parentsOrder = [2, 6, 8, 10, 11, 12, 13, 14, 29, 16, 18, 19, 22, 23, 26, 27];
 
     const filteredSpeakers = (() => {

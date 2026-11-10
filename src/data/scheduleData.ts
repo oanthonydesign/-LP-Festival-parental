@@ -840,7 +840,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '14h00',
                         title: 'Rir juntos: o humor que traz leveza à vida em família',
-                        speakers: 'Maryana com Y',
+                        speakers: 'Maryana',
                         description: 'Entre tarefas, imprevistos e conflitos, a vida em família também rende boas risadas. Uma conversa com humor sobre como rir das situações do cotidiano, aliviar tensões e criar cumplicidade sem transformar ninguém no alvo da piada.',
                         type: 'special',
                     },
