@@ -65,7 +65,7 @@ export default function HeroSectionVSL() {
                 </div>
 
                 {/* --- Speakers & Grafismo + Marquee Static Block (Clean & Fast) --- */}
-                <div className="relative -mt-4 sm:-mt-2 md:mt-0 lg:mt-4 w-full flex flex-col items-center justify-center z-30">
+                <div className="relative -mt-4 sm:-mt-2 md:mt-0 lg:-mt-16 w-full flex flex-col items-center justify-center z-30">
                     {/* Grafismo HERO (100% Width da Tela de Ponta a Ponta) */}
                     <div className="absolute top-[50%] md:top-[51%] left-1/2 -translate-x-1/2 -translate-y-1/2 mt-[10px] w-screen min-w-[100vw] pointer-events-none z-0 overflow-hidden flex justify-center">
                         <img
