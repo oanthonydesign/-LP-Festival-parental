@@ -95,7 +95,7 @@ export default function HeroSectionVSL() {
                     </picture>
 
                     {/* Marquee 01 & 02 Attached directly to bottom of speakers image */}
-                    <div className="-mt-[42px] sm:-mt-[66px] md:-mt-[124px] w-screen min-w-[100vw] relative z-40">
+                    <div className="-mt-[42px] sm:-mt-[66px] md:-mt-[124px] lg:-mt-[60px] w-screen min-w-[100vw] relative z-40">
                         <Marquee01 />
                         <Marquee02 />
                     </div>
