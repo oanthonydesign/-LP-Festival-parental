@@ -6,18 +6,28 @@ import React from 'react';
 const imgProfissionais = "/images/img_profissionais.webp";
 const imgPais = "/images/img_pais.webp";
 
-function CloseBarMac({ label }: { label?: string }) {
+function CloseBarMac({ label, dates, accent, accentText }: { label?: string; dates?: string; accent?: string; accentText?: string }) {
     return (
-        <div className="bg-[#fff6ee] border-2 border-[#191919] border-solid h-[56px] overflow-clip relative rounded-tl-[24px] rounded-tr-[24px] shadow-[7px_7px_0px_0px_#191919] shrink-0 w-full flex items-center justify-between px-6" data-name="close bar_mac">
-            <div className="flex gap-[7px] items-center">
+        <div className="bg-[#fff6ee] border-2 border-[#191919] border-solid min-h-[56px] py-2.5 overflow-clip relative rounded-tl-[24px] rounded-tr-[24px] shadow-[7px_7px_0px_0px_#191919] shrink-0 w-full flex items-center justify-between gap-3 px-6" data-name="close bar_mac">
+            <div className="flex gap-[7px] items-center shrink-0">
                 <div className="size-[12px] bg-[#FC3F51] rounded-full" />
                 <div className="size-[12px] bg-[#ECA031] rounded-full" />
                 <div className="size-[12px] bg-[#1CB638] rounded-full" />
             </div>
             {label && (
-                <span className="font-dm-sans font-bold text-[#505050] text-[12px] md:text-[14px] uppercase tracking-[0.14px]">
-                    {label}
-                </span>
+                <div className="flex flex-col md:flex-row items-end md:items-center gap-1 md:gap-3 text-right">
+                    <span className="font-dm-sans font-bold text-[#191919] text-[16px] md:text-[20px] uppercase tracking-[0.2px] leading-tight">
+                        {label}
+                    </span>
+                    {dates && (
+                        <span
+                            className={`font-dm-sans font-bold text-[12px] md:text-[14px] uppercase tracking-wide whitespace-nowrap px-2.5 py-0.5 rounded-full border-2 border-[#191919] ${accentText}`}
+                            style={{ backgroundColor: accent }}
+                        >
+                            {dates}
+                        </span>
+                    )}
+                </div>
             )}
         </div>
     );
@@ -31,6 +41,7 @@ function Card({
     image,
     id,
     label,
+    dates,
     logo
 }: {
     bgColor: string;
@@ -40,11 +51,12 @@ function Card({
     image: string;
     id?: string;
     label?: string;
+    dates?: string;
     logo?: string;
 }) {
     return (
         <div className="flex flex-col items-start w-full lg:w-1/2 relative group scroll-mt-24 lg:scroll-mt-32" id={id}>
-            <CloseBarMac label={label} />
+            <CloseBarMac label={label} dates={dates} accent={bgColor} accentText={textColor} />
             <div className={`flex-1 flex flex-col items-center p-6 gap-6 relative rounded-bl-[16px] rounded-br-[16px] shadow-[7px_7px_0px_0px_#191919] shrink-0 w-full border-b-2 border-l-2 border-r-2 border-[#191919] border-solid`} style={{ backgroundColor: bgColor }}>
                 <div className={`flex flex-col gap-6 items-center text-center ${textColor}`}>
                     <h3 className="font-dm-sans font-semibold text-[26px] md:text-[36px] leading-tight max-w-[458px]">
@@ -103,6 +115,7 @@ export default function Section8() {
                         subtext="Quatro dias de repertório para quem enfrenta a complexidade das relações familiares na prática, com base científica, troca qualificada e caminhos para transformar teoria em intervenção real com famílias."
                         image={imgProfissionais}
                         label="Passaporte Profissional"
+                        dates="19 a 22/11"
                         logo="/images/logo7ciepbranco1.webp"
                     />
                     <Card
@@ -113,6 +126,7 @@ export default function Section8() {
                         subtext="Dois dias de conversas acessíveis e profundas, com reflexões e experiências para lidar com os desafios reais da criação de filhos hoje com clareza, sem julgamentos ou fórmulas prontas."
                         image={imgPais}
                         label="Passaporte Parental"
+                        dates="21 e 22/11"
                     />
                 </div>
             </div>
