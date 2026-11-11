@@ -70,7 +70,7 @@ const highlights: Highlight[] = [
         title: 'As conversas que protegem',
         description: 'Em pauta: Corpo, intimidade, consentimento, pornografia, relacionamentos e segurança digital.',
         day: 'Dia 4 (22/11)',
-        time: '15h00',
+        time: '11h00',
         stage: 'Palco Vínculo',
         speakers: [{ name: 'Lua Barros', image: '/images/luabar.webp' }, { name: 'Kênnya Gralha' }],
         audience: 'ambos',

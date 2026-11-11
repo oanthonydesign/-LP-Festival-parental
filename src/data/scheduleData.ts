@@ -717,7 +717,7 @@ export const scheduleFullData: DayData[] = [
                     },
                     { time: '16h00', title: 'Intervalo', type: 'interval' },
                     { time: '16h30', title: 'Não há programação neste horário — show de encerramento no Palco Conexão', type: 'info' },
-                    { time: '18h00', title: 'Encerramento do Festival Parental 2026 com Leo Maia', type: 'system' },
+                    { time: '18h00', title: 'Encerramento do Festival Parental 2026', type: 'system' },
                 ],
             },
             {
@@ -765,7 +765,7 @@ export const scheduleFullData: DayData[] = [
                     },
                     { time: '16h00', title: 'Intervalo', type: 'interval' },
                     { time: '16h30', title: 'Não há programação neste horário — show de encerramento no Palco Conexão', type: 'info' },
-                    { time: '18h00', title: 'Encerramento do Festival Parental 2026 com Leo Maia (Palco Vínculo)', type: 'system' },
+                    { time: '18h00', title: 'Encerramento do Festival Parental 2026 (Palco Vínculo)', type: 'system' },
                 ],
             },
             {
@@ -806,7 +806,7 @@ export const scheduleFullData: DayData[] = [
                     },
                     { time: '16h00', title: 'Intervalo', type: 'interval' },
                     { time: '16h30', title: 'Não há programação neste horário — show de encerramento no Palco Conexão', type: 'info' },
-                    { time: '18h00', title: 'Encerramento do Festival Parental 2026 com Leo Maia (Palco Vínculo)', type: 'system' },
+                    { time: '18h00', title: 'Encerramento do Festival Parental 2026 (Palco Vínculo)', type: 'system' },
                 ],
             },
             {
@@ -860,7 +860,7 @@ export const scheduleFullData: DayData[] = [
                         description: 'Muito mais do que um show, um reencontro com a infância. Música, teatro de bonecos e instrumentos de brinquedo convidam o público a celebrar a imaginação, a memória afetiva e a alegria de brincar.',
                         type: 'special',
                     },
-                    { time: '18h00', title: 'Encerramento do Festival Parental 2026 com Leo Maia (Palco Vínculo)', type: 'system' },
+                    { time: '18h00', title: 'Encerramento do Festival Parental 2026 (Palco Vínculo)', type: 'system' },
                 ],
             },
             {
