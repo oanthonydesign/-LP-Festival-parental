@@ -2,6 +2,9 @@ import WhatsAppButton from '@/components/sections/WhatsAppButton';
 import Rodape from '@/components/sections/Rodape';
 import Copyright from '@/components/sections/Copyright';
 
+// TODO: link do app ainda não recebido do cliente
+const APP_URL = '#';
+
 function BackgroundCurves() {
     return (
         <div className="absolute top-[300px] lg:top-[-25px] left-0 w-full z-0 pointer-events-none select-none opacity-100 overflow-hidden lg:overflow-visible">
@@ -73,6 +76,39 @@ export default function ObrigadoPelaCompra() {
                                 {/* Divisor */}
                                 <div className="w-full max-w-[400px] h-[1px] bg-gradient-to-r from-transparent via-[#191919]/10 to-transparent my-10"></div>
 
+                                {/* App Oficial */}
+                                <div className="flex flex-col items-center gap-5 text-center font-dm-sans w-full">
+                                    <h2 className="text-3xl md:text-4xl font-normal text-center font-sugar-peachy text-[#ef7d25] tracking-wide leading-[1]">
+                                        Baixe o App Oficial do Festival Parental 2026!
+                                    </h2>
+                                    <p className="font-bold text-[#191919] text-[16px] md:text-[18px] max-w-[600px] leading-tight">
+                                        Agende suas palestras com antecedência e tenha prioridade de acesso!
+                                    </p>
+                                    <p className="text-[#4c4d4f] text-[16px] md:text-[18px] leading-relaxed max-w-[600px]">
+                                        Pelo aplicativo, você também acessa seu passaporte digital com QR Code, consulta a programação, conhece os palestrantes, explora o mapa do Festival e recebe avisos importantes.
+                                    </p>
+                                    <p className="font-bold text-[#191919] bg-[#f7a73c]/20 px-4 py-2 rounded-[16px] text-[15px] md:text-[17px] max-w-[600px]">
+                                        E ainda pode participar do sorteio de um fim de semana no Tauá Resort!
+                                    </p>
+                                    <a
+                                        href={APP_URL}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center justify-center gap-2 bg-[#ef7d25] text-[#fff6ef] px-8 py-4 rounded-[32px] font-dm-sans font-bold text-[16px] md:text-[18px] border-2 border-[#191919] shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full md:w-auto text-center"
+                                    >
+                                        Baixar o App Oficial
+                                        <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                                        </svg>
+                                    </a>
+                                    <p className="text-[14px] md:text-[15px] opacity-80 italic max-w-[600px] text-[#4c4d4f]">
+                                        <strong className="not-italic">Importante:</strong> quem não agendar suas palestras poderá participar somente se houver vagas remanescentes, respeitando a capacidade de cada espaço.
+                                    </p>
+                                </div>
+
+                                {/* Divisor */}
+                                <div className="w-full max-w-[400px] h-[1px] bg-gradient-to-r from-transparent via-[#191919]/10 to-transparent my-10"></div>
+
                                 {/* Manual do Participante */}
                                 <div className="flex flex-col items-center gap-6 text-center font-dm-sans w-full">
                                     <p className="text-[#4c4d4f] text-[16px] md:text-[18px] leading-relaxed max-w-[600px]">
@@ -116,41 +152,6 @@ export default function ObrigadoPelaCompra() {
                             </div>
                         </div>
 
-                        {/* Segundo Box - Pesquisa */}
-                        <div className="bg-[#fff6ef] relative rounded-[32px] w-full max-w-[800px] mt-8 mb-4">
-                            {/* Borda e Sombra idênticas à Landing Page */}
-                            <div aria-hidden="true" className="absolute border-2 border-[#191919] border-solid inset-0 pointer-events-none rounded-[32px] shadow-[8px_8px_0px_0px_#191919] z-0" />
-
-                            <div className="flex flex-col items-center w-full px-6 py-12 md:p-12 relative z-10">
-                                {/* Título */}
-                                <h2 className="text-3xl md:text-4xl font-normal mb-6 text-center font-sugar-peachy text-[#ef7d25] tracking-wide leading-[1]">
-                                    Ajude a construir o Festival Parental
-                                </h2>
-
-                                {/* Descrição */}
-                                <div className="flex flex-col gap-4 items-center text-center font-dm-sans text-[#4c4d4f] text-[16px] md:text-[18px] w-full max-w-[600px] mb-8">
-                                    <p className="leading-relaxed">
-                                        Queremos entender melhor quem está com a gente.<br className="hidden md:block"/> Suas respostas ajudam a definir conteúdos, experiências e decisões do evento.
-                                    </p>
-                                    <p className="font-bold text-[#191919] bg-[#f7a73c]/20 px-4 py-2 rounded-full">
-                                        ⏱️ Leva menos de 2 minutos.
-                                    </p>
-                                </div>
-
-                                {/* Botão Form */}
-                                <a 
-                                    href="https://forms.gle/bgDxTnkGyJY8epqB8" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center gap-2 bg-[#ef7d25] text-[#fff6ef] px-8 py-4 rounded-[32px] font-dm-sans font-bold text-[16px] md:text-[18px] border-2 border-[#191919] shadow-[4px_4px_0px_0px_#191919] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#191919] transition-all w-full md:w-auto text-center"
-                                >
-                                    Responder pesquisa
-                                    <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </section>
 
