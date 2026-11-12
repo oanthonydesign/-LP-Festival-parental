@@ -2,8 +2,7 @@ import WhatsAppButton from '@/components/sections/WhatsAppButton';
 import Rodape from '@/components/sections/Rodape';
 import Copyright from '@/components/sections/Copyright';
 
-// TODO: link do app ainda não recebido do cliente
-const APP_URL = '#';
+const APP_URL = 'https://festivalparental.rentpass.com.br';
 
 function BackgroundCurves() {
     return (
