@@ -54,12 +54,18 @@ export const scheduleFullData: DayData[] = [
                 events: [
                     {
                         time: '09h00',
-                        title: 'Abertura do 7º Congresso Internacional de Educação Parental',
+                        title: 'Os vínculos que nos constroem',
+                        speakers: 'Convidado especial',
+                        type: 'special',
+                    },
+                    {
+                        time: '09h30',
+                        title: 'Abertura oficial',
                         speakers: 'Ivana Moreira e Jacqueline Vilela',
                         type: 'named',
                     },
                     {
-                        time: '09h30',
+                        time: '09h45',
                         title: 'A nova infância: por que educar nunca foi tão difícil?',
                         speakers: 'Roberta Bento e Thaís Bento',
                         description: 'Ansiedade, excesso de estímulos, hiperconectividade e mudanças culturais atravessam a infância e desafiam quem educa. O que realmente mudou na vida das crianças e das famílias nos últimos anos? E, diante de tantas transformações, o que continua sendo essencial para crescer e educar bem?',
@@ -189,7 +195,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '16h30',
                         title: 'Quando o casal termina, a parentalidade continua: como atravessar o divórcio sem colocar os filhos no conflito',
-                        speakers: 'Cris Rayes e Dora Rocha Awad',
+                        speakers: 'Cris Rayes',
                         description: 'A separação começa antes do divórcio formal, e os filhos percebem tensões antes das explicações. Como orientar pais antes, durante e depois da ruptura, reduzir disputas e impedir que as crianças sejam colocadas no centro do conflito? Uma conversa sobre comunicação, coparentalidade e reorganização da vida familiar.',
                         type: 'named',
                     },
@@ -257,8 +263,15 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '11h00',
                         title: 'Parlamentares Convidados – Bancada da Parentalidade: O papel dos parlamentares na construção de políticas públicas de Educação Parental',
-                        speakers: 'Carol Bueno, Rodolfo Canônico e convidados',
+                        speakers: 'Enrico Misasi, Marina Bragante, Thais Ferreira, Carol Bueno e Rodolfo Canônico',
                         description: 'Educar filhos não pode ser uma responsabilidade sustentada apenas pelas famílias. Como transformar as necessidades de mães, pais e cuidadores em políticas públicas de apoio à parentalidade? Parlamentares convidados discutem caminhos para ampliar orientação, proteção e suporte às famílias.',
+                        type: 'named',
+                    },
+                    {
+                        time: '12h10',
+                        title: 'Educação Parental no Brasil: o que nós criamos e o que nós vamos ter',
+                        speakers: 'Ivana Moreira',
+                        description: 'Presidente da Associação Brasileira de Educação Parental (Abraep) analisa a evolução do mercado da parentalidade até aqui e fala sobre as perspectivas para os próximos anos.',
                         type: 'named',
                     },
                     { time: '12h15', title: 'Oferta Festival 2027', type: 'interval' },
@@ -266,7 +279,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '14h00',
                         title: 'Famílias apoiadas, organizações mais fortes: como políticas de cuidado parental impactam saúde, retenção e produtividade',
-                        speakers: 'Luciana Catonny e empresas convidadas',
+                        speakers: 'Luciana Catonny, Paloma Berti (Suzano), Monica da Silva Mathias e Ana Luisa Meirelles (Zurich)',
                         description: 'Pais e cuidadores também levam para o trabalho as demandas, preocupações e sobrecargas da vida familiar. O que as organizações podem fazer para apoiá-los de forma concreta? Uma conversa sobre políticas de cuidado parental, saúde, retenção e práticas que ajudam empresas a fortalecer quem trabalha e também cuida.',
                         type: 'named',
                     },
@@ -285,6 +298,12 @@ export const scheduleFullData: DayData[] = [
                         speakers: 'Dani Junco',
                         description: 'Construir uma carreira exige decisões que nem sempre vêm acompanhadas de certeza. Como se posicionar, assumir riscos e mudar de direção quando o caminho profissional pede reinvenção? Uma conversa sobre escolhas, coragem e movimento para quem quer construir uma atuação mais coerente com aquilo que deseja alcançar.',
                         type: 'named',
+                    },
+                    {
+                        time: '17h30',
+                        title: 'Os legados que nos guiam',
+                        speakers: 'Convidado especial',
+                        type: 'special',
                     },
                     { time: '18h00', title: 'Coquetel exclusivo para Embaixadores', type: 'special' },
                 ],
@@ -338,7 +357,7 @@ export const scheduleFullData: DayData[] = [
                 events: [
                     {
                         time: '09h00',
-                        title: 'Ciência sem distorção: como pesquisar, interpretar e comunicar evidências',
+                        title: 'Parentalidade que transforma: da ciência às práticas que impactam crianças e famílias',
                         speakers: 'Elisa Altafim',
                         description: 'Num cenário de excesso de informação, pesquisar bem virou parte da responsabilidade profissional. Como avaliar fontes, interpretar estudos e comunicar evidências sem simplificar demais ou distorcer resultados? Uma conversa sobre rigor científico, desinformação e construção de autoridade com conteúdo de qualidade.',
                         type: 'named',
@@ -752,7 +771,7 @@ export const scheduleFullData: DayData[] = [
                         time: '14h00',
                         title: 'Comunicação sem ruídos: como diminuir as brigas com seu filho no dia a dia',
                         speakers: 'Alessandra Palazzin',
-                        description: 'Quando toda conversa termina em cobrança, defesa ou discussão, pais e filhos deixam de se escutar. A palestra aborda interpretações equivocadas do comportamento dos filhos, os filtros que influenciam os julgamentos e estratégias para escutar melhor e sair das respostas automáticas.',
+                        description: 'E se a briga que você tem com seu filho todos os dias não for sobre o que você pensa que é?',
                         type: 'named',
                     },
                     { time: '14h50', title: 'Troca de palco', type: 'interval' },
@@ -815,6 +834,13 @@ export const scheduleFullData: DayData[] = [
                 fullTitle: 'PALCO CONEXÃO — EXPERIÊNCIAS E ESPETÁCULOS',
                 events: [
                     {
+                        time: '09h00',
+                        title: 'Uma pausa para quem cuida, com Wagner Lima | MINDSELF',
+                        speakers: 'Wagner Lima',
+                        description: 'No futuro, seus filhos talvez não se lembrem de tudo o que você fez por eles. Mas certamente se lembrarão de como se sentiam quando você estava realmente presente. Um encontro com reflexão e experiência prática sobre ritmo de vida, presença e como estamos vivendo diante de quem mais amamos.',
+                        type: 'named',
+                    },
+                    {
                         time: '09h20',
                         title: 'Show: Rafinha Acústico: a vida em família',
                         speakers: 'Rafinha Acústico',
@@ -822,13 +848,6 @@ export const scheduleFullData: DayData[] = [
                         type: 'special',
                     },
                     { time: '10h30', title: 'Intervalo', type: 'interval' },
-                    {
-                        time: '10h30',
-                        title: 'Uma pausa para quem cuida: meditação com Wagner Lima',
-                        speakers: 'Wagner Lima',
-                        description: 'Entre tantas demandas, um convite para respirar, perceber o corpo e voltar a atenção ao presente. Uma prática guiada de meditação para pais e cuidadores, inclusive para quem nunca meditou.',
-                        type: 'named',
-                    },
                     {
                         time: '11h00',
                         title: 'O legado invisível: o que realmente deixamos para nossos filhos',
@@ -847,10 +866,9 @@ export const scheduleFullData: DayData[] = [
                     { time: '14h50', title: 'Troca de palco', type: 'interval' },
                     {
                         time: '15h00',
-                        title: 'Mauricio de Sousa: um legado que atravessa infâncias e gerações',
-                        speakers: 'Marina Takeda',
-                        description: 'Há mais de seis décadas, Mauricio de Sousa transforma a infância em histórias que ensinam sem dar lição: personagens erram, se desentendem, brincam e voltam a se entender. Com Marina Takeda, o painel percorre esse legado de escuta, humor e respeito às crianças e o que ele ainda ensina às famílias de hoje.',
-                        type: 'special',
+                        title: 'Legado: o mundo que vamos deixar para os nossos filhos',
+                        speakers: 'Gabriel Vallejo e Donaldo Buchweitz',
+                        type: 'named',
                     },
                     { time: '16h00', title: 'Intervalo', type: 'interval' },
                     {
