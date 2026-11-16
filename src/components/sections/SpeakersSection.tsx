@@ -1017,13 +1017,6 @@ export const allSpeakers: Speaker[] = [
         category: "profissionais",
     },
     {
-        id: 112,
-        name: "Thais Ferreira",
-        description: "Vereadora do Rio de Janeiro, especialista em políticas públicas para a primeira infância",
-        bgColor: "#79c3ab",
-        category: "profissionais",
-    },
-    {
         id: 113,
         name: "Paloma Berti",
         image: "/images/palbe1x.webp",

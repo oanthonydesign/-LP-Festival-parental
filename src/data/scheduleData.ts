@@ -263,7 +263,7 @@ export const scheduleFullData: DayData[] = [
                     {
                         time: '11h00',
                         title: 'Parlamentares Convidados – Bancada da Parentalidade: O papel dos parlamentares na construção de políticas públicas de Educação Parental',
-                        speakers: 'Enrico Misasi, Marina Bragante, Thais Ferreira, Carol Bueno e Rodolfo Canônico',
+                        speakers: 'Enrico Misasi, Marina Bragante, Thaís Ferreira, Carol Bueno e Rodolfo Canônico',
                         description: 'Educar filhos não pode ser uma responsabilidade sustentada apenas pelas famílias. Como transformar as necessidades de mães, pais e cuidadores em políticas públicas de apoio à parentalidade? Parlamentares convidados discutem caminhos para ampliar orientação, proteção e suporte às famílias.',
                         type: 'named',
                     },
