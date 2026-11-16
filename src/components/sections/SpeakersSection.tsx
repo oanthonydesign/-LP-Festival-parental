@@ -1003,6 +1003,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 110,
         name: "Enrico Misasi",
+        image: "/images/enrmi1x.webp",
         description: "Advogado, secretário da Casa Civil da Prefeitura de São Paulo e ex-deputado federal",
         bgColor: "#74acde",
         category: "profissionais",
@@ -1010,6 +1011,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 111,
         name: "Marina Bragante",
+        image: "/images/marbr1x.webp",
         description: "Psicóloga, mestre em Administração Pública por Harvard e deputada estadual eleita por São Paulo",
         bgColor: "#f7a73c",
         category: "profissionais",
@@ -1024,6 +1026,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 113,
         name: "Paloma Berti",
+        image: "/images/palbe1x.webp",
         description: "Especialista em RH e idealizadora do Programa de Parentalidade da Suzano",
         bgColor: "#74acde",
         category: "profissionais",
@@ -1031,6 +1034,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 114,
         name: "Monica da Silva Mathias",
+        image: "/images/monma1x.webp",
         description: "Psicóloga com mais de 20 anos de RH, especialista em desenvolvimento humano e bem-estar",
         bgColor: "#f7a73c",
         category: "profissionais",
@@ -1038,6 +1042,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 115,
         name: "Gabriel Vallejo",
+        image: "/images/gabva1x.webp",
         description: "Fundador e CEO da Zippr AI, criadora da Zippy, de segurança infantil na internet",
         bgColor: "#79c3ab",
         category: "pais-cuidadores",
@@ -1045,6 +1050,7 @@ export const allSpeakers: Speaker[] = [
     {
         id: 116,
         name: "Donaldo Buchweitz",
+        image: "/images/donbu1x.webp",
         description: "Escritor, editor e fundador da Ciranda Cultural, autor de mais de 140 obras infantis",
         bgColor: "#74acde",
         category: "ambos",
